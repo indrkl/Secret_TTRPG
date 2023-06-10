@@ -56,8 +56,8 @@ more or less diversified in other areas.
 
 Absolutely all abilities, actions, spells, maximum mana, armor proficiencies etc. will have to be unlocked using
 these very precious advancement points that players get each level up. Only things that all players get by default are
-HP (Health points), 5 Stamina, 1 stamina recovery and ability to do a basic attack, which costs 1 Stamina for first
-attack in the round, 2 for second and 3 for third and so on. 
+2 toughness (determines how much damage you can take before you die), proficiency in light armor and access to some 
+general actions (move, punch, wrestle). They also start with a dice pool of 6 d6 and action limit of 5.
 
 In addition they get a innate feat for each category they have points in, but the power of the feat depends on their 
 level in that category. This further defines their character progression possibilities. 
@@ -65,12 +65,6 @@ Innate feats are really powerful.
 
 Heroes gain 1 progression feat in each category which they have points in at levels 4, 7, 10, 13 and 16 and before
 they make their advancement decisions in that level.
-
-Everyone starts with 5 points of stamina and 1 stamina recovery. You need to spend 1 stamina to make your first basic 
-attack with a weapon in a round. 
-
-Everyone starts with 2 * (2 * magic + 2 * skill + 4 * martial) hitpoints. Each level after level 1 you gain another 
-(2 * magic + 2 * skill + 4 * martial) hitpoints
 
 Finally for levels 1, 5, 11 and 18 you also get to spend 2 * path level of points to advance in that path.
 In other levels you get to spend 1 * path level of points to advance in that path.
@@ -82,83 +76,45 @@ means you do not get access to feats that cost more than the level up you get fo
 you get double the amount of points so you can get access to much more powerful feats that you do not get access to 
 in most levels.
 
+The maximum proficiency in anything is determined by the related path. It is +1 for acquinted, +2 for adept, +3 for
+talented and +4 for legendary. Each consecutive  upgrade costs 1 more than previous upgrade start with the cost of 1.
+
+Proficiency allows you to shift the dice results by 1 in order to get the dice result requires to perform the action
+related with this proficiency. You can perform number of shifts equal to your profiency each round / scene.
+
 MAGE advancement options:
 """},
         {'type': 'list',
          'content': [
              'Adopt a magic related feat',
-             'Gain 2 levels in one school of magic',
+             'Advance proficiency in one school of magic',
              'increase your maximum mana by 4 and base daily mana recovery by 1',
-             'Gain 2 levels in lore skill',
-             'Learn a spell. Gain one level in the school of magic of that spell',
-             'Gain 3 levels in Will saving throws',
+             'Advance proficiency in lore skill',
+             'Learn a spell',
+             'Advance proficiency in will',
          ]},
         {'type': 'paragraph', 'content': 'Martial advancement options:'},
         {'type': 'list',
          'content': [
              'Adopt a martial related feat',
-             'Gain 2 levels in one group of weapons.',
-             'Add 7 MAX HP',
-             '''Add 3 to maximum stamina (each encounter is started having max stamina, you cannot recover stamina above 
+             'Advance proficiency with one type of weapon',
+             'Increase your toughness. Cost increases by 1 each time you choose this option. Maximum toughness is 6',
+             '''Add 3 to maximum stamina (each encounter is started having max stamina, you cannot recover stamina above
              maximum stamina)''',
              'Spend 2 advancement points to gain 1 stamina recovery (you recover stamina every round).',
-             'Gain 2 levels in physique or survival skill',
-             # '''Increase your AC prificiency by 1. This bonus's effective value cannot be higher than the total bonus
-             # from all other sources.''',
-             'Gain 3 levels in either reflex or fortitude saving throws',
-             'Gain 3 levels in initiative',
+             'Advance proficiency in physique or survival skill',
+             '''Increase your AC prificiency by 1. This bonus's effective value cannot be higher than the total bonus
+             from all other sources.''',
+             'Advance proficiency in either reflex or fortitude',
+             # 'Gain 3 levels in initiative',
          ]},
         {'type': 'paragraph', 'content': 'Skilled advancement options:'},
         {'type': 'list',
          'content': [
              'Adopt a skills related feat',
              'Increase your daily number of luck tokens by 1',
-             'Gain 2 levels in any skill',
-             'Gain 3 levels in will, reflex or fortitude saving throws',
+             'Advance proficiency in any skill',
+             '''Advance proficiency in will, reflex or fortitude. The maximum proficiency from skilled path for these 
+             is 2''',
          ]},
-        {'type': 'paragraph', 'content': '''
-You can gain as many levels as you want, but the effective level of any skill, school of magic, weapon or saving throw
-is capped by your character level and your PATH choices. 
-
-The levels in any of those given things determines 2 things.
-
-1. Your proficiency bonus. You're proficiency bonus becomes +1 at level 1, +2 at level 3, +3 at level 6, +4 at level 9,
-+5 at level 13, +6 at level 18.
-
-2. Higher levels allows you to perform more difficult and complex actions. For magic, allows you to cast more powerful
-spells, for weapons, allows you to add extras to your attacks, for saving throws, allows you to be more effective with
-removing negative modifiers etc.
-
-The maximum level is determined by PATH_LEVEL * CHARACTER_LEVEL / 4:
-
-Or simply refer to the following table:
-'''},
-        {'type': 'table',
-         'content': difficulty_cap_table},
-        {'type': 'paragraph', 'content': '''
-PATH used for determining max level:
-
-Spell schools: mage
-
-Weapon attacks: Martial
-
-Skill checks: Skilled
-
-Lore skill: Mage or Skilled
-
-Physique skill: Martial or Skilled
-
-WILL: Mage (or Skilled)
-
-REFLEX: Martial (or Skilled)
-
-Fortitude: Martial (or Skilled)
-
-SKILLED PATH has access to all saving throws, but their max level is divided by 2 rounded 
-up. However if your max level would be higher from another PATH, then use that instead.
-
-The proficiency bonus based on the level
-    '''},
-        {'type': 'table',
-         'content': proficiency_table},
     ]

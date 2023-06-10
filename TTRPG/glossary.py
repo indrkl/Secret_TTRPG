@@ -1,98 +1,74 @@
 glossary = [
     {
-        'name': 'Various checks',
+        'name': 'Dice pool',
         'description': """
-During gameplay players and NPC/s will need to do various checks, to determine weather they succeed in using their
-skills, making attacks, saving throws or using magic. The checks are done using 3d6 (3 six sided dice). This means the
-average results are much more common than the extreme results.
+All characters have a dice pool. For example by default heroes start with a dice pool of 6 dice. Level ups, feats, spell
+effects etc. can increase the size of the dice pool. However when a character takes damage they must set aside dice from
+the dice pool, until they have no more of them in the dice pool at which point they are left incapacitated
         """
     },
     {
-        'name': 'DC',
-        'description': '''
-Dice check. This is used to refer to the difficulty of the dice check. The base DC in the game is 10. that means to
-succeed the player needs to throw 10 or more using 3d6. The difficulty modifiers for the checks are as follows: 
-
-+1 - has some potential difficulties
-
-+2 - Difficult
-
-+3 - Hard
-
-+4 - Extremely hard
-
-+5 - Impossible for most mortals
-
-+6 and +7 - Succeeding in this task is a legendary feat.
-        '''
+        'name': 'Action limit',
+        'description': """
+While you can never spend more dice than in your dice pool. You also cannot spend more dice on actions per round 
+than your action limit. By default heroes start with an action limit of 5. Action limit does not apply outside combat 
+        """
     },
-
+    {
+        'name': 'Roll target',
+        'description': """
+All actions have some certain roll target. For example R6.R6.R6 means that you need 3 dices with the 6 result in order
+to perform this action. Also various outcomes in social encounters or campaign in general have roll targets, which have
+to be met in order to get the desirable results. 
+        """
+    },
     {
         'name': 'Proficiency',
         'description': '''
-Players can have proficiency in a skill, weapon class, school of magic or a saving throw. That means they have invested
-path points to gain levels in that proficiency. There exists level of proficiency (based on how much player has invested
-path points), max level of proficiency (which is based on character and path level, refer to character creation) and
-effective level, which the least of the 2 previous. 
+Players can have proficiency in a skill, weapon class, school of magic or a saving throw. Proficiency allows them to
+nudge dice results in order to easily meet the roll target so that the desired rolls are met much more consistently.
         '''
     },
     {
         'name': 'Proficiency bonus',
         'description': '''
-When making any check, add your related proficiency bonus to the 3d6 roll. Proficiency bonus is determined based on your
-effective level in that proficiency (refer to the tables in character creation)
+Proficiency bonus ranges from 1 to 4. That means how many times you can nudge dice by 1 in a given round  / scene to
+meet a roll target that is related to the skill, weapon or school of magic of the proficiency at hand.
+
+For example with a proficiency of 2 you can nudge the roll of 2 dice by 1, or a roll of a single dice by 2. You can only
+nudge the rolls of a dice used on the roll target that you actually use on the roll target.
         '''
     },
-    {'name': 'Lucky and unlucky',
-     'description':'''
-Some effects can make a dice roll lucky or unlucky. It can theoretically be any dice roll, even damage rolls.
-A lucky dice roll means that you throw 4d6 and choose the best 3 results to determine the outcome. An unlucky
-dice roll means that you throw 4d6 and choose the worse 3 results to determine the outcome. When you would be granted
-lucky and unlucky at the same time, roll as normal, no matter how many sources of luck or unluckyness there are.
-     '''
-     },
-    {'name': 'Advantage and disadvantage',
-     'description':'''
-Some effects can apply advantage or disadvantage to a skill check, attack roll, saving throw etc. On advantage you
-gain +1 to the result, on a disadvantage you gain -1 to the roll. If multiple sources would grant you advantage, then 
-they do not stack and you still get +1, same with disadvanatage. If you would get both advantage and disadvantage then
-you gain +0 to the roll no matter how many sources there are to either of those effects.
-     '''
-     },
-    {'name': 'Critical success and failures',
-     'description': '''
-When making a d20 check, it is always against some target value called DC (dice check). When you meet it or roll higher
-along with your bonuses then it is a success, if below, it is a failure. However if your result is higher than 
-DC + critical threshold of 3, then it is a critical success. Effects that reduce the critical threshold cannot reduce
-it to below +1.
- 
-When the roll is lower than DC - 3  then it is critical failure. Out of combat, the exact bonus or 
-penalty for these extremes is decided by GM. In combat, even though there is no critical failure penalty (except for a
-few abilities), when scoring a critical success, all your damage dice are automatically their maximum value. Meaning on
-average a critical hit is twice as much damage as a regular hit. In addition all flat bonuses to the damage are doubled,
-unless the flat bonus is specifically given due to the attack being a critical hit.
-     '''
-     },
-    {'name': 'Epic moments',
-     'description':'''
-GM can decide, and players can request for something to be an epic moment, meaning this roll matters. In this case the
-normal rules of no matter how many sources of lucky, unlucky, advantage or disadvantage you have, they cancel out, does
-not apply. If one has more sources of lucky than unlucky then they get the lucky bonus and vica versa. Same goes for
-advantage and disadvanatage. However they still do not stack. Advantage and disadvantage will still only provide either
-+1 or -1
-     '''
-     },
-    {'name': 'Aid',
-     'description': '''
-Usually when a skill check is made, then party must choose who does it, like in the case of diplomacy, or tracking etc.
-However others can choose to take a helping role. By rolling for the same skill, they need to roll against original 
-DC-2. If they succeed they grant advantage to the player doing the skill check. However if they fail critically they 
-grant disadvantage. 
-
-Lore skill can be used for aiding in all skill checks, however when aiding a none-lore skill check, it is done against 
-the original DC.
-     '''
-     },
+#     {'name': 'Lucky and unlucky',
+#      'description':'''
+# Some effects can make a dice roll lucky or unlucky. It can theoretically be any dice roll, even damage rolls.
+# A lucky dice roll means that you throw 4d6 and choose the best 3 results to determine the outcome. An unlucky
+# dice roll means that you throw 4d6 and choose the worse 3 results to determine the outcome. When you would be granted
+# lucky and unlucky at the same time, roll as normal, no matter how many sources of luck or unluckyness there are.
+#      '''
+#      },
+#     {'name': 'Advantage and disadvantage',
+#      'description':'''
+# Some effects can apply advantage or disadvantage to a skill check, attack roll, saving throw etc. On advantage you
+# gain +1 to the result, on a disadvantage you gain -1 to the roll. If multiple sources would grant you advantage, then
+# they do not stack and you still get +1, same with disadvanatage. If you would get both advantage and disadvantage then
+# you gain +0 to the roll no matter how many sources there are to either of those effects.
+#      '''
+#      },
+#     {'name': 'Critical success and failures',
+#      'description': '''
+# When making a d20 check, it is always against some target value called DC (dice check). When you meet it or roll higher
+# along with your bonuses then it is a success, if below, it is a failure. However if your result is higher than
+# DC + critical threshold of 3, then it is a critical success. Effects that reduce the critical threshold cannot reduce
+# it to below +1.
+#
+# When the roll is lower than DC - 3  then it is critical failure. Out of combat, the exact bonus or
+# penalty for these extremes is decided by GM. In combat, even though there is no critical failure penalty (except for a
+# few abilities), when scoring a critical success, all your damage dice are automatically their maximum value. Meaning on
+# average a critical hit is twice as much damage as a regular hit. In addition all flat bonuses to the damage are doubled,
+# unless the flat bonus is specifically given due to the attack being a critical hit.
+#      '''
+#      },
     {
         'name': 'Campaign mode and combat mode',
         'description': '''
@@ -103,100 +79,82 @@ In combat however, the order of action is determined by initiative order and the
 is their effect and where everyone are are strictly determined by the rules of this game.
         '''
     },
-    {'name': 'Action points',
-     'description': """
-Action points (AP) are used to do actions during combat encounters. During each player's turn in a round, they have by 
-default 3 AP, which they can use to attack, cast spells, move or use some other abilities. The base AP can be increased 
-by only 1 Martial innate feat. 
-Each character can gain bonus AP only from a single buff. If multiple buffs would grant AP, then only the best of them 
-is used. Many debuffs can lower the amount of AP.
-     """
-     },
-    {'name': 'stamina',
-     'description': """
-Stamina is used to make attacks, dodging, and when wearing heavy armor, then for doing any actions. All characters have 
-by default 5 MAX Stamina, and they recover 1 Stamina per round. All characters start each encounter with full stamina.
-Martial path can improve their maximum stamina, and also their stamina recovery per round. Basic weapon attack costs
-1 STA, and increases the stamina cost of each additional attack by 1, that lasts until the beginning of your next round. 
-That means that reaction attacks also suffer from the additional STA cost from the previous attacks made since the
-beginning of your last round. Special attacks gained from the martial feat pool have their own stamina costs and they 
-also vary in how much the increase the cost of each additional attack.
-     """,
-     },
-    {'name': 'Forced movement / falling damage',
-     'description': '''
-When characters are moved forcefully through some effect, but during their movement they meet an obstacle, they take
-1d6 damage for every remaining 2m. of movement they were supposed to do.
-
-When a character is moved onto another character, the second character needs to make a REF save of 10 + 1 for every 2m
-left of forced movement. On fail they both take damage equal to 1d6 damage for every remaining 2m. of movement. On
-success he dodges and the guy moved forcefully passes through.
-
-When falling from heights, characters take 1d6 damage for every 2 m. after the first 2 m. When also falling from height
-greater than 2 m. they need to make a REF save of 10 + 1 for every 2 m. On fail they fall prone.
-
-When a character falls onto another character, the character on the ground needs to make a REF save of 
-10 + 1 for every 2 m. On fail they also take the fall damage and fall prone. The falling character is put onto a random
-empty tile next to felled upon character.
-'''
-     },
     {
-    'name': 'Hit points / Health',
-     'description': """
-Hit points determine how much damage you can take before becoming incapacitated, or even worse die. When you fall to 0 or
-below hitpoints, you fall prone and become incapacitated, meaning you are unable to act
-. 
-When you have negative HP, you cannot do any actions and every round you must roll one of your hit dice and 1 additional 
-hit die for every 30 HP you are missing from 0 and recover that much HP until you have at least 1 HP. If you don't have 
-the necessary amount of hit dies to roll, you die. 
-     """,
+        'name': 'taking damage and various defenses',
+        'description': '''
+If you X damage then it is mitigated followingly:
+
+1. First substract damage reduction from the damage
+
+2. Then character's remaining defense mitigates it as much as possible. All mitigated damage lowers character's defense,
+but not maximum defense.
+
+3. The rest of the damage hits the character's "life pool", see next topic
+
+Defense can be recovered by taking the compose defense action, with which one recovers up to their maximum number of
+defense.
+        '''
     },
     {
-    'name': 'Hit dice',
+        'name': 'taking damage to life',
+        'description': '''
+In combat or certain situations out of combat characters may take damage. When that happens they set aside dice from
+their dice pool following these rules:
+
+1. Each dice mitigates damage equal to character's toughness.
+
+2. When you have a dice that is set aside that can still mitigate some damage, it mitigates that damage before a new
+dice is set aside.
+
+3. When you have no dice set aside which can mitigate damage but there is still incoming damage to be mitigated, then
+you must take another dice from dice pool and set it aside and use it to mitigate the remaining damage
+
+4. Note that the maximum toughness is 6, so that you can always use the set aside D6 to mark the remaining damage it can
+still mitigate.
+
+5. Note that you cannot set aside bonus dice from the dice pool, but only the dice granted to you inherently.
+
+6. You cannot set aside scarred dice as long as you have normal dice.
+        '''
+    },
+
+    {
+    'name': 'Healing and scarred dice',
      'description': """
-All players have hit dice, that they need to use whenever they are healing themselves or get healed by other sources.
-When they have no more hit dice and need to roll a hit dice, they die. All players have a maximum 6 hit dice at level 1,
-and gain 2 additional maximum hit dice every level. The dice depends on the number of points in martial path. 
+Each time you receive healing and recover some of the set aside dice, one of those dice become scarred (try to have
+them in different color, like red for example).
 
-Legendary martials have d6 +3 as hit dice, Talented martials have d6 +2, Adebt martials have d6 +1 and Acquinted and players 
-without any points in martial have d6 as their hit dice. (the +X means that they roll d6 and add X to the result).
+Scarred dice can only be used as 1, 2 or 3 in any roll target. You can still nudge them lower if they roll 4, 5 or 6.
 
-When finishing the daily rest, unless player has no food rations, they recover at least 5 hit dice. When finishing it
-in a comfortable establishment, they recover at least 10 hit dice. By eating special more expensive food, they can
-recover more hit dice.
+At the beginning of each day after a proper rest, by spending various resources like herbs, good food etc. one can
+change scarred dice back to normal dice.
+To change a single dice back it costs 3 gp worth of resources, to change 2 dice back it costs 15 gp and to change 3 dice
+back it costs 50 gp worth of resources.
      """,
     },
     {
     'name': 'incapacitated',
      'description': """
-When a creature drops to 0 or less hit points, they become incapacitated. They drop on the ground and can no longer
-act. That means they are prone. When their hit points get back to above 0 through rolling hit dice every 
-turn or through healing they remove incapacitated status condition and gain up to 10 levels of disoriented.
+When you have no more dice in your dice pool, you are incapacitated, cannot move nor do any actions, even if you have
+bonus actions.
      """,
     },
-    {
-    'name': 'Death',
-     'description': """
-When a creature has 0 or less hit points and they are forced to through a hit dice, but they have none left, they die.
-Death is permanent. So if this happens to a player, they simply discard that character and need to make a new one.
-     """,
-    },
-    {'name': 'Action difficulty',
-     'description': """
-Both spells, attacks and other various actions can have difficulty requirement, and additional options that increase
-the difficulty of the action in addition to making those actions stronger. The maximum difficulty of an action a player
-can perform is determined by the effective level in the underlying proficiency.
-
-For spells higher difficulty also increases the mana cost by 1 per difficulty. For attacks there is no additional cost
-for increasing difficulty unless specified otherwise.
-     """},
+#     {
+#     'name': 'Death',
+#      'description': """
+# When a creature has 0 or less hit points and they are forced to through a hit dice, but they have none left, they die.
+# Death is permanent. So if this happens to a player, they simply discard that character and need to make a new one.
+#      """,
+#     },
     {'name': 'Mana',
      'description': """
-When advancing in the mage path, characters can increase their maximum mana. 
-When casting spells one must spend mana. If one is out of mana, they can no longer cast spells that require them.
-Mana is required during daily rest. Characters who have taken points in maximum mana also have some amount of daily mana
-recovery. This base is always recovered. However magic users can consume quite pricy magical spices to recover increased
-amounts of mana.
+When advancing in the mage path, characters can increase their maximum mana. When casting spells or concentrating one 
+must spend 1 mana per dice used in the spell. 
+
+If one is out of mana, they can no longer cast spells that require them.
+Mana is recovered during daily rest. Characters who have taken points in maximum mana also have some amount of daily 
+mana recovery. This base is always recovered. However magic users can consume quite pricy magical spices to recover 
+increased amounts of mana.
 
 For the first 1 - 10 mana, the cost of spices is 3 gp per mana.
 
@@ -210,24 +168,46 @@ recover 25 mana as a baseline, but then would need to spend magical spices worth
 only spend for example 30 gp worth of food and recover only 35 total mana ending up having 75 mana.
      """,
      },
-    {'name': 'checking for "status effect"',
+#     {'name': 'Forced movement / falling damage',
+#      'description': '''
+# When characters are moved forcefully through some effect, but during their movement they meet an obstacle, they take
+# 1 damage for every remaining sq. of movement they were supposed to do.
+#
+# When a character is moved onto another character, the second character needs to make a REF save of 10 + 1 for every 2m
+# left of forced movement. On fail they both take damage equal to 1d6 damage for every remaining 2m. of movement. On
+# success he dodges and the guy moved forcefully passes through.
+#
+# When falling from heights, characters take 1d6 damage for every 2 m. after the first 2 m. When also falling from height
+# greater than 2 m. they need to make a REF save of 10 + 1 for every 2 m. On fail they fall prone.
+#
+# When a character falls onto another character, the character on the ground needs to make a REF save of
+# 10 + 1 for every 2 m. On fail they also take the fall damage and fall prone. The falling character is put onto a random
+# empty tile next to felled upon character.
+# '''
+#      },
+    {'name': 'status effect',
      'description': """
-Many spells, abilities or difficulty adjustment options can have a statement: "check for {status effect}". That means
-whoever needs to check for it, needs to throw a 3d6, add either reflex, will or fortitude proficiency bonus 
-(depending on the status effect) to it and compare it to 10 + attacker's/caster's proficiency bonus. When it was caused by a 
-weapon attack, the weapon proficiency bonus is being used. When by a spell, then the spell school's proficiency bonus is 
-being used. When the one who checks for the status effect fails the check, they gain the status effect. 
+Since whenever someone meets their roll target, then they always succeed, if anyone's actions grant other characters
+status effetcs they cannot be avoided unless there is a reflex save option. Other status effects have usually other ways
+to remove them usually using fortitude or will.
+
+When making reflex saves, you roll 2d6 and when you can make the save using those dice and your proficiency you succeed,
+otherwise you fail. Note that the number of times you can nudge during reflex saves resets only at the beginning of your
+round. So if you need to make more than 1 reflex save in between your turns they all share the total number of nudges
+you can do based on your proficiency.
+
+For fortitude you need to spend your dice from the dice pool, but they don't lower you action limit.
+
+For will saves, the spent dice also count towards you action limit.
      """,
      },
     {'name': 'Concentration',
      'description': """
 Some spells can last more than 1 round of combat, but in order to do so they require concentration to be maintained.
-When a spell has concentration 2, then that means caster would need to spend 2 AP next round to maintain that 
-concentration. In addition to the AP cost, concentration spells also require mana to be spent each round,
-unless the spell has duration, in which case mana is needed to be spent at the end of duration.
-The base cost for the concentration cost is spell's difficulty at casting divided by 2 rounded down. 
-Whenever you take damage you must make a WILL check with a DC of 8 + damage / 7 rounded up. If you fail, you lose 
-concentration of one spell of your choice. If you critically fail, you lose concentration of all spells.
+The concentration cost is displayed next to the spell info. It is also a roll target. At the beginning of your round
+in order not to lose the effect of the spell one must spend dice on the roll targets. Note that if you need to use
+your proficiency to meet these targets, then you have that many less nudges for all spells this round of the same school
+of magic.
      """
      },
     {'name': 'Spell duration',
@@ -243,10 +223,10 @@ pre-maturely voluntarily.
     {'name': 'Magical potions',
      'description': """
 Throughout the game-world players may find potions with magical effects and mages with the potion maker feat can make
-them themselves. Potions however have limitations. You can safely only use 1 potion per encounter. Each additional
-potion forces you to make a Fortitude check, second potion having DC of 8, third one 10, and each consecutive 
-increasing DC by another 2. If you fail the save through, you don't receive the effect and instead puke it out, losing
-your 1 AP and the potion. And yes, to consume a potion requires 1 AP.
+them themselves. Potions however have limitations. The roll target for the first potion is RX, meaning any 1 dice will
+do. The roll target for the second potions is RX for drinking the potion and R3 fortitude check to stomach that potion.
+After that an additional R3 is added to the fortitude check each time. To make these fortitude checks does not consume
+action limit, like all fortitude checks.
      """
      },
     {'name': 'Stealth',
@@ -257,35 +237,33 @@ environment you get a bonus. Still there are some things that refer to it, in th
      },
     {'name': 'Different armors',
      'description': '''
-There are 3 different armor categories in the game. Light armor, which provide between 1 and 2 AC, Medium armor, which
-provide between 2 and 3 AC and heavy armor providing between 3 and 4 AC (Higher AC versions in each category being 
-exceedingly more expensive). In addition heavy armor provides resistance to to all damage except for psychic damage.
+There are 3 different armor categories in the game. Light armor, Medium armor and heavy armor.
 
-Neither armors nor weapons receive any AC or accuracy bonus from magical effects, instead
-magical effects focus on other things.
+Armor provides maximum defense. Light armor provides 2-3 maximum defense. Medium armor provides 3-5 maximum defense.
+Heavy armor also provides 3-5 maximum defense, but it also provides 1-2 damage reduction. The range depends on the
+quality of the armor and better quality armor becomes available as players progress in the campaign.
 
-Everyone are proficient with light armor and wearing them has no penalty.
+However each armor has certain additional upsides / downsides.
 
-Without proficiency in medium armor, You need to spend 1 STA for each AP you spend on attacks and movement while wearing
-medium armor. While having proficiency medium armors have no penalty.
+Having no armor and no shield: You have 1 additional action limit and have access to dodge.
 
-Heavy armors have: You need to spend 2 STA for each AP you spend on attacks and movement, or 1 STA for each AP you spend
-on anything else (like casting spells).
-when you are not proficient you also get -1AC and -1 AP. However the upside of heavy armor is that you have resistance
-to all damage except for psychic and lightning.
+Having light armor: You have access to dodge.
+
+Having medium armor: No upside or downside.
+
+Having heavy armor: You have 1 less action limit.
          '''
     },
     {'name': 'Shields',
      'description': '''
-Similarly as in Pathfinder, in order to get the bonus AC from shields, which are between 1 and 2, you need to spend 1 AP
-for the raise shield action. If you are proficient with shields, then raising shield is a free action.
+Shields can be used to provide additional defensive actions. In addition they also provide 1-2 maximum defense. 
          '''
     },
-    {'name': 'Resistance',
-     'description': '''
-You can have resistance to various damage types, the incoming damage to these damage types is halved, rounded down.
-         '''
-    },
+#     {'name': 'Resistance',
+#      'description': '''
+# You can have resistance to various damage types, the incoming damage to these damage types is halved, rounded down.
+#          '''
+#     },
     {'name': 'Attunement',
      'description': '''
 In order for characters to make use of magical items they need to attune to them. There are also some other effects
