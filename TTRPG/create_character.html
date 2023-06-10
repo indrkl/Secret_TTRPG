@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Character Creation Tool</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      /* Hidden by default */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+      }
+
+      /* Modal Content/Box */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      /* Close Button */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+	<h1>Character Creation Tool</h1>
+	<p>Use the buttons to adjust your character's attributes:</p>
+	<table id="paths">
+		<tr>
+            <td>
+			<span>MAGE:</span>
+			<span class="value">0</span>
+            </td>
+            <td>
+                <button class="decrement" path="MAGE">-</button>
+                <button class="increment" path="MAGE">+</button>
+            </td>
+            <td>
+                <label>Innate feat:</label>
+                <input type="text" class="feats-field" readonly path="MAGE">
+                <button class="feats-btn" type="button" path="MAGE">Choose Feat</button>
+            </td>
+		</tr>
+		<tr>
+            <td>
+			<span>MARTIAL:</span>
+			<span class="value">0</span>
+            </td>
+            <td>
+            <button class="decrement" path="MARTIAL">-</button>
+			<button class="increment" path="MARTIAL">+</button>
+            </td>
+            <td>
+                <label>Innate feat:</label>
+                <input type="text" class="feats-field" readonly path="MARTIAL">
+                <button class="feats-btn" type="button" path="MARTIAL">Choose Feat</button>
+            </td>
+		</tr>
+		<tr>
+            <td>
+			<span>SKILLED:</span>
+			<span class="value">0</span>
+            </td>
+            <td>
+            <button class="decrement" path="SKILLED">-</button>
+			<button class="increment" path="SKILLED">+</button>
+            </td>
+            <td>
+                <label>Innate feat:</label>
+                <input type="text" class="feats-field" readonly path="SKILLED">
+                <button class="feats-btn" type="button" path="SKILLED">Choose Feat</button>
+            </td>
+		</tr>
+
+	</table>
+    <!-- The Modal -->
+    <div id="innatefeats-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <ul id="feats-list">
+          <li data-feat="Feat 1">Feat 1</li>
+          <li data-feat="Feat 2">Feat 2</li>
+          <li data-feat="Feat 3">Feat 3</li>
+        </ul>
+      </div>
+    </div>
+	<script>
+	    var path_points_remaining = 6;
+	    var character = {
+	        "MARTIAL": 0,
+	        "MAGE": 0,
+	        "SKILLED": 0
+	    };
+	    var featsField = undefined;
+		$(document).ready(function() {
+			// attach event listeners to buttons
+			$('.increment').on('click', function() {
+                var path = $(this).attr("path");
+                var value = character[path];
+                if (value < 4 && path_points_remaining > 0){
+                    character[path] = value + 1;
+                    path_points_remaining = path_points_remaining - 1;
+                }
+                console.log($(this).closest('.value'));
+				$(this).closest('.value').text(character[path]);
+			});
+			$('.decrement').on('click', function() {
+				var path = $(this).attr("path");
+                var value = character[path];
+                if (value > 0){
+                    character[path] = value - 1;
+                    path_points_remaining = path_points_remaining + 1;
+                }
+                console.log($(this).closest('.value'));
+				$(this).closest('.value').text(character[path]);
+			});
+
+			  // get the list and buttons
+            const featsBtn = document.querySelectorAll(".feats-btn");
+            const featsModal = document.getElementById("innatefeats-modal");
+            const featsList = document.getElementById("feats-list");
+
+            const closeBtn = document.getElementsByClassName("close")[0];
+
+            // add event listeners to button and modal
+            featsBtn.forEach((btn) => {
+                btn.addEventListener("click", openModal);
+              });
+            featsList.addEventListener("click", chooseFeat);
+            closeBtn.addEventListener("click", closeModal);
+            window.addEventListener("click", clickOutside);
+
+            // function to open modal
+            function openModal() {
+                featsField = $(this).siblings('.feats-field');
+                console.log(featsField);
+                featsModal.style.display = "block";
+            }
+
+            // function to close modal
+            function closeModal() {
+                featsModal.style.display = "none";
+            }
+
+            // function to choose feat
+            function chooseFeat(event) {
+                if (event.target.nodeName === "LI") {
+                  const feat = event.target.dataset.feat;
+                  featsField.value = feat;
+                  closeModal();
+                }
+            }
+
+            // function to close modal when clicking outside
+            function clickOutside(event) {
+                if (event.target === featsModal) {
+                  closeModal();
+                }
+            }
+		});
+    </script>
