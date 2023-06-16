@@ -39,22 +39,18 @@ For example with a proficiency of 2 you can nudge the roll of 2 dice by 1, or a 
 nudge the rolls of a dice used on the roll target that you actually use on the roll target.
         '''
     },
-#     {'name': 'Lucky and unlucky',
-#      'description':'''
-# Some effects can make a dice roll lucky or unlucky. It can theoretically be any dice roll, even damage rolls.
-# A lucky dice roll means that you throw 4d6 and choose the best 3 results to determine the outcome. An unlucky
-# dice roll means that you throw 4d6 and choose the worse 3 results to determine the outcome. When you would be granted
-# lucky and unlucky at the same time, roll as normal, no matter how many sources of luck or unluckyness there are.
-#      '''
-#      },
-#     {'name': 'Advantage and disadvantage',
-#      'description':'''
-# Some effects can apply advantage or disadvantage to a skill check, attack roll, saving throw etc. On advantage you
-# gain +1 to the result, on a disadvantage you gain -1 to the roll. If multiple sources would grant you advantage, then
-# they do not stack and you still get +1, same with disadvanatage. If you would get both advantage and disadvantage then
-# you gain +0 to the roll no matter how many sources there are to either of those effects.
-#      '''
-#      },
+    {'name': 'Lucky',
+     'description':'''
+A player can be lucky during a round or scene. In that case they can switch one of their d6 to any desired result
+without spending any proficiency nudging.
+     '''
+     },
+    {'name': 'Advantage and disadvantage',
+     'description':'''
+A character who has advantage against an enemy requires 1 less power dice for any attack against them. A character with
+disadvantage requires 1 more power dice to do an attack.
+     '''
+     },
 #     {'name': 'Critical success and failures',
 #      'description': '''
 # When making a d20 check, it is always against some target value called DC (dice check). When you meet it or roll higher
@@ -117,7 +113,6 @@ still mitigate.
 6. You cannot set aside scarred dice as long as you have normal dice.
         '''
     },
-
     {
     'name': 'Healing and scarred dice',
      'description': """
@@ -133,10 +128,32 @@ back it costs 50 gp worth of resources.
      """,
     },
     {
+    'name': 'Exhausting dice',
+     'description': """
+Some effects force players to exhaust dice. They are set aside from the dice pool. By default players recover 1
+exhausted dice per round.
+     """,
+    },
+    {
     'name': 'incapacitated',
      'description': """
 When you have no more dice in your dice pool, you are incapacitated, cannot move nor do any actions, even if you have
 bonus actions.
+     """,
+    },
+    {
+    'name': 'moral',
+     'description': """
+All enemies and NPC allies have moral. That means their willingness to fight. GM can obviously determine the moral for
+enemies. But here are the general guidelines for how moral is lost:
+
+1. Each dice lost from the dice pool loses 1 moral
+2. Each ally lost reduces moral by 1
+3. Losing a stronger ally reduces moral by additional 2
+4. Dropping to 2 dice in your dice pool reduces moral by additional 3
+5. Dropping to 1 dice in your dice pool reduces moral to 0 unless enemy is raging or smth equivelant.
+6. Getting outnumbered reduces moral by 2
+7. Defeating an enemy increases moral by 2
      """,
     },
 #     {
@@ -249,9 +266,10 @@ Having no armor and no shield: You have 1 additional action limit and have acces
 
 Having light armor: You have access to dodge.
 
-Having medium armor: No upside or downside.
+Having medium armor: No upside or downside with proficiency. You have 1 less action limit without medium armor 
+proficiency.
 
-Having heavy armor: You have 1 less action limit.
+Having heavy armor: You have 1 less action limit, or 2 less action limit without heavy armor proficiency.
          '''
     },
     {'name': 'Shields',

@@ -18,39 +18,39 @@ Legendary: You can see in the dark as well as in the light. You have blind sight
 Acquinted: You don't take any falling damage as long as you are wearing light armor.
 
 Adept: You don't take any falling damage as long as you are wearing medium armor, and when falling from great hights
-you can glide, falling 12 m. per round and moving 12 m. per round at any direction.
+you can glide, falling 6 sq. per round and moving 6 sq. per round at any direction.
 
 Talented: You don't take any falling damage. If you are wearing light or no armor, and are not carrying more than
-1/5th of your body weight, then you can fly at your move speed.
+1/5th of your carry weight, then you can fly at your move speed.
 
 Legendary: You don't take any falling damage. If you are wearing light or no armor, and are not carrying more than
-1/5th of your body weight, then you can fly at twice your move speed.
+1/5th of your carry weight, then you can fly at twice your move speed.
             ''',
         },
-        {
-            'name': 'Natural armor',
-            'description': '''
-With regards to natural armor bonus, this competes with the regular armor and all other kind of armor bonuses. Meaning
-only the highest one of the armor bonuses has any effect on you. You can still wear armor and get the magical effects
-of the armor and still benefit from the natural armor bonus, just not get the armor bonus from the armor.
-Acquinted: you get a +1 natural armor bonus. At levels 7 it increases to +2.
-
-Adept: you get a +2 natural armor bonus. At levels 7 it increases to +3. You cannot dodge.
-
-Talented: you get a +2 natural armor bonus. At levels 7 it increases to +3. Choose between the ability to dodge, +1 AC
-or +1 AC and being considered wearing heavy armor with it's downsides and benefits (as if having the heavy armor trait).
-
-Legendary: you get a +3 natural armor bonus. At levels 7 it increases to +4. Choose between the ability to dodge, +1 AC
-or +1 AC and being considered wearing heavy armor with it's downsides and benefits (as if having the heavy armor trait).
-            ''',
-        },
+#         {
+#             'name': 'Natural armor',
+#             'description': '''
+# With regards to natural armor bonus, this competes with the regular armor and all other kind of armor bonuses. Meaning
+# only the highest one of the armor bonuses has any effect on you. You can still wear armor and get the magical effects
+# of the armor and still benefit from the natural armor bonus, just not get the armor bonus from the armor.
+# Acquinted: you get a +1 natural armor bonus. At levels 7 it increases to +2.
+#
+# Adept: you get a +2 natural armor bonus. At levels 7 it increases to +3. You cannot dodge.
+#
+# Talented: you get a +2 natural armor bonus. At levels 7 it increases to +3. Choose between the ability to dodge, +1 AC
+# or +1 AC and being considered wearing heavy armor with it's downsides and benefits (as if having the heavy armor trait).
+#
+# Legendary: you get a +3 natural armor bonus. At levels 7 it increases to +4. Choose between the ability to dodge, +1 AC
+# or +1 AC and being considered wearing heavy armor with it's downsides and benefits (as if having the heavy armor trait).
+#             ''',
+#         },
     ],
     'Mage': [
-        {
-            'name': 'Favoured magic',
-            'description': '''Choose 1 school of magic. Your max difficulty and spell DC for spells in that school is as
-                if you were talented in the mage path.''',
-        },
+        # {
+        #     'name': 'Favoured magic',
+        #     'description': '''Choose 1 school of magic. Your max difficulty and spell DC for spells in that school is as
+        #         if you were talented in the mage path.''',
+        # },
         {
             'requires': 'Talented',
             'name': 'Metamagician',
@@ -64,19 +64,19 @@ or +1 AC and being considered wearing heavy armor with it's downsides and benefi
             speak, don't benefit from any of your normal form advancements in any path, but you can level up using the
             beast path (used to make all the mighty beasts in the game). The level of your beastly path is equal to
             your magic path. Beastly form has the ability to turn back into your regular form. To turn into your
-            beastly form you need to spend 3 AP and 1 mana per your character level. Your equipment merges
-            into your body and loses it's magical effect until you return to your normal form. When you take damage
-            in your beastly form, it carries over to your normal form when you return. If you go down to 0 HP, you
-            return to your normal form automatically.''',
+            beastly form you need to spend 1 mana per your character level and if you are in combat then also meat
+            R5.R5.R5 roll target using nature magic. Your equipment merges
+            into your body and loses it's magical effect until you return to your normal form. Scarred, damaged and
+            wounded dice carry over when transforming to the other form.''',
         },
         {
             'name': 'Divine protector',
             'description': '''
-            You're hit dice can be determined by your mage path instead of martial if your mage path is greater.
-            You're mage path grants you 4 HP per mage path levels instead of 2 (similarly to Warrior path).
-            Using 2 AP, you can transfer any number of your hit dice to one other creature. They cannot go over their
-            maximum number of hit dice this way. When your mage path is talented, you always recover all your hit dice
-            when you finish your daily rest. When your mage path is legendary, you have 50 % more maximum hit dice.
+            You can advance toughness using both mage and martial path. You can transfer a scarred dice from an ally
+            to yourself (their scarred dice becomes normal, 1 of your normal dice become scarred) twice a day outside
+            of combat.
+            When your mage path is talented, When a dice would become scarred, roll it. On a 5 or 6, it stays normal.
+            When your mage path is legendary, then it also doesn't become scarred on a 3 and 4.
             '''
         },
         {
@@ -84,47 +84,37 @@ or +1 AC and being considered wearing heavy armor with it's downsides and benefi
             'description': '''
             You cannot cast concentration spells, or spells which cast time is greater than 1 round. You also cannot
             initiate rituals nor spend your mana for rituals.            
-            However increase your maximum level in schools of magic by 1. If you are at least talented in mage path, 
-            then spells also cost 1 mana less to cast.
-            
-            These bonuses increase by an additional 1 at levels 7 and 14.
+            However you have an extra raw caster dice, which you roll each round. This can be used to cast spells and
+            it doesn't spend action limit.
             '''
         },
     ],
     'Martial': [
-        {
-            'requires': 'Legendary',
-            'name': 'Warcaster',
-            'description': '''You can cast spells using your stamina instead of mana.''',
-        },
+        # {
+        #     'requires': 'Legendary',
+        #     'name': 'Warcaster',
+        #     'description': '''You can cast spells using your stamina instead of mana.''',
+        # },
         {
             'requires': 'Talented',
             'name': 'Defiant',
             'description': '''
-If you are legendary, then you have 50 % more hit dice.
+When your martial path is talented, When a dice would become scarred, roll it. On a 5 or 6, it stays normal.
+When your martial path is legendary, then it also doesn't become scarred on a 3 and 4.
 
-Each round when you are below half of your hit points you can roll a hit dice, heal rolled
-amount of life and choose 1 additional benefit:
+At the beginning of each round, if you have any damaged dice, you may choose one of the following:
 
-* Recover 2 stamina per level
+* Heal 1 damaged dice.
 
-* heal additional Xd6, where X is your level / 2 rounded up.
+* Deal additional damage with one attack equal to the number of damaged dice.
 
-* Gain 1 bonus AP this turn. At level 11, instead gain 2 bonus AP this turn.
-
-* The next 2 attacks you make are lucky. This increases by 1 at levels 5, 10 and 15.
-
-* Roar, forcing all enemies in 10 m. radius to check for afraid X times, where X is your level / 3 rounded
-up.
-
-If after that you are still below 25 % of your hit points, you can roll another hit dice, heal rolled amount
-and choose another effect.
+* Roar, all enemies within 5 sq. radius get 1 level of afraid per 3 damaged dice on you rounded down. 
             ''',
         },
         {
             'requires': 'Legendary',
             'name': 'Nimble',
-            'description': '''Your base AP per round is 4''',
+            'description': '''Your action limit increases by 1''',
         },
         {
             'requires': 'Talented',
@@ -136,35 +126,34 @@ and choose another effect.
             'name': 'Anti-mage',
             'description': '''You cannot be the target of spells (including those of your allies), nor can you cast 
                 spells, nor can spells have any none-damaging effect on you. When you attack a spell caster, they lose 
-                1 mana for every damage dice you roll against them.''',
+                1 mana for every unmitigated damage (that damages their dice)''',
         },
-        {
-            'requires': 'Talented',
-            'name': 'Life stealer',
-            'description': '''You cannot be healed using nature magic. Heal 1d6 -1 life for each damage dice you deal in 
-                melee combat. Heal 1d6 instead, if your martial path is legendary.''',
-        },
+        # {
+        #     'requires': 'Talented',
+        #     'name': 'Life stealer',
+        #     'description': '''You cannot be healed using nature magic. Heal 1d6 -1 life for each damage dice you deal in
+        #         melee combat. Heal 1d6 instead, if your martial path is legendary.''',
+        # },
 
         {
             'name': 'Harmonious body',
             'description': '''Whenever you advance in REFLEX or FORTITUDE saving throws. Advance in the other one as 
                 well''',
         },
-        {
-            'name': 'Favored weapon',
-            'description': '''Choose 1 weapon category. In that weapon your MAX level is as if your PATH 
-    level in Martial was 1 higher (cannot exceed Legendary).
-        ''',
-        },
+    #     {
+    #         'name': 'Favored weapon',
+    #         'description': '''Choose 1 weapon category. In that weapon your MAX level is as if your PATH
+    # level in Martial was 1 higher (cannot exceed Legendary).
+    #     ''',
+    #     },
     ],
     'Skilled': [
         {
             'requires': 'Legendary',
             'name': 'Wild magic',
             'description': '''You can cast any spell with the speed of at most 1 round not requiring concentration using 
-your luck tokens instead of mana, even if you do not know that spell. Your max difficulty is determined by the 
-Skilled PATH instead of MAGE path and assumes you having max level in the school of magic. 
-Your spell DC is still determined by your actual proficiency bonus in that school.''',
+your luck tokens instead of mana, even if you do not know that spell. Power dice for these spells are always D6 and
+utility dice are always D5.''',
         },
         {
             'name': 'Specialist',

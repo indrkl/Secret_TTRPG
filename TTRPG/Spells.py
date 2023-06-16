@@ -3,68 +3,64 @@ schools = {
         'spells': [
             {
                 'name': 'Push/pull',
-                'speed': '2A',
-                'range': '24 m.',
-                'effect': '''Move target away from you or towards you for 4 m. Halve the distance for large creatures
+                'range': '8 sq.',
+                'effect': '''Move target away from you or towards you for 2 sq. Halve the distance for large creatures
                 and those wearing heavy armor. Huge and larger creatures cannot be moved this way. After being moved
                 the target needs to check for balance.''',
                 'target': 'single',
-                'difficulty': 0,
+                'difficulty': 'R4.R4',
                 'scaling': [
-                    {'D': '1/1/2/2/3/3', 'L': 6, 'description': '''increase the move distance by 4 m. The target needs to make an 
+                    {'D': 'R4', 'description': '''increase the move distance by 2 sq. The target needs to make an 
                     additional check for balance'''},
-                    {'D': 3, 'description': '''For the purposes of moving the target and balance checks the creature is 
+                    {'D': 'R4', 'description': '''For the purposes of moving the target and balance checks the creature is 
                     considered to not be wearing heavy armor and also to be one size smaller'''},
                 ],
             },
             {
                 'name': 'Explosive force',
-                'speed': '2A',
-                'range': '24 m.',
-                'effect': '''A force pushes everyone around target point 2 m. away from the point and they must check
+                'range': '8 sq.',
+                'effect': '''A force pushes everyone around target point 2sq. away from the point and they must check
                 for balance 4 times''',
-                'target': 'single',
-                'radius': '2m',
-                'difficulty': 3,
+                'target': 'point',
+                'radius': '1 sq',
+                'difficulty': 'R4.R4.R4',
                 'scaling': [
-                    {'D': 1, 'L': 4, 'description': '''Have them check for balance one more time'''},
-                    {'D': 3, 'description': ''''''},
+                    {'D': 'R4', 'description': '''The force pushed them 2 additional sq. further away and they need to 
+                    check for balance twice more'''},
                 ],
             },
             {
                 'name': 'Wall of force',
-                'speed': '2A',
-                'range': '24 m.',
-                'effect': '''Create a 4 m. long wall. arrows that would fly through this area, lose their speed and
-                fall on the ground. It takes 4 m. worth of movement and 2 stamina to go through the wall of force''',
-                'concenctration': 1,
-                'difficulty': 2,
+                'range': '12 sq.',
+                'effect': '''Create a 2 sq. long wall. arrows that would fly through this area, lose their speed and
+                fall on the ground. It takes 3 sq. worth of movement to go through the wall of force''',
+                'concenctration': 'R4',
+                'difficulty': 'R4.R4',
                 'scaling': [
-                    {'D': 1, 'description': '''increase the length by 4 m.'''},
-                    {'D': 2, 'description': '''At the beginning of each of your rounds you can move the position of the
+                    {'D': 'R2', 'description': '''increase the length by 4 m.'''},
+                    {'D': 'R2', 'description': '''At the beginning of each of your rounds you can move the position of the
                     wall'''},
-                    {'D': 3, 'description': '''It requires 4 additional m. worth of movement and 2 stamina to go 
-                    through the wall
+                    {'D': 'R4', 'description': '''It requires 2 additional sq. worth of movement to go through the wall
                     of force'''},
                 ],
             },
             {
                 'name': 'Force field',
-                'speed': '2A',
                 'range': 'touch',
                 'target': 'self',
                 'duration': '5 rounds',
-                'concenctration': 1,
-                'effect': '''Increase your AC proficiency by 1
+                'concenctration': 'R4',
+                'effect': '''Increase your maximum defense to 2 (note, this does not stack with armor and is only
+                useful if you don't have maximum defense from other sources..
                 ''',
-                'difficulty': 0,
+                'difficulty': 'R4.R4',
                 'scaling': [
-                    {'D': '1/1/2/2/3/3', 'L': 6, 'description': '''
-                        Gain an armor bonus of at least 2/3/4/5/6/7
+                    {'D': 'R4', 'description': '''
+                        The maximum defense provided by this spell is increased by 1
                     '''},
-                    {'D': 1, 'description': '''increase AC proficiency by 1.'''},
-                    {'D': 3, 'description': '''Choose fire, cold, lightning or physical, gain resistance to the chosen
-                    damage type.'''},
+                    {'D': 'R4.R4', 'description': '''Gain 1 damage reduction'''},
+                    # {'D': 'R4.R4', 'description': '''Choose fire, cold, lightning or physical, gain resistance to the chosen
+                    # damage type.'''},
                 ]
             },
 
@@ -75,21 +71,21 @@ schools = {
             {
                 'name': '''Nature's bounty''',
                 'effect': '''After learning this spell, when trying to find food, or otherwise survive in the 
-                wilderness, you can use your nature proficiency instead of survival skill to make the checks.'''
+                wilderness, you can use your nature proficiency instead of survival proficiency to make the checks.'''
             },
             {
                 'name': 'Heal',
                 'speed': '2A',
                 'range': 'touch',
-                'effect': '''A willing target rolls 1 of their hit dice and an additional 1d8 and heals that much HP.
-                If the target does not roll 1 of their hit dice, this spell has no effect.''',
+                'effect': '''This is a heal. Target recovers 1 damaged dice or removes all damage from wounded dice, or
+                removes 1 level of burning, poison or freezing.''',
                 'target': 'single',
-                'difficulty': 0,
+                'difficulty': 'R1.R1',
                 'scaling': [
-                    {'D': 1, 'description': 'Heal additional 1d8'},
-                    {'D': 1, 'description': 'remove a level of poison'},
-                    {'D': 1, 'description': 'remove a level of burning'},
-                    {'D': 1, 'description': 'remove a level of freezing'},
+                    {'D': 'R1', 'description': 'This heal recovers 1 additional damaged dice'},
+                    {'D': 'R1', 'description': 'remove a level of poison'},
+                    {'D': 'R1', 'description': 'remove a level of burning'},
+                    {'D': 'R1', 'description': 'remove a level of freezing'},
                 ],
             },
             {
