@@ -28,8 +28,8 @@ In order to make any offensive actions during your turn you need to meet a roll 
         if you get to 4 levels of unbalanced, you fall over, getting prone status but losing all levels of unbalanced,
         if you are wearing heavy armor or are a large creature and would get a level of unbalanced, you have a 50 % 
         chance to not get it.'''},
-    {'name': 'entangled', 'description': '''Your position cannot change until you are entangled. When taking the move
-        action, for every 1 sq. of movement you can spend 2 stamina to reduce entangled by 1 level.'''},
+    {'name': 'entangled', 'description': '''Your position cannot change until you are entangled. You need to meet a R5
+    physique target to reduce the entangled by 1 level.'''},
     {'name': 'prone', 'description': '''You have disadvantage. You need to spend dice worth of 10 points total to lose
     prone status effect.'''},
     {'name': 'poisoned', 'description': '''

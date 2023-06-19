@@ -90,60 +90,57 @@ schools = {
             },
             {
                 'name': 'Grant luck',
-                'speed': '2A',
                 'range': 'touch',
                 'target': 'single',
-                'effect': '''Until the beginning of your next round all attacks the target makes are lucky
+                'effect': '''Target can change the result of one dice in the dice pool.
                 ''',
-                'difficulty': 2,
+                'difficulty': 'R1.R1',
                 'scaling': [
-                    {'D': 2, 'description': 'All attacks made against the target are unlucky'},
-                    {'D': 3, 'description': 'All status effect checks target makes are lucky'},
+                    {'D': 'R1.R1', 'description': '''Target can change another dice in their dice pool, this option 
+                    increases mana cost by 1 less'''},
                 ],
             },
-            {
-                'name': 'Rejuvenation',
-                'speed': '1A',
-                'range': 'touch',
-                'effect': 'Target gains 1 stamina recovery',
-                'target': 'single',
-                'difficulty': 0,
-                'concentration': 1,
-                'scaling': [
-                    {'D': 2, 'description': 'Target gains 1 additional stamina recovery'},
-                ],
-            },
-            {
-                'name': 'Enhance poison',
-                'speed': '2A',
-                'range': 'touch',
-                'effect': '''This enhancement can be applied to weapons which are coated with poison. Target weapon 
-                which is coated with poison applies 1 additional stack per attack that hits, this additional stack does 
-                not spend a poison stack from the weapon.''',
-                'target': 'single',
-                'duration': '3 rounds',
-                'difficulty': 3,
-                'concentration': 1,
-                'scaling': [
-                    {'D': 5, 'description': 'Apply an additional stack per attack that hits.'},
-                ],
-            },
+            # {
+            #     'name': 'Rejuvenation',
+            #     'speed': '1A',
+            #     'range': 'touch',
+            #     'effect': 'Target gains 1 stamina recovery',
+            #     'target': 'single',
+            #     'difficulty': 0,
+            #     'concentration': 1,
+            #     'scaling': [
+            #         {'D': 2, 'description': 'Target gains 1 additional stamina recovery'},
+            #     ],
+            # },
+            # {
+            #     'name': 'Enhance poison',
+            #     'speed': '2A',
+            #     'range': 'touch',
+            #     'effect': '''This enhancement can be applied to weapons which are coated with poison. Target weapon
+            #     which is coated with poison applies 1 additional stack per attack that hits, this additional stack does
+            #     not spend a poison stack from the weapon.''',
+            #     'target': 'single',
+            #     'duration': '3 rounds',
+            #     'difficulty': 3,
+            #     'concentration': 1,
+            #     'scaling': [
+            #         {'D': 5, 'description': 'Apply an additional stack per attack that hits.'},
+            #     ],
+            # },
             {
                 'name': 'Entangling roots',
-                'speed': '2A',
-                'range': '12m',
-                'radius': '2m',
+                'range': '6 sq',
+                'radius': '2 sq',
                 'target': 'area',
                 'effect': '''Requires being in the wild. Roots grow from the ground and entangle anyone. 
                     Anyone starting their round or entering the area of effect gain 2 levels of entangled''',
-                'difficulty': 1,
-                'concentration': 2,
+                'difficulty': 'R1.R1.R1',
+                'concentration': 'R1.R1',
                 'scaling': [
-                    {'D': '1/2', 'L': 2, 'description': 'Increase radius by  2 m'},
-                    {'D': '2', 'L': 5, 'description': '''Anyone starting their round or entering the area of effect 
-                        gains 1 additional levels of entangled'''},
-                    {'D': 1,
-                     'description': '''Anyone starting their round or entering the area of effect take 1d6 piercing 
+                    {'D': 'R1', 'description': '''Anyone starting their round or entering the area of effect gain 
+                    additional 1 level of entangled'''},
+                    {'D': 'R1',
+                     'description': '''Anyone starting their round or entering the area of effect take 2 piercing 
                         damage'''},
                 ],
             },
@@ -152,417 +149,413 @@ schools = {
     'Harmony': {
         'special_rules': [
             """You can use harmony proficiency instead of diplomacy when
-                interacting with large crowds, or individuals who are not evil, power hungry or emotionless."""
+                interacting with large crowds, or individuals who are neither evil, power hungry nor emotionless."""
         ],
         'spells': [
             {
                 'name': 'Guardian',
                 'speed': '2 AP',
                 'target': 'self',
-                'effect': '''When target has the raised shield status, that shield AC bonus applies also to their allies
-        within 2 m. of the target. (creature can have only 1 active shield AC bonus).
+                'radius': '1 sq.',
+                'effect': '''When you have the guarded buff, then allies standing within radius. of the target also
+                have that buff.
             ''',
-                'difficulty': 1,
-                'concentration': 1,
+                'difficulty': 'R3.R3',
+                'concentration': 'R3',
                 'scaling': [
-                    {'D': 3, 'L': 1, 'description': '''This spell can target others. Gaining the range of touch.'''},
-                    {'D': 2, 'L': 2, 'description': '''Increase the shield AC bonus range by 2 m.'''},
-                    {'D': 5, 'L': 1, 'description': '''If the target is willing, he may direct an attack onto them for
-            all attacks made to an ally with this spell's shield AC bonus.'''},
-                    {'D': 4, 'L': 2, 'description': '''Increase target's shield AC bonus by 1'''},
-
+                    {'D': 'R4', 'L': 1, 'description': '''This spell can target others. Gaining the range of touch.'''},
+                    {'D': 'R3', 'L': 1, 'description': '''Increase maximum defense of the target by 1'''},
+                    {'D': 'R4.R4', 'L': 1, 'description': '''If the target is willing, he may direct an attack onto 
+                    them for all attacks made to an ally within this spells radius.'''},
                 ],
             },
-            {
-                'name': 'Valor',
-                'speed': '2 AP',
-                'target': 'touch',
-                'effect': '''When target successfully hits an enemy, they recover 1 stamina, but no more than their maximum 
-        stamina.
-            ''',
-                'difficulty': 1,
-                'concentration': 1,
-                'scaling': [
-                    {'D': 2, 'description': '''Target recovers one additional stamina per hit'''},
-                    {'D': 3, 'L': 1, 'description': '''Target gains inspiration on a critical hit'''},
-                    {'D': 5, 'L': 1, 'description': '''When target hits critically, his next attack is lucky'''},
-
-                ],
-            },
+        #     {
+        #         'name': 'Valor',
+        #         'speed': '2 AP',
+        #         'target': 'touch',
+        #         'effect': '''When target successfully hits an enemy, they recover 1 stamina, but no more than their maximum
+        # stamina.
+        #     ''',
+        #         'difficulty': 1,
+        #         'concentration': 1,
+        #         'scaling': [
+        #             {'D': 2, 'description': '''Target recovers one additional stamina per hit'''},
+        #             {'D': 3, 'L': 1, 'description': '''Target gains inspiration on a critical hit'''},
+        #             {'D': 5, 'L': 1, 'description': '''When target hits critically, his next attack is lucky'''},
+        #
+        #         ],
+        #     },
             {
                 'name': 'Clarity',
                 'speed': '2 AP',
                 'target': '1 creature',
                 'effect': '''Remove 1 lvl from all negative status effects related to WILL saving throws.
             ''',
-                'difficulty': 3,
+                'difficulty': 'R3.R3',
                 'scaling': [
-                    {'D': 2, 'L': 2, 'description': '''Remove one additional level from those status effects'''},
-                    {'D': 3, 'description': 'target one additional creature'},
+                    {'D': 'R3', 'description': '''Remove one additional level from those status effects'''},
                 ],
             },
+        #     {
+        #         'name': 'Clear mind',
+        #         'speed': '1 AP',
+        #         'target': '1 creature',
+        #         'range': '6 m.',
+        #         'duration': '10 min',
+        #         'effect': '''Remove hexes from the target, the next time target would be unlucky doing d20 check, make the
+        # check normal instead
+        #     ''',
+        #         'difficulty': 2,
+        #         'scaling': [
+        #             {'D': 3, 'description': 'target one additional creature'},
+        #         ],
+        #     },
             {
-                'name': 'Clear mind',
-                'speed': '1 AP',
-                'target': '1 creature',
-                'range': '6 m.',
-                'duration': '10 min',
-                'effect': '''Remove hexes from the target, the next time target would be unlucky doing d20 check, make the 
-        check normal instead
-            ''',
-                'difficulty': 2,
-                'scaling': [
-                    {'D': 3, 'description': 'target one additional creature'},
-                ],
-            },
-            {
-                'name': 'Unity',
-                'speed': '1 AP',
-                'range': '10 m',
-                'target': '1 creature',
-                'effect': '''Target has a +2 magical bonus to attacks and spell DCs against creatures that damaged any 
-        target's ally since the beginning of target's last turn.
+                'name': 'Bless',
+                'range': '5 sq.',
+                'target': 'up to 3 allies',
+                'effect': '''
+                Target has an additional bless dice to be used in roll dice and for actions. One can have bless dice
+                only from one source. 
         ''',
-                'difficulty': 0,
-                'concentration': 1,
+                'difficulty': 'R3.R3.R3',
+                'concentration': 'R3',
                 'scaling': [
-                    {'D': 2, 'L': 2, 'description': '''Increase the bonus by additional +1'''},
-                    {'D': 2, 'description': 'target one additional creature'},
+                    {'D': 'R3.R3', 'description': '''Provide one additional bless dice for targets'''},
                 ],
             },
-            {
-                'name': 'Clear heart',
-                'speed': '1 AP',
-                'target': '1 creature',
-                'range': '10 m.',
-                'duration': '1 hour',
-                'effect': '''Target's diplomacy check get +5 magical bonus. The target has to be someone other than you.
-            The target can only use this bonus when trying to persuade, or otherwise engage in friendly and 
-            cooperative diplomacy.''',
-                'difficulty': 7,
-                'concentration': 'full',
-                'scaling': [
-                    {'D': 4, 'description': 'Increase the bonus by additional +1'},
-                    {'D': 3, 'description': '''This bonus may be used on any diplomacy check, however if it doesn't meet the 
-                initial requirements, there is a 50% chance that you lose concentration and may not cast any harmony 
-                spells until the next day. The bonus still applies for that check.'''},
-                ],
-            },
+            # {
+            #     'name': 'Clear heart',
+            #     'speed': '1 AP',
+            #     'target': '1 creature',
+            #     'range': '10 m.',
+            #     'duration': '1 hour',
+            #     'effect': '''Target's diplomacy check get +5 magical bonus. The target has to be someone other than you.
+            # The target can only use this bonus when trying to persuade, or otherwise engage in friendly and
+            # cooperative diplomacy.''',
+            #     'difficulty': 7,
+            #     'concentration': 'full',
+            #     'scaling': [
+            #         {'D': 4, 'description': 'Increase the bonus by additional +1'},
+            #         {'D': 3, 'description': '''This bonus may be used on any diplomacy check, however if it doesn't meet the
+            #     initial requirements, there is a 50% chance that you lose concentration and may not cast any harmony
+            #     spells until the next day. The bonus still applies for that check.'''},
+            #     ],
+            # },
         ]
     },
     'Elemental': {
+        'special_rules': [
+            """Elements are fire, water, earth and air. In addition to the combat spells this school provides. One can
+            manipulate the elements out of combat, by describing what they want to achieve and GM then setting a roll
+            target for that, so that they get to use elemental proficiency when attempting to meet it. You need to
+            have some elemental proficiency to even have the option however."""
+        ],
         'spells': [
             {
                 'name': 'Fireball',
-                'speed': '2A',
-                'range': '24 m.',
-                'effect': 'Deal 1d8 fire damage to everyone in the area. Then they check for burning.',
+                'speed': 'R6.R6',
+                'range': '8 sq.',
+                'effect': 'Deal 2 fire damage to everyone in the area.',
                 'save': 'REFLEX',
                 'target': 'area',
                 'difficulty': 0,
-                'radius': '5ft',
+                'radius': '1 sq.',
                 'scaling': [
-                    {'D': 1, 'description': 'Deal additional 1d8 fire damage'},
-                    {'D': 2, 'description': 'They check for burning an additional time'},
+                    {'D': 'R6.R6', 'description': 'Deal additional 3 damage'},
+                    {'D': 'R1', 'description': '1 target enemy within radius gets a level of burning'},
                 ],
             },
-            {
-                'name': 'Tremor',
-                'speed': '2A',
-                'range': '12 m.',
-                'effect': '''everyone in the target area check for unbalanced twice. At the beginning of your round,
-                when you continue to concentrate on this spell, you may move the center of tremor up to 4 m. Then
-                the unbalanced checks are done for all creatures in the new area of effect. When you are outside the 
-                range of the tremor you lose concentration.''',
-                'target': 'area',
-                'difficulty': 0,
-                'concentration': 1,
-                'radius': '5ft',
-                'scaling': [
-                    {'D': 1, 'description': 'They need to check for unbalanced an additional time'},
-                ],
-            },
+            # {
+            #     'name': 'Tremor',
+            #     'speed': '2A',
+            #     'range': '6 sq.',
+            #     'effect': '''everyone in the target area check for unbalanced twice. At the beginning of your round,
+            #     when you continue to concentrate on this spell, you may move the center of tremor up to 4 m. Then
+            #     the unbalanced checks are done for all creatures in the new area of effect. When you are outside the
+            #     range of the tremor you lose concentration.''',
+            #     'target': 'area',
+            #     'difficulty': 0,
+            #     'concentration': 1,
+            #     'radius': '5ft',
+            #     'scaling': [
+            #         {'D': 1, 'description': 'They need to check for unbalanced an additional time'},
+            #     ],
+            # },
             {
                 'name': 'Frostbite',
-                'speed': '2A',
-                'range': '24 m.',
-                'effect': '''Target needs to check for freezing twice''',
+                'range': '8 sq.',
+                'effect': '''Target enemy gets one level of freezing''',
                 'target': 'single target',
-                'difficulty': 1,
+                'difficulty': 'R6.R6.R6',
                 'scaling': [
-                    {'D': 1, 'description': 'Deal additional 1d6 cold damage'},
-                    {'D': 3, 'L': 3, 'description': 'Target must make an additional freezing check'},
+                    {'D': 'R6.R6', 'description': 'Target gets another level of freezing'},
+                    {'D': 'R1', 'description': 'You get to choose which of the dice are frozen'},
                 ],
             },
             {
                 'name': 'Enchant weapon',
-                'speed': '2A',
                 'range': 'touch',
-                'effect': '''Choose fire, cold or lightning. Enchant target not enchanted weapon. 
-                Target weapon deals 1d6 extra damage of the chosen damage type with every attack that it hits''',
+                'effect': '''Choose fire, cold or lightning. Enchant target not enchanted weapon. Target weapon deals 
+                1 extra damage of the chosen damage type with every attack made with this weapon.
+                ''',
                 'target': 'single weapon',
-                'difficulty': 1,
+                'difficulty': 'R6.R6.R6',
                 'duration': '3 rounds',
-                'concentration': 1,
+                'concentration': 'R6.R6',
                 'scaling': [
-                    {'D': 3, 'description': 'target weapon deals an additional 1d6 damage'},
-                    {'D': 9, 'L': 1, 'description': '''You need to have chosen cold. Convert all physical damage target weapon
-                        does to cold damage. Each time that weapon hits an enemy. They must check for freezing against
-                        your spell DC for each damage dice added by this spell.
+                    {'D': 'R6.R6', 'description': 'target weapon deals an additional 1 damage of the chosen type'},
+                    {'D': 'R6.R6.R6', 'L': 1, 'description': '''You need to have chosen cold. Convert all physical 
+                        damage target weapon does to cold damage. Each time that weapon hits an enemy the enemy gets
+                        one level of freezing
                     '''},
-                    {'D': 7, 'L': 1, 'description': '''You need to have chosen lightning. Convert all physical damage 
+                    {'D': 'R6', 'L': 1, 'description': '''You need to have chosen lightning. Convert all physical damage 
                         target weapon does to lightning damage. Each time that weapon hits an enemy, the enemy must
-                        check for disoriented against your spell DC for each damage dice added by this spell.
+                        gets confusion 1.
                     '''},
-                    {'D': 5, 'L': 1, 'description': '''You need to have chosen fire. Convert all physical damage 
-                        target weapon does to fire damage. Each time that weapon hits an enemy, the enemy must
-                        check for burning against your spell DC for each damage dice added by this spell.
+                    {'D': 'R6.R6', 'L': 1, 'description': '''You need to have chosen fire. Convert all physical damage 
+                        target weapon does to fire damage. Each time that weapon hits an enemy, the enemy gets one
+                        level of burning.
                     '''},
                 ],
             },
             {
                 'name': 'Haste',
-                'speed': '2A',
-                'range': '12 m.',
-                'effect': '''Target gains an additional AP in their turns. 
-                    Only 1 buff can grant additional APs to a character.''',
-                'difficulty': 3,
+                'range': '6 sq.',
+                'effect': '''Target gets +1 action limit haste buff. Each character can have the haste buff from only 
+                one source''',
+                'difficulty': 'R6.R6.R6',
                 'target': 'single',
-                'concentration': 2,
+                'concentration': 'R6.R6',
                 'scaling': [
-                    {'D': 6, 'L': 1, 'description': 'Upgrades the buff to grant 2 APs instead'},
+                    {'D': 'R6.R6.R6', 'L': 1, 'description': '''Haste buff provides additional +1 action limit'''},
                 ],
             },
-            {
-                'name': 'Shatter rock',
-                'speed': '2A',
-                'range': '6 m.',
-                'radius': '1 m.',
-                'target': 'area',
-                'effect': 'Break stone into small pieces in the radius of effect',
-                'difficulty': 4,
-                'scaling': [
-                ],
-            },
-            {
-                'name': 'Clean water',
-                'speed': '1 minute',
-                'range': 'touch',
-                'target': 'vessel filled with water',
-                'effect': '''Clean a water in a constrained vessel''',
-                'difficulty': 0,
-                'scaling': [
-                ],
-            },
-
+            # {
+            #     'name': 'Shatter rock',
+            #     'speed': '2A',
+            #     'range': '6 m.',
+            #     'radius': '1 m.',
+            #     'target': 'area',
+            #     'effect': 'Break stone into small pieces in the radius of effect',
+            #     'difficulty': 4,
+            #     'scaling': [
+            #     ],
+            # },
+            # {
+            #     'name': 'Clean water',
+            #     'speed': '1 minute',
+            #     'range': 'touch',
+            #     'target': 'vessel filled with water',
+            #     'effect': '''Clean a water in a constrained vessel''',
+            #     'difficulty': 0,
+            #     'scaling': [
+            #     ],
+            # },
         ]
     },
     'Dimension': {
+        'special_rules': [
+            """School of dimension deals with overcoming great distances and moving between planes. Most things
+            however, like teleportation, long distance communication or moving to other planes is a complex matter and
+            requires rituals to be made."""
+        ],
         'spells': [
             {
                 'name': 'Pass object',
-                'speed': '1 AP',
-                'range': '12 m.',
+                'range': '6 sq.',
                 'target': '1 creature',
                 'effect': '''Teleport a tiny object weighing no more than 1 kg. onto the possession of another willing 
-                creature. You can place it on them whereever you would like.''',
-                'difficulty': 0,
+                creature. You can place it on them wherever you would like.''',
+                'difficulty': 'R3',
                 'scaling': [
-                    {'D': 1, 'description': '''Increase the max object weight by 1 kg'''},
-                    {'D': 1, 'L': 1, 'description': '''When passing a potion onto a willing subject, they can also drink
-                    it and receive it's benefit immediately'''},
-                    {'D': 3, 'L': 1, 'description': '''When passing a vial of poison onto a willing subject, you can
+                    {'D': 'R3', 'description': '''Increase the max object weight by 1 kg'''},
+                    {'D': 'R3', 'L': 1, 'description': '''When passing a potion onto a willing subject, they can also 
+                    drink it and receive it's benefit immediately'''},
+                    {'D': 'R3', 'L': 1, 'description': '''When passing a vial of poison onto a willing subject, you can
                     coat their melee weapon or next arrow with that poison vial instead'''},
                 ],
             },
-            {
-                'name': 'Communicate',
-                'speed': '1 round',
-                'range': '1 km.',
-                'target': 'Anyone(known)',
-                'effect': '''Send a short message over a long distance. If recipient is within the range of the spell, 
-                    they will hear that and may choose to reply shortly.''',
-                'difficulty': 0,
-                'scaling': [
-                    {'D': 1, 'description': 'double the range'},
-                    {'D': 4, 'L': 1, 'description': '''open a line of steady communication with the target, it stays 
-                    open as long as you concentrate 3, concentration does not consume additional mana'''},
-                    {'D': 3, 'L': 1, 'description': 'You can have another party member do the communicating.'},
-                ],
-            },
+            # {
+            #     'name': 'Communicate',
+            #     'speed': '1 round',
+            #     'range': '1 km.',
+            #     'target': 'Anyone(known)',
+            #     'effect': '''Send a short message over a long distance. If recipient is within the range of the spell, 
+            #         they will hear that and may choose to reply shortly.''',
+            #     'difficulty': 0,
+            #     'scaling': [
+            #         {'D': 1, 'description': 'double the range'},
+            #         {'D': 4, 'L': 1, 'description': '''open a line of steady communication with the target, it stays 
+            #         open as long as you concentrate 3, concentration does not consume additional mana'''},
+            #         {'D': 3, 'L': 1, 'description': 'You can have another party member do the communicating.'},
+            #     ],
+            # },
             {
                 'name': 'Blink jump',
-                'speed': '2 AP',
-                'range': '16 m.',
+                'range': '8 sq.',
                 'target': 'empty space',
                 'effect': '''Instantly disappear from your current location without provoking any attacks of opportunity
                     and reappear in the target location''',
-                'difficulty': 2,
+                'difficulty': 'R3.R3',
                 'scaling': [
+                    {'D': 'R3', 'description': 'Increase range by 8 sq.'},
                 ],
             },
-            {
-                'name': 'Teleport',
-                'speed': '30 minutes',
-                'range': '1 km.',
-                'effect': '''Teleports a none disoriented person within your touch range to a place within range 
-                that you know or can imagine. If this place is not a teleportation circle, then they need to make a 
-                DC 12 fortitude save, if they fail, they get 2 levels of disoriented, this effect can only be removed by 
-                doing a long rest.''',
-                'difficulty': 3,
-                'scaling': [
-                    {'D': 2, 'description': 'double the range'},
-                ],
-            },
+            # {
+            #     'name': 'Teleport',
+            #     'speed': '30 minutes',
+            #     'range': '1 km.',
+            #     'effect': '''Teleports a none disoriented person within your touch range to a place within range 
+            #     that you know or can imagine. If this place is not a teleportation circle, then they need to make a 
+            #     DC 12 fortitude save, if they fail, they get 2 levels of disoriented, this effect can only be removed by 
+            #     doing a long rest.''',
+            #     'difficulty': 3,
+            #     'scaling': [
+            #         {'D': 2, 'description': 'double the range'},
+            #     ],
+            # },
             {
                 'name': 'Step between dimensions',
-                'speed': '3 AP',
                 'target': 'self',
                 'effect': '''You become corporeal becoming unaffected by all effects in the material plane.
                     By default you cannot attack, cast spells or concentrate on spells in a way that would affect anyone
                     in the material plane.''',
-                'difficulty': 5,
-                'concentration': 1,
+                'difficulty': 'R3.R3.R3',
+                'concentration': 'R3.R3',
                 'scaling': [
-                    {'D': 4, 'description': '''You may cast spells that would affect the material plane'''},
-                    {'D': 5, 'description': '''This spell can target any willing creature. This spell gains a range 
+                    {'D': 'R3.R3', 'description': '''Target may cast spells that would affect the material plane'''},
+                    {'D': 'R3', 'description': '''This spell can target any willing creature. This spell gains a range 
                         of touch.'''},
-                    {'D': 8, 'description': '''This spell can target any creature. This spell gains a range 
+                    {'D': 'R3.R3', 'description': '''This spell can target any creature. This spell gains a range 
                         of touch.'''},
-                    {'D': 3, 'description': '''You may concentrate on spells that would affect the material plane'''},
+                    {'D': 'R3.R3', 'description': '''Target may concentrate on spells that would affect the material 
+                    plane'''},
 
                 ],
             },
-
         ]
     },
     'Discord': {
         'special_rules': [
             """Regarding hexes. Each creature can by default have only 1 hex placed on them. This can be overwritten
-        by certain very rare feats. Any creature with a hex on them may spend 1 AP to attempt to remove that hex from 
-        them, make a Will check against spell casters DC, if successful the hex is removed. Hexes cannot be applied to 
+        by certain feats. Any creature with a hex on them can make a R5.R5 remove hex action using Will proficiency
+        for weak hexes, R5.R5.R5 for strong hexes and R5.R5.R5.R5 for extreme hexes. Hexes cannot be applied to 
         your allies to override hexes by your enemies. However if an ally has hexed a creature, then your hex would 
-        override their hex(s), unless you are able to place multiple hexes on the enemy"""
+        override their hex(s), unless you are able to place multiple hexes on the enemy."""
         ],
         'spells': [
             {
                 'name': 'Enfeeble hex',
-                'speed': '1 AP',
-                'range': '12 m.',
+                'range': '6 sq.',
                 'target': '1 creature',
-                'effect': '''Target's hit rolls are unlucky. Whenever exactly one of their dice would succeed on an
-                unlucky roll (other than saving throw against this hex), they may roll a WILL saving throw against spell 
-                DC to break this hex.''',
-                'difficulty': 1,
-                'concentration': 1,
+                'effect': '''Each time target enemy rolls, you may change the outcome of 1 dice. It has to be a
+                different dice than was changed by lucky condition, if the enemy was lucky and is done after the lucky
+                dice is chosen.''',
+                'difficulty': 'R1.R1',
+                'concentration': 'R1',
                 'scaling': [
-                    {'D': 4, 'description': 'Their damage rolls are also unlucky'},
-                    {'D': 6, 'description': 'Their saving throws are unlucky'},
+                    {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
+                    {'D': 'R1.R1', 'description': 'You may change the outcome of 1 additional dice'},
                 ],
             },
             {
                 'name': 'Pain hex',
                 'speed': '1 AP',
-                'range': '12 m.',
+                'range': '6 sq.',
                 'target': '1 creature',
-                'effect': '''Whenever target is hit, they take 1d6 extra psychic damage and they may spend 
-                    their reaction to roll a WILL saving throw  against spell DC to break this hex. If they succeed they 
-                    still take the damage for this time.''',
-                'difficulty': 1,
-                'concentration': 1,
+                'effect': '''Whenever target is hit, they take 1 extra psychic damage. After that they may use a 
+                reaction to remove this curse if they have the required dice''',
+                'difficulty': 'R1.R1',
+                'concentration': 'R1',
                 'scaling': [
-                    {'D': 3, 'description': 'Increase the damage they take by 1d6'},
+                    {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
+                    {'D': 'R1.R1', 'description': 'Target takes 1 additional psychic damage when hit'},
                 ],
             },
             {
                 'name': 'Maddening hex',
-                'speed': '1 AP',
-                'range': '12 m.',
+                'range': '6 sq.',
                 'target': '1 creature',
-                'effect': '''At the beginning of their turn, the hexed creature gets 1 level of either disoriented,
-                    afraid or crazed. To reduce 1 level of any effects gained through this hex, they can spend 1 AP to
-                    make a WILL saving through against your spell DC. On a critical success they lose 3 levels divided 
-                    by any of these effects as they choose.
+                'effect': '''At the beginning of their turn, the hexed creature gets 1 level of either disoriented or 
+                    afraid.
                     ''',
-                'difficulty': 1,
-                'concentration': 1,
+                'difficulty': 'R1.R1.R1',
+                'concentration': 'R1',
                 'scaling': [
-                    {'D': 3, 'L': 1, 'description': 'It takes 2 AP to attempt to remove this hex'},
-                    {'D': 5, 'L': 2, 'description': 'Hexed creature also gets 1 level of one of the other effects'},
+                    {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
+                    {'D': 'R1.R1', 'description': 'Hexed creature also gets 1 level of the other status effect'},
                 ],
             },
             {
                 'name': 'Mage bane hex',
-                'speed': '1 AP',
-                'range': '12 m.',
+                'range': '6 sq.',
                 'target': '1 creature',
-                'effect': '''The mana cost for all spells is increased by 2
+                'effect': '''The mana cost for all spells is doubled
                     ''',
-                'difficulty': 1,
-                'concentration': 1,
+                'difficulty': 'R1.R1',
+                'concentration': 'R1',
                 'scaling': [
-                    {'D': 3, 'L': 1,  'description': 'It takes 2 AP to attempt to shake this hex off'},
-                    {'D': 1, 'description': 'The mana cost for all spells is increased by additional 1'},
+                    {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
                 ],
             },
             {
                 'name': 'Shattering Shriek',
                 'speed': '2 AP',
-                'range': '24 m.',
+                'range': '12 sq',
                 'target': '1 creature',
-                'effect': '''A extremely loud shriek hits, heard loudest by the target. It deals 1d8 psychic damage and
-                    the target has to make your spell DC WILL save or give up concentration of 1 spell.
+                'effect': '''A extremely loud shriek hits, heard loudest by the target. It deals 2 psychic damage and
+                    the target has to give up concentration of 1 spell.
                     ''',
-                'difficulty': 0,
+                'difficulty': 'R1.R1.R1',
                 'scaling': [
-                    {'D': 3, 'L': 1, 'description': 'The target makes a DC WILL save for each spell they are concentrating on'},
-                    {'D': 1, 'description': 'deal additional 1d8 psychic damage'},
+                    {'D': 'R1', 'description': 'deal additional 3 psychic damage'},
                 ],
             },
             {
                 'name': 'Shattering presence',
                 'speed': '1 AP',
                 'target': 'self',
-                'concentration': 1,
+                'concentration': 'R1.R1.R1',
                 'duration': '3 rounds',
                 'effect': '''Your existance becomes questionable as you start to blur, and appear to be in multiple close places at once.
                     It becomes hard to see target you. Any offensive spell or attack targeting you has a 50 % chance to 
                     fail.
                     ''',
-                'difficulty': 5,
+                'difficulty': 'R1.R1.R1.R1',
                 'scaling': [
-                    {'D': 5, 'L': 1, 'description': '''Concentration doesn't consume APs'''},
-                    {'D': 5, 'L': 1, 'description': 'You can target another creature. This spell gains a range of 12 m.'},
+                    {'D': 'R1.R1', 'L': 1, 'description': 'You can target another creature. This spell gains a range of '
+                                                          '6 sq.'},
                 ],
             },
-            {
-                'name': 'Paranoia',
-                'speed': '2 AP',
-                'target': '1 creature',
-                'duration': '1 minute',
-                'effect': '''Target must make your spell DC check. On failure their disposition to one random ally 
-                    changes to hostile. When target is still hostile to players, they may still choose to attack the 
-                    players instead, but if presented with a convenient opportunity they may attack that ally instead.
-                    ''',
-                'difficulty': 7,
-                'scaling': [
-                    {'D': 5, 'L': 1, 'description': '''The ally is no longer random, but chosen by you'''},
-                ],
-            },
+            # {
+            #     'name': 'Paranoia',
+            #     'speed': '2 AP',
+            #     'target': '1 creature',
+            #     'duration': '1 minute',
+            #     'effect': '''Target must make your spell DC check. On failure their disposition to one random ally
+            #         changes to hostile. When target is still hostile to players, they may still choose to attack the
+            #         players instead, but if presented with a convenient opportunity they may attack that ally instead.
+            #         ''',
+            #     'difficulty': 7,
+            #     'scaling': [
+            #         {'D': 5, 'L': 1, 'description': '''The ally is no longer random, but chosen by you'''},
+            #     ],
+            # },
             {
                 'name': 'Weapon of horrors',
-                'speed': '2 AP',
                 'target': '1 weapon',
                 'duration': '3 rounds',
-                'effect': '''Critical threshold for attacks with the target weapon is reduced by 3
+                'effect': '''This weapon requires 1 less power dice to make an attack
                     ''',
-                'difficulty': 3,
+                'difficulty': 'R1.R1.R1',
+                'concentration': 'R1.R1',
                 'scaling': [
-                    {'D': '2/3', 'L': 2, 'description': '''Critical threshold is further reduced by 1'''},
-                    {'D': '5', 'L': 2, 'description': '''When you hit target critically, they must check once for 
-                    disoriented or afraid, your choice
+                    {'D': 'R1.R1', 'L': 2, 'description': '''When that weapon deals at least 6 damage with an attack, 
+                    target enemy gets 1 level of afraid
                     '''},
-                    {'D': 2, 'description': '''Critical hits deal additional 2 damage'''}
+                    {'D': 'R1.R1', 'description': '''Target weapon deals 1 additional psychic damage per power dice 
+                    spent'''}
                 ],
             },
         ]
@@ -577,7 +570,7 @@ schools = {
                 'name': 'False threats',
                 'speed': '2 AP',
                 'target': 'area',
-                'range': '12 m.',
+                'range': '6 sq.',
                 'radius': '2m.',
                 'effect': '''Pose an illusionary threat to enemies in the area, who must check once for disoriented
             ''',
@@ -602,7 +595,7 @@ schools = {
                 'name': 'Mirror image',
                 'speed': '2 AP',
                 'target': 'empty space(s)',
-                'range': '12 m.',
+                'range': '6 sq.',
                 'duration': '5 rounds',
                 'effect': '''A mirror illusion copy of you appears, who mirrors your actions and confuses enemies.
                 They have an AC of 10 + your effective AC bonus from martial path. When someone attacks you there is a 

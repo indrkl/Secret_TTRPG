@@ -260,26 +260,21 @@ feats = {
                 limit).
                 ''',
         },
-#         {'cost': 6,
-#              'requires': 'Two weapon fighter',
-#              'name': 'Two weapon master',
-#              'effect': '''
-# Reduce attacks' critical threshold by 1 while wielding two melee weapons.
-#
-# Whenever making an attack roll while wielding two melee weapons, if you have multiple eligible targets
-# near you, you can choose which one of them you attack after learning the 3d6 effective roll
-# (after lucky/unlucky).
-#
-# Whenever you critically hit an enemy you gain a flow token. You can use the flow tokens in following
-# ways, flow tokens are reset to 0 at the end of an encounter:
-#
-# * When you would get a level of negative status effect, you can spend a flow token to prevent that.
-#
-# * Spend 2 flow tokens to recover a dodge token.
-#
-# * Spend 1 flow token to move yourself 4 m. after finishing an attack action.
-#                 ''',
-#         },
+        {'cost': 6,
+             'requires': 'Two weapon fighter',
+             'name': 'Two weapon master',
+             'effect': '''
+Whenever you attack with both weapons in a round you gain a flow token.
+
+You can use the flow tokens in following ways, flow tokens are reset to 0 at the end of an encounter:
+
+* When you would get a level of negative status effect, you can spend a flow token to prevent that.
+
+* Spend 2 flow tokens to instantly go to your maximum defense
+
+* Spend 1 flow token to move yourself up to 2 sq. after finishing an attack action.
+                ''',
+        },
 #         {'cost': 8,
 #              'name': 'Blade dancer',
 #              'effect': '''
@@ -295,7 +290,7 @@ feats = {
 # 3: when an enemy attacks you, spend your reaction to first attack them. If you succeed, you stop their
 # attack
 #
-# 5: You're critical hits do double damage.
+# 5: Your critical hits do double damage.
 #
 #                 ''',
 #         },
@@ -316,25 +311,17 @@ feats = {
 # of only 2.
 #                 ''',
 #         },
-#         {'cost': 6,
-#          'name': 'Sentinel',
-#          'effect': '''
-# When wielding a polearm (includes spears) you get the ability to trade your AP for additional reactions that
-# can be used until the beginning of your next round. When you do so, you can do special attacks that target a
-# single enemy instead of your normal reaction attack. These attacks gain +1 attack bonus.
-#
-# Advance 3 times with polearms.
-#
-# You gain additional difficulty options for polearms:
-#
-# 1: When doing a reaction attack, do not spend additional stamina from previously made attacks.
-#
-# 2: Reposition yourself 2 m. before doing the attack
-#
-# 2: When the opponent was moving towards you, on a hit you instead stop them before reaching your range and
-# you don't spend a reaction, but you don't do any damage with this attack action.
-#          ''',
-#          },
+        {'cost': 6,
+         'name': 'Sentinel',
+         'effect': '''
+When wielding a polearm, you get a zone of control around you of 2 sq. Enemies that want to move through your ZoC or
+want to enter within 1 sq. of you need to provide a R6 phsyique roll in order to do that.
+
+Enemies entering your ZoC give you a attack reaction opportunity.
+
+First reaction attack with a polearm in between your turns has double advantage, the rest have simple advantage.
+         ''',
+         },
 #         {'cost': 2,
 #          'name': 'Cleave',
 #          'effect': '''

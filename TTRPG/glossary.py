@@ -8,10 +8,39 @@ the dice pool, until they have no more of them in the dice pool at which point t
         """
     },
     {
+        'name': 'Dice Roll',
+        'description': """
+During a dice roll, your entire dice pool is rolled at once. Afterwards you can pick and choose which dice to use on
+which action taking account the action limit.
+
+Out of combat, dice rolls happens at the beginning of each scene.
+
+In combat, dice rolls happen at the end of each players round. The players can use dice from the dice pool for reactions
+in between their turns and for actions during their turn.
+        """
+    },
+    {
+        'name': 'Power dice and utility dice',
+        'description': """
+Each weapon type, school of magic and combat action has 2 dice, power dice, and utility dice. To activate the action
+(attack, spell) and to boost it's raw power you need to get power dice. But to augment the action / spell in useful
+ways, you need utility dice. For example, the power dice of swords is R5 (a dice that rolled a 5) and utility dice is
+R2. 
+        """
+    },
+    {
         'name': 'Action limit',
         'description': """
 While you can never spend more dice than in your dice pool. You also cannot spend more dice on actions per round 
 than your action limit. By default heroes start with an action limit of 5. Action limit does not apply outside combat 
+or for reactions.
+        """
+    },
+    {
+        'name': 'Reactions',
+        'description': """
+Some feats provide characters abilities for reactions under certain conditions outside their turn. These still consume 
+dice in the dice pool, but do not consume action limit.
         """
     },
     {
@@ -49,6 +78,9 @@ without spending any proficiency nudging.
      'description':'''
 A character who has advantage against an enemy requires 1 less power dice for any attack against them. A character with
 disadvantage requires 1 more power dice to do an attack.
+
+Normal advantage and disadvanatage does not stack. However some effects can specifically provide double advantage or
+double disadvantage, in which case it is 2 power dice that is needed less or more.
      '''
      },
 #     {'name': 'Critical success and failures',
