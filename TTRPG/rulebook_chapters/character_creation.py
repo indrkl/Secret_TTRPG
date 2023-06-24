@@ -63,10 +63,9 @@ In addition they get a innate feat for each category they have points in, but th
 level in that category. This further defines their character progression possibilities. 
 Innate feats are really powerful.
 
-Heroes gain 1 progression feat in each category which they have points in at levels 4, 7, 10, 13 and 16 and before
-they make their advancement decisions in that level.
+Heroes gain 1 progression feat at levels 4, 7, 10, 13 and 16
 
-Finally for levels 1, 5, 11 and 18 you also get to spend 2 * path level of points to advance in that path.
+Finally for levels 2, 5, 11 and 18 you also get to spend 2 * path level of points to advance in that path.
 In other levels you get to spend 1 * path level of points to advance in that path.
 
 Advancement rules
@@ -99,20 +98,21 @@ MAGE advancement options:
              'Adopt a martial related feat',
              'Advance proficiency with one type of weapon',
              'Increase your toughness. Cost increases by 1 each time you choose this option. Maximum toughness is 6',
-             '''Add 3 to maximum stamina (each encounter is started having max stamina, you cannot recover stamina above
-             maximum stamina)''',
-             'Spend 2 advancement points to gain 1 stamina recovery (you recover stamina every round).',
+             'Increase your maximum stamina by 1',
+             # '''Add 3 to maximum stamina (each encounter is started having max stamina, you cannot recover stamina above
+             # maximum stamina)''',
+             # 'Spend 2 advancement points to gain 1 stamina recovery (you recover stamina every round).',
              'Advance proficiency in physique or survival skill',
-             '''Increase your AC prificiency by 1. This bonus's effective value cannot be higher than the total bonus
-             from all other sources.''',
-             'Advance proficiency in either reflex or fortitude',
+             # '''Increase your AC prificiency by 1. This bonus's effective value cannot be higher than the total bonus
+             # from all other sources.''',
+             'Advance proficiency in either reflex or fortitude saves',
              # 'Gain 3 levels in initiative',
          ]},
         {'type': 'paragraph', 'content': 'Skilled advancement options:'},
         {'type': 'list',
          'content': [
              'Adopt a skills related feat',
-             'Increase your daily number of luck tokens by 1',
+             'Increase your maximum number of luck tokens by 1',
              'Advance proficiency in any skill',
              '''Advance proficiency in will, reflex or fortitude. The maximum proficiency from skilled path for these 
              is 2''',

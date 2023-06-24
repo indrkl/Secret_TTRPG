@@ -512,22 +512,6 @@ schools = {
                     {'D': 'R1', 'description': 'deal additional 3 psychic damage'},
                 ],
             },
-            {
-                'name': 'Shattering presence',
-                'speed': '1 AP',
-                'target': 'self',
-                'concentration': 'R1.R1.R1',
-                'duration': '3 rounds',
-                'effect': '''Your existance becomes questionable as you start to blur, and appear to be in multiple close places at once.
-                    It becomes hard to see target you. Any offensive spell or attack targeting you has a 50 % chance to 
-                    fail.
-                    ''',
-                'difficulty': 'R1.R1.R1.R1',
-                'scaling': [
-                    {'D': 'R1.R1', 'L': 1, 'description': 'You can target another creature. This spell gains a range of '
-                                                          '6 sq.'},
-                ],
-            },
             # {
             #     'name': 'Paranoia',
             #     'speed': '2 AP',
@@ -562,93 +546,113 @@ schools = {
     },
     'Illusion': {
         'special_rules': [
-            """You can use illusion proficiency when doing sneak and other
-                stealth requiring checks."""
+            """You can use illusion proficiency when doing sneak and other stealth requiring checks.
+            In addition you can create illusions out of combat, things that appear to be one way, but are actually 
+            different. The exact difficulty of each illusion is determined by GM. Weather or not the illusions achieve 
+            the desired result is determined by a roll target in a scene provided by the GM."""
         ],
         'spells': [
             {
                 'name': 'False threats',
-                'speed': '2 AP',
                 'target': 'area',
                 'range': '6 sq.',
-                'radius': '2m.',
-                'effect': '''Pose an illusionary threat to enemies in the area, who must check once for disoriented
+                'radius': '1 sq.',
+                'effect': '''Pose an illusionary threat to enemies in the area, they gain 1 level of disoriented
             ''',
-                'difficulty': 1,
+                'difficulty': 'R4.R4.R4',
                 'scaling': [
-                    {'D': '2/3/4', 'L': 3, 'description': '''Check for disoriented an additional time.'''},
+                    {'D': 'R4.R4', 'L': 3, 'description': '''Everyone get 1 additional level of disoriented'''},
+                    {'D': 'R4', 'L': 3, 'description': '''One target within radius gets 1 additional level of 
+                    disoriented'''},
                 ],
             },
             {
                 'name': 'Side step',
                 'speed': 'reaction',
                 'target': '1 creature',
-                'effect': '''When a hit would hit you, you may instead move 2 m. to your chosen direction without
+                'effect': '''When a hit would hit you, you may instead move 1 sq. to your chosen direction without
                 provoking any attacks of opportunities and the attack misses.
             ''',
-                'difficulty': 3,
+                'difficulty': 'R4.R4',
                 'scaling': [
-                    {'D': 3, 'L': 2, 'description': '''Target must check for disoriented.'''},
+                    {'D': 'R4.R4', 'L': 2, 'description': '''Target gains 1 level of disoriented'''},
                 ],
             },
+            # {
+            #     'name': 'Mirror image',
+            #     'speed': '2 AP',
+            #     'target': 'empty space(s)',
+            #     'range': '6 sq.',
+            #     'duration': '5 rounds',
+            #     'effect': '''A mirror illusion copy of you appears, who mirrors your actions and confuses enemies.
+            #     They have an AC of 10 + your effective AC bonus from martial path. When someone attacks you there is a
+            #     equal chance for them to attack a illusion instead of you. When they hit the illusion, the illusion
+            #     disappears.
+            # ''',
+            #     'difficulty': 1,
+            #     'scaling': [
+            #         {'D': '2/3/5/7', 'L': 4, 'description': 'You summon an additional illusion'},
+            #         {'D': 3, 'L': 1, 'description': ''''When you land a hit on an enemy, one illusion also lands an hit
+            #             and the enemy must make your spell DC will save or suffer half your hit's damage as psychic
+            #             damage. If he succeeds, the illusion disappears however'''},
+            #     ],
+            # },
+            # {
+            #     'name': 'Create illusions',
+            #     'speed': '2 AP',
+            #     'target': 'empty space(s)',
+            #     'range': '24 m.',
+            #     'duration': '1 min.',
+            #     'concentration': 1,
+            #     'effect': '''Ceate a static illusion within range occupying 2 m. cube area
+            # ''',
+            #     'difficulty': 0,
+            #     'scaling': [
+            #         {'D': 3, 'L': 1, 'description': '''Illusions can be animated and you can alter their position
+            #         during your turn.'''},
+            #         {'D': 2, 'description': '''Create 1 additional static illusion within range occupying 2mx2mx2m of
+            #         space'''},
+            #         {'D': 3, 'L': 1, 'description': '''Each illusion can instead occupy a 10x10x10 feet cube's space'''},
+            #         {'D': 3, 'L': 1, 'description': '''The duration is instead 1 hour'''},
+            #     ],
+            # },
+    #         {
+    #             'name': 'Invisibility',
+    #             'speed': '2 AP',
+    #             'target': 'self',
+    #             'duration': '3 rounds',
+    #             'concentration': 'R4.R4',
+    #             'effect': '''You appear invisible as long as you are standing still. When you move, cast spells, attack
+    # or otherwise perform a action with rapid movement, there are ripples that hint others that there is somewhere there
+    # where you are and also the nature of the movement. Attacks against enemies that rely on sight have advantage, and
+    # attacks by enemies against you who rely on sight have disadvantage. This allows you to sneak in broad daylight.
+    #         ''',
+    #             'difficulty': 'R4.R4.R4',
+    #             'scaling': [
+    #                 {'D': 3, 'L': 1, 'description': '''When you move at half speed, then no ripple is creating so you
+    #                 have perfect invisibility. This allows you to sneak in broad daylight with advantage'''},
+    #                 {'D': 5, 'L': 1, 'description': '''Casting spells no longer creates ripples.'''},
+    #                 {'D': 4, 'L': 1, 'description': '''You can select another ally as the target of this spell. This
+    #                 spell gains the range of touch. To maintain the illusion the target must remain within line of sight
+    #                 from you.'''},
+    #
+    #             ],
+    #         },
             {
-                'name': 'Mirror image',
-                'speed': '2 AP',
-                'target': 'empty space(s)',
-                'range': '6 sq.',
-                'duration': '5 rounds',
-                'effect': '''A mirror illusion copy of you appears, who mirrors your actions and confuses enemies.
-                They have an AC of 10 + your effective AC bonus from martial path. When someone attacks you there is a 
-                equal chance for them to attack a illusion instead of you. When they hit the illusion, the illusion 
-                disappears. 
-            ''',
-                'difficulty': 1,
-                'scaling': [
-                    {'D': '2/3/5/7', 'L': 4, 'description': 'You summon an additional illusion'},
-                    {'D': 3, 'L': 1, 'description': ''''When you land a hit on an enemy, one illusion also lands an hit
-                        and the enemy must make your spell DC will save or suffer half your hit's damage as psychic
-                        damage. If he succeeds, the illusion disappears however'''},
-                ],
-            },
-            {
-                'name': 'Create illusions',
-                'speed': '2 AP',
-                'target': 'empty space(s)',
-                'range': '24 m.',
-                'duration': '1 min.',
-                'concentration': 1,
-                'effect': '''Ceate a static illusion within range occupying 2 m. cube area
-            ''',
-                'difficulty': 0,
-                'scaling': [
-                    {'D': 3, 'L': 1, 'description': '''Illusions can be animated and you can alter their position
-                    during your turn.'''},
-                    {'D': 2, 'description': '''Create 1 additional static illusion within range occupying 2mx2mx2m of 
-                    space'''},
-                    {'D': 3, 'L': 1, 'description': '''Each illusion can instead occupy a 10x10x10 feet cube's space'''},
-                    {'D': 3, 'L': 1, 'description': '''The duration is instead 1 hour'''},
-                ],
-            },
-            {
-                'name': 'Invisibility',
-                'speed': '2 AP',
+                'name': 'Shattering presence',
+                'speed': '1 AP',
                 'target': 'self',
-                'duration': '1 min.',
-                'concentration': 1,
-                'effect': '''You appear invisible as long as you are standing still. When you move, cast spells, attack
-    or otherwise perform a action with rapid movement, there are ripples that hint others that there is somewhere there
-    where you are and also the nature of the movement. Attacks against enemies that rely on sight have advantage, and
-    attacks by enemies against you who rely on sight have disadvantage. This allows you to sneak in broad daylight.
-            ''',
-                'difficulty': 3,
+                'concentration': 'R4.R4.R4',
+                'duration': '3 rounds',
+                'effect': '''Your existance becomes questionable as you start to blur, and appear to be in multiple close places at once.
+        It becomes hard to see target you. Any offensive spell or attack targeting you has a 50 % chance to 
+        fail.
+        ''',
+                'difficulty': 'R4.R4.R4.R4',
                 'scaling': [
-                    {'D': 3, 'L': 1, 'description': '''When you move at half speed, then no ripple is creating so you
-                    have perfect invisibility. This allows you to sneak in broad daylight with advantage'''},
-                    {'D': 5, 'L': 1, 'description': '''Casting spells no longer creates ripples.'''},
-                    {'D': 4, 'L': 1, 'description': '''You can select another ally as the target of this spell. This
-                    spell gains the range of touch. To maintain the illusion the target must remain within line of sight
-                    from you.'''},
-
+                    {'D': 'R4.R4', 'L': 1,
+                     'description': 'You can target another creature. This spell gains a range of '
+                                    '6 sq.'},
                 ],
             },
         ]

@@ -22,14 +22,15 @@ What is still the same?
 1. Roleplaying, it's still a open fantasy world, players can state what they want to achieve, and what they can or
 cannot do is determined by the narrative, common sense of the GM and dice.
 
-2. Grid based combat, 12 m.
+2. Grid based combat. Measurement unit is 1 sq. (square) though
 
 So what is different?""",
 },
         {'type': 'list',
          'content': [
-"""Xd6 system, where players start with 5d6 dice, but gain more as they progress. In this game players first roll the
-dice at the start of their turn, and then see what they can do with these dice. Each actions require a specific 
+"""Xd6 system, where players start with 6 d6 dice, but gain more as they progress. In this game players first roll the
+dice at the end of their turn (or beginning of combat or scene), and then see what they can do with these dice. 
+Each actions require a specific 
 combination of dice, and also to upcast spells or to add weapon abilities onto your attack, it requires you to get even
 more difficult combinations. But basically those Xd6 dice that you roll each scene or each round in combat, become your
 action economy and success checks at the same time. Also when you take damage you start losing some of those dice making

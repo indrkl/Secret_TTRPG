@@ -69,22 +69,12 @@ feats = {
        #   be taken multiple times, but different status effect must be chosen each time.
        #      ''',
        #   },
-       #  {'cost': 7,
-       #   'name': 'Trickster',
-       #   'effect': '''
-       #   You become a master of manipulating your enemies and their minds.
-       #
-       #   When you would apply a level of disoriented, crazed or afraid on an enemy, you can replace it
-       #   with another (from disoriented, crazed and afraid).
-       #
-       #   All will checks you force upon your enemies get +1 to their DC
-       #
-       #   When preparing ambushes, or aiding in doing so, your rolls are lucky.
-       #
-       #   Advance in either discord or illusion once, once in will, once in maximum mana and learn a spell
-       #   from discord or illusion schools of magic.
-       #   ''',
-       #   },
+        {'cost': 7,
+         'name': 'Trickster',
+         'effect': '''
+         Whenever you apply a level of disoriented or afraid, you also disrupt 1.
+         ''',
+         },
        #  {
        #      'cost': 8,
        #      'name': 'Iron concentration',
@@ -103,20 +93,20 @@ feats = {
             If you are are legendary in dimension magic, you can craft one additional such object.
             ''',
         },
-        {
-            'cost': 8,
-            'name': 'Holy bonds',
-            'effect': '''
-    You can attune to any number of your party members instead of items. When casting spells that only target the 
-    attuned players or their weapons, you can target any number of other attuned players or their weapons to also 
-    receive the benefits of the spell.
-    This does not increase the cost or concentration requirement for that spell.
-    
-    For spells which the target is self, you can instead cast it targeting up to 1 attuned player.
-    
-    The minimum range for these spells becomes 5 sq.
-            ''',
-        },
+    #     {
+    #         'cost': 8,
+    #         'name': 'Holy bonds',
+    #         'effect': '''
+    # You can attune to any number of your party members instead of items. When casting spells that only target the
+    # attuned players or their weapons, you can target any number of other attuned players or their weapons to also
+    # receive the benefits of the spell.
+    # This does not increase the cost or concentration requirement for that spell.
+    #
+    # For spells which the target is self, you can instead cast it targeting up to 1 attuned player.
+    #
+    # The minimum range for these spells becomes 5 sq.
+    #         ''',
+    #     },
     #     {
     #         'cost': 8,
     #         'name': 'Blood magic',
@@ -294,23 +284,20 @@ You can use the flow tokens in following ways, flow tokens are reset to 0 at the
 #
 #                 ''',
 #         },
-#         {'cost': 6,
-#              'name': 'Savage Axe',
-#              'effect': '''
-# Each point of stamina spent doing an attack provides you a savagery point to be used during that attack,
-# you can spend one savagery point to do 2 additional damage. Advance 3 times with two handed axes
-#
-# You gain additional difficulty adjustment options for two handed axes:
-#
-# 2: As long as you don't critically miss, you can spend a savagery point so that your target must check
-# for afraid
-#
-# 3: When you hit an enemy, spend 3 savagery points to add 1 level of vulnerable to the enemy.
-#
-# 3: When you critically hit the enemy, you can spend savagery points to do 5 additional damage instead
-# of only 2.
-#                 ''',
-#         },
+        {'cost': 6,
+             'name': 'Savage Axe',
+             'effect': '''
+             
+You gain 1 savagery token per stamina spent. These tokens must be used in the current round. When you
+attack with an axe you can spend savagery points to deal 1 additional damage per savagery point.
+
+You gain additional difficulty adjustment options for two handed axes:
+
+RU: Spend 2 savagery tokens to add a level of afraid to the enemy
+
+RU: Spend 2 savagery tokens to add 1 level of vulnerable to the enemy. 
+                ''',
+        },
         {'cost': 6,
          'name': 'Sentinel',
          'effect': '''
@@ -408,12 +395,12 @@ per fury token used this way.
         #      'restrictions': 'Bows',
         #     }
         #  },
-#         {'cost': 2,
-#          'requires': 'Heavy armor proficiency',
-#          'name': 'Fortress',
-#          'effect': '''You can use fortitude checks against afraid and disoriented conditions instead of will.
-#          You can also use FORT instead of WILL when removing only disoriented and afraid conditions using Refocus.''',
-#          },
+        {'cost': 4,
+         'requires': 'Heavy armor proficiency',
+         'name': 'Fortress',
+         'effect': '''You can use fortitude proficiency against afraid and disoriented conditions instead of will.
+         ''',
+         },
 #         {'cost': 3,
 #          'name': 'Backstab',
 #          'action': {
@@ -427,22 +414,22 @@ per fury token used this way.
 #              'restrictions': 'any one handed melee weapon',
 #             }
 #          },
-#         {
-#             'cost': 3,
-#             'name': 'Shadow',
-#             'effect': '''You are able to take maximum advantage of disoriented foes. Foes who have at least 1 level
-#     of disorientation, have disadvantage for attacks against you. You have advantage with attacks against foes
-#     who have at least 2 levels of disoriented. When taking a move action, then one target creature with at least
-#     2 levels of disoriented loses track of you and become unaware of your presence.''',
-#         },
+        {
+            'cost': 3,
+            'name': 'Shadow',
+            'effect': '''You are able to take maximum advantage of disoriented foes. Foes who have at least 1 level
+    of disorientation, have disadvantage for attacks against you. You have advantage with attacks against foes
+    who have at least 2 levels of disoriented. When taking a move action, then one target creature with at least
+    2 levels of disoriented loses track of you and become unaware of your presence.''',
+        },
 #         {'cost': 2,
 #          'name': 'Toxicologist',
 #          'effect': '''The DC of each consecutive potion increases by 1 instead of 2. You have +1 to fort saves against
 #          poison, and +3 to fort saves against alcohol.''',
 #          },
-#         {'cost': 7,
+#         {'cost': 6,
 #          'name': 'Commander',
-#          'effect': '''Leadership becomes a martial skill. Advance 3 times in leadership.
+#          'effect': '''Leadership becomes a martial skill.
 #
 #          At the beginning of combat encounters roll for leadership. For every 10 points, the entire party gains
 #          +1 to their initiative.
@@ -467,20 +454,18 @@ per fury token used this way.
 #          'effect': '''Coordination action can target 1 additional ally.
 #          ''',
 #          },
-#         {'cost': 6,
-#          'name': 'Blessed warrior',
-#          'effect': '''
-# Increase your armor AC bonus by 1. Whenever you hit an enemy successfully with a weapon attack choose 1 option:
-#
-# * remove a level of negative status effect from you or one of your allies.
-#
-# * recover 1 stamina
-#
-# * spend 2 mana to deal an additional 2d6 damage. (requires mage path)
-#
-# Advance once in one weapon proficiency and once in max stamina.
-#          ''',
-#          },
+        {'cost': 6,
+         'name': 'Blessed warrior',
+         'effect': '''
+Increase your maximum defense by 2. Whenever you hit an enemy with a weapon attack choose 1 option:
+
+* remove a level of negative status effect from you or one of your allies.
+
+* recover 1 stamina
+
+* spend 2 mana to deal an additional 2 damage. (requires mage path)
+         ''',
+         },
 #         {'cost': 6,
 #          'requires': 'Blessed warrior',
 #          'name': 'Blessed Champion',
@@ -524,13 +509,34 @@ get 2 confusion.
             }
         },
         {'cost': 6,
+         'name': 'Natural leader',
+         'effect': '''
+         You gain the coordinate action, which can used both during combat and out of combat.
+         ''',
+         'action': {
+             'roll target': 'R3.R3',
+             'range': '6 sq.',
+             'target': '2 allies',
+             'effect': '''
+Targeted allies may spend one of their dice in the dice pool to provide a temporary dice to the other ally, which has
+the same roll as the spent dice.
+             ''',
+             'difficulty_options': [
+                 {
+                     'adjustment': 'R3',
+                     'effect': '''They can trade 1 additional dice''',
+                 },
+             ]
+            }
+        },
+        {'cost': 6,
          'name': 'Agent of chaos',
          'effect': '''
          Causing chaos comes naturally to you. You can make ploys to disorient a group of enemies before the battle.
          You can use diplomacy, survival or lore as the main skill to check for it's success. You must still describe
          how you are going to do it and how using that skill makes sense. 
          
-         A new roll target is added to combat initiation phase with R5.R5.R3.R3, that you must complete. If you succeed
+         A new roll target is added to combat initiation phase with R5.R5.R3.R3, that you may complete. If you succeed
          then all enemies start the combat with 1 level of disoriented. For an additional +R5 they start the combat
          with 2 levels of disoriented instead. Use the chosen skill to achieve this.
          ''',
@@ -608,7 +614,7 @@ get 2 confusion.
         {'cost': 3,
          'name': 'Foresight',
          'action': {
-             'roll target': '1 round',
+             'roll target': '-',
              'additional_costs': '1 Luck token',
              'effect': '''Once every time after visiting a settlement with shops, you can take out a common item
                 from your backpack, which you as a player actually had not bought from the settlement, but consider it
@@ -821,10 +827,11 @@ def prep_feat_flowable(feat):
 
     if feat.get('action'):
         action = feat['action']
+        print(str(action))
         data = [
             [f"Stamina cost: {action.get('base_cost', '-')}", f"Other attacks cost increase: {action.get('next_attack_cost_increase', '-')}",
                 f"Other costs: {feat.get('additional_costs', '-')}"],
-            [f"Roll target: {action['roll target']}", f"Target: {action.get('target', '-')}", f"Duration: {action.get('duration', '-')}"],
+            [f"Roll target: {action.get('roll target', '-')}", f"Target: {action.get('target', '-')}", f"Duration: {action.get('duration', '-')}"],
             [f"Use limitations: {action.get('limit', '-')}", f"Restrictions: {action.get('restrictions', '-')}", ""],
             [Paragraph(action['effect'], basic_paragraph_style)]
         ]

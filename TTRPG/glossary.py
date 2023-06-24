@@ -108,6 +108,17 @@ is their effect and where everyone are are strictly determined by the rules of t
         '''
     },
     {
+        'name': 'Combat setup',
+        'description': '''
+You may know a lot of spells, or be able to do a lot of actions or use a lot of different weapons. However you can
+use a limited number of them in combat decided by your combat setup. By default all players have 3 slots. One for
+right hand, one for left hand, and one for mental. The action available for the right and left hand is decided by what
+you wield. Mental slot can be filled with a spell, skill action etc. Also by freeing left or right hand you can
+instead have an additional mental slot. Magical weapons like wands or staves also grant mental slots for spells
+        '''
+    },
+
+    {
         'name': 'taking damage and various defenses',
         'description': '''
 If you X damage then it is mitigated followingly:
@@ -195,6 +206,16 @@ enemies. But here are the general guidelines for how moral is lost:
 # Death is permanent. So if this happens to a player, they simply discard that character and need to make a new one.
 #      """,
 #     },
+    {
+        'name': 'Resources',
+        'description':"""
+Each path has a specific resource associated with their path. Mages have mana, Martials have stamina and Skilled have
+luck. Each resource is used for different effects and have different rules for recovering it. Mana is hardest to recover
+and is used to cast spells. Stamina is recovered each encounter and can be used during combat to increase action limit,
+and luck tokens are recovered daily and are used to change the outcome of a single dice in a roll.
+        """
+
+    },
     {'name': 'Mana',
      'description': """
 When advancing in the mage path, characters can increase their maximum mana. When casting spells or concentrating one 
@@ -215,6 +236,32 @@ Suppose a spell caster with 100 maximum mana, 25 base mana recovery, has spent 6
 recover 25 mana as a baseline, but then would need to spend magical spices worth of 30 (first 10) + 75 (next 15) + 
 100 (final 10) gp = total of 205 gp worth of spices to recover their mana fully. They could also choose to
 only spend for example 30 gp worth of food and recover only 35 total mana ending up having 75 mana.
+     """,
+     },
+    {'name': 'Stamina',
+     'description': """
+When advancing in the martial path, characters can increase their maximum stamina. Stamina can be used to increase the
+action limit for a given round. Stamina is recovered for every encounter and can be used as such:
+
+Spend 1 stamina to gain 1 additional action limit.
+
+Spend 3 stamina to gain 2 additional action limit.
+
+Spend 7 stamina to gain 3 additional action limit.
+
+Only one of the previous options can be chosen.
+
+In additional some abilities may require stamina or provide means to recover stamina.
+
+     """,
+     },
+    {'name': 'Luck tokens',
+     'description': """
+When advancing in the skilled path, characters can increase their maximum luck tokens. Luck tokens can be used to make
+a roll lucky, meaning you can change the outcome of a single dice. Luck tokens are recovered daily.
+
+In additional some abilities may require Luck tokens to be used.
+
      """,
      },
 #     {'name': 'Forced movement / falling damage',
