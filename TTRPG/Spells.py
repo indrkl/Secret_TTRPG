@@ -8,7 +8,7 @@ schools = {
                 and those wearing heavy armor. Huge and larger creatures cannot be moved this way. After being moved
                 the target needs to check for balance.''',
                 'target': 'single',
-                'difficulty': 'R4.R4',
+                'difficulty': 'R4.R4.R4',
                 'scaling': [
                     {'D': 'R4', 'description': '''increase the move distance by 2 sq. The target needs to make an 
                     additional check for balance'''},
@@ -23,7 +23,7 @@ schools = {
                 for balance 4 times''',
                 'target': 'point',
                 'radius': '1 sq',
-                'difficulty': 'R4.R4.R4',
+                'difficulty': 'R4.R4.R4.R4',
                 'scaling': [
                     {'D': 'R4', 'description': '''The force pushed them 2 additional sq. further away and they need to 
                     check for balance twice more'''},
@@ -35,7 +35,7 @@ schools = {
                 'effect': '''Create a 2 sq. long wall. arrows that would fly through this area, lose their speed and
                 fall on the ground. It takes 3 sq. worth of movement to go through the wall of force''',
                 'concenctration': 'R4',
-                'difficulty': 'R4.R4',
+                'difficulty': 'R4.R4.R4',
                 'scaling': [
                     {'D': 'R2', 'description': '''increase the length by 4 m.'''},
                     {'D': 'R2', 'description': '''At the beginning of each of your rounds you can move the position of the
@@ -53,7 +53,7 @@ schools = {
                 'effect': '''Increase your maximum defense to 2 (note, this does not stack with armor and is only
                 useful if you don't have maximum defense from other sources..
                 ''',
-                'difficulty': 'R4.R4',
+                'difficulty': 'R4.R4.R4',
                 'scaling': [
                     {'D': 'R4', 'description': '''
                         The maximum defense provided by this spell is increased by 1
@@ -80,7 +80,7 @@ schools = {
                 'effect': '''This is a heal. Target recovers 1 damaged dice or removes all damage from wounded dice, or
                 removes 1 level of burning, poison or freezing.''',
                 'target': 'single',
-                'difficulty': 'R1.R1',
+                'difficulty': 'R1.R1.R1',
                 'scaling': [
                     {'D': 'R1', 'description': 'This heal recovers 1 additional damaged dice'},
                     {'D': 'R1', 'description': 'remove a level of poison'},
@@ -94,7 +94,7 @@ schools = {
                 'target': 'single',
                 'effect': '''Target can change the result of one dice in the dice pool.
                 ''',
-                'difficulty': 'R1.R1',
+                'difficulty': 'R1.R1.R1',
                 'scaling': [
                     {'D': 'R1.R1', 'description': '''Target can change another dice in their dice pool, this option 
                     increases mana cost by 1 less'''},
@@ -134,7 +134,7 @@ schools = {
                 'target': 'area',
                 'effect': '''Requires being in the wild. Roots grow from the ground and entangle anyone. 
                     Anyone starting their round or entering the area of effect gain 2 levels of entangled''',
-                'difficulty': 'R1.R1.R1',
+                'difficulty': 'R1.R1.R1.R1',
                 'concentration': 'R1.R1',
                 'scaling': [
                     {'D': 'R1', 'description': '''Anyone starting their round or entering the area of effect gain 
@@ -160,7 +160,7 @@ schools = {
                 'effect': '''When you have the guarded buff, then allies standing within radius. of the target also
                 have that buff.
             ''',
-                'difficulty': 'R3.R3',
+                'difficulty': 'R3.R3.R3',
                 'concentration': 'R3',
                 'scaling': [
                     {'D': 'R4', 'L': 1, 'description': '''This spell can target others. Gaining the range of touch.'''},
@@ -191,7 +191,7 @@ schools = {
                 'target': '1 creature',
                 'effect': '''Remove 1 lvl from all negative status effects related to WILL saving throws.
             ''',
-                'difficulty': 'R3.R3',
+                'difficulty': 'R3.R3.R3',
                 'scaling': [
                     {'D': 'R3', 'description': '''Remove one additional level from those status effects'''},
                 ],
@@ -218,7 +218,7 @@ schools = {
                 Target has an additional bless dice to be used in roll dice and for actions. One can have bless dice
                 only from one source. 
         ''',
-                'difficulty': 'R3.R3.R3',
+                'difficulty': 'R3.R3.R3.R3',
                 'concentration': 'R3',
                 'scaling': [
                     {'D': 'R3.R3', 'description': '''Provide one additional bless dice for targets'''},
@@ -254,12 +254,24 @@ schools = {
         'spells': [
             {
                 'name': 'Fireball',
-                'speed': 'R6.R6',
+                'difficulty': 'R6.R6.R6',
                 'range': '8 sq.',
                 'effect': 'Deal 2 fire damage to everyone in the area.',
                 'save': 'REFLEX',
                 'target': 'area',
-                'difficulty': 0,
+                'radius': '1 sq.',
+                'scaling': [
+                    {'D': 'R6.R6', 'description': 'Deal additional 3 damage'},
+                    {'D': 'R1', 'description': '1 target enemy within radius gets a level of burning'},
+                ],
+            },
+            {
+                'name': 'Chain lightning',
+                'difficulty': 'R6.R6.R6',
+                'range': '8 sq.',
+                'effect': 'Deal 2 fire damage to everyone in the area.',
+                'save': 'REFLEX',
+                'target': 'area',
                 'radius': '1 sq.',
                 'scaling': [
                     {'D': 'R6.R6', 'description': 'Deal additional 3 damage'},
@@ -287,7 +299,7 @@ schools = {
                 'range': '8 sq.',
                 'effect': '''Target enemy gets one level of freezing''',
                 'target': 'single target',
-                'difficulty': 'R6.R6.R6',
+                'difficulty': 'R6.R6.R6.R6',
                 'scaling': [
                     {'D': 'R6.R6', 'description': 'Target gets another level of freezing'},
                     {'D': 'R1', 'description': 'You get to choose which of the dice are frozen'},
@@ -300,7 +312,7 @@ schools = {
                 1 extra damage of the chosen damage type with every attack made with this weapon.
                 ''',
                 'target': 'single weapon',
-                'difficulty': 'R6.R6.R6',
+                'difficulty': 'R6.R6.R6.R6',
                 'duration': '3 rounds',
                 'concentration': 'R6.R6',
                 'scaling': [
@@ -324,7 +336,7 @@ schools = {
                 'range': '6 sq.',
                 'effect': '''Target gets +1 action limit haste buff. Each character can have the haste buff from only 
                 one source''',
-                'difficulty': 'R6.R6.R6',
+                'difficulty': 'R6.R6.R6.R6',
                 'target': 'single',
                 'concentration': 'R6.R6',
                 'scaling': [
@@ -367,7 +379,7 @@ schools = {
                 'target': '1 creature',
                 'effect': '''Teleport a tiny object weighing no more than 1 kg. onto the possession of another willing 
                 creature. You can place it on them wherever you would like.''',
-                'difficulty': 'R3',
+                'difficulty': 'R3.R3',
                 'scaling': [
                     {'D': 'R3', 'description': '''Increase the max object weight by 1 kg'''},
                     {'D': 'R3', 'L': 1, 'description': '''When passing a potion onto a willing subject, they can also 
@@ -397,7 +409,7 @@ schools = {
                 'target': 'empty space',
                 'effect': '''Instantly disappear from your current location without provoking any attacks of opportunity
                     and reappear in the target location''',
-                'difficulty': 'R3.R3',
+                'difficulty': 'R3.R3.R3',
                 'scaling': [
                     {'D': 'R3', 'description': 'Increase range by 8 sq.'},
                 ],
@@ -421,7 +433,7 @@ schools = {
                 'effect': '''You become corporeal becoming unaffected by all effects in the material plane.
                     By default you cannot attack, cast spells or concentrate on spells in a way that would affect anyone
                     in the material plane.''',
-                'difficulty': 'R3.R3.R3',
+                'difficulty': 'R3.R3.R3.R3',
                 'concentration': 'R3.R3',
                 'scaling': [
                     {'D': 'R3.R3', 'description': '''Target may cast spells that would affect the material plane'''},
@@ -452,7 +464,7 @@ schools = {
                 'effect': '''Each time target enemy rolls, you may change the outcome of 1 dice. It has to be a
                 different dice than was changed by lucky condition, if the enemy was lucky and is done after the lucky
                 dice is chosen.''',
-                'difficulty': 'R1.R1',
+                'difficulty': 'R1.R1.R1',
                 'concentration': 'R1',
                 'scaling': [
                     {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
@@ -466,7 +478,7 @@ schools = {
                 'target': '1 creature',
                 'effect': '''Whenever target is hit, they take 1 extra psychic damage. After that they may use a 
                 reaction to remove this curse if they have the required dice''',
-                'difficulty': 'R1.R1',
+                'difficulty': 'R1.R1.R1',
                 'concentration': 'R1',
                 'scaling': [
                     {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
@@ -480,7 +492,7 @@ schools = {
                 'effect': '''At the beginning of their turn, the hexed creature gets 1 level of either disoriented or 
                     afraid.
                     ''',
-                'difficulty': 'R1.R1.R1',
+                'difficulty': 'R1.R1.R1.R1',
                 'concentration': 'R1',
                 'scaling': [
                     {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
@@ -493,7 +505,7 @@ schools = {
                 'target': '1 creature',
                 'effect': '''The mana cost for all spells is doubled
                     ''',
-                'difficulty': 'R1.R1',
+                'difficulty': 'R1.R1.R1',
                 'concentration': 'R1',
                 'scaling': [
                     {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
@@ -507,7 +519,7 @@ schools = {
                 'effect': '''A extremely loud shriek hits, heard loudest by the target. It deals 2 psychic damage and
                     the target has to give up concentration of 1 spell.
                     ''',
-                'difficulty': 'R1.R1.R1',
+                'difficulty': 'R1.R1.R1.R1',
                 'scaling': [
                     {'D': 'R1', 'description': 'deal additional 3 psychic damage'},
                 ],
@@ -532,7 +544,7 @@ schools = {
                 'duration': '3 rounds',
                 'effect': '''This weapon requires 1 less power dice to make an attack
                     ''',
-                'difficulty': 'R1.R1.R1',
+                'difficulty': 'R1.R1.R1.R1',
                 'concentration': 'R1.R1',
                 'scaling': [
                     {'D': 'R1.R1', 'L': 2, 'description': '''When that weapon deals at least 6 damage with an attack, 
@@ -559,7 +571,7 @@ schools = {
                 'radius': '1 sq.',
                 'effect': '''Pose an illusionary threat to enemies in the area, they gain 1 level of disoriented
             ''',
-                'difficulty': 'R4.R4.R4',
+                'difficulty': 'R4.R4.R4.R4',
                 'scaling': [
                     {'D': 'R4.R4', 'L': 3, 'description': '''Everyone get 1 additional level of disoriented'''},
                     {'D': 'R4', 'L': 3, 'description': '''One target within radius gets 1 additional level of 
@@ -573,7 +585,7 @@ schools = {
                 'effect': '''When a hit would hit you, you may instead move 1 sq. to your chosen direction without
                 provoking any attacks of opportunities and the attack misses.
             ''',
-                'difficulty': 'R4.R4',
+                'difficulty': 'R4.R4.R4',
                 'scaling': [
                     {'D': 'R4.R4', 'L': 2, 'description': '''Target gains 1 level of disoriented'''},
                 ],
@@ -627,7 +639,7 @@ schools = {
     # where you are and also the nature of the movement. Attacks against enemies that rely on sight have advantage, and
     # attacks by enemies against you who rely on sight have disadvantage. This allows you to sneak in broad daylight.
     #         ''',
-    #             'difficulty': 'R4.R4.R4',
+    #             'difficulty': 'R4.R4.R4.R4',
     #             'scaling': [
     #                 {'D': 3, 'L': 1, 'description': '''When you move at half speed, then no ripple is creating so you
     #                 have perfect invisibility. This allows you to sneak in broad daylight with advantage'''},
@@ -648,7 +660,7 @@ schools = {
         It becomes hard to see target you. Any offensive spell or attack targeting you has a 50 % chance to 
         fail.
         ''',
-                'difficulty': 'R4.R4.R4.R4',
+                'difficulty': 'R4.R4.R4.R4.R4',
                 'scaling': [
                     {'D': 'R4.R4', 'L': 1,
                      'description': 'You can target another creature. This spell gains a range of '
@@ -715,7 +727,7 @@ def prep_spell_flowable(spell):
     elements.append(Paragraph(spell['name'], style=minor_title))
     data = [
         [f"Difficulty: {spell.get('difficulty')}", f"Target: {spell.get('target', '-')}", f"Range: {spell.get('range', '-')}", f"Area radius: {spell.get('radius', '-')}"],
-        [f"Cast time: {spell.get('speed', '-')}", f"Duration: {spell.get('duration', '-')}", f"Concentration: {spell.get('concentration', 'NO')}", ""]
+        [f"Duration: {spell.get('duration', '-')}", f"Concentration: {spell.get('concentration', 'NO')}", "", ""]
     ]
     table = Table(data, colWidths=[120]*4)
     table.setStyle(TableStyle([

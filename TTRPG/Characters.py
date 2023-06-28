@@ -434,7 +434,6 @@ Priest_warrior3 = {
     }
 }
 
-
 Priest_warrior4 = {
     'MARTIAL': 4,
     'MAGE': 2,
@@ -453,8 +452,6 @@ Priest_warrior4 = {
         },
     }
 }
-
-
 
 Forgetful_mage = {
     'MAGE': 4,
@@ -495,22 +492,177 @@ Forgetful_mage = {
     }
 }
 
-"""4 MARTIAL, 2 SKILLED
+xd6_characters = [
+    {
+        'name': 'assassin',
+        'MAGE': 2,
+        'MARTIAL': 4,
+        'Levels': {
+            1: {
+                'Innate_feat_mage': 'Shifter',
+                'Innate_feat_marital': 'Advanced senses',
+                'Mage advancements': [
+                    '''first illusion proficiency, false threats spell'''
+                ],
+                'Martial advancements': [
+                    'first and second knife proficiency, first toughness proficiency',
+                ],
+            },
+            2: {
+                'Mage advancements': [
+                    '''2 mana, second illusion proficiency'''
+                ],
+                'Martial advancements': [
+                    'Shadow feat, Two weapon fighter feat',
+                ],
+            },
+            3: {
+                'Mage advancements': [
+                    '''first will proficiency, 1 mana'''
+                ],
+                'Martial advancements': [
+                    'Backstabber feat',
+                ],
+            },
+        },
+        'equipment': ['axe', 'dagger', '2 MD leather armor'],
 
-Defiant, Lucky
+    },
+    {
+        'name': 'elementalist',
+        'MAGE': 4,
+        'SKILLED': 2,
+        'Levels': {
+            1: {
+                'Innate_feat_mage': 'Raw caster',
+                'Innate_feat_skilled': 'Natural armor',
+                'Mage advancements': [
+                    '''first elemental proficiency, second elemental proficiency, fireball spell'''
+                ],
+                'Skilled advancements': [
+                    'first lore proficiency, 1 luck',
+                ],
+            },
+            2: {
+                'Mage advancements': [
+                    '''Pyromancy feat, first dimension proficiency, pass object spell, 1 mana'''
+                ],
+                'Skilled advancements': [
+                    'Second lore proficiency, 2 luck',
+                ],
+            },
+            3: {
+                'Mage advancements': [
+                    '''third elemental proficiency, 1 mana'''
+                ],
+                'Skilled advancements': [
+                    'first will proficiency, first fortitude proficiency',
+                ],
+            },
+        },
+        'equipment': ['staff', 'robes (no armor)', '2 healing potions'],
 
-Rage
-
-1 stamina recovery, 1 max stamina, 1 weapon (2 handed sword)
-
-4 in weapon.
-
-13 AC
-+5 ATTACKS
-
-Hunter, +2 in survival
-+1 luck
-
-12 d12 hit dice.
-
-60 HP"""
+    },
+    {
+        'name': 'Paladin',
+        'MARTIAL': 4,
+        'MAGE': 2,
+        'Levels': {
+            1: {
+                'Innate_feat_mage': 'Divine protector',
+                'Innate_feat_martial': 'Warcaster',
+                'Mage advancements': [
+                    '''1 harmony proficiency, guardian spell'''
+                ],
+                'Martial advancements': [
+                    'Heavy armor proficiency, first sword proficiency',
+                ],
+            },
+            2: {
+                'Mage advancements': [
+                    '''first and second toughness proficiency, 1 mana'''
+                ],
+                'Martial advancements': [
+                    'Holy warrior feat, first shield proficiency, second sword proficiency',
+                ],
+            },
+            3: {
+                'Mage advancements': [
+                    '''2 mana'''
+                ],
+                'Martial advancements': [
+                    '1 stamina, third sword proficiency',
+                ],
+            },
+        },
+        'equipment': ['sword', 'shield', '2 MD leather armor'],
+    },
+    {
+        'name': 'Inspiring leader',
+        'SKILLED': 4,
+        'MARTIAL': 2,
+        'Levels': {
+            1: {
+                'Innate_feat_skilled': 'Prodigy',
+                'Innate_feat_martial': 'Advanced senses',
+                'Skilled advancements': [
+                    '''first and second leadership proficiency, first diplomacy proficiency'''
+                ],
+                'Martial advancements': [
+                    'first bow proficiency and first fortitude proficiency',
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    '''Inspiring, Inspiring leader, first survival proficiency, 3 luck'''
+                ],
+                'Martial advancements': [
+                    'second bow proficiency and first toughness proficiency and 1 stamina',
+                ],
+            },
+            3: {
+                'Skilled advancements': [
+                    '''third leadership proficiency, 1 luck'''
+                ],
+                'Martial advancements': [
+                    'second toughness proficiency',
+                ],
+            },
+        },
+        'equipment': ['axe', 'shield', '3 MD, 1 DR padding and chain mail heavy armor combo'],
+    },
+    {
+        'name': 'Trickster',
+        'SKILLED': 3,
+        'MARTIAL': 3,
+        'Levels': {
+            1: {
+                'Innate_feat_skilled': 'Lucky',
+                'Innate_feat_mage': 'Raw caster',
+                'Skilled advancements': [
+                    '''first and second survival proficiency'''
+                ],
+                'Mage advancements': [
+                    'first illusion proficiency, 1 mana, false threats',
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    '''Agent of chaos, 1 luck'''
+                ],
+                'Mage advancements': [
+                    'Trickster feat, maddening hex spell, second illusion proficiency',
+                ],
+            },
+            3: {
+                'Skilled advancements': [
+                    '''3 luck'''
+                ],
+                'Mage advancements': [
+                    'first and second discord proficiency' ,
+                ],
+            },
+        },
+        'equipment': ['staff', '2 MD leather armor'],
+    },
+]

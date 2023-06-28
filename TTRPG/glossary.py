@@ -218,10 +218,12 @@ and luck tokens are recovered daily and are used to change the outcome of a sing
     },
     {'name': 'Mana',
      'description': """
-When advancing in the mage path, characters can increase their maximum mana. When casting spells or concentrating one 
-must spend 1 mana per dice used in the spell. 
+When advancing in the mage path, characters can increase their maximum mana. When casting spells, character may choose
+to spend mana to reduce the number of dice required to cast that spell.
 
-If one is out of mana, they can no longer cast spells that require them.
+For 1 mana reduce the spell cost by 1 dice, for 3 mana, by 2 dice, for 6 mana by 3 dice and for 10 mana by 4 dice. You
+cannot reduce the cost by more than your proficiency in the spell's school of magic.
+
 Mana is recovered during daily rest. Characters who have taken points in maximum mana also have some amount of daily 
 mana recovery. This base is always recovered. However magic users can consume quite pricy magical spices to recover 
 increased amounts of mana.
@@ -252,7 +254,6 @@ Spend 7 stamina to gain 3 additional action limit.
 Only one of the previous options can be chosen.
 
 In additional some abilities may require stamina or provide means to recover stamina.
-
      """,
      },
     {'name': 'Luck tokens',

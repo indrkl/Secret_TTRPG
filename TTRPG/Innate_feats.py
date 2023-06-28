@@ -27,23 +27,28 @@ Legendary: You don't take any falling damage. If you are wearing light or no arm
 1/5th of your carry weight, then you can fly at twice your move speed.
             ''',
         },
-#         {
-#             'name': 'Natural armor',
-#             'description': '''
-# With regards to natural armor bonus, this competes with the regular armor and all other kind of armor bonuses. Meaning
-# only the highest one of the armor bonuses has any effect on you. You can still wear armor and get the magical effects
-# of the armor and still benefit from the natural armor bonus, just not get the armor bonus from the armor.
-# Acquinted: you get a +1 natural armor bonus. At levels 7 it increases to +2.
-#
-# Adept: you get a +2 natural armor bonus. At levels 7 it increases to +3. You cannot dodge.
-#
-# Talented: you get a +2 natural armor bonus. At levels 7 it increases to +3. Choose between the ability to dodge, +1 AC
-# or +1 AC and being considered wearing heavy armor with it's downsides and benefits (as if having the heavy armor trait).
-#
-# Legendary: you get a +3 natural armor bonus. At levels 7 it increases to +4. Choose between the ability to dodge, +1 AC
-# or +1 AC and being considered wearing heavy armor with it's downsides and benefits (as if having the heavy armor trait).
-#             ''',
-#         },
+        {
+            'name': 'Natural armor',
+            'description': '''
+You can only have the maximum defensive benefits from the armor you wear or this feat, they do not stack.
+
+You can lower the bonus of the natural armor by 2 to receive the no armor bonus.
+
+Acquinted: Your maximum defense from natural armor is 2.
+
+Adept: Your maximum defense from natural armor is 3.
+
+Talented: Your maximum defense from natural armor is 4.
+
+Legendary: Your maximum defense from natural armor is 5.
+
+Natural armor bonus increases by 1 at levels 7 and 14
+
+Also when you are talented or legendary, then you get the option to take the heavy armor penalty (cannot take both this
+and no armor bonus) in order to get 1 damage reduction. This increases to 2 damage reduction at level 7 and to 3 damage
+reduction at level 14
+            ''',
+        },
     ],
     'Mage': [
         # {
@@ -81,6 +86,7 @@ Legendary: You don't take any falling damage. If you are wearing light or no arm
         },
         {
             'name': 'Raw caster',
+            'requires': 'Talented',
             'description': '''
             You cannot cast concentration spells, or spells which cast time is greater than 1 round. You also cannot
             initiate rituals nor spend your mana for rituals.            
@@ -90,11 +96,11 @@ Legendary: You don't take any falling damage. If you are wearing light or no arm
         },
     ],
     'Martial': [
-        # {
-        #     'requires': 'Legendary',
-        #     'name': 'Warcaster',
-        #     'description': '''You can cast spells using your stamina instead of mana.''',
-        # },
+        {
+            'requires': 'Legendary',
+            'name': 'Warcaster',
+            'description': '''You can use stamina instead of mana for spellcasting.''',
+        },
         {
             'requires': 'Talented',
             'name': 'Defiant',
@@ -115,11 +121,6 @@ At the beginning of each round, if you have any damaged dice, you may choose one
             'requires': 'Legendary',
             'name': 'Nimble',
             'description': '''Your action limit increases by 1''',
-        },
-        {
-            'requires': 'Talented',
-            'name': 'Versatile',
-            'description': '''All feats cost 1 less but no less than 1 to take.''',
         },
         {
             'requires': 'Talented',
@@ -152,19 +153,20 @@ At the beginning of each round, if you have any damaged dice, you may choose one
             'requires': 'Legendary',
             'name': 'Wild magic',
             'description': '''You can cast any spell with the speed of at most 1 round not requiring concentration using 
-your luck tokens instead of mana, even if you do not know that spell. Power dice for these spells are always D6 and
+1 luck token per power dice, even if you do not know that spell. Power dice for these spells are always D6 and
 utility dice are always D5.''',
         },
         {
             'name': 'Specialist',
-            'description': '''Choose 1 skill. The MAX proficiency bonus for that skill is as if you were 1 level higher 
-            in Skilled PATH (but cannot exceed Legendary).
+            'description': '''Choose 1 skill. You have an extra +1 for that skills proficiency. Note it does not 
+            increase the cost of acquiring proficiency with this skill and also allows the skill to reach +5 proficiency
 ''',
         },
         {
             'name': 'Lucky',
-            'description': '''Whenever you spend a luck token and still fail the check, you recover that luck token.
-            When you have disadvantage on a roll where you have spent a luck token on, negate disadvantage completely.
+            'description': '''When you spend a luck token, you cannot have disadvantage until the start of your next
+            turn or until the scene ends. If you are talented/legendary in skilled path increase your daily number of 
+            luck tokens by 50 %.  
 ''',
         },
         {
@@ -176,7 +178,7 @@ utility dice are always D5.''',
         {
             'requires': 'Adept',
             'name': 'Prodigy',
-            'description': '''At first level gain double the amount of advancements in skilled path (so at legendary
+            'description': '''At second level gain double the amount of advancements in skilled path (so at legendary
             skilled you gain 16 advancement points).
             ''',
         },

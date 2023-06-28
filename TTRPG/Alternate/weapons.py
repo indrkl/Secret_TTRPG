@@ -182,5 +182,11 @@ weapons = {
             ]
         }
     },
+    'staff': {
+        'effect': {
+            '''
+Instead you have 2 additional normal spell options and 1 signature spell option. The signature spell has advantage'''
+        }
+    }
 
 }

@@ -1,6 +1,7 @@
 status_effects = [
     {'name': 'inspiration', 'description': '''
-You can spend your inspiration to either become lucky or gain an advantage for a round / scene or negate disadvantage''',},
+You can spend your inspiration to either become lucky for a round / scene or gain advantage or negate disadvantage
+for a roll.''',},
     {'name': 'cover', 'description': '''
     You can have up to 3 levels of cover against a ranged attacker. Each level makes them require 1 additional power
     dice to hit you. First level is achieved with 50 % of your body being covered. Second level when at least 80% of

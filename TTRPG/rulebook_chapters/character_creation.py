@@ -87,7 +87,7 @@ MAGE advancement options:
          'content': [
              'Adopt a magic related feat',
              'Advance proficiency in one school of magic',
-             'increase your maximum mana by 4 and base daily mana recovery by 1',
+             'increase your maximum mana by 2 and base daily mana recovery by 1',
              'Advance proficiency in lore skill',
              'Learn a spell',
              'Advance proficiency in will',

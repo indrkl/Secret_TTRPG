@@ -50,13 +50,13 @@ feats = {
         #  'effect': '''You can apply max 2 hexes on a creature instead of only 1. Also advance in max mana and learn
         #  one discord spell''',
         #  },
-        {'cost': 6,
+        {'cost': 5,
          'name': 'Pyromancy',
          'effect': '''Whenever your spell applies at least 1 stack of burning onto an enemy, it applies one more stack
          of burning onto them.
             ''',
          },
-        {'cost': 6,
+        {'cost': 3,
          'name': 'Wielder of fire and ice',
          'effect': '''When burning or freezing applied to enemies by you cancel out the previous freezing or burning
          stacks, the enemy takes 3 damage for each stack cancelled out this way.
@@ -69,7 +69,7 @@ feats = {
        #   be taken multiple times, but different status effect must be chosen each time.
        #      ''',
        #   },
-        {'cost': 7,
+        {'cost': 3,
          'name': 'Trickster',
          'effect': '''
          Whenever you apply a level of disoriented or afraid, you also disrupt 1.
@@ -83,7 +83,7 @@ feats = {
        #      Advance in 1 school of magic,  once in maximum mana and learn 1 spell.''',
        #  },
         {
-            'cost': 6,
+            'cost': 5,
             'name': 'Dimension mastery',
             'requires': 'Expert dimension proficiency',
             'effect': '''
@@ -195,7 +195,7 @@ feats = {
              'name': 'Medium armor proficiency',
              'effect': '''Remove the penalty of -1 action limit when wearing medium armor''',
          },
-        {'cost': 4,
+        {'cost': 3,
              'name': 'Heavy armor proficiency',
              'effect': '''While wearing heavy armor you only get -1 action limit instead of -2.
                 ''',
@@ -240,17 +240,17 @@ feats = {
 #                 their movement and remain within your range.''',
 #             }
 #         },
-        {'cost': 6,
+        {'cost': 5,
              'name': 'Two weapon fighter',
              'effect': '''
-                Your maximum defense is increased by 1.
+                Your maximum defense is increased by 1 while wielding two weapons.
                 
                 When wielding two melee weapons which sum of power dice is less than or equal to 6, then you can use R6
                 from your dice pool as a power dice for attacks with both weapon (and it only consumes a single action
                 limit).
                 ''',
         },
-        {'cost': 6,
+        {'cost': 5,
              'requires': 'Two weapon fighter',
              'name': 'Two weapon master',
              'effect': '''
@@ -395,25 +395,17 @@ per fury token used this way.
         #      'restrictions': 'Bows',
         #     }
         #  },
-        {'cost': 4,
+        {'cost': 3,
          'requires': 'Heavy armor proficiency',
          'name': 'Fortress',
          'effect': '''You can use fortitude proficiency against afraid and disoriented conditions instead of will.
          ''',
          },
-#         {'cost': 3,
-#          'name': 'Backstab',
-#          'action': {
-#              'roll target': '1A',
-#              'range': 'melee',
-#              'target': 'single',
-#              'base_cost': '2S',
-#              'effect': '''You can do this attack only when the opponent is unaware of your presence or is facing their
-#                 back to you. Reduce critical threshold by 1. On a critical strike, for every 15 total damage dealt they
-#                 must check for disoriented''',
-#              'restrictions': 'any one handed melee weapon',
-#             }
-#          },
+        {'cost': 4,
+         'name': 'Backstabber',
+         'effect': '''When attacking someone with a one handed melee weapon from behind or while the opponent is unaware
+         of your presence, you have double advantage.''',
+        },
         {
             'cost': 3,
             'name': 'Shadow',
@@ -454,16 +446,17 @@ per fury token used this way.
 #          'effect': '''Coordination action can target 1 additional ally.
 #          ''',
 #          },
-        {'cost': 6,
+        {'cost': 5,
          'name': 'Blessed warrior',
          'effect': '''
-Increase your maximum defense by 2. Whenever you hit an enemy with a weapon attack choose 1 option:
+Increase your maximum defense by 1. Whenever you hit an enemy with an attack involving at least 4 power dice
+you may choose 1 option:
 
-* remove a level of negative status effect from you or one of your allies.
+* remove one level of negative status effect from you or one of your allies.
 
 * recover 1 stamina
 
-* spend 2 mana to deal an additional 2 damage. (requires mage path)
+* spend 1 mana to deal an additional 3 damage. (requires mage path)
          ''',
          },
 #         {'cost': 6,
@@ -483,7 +476,7 @@ Increase your maximum defense by 2. Whenever you hit an enemy with a weapon atta
 
     ],
     'Skilled': [
-        {'cost': 6,
+        {'cost': 5,
          'name': 'Offer them to surrender',
          'effect': '''
          You gain the offer enemy to surrender ability.
@@ -508,7 +501,7 @@ get 2 confusion.
              ]
             }
         },
-        {'cost': 6,
+        {'cost': 5,
          'name': 'Natural leader',
          'effect': '''
          You gain the coordinate action, which can used both during combat and out of combat.
@@ -518,18 +511,38 @@ get 2 confusion.
              'range': '6 sq.',
              'target': '2 allies',
              'effect': '''
-Targeted allies may spend one of their dice in the dice pool to provide a temporary dice to the other ally, which has
-the same roll as the spent dice.
+Targeted allies may give up to 1 dice to the other ally to be used temporarily (that dice preserves it roll). The dice
+is returned after using it.
              ''',
              'difficulty_options': [
                  {
                      'adjustment': 'R3',
-                     'effect': '''They can trade 1 additional dice''',
+                     'effect': '''They can give up to 1 additional dice''',
                  },
              ]
             }
         },
-        {'cost': 6,
+        {'cost': 4,
+         'name': 'Master plan',
+         'effect': '''
+         You gain the master plan action, which can be used during scene. This is a leadership action.
+         ''',
+         'action': {
+             'roll target': 'R3.R3.R3',
+             'range': '6 sq.',
+             'target': '3 allies',
+             'effect': '''
+Targeted allies roll 1 extra temporary dice into their dice pool for this scene.
+             ''',
+             'difficulty_options': [
+                 {
+                     'adjustment': 'R3.R3',
+                     'effect': '''They roll one additional dice''',
+                 },
+             ]
+            }
+        },
+        {'cost': 5,
          'name': 'Agent of chaos',
          'effect': '''
          Causing chaos comes naturally to you. You can make ploys to disorient a group of enemies before the battle.
@@ -567,38 +580,44 @@ the same roll as the spent dice.
 #          'name': 'Knowing when to shut up',
 #          'effect': '''When you use lore to try to aid your allies, critical failures do not cause dis-advantage''',
 #          },
-        {'cost': 8,
+        {'cost': 5,
          'name': 'Inspiring',
-         'effect': '''Grants you the ability to inspire others by spending luck tokens. Advance in luck four times.
+         'effect': '''Grants you the ability to inspire others by spending luck tokens. Gain 2 max luck tokens.
 
          Inspire action uses leadership skill.
          ''',
          'action': {
-             'roll target': 'R6',
+             'roll target': 'R3.R3',
              'range': '12 m.',
              'target': '1 creature',
              'additional_costs': '1 Luck token',
-             'effect': '''target gains inspiration'''
+             'effect': '''target gains inspiration''',
+             'difficulty_options': [
+                 {
+                     'adjustment': 'R6',
+                     'effect': '''They lose 1 level of Will related status effects''',
+                 },
+                 {
+                     'adjustment': 'R6.R6',
+                     'effect': '''They lose 3 level of Will related status effects''',
+                 },
+                 {
+                     'adjustment': 'R3.R3',
+                     'effect': '''They gain 1 additional temporary dice that they can use until their next roll''',
+                 },
+                ]
             }
          },
         {
-            'cost': 3,
-            'name': 'Returning hope',
-            'requires': 'Inspiring',
-            'effect': '''
-            When inspiring someone you can +R6 to have them lose 1 level of any negative status effect or +R6.R6
-            to lose 3 levels of negative status effects divided among status effects as they choose.''',
-        },
-        {
-            'cost': 6,
+            'cost': 7,
             'name': 'Inspiring leader',
             'requires': 'Inspiring',
-            'effect': '''When using the inspire ability, all your party members gain inspiration and other benefits
-            not just one of them.
+            'effect': '''When using the inspire ability, you can spend 1 additional luck token so that all your party
+            members except fo your gain inspiration and other benefits of the inspire action. Gain 2 max luck tokens.
             ''',
         },
 #         {
-#             'cost': 8,
+#             'cost': 7,
 #             'name': 'Luck bringer',
 #             'requires': 'Inspiring',
 #             'effect': '''When your ally uses inspiration provided by you, their roll is also lucky. Advance twice
@@ -664,14 +683,14 @@ the same roll as the spent dice.
 #          '''
 #          },
         {'name': 'Lore weaver',
-         'cost': 6,
+         'cost': 5,
          'effect': '''
         By spending 1 luck token , you can use the "is there such a thing in the game-world" option one additional time
         per scene. When taking this feat advance 4 times in luck.
             '''
         },
         {
-            'cost': 6,
+            'cost': 5,
             'name': 'Excellent instructor',
             'effect': '''By spending 30 min. to prepare someone in a skill you are proficient in, you can have them
             meet 1 roll target with your effective proficiency bonus in that skill within the next 12 h.
@@ -679,7 +698,7 @@ the same roll as the spent dice.
 ''',
         },
         {
-            'cost': 8,
+            'cost': 7,
             'requires': 'Excellent instructor',
             'name': 'Master',
             'effect': '''For each party member you can choose one skill. Their effective proficiency bonus in that
@@ -817,7 +836,7 @@ def prep_feat_flowable(feat):
 
     if feat.get('metamagic_option'):
         meta_option = feat.get('metamagic_option')
-        data = [[f"Difficulty cost: {meta_option['difficulty']}", f"Use limit: {meta_option.get('L', 'unlimited')}",
+        data = [[f"Roll: {meta_option['difficulty']}", f"Use limit: {meta_option.get('L', 'unlimited')}",
                  Paragraph(meta_option['effect'], basic_paragraph_style)]]
         table = Table(data, colWidths=[100, 100, 280])
         table.setStyle(TableStyle([
@@ -832,7 +851,7 @@ def prep_feat_flowable(feat):
             [f"Stamina cost: {action.get('base_cost', '-')}", f"Other attacks cost increase: {action.get('next_attack_cost_increase', '-')}",
                 f"Other costs: {feat.get('additional_costs', '-')}"],
             [f"Roll target: {action.get('roll target', '-')}", f"Target: {action.get('target', '-')}", f"Duration: {action.get('duration', '-')}"],
-            [f"Use limitations: {action.get('limit', '-')}", f"Restrictions: {action.get('restrictions', '-')}", ""],
+            [f"Limit: {action.get('limit', '-')}", f"Restrictions: {action.get('restrictions', '-')}", ""],
             [Paragraph(action['effect'], basic_paragraph_style)]
         ]
 
