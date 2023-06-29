@@ -110,7 +110,7 @@ When your martial path is legendary, then it also doesn't become scarred on a 3 
 
 At the beginning of each round, if you have any damaged dice, you may choose one of the following:
 
-* Heal 1 damaged dice.
+* Heal 1 damaged dice and recover 1 stamina.
 
 * Deal additional damage with one attack equal to the number of damaged dice.
 

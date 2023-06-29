@@ -219,6 +219,12 @@ feats = {
         },
         {
             'cost': 3,
+            'name': 'Power strike',
+            'effect': '''When making an attack with 2 handed melee weapon you can spend 1 stamina to deal 2 additional
+            damage''',
+        },
+        {
+            'cost': 3,
             'name': 'Opportunist',
             'effect': '''
                 You have advanatege with attacks against enemies that have damaged your allies but not you since the 
@@ -284,7 +290,7 @@ You can use the flow tokens in following ways, flow tokens are reset to 0 at the
 #
 #                 ''',
 #         },
-        {'cost': 6,
+        {'cost': 5,
              'name': 'Savage Axe',
              'effect': '''
              
@@ -298,7 +304,7 @@ RU: Spend 2 savagery tokens to add a level of afraid to the enemy
 RU: Spend 2 savagery tokens to add 1 level of vulnerable to the enemy. 
                 ''',
         },
-        {'cost': 6,
+        {'cost': 5,
          'name': 'Sentinel',
          'effect': '''
 When wielding a polearm, you get a zone of control around you of 2 sq. Enemies that want to move through your ZoC or
@@ -334,7 +340,7 @@ First reaction attack with a polearm in between your turns has double advantage,
 # effects both times.
 #          ''',
 #          },
-        {'cost': 6,
+        {'cost': 5,
          'name': 'Rage',
          'effect': '''
             Gain rage action.
@@ -353,7 +359,7 @@ First reaction attack with a polearm in between your turns has double advantage,
                 ''',
             }
          },
-        {'cost': 6,
+        {'cost': 7,
          'requires': 'Rage',
          'name': 'Fury',
          'effect': '''
@@ -372,7 +378,7 @@ per fury token used this way.
          
          ''',
          },
-        {'cost': 4,
+        {'cost': 2,
          'requires': 'Rage',
          'name': 'Prolonged rage',
          'effect': '''

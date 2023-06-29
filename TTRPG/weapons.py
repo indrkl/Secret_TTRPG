@@ -182,6 +182,31 @@ weapons = {
             ]
         }
     },
+    '2 handed axe': {
+        'action': {
+            'cost': 'R5.R5',
+            'damage': 3,
+            'range': 'melee',
+            'extra_options': [
+                {
+                    'cost': 'R5',
+                    'effect': 'Remove guarded status effect',
+                },
+                {
+                    'cost': 'R5',
+                    'effect': 'Additional 2 damage',
+                },
+                {
+                    'cost': 'R2.R2.R2',
+                    'effect': 'Apply 1 level of afraid onto enemy',
+                },
+                {
+                    'cost': 'R2.R2',
+                    'effect': 'Apply 1 level of vulnerable onto enemy',
+                },
+            ]
+        }
+    },
     'Shield': {
         'effect':
             '''

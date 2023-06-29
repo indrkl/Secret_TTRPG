@@ -8,11 +8,11 @@ schools = {
                 and those wearing heavy armor. Huge and larger creatures cannot be moved this way. After being moved
                 the target needs to check for balance.''',
                 'target': 'single',
-                'difficulty': 'R4.R4.R4',
+                'difficulty': 'R3.R3.R3',
                 'scaling': [
-                    {'D': 'R4', 'description': '''increase the move distance by 2 sq. The target needs to make an 
+                    {'D': 'R3', 'description': '''increase the move distance by 2 sq. The target needs to make an 
                     additional check for balance'''},
-                    {'D': 'R4', 'description': '''For the purposes of moving the target and balance checks the creature is 
+                    {'D': 'R3', 'description': '''For the purposes of moving the target and balance checks the creature is 
                     considered to not be wearing heavy armor and also to be one size smaller'''},
                 ],
             },
@@ -23,9 +23,9 @@ schools = {
                 for balance 4 times''',
                 'target': 'point',
                 'radius': '1 sq',
-                'difficulty': 'R4.R4.R4.R4',
+                'difficulty': 'R3.R3.R3.R3',
                 'scaling': [
-                    {'D': 'R4', 'description': '''The force pushed them 2 additional sq. further away and they need to 
+                    {'D': 'R3', 'description': '''The force pushed them 2 additional sq. further away and they need to 
                     check for balance twice more'''},
                 ],
             },
@@ -34,13 +34,13 @@ schools = {
                 'range': '12 sq.',
                 'effect': '''Create a 2 sq. long wall. arrows that would fly through this area, lose their speed and
                 fall on the ground. It takes 3 sq. worth of movement to go through the wall of force''',
-                'concenctration': 'R4',
-                'difficulty': 'R4.R4.R4',
+                'concenctration': 'R3',
+                'difficulty': 'R3.R3.R3',
                 'scaling': [
                     {'D': 'R2', 'description': '''increase the length by 4 m.'''},
                     {'D': 'R2', 'description': '''At the beginning of each of your rounds you can move the position of the
                     wall'''},
-                    {'D': 'R4', 'description': '''It requires 2 additional sq. worth of movement to go through the wall
+                    {'D': 'R3', 'description': '''It requires 2 additional sq. worth of movement to go through the wall
                     of force'''},
                 ],
             },
@@ -49,16 +49,16 @@ schools = {
                 'range': 'touch',
                 'target': 'self',
                 'duration': '5 rounds',
-                'concenctration': 'R4',
+                'concenctration': 'R3',
                 'effect': '''Increase your maximum defense to 2 (note, this does not stack with armor and is only
                 useful if you don't have maximum defense from other sources..
                 ''',
-                'difficulty': 'R4.R4.R4',
+                'difficulty': 'R3.R3.R3',
                 'scaling': [
-                    {'D': 'R4', 'description': '''
+                    {'D': 'R3', 'description': '''
                         The maximum defense provided by this spell is increased by 1
                     '''},
-                    {'D': 'R4.R4', 'description': '''Gain 1 damage reduction'''},
+                    {'D': 'R3.R3', 'description': '''Gain 1 damage reduction'''},
                     # {'D': 'R4.R4', 'description': '''Choose fire, cold, lightning or physical, gain resistance to the chosen
                     # damage type.'''},
                 ]

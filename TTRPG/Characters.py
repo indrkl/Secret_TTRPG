@@ -598,6 +598,40 @@ xd6_characters = [
         'equipment': ['sword', 'shield', '2 MD leather armor'],
     },
     {
+        'name': 'Holy savage',
+        'MARTIAL': 4,
+        'MAGE': 2,
+        'Levels': {
+            1: {
+                'Innate_feat_mage': 'Divine protector',
+                'Innate_feat_martial': 'Defiant',
+                'Mage advancements': [
+                    '''first toughness proficiency, first will proficiency'''
+                ],
+                'Martial advancements': [
+                    'first and second two handed axe proficiency, 1 stamina',
+                ],
+            },
+            2: {
+                'Mage advancements': [
+                    '''second toughness and will proficiency'''
+                ],
+                'Martial advancements': [
+                    'Savage axe and power strike feats',
+                ],
+            },
+            3: {
+                'Mage advancements': [
+                    '''first force proficiency and push/pull'''
+                ],
+                'Martial advancements': [
+                    '3 stamina, first fortitude proficiency',
+                ],
+            },
+        },
+        'equipment': ['Two handed axe', '2 MD leather armor'],
+    },
+    {
         'name': 'Inspiring leader',
         'SKILLED': 4,
         'MARTIAL': 2,
