@@ -1,7 +1,5 @@
 info = [
-    '''beasts have weak will, but high fortitude, so they gain a natural bonus of +1 to FORT saves, but -1 to will 
-    saves. Their basic attacks have same stamina costs as humanoids and deal 1d6+X damage, where X is based on their
-    archetype.
+    '''beasts have weak will, but high fortitude, so they have +1 to fort proficiency, but cannot gain WILL proficiency.
     ''',
 ]
 
@@ -10,7 +8,7 @@ archetypes = [
         'name': 'small animal',
         'description': '''
             13 AC (1 natural armor, 2 size bonus), small amount of HP (2 per path level per level), damage dice is d6, 
-                Has advanced senses. +1 REF saves +2 to survival checks, 25 move speed.
+                Has advanced senses. +1 REF saves +2 to survival checks, 5 sq. move speed.
         '''
      },
     {'name': 'medium sized predators',

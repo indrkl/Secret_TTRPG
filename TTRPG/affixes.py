@@ -140,7 +140,6 @@ def select_random_mod(mods, allow_uniques, lvl, existing_mods=[]):
     for x in mods:
         if (allow_uniques or not x.get('unique', False)) and x.get('min_lvl', 1) <= lvl and x.get('name', '') not in existing_mods:
             choices.append(x)
-    # print(str(choices))
     return random.choice(choices)
 
 def solidify_effect(mod, lvl):
@@ -160,7 +159,6 @@ def solidify_effect(mod, lvl):
 
 def roll_random_weapon(lvl):
     no_mods = get_no_mods()
-    print(no_mods)
     mods = []
 
     unique = False

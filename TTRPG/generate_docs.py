@@ -100,7 +100,7 @@ def build_pdf_file():
     from Innate_feats import get_innate_feat_chapter
     from progression_feats import get_progression_feat_chapter
     from Normal_feats import get_normal_feats_chapter
-    from weapons import get_weapons_chapter
+    from equipment import get_equipment_chapter
     toc = TableOfContents()
     toc.levelStyles = [
         ParagraphStyle(fontName='Helvetica-Bold', fontSize=20, name='TOCHeading1', leftIndent=20, firstLineIndent=-20, spaceBefore=10,
@@ -116,7 +116,7 @@ def build_pdf_file():
     elements.extend(prep_elements_from_chapter(get_innate_feat_chapter()))
     elements.extend(prep_elements_from_chapter(get_progression_feat_chapter()))
     elements.extend(prep_elements_from_chapter(get_normal_feats_chapter()))
-    elements.extend(prep_elements_from_chapter(get_weapons_chapter()))
+    elements.extend(prep_elements_from_chapter(get_equipment_chapter()))
     elements.extend(prep_elements_from_chapter(get_spells_chapter()))
     # elements.extend(prep_elements_from_chapter(get_monsters_chapters()))
     return elements

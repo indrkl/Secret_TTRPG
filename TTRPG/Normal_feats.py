@@ -75,13 +75,12 @@ feats = {
          Whenever you apply a level of disoriented or afraid, you also disrupt 1.
          ''',
          },
-       #  {
-       #      'cost': 8,
-       #      'name': 'Iron concentration',
-       #      'effect': '''Your total AP cost for concentration is halved rounded up. And the mana cost for each
-       #      of your concentration spells after casting is reduced by 1.
-       #      Advance in 1 school of magic,  once in maximum mana and learn 1 spell.''',
-       #  },
+        {
+            'cost': 5,
+            'name': 'Iron concentration',
+            'effect': '''You can spend any dice to maintain concentration, and concenctration does not reduce action 
+            limit''',
+        },
         {
             'cost': 5,
             'name': 'Dimension mastery',
@@ -91,6 +90,14 @@ feats = {
             cast spells from the point of that object.
             
             If you are are legendary in dimension magic, you can craft one additional such object.
+            ''',
+        },
+        {
+            'cost': 5,
+            'name': 'Enchanter',
+            'effect': '''
+Enchantment spells cost 1 less power dice to cast. When the concentration cost is higher than 1 power dice, then that
+too costs 1 less power dice.
             ''',
         },
     #     {
@@ -269,6 +276,14 @@ You can use the flow tokens in following ways, flow tokens are reset to 0 at the
 * Spend 2 flow tokens to instantly go to your maximum defense
 
 * Spend 1 flow token to move yourself up to 2 sq. after finishing an attack action.
+                ''',
+        },
+        {'cost': 7,
+             'requires': 'lvl 5.',
+             'name': 'Master of defenses',
+             'effect': '''
+Defend action now requires only R2. You can also use Defend action as a reaction once between your turns after being
+attacked.
                 ''',
         },
 #         {'cost': 8,
@@ -636,7 +651,7 @@ Targeted allies roll 1 extra temporary dice into their dice pool for this scene.
 #             'effect': '''During a resolution of the plan, when giving disadvantage to a check to give advantage to
 #             another check, you can give advantage to one additional check. Advance 1 times in leadership''',
 #         },
-        {'cost': 3,
+        {'cost': 2,
          'name': 'Foresight',
          'action': {
              'roll target': '-',
@@ -852,7 +867,6 @@ def prep_feat_flowable(feat):
 
     if feat.get('action'):
         action = feat['action']
-        print(str(action))
         data = [
             [f"Stamina cost: {action.get('base_cost', '-')}", f"Other attacks cost increase: {action.get('next_attack_cost_increase', '-')}",
                 f"Other costs: {feat.get('additional_costs', '-')}"],

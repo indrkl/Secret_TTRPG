@@ -5,8 +5,7 @@ schools = {
                 'name': 'Push/pull',
                 'range': '8 sq.',
                 'effect': '''Move target away from you or towards you for 2 sq. Halve the distance for large creatures
-                and those wearing heavy armor. Huge and larger creatures cannot be moved this way. After being moved
-                the target needs to check for balance.''',
+                and those wearing heavy armor. Huge and larger creatures cannot be moved this way.''',
                 'target': 'single',
                 'difficulty': 'R3.R3.R3',
                 'scaling': [
@@ -92,12 +91,13 @@ schools = {
                 'name': 'Grant luck',
                 'range': 'touch',
                 'target': 'single',
-                'effect': '''Target can change the result of one dice in the dice pool.
+                'effect': '''Target can change the result of one dice in the dice pool when you cast and each time
+                you concentrate on it
                 ''',
                 'difficulty': 'R1.R1.R1',
+                'concentration': 'R1.R1.R1',
                 'scaling': [
-                    {'D': 'R1.R1', 'description': '''Target can change another dice in their dice pool, this option 
-                    increases mana cost by 1 less'''},
+                    {'D': 'R1.R1', 'description': '''Target can change another dice in their dice pool'''},
                 ],
             },
             # {
@@ -306,7 +306,7 @@ schools = {
                 ],
             },
             {
-                'name': 'Enchant weapon',
+                'name': 'Elemental weapon',
                 'range': 'touch',
                 'effect': '''Choose fire, cold or lightning. Enchant target not enchanted weapon. Target weapon deals 
                 1 extra damage of the chosen damage type with every attack made with this weapon.
@@ -322,8 +322,8 @@ schools = {
                         one level of freezing
                     '''},
                     {'D': 'R6', 'L': 1, 'description': '''You need to have chosen lightning. Convert all physical damage 
-                        target weapon does to lightning damage. Each time that weapon hits an enemy, the enemy must
-                        gets confusion 1.
+                        target weapon does to lightning damage. Each time that weapon hits an enemy, the enemy
+                        gets 2 confusion.
                     '''},
                     {'D': 'R6.R6', 'L': 1, 'description': '''You need to have chosen fire. Convert all physical damage 
                         target weapon does to fire damage. Each time that weapon hits an enemy, the enemy gets one
@@ -740,7 +740,7 @@ def prep_spell_flowable(spell):
     # style = ParagraphStyle(name='Table Cell', fontSize=12, textColor='black', textWrap=True)
     for scaling in spell.get('scaling', []):
         description = re.sub('\s+', ' ', scaling['description'])
-        data.append([f"Difficulty cost: {scaling['D']}", f"Use limit: {scaling.get('L', 'unlimited')}", Paragraph(description, basic_paragraph_style)])
+        data.append([f"Add cost: {scaling['D']}", f"Use limit: {scaling.get('L', 'unlimited')}", Paragraph(description, basic_paragraph_style)])
     if data:
         table = Table(data, colWidths=[100, 100, 280])
         table.setStyle(TableStyle([

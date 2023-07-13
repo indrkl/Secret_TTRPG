@@ -29,107 +29,52 @@ Move X squares where X is the dice result that you use to move.
         ''',
         'difficulty': 'RX',
     },
-#     {
-#         'name': 'Attack',
-#         'speed': '1A',
-#         'profieciency': 'Weapon',
-#         'cost': '1 STA',
-#         'description': '''
-# You attack an enemy, make a weapon check if it is equal to or larger than your opponents AC, you hit them.
-# All future attack actions until the beginning of your next turn cost 1 additional STA.
-#         ''',
-#         'difficulty': 0,
-#         'scaling': [
-#         ],
-#     },
-#     {
-#         'name': 'Wrestle',
-#         'speed': '1A',
-#         'profieciency': 'Physique',
-#         'cost': '2 STA',
-#         'description': '''
-# Wrestling is all about getting an upper hand, rooting the opponent in place and draining their stamina faster than you
-# lose stamina. There are a few rules for wrestling:
-#
-# 1. If someone has upper hand against you, then you must first get rid of it before you can get upper hand against them
-#
-# 2. If anyone has upper hand against you, you cannot move
-#
-# 3. If someone gets upper hand against you, you lose upper hand against everyone.
-#
-# 4. Normally 1 character can only have upper hand against 1 other character
-#
-# 5. Upper hand has multiple levels.
-#
-# 6. When someone has upper hand against you, you cannot use weapons, except for dagger and you can only use spells that
-# have a range of touch or target yourself.
-#
-# 7. When you have 3 levels of upper hand against you, you cannot even use the dagger, nor cast spells that touch.
-#
-# 8. You lose STA at the beginning of round equal to the number of Upper hands against you.
-#
-# 9. If someone has upper hand against you, you can only wrestle those who have upper hand against you.
-#
-# 10. Character which has upper hand against another character is considered to be in the same space (same square in battle
-# map)
-#
-# 11. Attacks that miss against characters, which are in the same space, have 50 % chance to hit someone else in that
-# space.
-#
-# Check physique against 10 + target's physique proficiency bonus. If you succeed, then the enemy loses 1 levels of upper
-# hand against you, if they didn't have any, you gain 1 upper hand against them.
-#
-# If you wrestled someone who did not have upper hand against you or you didn't have upper hand against them, they do get
-# an attack of opportunity, unless you managed to wrestle them from behind.
-#         ''',
-#         'difficulty': 0,
-#         'scaling': [
-#         ],
-#     },
-#     {
-#         'name': 'Wrestle',
-#         'speed': '1A',
-#         'profieciency': 'Physique',
-#         'cost': '2 STA',
-#         'description': '''
-# Wrestling is all about getting an upper hand, rooting the opponent in place and draining their stamina faster than you
-# lose stamina. There are a few rules for wrestling:
-#
-# 1. If someone has upper hand against you, then you must first get rid of it before you can get upper hand against them
-#
-# 2. If anyone has upper hand against you, you cannot move
-#
-# 3. If someone gets upper hand against you, you lose upper hand against everyone.
-#
-# 4. Normally 1 character can only have upper hand against 1 other character
-#
-# 5. Upper hand has multiple levels.
-#
-# 6. When someone has upper hand against you, you cannot use weapons, except for dagger and you can only use spells that
-# have a range of touch or target yourself.
-#
-# 7. When you have 3 levels of upper hand against you, you cannot even use the dagger, nor cast spells that touch.
-#
-# 8. You lose STA at the beginning of round equal to the number of Upper hands against you.
-#
-# 9. If someone has upper hand against you, you can only wrestle those who have upper hand against you.
-#
-# 10. Character which has upper hand against another character is considered to be in the same space (same square in battle
-# map)
-#
-# 11. Attacks that miss against characters, which are in the same space, have 50 % chance to hit someone else in that
-# space.
-#
-# Check physique against 10 + target's physique proficiency bonus. If you succeed, then the enemy loses 1 levels of upper
-# hand against you, if they didn't have any, you gain 1 upper hand against them.
-#
-# If you wrestled someone who did not have upper hand against you or you didn't have upper hand against them, they do get
-# an attack of opportunity, unless you managed to wrestle them from behind.
-#         ''',
-#         'difficulty': 0,
-#         'scaling': [
-#         ],
-#     },
+    {
+        'name': 'Defend',
+        'profieciency': 'Physique',
+        'description': '''
+Recover your defense up to maximum defense
+        ''',
+        'difficulty': 'R2.R2',
+    },
+    {
+        'name': 'Wrestle',
+        'cost': '1 stamina',
+        'profieciency': 'Physique',
+        'difficulty': 'R2.R2',
+        'description': '''
+Wrestling is all about getting an upper hand, rooting the opponent in place and draining their stamina faster than you
+lose stamina. There are a few rules for wrestling:
+
+1. If someone has upper hand against you, then you must first get rid of it before you can get upper hand against them
+
+2. If anyone has upper hand against you, you cannot move
+
+3. If someone gets upper hand against you, you lose upper hand against everyone.
+
+4. Normally 1 character can only have upper hand against 1 other character
+
+5. Upper hand has multiple levels.
+
+6. When someone has upper hand against you, you cannot use weapons, except for dagger and you can only use spells that
+have a range of touch or target yourself.
+
+7. When you have 3 levels of upper hand against you, you cannot even use the dagger, nor cast spells that touch.
+
+8. You lose 1 stamina at the beginning of round, if you have at least 3 levels of upper hand against you.
+
+9. If someone has upper hand against you, you can only wrestle those who have upper hand against you.
+
+10. Character which has upper hand against another character is considered to be in the same space (same square in battle
+map)
+
+11. Ranged attacks made onto a character in the space where the wrestling is taking place has a 1/6 chance of hitting
+the other person.
+        ''',
+        'scaling': [
+            {'D': 'R2.R2', 'description': '''Gain one additional level of upper hand'''},
+        ],
+    },
 ]
 
 from reportlab.platypus import Table, TableStyle, Paragraph, Spacer, KeepTogether
@@ -142,7 +87,7 @@ def prep_action_flowable(action):
     elements.append(Paragraph(action['name'], style=minor_title))
     data = [
         [f"Difficulty: {action.get('difficulty')}", f"Target: {action.get('target', '-')}", f"Range: {action.get('range', '-')}", f"Area radius: {action.get('radius', '-')}"],
-        [f"Action cost: {action.get('speed', '-')}", f"Duration: {action.get('duration', '-')}", f"Concentration: {action.get('concentration', 'NO')}", f"Proficiency: {action.get('profieciency', '-')}"]
+        [f"Action cost: {action.get('cost', '-')}", f"Duration: {action.get('duration', '-')}", f"Concentration: {action.get('concentration', 'NO')}", f"Proficiency: {action.get('profieciency', '-')}"]
     ]
     table = Table(data, colWidths=[120]*4)
     table.setStyle(TableStyle([

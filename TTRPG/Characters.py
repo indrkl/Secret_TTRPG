@@ -89,7 +89,7 @@ blood_mage = {
             ]
         },
         4: {
-            'progression_feats': ['Mastery (illusion)', 'Resourceful']
+            'progression_feats': ['Mastery (illusion)', 'Resourceful'],
             'Mage advancements': [
                 'Quick magic, mind expertise (crazed), Invisibility'
             ],
@@ -151,7 +151,7 @@ nasty_barbarian = {
             ]
         },
         4: {
-            'progression_feats': ['', 'Stamina related']
+            'progression_feats': ['', 'Stamina related'],
             'Mage advancements': [
                 'Speak with animals'
             ],
@@ -564,6 +564,41 @@ xd6_characters = [
 
     },
     {
+        'name': 'Mastermind',
+        'MAGE': 4,
+        'SKILLED': 2,
+        'Levels': {
+            1: {
+                'Innate_feat_mage': 'Raw caster',
+                'Innate_feat_skilled': 'Specialist (leader',
+                'Mage advancements': [
+                    '''first and second discord proficiency, 'Weapon of horrors' spell'''
+                ],
+                'Skilled advancements': [
+                    'first leadership proficiency, 1 luck',
+                ],
+            },
+            2: {
+                'Mage advancements': [
+                    '''Enchanter feat, first elemental proficiency, 1 mana, enchant weapon spell'''
+                ],
+                'Skilled advancements': [
+                    'Mastermind',
+                ],
+            },
+            3: {
+                'Mage advancements': [
+                    '''second elemental proficiency, chain lightning, 1 mana'''
+                ],
+                'Skilled advancements': [
+                    'Second leadership proficiency',
+                ],
+            },
+        },
+        'equipment': ['staff', 'robes (no armor)', '2 healing potions'],
+
+    },
+    {
         'name': 'Paladin',
         'MARTIAL': 4,
         'MAGE': 2,
@@ -591,7 +626,7 @@ xd6_characters = [
                     '''2 mana'''
                 ],
                 'Martial advancements': [
-                    '1 stamina, third sword proficiency',
+                    'first physique proficiency, second shield proficiency, 1 stamina',
                 ],
             },
         },
@@ -625,7 +660,7 @@ xd6_characters = [
                     '''first force proficiency and push/pull'''
                 ],
                 'Martial advancements': [
-                    '3 stamina, first fortitude proficiency',
+                    '3 stamina, first physique proficiency',
                 ],
             },
         },
@@ -651,7 +686,7 @@ xd6_characters = [
                     '''Inspiring, Inspiring leader, first survival proficiency, 3 luck'''
                 ],
                 'Martial advancements': [
-                    'second bow proficiency and first toughness proficiency and 1 stamina',
+                    'second bow proficiency and first toughness and physique proficiency',
                 ],
             },
             3: {
@@ -665,10 +700,11 @@ xd6_characters = [
         },
         'equipment': ['axe', 'shield', '3 MD, 1 DR padding and chain mail heavy armor combo'],
     },
+
     {
         'name': 'Trickster',
         'SKILLED': 3,
-        'MARTIAL': 3,
+        'MAGE': 3,
         'Levels': {
             1: {
                 'Innate_feat_skilled': 'Lucky',
@@ -699,4 +735,367 @@ xd6_characters = [
         },
         'equipment': ['staff', '2 MD leather armor'],
     },
+    {
+        'name': 'Sentinel',
+        'SKILLED': 2,
+        'MARTIAL': 4,
+        'Levels': {
+            1: {
+                'Innate_feat_skilled': 'Specialist (survival)',
+                'Innate_feat_martial': 'Defiant',
+                'Skilled advancements': [
+                    '''first survival and diplomacy proficiency'''
+                ],
+                'Martial advancements': [
+                    'first polearm proficiency and second polearm proficiency, 1 stamina',
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    '''Foresight, 1 luck, first physique proficiency'''
+                ],
+                'Martial advancements': [
+                    'Sentinel and heavy armor feat',
+                ],
+            },
+            3: {
+                'Skilled advancements': [
+                    '''Second survival proficiency'''
+                ],
+                'Martial advancements': [
+                    'third polearm proficiency, 1 stamina' ,
+                ],
+            },
+        },
+        'equipment': ['spear', '3 MD, 1 DR padding and chain mail heavy armor combo'],
+    },
+
 ]
+
+player_characters = [
+    {
+        'name': 'Esmeralda the warden of silver bats',
+        'SKILLED': 2,
+        'MAGE': 4,
+        'Innate_feat_skilled': 'Specialist(lore)',
+        'Innate_feat_mage': 'Divine protector',
+        'Levels': {
+            1: {
+
+                'Skilled advancements': [
+                    '''proficiency (first): will''', '''proficiency (first): lore''',
+                    '''proficiency (extra): lore'''
+                ],
+                'Mage advancements': [
+                    'proficiency (first): elemental', 'proficiency (second): elemental', 'spell: fireball',
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    '''proficiency (second): lore''', '2 luck'
+                ],
+                'Mage advancements': [
+                    'proficiency (first): nature', 'proficiency (second): nature', 'feat: iron concentration',
+                ],
+            },
+            3: {
+                'Skilled advancements': [
+                    '''2 luck'''
+                ],
+                'Mage advancements': [
+                    'spell: heal', 'spell: grant luck', 'spell: Elemental weapon', '1 mana'
+                ],
+            },
+        },
+        'equipment': ['staff'],
+    },
+    {
+        'name': 'Fred the Forgetful mage',
+        'SKILLED': 2,
+        'MAGE': 4,
+        'Innate_feat_skilled': 'Specialist(treasure hunting)',
+        'Innate_feat_mage': 'Raw caster',
+        'Levels': {
+            1: {
+
+                'Skilled advancements': [
+                    '''proficiency (first): treasure hunting''', '''proficiency (first): lore''',
+                    '''proficiency (extra): treasure hunting'''
+                ],
+                'Mage advancements': [
+                    'proficiency (first): force', 'proficiency (second): force', 'spell: push/pull',
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    '''proficiency (second): treasure hunting''', '2 luck'
+                ],
+                'Mage advancements': [
+                    'proficiency (first): dimension', 'proficiency (second): dimension', 'proficiency (third): force',
+                    'spell: pass object', '1 mana',
+                ],
+            },
+            3: {
+                'Skilled advancements': [
+                    '''2 luck'''
+                ],
+                'Mage advancements': [
+                    '4 mana',
+                ],
+            },
+        },
+        'equipment': ['a single lucky broken beer mug'],
+    },
+
+    {
+        'name': 'Ralf the Troll diplomat',
+        'SKILLED': 4,
+        'MARTIAL': 2,
+        'defense': 5,
+        'Innate_feat_skilled': 'Natural armor(heavy armor)',
+        'Innate_feat_martial': 'Extraordinary senses',
+        'Levels': {
+            1: {
+                'Skilled advancements': [
+                    '''proficiency (first): diplomacy''', 'proficiency (second): diplomacy', '1 luck'
+                ],
+                'Martial advancements': [
+                    'proficiency (first): toughness', 'proficiency (first): physique',
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    'feat: Offer them to surrender', 'proficiency (third): diplomacy'
+                ],
+                'Martial advancements': [
+                    'proficiency (second): toughness', 'proficiency (second): physique',
+                ],
+            },
+            3: {
+                'Skilled advancements': [
+                    'proficiency (first): lore', '3 luck'
+                ],
+                'Martial advancements': [
+                    '2 stamina',
+                ],
+            },
+        },
+        'equipment': [],
+        'normal_actions': ['Wrestle'],
+    },
+    {
+        'name': 'Tom the religious gansta poet',
+        'SKILLED': 2,
+        'MARTIAL': 4,
+        'defense': 3,
+        'Innate_feat_skilled': 'Prodigy',
+        'Innate_feat_martial': 'Extraordinary senses',
+        'Levels': {
+            1: {
+                'Skilled advancements': [
+                    'proficiency (first): crafting', 'proficiency (first): survival'
+                ],
+                'Martial advancements': [
+                    'proficiency (first): dagger', 'proficiency (second): dagger', 'proficiency (first): toughness'
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    'feat: Agent of chaos', 'proficiency (second): survival', 'proficiency (first): diplomacy'
+                ],
+                'Martial advancements': [
+                    'feat: Shadow', 'feat: Two weapon fighter',
+                ],
+            },
+            3: {
+                'Skilled advancements': [
+                    'proficiency (second): crafting'
+                ],
+                'Martial advancements': [
+                    'feat: Backstabber',
+                ],
+            },
+        },
+        'equipment': ['1 handed mace', 'dagger', 'simple leather armor'],
+
+    },
+]
+
+
+
+import re
+from reportlab.platypus import Table, TableStyle, Paragraph, Spacer, KeepTogether, PageBreak
+from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_title, minor_subtitle, spell_block_style
+from reportlab.lib import colors
+
+
+spell_schools = ['']
+
+def split_data_into_columns(data, column_number):
+    rows = []
+    indx = 0
+    row = []
+    for i in range(len(data)):
+        row.append(data[i])
+        indx += 1
+        if indx == column_number:
+            rows.append(row)
+            indx = 0
+    if indx > 0:
+        while indx < column_number:
+            row.append('')
+            indx+=1
+        rows.append(row)
+    return rows
+
+def find_feat_object(name, all_feats):
+    for path in all_feats:
+        for feat in all_feats[path]:
+            if feat['name'].lower() == name.lower():
+                return feat
+
+def find_general_action(name, all_general_actions):
+    for action in all_general_actions:
+        if action['name'] == name:
+            return action
+
+def find_spell_object(name, all_spells):
+    for school in all_spells:
+        for spell in all_spells[school]['spells']:
+            if spell['name'].lower() == name.lower():
+                return spell
+
+def generate_character_flowable(character):
+    from Innate_feats import prep_feat_flowable as prep_innate_feat_flowable
+    from Innate_feats import feats as all_innate_feats
+    from Normal_feats import feats as all_normal_feats
+    from Normal_feats import prep_feat_flowable as prep_normal_feat_flowable
+    from Skills import skills
+    skill_names = [x['name'] for x in skills]
+
+    from Spells import schools
+    from Spells import prep_spell_flowable as prep_spell_flowable
+
+    spell_school_names = [key.lower() for key in schools]
+
+    from equipment import weapon_classes, prep_equipment_flowable
+    from equipment import equipment as all_equipment
+
+    innate_feats = [character[key] for key in ['Innate_feat_skilled', 'Innate_feat_mage', 'Innate_feat_martial'] if key in character]
+    feats = []
+    proficiencies = {}
+    spells = []
+    stats = {'mana': 0, 'stamina': 0, 'luck': 0, 'toughness': 2}
+
+    for indx in character['Levels']:
+        level = character['Levels'][indx]
+        for key in level:
+            for advancement in level[key]:
+                proficiency = re.search('proficiency \((first|second|third|fourth|extra)\): ([a-z ]*)', advancement)
+                if proficiency:
+                    proficiency = proficiency[2]
+                    proficiencies[proficiency] = proficiencies.get(proficiency, 0) + 1
+                    continue
+
+                spell = re.search('spell: ([A-Za-z \/]*)', advancement)
+                if spell:
+                    spells.append(spell[1])
+                    continue
+                feat = re.search('feat: ([A-Za-z ]*)', advancement)
+                if feat:
+                    feats.append(feat[1])
+                    continue
+                stat = re.search('([0-9]*) (mana|stamina|luck)', advancement)
+                if stat:
+                    stats[stat[2]] += int(stat[1])
+                    continue
+
+                raise Exception(advancement + ' is unhandled')
+
+    stats['toughness'] += proficiencies.get('toughness', 0)
+
+    elements = []
+    elements.append(Paragraph(character['name'], style=minor_title))
+    data = [
+        [f"Martial: {character.get('MARTIAL', 0)}", f"Mage: {character.get('MAGE', '0')}", f"Skilled: {character.get('SKILLED', '0')}"],
+        [f"Stamina: {stats.get('stamina')}", f"Mana: {stats.get('mana')}", f"Luck: {stats.get('luck')}"],
+        [f"Toughness: {stats.get('toughness')}", f"Defense: {character.get('defense', 0)}", f""],
+    ]
+
+    skill_proficiencies = [f'{prof}: {proficiencies[prof]}' for prof in proficiencies if prof in skill_names]
+
+    data.extend(split_data_into_columns(skill_proficiencies, 3))
+
+    spell_proficiencies = [f'{prof}: {proficiencies[prof]}' for prof in proficiencies if prof in spell_school_names]
+
+    data.extend(split_data_into_columns(spell_proficiencies, 3))
+
+    weapon_proficiencies = [f'{prof}: {proficiencies[prof]}' for prof in proficiencies if prof in weapon_classes]
+
+    data.extend(split_data_into_columns(weapon_proficiencies, 3))
+
+    table = Table(data, colWidths=[160]*3)
+    table.setStyle(TableStyle([
+                               ('FONTNAME', (0, 0), (-1, -1), 'Helvetica-Bold'),
+                               ('GRID', (0, 0), (-1, -1), 0.5, colors.gray)]))
+    elements.append(table)
+
+
+
+
+    elements.append(Paragraph('Feats', style=minor_subtitle))
+
+    for feat in innate_feats:
+        feat_name = re.search('(^[A-Za-z ]*)', feat)[1]
+        print (feat_name)
+        feat_obj = find_feat_object(feat_name, all_innate_feats)
+        print (feat_obj)
+        elements.extend(prep_innate_feat_flowable(feat_obj))
+
+    for feat in feats:
+        print (feat)
+        feat_obj = find_feat_object(feat, all_normal_feats)
+        print (feat_obj)
+        elements.extend(prep_normal_feat_flowable(feat_obj))
+
+    elements.append(Paragraph('Spells', style=minor_subtitle))
+
+    for spell in spells:
+        spell_obj = find_spell_object(spell, schools)
+        elements.extend(prep_spell_flowable(spell_obj))
+
+    if character.get('normal_actions'):
+        from general_actions import actions as general_actions
+        from general_actions import prep_action_flowable
+        elements.append(Paragraph('General actions', style=minor_subtitle))
+
+        for action in character.get('normal_actions'):
+            action_obj = find_general_action(action, general_actions)
+            elements.extend(prep_action_flowable(action_obj))
+
+
+    elements.append(Paragraph('Equipment', style=minor_subtitle))
+
+    for equipment in character.get('equipment', []):
+        if equipment in all_equipment:
+            elements.extend(prep_equipment_flowable(all_equipment[equipment], equipment))
+        else:
+            elements.append(Paragraph(equipment, style=minor_subtitle))
+
+
+    return elements
+
+def get_player_character_chapter():
+    elements = [
+        # {'type': 'title', 'content': 'Player characters'},
+    ]
+    first = True
+    for character in player_characters:
+        if not first:
+            elements.append({'type': 'flowables', 'content': [PageBreak()]})
+        else:
+            first = False
+        elements.append({'type': 'flowables', 'content': generate_character_flowable(character)})
+
+
+    return elements

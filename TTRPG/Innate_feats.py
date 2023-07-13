@@ -80,8 +80,8 @@ reduction at level 14
             You can advance toughness using both mage and martial path. You can transfer a scarred dice from an ally
             to yourself (their scarred dice becomes normal, 1 of your normal dice become scarred) twice a day outside
             of combat.
-            When your mage path is talented, When a dice would become scarred, roll it. On a 5 or 6, it stays normal.
-            When your mage path is legendary, then it also doesn't become scarred on a 3 and 4.
+            When your mage path is talented, When a dice would become scarred, roll it. On a 6, it stays normal.
+            When your mage path is legendary, then it also doesn't become scarred on a 5.
             '''
         },
         {
@@ -105,10 +105,10 @@ reduction at level 14
             'requires': 'Talented',
             'name': 'Defiant',
             'description': '''
-When your martial path is talented, When a dice would become scarred, roll it. On a 5 or 6, it stays normal.
-When your martial path is legendary, then it also doesn't become scarred on a 3 and 4.
+When your martial path is talented, When a dice would become scarred, roll it. On a 6, it stays normal.
+When your martial path is legendary, then it also doesn't become scarred on a 5.
 
-At the beginning of each round, if you have any damaged dice, you may choose one of the following:
+At the beginning of each round, if you have at least 3 damaged dice, you may choose one of the following:
 
 * Heal 1 damaged dice and recover 1 stamina.
 
@@ -123,11 +123,18 @@ At the beginning of each round, if you have any damaged dice, you may choose one
             'description': '''Your action limit increases by 1''',
         },
         {
+            'requires': 'Legendary',
+            'name': 'Nimble',
+            'description': '''
+            
+            ''',
+        },
+        {
             'requires': 'Talented',
             'name': 'Anti-mage',
             'description': '''You cannot be the target of spells (including those of your allies), nor can you cast 
                 spells, nor can spells have any none-damaging effect on you. When you attack a spell caster, they lose 
-                1 mana for every unmitigated damage (that damages their dice)''',
+                1 mana for every 3 unmitigated damage (that damages their dice)''',
         },
         # {
         #     'requires': 'Talented',
@@ -187,6 +194,8 @@ utility dice are always D5.''',
 
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, ListFlowable, ListItem, PageBreak
 from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_title, minor_subtitle, option_style
+
+
 
 
 def prep_feat_flowable(feat):
