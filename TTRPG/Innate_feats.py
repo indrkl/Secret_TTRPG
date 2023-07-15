@@ -3,9 +3,9 @@ feats = {
         {
             'name': 'Extraordinary senses',
             'description': '''
-Acquinted: You can see 12 m. in the dark, and 25 m. in low light
+Acquinted: You can see 6 sq. in the dark, and 12 sq. in low light
 
-Adept: You can see 50 m. in the dark and 100 m. in low light
+Adept: You can see 25 sq. in the dark and 50 sq. in low light
 
 Talented: In addition to the adept feature, you have blind sight for 10 feet around you.
 
@@ -69,7 +69,7 @@ reduction at level 14
             speak, don't benefit from any of your normal form advancements in any path, but you can level up using the
             beast path (used to make all the mighty beasts in the game). The level of your beastly path is equal to
             your magic path. Beastly form has the ability to turn back into your regular form. To turn into your
-            beastly form you need to spend 1 mana per your character level and if you are in combat then also meat
+            beastly form you need to spend 1 mana per your character level and if you are in combat then also meet
             R5.R5.R5 roll target using nature magic. Your equipment merges
             into your body and loses it's magical effect until you return to your normal form. Scarred, damaged and
             wounded dice carry over when transforming to the other form.''',

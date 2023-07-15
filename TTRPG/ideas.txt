@@ -1,0 +1,4 @@
+TODO
+ * Cripples. Selgete downsidedega cripple effectid, näiteks, tegelane on pime, ehk tal on constant blinded effect.
+    * Defineerida, mida see cripple effect täpselt siis teeb mängus
+    * Kui sa võtad cripple effecti, kas sa saad siis mingise positiivse effekti vastukaaluks võtta? Kuidas see toimiks?

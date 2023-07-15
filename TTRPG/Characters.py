@@ -700,7 +700,6 @@ xd6_characters = [
         },
         'equipment': ['axe', 'shield', '3 MD, 1 DR padding and chain mail heavy armor combo'],
     },
-
     {
         'name': 'Trickster',
         'SKILLED': 3,
@@ -769,10 +768,69 @@ xd6_characters = [
         },
         'equipment': ['spear', '3 MD, 1 DR padding and chain mail heavy armor combo'],
     },
-
 ]
 
 player_characters = [
+    {
+        'name': 'Jack of all trades',
+        'SKILLED': 2,
+        'MARTIAL': 2,
+        'MAGE': 2,
+        'Innate_feat_skilled': 'Lucky',
+        'Innate_feat_martial': 'Extraordinary senses',
+        'Innate_feat_mage': 'Shifter',
+        'Levels': {
+            1: {
+
+                'Skilled advancements': [
+                    '''proficiency (first): diplomacy''',
+                    '''proficiency (first): lore''',
+                    # '''proficiency (extra): lore'''
+                ],
+                'Mage advancements': [
+                    'proficiency (first): illusion',
+                    'spell: Side step',
+                ],
+                'Martial advancements': [
+                    'feat: Medium armor proficiency',
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    '''proficiency (first): crafting''',
+                    '''proficiency (first): treasure hunting''',
+                    '''feat: Foresight'''
+
+                ],
+                'Mage advancements': [
+                    'feat: Commune with animals',
+                    '''proficiency (first): will''',
+                    '''1 mana'''
+
+                ],
+                'Martial advancements': [
+                    'feat: Medium armor proficiency',
+                    '''proficiency (first): sword''',
+                    '1 stamina'
+
+                ],
+
+            },
+            3: {
+                'Skilled advancements': [
+                    '''2 luck'''
+                ],
+                'Mage advancements': [
+                    'proficiency (second): illusion',
+                ],
+                'Martial advancements': [
+                    '''proficiency (second): sword''',
+                ],
+
+            },
+        },
+        'equipment': ['sword', 'padded leather armor',],
+    },
     {
         'name': 'Esmeralda the warden of silver bats',
         'SKILLED': 2,
@@ -940,6 +998,7 @@ def split_data_into_columns(data, column_number):
         indx += 1
         if indx == column_number:
             rows.append(row)
+            row = []
             indx = 0
     if indx > 0:
         while indx < column_number:
@@ -985,7 +1044,7 @@ def generate_character_flowable(character):
     feats = []
     proficiencies = {}
     spells = []
-    stats = {'mana': 0, 'stamina': 0, 'luck': 0, 'toughness': 2}
+    stats = {'mana': 0, 'stamina': 0, 'luck': 0, 'toughness': 2, 'will': 0, 'fortitude': 0, 'reflex': 0}
 
     for indx in character['Levels']:
         level = character['Levels'][indx]
@@ -1013,6 +1072,13 @@ def generate_character_flowable(character):
                 raise Exception(advancement + ' is unhandled')
 
     stats['toughness'] += proficiencies.get('toughness', 0)
+    stats['will'] += proficiencies.get('will', 0)
+    stats['fortitude'] += proficiencies.get('fortitude', 0)
+    stats['reflex'] += proficiencies.get('reflex', 0)
+
+    mana_multiplier = 2
+
+    stats['mana'] = stats['mana'] * mana_multiplier
 
     elements = []
     elements.append(Paragraph(character['name'], style=minor_title))
@@ -1020,13 +1086,20 @@ def generate_character_flowable(character):
         [f"Martial: {character.get('MARTIAL', 0)}", f"Mage: {character.get('MAGE', '0')}", f"Skilled: {character.get('SKILLED', '0')}"],
         [f"Stamina: {stats.get('stamina')}", f"Mana: {stats.get('mana')}", f"Luck: {stats.get('luck')}"],
         [f"Toughness: {stats.get('toughness')}", f"Defense: {character.get('defense', 0)}", f""],
+        [f"Will: {stats.get('will')}", f"Fortitude: {stats.get('fortitude', 0)}", f"Reflex: {stats.get('reflex')}"],
     ]
 
     skill_proficiencies = [f'{prof}: {proficiencies[prof]}' for prof in proficiencies if prof in skill_names]
 
+    print(skill_proficiencies)
+
+    print(split_data_into_columns(skill_proficiencies, 3))
+
     data.extend(split_data_into_columns(skill_proficiencies, 3))
 
     spell_proficiencies = [f'{prof}: {proficiencies[prof]}' for prof in proficiencies if prof in spell_school_names]
+
+    print (spell_proficiencies)
 
     data.extend(split_data_into_columns(spell_proficiencies, 3))
 
@@ -1047,15 +1120,11 @@ def generate_character_flowable(character):
 
     for feat in innate_feats:
         feat_name = re.search('(^[A-Za-z ]*)', feat)[1]
-        print (feat_name)
         feat_obj = find_feat_object(feat_name, all_innate_feats)
-        print (feat_obj)
         elements.extend(prep_innate_feat_flowable(feat_obj))
 
     for feat in feats:
-        print (feat)
         feat_obj = find_feat_object(feat, all_normal_feats)
-        print (feat_obj)
         elements.extend(prep_normal_feat_flowable(feat_obj))
 
     elements.append(Paragraph('Spells', style=minor_subtitle))
@@ -1099,3 +1168,18 @@ def get_player_character_chapter():
 
 
     return elements
+
+def get_player_character_chapters():
+    elements = [
+        # {'type': 'title', 'content': 'Player characters'},
+    ]
+    first = True
+    for character in player_characters:
+        if not first:
+            elements.append({'type': 'flowables', 'content': [PageBreak()]})
+        else:
+            first = False
+        elements.append({'type': 'flowables', 'content': generate_character_flowable(character)})
+
+        yield (elements, character['name'])
+        elements = []
