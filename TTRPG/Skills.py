@@ -16,7 +16,7 @@ skills = [
      , 'group focuses': [
         'improve relations', 'negotiate a deal to receive a specific item/request/information/boon',
         ]
-     },
+    },
     {'name': 'leadership',
      'description': '''Group coordination, inspiration, executing of complex plans
      
@@ -24,7 +24,7 @@ skills = [
      '''
      , 'group focuses': ['Lead a war campaign', 'Start a revolution', 'Run for political position',
                          'Increase the renown of the group']
-     },
+    },
     {
         'name': 'survival',
         'description': '''Surviving in a tough environment. Tracking, hunting when in the wild. Pick pocketing, escaping

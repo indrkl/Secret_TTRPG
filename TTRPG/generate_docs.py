@@ -45,7 +45,7 @@ class MyDocTemplate(BaseDocTemplate):
                 self.notify('TOCEntry', tuple(entry))
 
 
-def prep_elements_from_chapter(chapter):
+def prep_elements_from_chapter(chapter, add_title_page_break=True):
     from hashlib import sha1
 
     elements = []
@@ -58,7 +58,8 @@ def prep_elements_from_chapter(chapter):
                 para = para.replace('\n', ' ')
                 elements.append(Paragraph(para, style=basic_paragraph_style))
         elif ele['type'] == 'title':
-            elements.append(PageBreak())
+            if add_title_page_break:
+                elements.append(PageBreak())
             elements.append(Paragraph(ele['content']+'<a name="%s"/>' % bn, style=basic_para_title_style))
         elif ele['type'] == 'subtitle':
             elements.append(Paragraph(ele['content']+'<a name="%s"/>' % bn, style=basic_para_sub_title_style))

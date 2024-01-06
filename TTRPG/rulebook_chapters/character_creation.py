@@ -75,8 +75,8 @@ means you do not get access to feats that cost more than the level up you get fo
 you get double the amount of points so you can get access to much more powerful feats that you do not get access to 
 in most levels.
 
-The maximum proficiency in anything is determined by the related path. It is +1 for acquinted, +2 for adept, +3 for
-talented and +4 for legendary. Each consecutive  upgrade costs 1 more than previous upgrade start with the cost of 1.
+The maximum proficiency in anything is determined by the related path. It is +2 for acquinted, +3 for adept, +4 for
+talented and +5 for legendary. Each consecutive  upgrade costs 1 more than previous upgrade start with the cost of 1.
 
 Proficiency allows you to shift the dice results by 1 in order to get the dice result requires to perform the action
 related with this proficiency. You can perform number of shifts equal to your profiency each round / scene.
@@ -86,10 +86,10 @@ MAGE advancement options:
         {'type': 'list',
          'content': [
              'Adopt a magic related feat',
-             'Advance proficiency in one school of magic',
-             'increase your maximum mana by 2 and base daily mana recovery by 1',
+             'Advance proficiency in one school of magic, learn 1 spell from that school',
+             'increase your maximum mana by 2',
              'Advance proficiency in lore skill',
-             'Learn a spell',
+             'Learn 2 spells',
              'Advance proficiency in will',
          ]},
         {'type': 'paragraph', 'content': 'Martial advancement options:'},
@@ -112,7 +112,7 @@ MAGE advancement options:
         {'type': 'list',
          'content': [
              'Adopt a skills related feat',
-             'Increase your maximum number of luck tokens by 1',
+             'Increase your maximum number of luck tokens by 2',
              'Advance proficiency in any skill',
              '''Advance proficiency in will, reflex or fortitude. The maximum proficiency from skilled path for these 
              is 2''',

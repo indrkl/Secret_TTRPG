@@ -776,6 +776,7 @@ player_characters = [
         'SKILLED': 2,
         'MARTIAL': 2,
         'MAGE': 2,
+        'defense': 4,
         'Innate_feat_skilled': 'Lucky',
         'Innate_feat_martial': 'Extraordinary senses',
         'Innate_feat_mage': 'Shifter',
@@ -826,10 +827,65 @@ player_characters = [
                 'Martial advancements': [
                     '''proficiency (second): sword''',
                 ],
-
             },
         },
         'equipment': ['sword', 'padded leather armor',],
+    },
+    {
+        'name': 'Quigly the demon hunter',
+        'SKILLED': 2,
+        'MARTIAL': 3,
+        'MAGE': 1,
+        'defense': 5,
+        'Innate_feat_skilled': 'Specialist(lore)',
+        'Innate_feat_martial': 'Anti mage',
+        'Innate_feat_mage': 'Divine protector',
+        'Levels': {
+            1: {
+
+                'Skilled advancements': [
+                    '''proficiency (second): lore''',
+                    '''proficiency (extra): lore'''
+                ],
+                'Mage advancements': [
+                    '''proficiency (first): lore''',
+                ],
+                'Martial advancements': [
+                    'feat: Heavy armor proficiency',
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    '''proficiency (third): lore''',
+                    '''proficiency (first): survival''',
+                ],
+                'Mage advancements': [
+                    '''proficiency (first): will''',
+                    '''1 mana'''
+
+                ],
+                'Martial advancements': [
+                    'feat: Blessed warrior',
+                    '''proficiency (first): sword''',
+
+                ],
+
+            },
+            3: {
+                'Skilled advancements': [
+                    '''proficiency (second): survival''',
+                ],
+                'Mage advancements': [
+                    'proficiency (first): toughness',
+                ],
+                'Martial advancements': [
+                    '''proficiency (second): sword''',
+                    '''1 stamina'''
+                ],
+
+            },
+        },
+        'equipment': ['sword', 'Heavy chain mail',],
     },
     {
         'name': 'Esmeralda the warden of silver bats',
@@ -977,6 +1033,44 @@ player_characters = [
         'equipment': ['1 handed mace', 'dagger', 'simple leather armor'],
 
     },
+    {
+        'name': 'Deadeye the Gang leader',
+        'SKILLED': 3,
+        'MARTIAL': 3,
+        'defense': 2,
+        'Innate_feat_skilled': 'Prodigy',
+        'Innate_feat_martial': 'Natural killer',
+        'Levels': {
+            1: {
+                'Skilled advancements': [
+                    'proficiency (first): leadership', 'proficiency (second): leadership'
+                ],
+                'Martial advancements': [
+                    'proficiency (first): bow', 'proficiency (second): bow',
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    'feat: Natural leader', 'proficiency (first): survival', 'proficiency (third): leadership'
+                    , '2 luck', 'proficiency (first): will',
+                ],
+                'Martial advancements': [
+                    'feat: Shadow', 'proficiency (first): toughness', 'proficiency (first): sword',
+                    'proficiency (first): fortitude',
+                ],
+            },
+            3: {
+                'Skilled advancements': [
+                    'proficiency (second): survival', '1 luck'
+                ],
+                'Martial advancements': [
+                    'proficiency (third): bow',
+                ],
+            },
+        },
+        'equipment': ['shortbow', 'sword', 'simple leather armor'],
+
+    },
 ]
 
 
@@ -1040,7 +1134,7 @@ def generate_character_flowable(character):
     from equipment import weapon_classes, prep_equipment_flowable
     from equipment import equipment as all_equipment
 
-    innate_feats = [character[key] for key in ['Innate_feat_skilled', 'Innate_feat_mage', 'Innate_feat_martial'] if key in character]
+    innate_feats = [{'name': character[key], 'path': key[12:]} for key in ['Innate_feat_skilled', 'Innate_feat_mage', 'Innate_feat_martial'] if key in character]
     feats = []
     proficiencies = {}
     spells = []
@@ -1118,10 +1212,14 @@ def generate_character_flowable(character):
 
     elements.append(Paragraph('Feats', style=minor_subtitle))
 
+    path_mapping = {1: 'Acquinted', 2: 'Adept', 3: 'Talented', 4: 'Legendary'}
+
     for feat in innate_feats:
-        feat_name = re.search('(^[A-Za-z ]*)', feat)[1]
+        feat_name = re.search('(^[A-Za-z ]*)', feat.get('name'))[1]
         feat_obj = find_feat_object(feat_name, all_innate_feats)
-        elements.extend(prep_innate_feat_flowable(feat_obj))
+        path_power = character.get(feat['path'].upper())
+        name_addon = ' (%s)'%(path_mapping[path_power])
+        elements.extend(prep_innate_feat_flowable(feat_obj, name_addon=name_addon))
 
     for feat in feats:
         feat_obj = find_feat_object(feat, all_normal_feats)
@@ -1170,16 +1268,7 @@ def get_player_character_chapter():
     return elements
 
 def get_player_character_chapters():
-    elements = [
-        # {'type': 'title', 'content': 'Player characters'},
-    ]
-    first = True
-    for character in player_characters:
-        if not first:
-            elements.append({'type': 'flowables', 'content': [PageBreak()]})
-        else:
-            first = False
-        elements.append({'type': 'flowables', 'content': generate_character_flowable(character)})
 
+    for character in player_characters:
+        elements = [{'type': 'flowables', 'content': generate_character_flowable(character)}]
         yield (elements, character['name'])
-        elements = []

@@ -7,9 +7,9 @@ Acquinted: You can see 6 sq. in the dark, and 12 sq. in low light
 
 Adept: You can see 25 sq. in the dark and 50 sq. in low light
 
-Talented: In addition to the adept feature, you have blind sight for 10 feet around you.
+Talented: In addition to the adept feature, you have blind sight in 2 sq around you.
 
-Legendary: You can see in the dark as well as in the light. You have blind sight for 30 feet around you.
+Legendary: You can see in the dark as well as in the light. You have blind sight in 6 sq around you.
             ''',
         },
         {
@@ -17,7 +17,8 @@ Legendary: You can see in the dark as well as in the light. You have blind sight
             'description': '''
 Acquinted: You don't take any falling damage as long as you are wearing light armor.
 
-Adept: You don't take any falling damage as long as you are wearing medium armor, and when falling from great hights
+Adept: You don't take any falling damage as long as you are wearing light armor and are not carrying more than
+1/5th of your carry weight, and when falling from great heights
 you can glide, falling 6 sq. per round and moving 6 sq. per round at any direction.
 
 Talented: You don't take any falling damage. If you are wearing light or no armor, and are not carrying more than
@@ -48,6 +49,19 @@ Also when you are talented or legendary, then you get the option to take the hea
 and no armor bonus) in order to get 1 damage reduction. This increases to 2 damage reduction at level 7 and to 3 damage
 reduction at level 14
             ''',
+        },
+    ],
+    'Background': [
+        {
+            'requires': 'Legendary',
+            'name': 'Royalty',
+            'description': '''
+You belong to one of the well-known houses in the realm. That grants you access to places commoners don't have access to
+and guards and many other officials are more forgiving for various problems you may cause. You start the game with 
+2000 additional gp. and always have a castle to stay in at least one of the major cities. But in most cities there is
+often someone who is willing to host you for free in a very quality lodging (another house member, allied house member,
+simply someone who wants favor from your house etc.)
+    ''',
         },
     ],
     'Mage': [
@@ -81,7 +95,8 @@ reduction at level 14
             to yourself (their scarred dice becomes normal, 1 of your normal dice become scarred) twice a day outside
             of combat.
             When your mage path is talented, When a dice would become scarred, roll it. On a 6, it stays normal.
-            When your mage path is legendary, then it also doesn't become scarred on a 5.
+            When your mage path is legendary, then it also doesn't become scarred on a 5. This effects also the dice
+            you transfer from allies to yourself.
             '''
         },
         {
@@ -123,15 +138,26 @@ At the beginning of each round, if you have at least 3 damaged dice, you may cho
             'description': '''Your action limit increases by 1''',
         },
         {
-            'requires': 'Legendary',
-            'name': 'Nimble',
+            'requires': 'Adept',
+            'name': 'Natural killer',
             'description': '''
-            
+When you first time damage each enemy dice, gain a blood token that can be used during this encounter. If you are
+talented or legendary, whenever you gain at least one blood token, gain one additional one.
+
+Whenever you make an attack, you can use one and only one of those options once to boost that attack:
+
+* spend 2 blood tokens to gain advantage or upgrade advantage to double advantage
+ 
+* Spend 5 blood tokens to gain double advantage
+ 
+* spend 1 blood token to deal 1 additional damage
+ 
+* spend 2 blood tokens to disrupt 1 
             ''',
         },
         {
             'requires': 'Talented',
-            'name': 'Anti-mage',
+            'name': 'Anti mage',
             'description': '''You cannot be the target of spells (including those of your allies), nor can you cast 
                 spells, nor can spells have any none-damaging effect on you. When you attack a spell caster, they lose 
                 1 mana for every 3 unmitigated damage (that damages their dice)''',
@@ -160,7 +186,7 @@ At the beginning of each round, if you have at least 3 damaged dice, you may cho
             'requires': 'Legendary',
             'name': 'Wild magic',
             'description': '''You can cast any spell with the speed of at most 1 round not requiring concentration using 
-1 luck token per power dice, even if you do not know that spell. Power dice for these spells are always D6 and
+1 luck token, even if you do not know that spell. Power dice for these spells are always D6 and
 utility dice are always D5.''',
         },
         {
@@ -179,7 +205,7 @@ utility dice are always D5.''',
         {
             'name': 'Good fortune',
             'description': '''You can allow other party members to use your luck tokens. If you are talented/legendary
-            in skilled path increase your daily number of luck tokens by 50 %.  
+            in skilled path increase your maximum number of luck tokens by 50 %.  
 ''',
         },
         {
@@ -187,6 +213,17 @@ utility dice are always D5.''',
             'name': 'Prodigy',
             'description': '''At second level gain double the amount of advancements in skilled path (so at legendary
             skilled you gain 16 advancement points).
+            ''',
+        },
+        {
+            'requires': 'Talented',
+            'name': 'Well connected',
+            'description': '''Whenever you need some service, vendor or someone who knows stuff there is a chance you
+            know someone in the current location who could help. In cities it is 50 % chance, in towns it is 25 % chance
+            , in hamlets it is 10 % chance.
+            
+            Just because you know someone doesn't mean that they provide that service for free. They may have a positive
+            disposition and maybe provide a small discount, but that is up to GM-s discretion. 
             ''',
         },
     ]
@@ -198,9 +235,11 @@ from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_titl
 
 
 
-def prep_feat_flowable(feat):
+def prep_feat_flowable(feat, name_addon=''):
     elements = []
-    elements.append(Paragraph(feat['name'], style=minor_title))
+    print(feat)
+    print(name_addon)
+    elements.append(Paragraph(feat['name'] + name_addon, style=minor_title))
     if feat.get('requires'):
         elements.append(Paragraph(f"Requires: {feat['requires']}", style=minor_subtitle))
 
@@ -225,6 +264,9 @@ However if you have put more points into the path, then the innate feat is that 
 are of some unique race, which would be able to for example have dark vision, or flying or something else, then refer
 to the races innate feats. When taking one or more races innate feats you must give up a feat in one of the paths.
 The power of the racial feat depends on the level of the path, which feat you gave up.
+
+Finally I added one background feat, and may add more in the future. These can also be replaced by one of the path feats
+similarly to racial feats.
         """},
     ]
 

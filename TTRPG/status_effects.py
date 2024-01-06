@@ -1,4 +1,12 @@
 status_effects = [
+    {'name': 'confusion', 'description': '''
+When a character gets confusion, then they roll a dice and if they have any same value dice, they lose it until the next 
+re-roll.
+    '''},
+    {'name': 'disruption', 'description': '''
+When a character gets disruption, then they lose a dice until the next re-roll chosen by the character who applied the
+disruption.
+    '''},
     {'name': 'inspiration', 'description': '''
 You can spend your inspiration to either become lucky for a round / scene or gain advantage or negate disadvantage
 for a roll.''',},

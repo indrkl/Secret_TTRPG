@@ -2,6 +2,14 @@ schools = {
     'Force': {
         'spells': [
             {
+                'name': 'Telekinesis',
+                'effect': '''You can move objects with your mind for various effects. Move a bucket of hot water on top
+                of your enemies, a key from the guard to you for escape, etc.                
+                This is a creative spell so please refer to the creative spell section in the glossary                
+''',
+                'difficulty': 'R3.??',
+            },
+            {
                 'name': 'Push/pull',
                 'range': '8 sq.',
                 'effect': '''Move target away from you or towards you for 2 sq. Halve the distance for large creatures
@@ -100,33 +108,6 @@ schools = {
                     {'D': 'R1.R1', 'description': '''Target can change another dice in their dice pool'''},
                 ],
             },
-            # {
-            #     'name': 'Rejuvenation',
-            #     'speed': '1A',
-            #     'range': 'touch',
-            #     'effect': 'Target gains 1 stamina recovery',
-            #     'target': 'single',
-            #     'difficulty': 0,
-            #     'concentration': 1,
-            #     'scaling': [
-            #         {'D': 2, 'description': 'Target gains 1 additional stamina recovery'},
-            #     ],
-            # },
-            # {
-            #     'name': 'Enhance poison',
-            #     'speed': '2A',
-            #     'range': 'touch',
-            #     'effect': '''This enhancement can be applied to weapons which are coated with poison. Target weapon
-            #     which is coated with poison applies 1 additional stack per attack that hits, this additional stack does
-            #     not spend a poison stack from the weapon.''',
-            #     'target': 'single',
-            #     'duration': '3 rounds',
-            #     'difficulty': 3,
-            #     'concentration': 1,
-            #     'scaling': [
-            #         {'D': 5, 'description': 'Apply an additional stack per attack that hits.'},
-            #     ],
-            # },
             {
                 'name': 'Entangling roots',
                 'range': '6 sq',
@@ -169,22 +150,6 @@ schools = {
                     them for all attacks made to an ally within this spells radius.'''},
                 ],
             },
-        #     {
-        #         'name': 'Valor',
-        #         'speed': '2 AP',
-        #         'target': 'touch',
-        #         'effect': '''When target successfully hits an enemy, they recover 1 stamina, but no more than their maximum
-        # stamina.
-        #     ''',
-        #         'difficulty': 1,
-        #         'concentration': 1,
-        #         'scaling': [
-        #             {'D': 2, 'description': '''Target recovers one additional stamina per hit'''},
-        #             {'D': 3, 'L': 1, 'description': '''Target gains inspiration on a critical hit'''},
-        #             {'D': 5, 'L': 1, 'description': '''When target hits critically, his next attack is lucky'''},
-        #
-        #         ],
-        #     },
             {
                 'name': 'Clarity',
                 'speed': '2 AP',
@@ -196,20 +161,6 @@ schools = {
                     {'D': 'R3', 'description': '''Remove one additional level from those status effects'''},
                 ],
             },
-        #     {
-        #         'name': 'Clear mind',
-        #         'speed': '1 AP',
-        #         'target': '1 creature',
-        #         'range': '6 m.',
-        #         'duration': '10 min',
-        #         'effect': '''Remove hexes from the target, the next time target would be unlucky doing d20 check, make the
-        # check normal instead
-        #     ''',
-        #         'difficulty': 2,
-        #         'scaling': [
-        #             {'D': 3, 'description': 'target one additional creature'},
-        #         ],
-        #     },
             {
                 'name': 'Bless',
                 'range': '5 sq.',
@@ -224,24 +175,6 @@ schools = {
                     {'D': 'R3.R3', 'description': '''Provide one additional bless dice for targets'''},
                 ],
             },
-            # {
-            #     'name': 'Clear heart',
-            #     'speed': '1 AP',
-            #     'target': '1 creature',
-            #     'range': '10 m.',
-            #     'duration': '1 hour',
-            #     'effect': '''Target's diplomacy check get +5 magical bonus. The target has to be someone other than you.
-            # The target can only use this bonus when trying to persuade, or otherwise engage in friendly and
-            # cooperative diplomacy.''',
-            #     'difficulty': 7,
-            #     'concentration': 'full',
-            #     'scaling': [
-            #         {'D': 4, 'description': 'Increase the bonus by additional +1'},
-            #         {'D': 3, 'description': '''This bonus may be used on any diplomacy check, however if it doesn't meet the
-            #     initial requirements, there is a 50% chance that you lose concentration and may not cast any harmony
-            #     spells until the next day. The bonus still applies for that check.'''},
-            #     ],
-            # },
         ]
     },
     'Elemental': {
@@ -269,31 +202,30 @@ schools = {
                 'name': 'Chain lightning',
                 'difficulty': 'R6.R6.R6',
                 'range': '8 sq.',
-                'effect': 'Deal 2 fire damage to everyone in the area.',
+                'effect': '''Deal 4 lightning damage to a target enemy, and then it jumps to another target enemy,
+                dealing 2 less damage, until it can do no more damage''',
                 'save': 'REFLEX',
                 'target': 'area',
                 'radius': '1 sq.',
                 'scaling': [
-                    {'D': 'R6.R6', 'description': 'Deal additional 3 damage'},
-                    {'D': 'R1', 'description': '1 target enemy within radius gets a level of burning'},
+                    {'D': 'R6.R6', 'description': 'Deal additional 2 damage'},
+                    {'D': 'R1.R1', 'description': 'Everyone hit by chain lightning get 1 level of disoriented'},
                 ],
             },
-            # {
-            #     'name': 'Tremor',
-            #     'speed': '2A',
-            #     'range': '6 sq.',
-            #     'effect': '''everyone in the target area check for unbalanced twice. At the beginning of your round,
-            #     when you continue to concentrate on this spell, you may move the center of tremor up to 4 m. Then
-            #     the unbalanced checks are done for all creatures in the new area of effect. When you are outside the
-            #     range of the tremor you lose concentration.''',
-            #     'target': 'area',
-            #     'difficulty': 0,
-            #     'concentration': 1,
-            #     'radius': '5ft',
-            #     'scaling': [
-            #         {'D': 1, 'description': 'They need to check for unbalanced an additional time'},
-            #     ],
-            # },
+            {
+                'name': 'Tremor',
+                'difficulty': 'R6.R6',
+                'range': '6 sq.',
+                'effect': '''everyone in the target area  gain 2 levels of unbalanced. At the beginning of your round,
+                when you continue to concentrate on this spell, you may move the center of tremor up to 2 sq. When you 
+                are outside the range of the tremor you lose concentration.''',
+                'target': 'area',
+                'concentration': 'R6.R6',
+                'radius': '2 sq.',
+                'scaling': [
+                    {'D': 'R6', 'description': 'The gain an additional level of unbalanced'},
+                ],
+            },
             {
                 'name': 'Frostbite',
                 'range': '8 sq.',
@@ -590,6 +522,13 @@ schools = {
                     {'D': 'R4.R4', 'L': 2, 'description': '''Target gains 1 level of disoriented'''},
                 ],
             },
+            {
+                'name': 'Create illusionary images',
+                'effect': '''You create illusionary images in the space around you, which can impress, surprise, deceive 
+                etc. This is a creative spell so please refer to the creative spell section in the glossary                
+            ''',
+                'difficulty': 'R4.??',
+            },
             # {
             #     'name': 'Mirror image',
             #     'speed': '2 AP',
@@ -607,25 +546,6 @@ schools = {
             #         {'D': 3, 'L': 1, 'description': ''''When you land a hit on an enemy, one illusion also lands an hit
             #             and the enemy must make your spell DC will save or suffer half your hit's damage as psychic
             #             damage. If he succeeds, the illusion disappears however'''},
-            #     ],
-            # },
-            # {
-            #     'name': 'Create illusions',
-            #     'speed': '2 AP',
-            #     'target': 'empty space(s)',
-            #     'range': '24 m.',
-            #     'duration': '1 min.',
-            #     'concentration': 1,
-            #     'effect': '''Ceate a static illusion within range occupying 2 m. cube area
-            # ''',
-            #     'difficulty': 0,
-            #     'scaling': [
-            #         {'D': 3, 'L': 1, 'description': '''Illusions can be animated and you can alter their position
-            #         during your turn.'''},
-            #         {'D': 2, 'description': '''Create 1 additional static illusion within range occupying 2mx2mx2m of
-            #         space'''},
-            #         {'D': 3, 'L': 1, 'description': '''Each illusion can instead occupy a 10x10x10 feet cube's space'''},
-            #         {'D': 3, 'L': 1, 'description': '''The duration is instead 1 hour'''},
             #     ],
             # },
     #         {

@@ -3,24 +3,26 @@ feats = {
         {
             'name': 'Mastery',
             'description': '''
-            Upgrade a proficiency once. You still cannot go over the maximum limit of 4.
+            Upgrade a proficiency once. This can be chosen once per proficiency, it doesn't increase the cost of
+            further improvement in that proficiency and is not taken into accout when conisdering the normal maximum
+            proficiency for that skill. 
             ''',
         },
     ],
     'Mage': [
         {
             'name': 'Variety mage',
-            'description': '''Grant an additional mental slot that can be used for spells.''',
+            'description': '''Grant an additional 2 mental slots that can be used for spells.''',
         },
         {
             'name': 'Deep pools',
-            'description': '''Each advancement in maximum mana provides you 2 additional maximum mana''',
+            'description': '''Each advancement in maximum mana provides you 1 additional maximum mana''',
         },
         {
             'name': 'Spice specialist',
             'description': '''
-                You recover twice as much mana from adding magical spices to your food if you take this trait once, 
-                or thrice as much if you take it the second time. This trait can only be taken twice.
+                You recover mana using spices twice as effectively. Meaning the first 20 mana cost 1.5 gp to recover,
+                the next 40 cost 2.5 gp to recover and the rest cost 5 gp to recover.
             '''
         },
         {
@@ -30,7 +32,8 @@ feats = {
         },
         {
             'name': 'Battle mage',
-            'description': '''All spells cost 1 less mana to cast''',
+            'description': '''The mana cost for offensive spells scales better. It now costs 2 mana for 2 additional
+            power dice, 4 mana for 3 additional power dice and 7 mana for 4 additional power dice''',
         },
     ],
     'Martial': [
@@ -53,13 +56,13 @@ feats = {
         },
         {
             'name': 'Defensive',
-            'description': '''+1 maximum defenses''',
+            'description': '''+2 maximum defenses, this can only be taken once''',
         },
     ],
     'Skilled': [
         {
             'name': 'Lucky',
-            'description': '''Every second advancement in luck provides 1 additional luck token.
+            'description': '''Every advancement in luck provides 1 additional luck token.
             ''',
         },
     ]
@@ -88,8 +91,7 @@ def get_progression_feat_chapter():
         {'type': 'title', 'content': 'Progression feats'},
         {'type': 'paragraph',
          'content': """
-Heroes gain 1 progression feat in each category which they have points in at levels 4, 7, 10, 13, 16 and 19 and before
-they make their advancement decisions in that level.
+Heroes gain 1 progression feat at levels 4, 7, 10, 13, 16 and 19. All progression feats work retroactively.
         """},
     ]
 

@@ -8,7 +8,7 @@ def build_pdf_file():
 
 
     for elements, name in get_player_character_chapters():
-        pdf_content = prep_elements_from_chapter(elements)
+        pdf_content = prep_elements_from_chapter(elements, add_title_page_break=False)
 
         pdf_file = MyDocTemplate("%s.pdf"%(name), pagesize=letter)
         pdf_file.multiBuild(pdf_content)

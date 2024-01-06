@@ -40,7 +40,7 @@ feats = {
          'name': 'Twin magic',
          'metamagic_option': {
              'difficulty': 'Rp.Ru',
-             'effect': '''Cast the spell twice using the same number of actions. You may choose new targets for second
+             'effect': '''Cast the spell twice. You may choose new targets for second
                 cast. Concentration spells share concentration for both casts.''',
              'L': 1,
             },
@@ -57,7 +57,7 @@ feats = {
             ''',
          },
         {'cost': 3,
-         'name': 'Wielder of fire and ice',
+         'name': 'Fire and ice',
          'effect': '''When burning or freezing applied to enemies by you cancel out the previous freezing or burning
          stacks, the enemy takes 3 damage for each stack cancelled out this way.
             ''',
@@ -361,7 +361,8 @@ First reaction attack with a polearm in between your turns has double advantage,
             Gain rage action.
          ''',
          'action': {
-             'roll target': '1A',
+             'roll target': 'R6',
+             'proficiency': 'fortitude',
              'target': 'self',
              'limit': 'once per encounter',
              'duration': '5 rounds',
@@ -435,38 +436,42 @@ per fury token used this way.
     who have at least 2 levels of disoriented. When taking a move action, then one target creature with at least
     2 levels of disoriented loses track of you and become unaware of your presence.''',
         },
-#         {'cost': 2,
-#          'name': 'Toxicologist',
-#          'effect': '''The DC of each consecutive potion increases by 1 instead of 2. You have +1 to fort saves against
-#          poison, and +3 to fort saves against alcohol.''',
-#          },
-#         {'cost': 6,
-#          'name': 'Commander',
-#          'effect': '''Leadership becomes a martial skill.
-#
-#          At the beginning of combat encounters roll for leadership. For every 10 points, the entire party gains
-#          +1 to their initiative.
-#
-#          Gain the coordination action.
-#          ''',
-#          'action': {
-#              'roll target': '1A',
-#              'range': '30 ft.',
-#              'target': '2 allies (can be yourself)',
-#              'effect': '''
-#              Coordinate the assault of 2 of your allies. Roll for leadership with a DC check of 11. If you succeed then
-#              until the start of your next turn if one of the allies deals damage or applies a negative status effect on
-#              some enemy, then the other ally gets advantage against these enemies (whoever were damaged or received
-#              a negative status effect).
-#              ''',
-#          }
-#          },
-#         {'cost': 3,
-#          'name': 'Improved coordination',
-#          'requires': 'Commander',
-#          'effect': '''Coordination action can target 1 additional ally.
-#          ''',
-#          },
+        {'cost': 2,
+         'name': 'Toxicologist',
+         'effect': '''When drinking potions, only every other potion adds an R3 to fortitude checks for drinking
+          potions instead of every potion. You have +1 to proficiency against poison, and +2 proficiency to fort saves 
+          against alcohol.''',
+         },
+        {'cost': 6,
+         'name': 'Commander',
+         'effect': '''Leadership becomes a martial skill.
+
+         Gain the coordination action.
+         ''',
+         'action': {
+             'roll target': 'R3.R3.R3',
+             'range': '6 sq..',
+             'target': 'One enemy',
+             'proficiency': 'leadership',
+             'effect': '''
+             Once an ally damages the targeted enemy all other allies gain advantage for all attacks and spells
+             targeting that enemy. This lasts until the end of turn.
+             ''',
+             'difficulty_options': [
+                 {
+                     'adjustment': 'R3.R3',
+                     'effect': '''Once two allies have damaged targeted enemy, all other allies gain double advantage
+                     for all attacks and spells targeting that enemy.''',
+                 },
+             ]
+         }
+         },
+        # {'cost': 3,
+        #  'name': 'Improved coordination',
+        #  'requires': 'Commander',
+        #  'effect': '''Coordination action can target 1 additional ally.
+        #  ''',
+        #  },
         {'cost': 5,
          'name': 'Blessed warrior',
          'effect': '''
@@ -480,14 +485,6 @@ you may choose 1 option:
 * spend 1 mana to deal an additional 3 damage. (requires mage path)
          ''',
          },
-#         {'cost': 6,
-#          'requires': 'Blessed warrior',
-#          'name': 'Blessed Champion',
-#          'effect': '''Choose from amongst the following spells: Unity, Guardian, Valor, Force field.
-#          You have the selected spell's buff permanently on you. It's max difficulty is based on the martial path.
-#          You can readjust it's exact effect (which difficulty modifiers to use) on each level up.
-#          ''',
-#          },
 #         {'cost': 8,
 #          'requires': 'Blessed Champion',
 #          'name': 'Blessed commander',
@@ -710,13 +707,44 @@ Targeted allies roll 1 extra temporary dice into their dice pool for this scene.
         per scene. When taking this feat advance 4 times in luck.
             '''
         },
+        {'name': 'Sir, know it all',
+         'cost': 5,
+         'effect': '''
+         
+         ''',
+         'action': {
+             'roll target': 'R5.R5.R5',
+             'target': '1 ally',
+             'proficiency': 'lore',
+             'effect': '''
+Targeted ally is assisted by your knowledge and gets advantage in another skill check of your choosing.
+    ''',
+             'difficulty_options': [
+                 {
+                     'adjustment': 'R5.R5',
+                     'effect': '''Also provide them double advantage''',
+                 },
+             ]
+         }
+        },
         {
             'cost': 5,
             'name': 'Excellent instructor',
-            'effect': '''By spending 30 min. to prepare someone in a skill you are proficient in, you can have them
-            meet 1 roll target with your effective proficiency bonus in that skill within the next 12 h.
-            You can use this ability twice a day.
-''',
+         'action': {
+             'roll target': 'R5.R5',
+             'target': '1 ally',
+             'proficiency': 'lore',
+             'effect': '''
+             Targeted ally gains your level of proficiency in a skill of your choice for the duration of this turn /
+             scene.
+             ''',
+             'difficulty_options': [
+                 {
+                     'adjustment': 'R5',
+                     'effect': '''You can have another ally gain the same proficency for this scene / turn.''',
+                 },
+             ]
+            }
         },
         {
             'cost': 7,
@@ -745,84 +773,83 @@ Targeted allies roll 1 extra temporary dice into their dice pool for this scene.
     #      },
     ],
     'Mage/Skilled': [
-#         {
-#             'cost': 6,
-#             'name': 'Potion maker',
-#             'effect': '''You can make magical potions, which have the effects of spells you know how to cast, and
-# which difficulty requirements you meat. These potions have however certain constraints:
-#
-# 1. They target is the person who drinks the potion. Spells with area of effect lose the area component.
-#
-# 2. Spell effects that have additional targets, like a location, cannot be made into a potion. The potion
-# can only effect the creature drinking the potion.
-#
-# 3. When these potions have a concentration effect, instead they simply last 3 iterations (normally this
-# is 3 rounds, but if a spell duration is otherwise 5 rounds, that is extended to 15 rounds instead and so on)
-#
-# In order to make these potions there is a baseline cost for ingredients that is based on difficulty. Maximum
-# difficulty for potions is 10.
-# Through role play, group focuses etc. these may be reduced.
-# D0: 5 gp, D1: 15 gp, D2: 30 gp. D3: 50 gp, D4: 75 gp, D5: 105 gp, D6: 150 gp, D7: 250 gp, D8: 400 gp,
-# D9: 600 gp, D10: 1000 gp.
-#
-#
-# It is also possible to increase the duration of those potions to 5 iterations, which would double the cost.
-#
-# It is also possible to combine 2 spells into 1 potion, but they would add up their difficulties. This option
-# would also double the cost.
-#
-# Potions are also available through shops in the game world, however their prices would be around twice
-# higher.
-# ''',
-#         },
+        {
+            'cost': 6,
+            'name': 'Potion maker',
+            'effect': '''You can make magical potions, which have the effects of spells you know how to cast, and
+which difficulty requirements you meat. These potions have however certain constraints:
+
+1. They target is the person who drinks the potion. Spells with area of effect lose the area component.
+
+2. Spell effects that have additional targets, like a location, cannot be made into a potion. The potion
+can only effect the creature drinking the potion.
+
+3. When these potions have a concentration effect, instead they simply last 3 iterations (normally this
+is 3 rounds, but if a spell duration is otherwise 5 rounds, that is extended to 15 rounds instead and so on)
+
+In order to make these potions there is a baseline cost for ingredients that is based on difficulty. Difficulty is based
+on the number of dice that the spell, which effect is applied to the potion. Maximum number of dice is 6.
+Through role play, group focuses etc. these may be reduced.
+
+DX means that the underlying spell requires X dice.
+
+D2 and less - 20 gp
+D3 - 50 gp
+D4 - 150 gp
+D5 - 400 gp
+D6 - 1000 gp
+
+
+It is also possible to increase the duration of those potions to 5 iterations, which would double the cost.
+
+It is also possible to combine 2 spells into 1 potion, but they would add up their difficulties. This option
+would also double the cost.
+
+Potions are also available through shops in the game world, however their prices would be around twice
+higher.
+''',
+        },
     ],
     'Martial/Skilled': [
-#         {'name': 'Poison specialist',
-#          'cost': 6,
-#          'effect': '''
-# You can prepare poison coatings and coat weapons with poison. In order to prepare poisons you
-# need to gather poison glands or procure necessary raw materials from the marketplace. Both of them
-# requires you to choose them as your personal focus. Depending on the situation it could require gathering,
-# diplomacy, roguery and would also have a different difficulty, plus may require some extra cost such as gold.
-#
-# By default a coating of 3 stacks of following poisons on a melee weapon or 2 stack a single arrow costs that
-# much money, this can be reduced with role-play,group focuses:
-#
-# 1d6 damage per stack at the beginning of target's turn: 20 gp
-#
-# 1d8 damage per stack at the beginning of target's turn: 40 gp
-#
-# 1d10 damage per stack at the beginning of target's turn: 75 gp
-#
-# 1d12 damage per stack at the beginning of target's turn: 150 gp
-#
-# stack of disoriented: 50 gp
-#
-# stack of afraid: 40 gp
-#
-# stack of crazed: 100 gp
-#
-# stack of freezing: 200 gp
-#
-# The price doubles if you want to apply 5 stacks on a melee weapon or 3 stacks on a single arrow. And doubles
-# again when wanting to apply 7 stacks on a melee weapon or 4 stacks on a single arrow.
-#
-# By adding 100 gp to the base price, you can increase the DC to 13, and by adding an additional 300 gp to the
-# base price, you can increase the DC to 14.
-#
-# A successful melee attack made with the weapon moves 1 stack of poison onto the hit target. A successful attack
-# with an arrow moves all stacks of poison from the arrow onto the target.
-#
-# At the beginning of the turn and after the poison stacks have taken effect, target throws a FORT save of DC 12.
-# On success they remove 1 stack of poisons from them, on critical success they remove 3 stacks of poison from
-# them.
-#
-# Stacks of disoriented, crazed, afraid, and freezing cannot be reduced normally even though their effects
-# work the same as having the same levels of the these status effects.
-#
-# Poison cannot be applied to enchanted weapons.
-# '''
-#          },
+        {'name': 'Poison specialist',
+         'cost': 6,
+         'effect': '''
+You can prepare poison coatings and coat weapons with poison. In order to prepare poisons you
+need to gather poison glands or procure necessary raw materials from the marketplace. Both of them
+requires you to choose them as your personal focus. Depending on the situation it could require gathering,
+diplomacy, roguery and would also have a different difficulty, plus may require some extra cost such as gold.
+
+By default a coating of 3 stacks of following poisons on a melee weapon or 2 stack a single arrow costs that
+much money, this can be reduced with role-play,group focuses:
+
+1 damage per stack at the beginning of target's turn: 20 gp
+
+2 damage per stack at the beginning of target's turn: 100 gp
+
+stack of disoriented: 50 gp
+
+stack of afraid: 80 gp
+
+stack of freezing: 200 gp
+
+The price doubles if you want to apply 5 stacks on a melee weapon or 3 stacks on a single arrow. And doubles
+again when wanting to apply 7 stacks on a melee weapon or 4 stacks on a single arrow.
+
+By adding 100 gp to the base price, it takes one more dice to remove a stack of poison from oneself, and by adding an 
+additional 300 gp to the base price, it takes another dice to remove a stack of poison from oneself.
+
+A successful melee attack made with the weapon moves 1 stack of poison onto the hit target. A successful attack
+with an arrow moves all stacks of poison from the arrow onto the target.
+
+At the beginning of the turn and after the poison stacks have taken effect, poisoned target can meet a R5 fortitude
+check to remove a stack of poison from themselves. 
+
+Stacks of disoriented, crazed, afraid, and freezing cannot be reduced normally even though their effects
+work the same as having the same levels of the these status effects.
+
+Enchanted weapons cannot be coated with poison.
+'''
+         },
     ],
     'General': [
         {'cost': 12,
@@ -868,10 +895,9 @@ def prep_feat_flowable(feat):
     if feat.get('action'):
         action = feat['action']
         data = [
-            [f"Stamina cost: {action.get('base_cost', '-')}", f"Other attacks cost increase: {action.get('next_attack_cost_increase', '-')}",
-                f"Other costs: {feat.get('additional_costs', '-')}"],
-            [f"Roll target: {action.get('roll target', '-')}", f"Target: {action.get('target', '-')}", f"Duration: {action.get('duration', '-')}"],
-            [f"Limit: {action.get('limit', '-')}", f"Restrictions: {action.get('restrictions', '-')}", ""],
+            [f"Roll target: {action.get('roll target', '-')}", f"Proficiency: {action.get('proficiency', '-')}", f"Other costs: {feat.get('additional_costs', '-')}"],
+            [f"Target: {action.get('target', '-')}", f"Duration: {action.get('duration', '-')}", f"Limit: {action.get('limit', '-')}", ],
+            [f"Restrictions: {action.get('restrictions', '-')}", f"", f""],
             [Paragraph(action['effect'], basic_paragraph_style)]
         ]
 

@@ -212,9 +212,9 @@ enemies. But here are the general guidelines for how moral is lost:
 Each path has a specific resource associated with their path. Mages have mana, Martials have stamina and Skilled have
 luck. Each resource is used for different effects and have different rules for recovering it. Mana is hardest to recover
 and is used to cast spells. Stamina is recovered each encounter and can be used during combat to increase action limit,
-and luck tokens are recovered daily and are used to change the outcome of a single dice in a roll.
+use scarred dice unconstrained and for some combat abilities, and luck tokens are recovered daily and are used to change 
+the outcome of a single dice in a roll.
         """
-
     },
     {'name': 'Mana',
      'description': """
@@ -224,20 +224,18 @@ to spend mana to reduce the number of dice required to cast that spell.
 For 1 mana reduce the spell cost by 1 dice, for 3 mana, by 2 dice, for 6 mana by 3 dice and for 10 mana by 4 dice. You
 cannot reduce the cost by more than your proficiency in the spell's school of magic.
 
-Mana is recovered during daily rest. Characters who have taken points in maximum mana also have some amount of daily 
-mana recovery. This base is always recovered. However magic users can consume quite pricy magical spices to recover 
-increased amounts of mana.
+Mana is recovered during rest by consuming quite pricy magical spices. You must spend enough resources to reach magximum
+man, that means the more you consumed your mana during an encounter, the more pricy it will be. 
 
 For the first 1 - 10 mana, the cost of spices is 3 gp per mana.
 
-For the next 11 - 25 mana, the cost of spices is 5 gp per mana.
+For the next 11 - 30 mana, the cost of spices is 5 gp per mana.
 
 For all mana after that, the cost of spices is 10 gp per mana.
 
-Suppose a spell caster with 100 maximum mana, 25 base mana recovery, has spent 60 mana. During the daily rest, he would
-recover 25 mana as a baseline, but then would need to spend magical spices worth of 30 (first 10) + 75 (next 15) + 
-100 (final 10) gp = total of 205 gp worth of spices to recover their mana fully. They could also choose to
-only spend for example 30 gp worth of food and recover only 35 total mana ending up having 75 mana.
+Suppose a spell caster with 100 maximum mana has spent 60 mana and now decides to rest. He can either not recover any
+mana for now, or can spend 30 (first 10 mana) + 75 (next 20 mana) + 300 (last 30 mana) for a total of 405 gp to recover
+their mana to full.
      """,
      },
     {'name': 'Stamina',
@@ -253,16 +251,20 @@ Spend 7 stamina to gain 3 additional action limit.
 
 Only one of the previous options can be chosen.
 
+Another option to spend stamina on is to use a scarred dice which rolled 4, 5 or 6 ignoring the normal scarred dice
+limitation.
+
 In additional some abilities may require stamina or provide means to recover stamina.
      """,
      },
     {'name': 'Luck tokens',
      'description': """
 When advancing in the skilled path, characters can increase their maximum luck tokens. Luck tokens can be used to make
-a roll lucky, meaning you can change the outcome of a single dice. Luck tokens are recovered daily.
+a roll lucky, meaning you can change the outcome of a single dice. Luck tokens are recovered at the end of a campaign
+arc, this is a bit at GM/s discretion, what that means. A campaign arc should be involve multiple small quests, last
+several sessions and conclude with some something impactful, oeninng up the plot significantly.
 
 In additional some abilities may require Luck tokens to be used.
-
      """,
      },
 #     {'name': 'Forced movement / falling damage',
@@ -320,7 +322,7 @@ pre-maturely voluntarily.
     {'name': 'Magical potions',
      'description': """
 Throughout the game-world players may find potions with magical effects and mages with the potion maker feat can make
-them themselves. Potions however have limitations. The roll target for the first potion is RX, meaning any 1 dice will
+them themselves. Potions however have limitations. The roll target for the first potion is RX, meaning any single dice will
 do. The roll target for the second potions is RX for drinking the potion and R3 fortitude check to stomach that potion.
 After that an additional R3 is added to the fortitude check each time. To make these fortitude checks does not consume
 action limit, like all fortitude checks.
@@ -398,5 +400,27 @@ either the main quest or one of the group focuses. Group focuses are often tied 
 are often most important in achieving these goals, but of course not solely used.
 '''
      },
+    {'name': 'Creative spells',
+     'description': '''
+Some spells may leave a lot of room for creativity. In this case it is important to have a way to balance it. It is
+perfectly alright, if the illusion magician creates whatever kind of illusionary image, question becomes what do they
+want to achieve with it, what do they think the effect should be on other people? Here is a general balance idea of what
+various effects should cost in power dices. Keep in mind that a good idea should given an advantage, and perfect ideas
+even double advantage, while none-sensical ideas can either be dis-allowed or allowed with disadvantage. And of course
+there can be staples in between, like disorienting with illusion, something your character always does, this can be
+allowed without advantage or disadvantage. But when a creative opportunity arises and the player notices, then you can
+reward the player with advantage or more. The goal is to create cool story moments with fun explanations which are still
+somewhat constrained by balance (RP in following context is power roll, this depends on your school of magic which the
+creative spell or ability belongs to).
 
+1 RP: 2 damage
+1 RP: 1 level of vulnerability, entangled, unbalanced or confusion
+2 RP: 1 level of disoriented, afraid, prone, burning or disruption
+3 RP: blinded, 1 level of frozen
+2 RP: Aid an ally to give them advantage, or upgrade advantage to double advantage
+
+The default range for effecting someone is 6 sq.
+     '''
+
+    },
 ]
