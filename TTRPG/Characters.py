@@ -1118,6 +1118,8 @@ def find_spell_object(name, all_spells):
             if spell['name'].lower() == name.lower():
                 return spell
 
+mana_multiplier = 2
+luck_multiplier = 2
 def generate_character_flowable(character):
     from Innate_feats import prep_feat_flowable as prep_innate_feat_flowable
     from Innate_feats import feats as all_innate_feats
@@ -1169,8 +1171,6 @@ def generate_character_flowable(character):
     stats['will'] += proficiencies.get('will', 0)
     stats['fortitude'] += proficiencies.get('fortitude', 0)
     stats['reflex'] += proficiencies.get('reflex', 0)
-
-    mana_multiplier = 2
 
     stats['mana'] = stats['mana'] * mana_multiplier
 

@@ -118,6 +118,15 @@ simply someone who wants favor from your house etc.)
         },
         {
             'requires': 'Talented',
+            'name': 'Bulwark',
+            'description': '''
+Enemies within 3 sq. of you that attack your allies have disadvantage. If you are legendary in martial then
+you can spend stamina and mana to reduce damage taken by 1 per stamina or mana spent to you and you can use luck to 
+reduce damage dealt to you by 3.
+            ''',
+        },
+        {
+            'requires': 'Talented',
             'name': 'Defiant',
             'description': '''
 When your martial path is talented, When a dice would become scarred, roll it. On a 6, it stays normal.
@@ -136,6 +145,12 @@ At the beginning of each round, if you have at least 3 damaged dice, you may cho
             'requires': 'Legendary',
             'name': 'Nimble',
             'description': '''Your action limit increases by 1''',
+        },
+        {
+            'requires': 'Talented',
+            'name': 'Tough',
+            'description': '''If you are talented, then every turn negate the first damage you receive. If you are
+            legendary, then negate the first 2 damage you receive.''',
         },
         {
             'requires': 'Adept',
@@ -172,7 +187,8 @@ Whenever you make an attack, you can use one and only one of those options once 
         {
             'name': 'Harmonious body',
             'description': '''Whenever you advance in REFLEX or FORTITUDE saving throws. Advance in the other one as 
-                well''',
+                well. If you are talented or legendary in martial, also advance in Will proficiency. You cannot advance
+                in will proficiency from mage path in this case.''',
         },
     #     {
     #         'name': 'Favored weapon',
@@ -237,8 +253,7 @@ from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_titl
 
 def prep_feat_flowable(feat, name_addon=''):
     elements = []
-    print(feat)
-    print(name_addon)
+
     elements.append(Paragraph(feat['name'] + name_addon, style=minor_title))
     if feat.get('requires'):
         elements.append(Paragraph(f"Requires: {feat['requires']}", style=minor_subtitle))

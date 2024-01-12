@@ -4,8 +4,8 @@ feats = {
             'name': 'Mastery',
             'description': '''
             Upgrade a proficiency once. This can be chosen once per proficiency, it doesn't increase the cost of
-            further improvement in that proficiency and is not taken into accout when conisdering the normal maximum
-            proficiency for that skill. 
+            further improvement in that proficiency and is not taken into account when considering the normal maximum
+            proficiency for that skill.
             ''',
         },
     ],
@@ -37,32 +37,32 @@ feats = {
         },
     ],
     'Martial': [
-        # {
-        #     'name': 'Versatile combatant',
-        #     'description': '''All advancements in weapon levels provides 2 additional level in another
-        #     weapon. When you take this feat multiple times, then it still provides at most 2 levels
-        #     per weapon class for the secondary choices, you can simply choose more weapon classes to receive this
-        #     benefit.
-        #      ''',
-        # },
-        # {
-        #     'name': 'Vigorous',
-        #     'description': '''+1 HP per martial path level for every character level. All advancements in HP provide +5
-        #     HP and +1 fortitude''',
-        # },
         {
             'name': 'Enduring',
-            'description': '''Every second advancment in stamina provide + 1 maximum stamina''',
+            'description': '''Every second advancement in stamina provide + 1 maximum stamina''',
+        },
+        {
+            'name': 'Powerful',
+            'description': '''You have one additional dice during combat, this does not increase action limit''',
         },
         {
             'name': 'Defensive',
             'description': '''+2 maximum defenses, this can only be taken once''',
+        },
+        {
+            'name': 'Deadly',
+            'description': '''Each of your attacks applies 1 vulnerable. This can only be taken once''',
         },
     ],
     'Skilled': [
         {
             'name': 'Lucky',
             'description': '''Every advancement in luck provides 1 additional luck token.
+            ''',
+        },
+        {
+            'name': 'Resourceful',
+            'description': '''You have one additional dice during scenes
             ''',
         },
     ]

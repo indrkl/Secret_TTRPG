@@ -78,7 +78,7 @@ feats = {
         {
             'cost': 5,
             'name': 'Iron concentration',
-            'effect': '''You can spend any dice to maintain concentration, and concenctration does not reduce action 
+            'effect': '''You can spend any dice to maintain concentration, and concentration does not reduce action 
             limit''',
         },
         {
@@ -100,20 +100,38 @@ Enchantment spells cost 1 less power dice to cast. When the concentration cost i
 too costs 1 less power dice.
             ''',
         },
-    #     {
-    #         'cost': 8,
-    #         'name': 'Holy bonds',
-    #         'effect': '''
-    # You can attune to any number of your party members instead of items. When casting spells that only target the
-    # attuned players or their weapons, you can target any number of other attuned players or their weapons to also
-    # receive the benefits of the spell.
-    # This does not increase the cost or concentration requirement for that spell.
-    #
-    # For spells which the target is self, you can instead cast it targeting up to 1 attuned player.
-    #
-    # The minimum range for these spells becomes 5 sq.
-    #         ''',
-    #     },
+        {
+            'cost': 5,
+            'name': 'Holy bonds',
+            'effect': '''
+You can attune to any number of your party members instead of items.
+
+Whenever attuned party member receives a negative status effect you can instead move it to yourself.
+
+For spells which the target is self, you can instead cast it targeting one of the attuned party members.
+
+The minimum range for these spells becomes 5 sq.
+
+Other spells targeting attuned party members have advantage
+            ''',
+        },
+        {
+            'cost': 5,
+            'name': 'Ritual master',
+            'effect': '''
+You are more skilled at including others in your rituals. All casters who join your ritual, their minimum proficiency
+is your proficiency - 1.
+            ''',
+        },
+        {
+            'cost': 3,
+            'requires': 'Ritual master',
+            'name': 'Improved Ritual master',
+            'effect': '''
+You are more skilled at including others in your rituals. All casters who join your ritual, who don't know the ritual
+don't have disadvantage.
+            ''',
+        },
     #     {
     #         'cost': 8,
     #         'name': 'Blood magic',
@@ -547,10 +565,10 @@ is returned after using it.
          ''',
          'action': {
              'roll target': 'R3.R3.R3',
-             'range': '6 sq.',
              'target': '3 allies',
              'effect': '''
-Targeted allies roll 1 extra temporary dice into their dice pool for this scene.
+Targeted allies roll 1 extra temporary dice into their dice pool for this scene. These dice can be traded between
+players on a 1 to 1 basis.
              ''',
              'difficulty_options': [
                  {
@@ -642,12 +660,24 @@ Targeted allies roll 1 extra temporary dice into their dice pool for this scene.
 #             in luck.
 #             ''',
 #         },
-#         {
-#             'cost': 2,
-#             'name': 'Expert of pawn sacrifices',
-#             'effect': '''During a resolution of the plan, when giving disadvantage to a check to give advantage to
-#             another check, you can give advantage to one additional check. Advance 1 times in leadership''',
-#         },
+        {
+            'cost': 4,
+            'requires': '3 proficiency in leadership',
+            'name': 'Expert of sacrifice',
+            'effect': '''When assigning dice to scene roll target's, you can give one of those advantage at the cost
+            of another a disadvantage. The one that is given disadvantage must be one that would be passed if not
+            given disadvantage to (and the dice for passing must still be commited).''',
+        },
+        {
+            'cost': 5,
+            'name': 'Fortunate',
+            'effect': '''
+When negotiating for rewards, finding treasure, selling something unique, 
+you can meet a roll target of R5.R5.R5 for values lower than 500 gp. or R5.R5.R5.R5
+for values larger than that but lower than 5000 gp or R5.R5.R5.R5.R5 for even larger values to increase the gold gains
+by 50 %. You can either use treasure hunting skill for these checks. This roll target needs to be met
+during the same scene, so it still competes where the whole interaction happens.''',
+        },
         {'cost': 2,
          'name': 'Foresight',
          'action': {

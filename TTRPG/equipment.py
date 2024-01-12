@@ -122,6 +122,31 @@ equipment = {
             ]
         }
     },
+    'sabre': {
+        'action': {
+            'cost': 'R4.R4',
+            'damage': 2,
+            'range': 'melee',
+            'extra_options': [
+                {
+                    'cost': 'R4',
+                    'effect': 'Additional 1 damage',
+                },
+                {
+                    'cost': 'R4.R4',
+                    'effect': 'Additional 3 damage',
+                },
+                {
+                    'cost': 'R2',
+                    'effect': 'Confuse 1',
+                },
+                {
+                    'cost': 'R2',
+                    'effect': 'Reposition yourself within 1 squares freely',
+                },
+            ]
+        }
+    },
     '2 handed sword': {
         'action': {
             'cost': 'R5.R5',

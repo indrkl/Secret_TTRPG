@@ -26,24 +26,19 @@ weapon_affixes = [
     {
         'unique': True,
     'name': 'Ethereal',
-     'effect': '''Converts all physical damage to psychic damage. Target's AC is 10 + their WILL proficiency + 
-     AC proficiency (AC proficiency is now capped by Will proficiency)''',
+     'effect': '''Converts all physical damage to psychic damage. This bypasses target's defenses when dealing damage,
+     but a R4 using will proficiency can negate 2 damage.''',
      'bonus_variants': [
-         {'effect': '{roll} d6 additional psychic damage',
+         {'effect': '{roll} additional psychic damage',
           'lvls': [6, 9, 12, 15, 18],
           'roll': [1, 2, 3, 4, 5],
           },
-         {'effect': 'force {roll} checks of afraid on a successful attack',
-          'lvls': [6, 12, 18],
-          'roll': [1, 2, 3],
-          'min_lvl': 6,
+         {'effect': 'Apply {roll} levels of afraid on a successful attack',
+          'lvls': [7, 14],
+          'roll': [1, 2],
+          'min_lvl': 7,
           },
-         {'effect': 'force {roll} checks of disoriented on a successful attack',
-          'lvls': [6, 12, 18],
-          'roll': [1, 2, 3],
-          'min_lvl': 6,
-          },
-         {'effect': 'force {roll} checks of crazed on a successful attack',
+         {'effect': 'Apply {roll} levels of disoriented on a successful attack',
           'lvls': [6, 12, 18],
           'roll': [1, 2, 3],
           'min_lvl': 6,
@@ -54,18 +49,13 @@ weapon_affixes = [
     {'unique': True,'name': 'fiery',
      'effect': 'converts all physical damage to fire damage, this weapon can only do fire damage.',
      'bonus_variants': [
-         {'effect': '{roll} d6 additional fire damage',
+         {'effect': '{roll} additional fire damage',
           'lvls': [1, 5, 9, 13, 17],
           'roll': [1, 2, 3, 4, 5],
           },
-         {'effect': 'force {roll} checks of burning on a successful attack',
+         {'effect': 'Apply {roll} levels of burning on a successful attack',
           'lvls': [6, 12, 18],
           'roll': [1, 2, 3],
-          'min_lvl': 6,
-          },
-         {'effect': 'force {roll} checks of burning on a critical attack',
-          'lvls': [6, 12, 18],
-          'roll': [(1, 2), (3, 4), (5, 6)],
           'min_lvl': 6,
           },
      ]
@@ -74,29 +64,24 @@ weapon_affixes = [
       'name': 'freezing',
      'effect': 'converts all physical damage to cold damage, this weapon can only do cold damage.',
     'bonus_variants': [
-        {'effect': '{roll} d6 additional cold damage',
+        {'effect': '{roll} additional cold damage',
          'lvls': [1, 5, 9, 13, 17],
          'roll': [1, 2, 3, 4, 5],
          },
-        {'effect': 'force {roll} checks of freezing on a successful attack',
+        {'effect': 'Apply {roll} levels of freezing on a successful attack',
          'lvls': [8, 14, 20],
          'roll': [1, 2, 3],
-         'min_lvl': 8,
-         },
-        {'effect': 'force {roll} checks of freezing on a critical attack',
-         'lvls': [8, 14, 20],
-         'roll': [(1, 2), (3, 4), (5, 6)],
          'min_lvl': 8,
          },
     ]
      },
     {'name': 'heart seeker',
-     'effect': '''Critical threshold is reduced by {roll}''',
-     'lvls': [1, 5, 9, 13, 17],
-     'roll': [1, 2, 3, 4, 5],
+     'effect': '''Attacks involving 5 or more power strikes get {roll} additional power dice to use''',
+     'lvls': [1, 6, 11, 16],
+     'roll': [1, 2, 3, 4],
      },
     {'name': 'clarity',
-     'effect': '''Attacks with weapon cannot be unlucky''',
+     'effect': '''Attacks with weapon cannot be unlucky or have disadvantage''',
      'lvls': [1],
      'roll': [1],
      },
@@ -120,13 +105,13 @@ weapon_affixes = [
      },
     {'name': 'anti-magic',
      'effect': '''When you successfully hit with this weapon, target loses {roll} mana''',
-     'lvls': [1, 6, 11, 16],
-     'roll': [1, 2, 3, 4],
+     'lvls': [1, 4, 7, 10, 13, 16, 19],
+     'roll': [1, 2, 3, 4, 5, 6, 7],
      'min_lvl': 1,
      },
 ]
 
-def get_no_mods():
+def get_nr_mods():
     i = random.random()*100
     if i > 99:
         return 3
@@ -158,7 +143,7 @@ def solidify_effect(mod, lvl):
 
 
 def roll_random_weapon(lvl):
-    no_mods = get_no_mods()
+    no_mods = get_nr_mods()
     mods = []
 
     unique = False
@@ -187,41 +172,44 @@ armor_affixes = [
     {
         'name': 'Nourishing',
         'effect': '''Provides {roll} stamina recovery''',
-        'lvls': [1, 5, 9, 13, 17],
-        'roll': [1, 2, 3, 4, 5],
+        'lvls': [5, 15],
+        'roll': [1, 2],
     },
     {
         'name': 'Resistance',
-        'effect': '''When attuning to this item, choose {roll} options from among physical, fire, cold, lightning,
-        poison and psychic. You have resistance to chosen damage type(s). When re-attuning, these choices may be changed
+        'effect': '''
+        You have {roll} damage reduction against {damage_type} damage. 
         ''',
         'lvls': [3, 10, 17],
         'roll': [1, 2, 3],
+        'options': [
+            {'damage_type': ['physical', 'fire', 'cold', 'lightning', 'psychic', 'poison']}
+        ]
     },
     {
         'name': 'Valor',
         'effect': '''Negative status effects have no effect unless they are at least level {roll}. After that level they
         however have their full effect.''',
         'lvls': [1, 5, 9, 13, 16, 19],
-        'roll': [3, (4, 5), (6, 7), (8,9), (10,11), (12,14)],
+        'roll': [2, 3, 4, 5, 6, 7],
     },
     {
         'name': 'Cleansing',
         'effect': '''At the beginning of your turn, reduce {roll} levels of negative status effects on you divided
         as you choose.''',
         'lvls': [1, 6, 11, 16],
-        'roll': [(1, 2), (3, 4), (5, 6), (7, 8)],
+        'roll': [1, 2, 3, 4],
     },
 ]
 
 boots_affixes = [
     {
         'name': 'Hasted',
-        'effect': '''Activate the effect once per day: For next 5 rounds you have 1-2 bonus AP (only 1 AP bonus can be 
-        active)''',
-        'lvls': '''8-18'''
+        'effect': '''During combat, each turn roll {roll} additional dice, which can only be used for movement but do 
+        not spend action-limit''',
+        'lvls': [3, 13],
+        'roll': [1, 2],
     },
-
 ]
 
 jewelry_affixes = [
@@ -243,3 +231,32 @@ jewelry_affixes = [
         'lvls': '''5'''
     },
 ]
+
+pricing_of_items = """
+Each affix has a level requirement, but also each magical item can have 1 to 3 affixes. Items with 2 affixes double
+their price, and items with 3 affixes double their price on top of that. But the base price is based on the level of
+affixes in the item and is additive per property
+"""
+
+affix_lvl_cost = {
+    1: 200,
+    2: 250,
+    3: 300,
+    4: 350,
+    5: 400,
+    6: 500,
+    7: 650,
+    8: 800,
+    9: 1000,
+    10: 1200,
+    11: 1400,
+    12: 1600,
+    13: 1800,
+    14: 2000,
+    15: 2500,
+    16: 3000,
+    17: 3500,
+    18: 4000,
+    19: 5000,
+    20: 7500
+}

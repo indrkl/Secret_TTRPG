@@ -166,8 +166,8 @@ Scarred dice can only be used as 1, 2 or 3 in any roll target. You can still nud
 
 At the beginning of each day after a proper rest, by spending various resources like herbs, good food etc. one can
 change scarred dice back to normal dice.
-To change a single dice back it costs 3 gp worth of resources, to change 2 dice back it costs 15 gp and to change 3 dice
-back it costs 50 gp worth of resources.
+To change a single dice back it costs 15 gp worth of resources, to change 2 dice back it costs 50 gp and to change 3 dice
+back it costs 150 gp worth of resources.
      """,
     },
     {
@@ -210,10 +210,11 @@ enemies. But here are the general guidelines for how moral is lost:
         'name': 'Resources',
         'description':"""
 Each path has a specific resource associated with their path. Mages have mana, Martials have stamina and Skilled have
-luck. Each resource is used for different effects and have different rules for recovering it. Mana is hardest to recover
-and is used to cast spells. Stamina is recovered each encounter and can be used during combat to increase action limit,
-use scarred dice unconstrained and for some combat abilities, and luck tokens are recovered daily and are used to change 
-the outcome of a single dice in a roll.
+luck. Each resource is used for different effects and have different rules for recovering it. Mana is recovered during
+long rest by consuming expensive spices and is used to cast spells. 
+Stamina is recovered each encounter and can be used during combat to increase action limit, use scarred dice 
+unconstrained and for some combat abilities, and luck tokens are recovered one a story arch finishes and are used to 
+change the outcome of a single dice in a roll, or to gain advantage.
         """
     },
     {'name': 'Mana',
@@ -222,7 +223,9 @@ When advancing in the mage path, characters can increase their maximum mana. Whe
 to spend mana to reduce the number of dice required to cast that spell.
 
 For 1 mana reduce the spell cost by 1 dice, for 3 mana, by 2 dice, for 6 mana by 3 dice and for 10 mana by 4 dice. You
-cannot reduce the cost by more than your proficiency in the spell's school of magic.
+cannot reduce the cost by more than your proficiency in the spell's school of magic. Note that this is for casting
+spells during combat. When using magic in a scene, the mana cost is tripled with regards to lowering the dice
+requirements to not trivialise most roll targets.
 
 Mana is recovered during rest by consuming quite pricy magical spices. You must spend enough resources to reach magximum
 man, that means the more you consumed your mana during an encounter, the more pricy it will be. 
@@ -262,7 +265,7 @@ In additional some abilities may require stamina or provide means to recover sta
 When advancing in the skilled path, characters can increase their maximum luck tokens. Luck tokens can be used to make
 a roll lucky, meaning you can change the outcome of a single dice. Luck tokens are recovered at the end of a campaign
 arc, this is a bit at GM/s discretion, what that means. A campaign arc should be involve multiple small quests, last
-several sessions and conclude with some something impactful, oeninng up the plot significantly.
+several sessions and conclude with some something impactful, opening up the plot significantly.
 
 In additional some abilities may require Luck tokens to be used.
      """,
@@ -319,6 +322,27 @@ spells without concentration cannot be ended by breaking concentration, but the 
 pre-maturely voluntarily.
      """
      },
+    {'name': 'Rituals',
+     'description': """
+Rituals are powerful spell effects which take a lot more time to cast and require much more mana than normal
+spells. Like spells, the ritual caster needs to learn the ritual. However rituals can be casted by multiple spell
+casters. Only one of them is required to know the ritual, but mages who do not know the ritual have dis-advantage when
+casting the ritual.
+
+How does it work? There are a certain number of dice that need to be met to complete the ritual. To complete these dice
+casters need to roll their entire dice pool multiple times. Each time the mana cost to roll the pool increases but using
+their proficiency they can progress in the ritual.
+
+First roll costs 4 mana, then each consequent roll costs 2 additional mana. Players who have disadvantage, can 
+contribute starting from the second dice that they meet for the target throughout the ritual, so when they roll the
+second time and they met one roll in the first time they effectively no longer have disadvantage. 
+
+Rituals can be used to prepare for combat against the odds.
+
+Some rituals can have semi permanent effects, but they often have some daily mana cost. Meaning it is a constant
+resource drain for the ritual caster.
+     """
+     },
     {'name': 'Magical potions',
      'description': """
 Throughout the game-world players may find potions with magical effects and mages with the potion maker feat can make
@@ -361,7 +385,7 @@ Shields can be used to provide additional defensive actions. In addition they al
     },
 #     {'name': 'Resistance',
 #      'description': '''
-# You can have resistance to various damage types, the incoming damage to these damage types is halved, rounded down.
+# You can have resistance to various damage types, the incoming damage to these damage types is halved, rounded up.
 #          '''
 #     },
     {'name': 'Attunement',
@@ -418,6 +442,8 @@ creative spell or ability belongs to).
 2 RP: 1 level of disoriented, afraid, prone, burning or disruption
 3 RP: blinded, 1 level of frozen
 2 RP: Aid an ally to give them advantage, or upgrade advantage to double advantage
+X RP: Meet a scene roll-target, X is number of dice required in the roll-target. The dice used for roll-target also
+override the spell's own power dice.
 
 The default range for effecting someone is 6 sq.
      '''

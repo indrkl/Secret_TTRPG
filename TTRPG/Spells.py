@@ -238,6 +238,17 @@ schools = {
                 ],
             },
             {
+                'name': 'Rune trap ritual',
+                'range': '8 sq.',
+                'effect': '''Make a trap that when triggered casts either fire-ball, chain lightning or freezing
+                upon the target. The cost of this spell scales depending on the dice cost of the target spell. Let the
+                target spell cost be X*R6''',
+                'target': 'single target',
+                'difficulty': '2X*R6',
+                'scaling': [
+                ],
+            },
+            {
                 'name': 'Elemental weapon',
                 'range': 'touch',
                 'effect': '''Choose fire, cold or lightning. Enchant target not enchanted weapon. Target weapon deals 
@@ -266,6 +277,7 @@ schools = {
             {
                 'name': 'Haste',
                 'range': '6 sq.',
+                'duration': '2 rounds',
                 'effect': '''Target gets +1 action limit haste buff. Each character can have the haste buff from only 
                 one source''',
                 'difficulty': 'R6.R6.R6.R6',
@@ -346,19 +358,21 @@ schools = {
                     {'D': 'R3', 'description': 'Increase range by 8 sq.'},
                 ],
             },
-            # {
-            #     'name': 'Teleport',
-            #     'speed': '30 minutes',
-            #     'range': '1 km.',
-            #     'effect': '''Teleports a none disoriented person within your touch range to a place within range 
-            #     that you know or can imagine. If this place is not a teleportation circle, then they need to make a 
-            #     DC 12 fortitude save, if they fail, they get 2 levels of disoriented, this effect can only be removed by 
-            #     doing a long rest.''',
-            #     'difficulty': 3,
-            #     'scaling': [
-            #         {'D': 2, 'description': 'double the range'},
-            #     ],
-            # },
+            {
+                'name': 'Teleportation ritual',
+                'speed': '30 minutes',
+                'range': '50 km.',
+                'effect': '''Create a temporary teleportation portal from which up to 10 normal sized creatures can go
+                through to go to a target which is 50 km away. The ritual master or one of the participants must know
+                this target location.
+                
+                The portal stays open for 1 minute or until 10 creatures go through it whichever happens first.
+                ''',
+                'difficulty': '9 X R3',
+                'scaling': [
+                    {'D': '7 X R3', 'description': 'double the range'},
+                ],
+            },
             {
                 'name': 'Step between dimensions',
                 'target': 'self',
@@ -490,10 +504,8 @@ schools = {
     },
     'Illusion': {
         'special_rules': [
-            """You can use illusion proficiency when doing sneak and other stealth requiring checks.
-            In addition you can create illusions out of combat, things that appear to be one way, but are actually 
-            different. The exact difficulty of each illusion is determined by GM. Weather or not the illusions achieve 
-            the desired result is determined by a roll target in a scene provided by the GM."""
+            """
+            """
         ],
         'spells': [
             {
@@ -501,7 +513,7 @@ schools = {
                 'target': 'area',
                 'range': '6 sq.',
                 'radius': '1 sq.',
-                'effect': '''Pose an illusionary threat to enemies in the area, they gain 1 level of disoriented
+                'effect': '''Pose an illusionary threat to enemies in the area, they gain 2 levels of disoriented
             ''',
                 'difficulty': 'R4.R4.R4.R4',
                 'scaling': [
@@ -548,31 +560,34 @@ schools = {
             #             damage. If he succeeds, the illusion disappears however'''},
             #     ],
             # },
-    #         {
-    #             'name': 'Invisibility',
-    #             'speed': '2 AP',
-    #             'target': 'self',
-    #             'duration': '3 rounds',
-    #             'concentration': 'R4.R4',
-    #             'effect': '''You appear invisible as long as you are standing still. When you move, cast spells, attack
-    # or otherwise perform a action with rapid movement, there are ripples that hint others that there is somewhere there
-    # where you are and also the nature of the movement. Attacks against enemies that rely on sight have advantage, and
-    # attacks by enemies against you who rely on sight have disadvantage. This allows you to sneak in broad daylight.
-    #         ''',
-    #             'difficulty': 'R4.R4.R4.R4',
-    #             'scaling': [
-    #                 {'D': 3, 'L': 1, 'description': '''When you move at half speed, then no ripple is creating so you
-    #                 have perfect invisibility. This allows you to sneak in broad daylight with advantage'''},
-    #                 {'D': 5, 'L': 1, 'description': '''Casting spells no longer creates ripples.'''},
-    #                 {'D': 4, 'L': 1, 'description': '''You can select another ally as the target of this spell. This
-    #                 spell gains the range of touch. To maintain the illusion the target must remain within line of sight
-    #                 from you.'''},
-    #
-    #             ],
-    #         },
+            {
+                'name': 'Invisibility',
+                'target': 'self',
+                'duration': '2 rounds',
+                'concentration': 'R4.R4',
+                'effect': '''You appear invisible as long as you are standing still. When you move, cast spells, attack
+    or otherwise perform a action with rapid movement, there are ripples that hint others that there is somewhere there
+    where you are and also the nature of the movement. Attacks against enemies that rely on sight have advantage, and
+    attacks by enemies against you who rely on sight have disadvantage. This allows you to sneak in broad daylight.
+    
+    This can also be used as a creative spell during scenes. In this case the cost is RX.R?? where X is the dice used
+    in the scene and R?? is the roll target.
+            ''',
+                'difficulty': 'R4.R4.R4.R4',
+                'scaling': [
+                    {'D': 'R4', 'L': 1, 'description': '''When you move at half speed, then no ripple is creating so you
+                    have perfect invisibility. This allows you to sneak in broad daylight with advantage'''},
+                    {'D': 'R4.R4', 'L': 1, 'description': '''Casting spells no longer creates ripples.'''},
+                    {'D': 'R4.R4.R4.R4', 'L': 1, 'description': '''Attacking no longer creates ripples. This gives you
+                    double advantage for attacks'''},
+                    {'D': 'R4.R4', 'L': 1, 'description': '''You can select another ally as the target of this spell. This
+                    spell gains the range of touch. To maintain the illusion the target must remain within line of sight
+                    from you.'''},
+
+                ],
+            },
             {
                 'name': 'Shattering presence',
-                'speed': '1 AP',
                 'target': 'self',
                 'concentration': 'R4.R4.R4',
                 'duration': '3 rounds',
@@ -587,54 +602,55 @@ schools = {
                                     '6 sq.'},
                 ],
             },
+            {
+                'name': 'Hide large object',
+                'target': 'Some object',
+                'concentration': 'X/2 mana',
+                'duration': '1 day',
+                'effect': '''
+        This is a ritual to hide, for eample a house, or an entrance to a cave, or if you go really wild, then even
+        a castle. The idea is to create an illusion so that something doesn't appear to be there even though it is.
+        
+        The basic version can conceal an object that is no more than 5mx5mx5m in volume and requires 8 dice to
+        succeed, however larger objects can be attempted to be concealed for more dice. Let the final resulting number
+        of dice be X. That X is required for concentration cost
+        ''',
+                'difficulty': '8 X R4',
+                'scaling': [
+                    {'D': '3 X R4',
+                     'description': 'increase the maximum length of one of the dimension by 5m'},
+                ],
+            },
         ]
     },
-    # 'divination': {
-    #     'spells': [
-    #         {
-    #             'name': 'Diviners advantage',
-    #             'speed': '2 AP',
-    #             'target': 'self',
-    #             'effect': '''Gain a magical 1 AC bonus. (you can have only 1 magical bonus to AC)''',
-    #             'difficulty': 1,
-    #             'concentration': 1,
-    #             'scaling': [
-    #                 {'D': 3, 'L': 3, 'description': '''Increase this bonus by 1
-    #                 '''},
-    #                 {'D': 5, 'L': 1, 'description': '''At the start of every turn gain a dodge token if you have none.
-    #                 '''},
-    #
-    #             ],
-    #         },
-    #         {
-    #             'name': 'Glimpse into future',
-    #             'speed': 'reaction',
-    #             'effect': '''This can be cast as a reaction to when GM has someone in your party to roll a skill check.
-    #             Learn the DC of the skill check''',
-    #             'difficulty': 2,
-    #             'scaling': [
-    #                 {'D': 3, 'L': 1, 'description': '''Learn of the negative consequences when failing the skill check
-    #                 '''},
-    #                 {'D': 5, 'L': 1, 'description': '''Grant advantage to the skill check'''},
-    #
-    #             ],
-    #         },
-    #         {
-    #             'name': 'Tell fortune',
-    #             'speed': '5 minutes',
-    #             'target': 'group focus',
-    #             'effect': '''Learn of the number of progress steps completed and total required to complete the group
-    #             focus
-    #         ''',
-    #             'difficulty': 3,
-    #             'scaling': [
-    #                 {'D': 5, 'L': 1, 'description': '''Gain advantage on the next progress check, this can be used only
-    #                     3 times per group focus'''},
-    #                 {'D': 5, 'L': 3, 'description': '''Learn of one fail state for the group focus'''},
-    #             ],
-    #         },
-    #     ]
-    # },
+    'divination': {
+        'spells': [
+            {
+                'name': 'Diviners advantage',
+                'target': 'self',
+                'effect': '''Increase your maximum defenses by 2 and recover all maximum defenses.''',
+                'difficulty': 'R5.R5.R5.R5',
+                'concentration': 'R5.R5',
+                'duration': '2 rounds',
+                'scaling': [
+                    {'D': 'R5', 'L': 3, 'description': '''Increase maximum defense by another 2
+                    '''},
+                ],
+            },
+            {
+                'name': 'Glimpse into future',
+                'effect': '''During scene you can ask a question about the scene to which GM answers honestly either 
+yes / no / yes and no / yet uncertain''',
+                'difficulty': 'R5.R5.R5.R5',
+                'scaling': [
+                    {'D': 'R5.R5', 'L': 1, 'description': '''
+                        Ask another follow-up question.
+                    '''},
+                ],
+            },
+
+        ]
+    },
 }
 from reportlab.platypus import Table, TableStyle, Paragraph, Spacer, KeepTogether
 from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_title, minor_subtitle, spell_block_style

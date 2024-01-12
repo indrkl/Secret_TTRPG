@@ -12,6 +12,19 @@ Pillars:
 Less so perhaps for Mage, where the identities are actually managed in the schools of magic themselves and not so much
 by the path.
 
+1.a Martials are clear, they excel in combat, and their main resource: stamina recovers easily, meaning they provide
+clear value reliably.
+
+1.b Skilled is also clear, they excel out of combat, by having access to all the skills. In addtion they have the
+luck resource, which is the most effective in achieving your results whenever, but also the most limited in it's
+recovery.
+
+1.c Mage is tricky, they are mostly involved in combat, but magic can also be used out of combat. I think their
+identity is that mana is somewhat limited, and it has a price to it. Spells are worse than attacks when mana is not used
+but when you start using mana they quickly go on par and surpass attacks. Mana is like a get what you want resource,
+which costs money. It is power, but at a cost. Also they open up a whole fantasy element, as depending on which school
+of magic someone chooses, they can use it in unique ways in the story. 
+
 2. Each level up should feel exciting, and impactful, as you try to manage taking the necessary feats for your build,
 improving defenses, upgraded proficiencies, or gaining more resources to be able to sustain more powerful actions.
 
