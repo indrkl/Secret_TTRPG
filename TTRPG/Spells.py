@@ -175,6 +175,28 @@ schools = {
                     {'D': 'R3.R3', 'description': '''Provide one additional bless dice for targets'''},
                 ],
             },
+            {
+                'name': 'Harmony of souls',
+                'target': 'Up to 8 willing participants',
+                'effect': '''
+                Harmony of souls is a ritual that connects the souls of the participants in a way that they sense each
+                other's concerns, desires, feelings, excitement, and even though they don't hear each other's thoughts
+                they get glimpses and a sense of some of the thoughts especially if those thoughts make a lot of sense
+                to them or if they have similar thoughts themselves.
+                
+                This allows players to assist each other by using only 2 dice. Assist provides 1 dice for a roll target,
+                attack, spell, action etc.
+        ''',
+                'difficulty': '10 X R3',
+                'duration': '1 day',
+                'concentration': 'X / 2 mana',
+                'scaling': [
+                    {'D': '8 X R3', 'description': '''
+                    Participants may make will actions instead of other participants. They may also do the recover
+                    defenses action for other participants. 
+                    '''},
+                ],
+            },
         ]
     },
     'Elemental': {
@@ -360,8 +382,9 @@ schools = {
             },
             {
                 'name': 'Teleportation ritual',
-                'speed': '30 minutes',
                 'range': '50 km.',
+                'duration': '1 min.',
+                'concentration': '8 mana',
                 'effect': '''Create a temporary teleportation portal from which up to 10 normal sized creatures can go
                 through to go to a target which is 50 km away. The ritual master or one of the participants must know
                 this target location.
@@ -370,7 +393,22 @@ schools = {
                 ''',
                 'difficulty': '9 X R3',
                 'scaling': [
-                    {'D': '7 X R3', 'description': 'double the range'},
+                    {'D': '7 X R3', 'L': 3, 'description': 'double the range'},
+                    {'D': '10 X R3', 'L': 3, 'description': 'double the range'},
+                ],
+            },
+            {
+                'name': 'Communication ritual',
+                'range': '10 km.',
+                'duration': '1 hour',
+                'concenctration': '3 mana',
+                'effect': '''Create a temporary communication link between a mirror you can touch and a mirror one of 
+                the participants knows in the world that is within the range of the ritual 
+                ''',
+                'difficulty': '3 X R3',
+                'scaling': [
+                    {'D': '3 X R3', 'L': 5, 'description': 'double the range'},
+                    {'D': '5 X R3', 'L': 5, 'description': 'double the range'},
                 ],
             },
             {
