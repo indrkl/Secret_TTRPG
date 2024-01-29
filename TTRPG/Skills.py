@@ -42,14 +42,16 @@ skills = [
     ''',
         'group focuses': ['have a great hunt', 'track someone in the wild', 'Travel a long distance by foot']
     },
-    {'name': 'treasure hunting',
-     'description': '''Intuition about where the good loots is. This is used to appraise things, recognise
-        opportunities, which contractors are wealthy, where to look for if you want some specific item etc.
+    {
+        'name': 'concealment',
+        'description': '''Deceive, hide your intentions, withhold information, avoid detection. Whenever you want to
+        contest withholding knowledge from someone that is not in their interest, you are dealing with concealment.
         
-     The environment bonuses from survival may apply to this skill as well.     
-     ''',
-     'group focuses': ['search for specific item (the more room is left for the outcome, the easier it is)',
-                       'find a lucrative quest', 'bargain for extra rewards', 'treasure hunt'],
+        This is the skill for assassins, spies, agents etc.
+        
+        Basically, if you as a player want to plot, lie, sneak etc. you need this skill.
+    ''',
+        'group focuses': ['have a great hunt', 'track someone in the wild', 'Travel a long distance by foot']
     },
     {'name': 'lore',
      'description': '''Knowing about the history, religion, magic, lore of the game world. This is used to find more 

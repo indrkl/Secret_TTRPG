@@ -295,6 +295,94 @@ some other skill instead of leadership to instruct the party on.
     'equipment': ['sword', 'Heavy chain mail'],
 
     },
+    {
+        'name': 'Pyromancer',
+        'MAGE': 4,
+        'SKILLED': 2,
+        'Innate_feat_mage': 'Metamagician',
+        'Innate_feat_skilled': 'Lucky',
+        'Levels': [
+            { # 1
+                'notes': ['''
+
+                '''],
+                'Mage advancements': [
+                    'proficiency (first): elemental',
+                    'proficiency (second): elemental',
+                    'spell: Fireball',
+                    'spell: Chain lightning',
+                    '1 mana',
+                ],
+                'Skilled advancements': [
+                    'proficiency (first): survival',
+                    'proficiency (first): diplomacy',
+                ],
+            },
+            { # 2
+                'Mage advancements': [
+                    'feat: Pyromancy',
+                    'proficiency (third): elemental',
+                    'spell: Frostbite',
+                ],
+                'Skilled advancements': [
+                    'feat: Deep apology',
+                    'proficiency (second): survival',
+
+                ],
+            },
+            { # 3
+                'Mage advancements': [
+                    '3 mana',
+                    'feat: Distant magic'
+                ],
+                'Skilled advancements': [
+                    'proficiency (second): diplomacy',
+                ],
+            },
+            { # 4
+                'Mage advancements': [
+                    'Progression feat: Deep pools',
+                    'proficiency (fourth): elemental',
+                    'spell: Elemental weapon',
+                ],
+                'Skilled advancements': [
+                    '2 luck',
+                ],
+            },
+            { # 5
+                'Mage advancements': [
+                    'feat: Twin magic',
+                    '5 mana'
+                ],
+                'Skilled advancements': [
+                    'proficiency (third): survival',
+                    'proficiency (first): physique',
+                ],
+            },
+            { # 6
+                'Mage advancements': [
+                    '1 mana',
+                    'proficiency (first): will',
+                    'proficiency (second): will',
+                ],
+                'Skilled advancements': [
+                    'proficiency (second): physique',
+                ],
+            },
+            { # 7
+                'Mage advancements': [
+                    '4 mana',
+                    'Progression feat: Battle mage',
+                ],
+                'Skilled advancements': [
+                    '2 luck',
+                ],
+            },
+
+        ],
+    'equipment': ['staff'],
+
+    },
 ]
 
 import re

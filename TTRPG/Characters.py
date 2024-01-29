@@ -807,15 +807,12 @@ player_characters = [
                     'feat: Commune with animals',
                     '''proficiency (first): will''',
                     '''1 mana'''
-
                 ],
                 'Martial advancements': [
                     'feat: Medium armor proficiency',
                     '''proficiency (first): sword''',
                     '1 stamina'
-
                 ],
-
             },
             3: {
                 'Skilled advancements': [
@@ -862,14 +859,11 @@ player_characters = [
                 'Mage advancements': [
                     '''proficiency (first): will''',
                     '''1 mana'''
-
                 ],
                 'Martial advancements': [
                     'feat: Blessed warrior',
                     '''proficiency (first): sword''',
-
                 ],
-
             },
             3: {
                 'Skilled advancements': [
@@ -885,7 +879,7 @@ player_characters = [
 
             },
         },
-        'equipment': ['sword', 'Heavy chain mail',],
+        'equipment': ['sword', 'Heavy chain mail', 'shield'],
     },
     {
         'name': 'Esmeralda the warden of silver bats',
@@ -902,6 +896,7 @@ player_characters = [
                 ],
                 'Mage advancements': [
                     'proficiency (first): elemental', 'proficiency (second): elemental', 'spell: fireball',
+                    'spell: Elemental weapon', '1 mana'
                 ],
             },
             2: {
@@ -910,6 +905,7 @@ player_characters = [
                 ],
                 'Mage advancements': [
                     'proficiency (first): nature', 'proficiency (second): nature', 'feat: iron concentration',
+                    'spell: heal', 'spell: grant luck'
                 ],
             },
             3: {
@@ -917,7 +913,7 @@ player_characters = [
                     '''2 luck'''
                 ],
                 'Mage advancements': [
-                    'spell: heal', 'spell: grant luck', 'spell: Elemental weapon', '1 mana'
+                    '4 mana'
                 ],
             },
         },
@@ -937,7 +933,8 @@ player_characters = [
                     '''proficiency (extra): treasure hunting'''
                 ],
                 'Mage advancements': [
-                    'proficiency (first): force', 'proficiency (second): force', 'spell: push/pull',
+                    'proficiency (first): force', 'proficiency (second): force', 'spell: push/pull', 'spell: Telekinesis',
+                    'proficiency (first): dimension', 'spell: pass object'
                 ],
             },
             2: {
@@ -945,8 +942,8 @@ player_characters = [
                     '''proficiency (second): treasure hunting''', '2 luck'
                 ],
                 'Mage advancements': [
-                    'proficiency (first): dimension', 'proficiency (second): dimension', 'proficiency (third): force',
-                    'spell: pass object', '1 mana',
+                    'proficiency (second): dimension', 'proficiency (third): force',
+                    '3 mana', 'spell: Explosive force', 'spell: Blink jump',
                 ],
             },
             3: {
@@ -1007,7 +1004,7 @@ player_characters = [
         'Levels': {
             1: {
                 'Skilled advancements': [
-                    'proficiency (first): crafting', 'proficiency (first): survival'
+                    'proficiency (first): concealment', 'proficiency (first): survival'
                 ],
                 'Martial advancements': [
                     'proficiency (first): dagger', 'proficiency (second): dagger', 'proficiency (first): toughness'
@@ -1023,12 +1020,19 @@ player_characters = [
             },
             3: {
                 'Skilled advancements': [
-                    'proficiency (second): crafting'
+                    'proficiency (second): concealment'
                 ],
                 'Martial advancements': [
                     'feat: Backstabber',
                 ],
             },
+            4: {
+                'Skilled advancements': [
+                    'Progression feat: Resourceful'
+                ],
+                'Martial advancements': [
+                ],
+            }
         },
         'equipment': ['1 handed mace', 'dagger', 'simple leather armor'],
 

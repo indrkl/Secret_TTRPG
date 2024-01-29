@@ -56,6 +56,24 @@ feats = {
          of burning onto them.
             ''',
          },
+        {'cost': 6,
+         'requires': 'Pyromancy',
+         'name': 'Fire mastery',
+         'effect': '''Whenever a stack of burning is removed that was applied by you, gain a temporary flame token that
+         lasts until end of combat.
+         
+You can spend flame tokens to fuel your spells and attacks:
+
+3 Flame tokens: Apply burning on one of the target's of the spell or attack
+
+5 Flame tokens: Remove a negative status effect from yourself and move it onto the target of the spell or attack.
+
+7 flame tokens: At the end of your attack or spell remove all stacks of burning from the target dealing 3 damage per
+removed stack. If that kills the target, refresh your action limit and dice pool. The cost of this ability increases
+by 5 for the duration of this encounter.
+
+            ''',
+         },
         {'cost': 3,
          'name': 'Fire and ice',
          'effect': '''When burning or freezing applied to enemies by you cancel out the previous freezing or burning
@@ -73,6 +91,24 @@ feats = {
          'name': 'Trickster',
          'effect': '''
          Whenever you apply a level of disoriented or afraid, you also disrupt 1.
+         ''',
+         },
+        {'cost': 6,
+         'name': 'Will breaker',
+         'effect': '''
+As you apply disoriented and afraid onto enemies, your ability to effect the battlefield becomes increasingly stronger
+based on the total levels of these conditions that are currently active.
+
+At least 5 levels: Enemies with disoriented or afraid cannot attack you and have their damage reduced by 1 for each
+level of disoriented and afraid.
+
+At least 10 levels: Enemies with disoriented or afraid get disadvantage to will checks.
+
+At least 15 levels: Enemies with at least 3 combined levels of disoriented and afraid will stop fighting and just fall
+prone and give up. This may not effect enemy heroes.
+
+At least 20 levels: You gain advantage for all your spells targeting enemies with at least one level of disoriented or
+afraid.
          ''',
          },
         {
@@ -186,36 +222,21 @@ don't have disadvantage.
     #     },
     ],
     'Martial': [
-        # {'cost': 1,
-        #      'name': 'Basic dodging',
-        #      'effect': '''You gain +1 max dodge tokens and the dodge ability: whenever you would get hit by an attack
-        #         or as a reaction to anything you may spend 1 dodge token and 2 STA or when failing a reflex save,
-        #         to move 2 m. and completely negate the effects from the attack or pass the reflex save,
-        #         for other effects you are just considered to be in the new location.
-        #         If the attack would have been a critical hit or if you failed your reflex save critically, you need to
-        #         spend 2 dodge tokens and 3 STA instead.
-        #         You can only use this ability while wearing Light armor or no armor''',
-        #  'action': {
-        #      'roll target': '3A',
-        #      'target': 'self',
-        #      'effect': '''recover all dodge tokens''',
-        #     },
-        # },
-#         {'cost': 2,
-#          'requires': 'Basic dodging',
-#          'name': 'Advanced dodging',
-#          'effect': '+1 max dodge token',
-#         },
-#         {'cost': 2,
-#          'requires': 'Advanced dodging',
-#          'name': 'Extreme dodging',
-#          'effect': '+1 max dodge token',
-#         },
-#         {'cost': 3,
-#          'requires': 'Extreme dodging',
-#          'name': 'Legendary dodging',
-#          'effect': '+1 max dodge token',
-#         },
+        {'cost': 3,
+             'name': 'Dodging',
+             'effect': '''Whenever you would receive damage you can react with a R5 physique dice to negate that damage.
+             This cost goes up by 1 X R5 every time you use this ability during encounter. You can take the recover
+             action to reset it to 1 dice again.
+             
+             Dodging requires no or light armor''',
+         'action': {
+             'roll target': 'R5.R5.R5',
+             'proficiency': 'physique',
+             'additional_costs': '1 stamina',
+             'target': 'self',
+             'effect': '''reset the dodging reaction dice cost to 1 dice''',
+            },
+        },
         {'cost': 2,
              'name': 'Medium armor proficiency',
              'effect': '''Remove the penalty of -1 action limit when wearing medium armor''',
@@ -536,6 +557,13 @@ get 2 confusion.
                  },
              ]
             }
+        },
+        {'cost': 2,
+         'name': 'Deep apology',
+         'effect': '''
+         When your or your parties past deeds cause a diplomacy challange to become harder, then once per NPC, you can
+         offer a deep apology to reduce the penalty by 1 dice. 
+         ''',
         },
         {'cost': 5,
          'name': 'Natural leader',

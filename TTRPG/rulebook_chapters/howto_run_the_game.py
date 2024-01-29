@@ -37,7 +37,7 @@ more R6s than players contributed to security, then something bad happens.
 Different roll targets can share proficiencies and required dice, or may not. This creates strain, as if there are 3
 things that require diplomacy proficiency but only one party member is proficient in it, then they probably are the only
 ones who can complete any of them, and therefore need to choose. This is also part of the role playing and player
-ingenuity to figure out how to achieve certain results with their skill sets, and so in the end the dice 
+ingenuity to figure out how to achieve certain results with their skill sets to eliminate some of this pressure.
 """,
 """
 Assign advantage and disadvantage to both players and opponents based on the cleverness and suitability of the proposed

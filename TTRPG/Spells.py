@@ -58,7 +58,9 @@ schools = {
                 'duration': '5 rounds',
                 'concenctration': 'R3',
                 'effect': '''Increase your maximum defense to 2 (note, this does not stack with armor and is only
-                useful if you don't have maximum defense from other sources..
+                useful if you don't have maximum defense from other sources.
+                
+                You can use force proficiency to take the defend basic action.
                 ''',
                 'difficulty': 'R3.R3.R3',
                 'scaling': [
@@ -691,7 +693,7 @@ yes / no / yes and no / yet uncertain''',
     },
 }
 from reportlab.platypus import Table, TableStyle, Paragraph, Spacer, KeepTogether
-from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_title, minor_subtitle, spell_block_style
+from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_title, minor_subtitle, spell_block_style, add_dice_images
 from reportlab.lib import colors
 import re
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -700,7 +702,7 @@ def prep_spell_flowable(spell):
     elements = []
     elements.append(Paragraph(spell['name'], style=minor_title))
     data = [
-        [f"Difficulty: {spell.get('difficulty')}", f"Target: {spell.get('target', '-')}", f"Range: {spell.get('range', '-')}", f"Area radius: {spell.get('radius', '-')}"],
+        [Paragraph(f"Cost: {add_dice_images(spell.get('difficulty', ''))}", style=basic_paragraph_style), f"Target: {spell.get('target', '-')}", f"Range: {spell.get('range', '-')}", f"Area radius: {spell.get('radius', '-')}"],
         [f"Duration: {spell.get('duration', '-')}", f"Concentration: {spell.get('concentration', 'NO')}", "", ""]
     ]
     table = Table(data, colWidths=[120]*4)
@@ -714,9 +716,9 @@ def prep_spell_flowable(spell):
     # style = ParagraphStyle(name='Table Cell', fontSize=12, textColor='black', textWrap=True)
     for scaling in spell.get('scaling', []):
         description = re.sub('\s+', ' ', scaling['description'])
-        data.append([f"Add cost: {scaling['D']}", f"Use limit: {scaling.get('L', 'unlimited')}", Paragraph(description, basic_paragraph_style)])
+        data.append([Paragraph(f"+ {add_dice_images(scaling['D'])}", style=basic_paragraph_style), f"Use limit: {scaling.get('L', 'unlimited')}", Paragraph(description, basic_paragraph_style)])
     if data:
-        table = Table(data, colWidths=[100, 100, 280])
+        table = Table(data, colWidths=[70, 100, 310])
         table.setStyle(TableStyle([
             ('FONTNAME', (0, 0), (-1, -1), 'Helvetica-Bold'),
             ('GRID', (0, 0), (-1, -1), 0.5, colors.gray)]))

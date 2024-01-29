@@ -73,7 +73,7 @@ simply someone who wants favor from your house etc.)
         {
             'requires': 'Talented',
             'name': 'Metamagician',
-            'description': '''Metamagic feats cost 2 less to learn but no less than 0. You can apply 1 level of large or 
+            'description': '''Metamagic feats cost 2 less to learn but no less than 1. You can apply 1 level of large or 
             distant magic to a spell for free without increasing the difficulty, mana cost or metamagic limit.''',
         },
         {

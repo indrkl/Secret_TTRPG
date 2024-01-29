@@ -183,3 +183,17 @@ option_style = ParagraphStyle(
     endDots=None,
     splitLongWords=1,
 )
+
+def add_dice_images(some_str):
+    map = {
+        'R1': '<img src="images/one.png" width=15 height=15 />',
+        'R2': '<img src="images/two.png" width=15 height=15 />',
+        'R3': '<img src="images/three.png" width=15 height=15 />',
+        'R4': '<img src="images/four.png" width=15 height=15 />',
+        'R5': '<img src="images/five.png" width=15 height=15 />',
+        'R6': '<img src="images/six.png" width=15 height=15 />',
+    }
+
+    for key in map:
+        some_str = some_str.replace(key, map[key])
+    return some_str

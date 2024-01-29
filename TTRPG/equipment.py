@@ -17,7 +17,7 @@ equipment = {
                 },
                 {
                     'cost': 'R2',
-                    'effect': 'Additional 1 damage',
+                    'effect': '+ 1 damage',
                 },
                 {
                     'cost': 'R1',
@@ -42,11 +42,11 @@ equipment = {
                 },
                 {
                     'cost': 'R6',
-                    'effect': 'Additional 2 damage',
+                    'effect': '+ 2 damage',
                 },
                 {
                     'cost': 'R6.R6',
-                    'effect': 'Additional 5 damage',
+                    'effect': '+ 5 damage',
                 },
                 {
                     'cost': 'R1',
@@ -67,7 +67,7 @@ equipment = {
             'extra_options': [
                 {
                     'cost': 'R3',
-                    'effect': 'Additional 2 damage',
+                    'effect': '+ 2 damage',
                 },
                 {
                     'cost': 'R6',
@@ -88,11 +88,11 @@ equipment = {
                 },
                 {
                     'cost': 'R3',
-                    'effect': 'Additional 1 damage',
+                    'effect': '+ 1 damage',
                 },
                 {
                     'cost': 'R3.R3',
-                    'effect': 'Additional 3 damage',
+                    'effect': '+ 3 damage',
                 },
             ]
         }
@@ -109,11 +109,11 @@ equipment = {
                 },
                 {
                     'cost': 'R5',
-                    'effect': 'Additional 1 damage',
+                    'effect': '+ 1 damage',
                 },
                 {
                     'cost': 'R5.R5',
-                    'effect': 'Additional 3 damage',
+                    'effect': '+ 3 damage',
                 },
                 {
                     'cost': 'R3.R3',
@@ -130,11 +130,11 @@ equipment = {
             'extra_options': [
                 {
                     'cost': 'R4',
-                    'effect': 'Additional 1 damage',
+                    'effect': '+ 1 damage',
                 },
                 {
                     'cost': 'R4.R4',
-                    'effect': 'Additional 3 damage',
+                    'effect': '+ 3 damage',
                 },
                 {
                     'cost': 'R2',
@@ -142,7 +142,7 @@ equipment = {
                 },
                 {
                     'cost': 'R2',
-                    'effect': 'Reposition yourself within 1 squares freely',
+                    'effect': 'Reposition within 1 sq.',
                 },
             ]
         }
@@ -159,7 +159,7 @@ equipment = {
                 },
                 {
                     'cost': 'R5',
-                    'effect': 'Additional 2 damage',
+                    'effect': '+ 2 damage',
                 },
                 {
                     'cost': 'R2.R2',
@@ -167,7 +167,7 @@ equipment = {
                 },
                 {
                     'cost': 'R2',
-                    'effect': 'Reposition yourself within 2 squares freely',
+                    'effect': 'Reposition within 2 sq.',
                 },
             ]
         }
@@ -184,7 +184,7 @@ equipment = {
                 },
                 {
                     'cost': 'R3',
-                    'effect': 'Additional 1 damage',
+                    'effect': '+ 1 damage',
                 },
                 {
                     'cost': 'R4.R4',
@@ -213,7 +213,7 @@ equipment = {
                 },
                 {
                     'cost': 'R5',
-                    'effect': 'Additional 2 damage',
+                    'effect': '+ 2 damage',
                 },
                 {
                     'cost': 'R1.R1',
@@ -238,15 +238,15 @@ equipment = {
                 },
                 {
                     'cost': 'R5',
-                    'effect': 'Additional 2 damage',
+                    'effect': '+ 2 damage',
                 },
                 {
                     'cost': 'R2.R2.R2',
-                    'effect': 'Apply 1 level of afraid onto enemy',
+                    'effect': 'Apply 1 afraid',
                 },
                 {
                     'cost': 'R2.R2',
-                    'effect': 'Apply 1 level of vulnerable onto enemy',
+                    'effect': 'Apply 1 vulnerable',
                 },
             ]
         }
@@ -291,7 +291,7 @@ This is medium armor that provides 4 maximum defense
     }
 }
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, ListFlowable, ListItem, PageBreak
-from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_title, minor_subtitle, option_style
+from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_title, minor_subtitle, option_style, add_dice_images
 from reportlab.lib import colors
 import re
 
@@ -304,28 +304,35 @@ def prep_equipment_flowable(weapon, name):
 
     if weapon.get('action'):
         action = weapon.get('action', {'cost': '-', 'damage': '-'})
+        if 'base_effect' in action:
+            effect = f"Base effect: {action['base_effect']}"
+        else:
+            effect = f"Base damage: {action['damage']}"
         data = [
-            [f"Roll: {action['cost']}", f"Base damage: {action['damage']}", f"Range: {action.get('range', '-')}"],
+            [Paragraph(f"Base cost: {add_dice_images(action['cost'])}", style=basic_paragraph_style), effect, f"Range: {action.get('range', '-')}", ""],
         ]
-        table = Table(data, colWidths=[160] * 3)
+        if action.get('extra_options'):
+            odd = True
+            for option in action.get('extra_options', []):
+                description = re.sub('\s+', ' ', option['effect'])
+                option = [Paragraph(f"+ {add_dice_images(option['cost'])}", style=basic_paragraph_style),
+                             Paragraph(description, basic_paragraph_style)]
+                if odd:
+                    data.append(option)
+                    odd = False
+                else:
+                    data[-1].extend(option)
+                    odd = True
+            if not odd:
+                data[-1].extend(["", ""])
+
+        table = Table(data, colWidths=[100, 140, 100, 140])
         table.setStyle(TableStyle([
             ('FONTNAME', (0, 0), (-1, -1), 'Helvetica-Bold'),
             ('GRID', (0, 0), (-1, -1), 0.5, colors.gray)]))
         elements.append(table)
 
-        if action.get('extra_options'):
-            elements.append(Paragraph('Extra options:', style=minor_subtitle))
-            data = []
-            for option in action.get('extra_options', []):
-                description = re.sub('\s+', ' ', option['effect'])
-                data.append([f"Roll: {option['cost']}",
-                             f"Limit: {option.get('limit', '-')}",
-                             Paragraph(description, basic_paragraph_style)])
-            table = Table(data, colWidths=[90, 70, 320])
-            table.setStyle(TableStyle([
-                ('FONTNAME', (0, 0), (-1, -1), 'Helvetica-Bold'),
-                ('GRID', (0, 0), (-1, -1), 0.5, colors.gray)]))
-            elements.append(table)
+
 
     for i in range(0, len(elements)-1):
         elements[i].keepWithNext = True
