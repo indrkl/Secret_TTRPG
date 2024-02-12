@@ -156,6 +156,12 @@ timespace_locations = [
             """And finally as Jaxen has observed the players from upstairs he joins the fight together with another 2
             this time elite assassins with 2 more HP, and threatening 2 stacks of poison"""
         ],
+        "enemies": {
+            'pawn': '3 HP, 2 damage in melee, moves 4 to closest enemy.',
+            'knight': '5 HP, 2 damage from range with poison, hits enemies with least or no defense. 7 movement',
+            'bishop': '4 HP, disrupt 1 against players from range with illusion magic, where it hurts most.',
+            'queen': 'Jaxxen',
+        }
     },
     {
         'name': "Festival competitions",
@@ -188,9 +194,11 @@ timespace_locations = [
         ],
     },
     {
-        'name': "",
+        'name': "Apiicius Bonaparte õhtusöök",
         "summary": """
-
+Apiicius kutsus meie kangelased õhtusöögile, kus neil on võimalik igasugu gossipit võimuladviku, vampiiride jne. kohta
+uurida. Apiicius on edev mees, kes tahab lihtsalt näidata kui äge ta on ja igal võimalusel hiilata, ning ta kutsus
+Quigli õhtusöögile lootuses veenduda, et tal lihtsalt vedas too võistlus.
         """,
         "description": """
         """,

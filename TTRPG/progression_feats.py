@@ -22,13 +22,13 @@ feats = {
             'name': 'Spice specialist',
             'description': '''
                 You recover mana using spices twice as effectively. Meaning the first 20 mana cost 1.5 gp to recover,
-                the next 40 cost 2.5 gp to recover and the rest cost 5 gp to recover.
+                the next 40 cost 2.5 gp to recover and the rest cost 5 gp to recover. This feat can only be taken once.
             '''
         },
         {
             'name': 'Arcane understanding',
             'description': '''Whenever you choose to advance in a school of magic or maximum mana, you can learn 1 
-            additional spell''',
+            additional spell from any school. This works retroactively.''',
         },
         {
             'name': 'Battle mage',

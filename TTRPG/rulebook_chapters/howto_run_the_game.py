@@ -10,7 +10,7 @@ say that in that location, there are lot of potential customers, but there is al
 handle the competition? Do you just accept it and try to maximise profit, is something you could offer as default, but
 if they want to price race and try to bankrupt him, then they can offer this idea.
 
-This negotiation phase should end with clear competing desires and challanges, that can be transformed into roll targets
+This negotiation phase should end with clear competing desires and challanges, that can be transformed into roll targets.
 Roll targets can be met by anyone in the scene, they can be assigned to a single player if appropriate, these are all
 the tools for the GM.
 
@@ -34,7 +34,7 @@ the enemy for example makes a similar 6 dice check with proficiency appropriate 
 more R6s than players contributed to security, then something bad happens. 
 """,
 """
-Different roll targets can share proficiencies and required dice, or may not. This creates strain, as if there are 3
+Different challanges can share proficiencies and required dice, or may not. This creates strain, as if there are 3
 things that require diplomacy proficiency but only one party member is proficient in it, then they probably are the only
 ones who can complete any of them, and therefore need to choose. This is also part of the role playing and player
 ingenuity to figure out how to achieve certain results with their skill sets to eliminate some of this pressure.
@@ -74,3 +74,73 @@ past_situational_roll_targets = [
 
 
 ]
+
+techniques = """
+
+1. Make a roll hard, something is hard to achieve, maybe team work and assits are required, they need to tell how they
+assist etc. Make a roll target 4, 5, 6, 7+
+
+2. Choices and constraints. Have multiple roll targets, and players need to prioritize which of the roll targets they 
+focus on. They may have different proficiencies, but since the scene sets the dice target, then they cannot have them
+all.
+
+3. Sinks, provide roll targets which provide something for each dice that is given to the roll target. Most usually lore
+but could also be an ambush ... meaning each dice disorients one opponent.
+
+4. Revealable. Some roll targets are only revealed after the initial roll targets have been met, and so some dice are
+already commited, so there is a chance for players to be gotten off guard.
+
+5. Change of scene atmosphere, that means the change of dice. From a friendly conversation to all of sudden getting
+ambushed, so from a 2/3 to a 5/6.
+
+6. Gamble / push / commit. Have players commit on some course of action with the trade, that they still need to get X
+more dice to succeed or else suffer some consequences,  but they do get to start a new scene and therefore roll new
+dice.
+
+7. Hidden target. Players are not told the target (threat doesn't need to exist), most common to be on guard. If there
+is no enemy, then commiting no dice is not punished, but if there is an enemy, then they can get ambushed if the target
+is not met.
+
+8. No roll target, just describe what they see, what is happening now, and how the scene changes because of the choices.
+
+9. Add roll target as per player reaction.
+
+10. Option, either of the roll targets can be met.
+"""
+
+scenarios = """
+
+1. Players start to question beggars in the slums
+
+Sink - lore - can ask questions from beggars
+
+Hidden - survival - 2, how on guard they are. When they succeed then they see someone paying close attention to them and
+then leaving.
+
+2. Players approach the warehouse
+
+Hidden - survival 3 / 4 - can they spot an ambush
+
+3. Players try to raise money in the festival
+
+Sink - diplomacy - get 20 gp for each dice
+
+4. Questioning Elara
+
+No roll target, just conversation
+
+5. Arrived at warehouse
+
+Hidden - survival 3 - Can they get an ambush on the warehouse guys
+
+Sink - lore - Can they notice something important, maybe they can learn about the nature of the opponent before the
+battle.
+
+6. Players chasing guy the scout
+
+Reveal - physique - 3 / 4 . Catch up to the scout. With 4 before his allies see him, with 3, one of his allies sees him,
+there may be a fight immediately after that, noone gets ambush
+
+Option - diplomacy - 4. Ask the locals for help to tackle the guy, and you catch him before he gets to his allies.
+
+"""

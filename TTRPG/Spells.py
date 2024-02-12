@@ -89,12 +89,12 @@ schools = {
                 'effect': '''This is a heal. Target recovers 1 damaged dice or removes all damage from wounded dice, or
                 removes 1 level of burning, poison or freezing.''',
                 'target': 'single',
-                'difficulty': 'R1.R1.R1',
+                'difficulty': 'R6.R6.R6',
                 'scaling': [
-                    {'D': 'R1', 'description': 'This heal recovers 1 additional damaged dice'},
-                    {'D': 'R1', 'description': 'remove a level of poison'},
-                    {'D': 'R1', 'description': 'remove a level of burning'},
-                    {'D': 'R1', 'description': 'remove a level of freezing'},
+                    {'D': 'R6', 'description': 'This heal recovers 1 additional damaged dice'},
+                    {'D': 'R6', 'description': 'remove a level of poison'},
+                    {'D': 'R6', 'description': 'remove a level of burning'},
+                    {'D': 'R6', 'description': 'remove a level of freezing'},
                 ],
             },
             {
@@ -104,10 +104,10 @@ schools = {
                 'effect': '''Target can change the result of one dice in the dice pool when you cast and each time
                 you concentrate on it
                 ''',
-                'difficulty': 'R1.R1.R1',
-                'concentration': 'R1.R1.R1',
+                'difficulty': 'R6.R6.R6',
+                'concentration': 'R6.R6.R6',
                 'scaling': [
-                    {'D': 'R1.R1', 'description': '''Target can change another dice in their dice pool'''},
+                    {'D': 'R6.R6', 'description': '''Target can change another dice in their dice pool'''},
                 ],
             },
             {
@@ -117,12 +117,12 @@ schools = {
                 'target': 'area',
                 'effect': '''Requires being in the wild. Roots grow from the ground and entangle anyone. 
                     Anyone starting their round or entering the area of effect gain 2 levels of entangled''',
-                'difficulty': 'R1.R1.R1.R1',
-                'concentration': 'R1.R1',
+                'difficulty': 'R6.R6.R6.R6',
+                'concentration': 'R6.R6',
                 'scaling': [
-                    {'D': 'R1', 'description': '''Anyone starting their round or entering the area of effect gain 
+                    {'D': 'R6', 'description': '''Anyone starting their round or entering the area of effect gain 
                     additional 1 level of entangled'''},
-                    {'D': 'R1',
+                    {'D': 'R6',
                      'description': '''Anyone starting their round or entering the area of effect take 2 piercing 
                         damage'''},
                 ],
@@ -143,24 +143,23 @@ schools = {
                 'effect': '''When you have the guarded buff, then allies standing within radius. of the target also
                 have that buff.
             ''',
-                'difficulty': 'R3.R3.R3',
-                'concentration': 'R3',
+                'difficulty': 'R5.R5.R5',
+                'concentration': 'R5',
                 'scaling': [
                     {'D': 'R4', 'L': 1, 'description': '''This spell can target others. Gaining the range of touch.'''},
-                    {'D': 'R3', 'L': 1, 'description': '''Increase maximum defense of the target by 1'''},
+                    {'D': 'R5', 'L': 1, 'description': '''Increase maximum defense of the target by 1'''},
                     {'D': 'R4.R4', 'L': 1, 'description': '''If the target is willing, he may direct an attack onto 
                     them for all attacks made to an ally within this spells radius.'''},
                 ],
             },
             {
                 'name': 'Clarity',
-                'speed': '2 AP',
                 'target': '1 creature',
                 'effect': '''Remove 1 lvl from all negative status effects related to WILL saving throws.
             ''',
-                'difficulty': 'R3.R3.R3',
+                'difficulty': 'R5.R5.R5',
                 'scaling': [
-                    {'D': 'R3', 'description': '''Remove one additional level from those status effects'''},
+                    {'D': 'R5', 'description': '''Remove one additional level from those status effects'''},
                 ],
             },
             {
@@ -171,10 +170,24 @@ schools = {
                 Target has an additional bless dice to be used in roll dice and for actions. One can have bless dice
                 only from one source. 
         ''',
-                'difficulty': 'R3.R3.R3.R3',
-                'concentration': 'R3',
+                'difficulty': 'R5.R5.R5.R5',
+                'concentration': 'R5',
                 'scaling': [
-                    {'D': 'R3.R3', 'description': '''Provide one additional bless dice for targets'''},
+                    {'D': 'R5.R5', 'description': '''Provide one additional bless dice for targets'''},
+                ],
+            },
+            {
+                'name': 'Recover defenses',
+                'range': '5 sq.',
+                'target': 'area',
+                'radius': '1 sq.',
+                'effect': '''
+All friendly allies in the targeted area recover their defenses
+        ''',
+                'difficulty': 'R5.R5.R5.R5',
+                'scaling': [
+                    {'D': 'R5.R5', 'description': '''They gain 1 temporary defense pushing their defense over their
+                    maximum'''},
                 ],
             },
             {
@@ -189,11 +202,11 @@ schools = {
                 This allows players to assist each other by using only 2 dice. Assist provides 1 dice for a roll target,
                 attack, spell, action etc.
         ''',
-                'difficulty': '10 X R3',
+                'difficulty': '10 X R5',
                 'duration': '1 day',
                 'concentration': 'X / 2 mana',
                 'scaling': [
-                    {'D': '8 X R3', 'description': '''
+                    {'D': '8 X R5', 'description': '''
                     Participants may make will actions instead of other participants. They may also do the recover
                     defenses action for other participants. 
                     '''},
@@ -206,25 +219,25 @@ schools = {
             """Elements are fire, water, earth and air. In addition to the combat spells this school provides. One can
             manipulate the elements out of combat, by describing what they want to achieve and GM then setting a roll
             target for that, so that they get to use elemental proficiency when attempting to meet it. You need to
-            have some elemental proficiency to even have the option however."""
+            have some elemental proficiency to even have the option however. Roll targets still use R1"""
         ],
         'spells': [
             {
                 'name': 'Fireball',
-                'difficulty': 'R6.R6.R6',
+                'difficulty': 'R1.R1.R1',
                 'range': '8 sq.',
                 'effect': 'Deal 2 fire damage to everyone in the area.',
                 'save': 'REFLEX',
                 'target': 'area',
                 'radius': '1 sq.',
                 'scaling': [
-                    {'D': 'R6.R6', 'description': 'Deal additional 3 damage'},
+                    {'D': 'R1.R1', 'description': 'Deal additional 3 damage'},
                     {'D': 'R1', 'description': '1 target enemy within radius gets a level of burning'},
                 ],
             },
             {
                 'name': 'Chain lightning',
-                'difficulty': 'R6.R6.R6',
+                'difficulty': 'R1.R1.R1',
                 'range': '8 sq.',
                 'effect': '''Deal 4 lightning damage to a target enemy, and then it jumps to another target enemy,
                 dealing 2 less damage, until it can do no more damage''',
@@ -232,22 +245,22 @@ schools = {
                 'target': 'area',
                 'radius': '1 sq.',
                 'scaling': [
-                    {'D': 'R6.R6', 'description': 'Deal additional 2 damage'},
+                    {'D': 'R1.R1', 'description': 'Deal additional 2 damage'},
                     {'D': 'R1.R1', 'description': 'Everyone hit by chain lightning get 1 level of disoriented'},
                 ],
             },
             {
                 'name': 'Tremor',
-                'difficulty': 'R6.R6',
+                'difficulty': 'R1.R1',
                 'range': '6 sq.',
                 'effect': '''everyone in the target area  gain 2 levels of unbalanced. At the beginning of your round,
                 when you continue to concentrate on this spell, you may move the center of tremor up to 2 sq. When you 
                 are outside the range of the tremor you lose concentration.''',
                 'target': 'area',
-                'concentration': 'R6.R6',
+                'concentration': 'R1.R1',
                 'radius': '2 sq.',
                 'scaling': [
-                    {'D': 'R6', 'description': 'The gain an additional level of unbalanced'},
+                    {'D': 'R1', 'description': 'The gain an additional level of unbalanced'},
                 ],
             },
             {
@@ -255,9 +268,9 @@ schools = {
                 'range': '8 sq.',
                 'effect': '''Target enemy gets one level of freezing''',
                 'target': 'single target',
-                'difficulty': 'R6.R6.R6.R6',
+                'difficulty': 'R1.R1.R1.R1',
                 'scaling': [
-                    {'D': 'R6.R6', 'description': 'Target gets another level of freezing'},
+                    {'D': 'R1.R1', 'description': 'Target gets another level of freezing'},
                     {'D': 'R1', 'description': 'You get to choose which of the dice are frozen'},
                 ],
             },
@@ -266,9 +279,9 @@ schools = {
                 'range': '8 sq.',
                 'effect': '''Make a trap that when triggered casts either fire-ball, chain lightning or freezing
                 upon the target. The cost of this spell scales depending on the dice cost of the target spell. Let the
-                target spell cost be X*R6''',
+                target spell cost be X*R1''',
                 'target': 'single target',
-                'difficulty': '2X*R6',
+                'difficulty': '2X*R1',
                 'scaling': [
                 ],
             },
@@ -279,20 +292,20 @@ schools = {
                 1 extra damage of the chosen damage type with every attack made with this weapon.
                 ''',
                 'target': 'single weapon',
-                'difficulty': 'R6.R6.R6.R6',
+                'difficulty': 'R1.R1.R1.R1',
                 'duration': '3 rounds',
-                'concentration': 'R6.R6',
+                'concentration': 'R1.R1',
                 'scaling': [
-                    {'D': 'R6.R6', 'description': 'target weapon deals an additional 1 damage of the chosen type'},
-                    {'D': 'R6.R6.R6', 'L': 1, 'description': '''You need to have chosen cold. Convert all physical 
+                    {'D': 'R1.R1', 'description': 'target weapon deals an additional 1 damage of the chosen type'},
+                    {'D': 'R1.R1.R1', 'L': 1, 'description': '''You need to have chosen cold. Convert all physical 
                         damage target weapon does to cold damage. Each time that weapon hits an enemy the enemy gets
                         one level of freezing
                     '''},
-                    {'D': 'R6', 'L': 1, 'description': '''You need to have chosen lightning. Convert all physical damage 
+                    {'D': 'R1', 'L': 1, 'description': '''You need to have chosen lightning. Convert all physical damage 
                         target weapon does to lightning damage. Each time that weapon hits an enemy, the enemy
                         gets 2 confusion.
                     '''},
-                    {'D': 'R6.R6', 'L': 1, 'description': '''You need to have chosen fire. Convert all physical damage 
+                    {'D': 'R1.R1', 'L': 1, 'description': '''You need to have chosen fire. Convert all physical damage 
                         target weapon does to fire damage. Each time that weapon hits an enemy, the enemy gets one
                         level of burning.
                     '''},
@@ -304,11 +317,11 @@ schools = {
                 'duration': '2 rounds',
                 'effect': '''Target gets +1 action limit haste buff. Each character can have the haste buff from only 
                 one source''',
-                'difficulty': 'R6.R6.R6.R6',
+                'difficulty': 'R1.R1.R1.R1',
                 'target': 'single',
-                'concentration': 'R6.R6',
+                'concentration': 'R1.R1',
                 'scaling': [
-                    {'D': 'R6.R6.R6', 'L': 1, 'description': '''Haste buff provides additional +1 action limit'''},
+                    {'D': 'R1.R1.R1', 'L': 1, 'description': '''Haste buff provides additional +1 action limit'''},
                 ],
             },
             # {
@@ -440,7 +453,8 @@ schools = {
         by certain feats. Any creature with a hex on them can make a R5.R5 remove hex action using Will proficiency
         for weak hexes, R5.R5.R5 for strong hexes and R5.R5.R5.R5 for extreme hexes. Hexes cannot be applied to 
         your allies to override hexes by your enemies. However if an ally has hexed a creature, then your hex would 
-        override their hex(s), unless you are able to place multiple hexes on the enemy."""
+        override their hex(s) if their hex is weaker or equal to your hex's strength, unless you are able to place 
+        multiple hexes on the enemy."""
         ],
         'spells': [
             {
@@ -555,10 +569,10 @@ schools = {
                 'radius': '1 sq.',
                 'effect': '''Pose an illusionary threat to enemies in the area, they gain 2 levels of disoriented
             ''',
-                'difficulty': 'R4.R4.R4.R4',
+                'difficulty': 'R2.R2.R2.R2',
                 'scaling': [
-                    {'D': 'R4.R4', 'L': 3, 'description': '''Everyone get 1 additional level of disoriented'''},
-                    {'D': 'R4', 'L': 3, 'description': '''One target within radius gets 1 additional level of 
+                    {'D': 'R2.R2', 'L': 3, 'description': '''Everyone get 1 additional level of disoriented'''},
+                    {'D': 'R2', 'L': 3, 'description': '''One target within radius gets 1 additional level of 
                     disoriented'''},
                 ],
             },
@@ -569,9 +583,9 @@ schools = {
                 'effect': '''When a hit would hit you, you may instead move 1 sq. to your chosen direction without
                 provoking any attacks of opportunities and the attack misses.
             ''',
-                'difficulty': 'R4.R4.R4',
+                'difficulty': 'R2.R2.R2',
                 'scaling': [
-                    {'D': 'R4.R4', 'L': 2, 'description': '''Target gains 1 level of disoriented'''},
+                    {'D': 'R2.R2', 'L': 2, 'description': '''Target gains 1 level of disoriented'''},
                 ],
             },
             {
@@ -579,7 +593,7 @@ schools = {
                 'effect': '''You create illusionary images in the space around you, which can impress, surprise, deceive 
                 etc. This is a creative spell so please refer to the creative spell section in the glossary                
             ''',
-                'difficulty': 'R4.??',
+                'difficulty': 'R2.??',
             },
             # {
             #     'name': 'Mirror image',
@@ -604,7 +618,7 @@ schools = {
                 'name': 'Invisibility',
                 'target': 'self',
                 'duration': '2 rounds',
-                'concentration': 'R4.R4',
+                'concentration': 'R2.R2',
                 'effect': '''You appear invisible as long as you are standing still. When you move, cast spells, attack
     or otherwise perform a action with rapid movement, there are ripples that hint others that there is somewhere there
     where you are and also the nature of the movement. Attacks against enemies that rely on sight have advantage, and
@@ -613,14 +627,14 @@ schools = {
     This can also be used as a creative spell during scenes. In this case the cost is RX.R?? where X is the dice used
     in the scene and R?? is the roll target.
             ''',
-                'difficulty': 'R4.R4.R4.R4',
+                'difficulty': 'R2.R2.R2.R2',
                 'scaling': [
-                    {'D': 'R4', 'L': 1, 'description': '''When you move at half speed, then no ripple is creating so you
+                    {'D': 'R2', 'L': 1, 'description': '''When you move at half speed, then no ripple is creating so you
                     have perfect invisibility. This allows you to sneak in broad daylight with advantage'''},
-                    {'D': 'R4.R4', 'L': 1, 'description': '''Casting spells no longer creates ripples.'''},
-                    {'D': 'R4.R4.R4.R4', 'L': 1, 'description': '''Attacking no longer creates ripples. This gives you
+                    {'D': 'R2.R2', 'L': 1, 'description': '''Casting spells no longer creates ripples.'''},
+                    {'D': 'R2.R2.R2.R2', 'L': 1, 'description': '''Attacking no longer creates ripples. This gives you
                     double advantage for attacks'''},
-                    {'D': 'R4.R4', 'L': 1, 'description': '''You can select another ally as the target of this spell. This
+                    {'D': 'R2.R2', 'L': 1, 'description': '''You can select another ally as the target of this spell. This
                     spell gains the range of touch. To maintain the illusion the target must remain within line of sight
                     from you.'''},
 
@@ -629,15 +643,15 @@ schools = {
             {
                 'name': 'Shattering presence',
                 'target': 'self',
-                'concentration': 'R4.R4.R4',
+                'concentration': 'R2.R2.R2',
                 'duration': '3 rounds',
                 'effect': '''Your existance becomes questionable as you start to blur, and appear to be in multiple close places at once.
         It becomes hard to see target you. Any offensive spell or attack targeting you has a 50 % chance to 
         fail.
         ''',
-                'difficulty': 'R4.R4.R4.R4.R4',
+                'difficulty': 'R2.R2.R2.R2.R2',
                 'scaling': [
-                    {'D': 'R4.R4', 'L': 1,
+                    {'D': 'R2.R2', 'L': 1,
                      'description': 'You can target another creature. This spell gains a range of '
                                     '6 sq.'},
                 ],
@@ -655,9 +669,9 @@ schools = {
         succeed, however larger objects can be attempted to be concealed for more dice. Let the final resulting number
         of dice be X. That X is required for concentration cost
         ''',
-                'difficulty': '8 X R4',
+                'difficulty': '8 X R2',
                 'scaling': [
-                    {'D': '3 X R4',
+                    {'D': '3 X R2',
                      'description': 'increase the maximum length of one of the dimension by 5m'},
                 ],
             },
@@ -669,11 +683,11 @@ schools = {
                 'name': 'Diviners advantage',
                 'target': 'self',
                 'effect': '''Increase your maximum defenses by 2 and recover all maximum defenses.''',
-                'difficulty': 'R5.R5.R5.R5',
-                'concentration': 'R5.R5',
+                'difficulty': 'R4.R4.R4.R4',
+                'concentration': 'R4.R4',
                 'duration': '2 rounds',
                 'scaling': [
-                    {'D': 'R5', 'L': 3, 'description': '''Increase maximum defense by another 2
+                    {'D': 'R4', 'L': 3, 'description': '''Increase maximum defense by another 2
                     '''},
                 ],
             },
@@ -681,9 +695,9 @@ schools = {
                 'name': 'Glimpse into future',
                 'effect': '''During scene you can ask a question about the scene to which GM answers honestly either 
 yes / no / yes and no / yet uncertain''',
-                'difficulty': 'R5.R5.R5.R5',
+                'difficulty': 'R4.R4.R4.R4',
                 'scaling': [
-                    {'D': 'R5.R5', 'L': 1, 'description': '''
+                    {'D': 'R4.R4', 'L': 1, 'description': '''
                         Ask another follow-up question.
                     '''},
                 ],

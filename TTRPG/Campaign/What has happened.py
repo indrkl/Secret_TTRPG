@@ -23,5 +23,14 @@ Esmeralda_past = [
     """Hõbe nahkhiirte druiidid. Argentum maagid. """
 ]
 
+Met_NPCs = {
+    'Miranda': '''Investigating her lost brother in the east, invited players to help her. Currently investigating 
+    beastcrafting''',
+    'Quigli': 'Renowned quizzer, member of the Bonaparte family, has a small estate in high town of Aldor',
+    'Arnold the Elf': 'Poacher, who caught a silver bat',
+    'Elara': 'Priestess helping people out in Aldor',
+    'Benjamin Reed': 'Organizes music festival in Aldor',
+}
+
 
 kuld = 605

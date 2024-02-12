@@ -5,6 +5,40 @@ feats = {
          'effect': '''You are able to communicate with animals. To get desired communication, GM can provide you a dice
          target for the scene, and you can use nature school of magic proficiency to meet the target'''
          },
+        {'cost': 5,
+         'requires': 'Commune with animals',
+         'name': 'An useful pet',
+         'effect': '''
+You have a pet that is useful both in combat and outside of it. Choose a physical form, and then a out of combat 
+ability:
+
+Physical forms:
+
+The pet is a small creature, either flying, or jumping around, they are super agile and so enemies usually cannot hit
+them easily and therefore ignore them. AoE abilities still knock them out. In combat, they can be ordered to disrupt one 
+enemy each turn. Small pet has 1 HP.
+
+The pet is a large predator who acts like a minion meaning they always do fixed damage of 2 and have fixed HP of 5.
+Their downside is that they can be taken out by the enemy.
+
+The pet is a mount, who you can ride on. In combat whenever you use a dice for movement you can move 2 extra squares.
+The mount has 6 HP. When you or the mount are attacked you can choose who defends the attack / takes the damage. AoE
+effects still effect both of you.
+
+When a pet is knocked out, they require time, care and 20 gp worth of medical herbs to fix them up. If they are knocked
+out but take additional damage, either because the enemy is sadistic or there is some AoE damaging effect, they die,
+and your character is devastated by the fact. However it is possible to find a new pet over time as you get over it.
+
+Outside combat bonuses. Choose 1 for the pet:
+
+1. Outside combat you have advantage for survival checks when detecting ambushes, traps and other threats.
+
+2. Outside of combat they give you advantage when tracking or chasing someone.
+
+3. Outside of combat the pet increases your prestige, and thus can give you an advantage in diplomacy checks where 
+appropriate.
+         '''
+         },
         {'cost': 2,
          'name': 'Adept attuner',
          'effect': '''You can attune to one additional magical item'''
@@ -168,16 +202,22 @@ You are more skilled at including others in your rituals. All casters who join y
 don't have disadvantage.
             ''',
         },
-    #     {
-    #         'cost': 8,
-    #         'name': 'Blood magic',
-    #         'effect': '''
-    # You may cast spells using your hit dice instead of mana. Each hit dice you spend makes a spell 5 mana cheaper and
-    # increases the max difficulty of the spell by 1.
-    #
-    # Advance twice in any school of magic and learn 1 spell.
-    #         ''',
-    #     },
+        {
+            'cost': 6,
+            'name': 'Blood magic',
+            'effect': '''
+You may spend your life points the same way you can spend your mana to make spells cheaper. By doing that you take
+damage directly to your life bypassing defense and damage reduction.
+    
+For 1 damage reduce the spell cost by 1 dice, for 3 damage, by 2 dice, for 6 damage by 3 dice and for 10 damage by 4 
+dice. You can combine this with mana, and the maximum reduction using your life points is equal to your spell school
+proficiency. However the combined total reduction with reduction from mana is your proficiency + 2. So if your
+proficiency is 4, then you could spend 10 life points and 3 mana to reduce the cost by 6 dice, but you cannot spend
+10 life points and 6 mana to reduce it by 7 any more.
+
+Also, you cannot be healed by the heal spell (that includes healing potions which apply the spell on you).
+            ''',
+        },
     #     {
     #         'cost': 5,
     #         'requires': 'Blood magic',

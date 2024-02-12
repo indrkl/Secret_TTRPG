@@ -99,7 +99,7 @@ equipment = {
     },
     'sword': {
         'action': {
-            'cost': 'R5.R5',
+            'cost': 'R4.R4',
             'damage': 2,
             'range': 'melee',
             'extra_options': [
@@ -108,11 +108,11 @@ equipment = {
                     'effect': 'Recover 1 defense',
                 },
                 {
-                    'cost': 'R5',
+                    'cost': 'R4',
                     'effect': '+ 1 damage',
                 },
                 {
-                    'cost': 'R5.R5',
+                    'cost': 'R4.R4',
                     'effect': '+ 3 damage',
                 },
                 {
@@ -288,7 +288,58 @@ This is a heavy armor that provides 4 maximum defense and 1 damage reduction
         'effect': '''
 This is medium armor that provides 4 maximum defense
         '''
-    }
+    },
+    'claw': {
+        'effect':
+            '''
+This is not a weapon, but can be used when taking the unnatural limbs racial innate feat.
+''',
+        'action': {
+            'cost': 'R2.R2',
+            'damage': 2,
+            'range': 'melee',
+            'extra_options': [
+                {
+                    'cost': 'R1',
+                    'effect': 'bypass damage reduction',
+                },
+                {
+                    'cost': 'R2',
+                    'effect': '+ 1 damage',
+                },
+                {
+                    'cost': 'R1',
+                    'effect': 'Apply 1 vulnerable',
+                },
+            ]
+        }
+    },
+    'secondary claw': {
+        'effect':
+            '''
+This is not a weapon, but can be used when taking the unnatural limbs racial innate feat.
+''',
+        'action': {
+            'cost': 'R4.R4',
+            'damage': 2,
+            'range': 'melee',
+            'extra_options': [
+                {
+                    'cost': 'R6',
+                    'effect': 'bypass damage reduction',
+                },
+                {
+                    'cost': 'R2',
+                    'effect': '+ 1 damage',
+                },
+                {
+                    'cost': 'R6',
+                    'effect': 'Apply 1 vulnerable',
+                },
+            ]
+        }
+    },
+
 }
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, ListFlowable, ListItem, PageBreak
 from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_title, minor_subtitle, option_style, add_dice_images

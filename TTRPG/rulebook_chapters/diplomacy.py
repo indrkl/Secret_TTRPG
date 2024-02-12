@@ -27,5 +27,6 @@ of wealth or up to 1 month of work, 3 extra dice. And so on.
 Whenever party does something, completes a quest, does another great deed, something happens in the plot, or they just
 create some general wibe, GM hands them a story card, which basically provides free diplomacy dice for certain 
 encounters. For example you save a village from destruction, then you get a card which gives +1 diplomacy dice for
-interactions with everyone in the village, and the ruling count who owns the village.
+interactions with everyone in the village, and the ruling count who owns the village. This is basically the aspects
+system in FATE. 
 """

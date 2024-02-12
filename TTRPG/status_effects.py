@@ -33,7 +33,7 @@ In order to make any offensive actions during your turn you need to meet a roll 
     {'name': 'vulnerable', 'description': '''You take 1 additional damage per level in vulnerable, this counteracts
     damage reduction. Vulnerable levels are lost at the beginning of your round.'''},
     {'name': 'unbalanced', 'description': '''
-        (REF R4) You can have up to 4 levels of unbalanced, you need to check R3.R4 to remove all levels of unbalanced.
+        (REF R4) You can have up to 4 levels of unbalanced, you can spend R3.R4 (reflex) to remove all levels of unbalanced.
         if you get to 4 levels of unbalanced, you fall over, getting prone status but losing all levels of unbalanced,
         if you are wearing heavy armor or are a large creature and would get a level of unbalanced, you have a 50 % 
         chance to not get it.'''},
@@ -45,9 +45,9 @@ In order to make any offensive actions during your turn you need to meet a roll 
         (FORT) You have some specific poison on you. Each poison can stack, but only the highest stacked poison takes
         effect. Every round one poison stack is removed from each poison after applying poison effect.'''},
     {'name': 'freezing', 'description': '''(FORT) Every level of freezing disable one dice from your dice pool.'''},
-    {'name': 'burning', 'description': '''(REF)For each level of burning, one takes 1 damage at the start of their round. 
-        One can fall prone and spend the entire round (losing all concentration etc.) to lose all the stacks of
-        burning. Freezing and burning levels cancel each other.'''},
+    {'name': 'burning', 'description': '''(REF R3.R4) For each level of burning, one takes 1 damage at the start of 
+        their round. One can fall prone and spend the entire round (losing all concentration etc.) to lose all the 
+        stacks of burning. Freezing and burning levels cancel each other.'''},
     {'name': 'blinded', 'description': '''Characters who are blinded, cannot see. Movement costs twice as much unless
     you have blind-sight. Cannot target outside blind sight range. And attacks require 1 additional power dice to make
     '''},

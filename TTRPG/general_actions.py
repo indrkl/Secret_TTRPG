@@ -5,9 +5,9 @@ actions = [
         'description': '''
 Remove a level of disoriented or afraid from you.
         ''',
-        'difficulty': 'R5.R5',
+        'difficulty': 'R4.R5',
         'scaling': [
-            {'D': 'R5.R5', 'description': '''Remove all levels of that type from you'''},
+            {'D': 'R4.R5', 'description': '''Remove all levels of that type from you'''},
         ],
     },
     {
@@ -25,7 +25,7 @@ This does not spend action limit. Remove a level of poison or freezing from you
         'name': 'Move',
         'profieciency': 'Physique',
         'description': '''
-Move X squares where X is the dice result that you use to move.
+Move X squares where X is the dice result that you use to move. This action can only be taken twice per turn.
         ''',
         'difficulty': 'RX',
     },

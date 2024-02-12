@@ -46,9 +46,9 @@ dice in the dice pool, but do not consume action limit.
     {
         'name': 'Roll target',
         'description': """
-All actions have some certain roll target. For example R6.R6.R6 means that you need 3 dices with the 6 result in order
+All actions have some certain roll target. For example R6.R6.R6 means that you need 3 dice with the 6 result in order
 to perform this action. Also various outcomes in social encounters or campaign in general have roll targets, which have
-to be met in order to get the desirable results. 
+to be met in order to get the desirable results, these are also called as challanges.
         """
     },
     {
@@ -103,8 +103,13 @@ double disadvantage, in which case it is 2 power dice that is needed less or mor
 At all times the game is either in campaign mode or combat mode. In campaign mode the order of things is much more loose
 and really a constant negotiation and feel good between the GM and players.
 
-In combat however, the order of action is determined by initiative order and the rules of what actions are allowed, what
-is their effect and where everyone are are strictly determined by the rules of this game.
+In combat however, The order is more strict. The surprise round may vary, but afterwards each round works as follows:
+GM declares the threats and intentions of all the enemies. Players get to damage, move and disrupt the plans of the
+enemies, and finally the remaining undisrupted threats resolve, meaning players get dealt damage and negative status
+effects.
+
+If the opposing side has a villain (powerful enemy), then he may interrupt players turns, or do his things with the
+rest of the enemies. Either way he rolls XD6 as well and plays very closely to player characters.
         '''
     },
     {
@@ -130,7 +135,7 @@ but not maximum defense.
 
 3. The rest of the damage hits the character's "life pool", see next topic
 
-Defense can be recovered by taking the compose defense action, with which one recovers up to their maximum number of
+Defense can be recovered by taking the Defense action, with which one recovers up to their maximum number of
 defense.
         '''
     },
@@ -154,6 +159,8 @@ still mitigate.
 5. Note that you cannot set aside bonus dice from the dice pool, but only the dice granted to you inherently.
 
 6. You cannot set aside scarred dice as long as you have normal dice.
+
+7. Scarred dice always only mitigate 1 damage.
         '''
     },
     {
@@ -164,10 +171,14 @@ them in different color, like red for example).
 
 Scarred dice can only be used as 1, 2 or 3 in any roll target. You can still nudge them lower if they roll 4, 5 or 6.
 
-At the beginning of each day after a proper rest, by spending various resources like herbs, good food etc. one can
-change scarred dice back to normal dice.
-To change a single dice back it costs 15 gp worth of resources, to change 2 dice back it costs 50 gp and to change 3 dice
-back it costs 150 gp worth of resources.
+To heal players can take time out and rest properly, which passes time and allows adviseries to advance in their plans 
+as well. This is an abstraction, and can take from a few days to a month depending on the healing conditions, the world
+and what not.
+
+By spending various resources like herbs, good food etc. one can change scarred dice back to normal dice.
+
+To change a single dice back it costs 15 gp worth of resources, to change 2 dice back it costs 50 gp and to change 3 
+dice back it costs 150 gp worth of resources.
      """,
     },
     {
@@ -180,8 +191,13 @@ exhausted dice per round.
     {
     'name': 'incapacitated',
      'description': """
-When you have no more dice in your dice pool, you are incapacitated, cannot move nor do any actions, even if you have
-bonus actions.
+When you have no more dice in your dice pool, you are incapacitated, cannot move normally nor do any actions, even if 
+you have bonus actions or dice. Your character can still talk, and crawl 1 sq. per round.
+
+Each damage turns one of the set aside dice into scarred dice (you can only receive healing by scarring a
+not scarred dice).
+
+If there are no dice left to scar when you take damage, you die.
      """,
     },
     {
@@ -199,13 +215,14 @@ enemies. But here are the general guidelines for how moral is lost:
 7. Defeating an enemy increases moral by 2
      """,
     },
-#     {
-#     'name': 'Death',
-#      'description': """
-# When a creature has 0 or less hit points and they are forced to through a hit dice, but they have none left, they die.
-# Death is permanent. So if this happens to a player, they simply discard that character and need to make a new one.
-#      """,
-#     },
+    {
+    'name': 'Death',
+     'description': """
+When a creature, whose all dice are scarred takes damage, they die.
+
+Death is permanent. So if this happens to a player, they simply discard that character and need to make a new one.
+     """,
+    },
     {
         'name': 'Resources',
         'description':"""
@@ -213,7 +230,7 @@ Each path has a specific resource associated with their path. Mages have mana, M
 luck. Each resource is used for different effects and have different rules for recovering it. Mana is recovered during
 long rest by consuming expensive spices and is used to cast spells. 
 Stamina is recovered each encounter and can be used during combat to increase action limit, use scarred dice 
-unconstrained and for some combat abilities, and luck tokens are recovered one a story arch finishes and are used to 
+unconstrained and for some combat abilities, and luck tokens are recovered when a story arch finishes and are used to 
 change the outcome of a single dice in a roll, or to gain advantage.
         """
     },
@@ -225,9 +242,9 @@ to spend mana to reduce the number of dice required to cast that spell.
 For 1 mana reduce the spell cost by 1 dice, for 3 mana, by 2 dice, for 6 mana by 3 dice and for 10 mana by 4 dice. You
 cannot reduce the cost by more than your proficiency in the spell's school of magic. Note that this is for casting
 spells during combat. When using magic in a scene, the mana cost is tripled with regards to lowering the dice
-requirements to not trivialise most roll targets.
+requirements to not trivialise most challanges.
 
-Mana is recovered during rest by consuming quite pricy magical spices. You must spend enough resources to reach magximum
+Mana is recovered during rest by consuming quite pricy magical spices. You must spend enough resources to reach maximum
 man, that means the more you consumed your mana during an encounter, the more pricy it will be. 
 
 For the first 1 - 10 mana, the cost of spices is 3 gp per mana.
@@ -265,7 +282,7 @@ In additional some abilities may require stamina or provide means to recover sta
 When advancing in the skilled path, characters can increase their maximum luck tokens. Luck tokens can be used to make
 a roll lucky, meaning you can change the outcome of a single dice. Luck tokens are recovered at the end of a campaign
 arc, this is a bit at GM/s discretion, what that means. A campaign arc should be involve multiple small quests, last
-several sessions and conclude with some something impactful, opening up the plot significantly.
+several sessions and conclude with something impactful, opening up the plot significantly.
 
 In additional some abilities may require Luck tokens to be used.
      """,
@@ -300,7 +317,7 @@ you can do based on your proficiency.
 
 For fortitude you need to spend your dice from the dice pool, but they don't lower you action limit.
 
-For will saves, the spent dice also count towards you action limit.
+For will saves, the spent dice also count towards your action limit.
      """,
      },
     {'name': 'Concentration',
@@ -354,8 +371,9 @@ action limit, like all fortitude checks.
      },
     {'name': 'Stealth',
      'description': '''
-There is no stealth skill in the game, instead survival skill is used and depending on your familarity with the
-environment you get a bonus. Still there are some things that refer to it, in the forms of penalties etc.
+There is no stealth skill in the game, instead either survival or concealment skill is used and depending on your 
+familarity with the environment you may get a bonus or penalty. Still there are some things that refer to it, in the 
+forms of penalties and bonuses etc.
      '''
      },
     {'name': 'Different armors',
@@ -405,15 +423,46 @@ skill checks and the combination of presented problems, hidden problems, their t
 checks presents an outcome moving the story forward.
     '''
     },
+    {'name': 'Scene dice target',
+     'description': '''
+Each scene has a specific dice target. All roll targets, that are created by the scene require that target, but 
+obviously has different skill proficiencies. Player spells and abilities are however unaffected by this dice target.
+
+The target is decided by the nature and atmosphere of the scene.
+
+1 - cold, but not hostile, when professionalism or clear etiquette is expected. Audience with a king, negotiations with
+shrewd merchant, talking with spies. You are not in danger, but also gaining what you want is difficult.
+
+2 - Friendly atmosphere, a party, talking with people with good will towards you, calm, slow movement. No physical
+activity, no energy is required.
+
+3 - Friendly atmosphere, but a more active activity. Travelling in friendly territory, trading actively. Taking part
+of a competition etc.
+
+4 - Neutral to cold atmosphere, could turn hostile, but not currently. 
+
+5 - Hostile atmosphere, but the possible opponents are not very harsh or sharp, or when the fight is still not evident.
+Moving in hostile territory, facing a group of bandits, who demand money, climbing a mountain. 
+
+6 - Hostile, dangerous atmosphere, which is also very difficult, the situation may end up as combat any second now,
+any mistake could have damaging consequences.
+
+Note, that 1 and 6 are the hardest dice, so they represent difficulty. Choosing them is not just extreme friendly
+or hostile, these are reserved for 2 and 5, they represent difficulty of the situation.
+
+When the atmosphere changes, then so do the dice targets. For example we have a friendly scene, and then players insult
+deeply someone, and all of sudden the scene target changes to 4 or 5, which obviously consequences to the story as well.
+    '''
+    },
     {'name': 'Is there such a thing in the game-world',
      'description': '''
 During each of the encounters and story beats, each player may ask the GM if there is some thing in the game-
 world, which the GM didn't describe beforehand but which might sound plausible. When making the request, it
 is recommended to also ask for the functionality that they imagine they would want to get out of it. This
 allows the GM to provide something that is more plausible but with similar functionality. 
-The GM sets the base DC (0, very likeyly, 5, plausible, 10, unlikely, 15, very unlikely, 20, nearly impossible) 
-and rolls a d20 to add to the base DC to make the final DC. Then choose a check they need to make, and if 
-successful then you describe a way this can exist, and how they can achieve what they want using this knowledge.        
+The GM sets the base DC (3, very likeyly, 7, plausible, 13, unlikely, 18, very unlikely, 20, nearly impossible) 
+and rolls a d20. If the result is higher than DC then GM describes a way this can exist, and how they can achieve what 
+they want using this knowledge.        
      '''
      },
     {'name': 'Group focuses',
@@ -447,6 +496,63 @@ override the spell's own power dice.
 
 The default range for effecting someone is 6 sq.
      '''
+
+    },
+    {
+        'name': 'Combat',
+        'description': '''
+Combat has usually 2 sides. The player characters and their allies, and the enemy. The combat turns are simple. First
+the players move in turn order decided by their leader (leader is chosen at each game session based on leadership 
+skill). Then all the mobs move by the following order: Bishops > Pawns > Rooks. Knights can be used in any of the other
+pieces turns. For each piece type enemy mobs move first, and then allied mobs move second.
+
+The combat is designed so that, you can easily add more than twice as many enemies against the heroes, and they would
+still be able to win the fight with some wounds, resulting in more epic, and brutal cinematic fights.
+        '''
+    },
+    {
+        'name': 'Mobs',
+        'description': '''
+To make the combat flow quicker, then all enemies except for special characters have fixed attack damage, movement range 
+and HP. There are 4 types of mobs, and each opposing encounter composition has the same statistics within a single type.
+To make it simpler, they are represented by famous chess pieces, which is nice, since you can take them from your
+chess game laying around and you already have the correct pieces to represent enemy units:
+
+Pawns: the back bone and core of any encounter. They don't have special abilities, and have least HP, ATK and MV. Their
+tactics usually involve simply attacking the nearest enemy.
+
+Knights: Fast moving, high maneuverable units, they have slightly more HP, ATK than pawns and the most MV out of any of
+the units. Their tactics involve attacking the weakest links, high aggro targets or someone who is already vulnerable.
+
+Bishops: Ranged supporters, either archers, support spell casters, cyclops throwing stones etc. They often have high ATK
+but are comparable to pawns with regards to HP and MV.
+
+Rooks: Tanks, high HP units with better ATK than pawns but not necessarily better movement.
+
+In addition, when heroes apply status effects to Mobs, then they disrupt their turns, so that they don't do their move
+or attack action, but shrug of some of the negative status effects.
+
+While pawns and bishops have disoriented or afraid, they skip their turn and lose 1 level of those. If they have 3
+levels of those, they give up and flee the fight. If they have any levels of burning, they take the damage, skip their
+turn and lose all of them. If they are poisoned by a damaging effect, they simply do their turn and take the damage.
+If they have any levels of freezing they are removed from combat.
+
+Knights and rooks can lose up to 2 levels of disoriented or afraid or all of burning (still take the damage). If they
+only lose 1 level of those, they take their turn partially by doing half movement and half damage or either movement or
+damage, halving is rounded down. If they have 2 levels of freezing, they are also removed from combat, or when they have
+5 levels of combined disoriented and afraid. If they have 1 levels of freezing, then they act as if removing one level
+of some negative effect every turn (without removing it) and can only remove 1 levels of disoriented/afraid.
+
+In addition if a mob takes at least half of their hit points in damage they are also shocked and they skipped their next
+turn.
+
+This gives you the baseline. In different line ups, like for example when fighting a tribe of giants, this may differ.
+Also you could have an elite army, and all encounters against them, even the pawns would feel a lot tougher, and could
+have much stronger defensive and offensive capabilities.
+
+Disadvantage for mobs halves their damage. And advantage gives them up to 2 extra damage but no more than 50 % of their
+original damage
+        '''
 
     },
 ]

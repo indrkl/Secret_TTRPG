@@ -45,6 +45,6 @@ def get_stats(target_dice, target_count, sample_size):
 
 
 sample_size = 10000
-for target_count in range(3, 7):
+for target_count in range(2, 7):
     for target_dice in [4, 5, 6]:
         get_stats(target_dice, target_count, sample_size)

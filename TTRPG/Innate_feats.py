@@ -22,10 +22,10 @@ Adept: You don't take any falling damage as long as you are wearing light armor 
 you can glide, falling 6 sq. per round and moving 6 sq. per round at any direction.
 
 Talented: You don't take any falling damage. If you are wearing light or no armor, and are not carrying more than
-1/5th of your carry weight, then you can fly at your move speed.
+1/5th of your carry weight, then you can fly as your move action. If you do, move 2 less squares.
 
 Legendary: You don't take any falling damage. If you are wearing light or no armor, and are not carrying more than
-1/5th of your carry weight, then you can fly at twice your move speed.
+1/5th of your carry weight, then you can fly at your move speed.
             ''',
         },
         {
@@ -48,6 +48,28 @@ Natural armor bonus increases by 1 at levels 7 and 14
 Also when you are talented or legendary, then you get the option to take the heavy armor penalty (cannot take both this
 and no armor bonus) in order to get 1 damage reduction. This increases to 2 damage reduction at level 7 and to 3 damage
 reduction at level 14
+            ''',
+        },
+        {
+            'requires': 'Adept',
+            'name': 'Claws',
+            'description': '''
+You have claws. They can be used to attack. They use claw proficiency which can be upgraded using either Martial path
+or the path which innate feat is replaced by this one.
+
+Adept: You have claws which enable you to do a simple claw attack when unarmed. They use claw proficiency
+and R2 as the power dice. Check the claw statistics under equipment.
+
+Talented: Your left hand claw uses R4 as the power dice, check the secondary claw statistics.
+
+Legendary: Your claw proficiency is not shared between the two hands.
+            ''',
+        },
+        {
+            'requires': 'Legendary',
+            'name': 'Four hands',
+            'description': '''
+You have four hands, meaning you can hold 4 one handed items, 2 two handed items or any combination in between.
             ''',
         },
     ],
