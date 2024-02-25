@@ -1,4 +1,4 @@
-weapon_classes = ['dagger', 'bow', 'sword', 'axe', 'mace', '2H sword', '2H axe', '2H mace', 'spear', 'shield']
+weapon_classes = ['dagger', 'bow', 'sword', 'axe', 'mace', '2H sword', '2H axe', '2H mace', 'spear', 'shield', 'unarmed']
 
 equipment = {
     'dagger': {
@@ -25,6 +25,27 @@ equipment = {
                 },
                 {
                     'cost': 'R1.R1',
+                    'effect': 'Disrupt 2',
+                },
+            ]
+        }
+    },
+    'unarmed': {
+        'action': {
+            'cost': 'R2',
+            'damage': 1,
+            'range': 'melee',
+            'extra_options': [
+                {
+                    'cost': 'R2',
+                    'effect': '+ 1 damage',
+                },
+                {
+                    'cost': 'R2.R2',
+                    'effect': 'Disorient 1',
+                },
+                {
+                    'cost': 'R6.R6',
                     'effect': 'Disrupt 2',
                 },
             ]
@@ -226,7 +247,7 @@ equipment = {
             ]
         }
     },
-    '2 handed axe': {
+    'two handed axe': {
         'action': {
             'cost': 'R5.R5',
             'damage': 3,
@@ -247,6 +268,31 @@ equipment = {
                 {
                     'cost': 'R2.R2',
                     'effect': 'Apply 1 vulnerable',
+                },
+            ]
+        }
+    },
+    'Two handed axe of flames': {
+        'action': {
+            'cost': 'R5.R5',
+            'damage': 3,
+            'range': 'melee',
+            'extra_options': [
+                {
+                    'cost': 'R5',
+                    'effect': 'Remove guarded status effect',
+                },
+                {
+                    'cost': 'R5',
+                    'effect': 'Apply a stack of burning onto the enemy',
+                },
+                {
+                    'cost': 'R2.R2',
+                    'effect': 'Apply 1 afraid for every 3 stacks of burning on the enemy',
+                },
+                {
+                    'cost': 'R2.R2.R2',
+                    'effect': 'Apply 1 vulnerable for every stack of burning on the enemy',
                 },
             ]
         }
@@ -272,11 +318,12 @@ defense by 2 and damage reduction by 1. Also recover 2 defense.
     'staff': {
         'effect':
             '''
-Instead you have 2 additional normal spell options and 1 signature spell option. The signature spell has advantage'''
+Instead you have 2 additional normal spell slots and 1 signature spell slot. The spell used in the signature spell slot
+has advantage. Signature spell cannot be switched out mid combat.'''
     },
     'simple leather armor': {
         'effect': '''
-Provides 2 maximum defense
+Light armor: Provides 2 maximum defense
         '''
     },
     'Heavy chain mail': {
@@ -339,8 +386,8 @@ This is not a weapon, but can be used when taking the unnatural limbs racial inn
             ]
         }
     },
-
 }
+
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, ListFlowable, ListItem, PageBreak
 from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_title, minor_subtitle, option_style, add_dice_images
 from reportlab.lib import colors

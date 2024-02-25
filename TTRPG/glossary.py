@@ -11,7 +11,7 @@ the dice pool, until they have no more of them in the dice pool at which point t
         'name': 'Dice Roll',
         'description': """
 During a dice roll, your entire dice pool is rolled at once. Afterwards you can pick and choose which dice to use on
-which action taking account the action limit.
+which action.
 
 Out of combat, dice rolls happens at the beginning of each scene.
 
@@ -29,18 +29,10 @@ R2.
         """
     },
     {
-        'name': 'Action limit',
-        'description': """
-While you can never spend more dice than in your dice pool. You also cannot spend more dice on actions per round 
-than your action limit. By default heroes start with an action limit of 5. Action limit does not apply outside combat 
-or for reactions.
-        """
-    },
-    {
         'name': 'Reactions',
         'description': """
 Some feats provide characters abilities for reactions under certain conditions outside their turn. These still consume 
-dice in the dice pool, but do not consume action limit.
+dice in the dice pool.
         """
     },
     {
@@ -64,8 +56,8 @@ nudge dice results in order to easily meet the roll target so that the desired r
 Proficiency bonus ranges from 1 to 4. That means how many times you can nudge dice by 1 in a given round  / scene to
 meet a roll target that is related to the skill, weapon or school of magic of the proficiency at hand.
 
-For example with a proficiency of 2 you can nudge the roll of 2 dice by 1, or a roll of a single dice by 2. You can only
-nudge the rolls of a dice used on the roll target that you actually use on the roll target.
+For example with a proficiency of 2 you can nudge the roll of two separate dice by 1, or a roll of a single dice by 2. 
+You can only nudge the rolls of a dice used on the roll target that you actually use on the roll target.
         '''
     },
     {'name': 'Lucky',
@@ -119,14 +111,17 @@ You may know a lot of spells, or be able to do a lot of actions or use a lot of 
 use a limited number of them in combat decided by your combat setup. By default all players have 3 slots. One for
 right hand, one for left hand, and one for mental. The action available for the right and left hand is decided by what
 you wield. Mental slot can be filled with a spell, skill action etc. Also by freeing left or right hand you can
-instead have an additional mental slot. Magical weapons like wands or staves also grant mental slots for spells
+instead have an additional mental slot. Magical weapons like wands or staves also grant mental slots for spells.
+
+By spending 2 dice from the dice pool, a player can switch what they are wearing in their hands with a backup setup,
+the mental slots however cannot be changed.
         '''
     },
 
     {
         'name': 'taking damage and various defenses',
         'description': '''
-If you X damage then it is mitigated followingly:
+If you take X damage then it is mitigated followingly:
 
 1. First substract damage reduction from the damage
 
@@ -213,6 +208,7 @@ enemies. But here are the general guidelines for how moral is lost:
 5. Dropping to 1 dice in your dice pool reduces moral to 0 unless enemy is raging or smth equivelant.
 6. Getting outnumbered reduces moral by 2
 7. Defeating an enemy increases moral by 2
+8. For mobs losing half of their HP+DEF they lose 3 moral
      """,
     },
     {
@@ -229,7 +225,7 @@ Death is permanent. So if this happens to a player, they simply discard that cha
 Each path has a specific resource associated with their path. Mages have mana, Martials have stamina and Skilled have
 luck. Each resource is used for different effects and have different rules for recovering it. Mana is recovered during
 long rest by consuming expensive spices and is used to cast spells. 
-Stamina is recovered each encounter and can be used during combat to increase action limit, use scarred dice 
+Stamina is recovered each encounter and can be used during combat to increase use scarred dice 
 unconstrained and for some combat abilities, and luck tokens are recovered when a story arch finishes and are used to 
 change the outcome of a single dice in a roll, or to gain advantage.
         """
@@ -260,19 +256,18 @@ their mana to full.
      },
     {'name': 'Stamina',
      'description': """
-When advancing in the martial path, characters can increase their maximum stamina. Stamina can be used to increase the
-action limit for a given round. Stamina is recovered for every encounter and can be used as such:
+When advancing in the martial path, characters can increase their maximum stamina. Stamina can be used for following
+effects:
 
-Spend 1 stamina to gain 1 additional action limit.
+Recover all defenses with just one R2 dice: 1 stamina
 
-Spend 3 stamina to gain 2 additional action limit.
+Deal 1 additional damage with your attack: 1 stamina
 
-Spend 7 stamina to gain 3 additional action limit.
+Double the movement of a single move action: 2 stamina
 
-Only one of the previous options can be chosen.
+Only one of the previous options can be chosen per turn.
 
-Another option to spend stamina on is to use a scarred dice which rolled 4, 5 or 6 ignoring the normal scarred dice
-limitation.
+Another option to spend stamina on is to use a scarred dice ignoring the normal scarred dice limitation.
 
 In additional some abilities may require stamina or provide means to recover stamina.
      """,
@@ -315,9 +310,7 @@ otherwise you fail. Note that the number of times you can nudge during reflex sa
 round. So if you need to make more than 1 reflex save in between your turns they all share the total number of nudges
 you can do based on your proficiency.
 
-For fortitude you need to spend your dice from the dice pool, but they don't lower you action limit.
-
-For will saves, the spent dice also count towards your action limit.
+To use fortitude and will you need to spend your dice from the dice pool.
      """,
      },
     {'name': 'Concentration',
@@ -365,8 +358,7 @@ resource drain for the ritual caster.
 Throughout the game-world players may find potions with magical effects and mages with the potion maker feat can make
 them themselves. Potions however have limitations. The roll target for the first potion is RX, meaning any single dice will
 do. The roll target for the second potions is RX for drinking the potion and R3 fortitude check to stomach that potion.
-After that an additional R3 is added to the fortitude check each time. To make these fortitude checks does not consume
-action limit, like all fortitude checks.
+After that an additional R3 is added to the fortitude check each time.
      """
      },
     {'name': 'Stealth',
@@ -386,14 +378,14 @@ quality of the armor and better quality armor becomes available as players progr
 
 However each armor has certain additional upsides / downsides.
 
-Having no armor and no shield: You have 1 additional action limit and have access to dodge.
+Having light or no armor: You have access to dodge.
 
-Having light armor: You have access to dodge.
+Having medium armor: No upside or downside with proficiency. You have -1 physique proficiency penalty without medium
+armor proficiency. You cannot wear any armor if your physique proficiency would go negative as a result.
 
-Having medium armor: No upside or downside with proficiency. You have 1 less action limit without medium armor 
-proficiency.
-
-Having heavy armor: You have 1 less action limit, or 2 less action limit without heavy armor proficiency.
+Having heavy armor: You have -1 physique proficiency penalty if you have heavy armor proficiency. You have -2 physique 
+proficiency penalty without heavy armor proficiency.You cannot wear any armor if your physique proficiency would go 
+negative as a result.
          '''
     },
     {'name': 'Shields',
@@ -413,66 +405,66 @@ that require attunement. By default all players can attune to up to 3 items, but
 for increased attunement.
          '''
     },
-    {'name': 'Story beat / scene',
-     'description': '''
-The story is divided into scenes or beats. Each scene has a setup and description by the GM and they can serve as
-normal story progression scenes, where players do stuff, or tactical scenes, where players are presented a problem,
-or problems, or they can spot even more potential problems, and they need to describe a strategy or tactics how they
-try to solve those problems. Then they decide who does which roles, who aids who, and then they roll the necessary
-skill checks and the combination of presented problems, hidden problems, their tactics and strategy, and the skill
-checks presents an outcome moving the story forward.
-    '''
-    },
-    {'name': 'Scene dice target',
-     'description': '''
-Each scene has a specific dice target. All roll targets, that are created by the scene require that target, but 
-obviously has different skill proficiencies. Player spells and abilities are however unaffected by this dice target.
-
-The target is decided by the nature and atmosphere of the scene.
-
-1 - cold, but not hostile, when professionalism or clear etiquette is expected. Audience with a king, negotiations with
-shrewd merchant, talking with spies. You are not in danger, but also gaining what you want is difficult.
-
-2 - Friendly atmosphere, a party, talking with people with good will towards you, calm, slow movement. No physical
-activity, no energy is required.
-
-3 - Friendly atmosphere, but a more active activity. Travelling in friendly territory, trading actively. Taking part
-of a competition etc.
-
-4 - Neutral to cold atmosphere, could turn hostile, but not currently. 
-
-5 - Hostile atmosphere, but the possible opponents are not very harsh or sharp, or when the fight is still not evident.
-Moving in hostile territory, facing a group of bandits, who demand money, climbing a mountain. 
-
-6 - Hostile, dangerous atmosphere, which is also very difficult, the situation may end up as combat any second now,
-any mistake could have damaging consequences.
-
-Note, that 1 and 6 are the hardest dice, so they represent difficulty. Choosing them is not just extreme friendly
-or hostile, these are reserved for 2 and 5, they represent difficulty of the situation.
-
-When the atmosphere changes, then so do the dice targets. For example we have a friendly scene, and then players insult
-deeply someone, and all of sudden the scene target changes to 4 or 5, which obviously consequences to the story as well.
-    '''
-    },
-    {'name': 'Is there such a thing in the game-world',
-     'description': '''
-During each of the encounters and story beats, each player may ask the GM if there is some thing in the game-
-world, which the GM didn't describe beforehand but which might sound plausible. When making the request, it
-is recommended to also ask for the functionality that they imagine they would want to get out of it. This
-allows the GM to provide something that is more plausible but with similar functionality. 
-The GM sets the base DC (3, very likeyly, 7, plausible, 13, unlikely, 18, very unlikely, 20, nearly impossible) 
-and rolls a d20. If the result is higher than DC then GM describes a way this can exist, and how they can achieve what 
-they want using this knowledge.        
-     '''
-     },
-    {'name': 'Group focuses',
-     'description': '''
-At all times the group can have 1 group focus active, which let's them progress towards a goal that the players have
-completely set themselves. This is in addition to the main quest that GM is presenting. Usually a story beat progresses
-either the main quest or one of the group focuses. Group focuses are often tied to some skill, meaning that these skills
-are often most important in achieving these goals, but of course not solely used.
-'''
-     },
+#     {'name': 'Story beat / scene',
+#      'description': '''
+# The story is divided into scenes or beats. Each scene has a setup and description by the GM and they can serve as
+# normal story progression scenes, where players do stuff, or tactical scenes, where players are presented a problem,
+# or problems, or they can spot even more potential problems, and they need to describe a strategy or tactics how they
+# try to solve those problems. Then they decide who does which roles, who aids who, and then they roll the necessary
+# skill checks and the combination of presented problems, hidden problems, their tactics and strategy, and the skill
+# checks presents an outcome moving the story forward.
+#     '''
+#     },
+#     {'name': 'Scene dice target',
+#      'description': '''
+# Each scene has a specific dice target. All roll targets, that are created by the scene require that target, but
+# obviously has different skill proficiencies. Player spells and abilities are however unaffected by this dice target.
+#
+# The target is decided by the nature and atmosphere of the scene.
+#
+# 1 - cold, but not hostile, when professionalism or clear etiquette is expected. Audience with a king, negotiations with
+# shrewd merchant, talking with spies. You are not in danger, but also gaining what you want is difficult.
+#
+# 2 - Friendly atmosphere, a party, talking with people with good will towards you, calm, slow movement. No physical
+# activity, no energy is required.
+#
+# 3 - Friendly atmosphere, but a more active activity. Travelling in friendly territory, trading actively. Taking part
+# of a competition etc.
+#
+# 4 - Neutral to cold atmosphere, could turn hostile, but not currently.
+#
+# 5 - Hostile atmosphere, but the possible opponents are not very harsh or sharp, or when the fight is still not evident.
+# Moving in hostile territory, facing a group of bandits, who demand money, climbing a mountain.
+#
+# 6 - Hostile, dangerous atmosphere, which is also very difficult, the situation may end up as combat any second now,
+# any mistake could have damaging consequences.
+#
+# Note, that 1 and 6 are the hardest dice, so they represent difficulty. Choosing them is not just extreme friendly
+# or hostile, these are reserved for 2 and 5, they represent difficulty of the situation.
+#
+# When the atmosphere changes, then so do the dice targets. For example we have a friendly scene, and then players insult
+# deeply someone, and all of sudden the scene target changes to 4 or 5, which obviously consequences to the story as well.
+#     '''
+#     },
+#     {'name': 'Is there such a thing in the game-world',
+#      'description': '''
+# During each of the encounters and story beats, each player may ask the GM if there is some thing in the game-
+# world, which the GM didn't describe beforehand but which might sound plausible. When making the request, it
+# is recommended to also ask for the functionality that they imagine they would want to get out of it. This
+# allows the GM to provide something that is more plausible but with similar functionality.
+# The GM sets the base DC (3, very likeyly, 7, plausible, 13, unlikely, 18, very unlikely, 20, nearly impossible)
+# and rolls a d20. If the result is higher than DC then GM describes a way this can exist, and how they can achieve what
+# they want using this knowledge.
+#      '''
+#      },
+#     {'name': 'Group focuses',
+#      'description': '''
+# At all times the group can have 1 group focus active, which let's them progress towards a goal that the players have
+# completely set themselves. This is in addition to the main quest that GM is presenting. Usually a story beat progresses
+# either the main quest or one of the group focuses. Group focuses are often tied to some skill, meaning that these skills
+# are often most important in achieving these goals, but of course not solely used.
+# '''
+#      },
     {'name': 'Creative spells',
      'description': '''
 Some spells may leave a lot of room for creativity. In this case it is important to have a way to balance it. It is

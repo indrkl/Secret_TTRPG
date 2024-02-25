@@ -4,15 +4,15 @@ characteristics = [
         'effect': 'Whenever you roll your dice pool you must reroll the first two R1/R2-s you roll.'
     },
     {
-        'name': 'Lazy',
+        'name': 'Calm',
         'effect': 'Whenever you roll your dice pool you must reroll the first two R5/R6-s you roll.'
     },
     {
-        'name': 'Witty',
+        'name': 'Ambitious',
         'effect': 'Whenever you roll your dice pool you must reroll the first two R3/R4-s you roll.'
     },
     {
-        'name': 'Slow-witted',
+        'name': 'Content',
         'effect': 'Whenever you roll your dice pool you must reroll the first two R1/R6-s you roll.'
     },
     {

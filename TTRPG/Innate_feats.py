@@ -127,9 +127,48 @@ simply someone who wants favor from your house etc.)
             'description': '''
             You cannot cast concentration spells, or spells which cast time is greater than 1 round. You also cannot
             initiate rituals nor spend your mana for rituals.            
-            However you have an extra raw caster dice, which you roll each round. This can be used to cast spells and
-            it doesn't spend action limit.
+            
+            Reroll the dice that you used to cast the first spell during the combat and return them to the dice pool.
+            You do not reroll any virtual dice you gained by using mana, advantage or anything else.
+            
+            Recover that ability at the third, sixth and tenth round of combat.
             '''
+        },
+        {
+            'name': 'Duality',
+            'requires': 'Talented',
+            'description': '''
+Choose 2 schools of magic with different power dice values. You can only learn those two schools of magics. You share
+the proficiency between those schools of magics (you need to progress only once, and spells from both of the schools
+share proficiency using during combat and scenes).
+
+The school with the lower power dice is called the lower school, and the other one the higher.
+
+You can use the power dice from both schools to cast either school spells as long as the balance wouldn't tip by more
+than 2 into either direction because of doing so. Outside of combat you can only use it once per scene.
+
+When you spend a lower school's power dice to cast higher school spells your balance tips towards calm, and if you spend 
+higher school's power dice to cast lower school spells your balance tips towards rage.
+'''
+        },
+#         {
+#             'name': 'Ritualist',
+#             'requires': 'Adept',
+#             'description': '''
+# Downside is can only cas rituals and nothing else, implement later, when we have more rituals in the game,
+# '''
+#         },
+        {
+            'name': 'Savant',
+            'requires': 'Adept',
+            'description': '''
+Choose 1 school of magic, you can only cast spells from that school of magic, and you can only gain proficiency with
+that school of magic. The proficiency upgrade cost are halved (rounded up) and you can go to 4 proficiency even as an
+adept mage.
+
+If you are talented or legendary in the Mage path, then in addition you always have advantage when casting spells from
+that school. 
+'''
         },
     ],
     'Martial': [
@@ -137,6 +176,16 @@ simply someone who wants favor from your house etc.)
             'requires': 'Legendary',
             'name': 'Warcaster',
             'description': '''You can use stamina instead of mana for spellcasting.''',
+        },
+        {
+            'requires': 'Legendary',
+            'name': 'Mastery over body',
+            'description': '''
+Your body is your weapon. You have made a vow to give up using weapons, armor and magical items, instead you have
+focused in making your body a supreme weapon. Now and during the level-ups you receive a progression feat, you can
+pick one additional martial progression feat, but you cannot use weapons, shields, armors nor attune to any magical 
+item.
+            ''',
         },
         {
             'requires': 'Talented',
@@ -163,11 +212,11 @@ At the beginning of each round, if you have at least 3 damaged dice, you may cho
 * Roar, all enemies within 5 sq. radius get 1 level of afraid per 3 damaged dice on you rounded down. 
             ''',
         },
-        {
-            'requires': 'Legendary',
-            'name': 'Nimble',
-            'description': '''Your action limit increases by 1''',
-        },
+        # {
+        #     'requires': 'Legendary',
+        #     'name': 'Nimble',
+        #     'description': '''Your action limit increases by 1''',
+        # },
         {
             'requires': 'Talented',
             'name': 'Tough',
@@ -236,7 +285,7 @@ utility dice are always D5.''',
         {
             'name': 'Lucky',
             'description': '''When you spend a luck token, you cannot have disadvantage until the start of your next
-            turn or until the scene ends. If you are talented/legendary in skilled path increase your daily number of 
+            turn or until the scene ends. If you are talented/legendary in skilled path increase your maximum number of 
             luck tokens by 50 %.  
 ''',
         },

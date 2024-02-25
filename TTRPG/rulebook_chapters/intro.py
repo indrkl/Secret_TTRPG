@@ -7,15 +7,15 @@ def get_intro_chapter():
          'content': """
 Why develop my own TTRPG?
 
-1. This is not all new. Most is still stolen from DnD or Pathfinder, so no worries.
+1. I wanted the impact and excitement of DnD character progression while having sound pillars for balance.
 
-2. I wanted the impact and excitement of DnD character progression while having sound pillars for balance.
-
-3. Just because, fun
-
-4. I wanted to create a feeling, where all characters feel OP. Obviously when everyone is OP, and the villains are OP
+2. I wanted to create a feeling, where all characters feel OP. Obviously when everyone is OP, and the villains are OP
 then no-one is OP. However I do believe this feeling can be created by allowing characters to really shine in a few 
 things, so the feeling of OP-ness ends up being a rotational, as situations and circumstances change.
+
+3. I wanted a system which supports GM and makes his life easier.
+
+4. Just because, fun :)
 
 What is still the same?
 
@@ -53,7 +53,7 @@ able to take a punch but also excel in their sustained damage dealing potential.
 creative solutions to all sorts of problems, and generally in everything out of combat. Heroes get to spread out 6
 points when creating their character among the 3 paths. The maximum in each path, one can assign is 4 points, giving
 them a legendary innate ability in that path. That means every hero is somewhat acquainted in at least 2 of the 3 paths.
-The end result of this is that even though there are no classes, the choice of how you distribute the 6 points really
+The end result of this is that even though there are no classes, the choice of how you distribute the 6 path points really
 defines what your character can be built as, in a way there are 19 meta classes (the number of ways these 6 points can
 be distributed).""",
 """There is a simple advancement system. Each level-up you get to advance in your innate paths depending your initial
@@ -79,8 +79,10 @@ OK, eventually. Group can choose a cool thing that they care about, and that bec
 item, learning about a secret, getting discount with all the merchants etc. and depending on how wild the thing they
 want is, there are a certain amount of progress steps that GM decides needs to be achieved, before they get what they
 want and to spice things up there can be fail conditions along the way etc.""",
-"""Less skills, and more options to use those skills in various situations, allowing for much more intended overlap.
-Talking with a charismatic pirate leader you can use both roguery or diplomacy skill to gain his favor, but the story
-may unwrap differently depending on which one you choose."""
+"""Less skills, which are clearly defined and are player focused. Meaning diplomacy skill is used to get someone to do
+something that they would otherwise not be inclined to do without using force, it is both intimidation, persuasion etc.
+Lore skill is learning and knowing about the world, it is investigation and all the lore skills. It is for players who
+want to engage the plot. And so on. There are therefore much less skills in the game compared to most TTRPG-s.
+"""
     ]},
 ]

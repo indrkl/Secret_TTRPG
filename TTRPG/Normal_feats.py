@@ -103,7 +103,7 @@ You can spend flame tokens to fuel your spells and attacks:
 5 Flame tokens: Remove a negative status effect from yourself and move it onto the target of the spell or attack.
 
 7 flame tokens: At the end of your attack or spell remove all stacks of burning from the target dealing 3 damage per
-removed stack. If that kills the target, refresh your action limit and dice pool. The cost of this ability increases
+removed stack. If that kills the target, refresh your dice pool. The cost of this ability increases
 by 5 for the duration of this encounter.
 
             ''',
@@ -148,8 +148,7 @@ afraid.
         {
             'cost': 5,
             'name': 'Iron concentration',
-            'effect': '''You can spend any dice to maintain concentration, and concentration does not reduce action 
-            limit''',
+            'effect': '''You can spend any dice to maintain concentration''',
         },
         {
             'cost': 5,
@@ -242,7 +241,7 @@ Also, you cannot be healed by the heal spell (that includes healing potions whic
     # Advance in any school of magic, twice in maximum mana and learn 1 spell.
     #         ''',
     #         'action': {
-    #             'roll target': '1-3AP',
+    #             'cost': '1-3AP',
     #             'target': '2-4 enemies',
     #             'range': '20 m',
     #             'duration': '3 rounds',
@@ -270,7 +269,7 @@ Also, you cannot be healed by the heal spell (that includes healing potions whic
              
              Dodging requires no or light armor''',
          'action': {
-             'roll target': 'R5.R5.R5',
+             'cost': 'R5.R5.R5',
              'proficiency': 'physique',
              'additional_costs': '1 stamina',
              'target': 'self',
@@ -278,12 +277,33 @@ Also, you cannot be healed by the heal spell (that includes healing potions whic
             },
         },
         {'cost': 2,
+            'name': 'Kick',
+            'effect': '''Kick is a special unarmed move, which can be used as long as you have light or no armor. You
+             may be wielding weapons. It does use a unarmed (mental) slot.''',
+            'action': {
+             'cost': 'R5.R5.R5',
+             'proficiency': 'unarmed',
+             'additional_costs': '1 stamina',
+             'effect': '''Push an enemy 2 squares, apply 2 unabalanced''',
+             'difficulty_options': [
+                 {
+                     'cost': 'R5',
+                     'effect': '''Send them flying 2 additional squares and have them take 2 more levels of unbalanced''',
+                 },
+                 {
+                     'cost': 'R5',
+                     'effect': '''+1 damage''',
+                 },
+             ]
+            },
+        },
+        {'cost': 2,
              'name': 'Medium armor proficiency',
-             'effect': '''Remove the penalty of -1 action limit when wearing medium armor''',
+             'effect': '''Remove the penalty of -1 physique proficiency when wearing medium armor''',
          },
         {'cost': 3,
              'name': 'Heavy armor proficiency',
-             'effect': '''While wearing heavy armor you only get -1 action limit instead of -2.
+             'effect': '''Wearing heavy armor only applies a -1 physique proficiency penalty instead of -2
                 ''',
          },
         {'cost': 2,
@@ -321,7 +341,7 @@ Also, you cannot be healed by the heal spell (that includes healing potions whic
 #             'cost': 3,
 #             'name': 'Pinner',
 #             'action': {
-#                 'roll target': '1A',
+#                 'cost': '1A',
 #                 'range': 'melee/spear',
 #                 'target': 'single',
 #                 'base_cost': '1 STA',
@@ -440,7 +460,7 @@ First reaction attack with a polearm in between your turns has double advantage,
             Gain rage action.
          ''',
          'action': {
-             'roll target': 'R6',
+             'cost': 'R6',
              'proficiency': 'fortitude',
              'target': 'self',
              'limit': 'once per encounter',
@@ -488,7 +508,7 @@ per fury token used this way.
         #     No concentration costs are necessary to maintain that hex, normal hex limits apply.
         #     When you reach level 5/10/15/20, the chosen hex is upcasted to difficulty 3/5/7/9.''',
         #  'action': {
-        #      'roll target': '1A',
+        #      'cost': '1A',
         #      'range': 'ranged',
         #      'target': 'single',
         #      'base_cost': '2 STA',
@@ -528,7 +548,7 @@ per fury token used this way.
          Gain the coordination action.
          ''',
          'action': {
-             'roll target': 'R3.R3.R3',
+             'cost': 'R3.R3.R3',
              'range': '6 sq..',
              'target': 'One enemy',
              'proficiency': 'leadership',
@@ -538,7 +558,7 @@ per fury token used this way.
              ''',
              'difficulty_options': [
                  {
-                     'adjustment': 'R3.R3',
+                     'cost': 'R3.R3',
                      'effect': '''Once two allies have damaged targeted enemy, all other allies gain double advantage
                      for all attacks and spells targeting that enemy.''',
                  },
@@ -579,7 +599,7 @@ you may choose 1 option:
          You gain the offer enemy to surrender ability.
          ''',
          'action': {
-             'roll target': 'R5.R5',
+             'cost': 'R5.R5',
              'range': '3 sq.',
              'target': 'single',
              'effect': '''
@@ -588,11 +608,11 @@ get 2 confusion.
              ''',
              'difficulty_options': [
                  {
-                     'adjustment': 'R5',
+                     'cost': 'R5',
                      'effect': '''Increase the moral threshold for surrendering and confusion by 1''',
                  },
                  {
-                     'adjustment': 'R3.R3',
+                     'cost': 'R3.R3',
                      'effect': '''Target one additional target with this ability''',
                  },
              ]
@@ -611,7 +631,7 @@ get 2 confusion.
          You gain the coordinate action, which can used both during combat and out of combat.
          ''',
          'action': {
-             'roll target': 'R3.R3',
+             'cost': 'R3.R3',
              'range': '6 sq.',
              'target': '2 allies',
              'effect': '''
@@ -620,7 +640,7 @@ is returned after using it.
              ''',
              'difficulty_options': [
                  {
-                     'adjustment': 'R3',
+                     'cost': 'R3',
                      'effect': '''They can give up to 1 additional dice''',
                  },
              ]
@@ -632,15 +652,16 @@ is returned after using it.
          You gain the master plan action, which can be used during scene. This is a leadership action.
          ''',
          'action': {
-             'roll target': 'R3.R3.R3',
+             'cost': 'R3.R3.R3',
              'target': '3 allies',
+             'proficiency': 'leadership',
              'effect': '''
 Targeted allies roll 1 extra temporary dice into their dice pool for this scene. These dice can be traded between
 players on a 1 to 1 basis.
              ''',
              'difficulty_options': [
                  {
-                     'adjustment': 'R3.R3',
+                     'cost': 'R3.R3',
                      'effect': '''They roll one additional dice''',
                  },
              ]
@@ -691,22 +712,22 @@ players on a 1 to 1 basis.
          Inspire action uses leadership skill.
          ''',
          'action': {
-             'roll target': 'R3.R3',
+             'cost': 'R3.R3',
              'range': '12 m.',
              'target': '1 creature',
              'additional_costs': '1 Luck token',
              'effect': '''target gains inspiration''',
              'difficulty_options': [
                  {
-                     'adjustment': 'R6',
+                     'cost': 'R6',
                      'effect': '''They lose 1 level of Will related status effects''',
                  },
                  {
-                     'adjustment': 'R6.R6',
+                     'cost': 'R6.R6',
                      'effect': '''They lose 3 level of Will related status effects''',
                  },
                  {
-                     'adjustment': 'R3.R3',
+                     'cost': 'R3.R3',
                      'effect': '''They gain 1 additional temporary dice that they can use until their next roll''',
                  },
                 ]
@@ -746,10 +767,21 @@ for values larger than that but lower than 5000 gp or R5.R5.R5.R5.R5 for even la
 by 50 %. You can either use treasure hunting skill for these checks. This roll target needs to be met
 during the same scene, so it still competes where the whole interaction happens.''',
         },
+        {
+            'cost': 2,
+            'name': 'Intimidating presence',
+            'effect': '''
+You can use twos in the dice pool for diplomacy roll targets regardless of the roll target. You cannot nudge dice to
+become twos though, and when you do use this ability, the diplomacy action gets a intimidation aspect to it. You will
+succeed, BUT!
+
+You must declare when using this ability.
+''',
+        },
         {'cost': 2,
          'name': 'Foresight',
          'action': {
-             'roll target': '-',
+             'cost': '-',
              'additional_costs': '1 Luck token',
              'effect': '''Once every time after visiting a settlement with shops, you can take out a common item
                 from your backpack, which you as a player actually had not bought from the settlement, but consider it
@@ -763,7 +795,7 @@ during the same scene, so it still competes where the whole interaction happens.
 #          level, stamina level, spells that they know, GM-s discretion). Advance twice in survival skill.
 #          ''',
 #          'action': {
-#              'roll target': '1 AP',
+#              'cost': '1 AP',
 #              'effect': '''Appraise a none magical opponent (beast, martial humanoid) and learn about their stamina, HP,
 #              AC and wielded weapon proficiency (or attack proficiency for beasts).'''
 #             }
@@ -811,7 +843,7 @@ during the same scene, so it still competes where the whole interaction happens.
          
          ''',
          'action': {
-             'roll target': 'R5.R5.R5',
+             'cost': 'R5.R5.R5',
              'target': '1 ally',
              'proficiency': 'lore',
              'effect': '''
@@ -819,7 +851,7 @@ Targeted ally is assisted by your knowledge and gets advantage in another skill 
     ''',
              'difficulty_options': [
                  {
-                     'adjustment': 'R5.R5',
+                     'cost': 'R5.R5',
                      'effect': '''Also provide them double advantage''',
                  },
              ]
@@ -829,7 +861,7 @@ Targeted ally is assisted by your knowledge and gets advantage in another skill 
             'cost': 5,
             'name': 'Excellent instructor',
          'action': {
-             'roll target': 'R5.R5',
+             'cost': 'R5.R5',
              'target': '1 ally',
              'proficiency': 'lore',
              'effect': '''
@@ -838,7 +870,7 @@ Targeted ally is assisted by your knowledge and gets advantage in another skill 
              ''',
              'difficulty_options': [
                  {
-                     'adjustment': 'R5',
+                     'cost': 'R5',
                      'effect': '''You can have another ally gain the same proficency for this scene / turn.''',
                  },
              ]
@@ -961,7 +993,7 @@ If you have the blade enchanter feat, you can use this ability on the enchanted 
 }
 
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, ListFlowable, ListItem, PageBreak
-from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_title, minor_subtitle, option_style
+from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_title, minor_subtitle, option_style, add_dice_images
 from reportlab.lib import colors
 import re
 
@@ -993,7 +1025,7 @@ def prep_feat_flowable(feat):
     if feat.get('action'):
         action = feat['action']
         data = [
-            [f"Roll target: {action.get('roll target', '-')}", f"Proficiency: {action.get('proficiency', '-')}", f"Other costs: {feat.get('additional_costs', '-')}"],
+            [Paragraph(f"Base cost: {add_dice_images(action['cost'])}", style=basic_paragraph_style), f"Proficiency: {action.get('proficiency', '-')}", f"Other costs: {feat.get('additional_costs', '-')}"],
             [f"Target: {action.get('target', '-')}", f"Duration: {action.get('duration', '-')}", f"Limit: {action.get('limit', '-')}", ],
             [f"Restrictions: {action.get('restrictions', '-')}", f"", f""],
             [Paragraph(action['effect'], basic_paragraph_style)]
@@ -1011,7 +1043,7 @@ def prep_feat_flowable(feat):
             data = []
             for option in action.get('difficulty_options'):
                 description = re.sub('\s+', ' ', option['effect'])
-                data.append([f"Difficulty adjustment: {option['adjustment']}",
+                data.append([Paragraph(f"+ {add_dice_images(option['cost'])}", style=basic_paragraph_style),
                              Paragraph(description, basic_paragraph_style)])
             table = Table(data, colWidths=[160, 320])
             table.setStyle(TableStyle([

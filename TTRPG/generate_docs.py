@@ -82,7 +82,7 @@ def prep_elements_from_chapter(chapter, add_title_page_break=True):
             pdf_list = []
             for list_ele in ele['content']:
                 pdf_list.append(ListItem(Paragraph(list_ele, style=basic_list_style)))
-            elements.append(ListFlowable(pdf_list, bulletType='1', start='1'))
+            elements.append(ListFlowable(pdf_list, bulletType='bullet',start=u'\u27a4',))
         elif ele['type'] == 'flowables':
             elements.extend(ele['content'])
         if ele['type'] in ['title', 'subtitle']:
@@ -95,6 +95,7 @@ def build_pdf_file():
     from rulebook_chapters.skills import get_skill_related_chapter
     from general_actions import get_general_actions_chapter
     from rulebook_chapters.game_concepts import get_game_concepts_chapter
+    from rulebook_chapters.out_of_combat import get_out_of_combat_chapter
     from rulebook_chapters.intro import get_intro_chapter
     from monster_chapter import get_monsters_chapters
     from Spells import get_spells_chapter
@@ -113,6 +114,7 @@ def build_pdf_file():
     elements.extend(prep_elements_from_chapter(get_intro_chapter()))
     elements.extend(prep_elements_from_chapter(get_character_creation_chapter()))
     elements.extend(prep_elements_from_chapter(get_game_concepts_chapter()))
+    elements.extend(prep_elements_from_chapter(get_out_of_combat_chapter()))
     elements.extend(prep_elements_from_chapter(get_skill_related_chapter()))
     elements.extend(prep_elements_from_chapter(get_general_actions_chapter()))
     elements.extend(prep_elements_from_chapter(get_innate_feat_chapter()))

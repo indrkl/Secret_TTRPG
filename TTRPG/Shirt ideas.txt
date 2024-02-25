@@ -13,3 +13,166 @@ Blog ideas
 3. https://www.youtube.com/watch?v=0iCHZzNmT08 , tunne, mis on peavool, ja tegelikkus võivad olla erinevad asjad.
 Comment sectionit ei saa usaldada tegeliku pildi saamiseks. Demokraatliku ühiskonnana on oluline aru saada, milline on
 tegelik läbilõige.
+
+TTRPG video ideed
+
+1. What is the purpose of rules in TTRPG in general.
+
+Why do we need rules in TTRPG. Let's start by imaging, how would we play a TTRPG without them. We would still choose
+to play some characters, I guess if there are no rules then each of us could play more than one. We would still describe
+what our characters want to do and what they do and what happens. So what happens when 2 players want opposing things
+to happen in this fictional reality? Ha, so here is the first reason we need rules. Conflict resolution. Conflict
+between players, conflict between what the player characters do and what makes
+sense in the game world shared by the players, or when there is a GM eventually, then between the game-world that he has
+imagined.
+
+Ok, so we need a rule to resolve conflicts, let's make it simple, a coin flip. Ok, now we have a basic conflict
+resolution. But now we have another problem. How do you avoid unbalanced coin flips. Where one of the outcomes is
+not proportionate to the other outcome, or how do you decide, whose conflicts do you resolve first? The latter you could
+still solve simply. You could say, there are turns and at each turn you can initiate one action, and you can contest one
+action, and players initate their action clockwise starting from player X. The first problem however does not have a
+simple solution. To solve that you would need to start assigning some kind of value, to everything in the imaginery
+world. And when you do that, you pretty much have a complicated game sort of.
+
+It is important to understand, that there are people out there, who could play the game without rules, they would follow
+some social norms, of letting each other have a turn, hold themselves back and self-regulating in the sense of what
+makes sense, what is plausible, not try to get to the center of attention, basically being super pro social.
+
+But in the high fantasy setting, where players want to be heroes, where the heroes aim to overcome some big obstacle,
+challange, evil, problem or what not, there are few things, I believe are fundamental to that game, so called  the
+pillars:
+
+a. Players want to go all out! they want to push the limits, and they want to get the maximum out of their characters.
+Since self-regulation is not an option in this case, they need to be regulated by rules, FROM OUTSIDE themselves. Rules
+that would validate their effort or give them feedback of what they missed, where they failed, encouraging them to push
+even harder.
+
+b. Players don't want it to be handed to them! While players want more power for their characters, to grow them, to
+achieve their goals and agendas, they don't
+want it to be handed to them. They want to feel like they earnt it, by making decisions, the right ones. It is the
+process of sense making that is the fun part, rules together with GM are there to validate that sense making, albeit
+in a fantasy world, which does not make directly sense in the real world.
+
+c. Setbacks are engaging! Now players want actively for things to go their way, but when they don't due to the game
+rules, it engages them, the frustration gives value to the successes of the future. It pushed players to come up with
+better schemes and ideas. Plus we enjoy prolonging satisfaction we get from finally achieving our goals.
+
+d. The imaginery game world should feel solid! Because we hate arbitrariness. We all like order, one way or another. It
+comes back to our desire to make sense.
+In order to do that, we need a foundation, we need solid grounds, this is what the rules should provide.
+
+e. To sum it up: we are all in a journey of negotiating sense making. Rules arbitrate this sense making, they decide the
+pace of progress, judge the quality of our problem-solving, they give us the constraints, that give meaning to the
+things we can do.
+
+Alright, so now that we have established what we want from the rules, what are some of the no nos that we would like to
+avoid?
+
+a. Complicated rules, albeit unavoidable to a certain degree, 2 rulesets which provide for the pillars equally well, the
+one, which is less complicated, meaning it takes less time to read the rules, it takes less time to understand the
+rules, to track the rules, and to follow to rules, is a better ruleset.
+
+b. Too many constraints, we want freedom. Albeit constraint is necessary, you don't need to constraint everything?
+For example, there is no need for a player to play a smart magic wielding Orc, to be an outlier, yes it has story
+ramifications, but as long as his smartness is constrained by the game rules and on par with the smartness achievable by
+other races, there is no reason to constrain it, as it does not violate any of the 5 pillars.
+Only add minimal constraint, and only do so provide for the pillars.
+
+c. Seriousness. This is still a game, this is still a fantasy game where there is magic, which we play to escape, where
+we can explore things we cannot explore else where. The ability to do so is not provided by the rules, but it sure as
+hell can be denied by the rules. And to this, I say NO! More-over the rules should encourage creativity, exploration,
+for players to participate in making the game-world feel alive, a bit wild, tiny bit crazy, just enough to not disrupt
+the solidness of it.
+
+So to summarize, there are certain pillars, that the rules provide for a fantasy TTRPG experience, where players are the
+heroes in the story: Players want to come up with wild, crazy and powerful shit, that makes sense, they want their
+sense making to be fairly validated, but don't mind setbacks. Instead they make the game only more engaging and the
+eventual positive conclusion even more enjoyable and they want the world to feel solid, that there exists sense, which is
+possible to be made. And the rules must do all that while at the same time be as easy to use as possible, to provide as
+much freedom to players as possible and finally to still feel like a game people would gladly escape to. This is the
+ideal, at least for me, but this ideal, is really hard to achieve. I've been working in my free time on a TTRPG ruleset
+for over a year now, and I have play-tested it a few times, I can tell you that it is not even close to achieving all of
+it. Though I do believe I have some interesting ideas, that might help make some progress compared to what is existing
+in the scene currently.
+
+
+2. Xd6 dice system, what I tried to achieve with them, some interesting properties and nuances.
+
+Imagine, each player has 6 d6s. They roll them, but you don't sum anything. Instead, these 6 dice become your action
+economy. You want to move, you spend one of them, you want to attack and deal damage to an enemy with your dagger, you
+need to spend 2 dice that rolled a 2. If you want to attack them with your sword, spend 2 dice that rolled a 4. You
+want to cast a fireball, you need to spend 4 sixes.
+
+First thought of course is, that isn't the odds really bad in this case? Out of the box, yes, they are terrible. Getting
+even 2 specific numbers is around 25 %, if you need 3, then it is 6 %, and it goes much worse from there on. But this
+can be fixed by proficiency, which is a normal thing in TTRPGs. Suppose I have 1 proficiency with daggers. In this case
+I can nudge one dice by 1, so turn a 1 into 2 or 3 into 2. Firstly the odds go up to 63 % for 2 dice. If I want to do
+something more difficult with the dagger, then one proficiency will not cut it, but by getting one more proficiency,
+and be able to do 1 more nudge, it will again, become much more plausible.
+
+To give you an idea of the range of the proficiencies I have in mind then in my current rules, players can normally have
+proficiencies from 1 to 4, and some special feats can increase them to 5.
+
+So what have we achieved with this system?
+
+1. All the dice players commit to actions, make the actions succeed. So if it is players turn, they never have empty
+turns. They may not be able to do whatever they want, but they do get to do something.
+This makes the combat, or story always progress, in some direction.
+
+2. We don't need extra rules for action economy. Both the action economy and the resolution are decided by the same
+system
+
+3. Yes, the system is a bit more complex than rolling a d20, but it makes up some of it by players not having to spend
+time to add numbers, which takes often much more time than needed.
+
+4. It still has randomness, but instead of randomness determining weather you succeed, it dictates what you can do.
+
+5. This creates interesting character build options, because while many games specializing made always sense,
+because you would always do the action, which has the best
+odds of biggest returns, and the odds of this return hardly ever changed, then in this system it makes sense to have
+some proficiency in multiple things, which require different dice targets, preferable somewhat apart from each other.
+You may have dagger as your primary skill, but maybe you are also invested a bit in elemental magic, and every once in
+a while when you roll a lot of fives and sixes, you do a few nudges and you cast a fireball. You do it less often than
+a mage who is fully specialized in it, but you can do it sometimes, and those times it is still an awesome fireball.
+This is actually one of the properties that got me excited to even explore this system further. It kind of solves the
+problem where "over specialization is just so strong that it cuts a whole-bunch of builds from an optimization point
+from the discussion".
+
+But we are not done, the rabbit hole goes even deeper. So, there are some basic actions in my game, like in other TTRPGs
+, move and defend. How move works, is that you can spend any dice, but you get to move as many squares as was stated
+on the dice. So fives and sixes are all of a sudden very valuable for moving.
+
+Defend action recovers your defend points, which is a buffer for your health and the maximum is determined by your armor
+and shield and feats. Defend action requires 2 twos. This is from the lower end of dice rolls.
+
+By having these basic actions defined like that, then the choice of the dice, two for dagger, 5 for two handed sword,
+it actually already gives some meaning. Using a dagger does not constrain you to move a lot. While fighting with a
+two handed sword allows you to have a better defensive posture. The numbers in the six sided dice start to get a
+meaning. It is no longer that 6 is always better than 1, no, they have a different wibe to it. Things that require
+big numbers force you to stand more still, while things that require lower numbers leave you more vulnerable to damage.
+
+Ok, so far we have discussed how it would work in combat, and that is where I started with this system. But what about
+out of combat. Actually, it turns out, it works very well out of combat as well. You could use the dungeon turns system
+to have everyone roll their 6d6 at the start of the dungeon turn, and whatever they want to do, they need to commit some
+dice to it. And you as the DM can decide the roll targets for various successes. Even outside of dungeon you could say,
+ok, we are travelling for a week, during travelling we want to do foraging to save rations, guard our camp to not get
+ambushed, chat with other travellers on the road and learn rumors, and at the same time make haste. Well, you can simply
+say, ok, these are the roll targets and skills, which proficiency can be used for these activities, who is doing what,
+and how many dice you can commit to a task? Based on that the success of the task is determined. Oh, you want to make
+haste and learn rumors at the same time, well, they both take fives, so how are you going to play it? Maybe they do have
+enough dice for both roll targets, then you as a GM, can decide how it made sense, maybe they met some travellers with
+extra horses, who they liked the party, so they rode fast, and chat on the way?
+
+Right now I am in the phase where I am testing different "techniques" for out of combat scene management. Scene being
+the turn equivalent out of combat. More on that in the next video.
+
+
+3. Story scenes, how the Xd6 dice system interacts with it, techniques: constraint, stepped unlocking, pushing with
+stakes.
+
+4. Lore mechanics, diplomacy mechanics, skills, should skills have different mechanics? Deeper diplomacy game?
+
+5. Power, stakes, prices, costs, loss, win, challange, why does it feel like it conflicts with role playing?
+
+6. Character customization, why I ended up with paths.
+

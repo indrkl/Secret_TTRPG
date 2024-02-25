@@ -630,6 +630,179 @@ player_characters = [
         'equipment': ['dagger', 'simple leather armor'],
 
     },
+{
+        'name': 'Ember - Kole ja naiivne nõid',
+        'SKILLED': 2,
+        'MAGE': 4,
+        'Innate_feat_skilled': 'Good fortune',
+        'Innate_feat_mage': 'Divine protector',
+        'Levels': {
+            1: {
+
+                'Skilled advancements': [
+                    '''2 luck''',
+                ],
+                'Mage advancements': [
+                    'feat: Commune with animals',
+                    'proficiency (first): illusion', 'spell: Create illusionary images',
+                    'proficiency (first): harmony', 'spell: Bless'
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    '4 luck'
+                ],
+                'Mage advancements': [
+                    'feat: Holy bonds',
+                    'proficiency (first): divination',
+                    '1 mana', 'spell: Glimpse into future', 'proficiency (first): toughness'
+                ],
+            },
+        },
+        'equipment': ['staff'],
+    },
+    {
+        'name': 'Wolfgang "Olly" Olivier - Monster Connoisseur',
+        'SKILLED': 4,
+        'MARTIAL': 2,
+        'Innate_feat_skilled': 'Prodigy',
+        'Innate_feat_martial': 'Natural armor',
+        'defense': 4,
+        'Levels': {
+            1: {
+
+                'Skilled advancements': [
+                    '''proficiency (first): crafting''','''proficiency (first): leadership''',
+                    '''proficiency (first): harvesting''','''proficiency (first): survival''',
+                ],
+                'Martial advancements': [
+                    'proficiency (first): sword',
+                    'proficiency (first): fortitude'
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    '''proficiency (first): lore''',
+                    '''proficiency (second): lore''',
+                    '''proficiency (second): crafting''',
+                    '''proficiency (third): crafting''',
+                    '''proficiency (second): leadership''',
+                    '''proficiency (second): harvesting''',
+                    'feat: Master plan'
+                ],
+                'Martial advancements': [
+                    'proficiency (first): shield',
+                    'proficiency (first): reflex',
+                    '1 stamina',
+                    'proficiency (first): toughness'
+                ],
+            },
+        },
+        'equipment': ['sword', 'shield', 'butchering knife', 'extensive cooking equipment', 'Butchering clothes'],
+    },
+    {
+        'name': 'Big axe dude',
+        'SKILLED': 2,
+        'MARTIAL': 4,
+        'Innate_feat_skilled': 'Natural armor',
+        'Innate_feat_martial': 'Defiant',
+        'defense': 3,
+        'Levels': {
+            1: {
+
+                'Skilled advancements': [
+                    '''proficiency (first): diplomacy''','''proficiency (first): physique''',
+                ],
+                'Martial advancements': [
+                    'proficiency (first): axe',
+                    'proficiency (second): axe',
+                    '1 stamina',
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    '''feat: Intimidating presence''',
+                    '''proficiency (first): survival''',
+                    '''proficiency (first): fortitude''',
+                ],
+                'Martial advancements': [
+                    'proficiency (third): axe',
+                    '2 stamina',
+                    'proficiency (first): toughness',
+                    'proficiency (second): toughness'
+                ],
+            },
+        },
+        'equipment': ['two handed axe', 'axe', 'clothes'],
+    },
+    {
+        'name': 'Ispen',
+        'SKILLED': 2,
+        'MARTIAL': 4,
+        'Innate_feat_skilled': 'Extraordinary senses',
+        'Innate_feat_martial': 'Tough',
+        'defense': 4,
+        'Levels': {
+            1: {
+
+                'Skilled advancements': [
+                    '''1 luck''','''proficiency (first): physique''',
+                ],
+                'Martial advancements': [
+                    'feat: Heavy armor proficiency',
+                    'proficiency (first): toughness',
+                ],
+            },
+            2: {
+                'Skilled advancements': [
+                    '''4 luck''',
+                ],
+                'Martial advancements': [
+                    'proficiency (first): mace',
+                    '4 stamina',
+                    'proficiency (first): shield',
+                    'proficiency (second): mace'
+                ],
+            },
+        },
+        'equipment': ['Heavy chain mail', 'shield', '1 handed mace', ],
+    },
+    {
+        'name': 'Zenui',
+        'MAGE': 2,
+        'MARTIAL': 4,
+        # 'Innate_feat_skilled': 'Natural armor',
+        'Innate_feat_martial': 'Tough',
+        'defense': 2,
+        'Levels': {
+            1: {
+
+                'Mage advancements': [
+                    '''proficiency (first): force''',
+                    '''proficiency (first): will''',
+                    'spell: telekinesis',
+                ],
+                'Martial advancements': [
+                    'proficiency (first): unarmed',
+                    'proficiency (second): unarmed',
+                    'proficiency (first): toughness',
+                ],
+            },
+            2: {
+                'Mage advancements': [
+                    '''proficiency (second): force''', '''2 mana''',
+                    'spell: Force field',
+                ],
+                'Martial advancements': [
+                    '''feat: Dodging''',
+                    '''proficiency (third): unarmed''',
+                    '''proficiency (second): toughness''',
+                ],
+            },
+        },
+        'equipment': ['dagger', 'simple leather armor'],
+    },
+
 ]
 
 
@@ -714,7 +887,7 @@ def generate_character_flowable(character):
                     proficiencies[proficiency] = proficiencies.get(proficiency, 0) + 1
                     continue
 
-                spell = re.search('spell: ([A-Za-z \/]*)', advancement)
+                spell = re.search('spell: ([A-Za-z\' \/]*)', advancement)
                 if spell:
                     spells.append(spell[1])
                     continue
@@ -740,6 +913,7 @@ def generate_character_flowable(character):
     stats['reflex'] += proficiencies.get('reflex', 0)
 
     stats['mana'] = stats['mana'] * mana_multiplier
+    stats['luck'] = stats['luck'] * luck_multiplier
 
     elements = []
     elements.append(Paragraph(character['name'], style=minor_title))
@@ -801,6 +975,7 @@ def generate_character_flowable(character):
     elements.append(Paragraph('Spells', style=minor_subtitle))
 
     for spell in spells:
+        print(spell)
         spell_obj = find_spell_object(spell, schools)
         elements.extend(prep_spell_flowable(spell_obj))
 

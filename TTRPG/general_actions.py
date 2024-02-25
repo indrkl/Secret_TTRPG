@@ -1,27 +1,5 @@
 actions = [
     {
-        'name': 'Refocus',
-        'profieciency': 'Will',
-        'description': '''
-Remove a level of disoriented or afraid from you.
-        ''',
-        'difficulty': 'R4.R5',
-        'scaling': [
-            {'D': 'R4.R5', 'description': '''Remove all levels of that type from you'''},
-        ],
-    },
-    {
-        'name': 'Recover',
-        'profieciency': 'Fort',
-        'description': '''
-This does not spend action limit. Remove a level of poison or freezing from you
-        ''',
-        'difficulty': 'R2.R2',
-        'scaling': [
-            {'D': 'R2.R2', 'description': '''Remove all levels of that type from you'''},
-        ],
-    },
-    {
         'name': 'Move',
         'profieciency': 'Physique',
         'description': '''
@@ -36,6 +14,67 @@ Move X squares where X is the dice result that you use to move. This action can 
 Recover your defense up to maximum defense
         ''',
         'difficulty': 'R2.R2',
+    },
+    {
+        'name': 'Refocus',
+        'profieciency': 'Will',
+        'description': '''
+Remove a level of disoriented or afraid from you.
+        ''',
+        'difficulty': 'R4.R5',
+        'scaling': [
+            {'D': 'R4.R5', 'description': '''Remove all levels of that type from you'''},
+        ],
+    },
+    {
+        'name': 'Recover',
+        'profieciency': 'Fortitude',
+        'description': '''
+            Remove a level of poison or freezing from you
+        ''',
+        'difficulty': 'R2.R2',
+        'scaling': [
+            {'D': 'R2.R2', 'description': '''Remove all levels of that type from you'''},
+        ],
+    },
+    {
+        'name': 'Study opponent',
+        'profieciency': 'Lore',
+        'description': '''
+Study one of the opponents and learn their HP / ATK / MV if they are mobs, or Toughness, Defense and one ability if it
+is enemy hero.
+        ''',
+        'difficulty': 'R4',
+        'scaling': [
+            {'D': 'R4.R4.R4', 'description': '''Find a vulnerability for the particular opponent, describe what this is,
+            that opponent has 1 vulnerability that is not discarded at the beginning of their turn'''},
+        ],
+    },
+    {
+        'name': 'Taunt',
+        'profieciency': 'Diplomacy',
+        'description': '''
+Taunt one opponent, they are more likely to attack you, but if they don't, they have disadvantage
+        ''',
+        'difficulty': 'R2',
+        'scaling': [
+            {'D': 'R2', 'description': '''
+            Target also loses 1 morale
+            '''},
+        ],
+    },
+    {
+        'name': 'Mark enemy',
+        'profieciency': 'Leadership',
+        'description': '''
+Mark an enemy, attacks and spells against him have advantage. 
+        ''',
+        'difficulty': 'R3.R3.R3',
+        'scaling': [
+            {'D': 'R2', 'description': '''
+            Target also loses 1 morale
+            '''},
+        ],
     },
     {
         'name': 'Wrestle',

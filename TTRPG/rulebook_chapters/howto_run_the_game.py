@@ -106,6 +106,9 @@ is not met.
 9. Add roll target as per player reaction.
 
 10. Option, either of the roll targets can be met.
+
+11. Aspects, you have a hard roll target, but it can be lowered, but also increased by aspects that has happened in the
+story. There should only be one core aspect related mechanic happening at a time.
 """
 
 scenarios = """

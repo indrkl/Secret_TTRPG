@@ -23,7 +23,15 @@ The basic type, party has no specific goals, they just want to adventure and hav
 of operations nor any specific goals. The reason why they are adventuring together is because they are simply friends,
 who picked each other up along the way.
 
-This is a vanilla choice, and players may choose to change to a different organization type during the campaign
+This is a vanilla choice, and players may choose to change to a different organization type during the campaign.
+
+Group goals ideas (to earn exp):
+
+1. Finish a quest.
+
+2. Find loot in a dungeon or adventure.
+
+3. Roleplay a jolly moment.
     """,
     'merchant caravan': """
 Players are focused on being a merchant caravan which moves from town to town, they may get involved with various
@@ -32,12 +40,26 @@ themselves into all sorts of trouble. The point is, there is a caravan, which mo
 are somewhat attached to it. Also they will be involved in trading and hope to make an extra profit along the way.
 Though keep in mind, that trade is not just profits, it is also risk, maintenance for all the other people in the
 caravan, and all sorts of other costs.
+
+Group goals ideas (to earn exp):
+
+1. Earn profit in a trade
+
+2. Roleplay a shrewd bargaining.
+
+3. 
     """,
     'Scoundrels': """
 A criminal gang, looking for loot and trouble. They may have a base of operation, or be part of a thieves guild, which
 has a network of hideouts in various cities. They go on heists, or do assassination operations, or pick up some other
 dubious tasks, but who knows, maybe they stumble upon something, that starts invoking even their morals which they
 thought they didn't have.
+
+Group goals ideas (to earn exp):
+
+1. Complete a heist
+
+2. Complete a complete encounter without being detected
     """,
     'Group of scholars': """
 You are part of the old secret organization of scholars, which waned away a time ago, your generation has however
@@ -75,6 +97,9 @@ So the maximum cost reduction is 75 %.
 
 Rebuild medicine room: First costs 1 advancement point. Increment future costs by. Improve medicine room level by 1.
 Recovering players from scarred dice costs 10 % less per level and recovery takes 10 % less time.
+
+Group goals ideas (to earn exp):
+
 
 
     """,

@@ -1,7 +1,7 @@
 world_name = 'Cathar'
 
 wolrd = [
-    """The wolrd of cathar is a world of magic, where the technology ranges from early medieaval to late ancient""",
+    """The wolrd of Cathar is a world of magic, where the technology ranges from early medieaval to late ancient""",
     """The central tension is about the magical spices that grow only in certain locations, spread around the world""",
     """The central empire has made advancements in logistics, by improving sailing by using magic for navigation, wind
     prediction and tide manipulation""",
