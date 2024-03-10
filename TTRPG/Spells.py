@@ -471,11 +471,11 @@ All friendly allies in the targeted area recover their defenses
                 'effect': '''Each time target enemy rolls, you may change the outcome of 1 dice. It has to be a
                 different dice than was changed by lucky condition, if the enemy was lucky and is done after the lucky
                 dice is chosen.''',
-                'difficulty': 'R1.R1.R1',
-                'concentration': 'R1',
+                'difficulty': 'R5.R5.R5',
+                'concentration': 'R5',
                 'scaling': [
-                    {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
-                    {'D': 'R1.R1', 'description': 'You may change the outcome of 1 additional dice'},
+                    {'D': 'R5', 'description': 'Increase the strength of this curse up 1 level'},
+                    {'D': 'R5.R5', 'description': 'You may change the outcome of 1 additional dice'},
                 ],
             },
             {
@@ -485,11 +485,11 @@ All friendly allies in the targeted area recover their defenses
                 'target': '1 creature',
                 'effect': '''Whenever target is hit, they take 1 extra psychic damage. After that they may use a 
                 reaction to remove this curse if they have the required dice''',
-                'difficulty': 'R1.R1.R1',
-                'concentration': 'R1',
+                'difficulty': 'R5.R5.R5',
+                'concentration': 'R5',
                 'scaling': [
-                    {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
-                    {'D': 'R1.R1', 'description': 'Target takes 1 additional psychic damage when hit'},
+                    {'D': 'R5', 'description': 'Increase the strength of this curse up 1 level'},
+                    {'D': 'R5.R5', 'description': 'Target takes 1 additional psychic damage when hit'},
                 ],
             },
             {
@@ -499,11 +499,11 @@ All friendly allies in the targeted area recover their defenses
                 'effect': '''At the beginning of their turn, the hexed creature gets 1 level of either disoriented or 
                     afraid.
                     ''',
-                'difficulty': 'R1.R1.R1.R1',
-                'concentration': 'R1',
+                'difficulty': 'R5.R5.R5.R5',
+                'concentration': 'R5',
                 'scaling': [
-                    {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
-                    {'D': 'R1.R1', 'description': 'Hexed creature also gets 1 level of the other status effect'},
+                    {'D': 'R5', 'description': 'Increase the strength of this curse up 1 level'},
+                    {'D': 'R5.R5', 'description': 'Hexed creature also gets 1 level of the other status effect'},
                 ],
             },
             {
@@ -512,10 +512,10 @@ All friendly allies in the targeted area recover their defenses
                 'target': '1 creature',
                 'effect': '''The mana cost for all spells is doubled
                     ''',
-                'difficulty': 'R1.R1.R1',
-                'concentration': 'R1',
+                'difficulty': 'R5.R5.R5',
+                'concentration': 'R5',
                 'scaling': [
-                    {'D': 'R1', 'description': 'Increase the strength of this curse up 1 level'},
+                    {'D': 'R5', 'description': 'Increase the strength of this curse up 1 level'},
                 ],
             },
             {
@@ -526,9 +526,9 @@ All friendly allies in the targeted area recover their defenses
                 'effect': '''A extremely loud shriek hits, heard loudest by the target. It deals 2 psychic damage and
                     the target has to give up concentration of 1 spell.
                     ''',
-                'difficulty': 'R1.R1.R1.R1',
+                'difficulty': 'R5.R5.R5.R5',
                 'scaling': [
-                    {'D': 'R1', 'description': 'deal additional 3 psychic damage'},
+                    {'D': 'R5', 'description': 'deal additional 3 psychic damage'},
                 ],
             },
             # {
@@ -551,13 +551,13 @@ All friendly allies in the targeted area recover their defenses
                 'duration': '3 rounds',
                 'effect': '''This weapon requires 1 less power dice to make an attack
                     ''',
-                'difficulty': 'R1.R1.R1.R1',
-                'concentration': 'R1.R1',
+                'difficulty': 'R5.R5.R5.R5',
+                'concentration': 'R5.R5',
                 'scaling': [
-                    {'D': 'R1.R1', 'L': 2, 'description': '''When that weapon deals at least 6 damage with an attack, 
+                    {'D': 'R5.R5', 'L': 2, 'description': '''When that weapon deals at least 6 damage with an attack, 
                     target enemy gets 1 level of afraid
                     '''},
-                    {'D': 'R1.R1', 'description': '''Target weapon deals 1 additional psychic damage per power dice 
+                    {'D': 'R5.R5', 'description': '''Target weapon deals 1 additional psychic damage per power dice 
                     spent'''}
                 ],
             },
