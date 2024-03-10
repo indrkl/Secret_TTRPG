@@ -110,5 +110,76 @@ Or how should mana be recovered?
 Let spells be Over powered. And instead have have mana be a limited resource. Have normal mana recovery be even slower
 than a day and instead have pricey food addons that boost the mana recovery for the long rest.
 
+
+Balancing
+
+The core of the gameplay is to get as many dice of the desired number to get to do what you want in a spectacular
+manner. How to think of that?
+So there is a near 100 % chance for any pair when you roll dice. There is around 37 % chance for a triple. That is the
+base line. For a specific pair however it is 25 and 6 % respectively.
+
+However if you only care about a specific number and how many dice you get of that number with a roll, then the base
+line is actually 1 dice on average. 
+
+Let's consider all of these as a way to get dice and let's see how effective they are:
+
+1. proficiency - Biggest increase is from 0 to 1, which is in most cases almost 1. From then on it goes to 0.7, 0.5, 0.4
+But for 1 and 6, it is actually even worse: 0.7, 0.5, 0.4, 0.3. Proficiency is target number dependent.
+
+2. luck tokens - This increases it always by 1. So using a luck token is as good as going from 0 to 1 proficiency or 2
+to 4 proficiency. It is also much better for 1 and 6 number targets.
+
+3. additional dice - This is surprisingly ineffective, it does increase your action economy though, but for increasing
+your most powerful move, it is effectively around 0.1-0.2 per dice with no proficiency and goes up to 0.3-0.4 at high
+proficiencies. Surprisingly doesn't matter weather the target number is 1 or a 2
+
+4. having two valid options instead of 1 - surprisingly a measly 0.5-0.7 dice only.
+
+5. being happy with an easier roll - With no proficiency doesn't matter, but with proficiency it can go up to 0.6 and if
+you combine it with having two valid options it can be a whopping 1.
+
+6. Advantage is a simple 1, getting advantage for multiple things is 1 each time, so that's kinda powerful.
+
+Risk dice are interesting however:
+
+If we need to increase the number of dice by 1, then our odds are following:
+Using 1 dice for target number 1 the odds are 0.33
+Using 2 dice for target number 1 the odds are 0.22
+Using 3 dice for target number 1 the odds are 0.29
+Using 1 dice for target number 2 the odds are 0.50
+Using 2 dice for target number 2 the odds are 0.42
+Using 3 dice for target number 2 the odds are 0.54
+Using 1 dice for target number 3 the odds are 0.50
+Using 2 dice for target number 3 the odds are 0.58
+Using 3 dice for target number 3 the odds are 0.67
+
+If we need to increase the number of dice by 2, then our odds are following:
+
+Using 1 dice for target number 1 the odds are 0.00
+Using 2 dice for target number 1 the odds are 0.11
+Using 3 dice for target number 1 the odds are 0.09
+Using 1 dice for target number 2 the odds are 0.00
+Using 2 dice for target number 2 the odds are 0.25
+Using 3 dice for target number 2 the odds are 0.25
+Using 1 dice for target number 3 the odds are 0.00
+Using 2 dice for target number 3 the odds are 0.25
+Using 3 dice for target number 3 the odds are 0.38
+
+That means that for simpler targets the odds of the risk paying off is significant, up to 67 % for 1 dice, and if you
+need 2 dice, it can still be 1 in 4 or up to 38 %!! Which is significant boost.
+
+What do we all learn here? By diversifing, being less picky, having 1 proficiency we easily hit the 2.5 - 3.5 mark.
+This is significant. With 4 proficiency and applying the same things we are 4.5 - 5.5 range.
+
+If you have luck and advantage, then even tasks which require 6 or 7 dice are plausible. And then when you need to
+push your luck, then we are talking about 8-9 dice as being the hardest of challanges which are still doable. Of course
+when you add more dice, then it goes up to something like 10.
+
+So a godly challange is 10, while things that should not be taken for granted can be around 6-7. 3 for baseline makes
+sense, and increasing it to 4 or 5 relatively early on for tougher challanges is actually quite fair.
+
+
+
 """},
+
     ]

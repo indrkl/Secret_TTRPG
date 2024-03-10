@@ -6,7 +6,7 @@ equipment = {
             'cost': 'R2.R2',
             'damage': 2,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R1',
                     'effect': 'bypass damage reduction',
@@ -35,7 +35,7 @@ equipment = {
             'cost': 'R2',
             'damage': 1,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R2',
                     'effect': '+ 1 damage',
@@ -56,7 +56,7 @@ equipment = {
             'cost': 'R6.R6',
             'damage': 3,
             'range': '8 squares',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R6',
                     'effect': 'bypass damage reduction',
@@ -85,7 +85,7 @@ equipment = {
             'cost': 'R3.R3',
             'damage': 3,
             'range': '2 squares',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R3',
                     'effect': '+ 2 damage',
@@ -102,7 +102,7 @@ equipment = {
             'cost': 'R3.R3',
             'damage': 2,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R5',
                     'effect': 'Remove guarded status effect',
@@ -123,7 +123,7 @@ equipment = {
             'cost': 'R4.R4',
             'damage': 2,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R3',
                     'effect': 'Recover 1 defense',
@@ -148,7 +148,7 @@ equipment = {
             'cost': 'R4.R4',
             'damage': 2,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R4',
                     'effect': '+ 1 damage',
@@ -173,7 +173,7 @@ equipment = {
             'cost': 'R5.R5',
             'damage': 3,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R2',
                     'effect': 'Recover 2 defense',
@@ -198,7 +198,7 @@ equipment = {
             'cost': 'R3.R3',
             'damage': 2,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R4',
                     'effect': 'Bypass enemy damage reduction',
@@ -223,7 +223,7 @@ equipment = {
             'cost': 'R5.R5',
             'damage': 3,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R5',
                     'effect': 'Bypass enemy damage reduction',
@@ -252,7 +252,7 @@ equipment = {
             'cost': 'R5.R5',
             'damage': 3,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R5',
                     'effect': 'Remove guarded status effect',
@@ -272,26 +272,26 @@ equipment = {
             ]
         }
     },
-    'Two handed axe of flames': {
+    'Burning two handed axe of the devils': {
         'action': {
-            'cost': 'R5.R5',
-            'damage': 3,
+            'cost': 'R6.R6',
+            'damage': 4,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
-                    'cost': 'R5',
+                    'cost': 'R6',
                     'effect': 'Remove guarded status effect',
                 },
                 {
-                    'cost': 'R5',
-                    'effect': 'Apply a stack of burning onto the enemy',
+                    'cost': 'R6',
+                    'effect': 'Deal 1 fire damage and apply a stack of burning onto the enemy',
                 },
                 {
-                    'cost': 'R2.R2',
+                    'cost': 'R1.R1',
                     'effect': 'Apply 1 afraid for every 3 stacks of burning on the enemy',
                 },
                 {
-                    'cost': 'R2.R2.R2',
+                    'cost': 'R1.R1.R1',
                     'effect': 'Apply 1 vulnerable for every stack of burning on the enemy',
                 },
             ]
@@ -307,7 +307,7 @@ defense by 2 and damage reduction by 1. Also recover 2 defense.
             'cost': 'R2.R2',
             'damage': '-',
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R2.R2',
                     'effect': 'Gain an additional damage reduction',
@@ -320,6 +320,15 @@ defense by 2 and damage reduction by 1. Also recover 2 defense.
             '''
 Instead you have 2 additional normal spell slots and 1 signature spell slot. The spell used in the signature spell slot
 has advantage. Signature spell cannot be switched out mid combat.'''
+    },
+    'staff of freezing': {
+        'effect':
+            '''
+Instead you have 2 additional normal spell slots. In addition you have freezing spell as your signature spell, meaning
+casting it has advantage.
+
+Enables you to cast the freezing skill without elemental proficiency and knowing that spell. You may replace elemental
+proficiency for casting it using this staff with your highest proficiency in any school minus one.'''
     },
     'simple leather armor': {
         'effect': '''
@@ -339,13 +348,13 @@ This is medium armor that provides 4 maximum defense
     'claw': {
         'effect':
             '''
-This is not a weapon, but can be used when taking the unnatural limbs racial innate feat.
+This is not a weapon, but can be used when taking the unnatural limbs racial innate feat. Also used by beasts
 ''',
         'action': {
             'cost': 'R2.R2',
             'damage': 2,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R1',
                     'effect': 'bypass damage reduction',
@@ -364,24 +373,50 @@ This is not a weapon, but can be used when taking the unnatural limbs racial inn
     'secondary claw': {
         'effect':
             '''
-This is not a weapon, but can be used when taking the unnatural limbs racial innate feat.
+This is not a weapon, but can be used when taking the unnatural limbs racial innate feat. Also used by beasts
 ''',
         'action': {
             'cost': 'R4.R4',
             'damage': 2,
             'range': 'melee',
-            'extra_options': [
+            'difficulty_options': [
                 {
                     'cost': 'R6',
                     'effect': 'bypass damage reduction',
                 },
                 {
-                    'cost': 'R2',
+                    'cost': 'R4',
                     'effect': '+ 1 damage',
                 },
                 {
                     'cost': 'R6',
                     'effect': 'Apply 1 vulnerable',
+                },
+            ]
+        }
+    },
+    'bite': {
+        'effect':
+            '''
+This is not a weapon, but can be used by beasts
+''',
+        'action': {
+            'cost': 'R5.R5',
+            'damage': 2,
+            'range': 'melee',
+            'difficulty_options': [
+                {
+                    'cost': 'R5',
+                    'effect': '+ 1 damage',
+                },
+                {
+                    'cost': 'R3.R3',
+                    'effect': 'Apply 1 disoriented',
+                },
+                {
+                    'cost': 'R3.R3',
+                    'effect': '''Also get a level of upper hand as if you had done the wrestle action without spending
+                    stamina.''',
                 },
             ]
         }
@@ -409,9 +444,9 @@ def prep_equipment_flowable(weapon, name):
         data = [
             [Paragraph(f"Base cost: {add_dice_images(action['cost'])}", style=basic_paragraph_style), effect, f"Range: {action.get('range', '-')}", ""],
         ]
-        if action.get('extra_options'):
+        if action.get('difficulty_options'):
             odd = True
-            for option in action.get('extra_options', []):
+            for option in action.get('difficulty_options', []):
                 description = re.sub('\s+', ' ', option['effect'])
                 option = [Paragraph(f"+ {add_dice_images(option['cost'])}", style=basic_paragraph_style),
                              Paragraph(description, basic_paragraph_style)]

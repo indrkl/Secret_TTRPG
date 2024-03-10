@@ -60,12 +60,6 @@ For example with a proficiency of 2 you can nudge the roll of two separate dice 
 You can only nudge the rolls of a dice used on the roll target that you actually use on the roll target.
         '''
     },
-    {'name': 'Lucky',
-     'description':'''
-A player can be lucky during a round or scene. In that case they can switch one of their d6 to any desired result
-without spending any proficiency nudging.
-     '''
-     },
     {'name': 'Advantage and disadvantage',
      'description':'''
 A character who has advantage against an enemy requires 1 less power dice for any attack against them. A character with
@@ -166,14 +160,13 @@ them in different color, like red for example).
 
 Scarred dice can only be used as 1, 2 or 3 in any roll target. You can still nudge them lower if they roll 4, 5 or 6.
 
-To heal players can take time out and rest properly, which passes time and allows adviseries to advance in their plans 
-as well. This is an abstraction, and can take from a few days to a month depending on the healing conditions, the world
-and what not.
+To heal players must take time out and recover.
 
-By spending various resources like herbs, good food etc. one can change scarred dice back to normal dice.
+During recovery, by spending various resources like herbs, good food etc. one can change scarred dice back to normal 
+dice.
 
 To change a single dice back it costs 15 gp worth of resources, to change 2 dice back it costs 50 gp and to change 3 
-dice back it costs 150 gp worth of resources.
+dice back it costs 150 gp worth of resources. To recover all the dice, it coses 250 gp. 
      """,
     },
     {
@@ -270,16 +263,40 @@ Only one of the previous options can be chosen per turn.
 Another option to spend stamina on is to use a scarred dice ignoring the normal scarred dice limitation.
 
 In additional some abilities may require stamina or provide means to recover stamina.
+
+Stamina recovers after every encounter.
      """,
      },
     {'name': 'Luck tokens',
      'description': """
-When advancing in the skilled path, characters can increase their maximum luck tokens. Luck tokens can be used to make
-a roll lucky, meaning you can change the outcome of a single dice. Luck tokens are recovered at the end of a campaign
-arc, this is a bit at GM/s discretion, what that means. A campaign arc should be involve multiple small quests, last
-several sessions and conclude with something impactful, opening up the plot significantly.
+When advancing in the skilled path, characters can increase their maximum luck tokens. 
 
-In additional some abilities may require Luck tokens to be used.
+Luck tokens can be used in various ways, but each player can spend only 1 luck token per turn:
+
+1 luck token: Get 2 additional nudges (in addition to your proficiency and aiding)
+
+1 luck token: When throwing risk dice, negative results do nothing.
+
+In addition some abilities may require Luck tokens to be used.
+
+
+Luck tokens are recovered when the party chooses to take time out and recover.
+
+     """,
+     },
+    {'name': 'Time out and recover',
+     'description': """
+When players are heavily scarred and run out of luck, they may find themselves needing to take time out and recover.
+This should not be done lightly however, since in-game this can be several weeks to months. This means that this gives
+time for adversaries to advance in their plans, for the situation to change, and for new challanges to be introduced.
+
+In addition they need to find a proper lodging and this time out will cost them money, as they rest and don't earn any
+money in the meanwhile.
+
+Finally time out cannot be taken mid-session, as GM needs time to prepare and figure out how the world changes. It 
+should be decided always at the end of a game session.
+
+Note, there are costs associated with lodging, and recovering from scarred dice. Luck is recovered on it's own.
      """,
      },
 #     {'name': 'Forced movement / falling damage',

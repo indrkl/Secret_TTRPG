@@ -49,7 +49,7 @@ you need downtown to recover mana, and it costs, since recovery costs money.
 
 4. The conclusion is they are there to put out power when it is most required, and they do it in unique, thematically
 fantastic ways. They are a good pick for players who want to come up with crazy and creative ideas and solutions, and
-who know to get the priorities straight.
+who know to get their priorities straight.
 
 
 """

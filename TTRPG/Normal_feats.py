@@ -581,7 +581,7 @@ you may choose 1 option:
 
 * recover 1 stamina
 
-* spend 1 mana to deal an additional 3 damage. (requires mage path)
+* spend 1 mana to deal an additional 2 damage. (requires mage path)
          ''',
          },
 #         {'cost': 8,

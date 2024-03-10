@@ -112,7 +112,7 @@ MAGE advancement options:
         {'type': 'list',
          'content': [
              'For feat cost: Adopt a skills related feat',
-             'For 1 point: Increase your maximum number of luck tokens by 2',
+             'For 1 point: Increase your maximum number of luck tokens by 1',
              'For 1/2/3/4 points: Advance proficiency in any skill',
              '''For 1/2 points: Advance proficiency in will, reflex or fortitude. The maximum proficiency from skilled path for these 
              is 2''',

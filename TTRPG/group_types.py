@@ -1,4 +1,5 @@
 """
+
 It is recommended for groups to really decide what kind of campaign they want to have at session 0. It is also a good
 idea to have a common origin, or some relations between the players to really give meaning to the role playing.
 
@@ -14,6 +15,8 @@ experience points. Also, players who miss sessions can never be below the organi
 Secondly the organization also gains levels and earns advancement points, which can be used to give boosts to the
 organization depending on its type. This is to really emphasise on the nature of what kind of group you are and what
 kind of organization are you part of, so the party gets more invested in it, and their group effort.
+
+
 """
 
 
@@ -127,7 +130,7 @@ What are it's secrets?
 What are you protecting the world from?
     """,
     'Cult': """
-Players have started a small cult, they are the founders, and start out with a few followers already, they seek to say
+Players have started a small cult, they are the founders, and start out with a few followers already, they seek to stay
 secretive, mysterious and have some kind of slightly ominous agenda, or perhaps they just want to have a massive 
 followers to satisfy the egos of the founders.
 

@@ -1,5 +1,5 @@
 info = [
-    '''beasts have weak will, but high fortitude, so they have +1 to fort proficiency, but cannot gain WILL proficiency.
+    '''
     ''',
 ]
 
@@ -7,35 +7,35 @@ archetypes = [
     {
         'name': 'small animal',
         'description': '''
-            13 AC (1 natural armor, 2 size bonus), small amount of HP (2 per path level per level), damage dice is d6, 
-                Has advanced senses. +1 REF saves +2 to survival checks, 5 sq. move speed.
+            Free dodge per turn. -1 Toughness, max toughness is 3. Raw damage is halved. +1 reflex. Has bite attack only
         '''
      },
     {'name': 'medium sized predators',
      'description': '''
-        13 AC (3 natural armor), high amounts of HP (4 per path levl per level). Damage dice is d6+1. Has advanced senses. This is 
-        Leopards, wolves, tigers etc. 12 m. move speed.
+        3 Defense. Has 2 claws and bite attack
      '''
      },
+    {
+        'name': 'medium sized spider',
+        'description': '''
+        2 defense, is a web weaver, Can bite.  
+        '''
+    },
     {'name': 'large sized predators',
      'description': '''
-        12 AC (3 natural armor, 1 size penalty), very high amounts of HP (5 per path level per level). Damage dice is d6+2. Has 
-        advanced senses. This is something like a bear. 14 m. move speed but after first move action per turn movement
-        costs 1 STA.
+        3 Defense, 1 damage reduction, -1 reflex. 50 % more raw damage, -1 progression points per level. 
+        Has 2 claws and bite attack
      '''
      },
     {'name': 'Bird predator',
      'description': '''
-        12 AC (2 natural armor), OK amounts of HP (3 per path level per level). Damage dice is d6. Has advanced senses. Has legendary 
-        wings.
-        Example: eagle
+        3 Defense, ability to fly, -1 progression points per level.  Has 2 claws and bite attack
      '''
      },
     {'name': 'Tiny bird',
      'description': '''
-        14 AC (no natural armor, 4 size bonus), few amounts of HP (1 per path level per level). No damage. Has advanced senses. 
-        Has legendary wings. +2 REF saves, +2 to survival checks, 12 m. fly speed
-        Example: mockingbird
+        Free dodge per turn, -1 toughness, max toughness is 3. Raw damage is halved, +1 reflex, - 1 progression points
+        per level. Has bite attack only
      '''
      },
 ]
@@ -52,135 +52,138 @@ feats = [
         damage / 2. When you fail the check, the grappling ends. You must spend 2 STA to hold the grapple at the 
         beginning of your turn. While grappling you cannot do another bite attack.
         ''',
-        'action': {
-            'speed': '2A',
-            'range': 'melee',
-            'target': 'single',
-            'base_cost': '3S',
-            'next_attack_cost_increase': '1S',
-            'effect': '''3d6+X damage piercing damage bite attack ''',
-        }
-    },
-    {
-        'cost': 2,
-        'name': 'Claw attacks',
-        'action': {
-            'speed': '1A',
-            'range': 'melee',
-            'target': 'single',
-            'base_cost': '2S',
-            'next_attack_cost_increase': '1S',
-            'effect': '''Attack with your claws twice, dealing 2d6+X damage with each attack''',
-        }
     },
     {
         'cost': 4,
         'name': 'Legendary speed',
-        'effect': 'During your move action you can spend 2 additional stamina to move additional 20 feet.'
+        'effect': '''During your move action you can spend 1 stamina to move additional squares equal to the number on 
+        the dice used to move.'''
     },
     {
         'cost': 2,
         'name': 'Fast beast',
-        'effect': 'During your move action you can spend 1 additional stamina to move additional 15 feet.'
+        'effect': 'Your move action allows you to move 2 additional squares'
     },
     {
         'cost': 3,
         'name': 'Leaper',
-        'effect': '''During your move action you can spend 2 stamina to leap over all obstacles for 15 feet. These 15 
-        feet must still be part of your move distance.'''
+        'effect': '''During your move action you can spend 1 stamina to leap over all obstacles for 3 sqares. These 3
+        squares must still be part of your move action'''
     },
     {
         'cost': 5,
         'name': 'Venomous bite',
         'effect': '''When choosing this trait, choose an effect:
-            at the beginning of round, deals 1d6 poison damage,
+            at the beginning of round, deals 1 poison damage,
             acts as 1 lvl of afraid,
             acts as 1 lvl of disoriented,
-            acts as 1 lvl of crazed,
             acts as 1 lvl of freezing.
+            
+            Adds a new option for bite: For 1 power dice to apply 1 level of poison.
             ''',
-        'action': {
-            'speed': '2A',
-            'range': 'melee',
-            'target': 'single',
-            'base_cost': '3S',
-            'next_attack_cost_increase': '1S',
-            'effect': '''1d6+X piercing damage. A successful attack applies 2 stacks of poison with your chosen effect. 
-            A critical attack applies 4 stacks instead. You can only do 3 venomous bites per encounter. This poison's
-            DC is 8 + attack proficiency.''',
-        }
     },
     {'cost': 3,
      'name': 'Rampage',
-     'action': {
-         'speed': '2A',
-         'range': 'melee',
-         'target': 'single',
-         'base_cost': '6 stamina',
-         'next_attack_cost_increase': '3 stamina',
-         'effect': '''Attack all enemies around you twice. When scoring a critical hit, the target needs to succeed 
-        8 + weapon proficiency DC WILL save or gain 1 level of afraid.
-     Until the start of the next turn you gain 1 levels of vulnerable.''',
-         'restrictions': '2 handed melee weapon',
-         'exert': {'cost': '6 stamina', 'effect': 'attacks 1 additional times.'}
-     }
+     'effect': '''
+     You get a new option to spend 3 stamina to make the copy of an attack you did to one target, to attack another
+     target who is adjacent to you.
+     '''
      },
     {'cost': 3,
      'name': 'Leaping attack',
-     'Attack option': {
-         'proficiency_penalty': 5,
-         'effect': '''You can do a melee attack to someone who is 10 feet away from you and there is a free space
-         between you and the target. Leap to the free spot and make the attack. You do not trigger any attacks of
-         opportunities this way, since this is not a move action.'''
-        }
+     'effect': '''You are can do a melee attack to someone who is 2 squares away from you and there is a free space
+     between you and the target. Leap to the free spot and make the attack. You do not trigger any attacks of
+     opportunities this way, since this is not a move action.'''
      },
-    {'cost': 6,
-     'name': 'Charge',
-     'action': {
-         'speed': '2A',
-         'range': 'melee',
-         'target': 'single',
-         'base_cost': '5S',
-         'next_attack_cost_increase': '2S',
-         'effect': '''Charge at an enemy at least 15 feet away from you, but no further than your move distance
-         doing 3d10 damage and forcing them to check for unbalanced 4 times. If you are large, then they need to check
-         for unbalanced 2 additional times.
-         ''',
-     }
-     },
-    {'cost': 6,
+    # {'cost': 6,
+    #  'name': 'Charge',
+    #  'action': {
+    #      'speed': '2A',
+    #      'range': 'melee',
+    #      'target': 'single',
+    #      'base_cost': '5S',
+    #      'next_attack_cost_increase': '2S',
+    #      'effect': '''Charge at an enemy at least 15 feet away from you, but no further than your move distance
+    #      doing 3d10 damage and forcing them to check for unbalanced 4 times. If you are large, then they need to check
+    #      for unbalanced 2 additional times.
+    #      ''',
+    #  }
+    #  },
+    {'cost': 5,
+     'requires': 'Web weaver',
+     'effect': 'Using the web requires web proficiency',
      'name': 'Web',
      'action': {
-         'speed': '2A',
-         'range': '6 m.',
+         'cost': 'R6.R6.R6',
+         'range': '3 sq.',
          'target': 'single',
-         'base_cost': '2S',
          'effect': '''The target gains 4 levels of entangled.  
          ''',
+     'difficulty_options': [
+             {
+                 'cost': 'R6.R6',
+                 'effect': 'The target gains 3 additional levels of entangled',
+             },
+             {
+                 'cost': 'R3.R3.R3',
+                 'effect': 'Apply 2 lvls disoriented',
+             },
+         ]
      }
      },
     {'cost': 3,
      'name': 'Web range',
      'requires': 'Web feat',
-     'effect': '''Range of the web action increases to 25 m.'''
+     'effect': '''Range of the web action increases to 5 sq.'''
      },
-    {'cost': 6,
-     'name': 'Powerful web',
-     'requires': 'Web feat',
-     'effect': '''Web action applies another 3 levels of entangled.'''
-     },
-    {'cost': 4,
+    {'cost': 3,
      'name': 'Fearless',
-     'effect': '''Immune to afraid condition and has advantage against all WILL saves.'''
+     'effect': '''Immune to afraid condition'''
+     },
+    {'cost': 3,
+     'name': 'Thick skin',
+     'effect': '''Get 1 additional defense'''
+     },
+    {'cost': 5,
+     'name': 'Rage',
+     'effect': '''
+    Gain rage action.
+ ''',
+     'action': {
+         'cost': 'R6',
+         'proficiency': 'fortitude',
+         'target': 'self',
+         'limit': 'once per encounter',
+         'duration': '5 rounds',
+         'effect': '''You go into rage where you stay for 5 rounds or until you go unconscious.
+        While raging you are immune to confusion and disruption.
+
+        You lose all your defense and cannot recover any defense. However you still roll all the dice that were
+        set aside because of damage and scarred dice can be used for targets 4, 5 and 6 as well.
+        ''',
+     }
+     },
+    {'cost': 3,
+     'name': 'Dodging',
+     'effect': '''Whenever you would receive damage you can react with a R5 physique dice to negate that damage.
+     This cost goes up by 1 X R5 every time you use this ability during encounter. You can take the recover
+     action to reset it to 1 dice again.
+
+     Dodging requires no or light armor''',
+     'action': {
+         'cost': 'R5.R5.R5',
+         'proficiency': 'physique',
+         'additional_costs': '1 stamina',
+         'target': 'self',
+         'effect': '''reset the dodging reaction dice cost to 1 dice''',
+     },
      },
 ]
 
 advancement_options = [
-             'Adopt an undead feat',
-             'Increase level in all your attacks by 2.',
-             'Add 10 MAX HP',
-             '''Add 4 to maximum stamina (each encounter is started having max stamina, you cannot recover stamina above 
-             maximum stamina)''',
-             'Increase your AC by 1. This bonus cannot be higher than the total bonus from all other sources.',
-             'Increase your REFLEX or FORTITUDE saving proficiency by 3',
+             'For feat cost: Adopt a beast related feat',
+             'For 1/2/3/4 points: Advance proficiency in claw, bite, physique, concealment, fortitude or reflex',
+             'For 1/2/3/4 points: Increase your toughness. Cost increases by 1 each time you choose this option. Maximum toughness is 6',
+             '''For 1 point: Increase your maximum stamina by 1''',
+             'For 1/2 points: Advance proficiency in will',
          ]

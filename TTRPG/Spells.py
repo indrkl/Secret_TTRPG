@@ -450,7 +450,6 @@ All friendly allies in the targeted area recover their defenses
                         of touch.'''},
                     {'D': 'R3.R3', 'description': '''Target may concentrate on spells that would affect the material 
                     plane'''},
-
                 ],
             },
         ]
@@ -632,7 +631,7 @@ All friendly allies in the targeted area recover their defenses
     where you are and also the nature of the movement. Attacks against enemies that rely on sight have advantage, and
     attacks by enemies against you who rely on sight have disadvantage. This allows you to sneak in broad daylight.
     
-    This can also be used as a creative spell during scenes.
+    This can also be used as a creative spell during campaign turns.
             ''',
                 'difficulty': 'R2.R2.R2.R2',
                 'scaling': [
@@ -703,7 +702,7 @@ All friendly allies in the targeted area recover their defenses
             },
             {
                 'name': 'Glimpse into future',
-                'effect': '''During scene you can ask a question about the scene to which GM answers honestly either 
+                'effect': '''During campaign turn you can ask a question about the campaign turn to which GM answers honestly either 
 yes / no / yes and no / yet uncertain''',
                 'difficulty': 'R3.R3.R3.R3',
                 'scaling': [
@@ -712,7 +711,13 @@ yes / no / yes and no / yet uncertain''',
                     '''},
                 ],
             },
-
+            {
+                'name': 'See beyond the veil',
+                'difficulty': 'R3.R3',
+                'effect': '''
+                Reveal the strength of a hidden difficulaty aspect
+                ''',
+            },
         ]
     },
 }

@@ -272,9 +272,14 @@ Whenever you make an attack, you can use one and only one of those options once 
         {
             'requires': 'Legendary',
             'name': 'Wild magic',
-            'description': '''You can cast any spell with the speed of at most 1 round not requiring concentration using 
-1 luck token, even if you do not know that spell. Power dice for these spells are always D6 and
-utility dice are always D5.''',
+            'description': '''
+You can cast any spell not requiring concentration using 1 luck token, even if you do not 
+know that spell. For spell schools which power dice is either 4, 5 or 6 the power dice 
+to use this ability becomes 6 and the utility dice becomes 5. For spell schools which power dice is 1, 2 or 
+3, the power dice to use this ability becomes 1 and the utility dice becomes 2. This ability uses wild magic
+proficiency, which you can advance using both mage and skilled path.
+            
+Each spell can however only be used once using this ability until your luck pool is recovered.''',
         },
         {
             'name': 'Specialist',

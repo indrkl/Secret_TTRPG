@@ -57,7 +57,7 @@ feats = {
     'Skilled': [
         {
             'name': 'Lucky',
-            'description': '''Every advancement in luck provides 1 additional luck token.
+            'description': '''Every second advancement in luck provides 1 additional luck token.
             ''',
         },
         {

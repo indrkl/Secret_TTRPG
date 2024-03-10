@@ -13,6 +13,10 @@ happened = [
     "Quigli ja Esmeralda kutsuti Pühapäeva õhtusöömale epic mälumänguri poolt. Apiicius Bonaparte",
     "Ralf tegi luuletuse enda äri edendamiseks. Neil on mingi sümboolika. Saia bränd",
     "Esmeralda sai teada teise maha jäetud hõbe kaevanduse asukoha, kus oli ka hõbenahkhiire",
+    "The drug warehouse was burnt down",
+    "Jaxxen Trax escaped after being tortured, interrogated and burnt by Esmeralda",
+    "Jaxxen lost 3 of his lietenants",
+    "The accountant was passed on to the captain of Quigli and Tom",
 ]
 
 Ralf_past = [

@@ -384,6 +384,20 @@ player_characters = [
                 ],
 
             },
+            4: {
+                'Skilled advancements': [
+                    '''proficiency (first): physique''',
+                    '''proficiency (first): diplomacy''',
+                ],
+                'Mage advancements': [
+                    '1 mana',
+                ],
+                'Martial advancements': [
+                    '''proficiency (first): shield''',
+                    '''proficiency (second): shield''',
+                ],
+
+            },
         },
         'equipment': ['sword', 'Heavy chain mail', 'shield'],
     },
@@ -419,7 +433,17 @@ player_characters = [
                     '''2 luck'''
                 ],
                 'Mage advancements': [
-                    '4 mana'
+                    'proficiency (third): nature', 'spell: tremor', '1 mana',
+                ],
+            },
+            4: {
+                'Skilled advancements': [
+                    '''1 luck''', 'proficiency (first): physique'
+                ],
+                'Mage advancements': [
+                    'Progression feat: Spice specialist',
+                    'feat: Commune with animals',
+                    '2 mana',
                 ],
             },
         },
@@ -429,14 +453,14 @@ player_characters = [
         'name': 'Fred the Forgetful mage',
         'SKILLED': 2,
         'MAGE': 4,
-        'Innate_feat_skilled': 'Specialist(treasure hunting)',
+        'Innate_feat_skilled': 'Specialist(survival)',
         'Innate_feat_mage': 'Raw caster',
         'Levels': {
             1: {
 
                 'Skilled advancements': [
-                    '''proficiency (first): treasure hunting''', '''proficiency (first): lore''',
-                    '''proficiency (extra): treasure hunting'''
+                    '''proficiency (first): survival''', '''proficiency (first): lore''',
+                    '''proficiency (extra): survival'''
                 ],
                 'Mage advancements': [
                     'proficiency (first): force', 'proficiency (second): force', 'spell: push/pull', 'spell: Telekinesis',
@@ -445,7 +469,7 @@ player_characters = [
             },
             2: {
                 'Skilled advancements': [
-                    '''proficiency (second): treasure hunting''', '2 luck'
+                    '''proficiency (second): survival''', '2 luck'
                 ],
                 'Mage advancements': [
                     'proficiency (second): dimension', 'proficiency (third): force',
@@ -454,10 +478,19 @@ player_characters = [
             },
             3: {
                 'Skilled advancements': [
-                    '''2 luck'''
+                    '''2 luck''',
                 ],
                 'Mage advancements': [
                     '4 mana',
+                ],
+            },
+            4: {
+                'Skilled advancements': [
+                    '''Progression feat: Resourceful''',
+                    'feat: Deep apology',
+                ],
+                'Mage advancements': [
+                    'feat: Twin magic',
                 ],
             },
         },
@@ -490,18 +523,26 @@ player_characters = [
             },
             3: {
                 'Skilled advancements': [
-                    'proficiency (first): lore', '3 luck'
+                    'proficiency (first): lore', 'proficiency (first): leadership', 'proficiency (second): leadership'
                 ],
                 'Martial advancements': [
                     '2 stamina',
                 ],
             },
+            4: {
+                'Skilled advancements': [
+                    'feat: Master plan', 'Progression feat: Powerful'
+                ],
+                'Martial advancements': [
+                    '1 stamina', 'proficiency (first): unarmed',
+                ],
+            }
         },
         'equipment': [],
         'normal_actions': ['Wrestle'],
     },
     {
-        'name': 'Tom the religious gansta poet',
+        'name': 'Tom the religious gangsta poet',
         'SKILLED': 2,
         'MARTIAL': 4,
         'defense': 3,
@@ -534,9 +575,11 @@ player_characters = [
             },
             4: {
                 'Skilled advancements': [
-                    'Progression feat: Resourceful'
+                    'Progression feat: Resourceful', '2 luck'
                 ],
                 'Martial advancements': [
+                    'proficiency (first): mace', 'proficiency (second): mace', '1 stamina'
+
                 ],
             }
         },
@@ -851,7 +894,7 @@ def find_spell_object(name, all_spells):
                 return spell
 
 mana_multiplier = 2
-luck_multiplier = 2
+luck_multiplier = 1
 def generate_character_flowable(character):
     from Innate_feats import prep_feat_flowable as prep_innate_feat_flowable
     from Innate_feats import feats as all_innate_feats

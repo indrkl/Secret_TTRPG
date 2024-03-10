@@ -123,7 +123,7 @@ def build_pdf_file():
     elements.extend(prep_elements_from_chapter(get_equipment_chapter()))
     elements.extend(prep_elements_from_chapter(get_spells_chapter()))
     elements.extend(prep_elements_from_chapter(get_premade_class_chapter()))
-    # elements.extend(prep_elements_from_chapter(get_monsters_chapters()))
+    elements.extend(prep_elements_from_chapter(get_monsters_chapters()))
     return elements
 
 

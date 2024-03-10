@@ -30,10 +30,10 @@ def get_monsters_chapters():
     elements = [
         {'type': 'title', 'content': 'None humanoid creaters'},
         {'type': 'paragraph', 'content': '''
-None humanoid creatures (beasts, monsters, undead) are created similarly like player characters. Only difference is that
-they have their own base archetypes, with custom features, kinda like having innate feats and then they have a path,
-with it's own feats and advancement options. Note that when looking at the HP per level, then first level still has the
-3 times multiplier similarly to player characters.        
+None humanoid creatures (beasts, monsters, undead) can be created similarly like player characters. Only difference is 
+that they have their own base archetypes, with custom features, kinda like having innate feats and then they have a 
+path, with it's own feats and advancement options. This is more to create epic monsters, but ideas can also be gotten
+for mob monsters.      
         '''},
     ]
     elements.extend(get_monster_chapter(beasts, 'Beasts'))
