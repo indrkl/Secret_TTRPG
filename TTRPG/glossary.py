@@ -552,7 +552,10 @@ damage, halving is rounded down. If they have 2 levels of freezing, they are als
 5 levels of combined disoriented and afraid. If they have 1 levels of freezing, then they act as if removing one level
 of some negative effect every turn (without removing it) and can only remove 1 levels of disoriented/afraid.
 
-In addition if a mob takes at least half of their hit points in damage they are also shocked and they skipped their next
+When a mob is prone, then they need to give up either their entire movement or their entire attack, but they do stand
+up.
+
+In addition if a mob takes at least half of their hit points in damage they are also shocked and they skip their next
 turn.
 
 This gives you the baseline. In different line ups, like for example when fighting a tribe of giants, this may differ.

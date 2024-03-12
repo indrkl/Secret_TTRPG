@@ -232,7 +232,7 @@ All friendly allies in the targeted area recover their defenses
         'spells': [
             {
                 'name': 'Fireball',
-                'difficulty': 'R6.R6.R6',
+                'difficulty': 'R6.R6.R6.R6',
                 'range': '8 sq.',
                 'effect': 'Deal 2 fire damage to everyone in the area.',
                 'save': 'REFLEX',
@@ -245,15 +245,17 @@ All friendly allies in the targeted area recover their defenses
             },
             {
                 'name': 'Chain lightning',
-                'difficulty': 'R6.R6.R6',
+                'difficulty': 'R6.R6.R6.R6',
                 'range': '8 sq.',
-                'effect': '''Deal 4 lightning damage to a target enemy, and then it jumps to another target enemy,
-                dealing 2 less damage, until it can do no more damage''',
+                'effect': '''Deal 4 lightning damage to a target enemy, and then it jumps to another target enemy 
+                within radius of the first target dealing 2 less damage. This jumping continues until next jump would
+                 do no more damage (that means increasing the initial damage increases the number of jumps). 
+                damage''',
                 'save': 'REFLEX',
-                'target': 'area',
-                'radius': '1 sq.',
+                'target': 'single target',
+                'radius': '3 sq.',
                 'scaling': [
-                    {'D': 'R6.R6', 'description': 'Deal additional 2 damage'},
+                    {'D': 'R6.R6', 'description': 'Increase initial damage by 2'},
                     {'D': 'R6.R6', 'description': 'Everyone hit by chain lightning get 1 level of disoriented'},
                 ],
             },
@@ -668,7 +670,7 @@ All friendly allies in the targeted area recover their defenses
                 'concentration': 'X/2 mana',
                 'duration': '1 day',
                 'effect': '''
-        This is a ritual to hide, for eample a house, or an entrance to a cave, or if you go really wild, then even
+        This is a ritual to hide, for example a house, or an entrance to a cave, or if you go really wild, then even
         a castle. The idea is to create an illusion so that something doesn't appear to be there even though it is.
         
         The basic version can conceal an object that is no more than 5mx5mx5m in volume and requires 8 dice to

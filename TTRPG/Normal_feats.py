@@ -50,7 +50,7 @@ appropriate.
         {'cost': 2,
          'name': 'Enduring magic',
          'metamagic_option': {
-             'difficulty': 'Ru.Ru',
+             'difficulty': 'Rp.Rp',
              'effect': '''Can only be applied to concentration spells or spells with duration.
              Concentration spells without duration gain a duration of 3 rounds. Spells with duration increase their
              duration by 3 rounds or double it, whichever has greater effect''',
@@ -59,21 +59,21 @@ appropriate.
         {'cost': 2,
          'name': 'Large magic',
          'metamagic_option': {
-             'difficulty': 'Ru',
+             'difficulty': 'Rp',
              'effect': 'Increase spell radius, which has radius by 1 sq.',
             },
          },
         {'cost': 2,
          'name': 'Distant magic',
          'metamagic_option': {
-             'difficulty': 'Ru',
+             'difficulty': 'Rp',
              'effect': 'Increase spell distance by 6 sq. or double it, whichever has greater effect',
             },
          },
         {'cost': 4,
          'name': 'Twin magic',
          'metamagic_option': {
-             'difficulty': 'Rp.Ru',
+             'difficulty': 'Rp.Rp',
              'effect': '''Cast the spell twice. You may choose new targets for second
                 cast. Concentration spells share concentration for both casts.''',
              'L': 1,
@@ -413,16 +413,18 @@ attack with an axe you can spend savagery points to deal 1 additional damage per
 
 You gain additional difficulty adjustment options for two handed axes:
 
-RU: Spend 2 savagery tokens to add a level of afraid to the enemy
+Rp: Spend 2 savagery tokens to add a level of afraid to the enemy
 
-RU: Spend 2 savagery tokens to add 1 level of vulnerable to the enemy. 
+Rp: Spend 2 savagery tokens to add 1 level of vulnerable to the enemy. 
                 ''',
         },
         {'cost': 5,
          'name': 'Sentinel',
          'effect': '''
 When wielding a polearm, you get a zone of control around you of 2 sq. Enemies that want to move through your ZoC or
-want to enter within 1 sq. of you need to provide a R6 phsyique roll in order to do that.
+want to enter within 1 sq. of you need to provide a R6 phsyique roll in order to do that. When a pawn enters your ZoC
+they end their turn, when rook or knight need to pay R6 then they do, but they end their turn after finishing the
+maneuver, bishops don't enter your ZoC. When a rook ends their turn next to you, the sentinel feat becomes disabled.
 
 Enemies entering your ZoC give you a attack reaction opportunity.
 

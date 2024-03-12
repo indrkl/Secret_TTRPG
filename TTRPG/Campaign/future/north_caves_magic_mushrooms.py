@@ -14,7 +14,12 @@ rooms = [
         When you look up:
         
         You see around 10 m. upwards an opening both in the left and in the right and a formation which as if formed
-        a bridge, though not fully connecting, between those openings.  
+        a bridge, though not fully connecting, between those openings. 
+        
+        The path to the right turns around and ends up in the bridge that could be seen before. However it is physically
+        quite exhausting to pass this path, as there are ups and downs, small chasms, and cliffs to climb up.
+        
+        The path to the left is much more smoother.
         '''
     },
     {
@@ -31,8 +36,47 @@ rooms = [
         '''
     },
     {
-        'key': 'Devils bed area'
-    }
+        'key': 'Devils bed area',
+       'description': '''
+
+        '''
+    },
+    {
+        'key': 'the area across the bridge - grove',
+       'description': '''
+        When you cross the "bridge", the path leads to a grove, where snow melts and the water turns into many streams
+        that hide beneath the stone walls. In the center there are trees and flowers, the ceiling is open and you can
+        see the night sky, or the blizzard but in the grove it is warm. The moss glows with vibrant colors. You see
+        squirrels going about, as they see you they hide within trees, stones and other small hiding spots.
+        
+        One of the streams leads it's way to a path away from the grove, and that path starts leading downwards again.
+        until you reach a cliff, which is 15 m. downwards, to a path, where you could take either left or right.
+        ''',
+    },
+    {
+        'key': 'The crossing',
+       'description': '''
+        When you take the path left from the start you arrive at a crossing, one turns right, the other turns left
+        ''',
+    },
+    {
+        'key': 'The pit path',
+       'description': '''
+        When you turn right from the crossing, then you come to a narrow path, which has chasms on the both sides, if
+        you like down you see pit blackness. It is actually a dirt pit, which is pit dark that is only after falling 5
+        m. The landing is soft, making you take only 1 damage, but moving in the pit is difficult. It costs 4 movements 
+        to move. And 12 movement to climb out of the pit. Would be fun to have a fight here.
+        ''',
+    },
+    {
+        'key': 'The frontal camp',
+       'description': '''
+        After the pit path, unless players have encountered the first group of devils already, then one of the groups
+        is staying en guard here. It is a place, where they campers have an advantage, they spot whoever comes earlier.
+        They are camped in all the hidden corners, so there is an empty opening in the center. The path to their leads
+        up for a moment, so it is really hard to spot if something is behind there. 
+        ''',
+    },
 
 
 ]
@@ -40,7 +84,7 @@ rooms = [
 cards = {
     'devil': '''The group lead by Borg, the devil wielding two handed axe. He has 4 annoying imps and 10 throggar''',
     'emperor': '''The main group lead by devil Thrag, the master of contracts. He is not very strong, but he has
-    10 throggar, 4 hell hounds, and 2 trolls protecting him''',
+    14 throggar, 2 imps, and 2 trolls protecting him''',
     'fool': 'You meet the Sloth demon Lorki, he is high and offers you a special mushroom, which he has prepared.',
     'magician': '''The group runs into the group lead by Sham, the devil wielding frost spells. He has 10 throggar
     1 troll and 2 support casters.''',
@@ -52,7 +96,8 @@ cards = {
     There is some treasure, rings and necklaces worth 120 gp, and also one magical necklace, which grants you protection
     against freezing. Every time you would gain a stack of freezing roll 1d6. On a 4, 5 or 6 you do not get it. It does
     require attuning.
-    '''
+    ''',
+
 }
 
 combat_encounters = [

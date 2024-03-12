@@ -496,7 +496,6 @@ player_characters = [
         },
         'equipment': ['a single lucky broken beer mug'],
     },
-
     {
         'name': 'Ralf the Troll diplomat',
         'SKILLED': 4,
@@ -673,7 +672,7 @@ player_characters = [
         'equipment': ['dagger', 'simple leather armor'],
 
     },
-{
+    {
         'name': 'Ember - Kole ja naiivne nõid',
         'SKILLED': 2,
         'MAGE': 4,
@@ -845,7 +844,52 @@ player_characters = [
         },
         'equipment': ['dagger', 'simple leather armor'],
     },
+    {
+        'name': 'Gruthna, the elemental touched',
+        'MAGE': 3,
+        'MARTIAL': 1,
+        'SKILLED': 2,
+        'Innate_feat_mage': 'Duality(Illusion and Elemental)',
+        'Innate_feat_martial': 'Wings',
+        'Innate_feat_skilled': 'Specialist(lore)',
+        'defense': 2,
+        'Levels': {
+            1: {
 
+                'Mage advancements': [
+                    '''proficiency (first): duality''',
+                    '''proficiency (second): duality''',
+                    'spell: False threats',
+                    'spell: Fireball',
+                ],
+                'Martial advancements': [
+                    'proficiency (first): physique',
+                ],
+                'Skilled advancements': [
+                    'proficiency (extra): lore',
+                    'proficiency (first): lore',
+                    'proficiency (first): reflex',
+                ],
+            },
+            2: {
+                'Mage advancements': [
+                    '''proficiency (third): duality''',
+                    'spell: Create illusionary images',
+                    '1 mana',
+                    'feat: Large magic'
+                ],
+                'Martial advancements': [
+                    'proficiency (first): fortitude',
+                    'proficiency (first): toughness',
+                ],
+                'Skilled advancements': [
+                    'proficiency (second): lore',
+                    'proficiency (first): reflex',
+                ],
+            },
+        },
+        'equipment': ['staff', 'simple leather armor'],
+    },
 ]
 
 
