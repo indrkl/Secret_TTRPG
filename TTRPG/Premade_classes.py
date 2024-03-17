@@ -391,7 +391,7 @@ from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_titl
 from reportlab.lib import colors
 
 
-from Characters import find_feat_object, find_general_action, find_spell_object, mana_multiplier, luck_multiplier
+from Characters import get_feat_and_flowable, find_general_action, find_spell_object, mana_multiplier, luck_multiplier
 
 def generate_class_flowable(premade_class):
     from Innate_feats import prep_feat_flowable as prep_innate_feat_flowable
@@ -432,10 +432,12 @@ def generate_class_flowable(premade_class):
 
     for feat in innate_feats:
         feat_name = re.search('(^[A-Za-z ]*)', feat.get('name'))[1]
-        feat_obj = find_feat_object(feat_name, all_innate_feats)
         path_power = premade_class.get(feat['path'].upper())
         name_addon = ' (%s)'%(path_mapping[path_power])
-        elements.extend(prep_innate_feat_flowable(feat_obj, name_addon=name_addon))
+
+        _, feat_flowable = get_feat_and_flowable(feat_name, name_addon=name_addon)
+
+        elements.extend(feat_flowable)
 
     for indx in range(len(premade_class['Levels'])):
         elements.append(Paragraph('Level %d' % (indx+1), style=minor_title))
@@ -491,14 +493,13 @@ def generate_class_flowable(premade_class):
 
 
     for feat in feats:
-        print(feat)
-        feat_obj = find_feat_object(feat, all_normal_feats)
-        elements.extend(prep_normal_feat_flowable(feat_obj))
+        _, feat_flowable = get_feat_and_flowable(feat)
+        elements.extend(feat_flowable)
 
 
     for feat in progression_feats:
-        feat_obj = find_feat_object(feat, all_progression_feats)
-        elements.extend(prep_progression_feat_floable(feat_obj))
+        _, feat_flowable = get_feat_and_flowable(feat)
+        elements.extend(feat_flowable)
 
     elements.append(Paragraph('Spells', style=minor_title))
 

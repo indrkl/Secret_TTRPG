@@ -32,9 +32,9 @@ Remove a level of disoriented or afraid from you.
         'description': '''
             Remove a level of poison or freezing from you
         ''',
-        'difficulty': 'R2.R2',
+        'difficulty': 'R2.R3',
         'scaling': [
-            {'D': 'R2.R2', 'description': '''Remove all levels of that type from you'''},
+            {'D': 'R2.R3', 'description': '''Remove all levels of that type from you'''},
         ],
     },
     {

@@ -159,7 +159,6 @@ def roll_random_weapon(lvl):
 
 
 def print_mods(mods):
-    print(str(mods))
     for mod in mods:
         print (mod['effect'])
 

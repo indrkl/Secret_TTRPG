@@ -43,7 +43,8 @@ feats = {
         },
         {
             'name': 'Powerful',
-            'description': '''You have one additional dice during combat''',
+            'description': '''You have one additional dice during combat, which you can use for general actions, shield
+            and attacks''',
         },
         {
             'name': 'Defensive',

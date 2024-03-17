@@ -28,7 +28,7 @@ def get_monster_chapter(monsters, monster_name):
 def get_monsters_chapters():
 
     elements = [
-        {'type': 'title', 'content': 'None humanoid creaters'},
+        {'type': 'title', 'content': 'None humanoid creatures'},
         {'type': 'paragraph', 'content': '''
 None humanoid creatures (beasts, monsters, undead) can be created similarly like player characters. Only difference is 
 that they have their own base archetypes, with custom features, kinda like having innate feats and then they have a 

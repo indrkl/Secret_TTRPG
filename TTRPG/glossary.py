@@ -102,8 +102,8 @@ rest of the enemies. Either way he rolls XD6 as well and plays very closely to p
         'name': 'Combat setup',
         'description': '''
 You may know a lot of spells, or be able to do a lot of actions or use a lot of different weapons. However you can
-use a limited number of them in combat decided by your combat setup. By default all players have 3 slots. One for
-right hand, one for left hand, and one for mental. The action available for the right and left hand is decided by what
+use a limited number of them in combat decided by your combat setup. By default all players have 4 slots. One for
+right hand, one for left hand, and two for mental. The action available for the right and left hand is decided by what
 you wield. Mental slot can be filled with a spell, skill action etc. Also by freeing left or right hand you can
 instead have an additional mental slot. Magical weapons like wands or staves also grant mental slots for spells.
 
@@ -111,7 +111,6 @@ By spending 2 dice from the dice pool, a player can switch what they are wearing
 the mental slots however cannot be changed.
         '''
     },
-
     {
         'name': 'taking damage and various defenses',
         'description': '''

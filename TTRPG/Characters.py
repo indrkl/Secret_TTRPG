@@ -920,42 +920,65 @@ def split_data_into_columns(data, column_number):
         rows.append(row)
     return rows
 
-def find_feat_object(name, all_feats):
-    for path in all_feats:
-        for feat in all_feats[path]:
+def get_feat_and_flowable(name, name_addon=''):
+    from Innate_feats import feats as all_innate_feats
+    from Normal_feats import feats as all_normal_feats
+    from progression_feats import feats as all_progression_feats
+    from Innate_feats import prep_feat_flowable as prep_innate_feat_flowable
+    from Normal_feats import prep_feat_flowable as prep_normal_feat_flowable
+    from progression_feats import prep_feat_flowable as prep_progression_feat_floable
+
+    for path in all_innate_feats:
+        for feat in all_innate_feats[path]:
             if feat['name'].lower() == name.lower():
-                return feat
+                return feat, prep_innate_feat_flowable(feat,name_addon=name_addon)
+    for path in all_normal_feats:
+        for feat in all_normal_feats[path]:
+            if feat['name'].lower() == name.lower():
+                return feat, prep_normal_feat_flowable(feat)
+    for path in all_progression_feats:
+        for feat in all_progression_feats[path]:
+            if feat['name'].lower() == name.lower():
+                return feat, prep_progression_feat_floable(feat)
+    print(name)
 
 def find_general_action(name, all_general_actions):
     for action in all_general_actions:
         if action['name'] == name:
             return action
 
-def find_spell_object(name, all_spells):
-    for school in all_spells:
-        for spell in all_spells[school]['spells']:
+def get_spell_flowable(name):
+    from Spells import schools
+    from Spells import prep_spell_flowable as prep_spell_flowable
+
+
+    for school in schools:
+        for spell in schools[school]['spells']:
             if spell['name'].lower() == name.lower():
-                return spell
+                return prep_spell_flowable(spell)
+
+def get_equipment_flowable(name):
+    from equipment import equipment as all_equipment
+    from equipment import prep_equipment_flowable
+
+
+    if name in all_equipment:
+        return prep_equipment_flowable(all_equipment[name], name)
+    else:
+        return [Paragraph(name, style=minor_subtitle)]
 
 mana_multiplier = 2
 luck_multiplier = 1
 def generate_character_flowable(character):
-    from Innate_feats import prep_feat_flowable as prep_innate_feat_flowable
-    from Innate_feats import feats as all_innate_feats
-    from Normal_feats import feats as all_normal_feats
-    from progression_feats import feats as all_progression_feats
-    from Normal_feats import prep_feat_flowable as prep_normal_feat_flowable
-    from progression_feats import prep_feat_flowable as prep_progression_feat_floable
+
     from Skills import skills
     skill_names = [x['name'] for x in skills]
 
     from Spells import schools
-    from Spells import prep_spell_flowable as prep_spell_flowable
 
     spell_school_names = [key.lower() for key in schools]
 
-    from equipment import weapon_classes, prep_equipment_flowable
-    from equipment import equipment as all_equipment
+    from equipment import weapon_classes
 
     innate_feats = [{'name': character[key], 'path': key[12:]} for key in ['Innate_feat_skilled', 'Innate_feat_mage', 'Innate_feat_martial'] if key in character]
     feats = []
@@ -1013,15 +1036,9 @@ def generate_character_flowable(character):
 
     skill_proficiencies = [f'{prof}: {proficiencies[prof]}' for prof in proficiencies if prof in skill_names]
 
-    print(skill_proficiencies)
-
-    print(split_data_into_columns(skill_proficiencies, 3))
-
     data.extend(split_data_into_columns(skill_proficiencies, 3))
 
     spell_proficiencies = [f'{prof}: {proficiencies[prof]}' for prof in proficiencies if prof in spell_school_names]
-
-    print (spell_proficiencies)
 
     data.extend(split_data_into_columns(spell_proficiencies, 3))
 
@@ -1044,27 +1061,25 @@ def generate_character_flowable(character):
 
     for feat in innate_feats:
         feat_name = re.search('(^[A-Za-z ]*)', feat.get('name'))[1]
-        feat_obj = find_feat_object(feat_name, all_innate_feats)
         path_power = character.get(feat['path'].upper())
         name_addon = ' (%s)'%(path_mapping[path_power])
-        elements.extend(prep_innate_feat_flowable(feat_obj, name_addon=name_addon))
+        _, feat_flowable = get_feat_and_flowable(feat_name, name_addon=name_addon)
+
+        elements.extend(feat_flowable)
 
     for feat in feats:
-        feat_obj = find_feat_object(feat, all_normal_feats)
-        print(feat)
-        elements.extend(prep_normal_feat_flowable(feat_obj))
+        _, feat_flowable = get_feat_and_flowable(feat)
+        elements.extend(feat_flowable)
 
     for feat in prog_feats:
-        print(feat)
-        feat_obj = find_feat_object(feat, all_progression_feats)
-        elements.extend(prep_progression_feat_floable(feat_obj))
+        _, feat_flowable = get_feat_and_flowable(feat)
+        elements.extend(feat_flowable)
 
     elements.append(Paragraph('Spells', style=minor_subtitle))
 
     for spell in spells:
-        print(spell)
-        spell_obj = find_spell_object(spell, schools)
-        elements.extend(prep_spell_flowable(spell_obj))
+        spell_obj = get_spell_flowable(spell)
+        elements.extend(spell_obj)
 
     if character.get('normal_actions'):
         from general_actions import actions as general_actions
@@ -1079,11 +1094,7 @@ def generate_character_flowable(character):
     elements.append(Paragraph('Equipment', style=minor_subtitle))
 
     for equipment in character.get('equipment', []):
-        if equipment in all_equipment:
-            elements.extend(prep_equipment_flowable(all_equipment[equipment], equipment))
-        else:
-            elements.append(Paragraph(equipment, style=minor_subtitle))
-
+        elements.extend(get_equipment_flowable(equipment))
 
     return elements
 

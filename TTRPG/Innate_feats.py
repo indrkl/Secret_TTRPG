@@ -95,8 +95,9 @@ simply someone who wants favor from your house etc.)
         {
             'requires': 'Talented',
             'name': 'Metamagician',
-            'description': '''Metamagic feats cost 2 less to learn but no less than 1. You can apply 1 level of large or 
-            distant magic to a spell for free without increasing the difficulty, mana cost or metamagic limit.''',
+            'description': '''When learning a metamagic feat, learn a metamagic feat of same or lesser power. 
+            You can apply 1 level of large or distant magic to a spell for free without increasing the dice cost or 
+            metamagic limit.''',
         },
         {
             'requires': 'Adept',
@@ -108,7 +109,7 @@ simply someone who wants favor from your house etc.)
             beastly form you need to spend 1 mana per your character level and if you are in combat then also meet
             R5.R5.R5 roll target using nature magic. Your equipment merges
             into your body and loses it's magical effect until you return to your normal form. Scarred, damaged and
-            wounded dice carry over when transforming to the other form.''',
+            wounded dice carry over when transforming to and from the other form.''',
         },
         {
             'name': 'Divine protector',
@@ -163,19 +164,33 @@ higher school's power dice to cast lower school spells your balance tips towards
             'requires': 'Adept',
             'description': '''
 Choose 1 school of magic, you can only cast spells from that school of magic, and you can only gain proficiency with
-that school of magic. The proficiency upgrade cost are halved (rounded up) and you can go to 4 proficiency even as an
-adept mage.
+that school of magic. Proficiency advancement options all have (max prof. 4) when advancing this school of magic.
 
 If you are talented or legendary in the Mage path, then in addition you always have advantage when casting spells from
 that school. 
 '''
         },
     ],
+
+
+
+
+
     'Martial': [
         {
             'requires': 'Legendary',
             'name': 'Warcaster',
             'description': '''You can use stamina instead of mana for spellcasting.''',
+        },
+        {
+            'name': 'Enduring',
+            'description': '''
+You start with 1/2/3/4 additional maximum stamina depending on the level in martial path.
+
+When you are at least talented you also recover 1 stamina every round during combat. When you are at
+least legendary, then you recover 1 additional stamina every second round during combat. Recovery happens
+during the rerolling of your dice pool.
+            ''',
         },
         {
             'requires': 'Legendary',
@@ -212,11 +227,13 @@ At the beginning of each round, if you have at least 3 damaged dice, you may cho
 * Roar, all enemies within 5 sq. radius get 1 level of afraid per 3 damaged dice on you rounded down. 
             ''',
         },
-        # {
-        #     'requires': 'Legendary',
-        #     'name': 'Nimble',
-        #     'description': '''Your action limit increases by 1''',
-        # },
+        {
+            'requires': 'Legendary',
+            'name': 'Nimble',
+            'description': '''After using dice to move, dodge or recover defense, you can reroll those dice back into
+            your dice pool. Up to 2 dice can be reused this way per round (this resets when you reroll your entire dice
+            pool). This increases to 3 dice at level 7 and 4 dice at level 13.''',
+        },
         {
             'requires': 'Talented',
             'name': 'Tough',
@@ -227,16 +244,16 @@ At the beginning of each round, if you have at least 3 damaged dice, you may cho
             'requires': 'Adept',
             'name': 'Natural killer',
             'description': '''
-When you first time damage each enemy dice, gain a blood token that can be used during this encounter. If you are
-talented or legendary, whenever you gain at least one blood token, gain one additional one.
+When you first time damage each enemy with a weapon, gain a blood token that can be used during this encounter. 
+If you are talented or legendary, whenever you gain at least one blood token, gain one additional one.
 
-Whenever you make an attack, you can use one and only one of those options once to boost that attack:
+Once per round, whenever you make an attack, you can use one and only one of those options once to boost that attack:
 
 * spend 2 blood tokens to gain advantage or upgrade advantage to double advantage
  
 * Spend 5 blood tokens to gain double advantage
  
-* spend 1 blood token to deal 1 additional damage
+* spend X blood token to deal X additional damage
  
 * spend 2 blood tokens to disrupt 1 
             ''',
@@ -279,12 +296,13 @@ to use this ability becomes 6 and the utility dice becomes 5. For spell schools 
 3, the power dice to use this ability becomes 1 and the utility dice becomes 2. This ability uses wild magic
 proficiency, which you can advance using both mage and skilled path.
             
-Each spell can however only be used once using this ability until your luck pool is recovered.''',
+Each spell can however only be used once using this ability until your next "Time out and recover".''',
         },
         {
             'name': 'Specialist',
             'description': '''Choose 1 skill. You have an extra +1 for that skills proficiency. Note it does not 
-            increase the cost of acquiring proficiency with this skill and also allows the skill to reach +5 proficiency
+            increase the max of acquiring proficiency with this skill using normal options and therefore allows
+            the skill to reach +5 proficiency
 ''',
         },
         {
@@ -303,8 +321,8 @@ Each spell can however only be used once using this ability until your luck pool
         {
             'requires': 'Adept',
             'name': 'Prodigy',
-            'description': '''At second level gain double the amount of advancements in skilled path (so at legendary
-            skilled you gain 16 advancement points).
+            'description': '''At second level gain double the amount of advancement options in skilled path. You may
+            switch out the major option gained this way for 3 minor options if you want.
             ''',
         },
         {
