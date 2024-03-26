@@ -218,13 +218,13 @@ reduce damage dealt to you by 3.
 When your martial path is talented, When a dice would become scarred, roll it. On a 6, it stays normal.
 When your martial path is legendary, then it also doesn't become scarred on a 5.
 
-At the beginning of each round, if you have at least 3 damaged dice, you may choose one of the following:
+At the beginning of each round, if you have at least 3 damaged or scarred dice, you may choose one of the following:
 
 * Heal 1 damaged dice and recover 1 stamina.
 
 * Deal additional damage with one attack equal to the number of damaged dice.
 
-* Roar, all enemies within 5 sq. radius get 1 level of afraid per 3 damaged dice on you rounded down. 
+* Roar, all enemies within 5 sq. radius get 1 level of afraid per 2 damaged or scarred dice on you rounded down. 
             ''',
         },
         {
@@ -232,7 +232,7 @@ At the beginning of each round, if you have at least 3 damaged dice, you may cho
             'name': 'Nimble',
             'description': '''After using dice to move, dodge or recover defense, you can reroll those dice back into
             your dice pool. Up to 2 dice can be reused this way per round (this resets when you reroll your entire dice
-            pool). This increases to 3 dice at level 7 and 4 dice at level 13.''',
+            pool). This increases to 3 dice at level 6 and 4 dice at level 12.''',
         },
         {
             'requires': 'Talented',
@@ -255,7 +255,7 @@ Once per round, whenever you make an attack, you can use one and only one of tho
  
 * spend X blood token to deal X additional damage
  
-* spend 2 blood tokens to disrupt 1 
+* spend 2 blood tokens to disrupt 1
             ''',
         },
         {
@@ -334,6 +334,12 @@ Each spell can however only be used once using this ability until your next "Tim
             
             Just because you know someone doesn't mean that they provide that service for free. They may have a positive
             disposition and maybe provide a small discount, but that is up to GM-s discretion. 
+            ''',
+        },
+        {
+            'name': 'Daredevil',
+            'description': '''
+
             ''',
         },
     ]

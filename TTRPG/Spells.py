@@ -53,10 +53,10 @@ schools = {
                 'concenctration': 'R4',
                 'difficulty': 'R4.R4.R4',
                 'scaling': [
-                    {'D': 'R2', 'description': '''increase the length by 4 m.'''},
+                    {'D': 'R2', 'description': '''increase the length by 2 sq.'''},
                     {'D': 'R2', 'description': '''At the beginning of each of your rounds you can move the position of the
                     wall'''},
-                    {'D': 'R4', 'description': '''It requires 2 additional sq. worth of movement to go through the wall
+                    {'D': 'R4.R4', 'description': '''It requires 2 additional sq. worth of movement to go through the wall
                     of force'''},
                 ],
             },
@@ -67,7 +67,7 @@ schools = {
                 'duration': '5 rounds',
                 'concenctration': 'R4',
                 'effect': '''Increase your maximum defense to 2 (note, this does not stack with armor and is only
-                useful if you don't have maximum defense from other sources.
+                useful if you don't have maximum defense from armor or natural armor).
                 
                 You can use force proficiency to take the defend basic action.
                 ''',
@@ -92,15 +92,29 @@ schools = {
                 wilderness, you can use your nature proficiency instead of survival proficiency to make the checks.'''
             },
             {
+                'name': '''Growth and Decay''',
+                'effect': '''This is a creative spell. It accelerates the growth of plants for a short duration, letting
+                them grow days or even weeks worth of growth within seconds. However after using this spell, in order
+                to use it again, you need to first have either the same or other plants decay at a similar pace. The
+                bio mass of the plants and the severity of decay must match the bio mass and the benefits of the growth
+                part'''
+            },
+            {
+                'name': '''Strength''',
+                'effect': '''This is a creative spell. You boost the strength of yourself or one of your allies. After
+                learning this spell you can replace physique proficiency with nature proficiency when doing physique
+                challenges requiring strength or endurance.'''
+            },
+            {
                 'name': 'Heal',
                 'speed': '2A',
                 'range': 'touch',
-                'effect': '''This is a heal. Target recovers 1 damaged dice or removes all damage from wounded dice, or
+                'effect': '''This is a heal. Target recovers 1 damaged die or removes all damage from wounded dice, or
                 removes 1 level of burning, poison or freezing.''',
                 'target': 'single',
                 'difficulty': 'R1.R1.R1',
                 'scaling': [
-                    {'D': 'R1', 'description': 'This heal recovers 1 additional damaged dice'},
+                    {'D': 'R1', 'description': 'This heal recovers 1 additional damaged die'},
                     {'D': 'R1', 'description': 'remove a level of poison'},
                     {'D': 'R1', 'description': 'remove a level of burning'},
                     {'D': 'R1', 'description': 'remove a level of freezing'},
@@ -110,13 +124,13 @@ schools = {
                 'name': 'Grant luck',
                 'range': 'touch',
                 'target': 'single',
-                'effect': '''Target can change the result of one dice in the dice pool when you cast and each time
+                'effect': '''Target can change the result of one die in the dice pool when you cast and each time
                 you concentrate on it
                 ''',
                 'difficulty': 'R1.R1.R1',
                 'concentration': 'R1.R1.R1',
                 'scaling': [
-                    {'D': 'R1.R1', 'description': '''Target can change another dice in their dice pool'''},
+                    {'D': 'R1.R1', 'description': '''Target can change another die in their dice pool'''},
                 ],
             },
             {
@@ -136,6 +150,18 @@ schools = {
                         damage'''},
                 ],
             },
+            # {
+            #     'name': 'Primal roar',
+            #     'radius': '5 sq',
+            #     'effect': '''You channel primal nature magic, to roar like a giant beast, causing all enemies within
+            #     radius to gain 1 levels of afraid''',
+            #     'difficulty': 'R1.R1.R1.R1',
+            #     'scaling': [
+            #         {'D': 'R1.R1', 'description': '''They get another level of afraid'''},
+            #         {'D': 'R1.R1',
+            #          'description': '''Your allies get advantage with their next attack'''},
+            #     ],
+            # },
         ]
     },
     'Harmony': {
@@ -239,7 +265,7 @@ All friendly allies in the targeted area recover their defenses
                 'target': 'area',
                 'radius': '1 sq.',
                 'scaling': [
-                    {'D': 'R6.R6', 'description': 'Deal additional 3 damage'},
+                    {'D': 'R6.R6', 'description': 'Deal additional 2 damage'},
                     {'D': 'R6', 'description': '1 target enemy within radius gets a level of burning'},
                 ],
             },
@@ -448,7 +474,7 @@ All friendly allies in the targeted area recover their defenses
                     {'D': 'R3.R3', 'description': '''Target may cast spells that would affect the material plane'''},
                     {'D': 'R3', 'description': '''This spell can target any willing creature. This spell gains a range 
                         of touch.'''},
-                    {'D': 'R3.R3', 'description': '''This spell can target any creature. This spell gains a range 
+                    {'D': 'R3.R3.R3', 'description': '''This spell can target any creature. This spell gains a range 
                         of touch.'''},
                     {'D': 'R3.R3', 'description': '''Target may concentrate on spells that would affect the material 
                     plane'''},
@@ -533,20 +559,6 @@ All friendly allies in the targeted area recover their defenses
                     {'D': 'R5', 'description': 'deal additional 3 psychic damage'},
                 ],
             },
-            # {
-            #     'name': 'Paranoia',
-            #     'speed': '2 AP',
-            #     'target': '1 creature',
-            #     'duration': '1 minute',
-            #     'effect': '''Target must make your spell DC check. On failure their disposition to one random ally
-            #         changes to hostile. When target is still hostile to players, they may still choose to attack the
-            #         players instead, but if presented with a convenient opportunity they may attack that ally instead.
-            #         ''',
-            #     'difficulty': 7,
-            #     'scaling': [
-            #         {'D': 5, 'L': 1, 'description': '''The ally is no longer random, but chosen by you'''},
-            #     ],
-            # },
             {
                 'name': 'Weapon of horrors',
                 'target': '1 weapon',
@@ -560,7 +572,33 @@ All friendly allies in the targeted area recover their defenses
                     target enemy gets 1 level of afraid
                     '''},
                     {'D': 'R5.R5', 'description': '''Target weapon deals 1 additional psychic damage per power dice 
-                    spent'''}
+                    spent'''},
+                    {'D': 'R5.R5', 'description': '''When killing a hexed enemy with this weapon, immideately cast the
+                    hex on another target'''},
+                ],
+            },
+            {
+                'name': 'Darkness',
+                'target': 'any square',
+                'duration': '2 rounds',
+                'range': '8 sq.',
+                'radius': '2 sq.',
+                'effect': '''
+Darkness sweeps from the target point and all natural light gets vanquished in the target area. Only those with dark
+vision can peer through. Those inside it are blinded unless they have dark vision or blind sight. In addition, while
+inside the darkness, characters cannot remove hexes or remove disoriented or afraid stacks.
+
+Every time you pay the concentration cost, you can move the cloud of darknes by up to 4 sq. from the original spot.
+                    ''',
+                'difficulty': 'R5.R5.R5.R5',
+                'concentration': 'R5.R5.R5',
+                'scaling': [
+                    {'D': 'R5.R5.R5', 'L': 1, 'description': '''Even those with dark vision cannot see through this
+                    cloud of darkness and while being inside it, they are blinded. Only blind sight helps against this.
+                    '''},
+                    {'D': 'R5', 'L': 1, 'description': '''You can see hexed enemies inside the darkness and while being
+                    inside the darkness, you are not treated as being blind against hexed enemies.
+                    '''},
                 ],
             },
         ]
@@ -638,13 +676,13 @@ All friendly allies in the targeted area recover their defenses
                 'difficulty': 'R2.R2.R2.R2',
                 'scaling': [
                     {'D': 'R2', 'L': 1, 'description': '''When you move at half speed, then no ripple is creating so you
-                    have perfect invisibility. This allows you to sneak in broad daylight with advantage'''},
+                    have perfect invisibility. This allows you to sneak in broad daylight'''},
                     {'D': 'R2.R2', 'L': 1, 'description': '''Casting spells no longer creates ripples.'''},
                     {'D': 'R2.R2.R2.R2', 'L': 1, 'description': '''Attacking no longer creates ripples. This gives you
                     double advantage for attacks'''},
-                    {'D': 'R2.R2', 'L': 1, 'description': '''You can select another ally as the target of this spell. This
-                    spell gains the range of touch. To maintain the illusion the target must remain within line of sight
-                    from you.'''},
+                    {'D': 'R2.R2', 'L': 1, 'description': '''You can select another ally as the target of this spell. 
+                    This spell gains the range of touch. To maintain the illusion the target must remain within line of 
+                    sight from you.'''},
 
                 ],
             },
@@ -653,8 +691,9 @@ All friendly allies in the targeted area recover their defenses
                 'target': 'self',
                 'concentration': 'R2.R2.R2',
                 'duration': '3 rounds',
-                'effect': '''Your existance becomes questionable as you start to blur, and appear to be in multiple close places at once.
-        It becomes hard to see target you. Any offensive spell or attack targeting you has a 50 % chance to 
+                'effect': '''Your existance becomes questionable as you start to blur, and appear to be in multiple 
+                close places at once.
+        It becomes hard to target you. Any offensive spell or attack targeting you has a 50 % chance to 
         fail.
         ''',
                 'difficulty': 'R2.R2.R2.R2.R2',
@@ -696,10 +735,21 @@ All friendly allies in the targeted area recover their defenses
                 'concentration': 'R3.R3.R3',
                 'duration': '2 rounds',
                 'scaling': [
-                    {'D': 'R3.R3', 'L': 3, 'description': '''Increase maximum defense by another 1''',
-                    'D': 'R3.R3.R3', 'L': 1, 'description': '''
+                    {'D': 'R3.R3', 'L': 3, 'description': '''Increase maximum defense by another 1''',},
+                    {'D': 'R3.R3.R3', 'L': 1, 'description': '''
                     Your attacks go through defense directly and cannot be dodged unless the enemy also has diviners
                     advantage.'''},
+                ],
+            },
+            {
+                'name': 'Divine sight',
+                'target': 'self',
+                'effect': '''Gain blind sight of 6 sq.''',
+                'difficulty': 'R3.R3.R3',
+                'concentration': 'R3.R3.R3',
+                'duration': '3 rounds',
+                'radius': '6 sq.',
+                'scaling': [
                 ],
             },
             {
@@ -718,6 +768,14 @@ yes / no / yes and no / yet uncertain''',
                 'difficulty': 'R3.R3',
                 'effect': '''
                 Reveal the strength of a hidden difficulaty aspect
+                ''',
+            },
+            {
+                'name': 'Divine guidance',
+                'difficulty': 'R3.R3',
+                'effect': '''
+Think of an object or person, and get a sense of which direction you should go to get closer to the person / object.
+It doesn't reveal the distance or place of the target, only the direction.
                 ''',
             },
         ]

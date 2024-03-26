@@ -73,6 +73,10 @@ At level 1 and in all future levels players get to mark minor and major advancem
 number is stated at the bottom of the playcard). Each option can be taken as many times as the number of check boxes
 next to it. The number of check boxes increases at levels 5 and 9. 
 
+Also at level 1 decide how do scarred dice work. When you take damage, you lose dice, all magical healing does give you
+back the damaged dice, but each healing scars one of the dice. There are however options (see scarred dice in glossary)
+for how it will actually affect you.
+
 Advancement rules
 
 The maximum proficiency is in general +4, but using some innate and progression feats it can be raised to up to +6.
@@ -367,7 +371,8 @@ legendary_skilled_card = {
         {'description': 'gain major skilled feat or a skilled progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain skilled progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 8 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': '''advance 3 times with any skill (max prof. 4)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': '''gain 3 any skill proficiencies (max prof. 4)''',
+         'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
     ],
     'small_perks': [
@@ -376,6 +381,7 @@ legendary_skilled_card = {
         {'description': 'gain 1 will, reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 2 any skill proficiencies (max prof. 1)', 'available1-4': 2, 'available 5-8': 1, 'available 9-12': 0},
         {'description': 'gain 3 luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 2 luck', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 luck', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
@@ -399,6 +405,8 @@ talented_skilled_card = {
         {'description': 'gain 1 will, reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 2 any skill proficiencies (max prof. 1)', 'available1-4': 1, 'available 5-8': 1,
+         'available 9-12': 0},
         {'description': 'gain 3 luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 2 luck', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 luck', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},

@@ -157,15 +157,27 @@ still mitigate.
 Each time you receive healing and recover some of the set aside dice, one of those dice become scarred (try to have
 them in different color, like red for example).
 
-Scarred dice can only be used as 1, 2 or 3 in any roll target. You can still nudge them lower if they roll 4, 5 or 6.
+Scarred dice are weaker than normal dice, so when rolling your dice pool make sure they can be separated from normal
+dice. When you create your character and during each level up you may change the behaviour of scarred dice. But one 
+of the behaviours has to be chosen.
 
-To heal players must take time out and recover.
+
+1. Scarred dice can only be used as 1, 2 or 3 in any roll target. You can still nudge them lower if they roll 4, 5 or 6.
+
+
+2. Scarred dice cannot be nudged.
+
+
+3. To use a scarred dice you need to spend an additional die (which may be scarred though).
+
+
+To turn scarred dice back to normal dice, players must take time out and recover.
 
 During recovery, by spending various resources like herbs, good food etc. one can change scarred dice back to normal 
 dice.
 
 To change a single dice back it costs 15 gp worth of resources, to change 2 dice back it costs 50 gp and to change 3 
-dice back it costs 150 gp worth of resources. To recover all the dice, it coses 250 gp. 
+dice back it costs 150 gp worth of resources. To recover all the dice, it coses 250 gp.
      """,
     },
     {

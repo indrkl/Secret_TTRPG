@@ -92,7 +92,7 @@ first_number = 2
 second_number = 5
 
 if __name__ == '__main__':
-    # largest_streak_stats([first_number], sample_size, 0)
+    largest_streak_stats([first_number], sample_size, 0)
     # # largest_streak_stats([first_number], sample_size, 1)
     # largest_streak_stats([first_number], sample_size, 2)
     # # largest_streak_stats([first_number], sample_size, 3)
@@ -107,4 +107,4 @@ if __name__ == '__main__':
     # largest_streak_stats([first_number, second_number], sample_size, 2)
     # # largest_streak_stats([first_number, second_number], sample_size, 3)
     # largest_streak_stats([first_number, second_number], sample_size, 4)
-    largest_streak_stats([first_number, second_number], sample_size, 5)
+    # largest_streak_stats([first_number, second_number], sample_size, 5)

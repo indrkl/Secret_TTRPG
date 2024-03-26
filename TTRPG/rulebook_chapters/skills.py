@@ -29,17 +29,20 @@ def get_skill_related_chapter():
          'content': """
 Skills
 
-The out of combat play experience is split into scenes. Scene is started by GM explaing what is happening, what players
-experience, see, and then continues by players telling what the intend to do, to which GM either let's them do it or
-explains what kind of obstacles, challanges or tension is that might not let the players do what they want. This is the
-negotiation phase. At the end of it, GM provides various challanges for the players to try to do what they want, or
-get an outcome to their preference. Some of the challanges are inherent to the scene, like watch out, or learn about
-the history of the temple you are in, others come from the players wishes, like convincing an NPC, preparing an ambush
-etc.
-
-For all of the challanges GM provides one skill, which proficiency can be used to complete them. Players
+While playing during campaign turns, players may come to various challanges, and for all of them, there is at least
+1 skill, which proficiency they can use to complete that challange, which is provided by the GM. Players
 of course may try to convince the GM why they could also use another skill, or perhaps a creative spell from the school
-of magic to use it's proficiency instead, but one skill has to be first provided by GM.
+of magic, or just one of the school of magic's proficiency instead, but at least one skill has to be first provided by 
+GM.
+
+Skills in this game are much more broad than in DnD or many other TTRPG-s. They are derived from asking the question,
+what do players want to do, or what motivates them?
+
+They want to learn about the game world, uncover secrets, solve mysteries? This is lore. They want to influence other
+NPC-s to do something they wouldn't otherwise do? diplomacy, they want to survive or give themselves an edge to survive?
+Survival. Hide information, scheme, plot? concealment. Be the party leader or a beacon of hope in general? leadership.
+
+Each skill represents motivation and drive.
 """,
 # 'commented': """
 #

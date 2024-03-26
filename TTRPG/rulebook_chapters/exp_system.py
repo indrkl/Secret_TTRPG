@@ -14,20 +14,27 @@ are different, money, resources, progression in plot etc.
 
 Exp rewards for failure:
 
-1. Exp for each scarred dice players get. 10 exp
+Experience is applied when players go to downtime. That means
+
+1. Exp for each scarred or damaged dice players have when going to downtime. 3 exp for the whole party.
 
 2. Some scenes are big ones, and they provide experience, when the scene ends badly for players however, they get double
-the experience from the scene. Recommended to start from 10 exp, but no more than 50 exp for the grandest of scenes.
+the experience from the scene. Recommended to start from 5 exp, but no more than 25 exp for the grandest of scenes
+(so 50 % for double).
 
-3. When players have the choice of going to down-time or push forward, GM can entice them with exp if they go forward
-to the next potential combat encounter.  Recommened to start from 5 exp, and not entice them with more than 25 exp.
+3. In addition, each such scene provides a 5 % to 10 % bonus for the entirety of experience gathered since the previous
+downtime. That means that if players manage to push forward without going to downtime they earn experience much more
+efficiently.
+
+3.b Finally if players sacrifice significant amounts of wealth or assets to throw a party or do any other activity that
+fits their roles, they can get an additional 25 % bonus
 
 4. Each character can have a role-play objective. This is set at start of session. If they complete it, they earn 10 exp
-If they don't it's exp reward goes up by 5 for the next session.
+If they don't it's exp reward goes up by 5 for the next session. This doesn't benefit from the % bonus however.
 
 5. Group as a whole has objectives. Completing those grants experience to all players and the group organization. The
 objectives depend on the organization type. There can be 3 of them, each of them provides 10 exp if they are completed
-during the session.
+during the session. This doesn't benefit from the % bonus however.
 
 
 All exp earnt by a player only provides 10 % exp to the organization exp.

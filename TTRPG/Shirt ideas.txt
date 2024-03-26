@@ -22,9 +22,8 @@ Why do we need rules in TTRPG. Let's start by imaging, how would we play a TTRPG
 to play some characters, I guess if there are no rules then each of us could play more than one. We would still describe
 what our characters want to do and what they do and what happens. So what happens when 2 players want opposing things
 to happen in this fictional reality? Ha, so here is the first reason we need rules. Conflict resolution. Conflict
-between players, conflict between what the player characters do and what makes
-sense in the game world shared by the players, or when there is a GM eventually, then between the game-world that he has
-imagined.
+between players, conflict between what the player characters do and what makes sense in the game world shared by the
+players, or when there is a GM eventually, then between the game-world that he has imagined.
 
 Ok, so we need a rule to resolve conflicts, let's make it simple, a coin flip. Ok, now we have a basic conflict
 resolution. But now we have another problem. How do you avoid unbalanced coin flips. Where one of the outcomes is
@@ -39,7 +38,7 @@ some social norms, of letting each other have a turn, hold themselves back and s
 makes sense, what is plausible, not try to get to the center of attention, basically being super pro social.
 
 But in the high fantasy setting, where players want to be heroes, where the heroes aim to overcome some big obstacle,
-challange, evil, problem or what not, there are few things, I believe are fundamental to that game, so called  the
+challenge, evil, problem or what not, there are few things, I believe are fundamental to that game, so called  the
 pillars:
 
 a. Players want to go all out! they want to push the limits, and they want to get the maximum out of their characters.
@@ -76,7 +75,7 @@ b. Too many constraints, we want freedom. Albeit constraint is necessary, you do
 For example, there is no need for a player to play a smart magic wielding Orc, to be an outlier, yes it has story
 ramifications, but as long as his smartness is constrained by the game rules and on par with the smartness achievable by
 other races, there is no reason to constrain it, as it does not violate any of the 5 pillars.
-Only add minimal constraint, and only do so provide for the pillars.
+Only add minimal constraint, and only do so to provide for the pillars.
 
 c. Seriousness. This is still a game, this is still a fantasy game where there is magic, which we play to escape, where
 we can explore things we cannot explore else where. The ability to do so is not provided by the rules, but it sure as
@@ -99,21 +98,21 @@ in the scene currently.
 2. Xd6 dice system, what I tried to achieve with them, some interesting properties and nuances.
 
 Imagine, each player has 6 d6s. They roll them, but you don't sum anything. Instead, these 6 dice become your action
-economy. You want to move, you spend one of them, you want to attack and deal damage to an enemy with your dagger, you
-need to spend 2 dice that rolled a 2. If you want to attack them with your sword, spend 2 dice that rolled a 4. You
-want to cast a fireball, you need to spend 4 sixes.
+economy. You want to move, you spend one of them, and move as many squares as the result of the die spent, you want to
+attack and deal damage to an enemy with your dagger, you spend 2 dice that rolled a 2. If you want to attack them with
+your sword, spend 2 dice that rolled a 4. You want to cast a fireball, you need to spend 4 sixes.
 
 First thought of course is, that isn't the odds really bad in this case? Out of the box, yes, they are terrible. Getting
 even 2 specific numbers is around 25 %, if you need 3, then it is 6 %, and it goes much worse from there on. But this
 can be fixed by proficiency, which is a normal thing in TTRPGs. Suppose I have 1 proficiency with daggers. In this case
-I can nudge one dice by 1, so turn a 1 into 2 or 3 into 2. Firstly the odds go up to 63 % for 2 dice. If I want to do
+I can nudge one die by 1, so turn a 1 into 2 or 3 into 2. Firstly the odds go up to 63 % for 2 dice. If I want to do
 something more difficult with the dagger, then one proficiency will not cut it, but by getting one more proficiency,
 and be able to do 1 more nudge, it will again, become much more plausible.
 
 To give you an idea of the range of the proficiencies I have in mind then in my current rules, players can normally have
 proficiencies from 1 to 4, and some special feats can increase them to 5.
 
-So what have we achieved with this system?
+Ok, but what have we achieved with this system?
 
 1. All the dice players commit to actions, make the actions succeed. So if it is players turn, they never have empty
 turns. They may not be able to do whatever they want, but they do get to do something.
@@ -127,9 +126,12 @@ time to add numbers, which takes often much more time than needed.
 
 4. It still has randomness, but instead of randomness determining weather you succeed, it dictates what you can do.
 
-5. This creates interesting character build options, because while many games specializing made always sense,
-because you would always do the action, which has the best
-odds of biggest returns, and the odds of this return hardly ever changed, then in this system it makes sense to have
+5. This creates interesting character build options, by making diversifying a competitive strategy to specializing.
+In most games specializing made always sense, because you would always do the action, which had the best
+odds of biggest returns, and since you pick first and roll second the odds of this return hardly ever changed, which
+meant that your tactics were always the same, and when deciding how to build your character it made always most sense
+to boost the thing you would do most often at every opportunity causing you to want to do it even more often.
+However in this system it makes sense to have
 some proficiency in multiple things, which require different dice targets, preferable somewhat apart from each other.
 You may have dagger as your primary skill, but maybe you are also invested a bit in elemental magic, and every once in
 a while when you roll a lot of fives and sixes, you do a few nudges and you cast a fireball. You do it less often than
@@ -138,7 +140,8 @@ This is actually one of the properties that got me excited to even explore this 
 problem where "over specialization is just so strong that it cuts a whole-bunch of builds from an optimization point
 from the discussion".
 
-But we are not done, the rabbit hole goes even deeper. So, there are some basic actions in my game, like in other TTRPGs
+So that's what we have achieved so far, but we are not done, the rabbit hole goes even deeper.
+So, there are some basic actions in my game, like in other TTRPGs
 , move and defend. How move works, is that you can spend any dice, but you get to move as many squares as was stated
 on the dice. So fives and sixes are all of a sudden very valuable for moving.
 
@@ -149,22 +152,22 @@ By having these basic actions defined like that, then the choice of the dice, tw
 it actually already gives some meaning. Using a dagger does not constrain you to move a lot. While fighting with a
 two handed sword allows you to have a better defensive posture. The numbers in the six sided dice start to get a
 meaning. It is no longer that 6 is always better than 1, no, they have a different wibe to it. Things that require
-big numbers force you to stand more still, while things that require lower numbers leave you more vulnerable to damage.
+big numbers force you to stand more still, while things that require lower numbers compete with your ability to defend.
 
 Ok, so far we have discussed how it would work in combat, and that is where I started with this system. But what about
-out of combat. Actually, it turns out, it works very well out of combat as well. You could use the dungeon turns system
-to have everyone roll their 6d6 at the start of the dungeon turn, and whatever they want to do, they need to commit some
-dice to it. And you as the DM can decide the roll targets for various successes. Even outside of dungeon you could say,
-ok, we are travelling for a week, during travelling we want to do foraging to save rations, guard our camp to not get
-ambushed, chat with other travellers on the road and learn rumors, and at the same time make haste. Well, you can simply
-say, ok, these are the roll targets and skills, which proficiency can be used for these activities, who is doing what,
-and how many dice you can commit to a task? Based on that the success of the task is determined. Oh, you want to make
-haste and learn rumors at the same time, well, they both take fives, so how are you going to play it? Maybe they do have
-enough dice for both roll targets, then you as a GM, can decide how it made sense, maybe they met some travellers with
-extra horses, who they liked the party, so they rode fast, and chat on the way?
+out of combat. Actually, it turns out, it works very well out of combat as well. You could use the campaign turns system
+to have everyone roll their 6d6 at the start of the campaign turn, and whatever they want to do, they need to commit
+some dice to it. When they have spent their dice, then others get to act, until everyone are fine with starting the next
+turn. In DnD this has been called as dungeon turns by some and is a good GM practice, but in this game, it is built
+into the system.
 
-Right now I am in the phase where I am testing different "techniques" for out of combat scene management. Scene being
-the turn equivalent out of combat. More on that in the next video.
+The exact workings of how campaign turns work are still work in progress. But there are some important insights I have
+gotten. The required dice to succeed in an action cannot be known at least with certainty beforehand, out of combat
+experience requires more unpredictability. I have played around with adding specific wibes to numbers there as well,
+but this may turn out to be the wrong approach. In current iteration, when player wants to do something, GM decides
+required skill proficiency and difficulty and rolls 1d6 to see the specific target for the action. In addtion, GM can
+throw obstacles or threats to players which require certain dice to not suffer some consequence. But that part is still
+in testing, and is currently around 3rd or 4th iteration already.
 
 
 3. Story scenes, how the Xd6 dice system interacts with it, techniques: constraint, stepped unlocking, pushing with
@@ -172,7 +175,61 @@ stakes.
 
 4. Lore mechanics, diplomacy mechanics, skills, should skills have different mechanics? Deeper diplomacy game?
 
+Let's talk about skill systems. Skills and proficiency in them determines which challanges your character has advantage
+and which ones they fail more easily.
+
+One of the fundamental goals for me was, that I wanted every character build decision to feel impactful and important. I also
+wanted the player to be excited about the character once they are finished with it, and for the characters to feel OP,
+at least some times. With this in mind I decided from the get go, that in order to be proficient with any skill, it
+needs to be a choice, and you could gain something else by not being proficient in any skill. That meant that the
+skills needed to be desirable. When looking at DnD, or Path finder, or many other games, then quite often there are
+those big skill lists, and while picking some skill, it might make sense to pick it for the concept of your character,
+but in actual play, you may find not ever getting into a position where you could actually make use of that skill. And
+that sucks. It would suck especially hard if you invested heavily in the skill. And avoiding that outcome I found to
+be crucial to achieve what I wanted: being excited to invest into some skills as part of your build. I needed to make
+sure that the skills players could choose are VERY likely to come up in the game session. To do that there are 2 main
+ideas:
+
+1. Have few skills in the first place
+
+2. Skills are categorised by players intentions. What does that mean? Let's look at a few examples. Lore skill, this
+encompasses everything involving gathering information about the game world, plot, mysteries. That includes reading
+books, investigating, perceiving for clues, interrogation, conversation, deciphering etc. The intention there is to
+know stuff.
+
+Another example, diplomacy skill, that means everything to do with influencing NPCs behaviour. Get someone to do
+something without using direct force. This can be negotiation, haggling, persuasion, deception, intimidation, coercion,
+whatever, it is using your words, posture and presence to alter someone's behaviour. The intention there is to be
+charismatic, someone with presence and influence over others.
+
+Survival skill is for players who are slightly paranoid, and intend to do everything right to survive, and for the
+party to survive, crafting skill represents the intention of making things, leadership skill is for leading the group,
+leadership is a bit special skill, with a few additional rules, like deciding the turn order in combat for the group.
+
+Then we have intrigue skill, which is perfectly optional for the group, but is required if someone wants to plot,
+scheme, withhold secrets etc.
+
+And finally we have the physique skill, which is for all physical challanges.
+
+This also aligns a bit of what you as the player want to get from the game? Do you care for lore, focus on lore skill,
+do you care for role play, influencing NPC-s and talking, probably diplomacy? Do you like to think of all the threats,
+prepare for worse, probably you should pick up survival to synergise with your play style.
+
+So what have we achieved with this:
+
+1. Less skill choices, but the choices there are, are impactful, and hopefully, exciting. Player picking up lore is
+clearly excited for their significant advantage in learning about the game world for example.
+
+2. By having the intention dictate the skills, it is much easier to make a character that easily synchronises with the
+player.
+
+So, to summarize, my goal was to have choosing skills and leveling up their proficiencies a meaningful choice in
+character creation and level ups. For that I needed to make sure that the skill choices available are exciting and
+players don't end up investing points into something that never comes up. To achieve that I designed my skills from
+a player intention perspective, which is more wide, this still allows players to only shine in certain situations in the
+game, but all intentions I chose were in my experience very common in TTRPG play sessions. And hopefully that allows
+the player to more easily synchronise with their character.
+
 5. Power, stakes, prices, costs, loss, win, challange, why does it feel like it conflicts with role playing?
 
 6. Character customization, why I ended up with paths.
-

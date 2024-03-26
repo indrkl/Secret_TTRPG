@@ -391,6 +391,14 @@ of disorientation, have disadvantage for attacks against you. You have advantage
 who have at least 2 levels of disoriented. When taking a move action, then one target creature with at least
 2 levels of disoriented loses track of you and become unaware of your presence.''',
         },
+        {
+            'cost': 'medium',
+            'name': 'War shout',
+            'effect': '''You can spend 2 natural R5 or R4 to make a proper shout, that would apply 1 level of afraid
+            into all enemies within 4 sq. of you, or 2 natural R6 to make an even more powerful bone-shattering shout,
+            that applies 1 level of afraid into all enemies within 2 sq. of you and 1 additional level of afraid into
+            enemies within 5 sq. of you''',
+        },
         {'cost': 'major',
              'name': 'Two weapon fighter',
              'effect': '''
@@ -598,8 +606,15 @@ You must declare when using this ability.
          },
         {'cost': 'small',
          'name': 'Lucky finder',
-         'effect': '''When rolling loot table, you can spend 2 luck token to be presented with 2 options
-    , you still pick only 1.''',
+         'effect': '''
+When rolling loot table, you can spend 2 luck token to be presented with 2 options, you still pick only 1.''',
+         },
+        {'cost': 'medium',
+         'name': 'Insightful',
+         'effect': '''
+Whenever you spend at least 3 dice for lore related activities, you can ask a yes / no / yes and no / uncertain question
+, which the GM will answer based on the evidence which can be found in the scene or if you are having a conversation
+with someone, that someone is able to provide.''',
          },
         {'cost': 'medium',
          'name': 'Master plan',
@@ -626,8 +641,8 @@ players on a 1 to 1 basis.
          'name': 'Tinkerer',
          'effect': '''
 You have the ability to come up and craft all sorts of crazy gadgets. You carry materials with you, and during
-campaign turns, if you can eplain how a gadget could help you solve a challange, you can use the crafting
-proficiency instead. the cost in materials depends on the challange difficulty:
+campaign turns, if you can explain how a wild gadget could help you solve a challange, you can use the crafting
+proficiency instead. the cost in materials depends on the challenge difficulty:
 
 
 3 dice: 15 gp
@@ -883,7 +898,7 @@ higher.
 You can prepare poison coatings and coat weapons with poison. In order to prepare poisons you
 need to gather poison glands or procure necessary raw materials from the marketplace. Both of them
 requires you to choose them as your personal focus. Depending on the situation it could require gathering,
-diplomacy, roguery and would also have a different difficulty, plus may require some extra cost such as gold.
+diplomacy, survival and would also have a different difficulty, plus may require some extra cost such as gold.
 
 By default a coating of 3 stacks of following poisons on a melee weapon or 2 stack a single arrow costs that
 much money, this can be reduced with role-play,group focuses:

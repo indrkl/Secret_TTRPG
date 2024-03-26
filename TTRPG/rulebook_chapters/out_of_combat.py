@@ -48,8 +48,7 @@ these are more difficult challanges, which may require 5, 6 or even more dice in
 must take the lead in the activity, they get to use their dice with 100 % efficiency. In addition the one who takes the
 lead in these challanges can use their leadership proficiency instead of the challange's skill proficiency if that is
 better. Other players need to first pay 1 dice of the target number to start contributing, but all the dice afterwards
-contribute with 100 % efficiency. Players may choose to not participate in some particular group effort. All
-participants may use up to 3 dice to 
+contribute with 100 % efficiency. Players may choose to not participate in some particular group effort.
          
 Players may aid each other. When aiding a player may provide 1 dice of the target number (can nudge using their
 proficiency) to provide an additional nudge for the player doing the action. A player cannot be aided more times this
@@ -64,8 +63,8 @@ draw cards from a stacked deck of normal cards at the beginning of each campaign
 encounters, create complications etc. 
 In addition, the complications attained by the risk dice can also be represented by additional cards during the next
 turn. The exact usage of those cards should still be done in a role gamey wibe, but this is more to remind the GM, that
-now is fair to ramp up the difficulty and create some tension. You could stack the deck with 1 (ace), 2, 3 and 4-s mostly,
-with fewer 5 and maybe a single, 6, 7 or 8 for group challanges. 
+now is fair game to ramp up the difficulty and create some tension. You could stack the deck with 1 (ace), 2, 3 and 4-s 
+mostly, with fewer 5 and maybe a single, 6, 7 or 8 for group challanges. 
 """},
     ]
 

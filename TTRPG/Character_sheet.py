@@ -15,6 +15,7 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
     # Name, background 3 | 4 | 3 | 11
     # Description 3 | 18
     # Mage, Martial, Skilled 3 | 4 | 3 | 4 | 3 | 4
+    # Toughness, max defense, damage reduction, physique penalty from armor?
     # Damage, 6 dice, break, column, mana, stamina, luck. 3 | 6 x 1 | 2 | 3 | 2 | 2 | 2
     # Will, Fort, Reflex 3 | 1, 3 | 1, 3 | 1
     # Status effects 7 x 3
@@ -43,13 +44,7 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
             Paragraph('Skilled', style=basic_paragraph_style), '', '', path_type_box, '', '', '',
 
          ],
-        # [
-        #     '', '', '', Paragraph(add_dice_images('R1'), style=basic_paragraph_style), Paragraph(add_dice_images('R2'), style=basic_paragraph_style),
-        #     Paragraph(add_dice_images('R3'), style=basic_paragraph_style), Paragraph(add_dice_images('R4'), style=basic_paragraph_style),
-        #     Paragraph(add_dice_images('R5'), style=basic_paragraph_style), Paragraph(add_dice_images('R6'), style=basic_paragraph_style),
-        #     '', '', '', '', '', Paragraph('Stamina', style=basic_paragraph_style), '',
-        #     Paragraph('Mana', style=basic_paragraph_style), '', Paragraph('Luck', style=basic_paragraph_style), '',
-        # ],
+        ['Toughness', '', '', box_2, '', 'Max. defense', '', '', '', box_2, '', 'DR', box_1, 'armor physique penalty', '', '', '', '', '', box_2, ''],
         [
             '',  '', '', Paragraph(add_dice_images('R1', size=10), style=basic_paragraph_style),
             Paragraph(add_dice_images('R2', size=10), style=basic_paragraph_style),
@@ -64,6 +59,7 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
         ['Scarred'] + [''] * 2 + [checkbox] * 6 + [''] + ['Current'] + [''] * 3 + [box_3, '', '', box_2, '', box_2, ''],
         ['Proficiencies'] + [''] * 5 + ['Inventory'] + [''] * 5 + ['Spells'] + [''] * 8
     ]
+    header_block = 4
 
     style = [
         # ('LINEBELOW', (0, 1), (-1, -1), 0.25, colors.black),
@@ -81,11 +77,20 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
         ('SPAN', (10, 2), (13, 2)),
         ('SPAN', (14, 2), (16, 2)),
         ('SPAN', (17, 2), (-1, 2)),
-        ('SPAN', (0, 6), (5, 6)),
-        ('SPAN', (6, 6), (11, 6)),
-        ('SPAN', (12, 6), (-1, 6)),
+        ('SPAN', (0, 3), (2, 3)),
+        ('SPAN', (3, 3), (4, 3)),
+        ('SPAN', (5, 3), (8, 3)),
+        ('SPAN', (9, 3), (10, 3)),
+        ('SPAN', (11, 3), (11, 3)),
+        ('SPAN', (12, 3), (12, 3)),
+        ('SPAN', (13, 3), (18, 3)),
+        ('SPAN', (19, 3), (-1, 3)),
+        ('SPAN', (0, header_block + 3), (5, header_block + 3)),
+        ('SPAN', (6, header_block + 3), (11, header_block + 3)),
+        ('SPAN', (12, header_block + 3), (-1, header_block + 3)),
     ]
-    for x in range(3, 6):
+
+    for x in range(header_block, header_block+3):
         style.extend([
         ('SPAN', (0, x), (2, x)),
         ('SPAN', (10, x), (13, x)),
@@ -97,7 +102,7 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
     i = 0
     premade_list = ['Will', 'Fortitude', 'Reflex', 'Lore', 'Diplomacy', 'Physique', 'Survival', 'Leadership', 'concealment', 'crafting', 'harvesting']
 
-    for x in range(7, 25):
+    for x in range(header_block + 4, header_block + 22):
         data.append([Paragraph(premade_list[i], style = basic_paragraph_style) if len(premade_list) > i else box_5] + [''] * 4 + [box_1, box_6] + [''] * 5 + [box_9] + [''] * 8)
         i += 1
         style.extend([
@@ -106,9 +111,9 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
             ('SPAN', (6, x), (11, x)),
             ('SPAN', (12, x), (-1, x)),
         ])
-    style.append(('SPAN', (0, 25), (-1, 25)))
+    style.append(('SPAN', (0, header_block + 22), (-1, header_block + 22)))
     data.append(['Feats'] + ['']*20)
-    for x in range(26, 36):
+    for x in range(header_block + 23, header_block + 33):
         data.append([box_21] + [''] * 20)
         style.extend([
             ('SPAN', (0, x), (-1, x)),
@@ -128,7 +133,7 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
     for spell in spells:
         elements.extend(get_spell_flowable(spell))
     for feat in feats:
-        _,feat_flowable = get_feat_and_flowable(feat)
+        _, feat_flowable = get_feat_and_flowable(feat)
         elements.extend(feat_flowable)
     for equip in equipment:
         elements.extend(get_equipment_flowable(equip))
@@ -144,7 +149,15 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
 
 
 if __name__ == '__main__':
-    generate_character_sheet(3, 1, 2, spells=['Fireball', 'Chain lightning', 'False threats', 'Invisibility'],
-                             name='Gurthna', feats=[], equipment=[])
-    generate_character_sheet(0, 3, 3, spells=[],
-                             name='Andrew Cannon', feats=['Shadow', 'Medium armor proficiency', 'Two weapon fighter', 'Tinkerer', 'Agent of chaos'], equipment=['dagger', 'sword'])
+    # generate_character_sheet(3, 1, 2, spells=['Fireball', 'Chain lightning', 'False threats', 'Invisibility'],
+    #                          name='Gurthna', feats=[], equipment=[])
+    # generate_character_sheet(0, 3, 3, spells=[],
+    #                          name='Andrew Cannon', feats=['Shadow', 'Medium armor proficiency', 'Two weapon fighter',
+    #                          'Tinkerer', 'Agent of chaos'], equipment=['dagger', 'sword'])
+    generate_character_sheet(0, 2, 4, spells=[],
+                             name='Jungle_adventurer', feats=[], equipment=['dagger'])
+    # for mage in range(0, 5):
+    #     for martial in range(0, 5):
+    #         for skilled in range(0, 5):
+    #             if mage + martial + skilled == 6:
+    #                 generate_character_sheet(mage=mage, martial=martial, skilled=skilled, name=f"mage_{mage}_martial_{martial}_skilled_{skilled}")
