@@ -1,11 +1,11 @@
-# Force - 3
-# Nature - 6
-# Harmony - 5
-# Elemental - 1
+# Force - 4
+# Nature - 1
+# Harmony - 2
+# Elemental - 6
 # Dimension - 3
-# Discord - 1
+# Discord - 5
 # Illusion - 2
-# Divination - 4
+# Divination - 3
 
 schools = {
     'Force': {
@@ -114,7 +114,7 @@ schools = {
                 'target': 'single',
                 'difficulty': 'R1.R1.R1',
                 'scaling': [
-                    {'D': 'R1', 'description': 'This heal recovers 1 additional damaged die'},
+                    {'D': 'R1.R1.R1', 'description': 'This heal recovers 1 additional damaged die'},
                     {'D': 'R1', 'description': 'remove a level of poison'},
                     {'D': 'R1', 'description': 'remove a level of burning'},
                     {'D': 'R1', 'description': 'remove a level of freezing'},
@@ -560,6 +560,22 @@ All friendly allies in the targeted area recover their defenses
                 ],
             },
             {
+                'name': 'Pain sharing',
+                'range': 'touch',
+                'target': '1 creature',
+                'duration': '2 rounds',
+                'effect': '''Buff an ally, so that when they take damage to their health, then whoever caused that
+                damage takes the same amount of psychic damage
+                    ''',
+                'difficulty': 'R5.R5.R5.R5.R5',
+                'concentration': 'R5.R5.R5',
+
+                'scaling': [
+                    {'D': 'R5.R5.R5', 'description': '''The one dealing the damage also gets 1 levels of disoriented for 
+                    every 2 damage dealt rounded up'''},
+                ],
+            },
+            {
                 'name': 'Weapon of horrors',
                 'target': '1 weapon',
                 'duration': '3 rounds',
@@ -621,6 +637,19 @@ Every time you pay the concentration cost, you can move the cloud of darknes by 
                     {'D': 'R2.R2', 'L': 3, 'description': '''Everyone get 1 additional level of disoriented'''},
                     {'D': 'R2', 'L': 3, 'description': '''One target within radius gets 1 additional level of 
                     disoriented'''},
+                ],
+            },
+            {
+                'name': 'Block sight',
+                'target': 'creature',
+                'range': '6 sq.',
+                'duration': '1 round',
+                'effect': '''Block target's sight with an illusion making them effectively blind.
+            ''',
+                'difficulty': 'R2.R2.R2.R2',
+                'concentration': 'R2.R2',
+                'scaling': [
+                    # {'D': 'R2.R2', 'L': 3, 'description': '''Everyone get 1 additional level of disoriented'''},
                 ],
             },
             {

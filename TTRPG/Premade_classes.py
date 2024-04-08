@@ -3,8 +3,8 @@ premade_classes = [
     'name': 'Paladin',
     'MARTIAL': 4,
     'MAGE': 2,
-    'Innate_feat_martial': 'Bulwark',
-    'Innate_feat_mage': 'Divine protector',
+    'foundation_martial': 'Bulwark',
+    'foundation_mage': 'Divine protector',
     'Levels': [
         {
             'notes': ['''
@@ -101,8 +101,8 @@ premade_classes = [
         'name': 'Mercenary (2 weapon variant)',
         'MARTIAL': 3,
         'SKILLED': 3,
-        'Innate_feat_martial': 'Tough',
-        'Innate_feat_skilled': 'Well connected',
+        'foundation_martial': 'Tough',
+        'foundation_skilled': 'Well connected',
         'Levels': [
             {
                 'notes': ['''
@@ -197,8 +197,8 @@ already provides a wide dice coverage so adding more options doesn't make it mor
         'name': 'Genius',
         'MARTIAL': 2,
         'SKILLED': 4,
-        'Innate_feat_martial': 'Harmonious body',
-        'Innate_feat_skilled': 'Prodigy',
+        'foundation_martial': 'Harmonious body',
+        'foundation_skilled': 'Prodigy',
         'Levels': [
             {
                 'notes': ['''
@@ -299,8 +299,8 @@ some other skill instead of leadership to instruct the party on.
         'name': 'Pyromancer',
         'MAGE': 4,
         'SKILLED': 2,
-        'Innate_feat_mage': 'Metamagician',
-        'Innate_feat_skilled': 'Lucky',
+        'foundation_mage': 'Metamagician',
+        'foundation_skilled': 'Lucky',
         'Levels': [
             { # 1
                 'notes': ['''
@@ -408,7 +408,7 @@ def generate_class_flowable(premade_class):
     from equipment import weapon_classes, prep_equipment_flowable
     from equipment import equipment as all_equipment
 
-    innate_feats = [{'name': premade_class[key], 'path': key[12:]} for key in ['Innate_feat_skilled', 'Innate_feat_mage', 'Innate_feat_martial'] if key in premade_class]
+    innate_feats = [{'name': premade_class[key], 'path': key[12:]} for key in ['foundation_skilled', 'foundation_mage', 'foundation_martial'] if key in premade_class]
     feats = []
     progression_feats = []
     spells = []

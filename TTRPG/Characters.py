@@ -5,7 +5,7 @@ xd6_characters = [
         'MARTIAL': 4,
         'Levels': {
             1: {
-                'Innate_feat_mage': 'Shifter',
+                'foundation_mage': 'Shifter',
                 'Innate_feat_marital': 'Advanced senses',
                 'Mage advancements': [
                     '''first illusion proficiency, false threats spell'''
@@ -40,8 +40,8 @@ xd6_characters = [
         'SKILLED': 2,
         'Levels': {
             1: {
-                'Innate_feat_mage': 'Raw caster',
-                'Innate_feat_skilled': 'Natural armor',
+                'foundation_mage': 'Raw caster',
+                'foundation_skilled': 'Natural armor',
                 'Mage advancements': [
                     '''first elemental proficiency, second elemental proficiency, fireball spell'''
                 ],
@@ -75,8 +75,8 @@ xd6_characters = [
         'SKILLED': 2,
         'Levels': {
             1: {
-                'Innate_feat_mage': 'Raw caster',
-                'Innate_feat_skilled': 'Specialist (leader',
+                'foundation_mage': 'Raw caster',
+                'foundation_skilled': 'Specialist (leader',
                 'Mage advancements': [
                     '''first and second discord proficiency, 'Weapon of horrors' spell'''
                 ],
@@ -110,8 +110,8 @@ xd6_characters = [
         'MAGE': 2,
         'Levels': {
             1: {
-                'Innate_feat_mage': 'Divine protector',
-                'Innate_feat_martial': 'Warcaster',
+                'foundation_mage': 'Divine protector',
+                'foundation_martial': 'Warcaster',
                 'Mage advancements': [
                     '''1 harmony proficiency, guardian spell'''
                 ],
@@ -144,8 +144,8 @@ xd6_characters = [
         'MAGE': 2,
         'Levels': {
             1: {
-                'Innate_feat_mage': 'Divine protector',
-                'Innate_feat_martial': 'Defiant',
+                'foundation_mage': 'Divine protector',
+                'foundation_martial': 'Defiant',
                 'Mage advancements': [
                     '''first toughness proficiency, first will proficiency'''
                 ],
@@ -178,8 +178,8 @@ xd6_characters = [
         'MARTIAL': 2,
         'Levels': {
             1: {
-                'Innate_feat_skilled': 'Prodigy',
-                'Innate_feat_martial': 'Advanced senses',
+                'foundation_skilled': 'Prodigy',
+                'foundation_martial': 'Advanced senses',
                 'Skilled advancements': [
                     '''first and second leadership proficiency, first diplomacy proficiency'''
                 ],
@@ -212,8 +212,8 @@ xd6_characters = [
         'MAGE': 3,
         'Levels': {
             1: {
-                'Innate_feat_skilled': 'Lucky',
-                'Innate_feat_mage': 'Raw caster',
+                'foundation_skilled': 'Lucky',
+                'foundation_mage': 'Raw caster',
                 'Skilled advancements': [
                     '''first and second survival proficiency'''
                 ],
@@ -246,8 +246,8 @@ xd6_characters = [
         'MARTIAL': 4,
         'Levels': {
             1: {
-                'Innate_feat_skilled': 'Specialist (survival)',
-                'Innate_feat_martial': 'Defiant',
+                'foundation_skilled': 'Specialist (survival)',
+                'foundation_martial': 'Defiant',
                 'Skilled advancements': [
                     '''first survival and diplomacy proficiency'''
                 ],
@@ -283,9 +283,9 @@ player_characters = [
         'MARTIAL': 2,
         'MAGE': 2,
         'defense': 4,
-        'Innate_feat_skilled': 'Lucky',
-        'Innate_feat_martial': 'Extraordinary senses',
-        'Innate_feat_mage': 'Shifter',
+        'foundation_skilled': 'Lucky',
+        'foundation_martial': 'Extraordinary senses',
+        'foundation_mage': 'Shifter',
         'Levels': {
             1: {
 
@@ -340,9 +340,9 @@ player_characters = [
         'MARTIAL': 3,
         'MAGE': 1,
         'defense': 5,
-        'Innate_feat_skilled': 'Specialist(lore)',
-        'Innate_feat_martial': 'Anti mage',
-        'Innate_feat_mage': 'Divine protector',
+        'foundation_skilled': 'Specialist(lore)',
+        'foundation_martial': 'Anti mage',
+        'foundation_mage': 'Divine protector',
         'Levels': {
             1: {
 
@@ -405,8 +405,8 @@ player_characters = [
         'name': 'Esmeralda the warden of silver bats',
         'SKILLED': 2,
         'MAGE': 4,
-        'Innate_feat_skilled': 'Specialist(lore)',
-        'Innate_feat_mage': 'Divine protector',
+        'foundation_skilled': 'Specialist(lore)',
+        'foundation_mage': 'Divine protector',
         'Levels': {
             1: {
 
@@ -453,8 +453,8 @@ player_characters = [
         'name': 'Fred the Forgetful mage',
         'SKILLED': 2,
         'MAGE': 4,
-        'Innate_feat_skilled': 'Specialist(survival)',
-        'Innate_feat_mage': 'Raw caster',
+        'foundation_skilled': 'Specialist(survival)',
+        'foundation_mage': 'Raw caster',
         'Levels': {
             1: {
 
@@ -501,8 +501,8 @@ player_characters = [
         'SKILLED': 4,
         'MARTIAL': 2,
         'defense': 5,
-        'Innate_feat_skilled': 'Natural armor(heavy armor)',
-        'Innate_feat_martial': 'Extraordinary senses',
+        'foundation_skilled': 'Natural armor(heavy armor)',
+        'foundation_martial': 'Extraordinary senses',
         'Levels': {
             1: {
                 'Skilled advancements': [
@@ -545,8 +545,8 @@ player_characters = [
         'SKILLED': 2,
         'MARTIAL': 4,
         'defense': 3,
-        'Innate_feat_skilled': 'Prodigy',
-        'Innate_feat_martial': 'Extraordinary senses',
+        'foundation_skilled': 'Prodigy',
+        'foundation_martial': 'Extraordinary senses',
         'Levels': {
             1: {
                 'Skilled advancements': [
@@ -590,8 +590,8 @@ player_characters = [
         'SKILLED': 3,
         'MARTIAL': 3,
         'defense': 2,
-        'Innate_feat_skilled': 'Prodigy',
-        'Innate_feat_martial': 'Natural killer',
+        'foundation_skilled': 'Prodigy',
+        'foundation_martial': 'Natural killer',
         'Levels': {
             1: {
                 'Skilled advancements': [
@@ -676,8 +676,8 @@ player_characters = [
         'name': 'Ember - Kole ja naiivne nõid',
         'SKILLED': 2,
         'MAGE': 4,
-        'Innate_feat_skilled': 'Good fortune',
-        'Innate_feat_mage': 'Divine protector',
+        'foundation_skilled': 'Good fortune',
+        'foundation_mage': 'Divine protector',
         'Levels': {
             1: {
 
@@ -707,8 +707,8 @@ player_characters = [
         'name': 'Wolfgang "Olly" Olivier - Monster Connoisseur',
         'SKILLED': 4,
         'MARTIAL': 2,
-        'Innate_feat_skilled': 'Prodigy',
-        'Innate_feat_martial': 'Natural armor',
+        'foundation_skilled': 'Prodigy',
+        'foundation_martial': 'Natural armor',
         'defense': 4,
         'Levels': {
             1: {
@@ -746,8 +746,8 @@ player_characters = [
         'name': 'Big axe dude',
         'SKILLED': 2,
         'MARTIAL': 4,
-        'Innate_feat_skilled': 'Natural armor',
-        'Innate_feat_martial': 'Defiant',
+        'foundation_skilled': 'Natural armor',
+        'foundation_martial': 'Defiant',
         'defense': 3,
         'Levels': {
             1: {
@@ -781,8 +781,8 @@ player_characters = [
         'name': 'Ispen',
         'SKILLED': 2,
         'MARTIAL': 4,
-        'Innate_feat_skilled': 'Extraordinary senses',
-        'Innate_feat_martial': 'Tough',
+        'foundation_skilled': 'Extraordinary senses',
+        'foundation_martial': 'Tough',
         'defense': 4,
         'Levels': {
             1: {
@@ -813,8 +813,8 @@ player_characters = [
         'name': 'Zenui',
         'MAGE': 2,
         'MARTIAL': 4,
-        # 'Innate_feat_skilled': 'Natural armor',
-        'Innate_feat_martial': 'Tough',
+        # 'foundation_skilled': 'Natural armor',
+        'foundation_martial': 'Tough',
         'defense': 2,
         'Levels': {
             1: {
@@ -849,9 +849,9 @@ player_characters = [
         'MAGE': 3,
         'MARTIAL': 1,
         'SKILLED': 2,
-        'Innate_feat_mage': 'Duality(Illusion and Elemental)',
-        'Innate_feat_martial': 'Wings',
-        'Innate_feat_skilled': 'Specialist(lore)',
+        'foundation_mage': 'Duality(Illusion and Elemental)',
+        'foundation_martial': 'Wings',
+        'foundation_skilled': 'Specialist(lore)',
         'defense': 2,
         'Levels': {
             1: {
@@ -980,7 +980,7 @@ def generate_character_flowable(character):
 
     from equipment import weapon_classes
 
-    innate_feats = [{'name': character[key], 'path': key[12:]} for key in ['Innate_feat_skilled', 'Innate_feat_mage', 'Innate_feat_martial'] if key in character]
+    innate_feats = [{'name': character[key], 'path': key[12:]} for key in ['foundation_skilled', 'foundation_mage', 'foundation_martial'] if key in character]
     feats = []
     prog_feats = []
     proficiencies = {}

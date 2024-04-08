@@ -154,8 +154,20 @@ if __name__ == '__main__':
     # generate_character_sheet(0, 3, 3, spells=[],
     #                          name='Andrew Cannon', feats=['Shadow', 'Medium armor proficiency', 'Two weapon fighter',
     #                          'Tinkerer', 'Agent of chaos'], equipment=['dagger', 'sword'])
-    generate_character_sheet(0, 2, 4, spells=[],
-                             name='Jungle_adventurer', feats=[], equipment=['dagger'])
+    generate_character_sheet(0, 0, 0, spells=[],
+                             name='basic')
+    # generate_character_sheet(0, 4, 2, spells=[],
+    #                          name='Margus', feats=['Natural armor', 'Defiant', 'Intimidating presence', 'Sir, know it all', 'War shout'], equipment=['dagger', 'axe', 'two handed axe'])
+    # generate_character_sheet(0, 4, 2, spells=[],
+    #                          name='Markus', feats=['Tough', 'Extraordinary senses', 'Heavy armor proficiency'], equipment=['1 handed mace', 'shield', 'Heavy chain mail'])
+    # generate_character_sheet(0, 2, 4, spells=[],
+    #                          name='Al', feats=['Prodigy', 'Natural armor', 'Master plan'], equipment=['sword', 'shield'])
+    # generate_character_sheet(4, 0, 2, spells=['Bless', 'Create illusionary images', 'Glimpse into future'],
+    #                          name='Stenver', feats=['Divine protector', 'Good fortune', 'Commune with animals', 'Holy bonds'], equipment=['staff'])
+    # generate_character_sheet(2, 4, 0, feats=['Tough', 'Dodging',],
+    #                          name='Patrick', spells=['Telekinesis', 'Force field'], equipment=['unarmed'])
+    # generate_character_sheet(0, 2, 4, spells=[],
+    #                          name='Jungle_adventurer', feats=[], equipment=['dagger'])
     # for mage in range(0, 5):
     #     for martial in range(0, 5):
     #         for skilled in range(0, 5):

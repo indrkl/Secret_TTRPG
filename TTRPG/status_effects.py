@@ -1,8 +1,4 @@
 status_effects = [
-    {'name': 'confusion', 'description': '''
-When a character gets confusion, then they roll a dice and if they have any same value dice, they lose it until the next 
-re-roll.
-    '''},
     {'name': 'disruption', 'description': '''
 When a character gets disruption, then they lose a dice until the next re-roll chosen by the character who applied the
 disruption.
@@ -15,11 +11,21 @@ for a roll.''',},
     dice to hit you. First level is achieved with 50 % of your body being covered. Second level when at least 80% of
     your body is covered from sight of the ranger. Third level is reached when you have full cover. Then you cannot be
     attacked with ranged attack at all.''',},
-    {'name': 'disoriented', 'description': '''Each level of disoriented gives you 1 confusion after you roll your dice
-    pool (WILL)'''},
+    {'name': 'disoriented', 'description': '''
+(WILL) When a character gets a level of disoriented the roll a die and discard a die in their pool with a matching number.
+During each re-roll of the dice pool, this process is repeated for each level of disoriented. Disoriented can be removed
+using the Refocus general action.
+
+For example if Jack has 3 levels of disoriented and 5 dice remaining in their dice pool then he first rolls his 5 dice
+from the pool and suppose he gets R2,R3,R3,R5,R6. After that he rolls 3 disoriented dice and suppose he gets R2,R5,R5.
+Then he discards R2 and R5 from the pool and therefore cannot use those dice in the turn. Notice that since he rolled
+2 R5 for disoriented, but only had 1 R5 in the pool, then the final disoriented die result had no effect. If Jack had
+rolled 2 x R5 into the pool, he would have lost both of them.
+    '''},
     {'name': 'afraid', 'description': '''
-In order to make any offensive actions during your turn you need to meet a roll target of R5 for each level of afraid.
-(WILL)
+(WILL) In order to make any offensive actions during your turn you need to meet a roll target of R5 for each level of 
+afraid. Afraid can be removed using the Refocus general action.
+
 '''},
     # {'name': 'crazed', 'description': '''
     #     (WILL) Has multiple levels, at level 1 when it is your turn make a DC 15 WILL check, on failure you make a
@@ -43,13 +49,14 @@ In order to make any offensive actions during your turn you need to meet a roll 
     prone status effect.'''},
     {'name': 'poisoned', 'description': '''
         (FORT) You have some specific poison on you. Each poison can stack, but only the highest stacked poison takes
-        effect. Every round one poison stack is removed from each poison after applying poison effect.'''},
+        effect. Poison can be removed using the recover general action.'''},
     {'name': 'freezing', 'description': '''(FORT) Every level of freezing disable one dice from your dice pool.'''},
     {'name': 'burning', 'description': '''(REF R3.R4) For each level of burning, one takes 1 damage at the start of 
         their round. One can fall prone and spend the entire round (losing all concentration etc.) to lose all the 
         stacks of burning. Freezing and burning levels cancel each other.'''},
     {'name': 'blinded', 'description': '''Characters who are blinded, cannot see. Movement costs twice as much unless
-    you have blind-sight. Cannot target outside blind sight range. And attacks require 1 additional power dice to make
+    you have blind-sight. Cannot target outside blind sight range. And you have disadvantage when making attacks, and
+    enemies have advantage when attacking you. Enemies who already have advantage upgrade it to double advantage.
     '''},
 ]
 

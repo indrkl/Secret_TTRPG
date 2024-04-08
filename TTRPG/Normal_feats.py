@@ -72,6 +72,14 @@ You are more skilled at including others in your rituals. Nobody who joins your 
 don't know the ritual.
             ''',
         },
+        {
+            'cost': 'medium',
+            'name': 'Spice specialist',
+            'description': '''
+                You recover mana using spices twice as effectively. Meaning the first 20 mana cost 1.5 gp to recover,
+                the next 40 cost 2.5 gp to recover and the rest cost 5 gp to recover. This feat can only be taken once.
+            '''
+        },
 
         {'cost': 'major',
          'requires': 'Commune with animals',
@@ -133,6 +141,12 @@ appropriate.
 You are more skilled at including others in your rituals. Nobody who joins your ritual has disadvantage, even if they
 don't know the ritual.
             ''',
+        },
+        {
+            'cost': 'major',
+            'name': 'Battle mage',
+            'effect': '''The mana cost for offensive spells scales better. It now costs 2 mana for 2 additional
+    power dice, 4 mana for 3 additional power dice and 7 mana for 4 additional power dice''',
         },
         {'cost': 'major',
          'name': 'Pyromancy',
@@ -323,7 +337,7 @@ Also, you cannot be healed by the heal spell (that includes healing potions whic
             'cost': 'small',
             'name': 'Power strike',
             'effect': '''When making an attack with 2 handed melee weapon you can spend 1 stamina to deal 2 additional
-damage''',
+damage. This can be used once per turn.''',
         },
         {'cost': 'small',
          'requires': 'Rage',
@@ -429,7 +443,7 @@ You can use the flow tokens in following ways, flow tokens are reset to 0 at the
              'name': 'Master of defenses',
              'effect': '''
 Defend action now requires only R2. You can also use Defend action as a reaction once between your turns after being
-attacked.
+attacked. +1 maximum defense
                 ''',
         },
         {'cost': 'major',
@@ -444,6 +458,31 @@ You gain additional difficulty adjustment options for two handed axes:
 Rp: Spend 2 savagery tokens to add a level of afraid to the enemy
 
 Rp: Spend 2 savagery tokens to add 1 level of vulnerable to the enemy. 
+                ''',
+        },
+        {'cost': 'major',
+             'name': 'Sword mastery',
+             'effect': '''
+You master the sword, using it to parry, create threats and protect yourself. You control it perfectly both when 
+assaulting and defending.
+
+When you take damage into defense from a melee weapon attack, deal 1 damage for every 2 damage received to defense,
+rounded up.
+
+When you attack, recover 1 defense for every power dice spent in the attack.
+
++1 maximum defense if wielding a two handed sword, sword and a shield or 2 swords.
+                ''',
+        },
+        {'cost': 'major',
+             'name': 'Deadly dagger',
+             'effect': '''
+You are able to maximize advantages gained, when attacking with a dagger.
+
+When you attack with a dagger while having advantage, ignore damage reduction and deal 1 additional damage.
+
+When having double advantage, ignore damage reduction, defense, and deal 1 additional damage per power dice used in
+your attack.
                 ''',
         },
         {'cost': 'major',
@@ -540,7 +579,7 @@ per fury token used this way.
          'name': 'Blessed warrior',
          'effect': '''
 Increase your maximum defense by 1. Whenever you hit an enemy with an attack involving at least 4 power dice
-you may choose 1 option:
+you may choose up to 2 options:
 
 * remove one level of negative status effect from you or one of your allies.
 
@@ -860,7 +899,7 @@ have 1 level of vulnerable, which is only removed by removing negative status ef
             'effect': '''You can make magical potions, which have the effects of spells you know how to cast, and
 which difficulty requirements you meat. These potions have however certain constraints:
 
-1. They target is the person who drinks the potion. Spells with area of effect lose the area component.
+1. The target is the person who drinks the potion. Spells with area of effect lose the area component.
 
 2. Spell effects that have additional targets, like a location, cannot be made into a potion. The potion
 can only effect the creature drinking the potion.
@@ -869,16 +908,17 @@ can only effect the creature drinking the potion.
 is 3 rounds, but if a spell duration is otherwise 5 rounds, that is extended to 15 rounds instead and so on)
 
 In order to make these potions there is a baseline cost for ingredients that is based on difficulty. Difficulty is based
-on the number of dice that the spell, which effect is applied to the potion. Maximum number of dice is 6.
+on the number of dice that the spell, which effect is applied to the potion. Maximum number of dice is 8.
 Through role play, group focuses etc. these may be reduced.
 
 DX means that the underlying spell requires X dice.
 
-D2 and less - 20 gp
-D3 - 50 gp
-D4 - 150 gp
-D5 - 400 gp
-D6 - 1000 gp
+D3 and less - 20 gp
+D4 - 35 gp
+D5 - 60 gp
+D6 - 100 gp
+D7 - 200 gp
+D8 - 400 gp
 
 
 It is also possible to increase the duration of those potions to 5 iterations, which would double the cost.
@@ -896,12 +936,13 @@ higher.
          'cost': 'major',
          'effect': '''
 You can prepare poison coatings and coat weapons with poison. In order to prepare poisons you
-need to gather poison glands or procure necessary raw materials from the marketplace. Both of them
-requires you to choose them as your personal focus. Depending on the situation it could require gathering,
-diplomacy, survival and would also have a different difficulty, plus may require some extra cost such as gold.
+need to gather poison glands or procure necessary raw materials from the marketplace. 
+Depending on the situation it could require gathering, diplomacy, survival and would also have a different difficulty, 
+plus may require some extra cost such as gold.
 
-By default a coating of 3 stacks of following poisons on a melee weapon or 2 stack a single arrow costs that
-much money, this can be reduced with role-play,group focuses:
+By default a coating applies 3 stacks of poison on a melee weapon or 2 stack to a single arrow.
+
+The base line costs when procuring the materials from the market are the following:
 
 1 damage per stack at the beginning of target's turn: 20 gp
 
@@ -916,14 +957,11 @@ stack of freezing: 200 gp
 The price doubles if you want to apply 5 stacks on a melee weapon or 3 stacks on a single arrow. And doubles
 again when wanting to apply 7 stacks on a melee weapon or 4 stacks on a single arrow.
 
-By adding 100 gp to the base price, it takes one more dice to remove a stack of poison from oneself, and by adding an 
-additional 300 gp to the base price, it takes another dice to remove a stack of poison from oneself.
-
 A successful melee attack made with the weapon moves 1 stack of poison onto the hit target. A successful attack
 with an arrow moves all stacks of poison from the arrow onto the target.
 
-At the beginning of the turn and after the poison stacks have taken effect, poisoned target can meet a R5 fortitude
-check to remove a stack of poison from themselves. 
+At the beginning of the turn and after the poison stacks have taken effect, poison can be removed with the Recover
+general action.
 
 Stacks of disoriented, crazed, afraid, and freezing cannot be reduced normally even though their effects
 work the same as having the same levels of the these status effects.
@@ -932,15 +970,15 @@ Enchanted weapons cannot be coated with poison.
 '''
          },
     ],
-    'General': [
-        {'cost': 12,
-         'name': 'Legendary magic item user',
-         'effect': '''You can attune to one additional magical item. You can double one numerical effect of 1 magical 
-item you wear / wield. You can change the item/effect at the beginning of each of your rounds.
-If you have the blade enchanter feat, you can use this ability on the enchanted weapon you wield.
-'''
-         },
-    ]
+#     'General': [
+#         {'cost': 'major',
+#          'name': 'Legendary magic item user',
+#          'effect': '''You can attune to one additional magical item. You can double one numerical effect of 1 magical
+# item you wear / wield. You can change the item/effect at the beginning of each of your rounds.
+# If you have the blade enchanter feat, you can use this ability on the enchanted weapon you wield.
+# '''
+#          },
+#     ]
 }
 
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, ListFlowable, ListItem, PageBreak
@@ -1008,10 +1046,18 @@ def prep_feat_flowable(feat):
 
     return elements
 
+def get_feat_order_string(feat):
+    cost_map = {'small': '1', 'medium': '2', 'major': 3}
+
+    return f"{cost_map[feat['cost']]}_{feat['name']}"
+
+def get_ordered_feats(feats):
+    feats.sort(key = lambda feat: get_feat_order_string(feat))
+    return feats
 
 def get_normal_feats_chapter():
     elements = [
-        {'type': 'title', 'content': 'Normal feats'},
+        {'type': 'title', 'content': 'Feats'},
         {'type': 'paragraph',
          'content': """
 Feats in this chapter are gained using your level up advancement points. Feats are spread out between the paths. For
@@ -1027,8 +1073,8 @@ advancement in any way you like.
             first = False
         elements.append({'type': 'subtitle', 'content': path_name})
 
-
-        for feat in path_feats:
+        ordered_feats = get_ordered_feats(path_feats)
+        for feat in ordered_feats:
             elements.append({'type': 'flowables', 'content': prep_feat_flowable(feat)})
 
     return elements

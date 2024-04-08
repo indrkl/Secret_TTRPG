@@ -7,7 +7,7 @@ Acquinted: You can see 6 sq. in the dark, and 12 sq. in low light
 
 Adept: You can see 25 sq. in the dark and 50 sq. in low light
 
-Talented: In addition to the adept feature, you have blind sight in 2 sq around you.
+Talented: In addition you have blind sight in 2 sq around you.
 
 Legendary: You can see in the dark as well as in the light. You have blind sight in 6 sq around you.
             ''',
@@ -31,7 +31,7 @@ Legendary: You don't take any falling damage. If you are wearing light or no arm
         {
             'name': 'Natural armor',
             'description': '''
-You can only have the maximum defensive benefits from the armor you wear or this feat, they do not stack.
+You can only have the maximum defensive benefits from the armor you wear or this foundation, they do not stack.
 
 You can lower the bonus of the natural armor by 2 to receive the no armor bonus.
 
@@ -55,7 +55,7 @@ reduction at level 14
             'name': 'Claws',
             'description': '''
 You have claws. They can be used to attack. They use claw proficiency which can be upgraded using either Martial path
-or the path which innate feat is replaced by this one.
+or the path which foundation is replaced by this one.
 
 Adept: You have claws which enable you to do a simple claw attack when unarmed. They use claw proficiency
 and R2 as the power dice. Check the claw statistics under equipment.
@@ -170,6 +170,21 @@ If you are talented or legendary in the Mage path, then in addition you always h
 that school. 
 '''
         },
+        {
+            'name': 'Mana born',
+            'requires': 'Legendary',
+            'description': '''
+You are a mana based being, even though you still have the humanoid form. You don't have blood and you only need to
+consume mana infused foods. Each normal day of living uses 1 mana. You gain 50 % increased max mana. In addition you can
+store mana in your dice equal to toughness amounts of mana per die.             
+
+You don't have life, instead whenever you take damage you lose mana. You can give up your dice for toughness amounts of
+mana and recover those dice for toughness amounts of mana. Meaning you can basically heal with the pace of recovering
+mana. Whenever you have no mana, you die.
+
+Since you have no blood, you are immune to poison. 
+'''
+        },
     ],
 
 
@@ -197,9 +212,10 @@ during the rerolling of your dice pool.
             'name': 'Mastery over body',
             'description': '''
 Your body is your weapon. You have made a vow to give up using weapons, armor and magical items, instead you have
-focused in making your body a supreme weapon. Now and during the level-ups you receive a progression feat, you can
-pick one additional martial progression feat, but you cannot use weapons, shields, armors nor attune to any magical 
-item.
+focused in making your body a supreme weapon. Now and at levels 4, 8 and 12 you get to choose an additional major option
+from your martial playcard, but you cannot use weapons, shields, armors nor attune to any magical item.
+
+In addition your unarmed strikes do 1 additional damage and you have 1 bonus maximum defense.
             ''',
         },
         {
@@ -302,14 +318,15 @@ Each spell can however only be used once using this ability until your next "Tim
             'name': 'Specialist',
             'description': '''Choose 1 skill. You have an extra +1 for that skills proficiency. Note it does not 
             increase the max of acquiring proficiency with this skill using normal options and therefore allows
-            the skill to reach +5 proficiency
+            the skill to reach +5 proficiency.
+            
+            If you are talented or legendary, then that skill has +2 proficiency instead and maximum is +6.
 ''',
         },
         {
             'name': 'Lucky',
-            'description': '''When you spend a luck token, you cannot have disadvantage until the start of your next
-            turn or until the scene ends. If you are talented/legendary in skilled path increase your maximum number of 
-            luck tokens by 50 %.  
+            'description': '''When you spend a luck token, you can choose 2 of the options instead of only. 
+            If you are talented/legendary in skilled path increase your maximum number of luck tokens by 50 %.  
 ''',
         },
         {
@@ -319,10 +336,17 @@ Each spell can however only be used once using this ability until your next "Tim
 ''',
         },
         {
+            'name': '(Wo)Man of many talents',
+            'description': '''Start the game with 1 additional medium and 1 additional small creative character traits.
+            If you are talented/legendary in skilled path, also start with 1 additional major creative character trait. 
+''',
+        },
+        {
             'requires': 'Adept',
             'name': 'Prodigy',
-            'description': '''At second level gain double the amount of advancement options in skilled path. You may
-            switch out the major option gained this way for 3 minor options if you want.
+            'description': '''From level 1 you can pick on major option from your skilled lvl 1-4 playcard and that does 
+            not forbid you to take that option again. (meaning you could for example take 2 major skilled feats by level
+            2 as Taleneted or Legendary in Skilled path).
             ''',
         },
         {
@@ -337,9 +361,11 @@ Each spell can however only be used once using this ability until your next "Tim
             ''',
         },
         {
+            'requires': 'Talented',
             'name': 'Daredevil',
             'description': '''
-
+When rolling risk dice in a turn where you don't use luck and end up creating a complication, recover 1 luck. The luck
+is only recovered if the GM creates a complication however. 
             ''',
         },
     ]
@@ -370,18 +396,20 @@ def prep_feat_flowable(feat, name_addon=''):
 
 def get_innate_feat_chapter():
     elements = [
-        {'type': 'title', 'content': 'Innate feats'},
+        {'type': 'title', 'content': 'Foundations'},
         {'type': 'paragraph',
          'content': """
-Innate feats are something you get as you create your character, granting you unique powers not available later on.
-These are usually very unique or special effect. You get an innate feat for each path you have assigned a point into.
-However if you have put more points into the path, then the innate feat is that much stronger. In addition, if you
+Foundations are the second thing after choosing paths that players choose when creating a character. They grant unique
+often build defining powers, that significantly define the wibe and nature of your character. Foundation powers are not
+available later in the level ups.
+You get a foundation for each path you have assigned a point into.
+However if you have put more points into the path, then the foundation is that much stronger. In addition, if you
 are of some unique race, which would be able to for example have dark vision, or flying or something else, then refer
-to the races innate feats. When taking one or more races innate feats you must give up a feat in one of the paths.
-The power of the racial feat depends on the level of the path, which feat you gave up.
+to the races foundations. When taking one or more race foundations you must give up a foundation in one of the paths.
+The power of the racial foundation depends on the level of the path, which foundation you gave up.
 
-Finally I added one background feat, and may add more in the future. These can also be replaced by one of the path feats
-similarly to racial feats.
+Finally I added one background foundation, and may add more in the future. These can also be replaced by one of the path 
+foundations similarly to racial foundations.
         """},
     ]
 

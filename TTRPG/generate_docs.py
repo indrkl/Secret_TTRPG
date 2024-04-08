@@ -118,7 +118,7 @@ def build_pdf_file():
     elements.extend(prep_elements_from_chapter(get_skill_related_chapter()))
     elements.extend(prep_elements_from_chapter(get_general_actions_chapter()))
     elements.extend(prep_elements_from_chapter(get_innate_feat_chapter()))
-    elements.extend(prep_elements_from_chapter(get_progression_feat_chapter()))
+    # elements.extend(prep_elements_from_chapter(get_progression_feat_chapter()))
     elements.extend(prep_elements_from_chapter(get_normal_feats_chapter()))
     elements.extend(prep_elements_from_chapter(get_equipment_chapter()))
     elements.extend(prep_elements_from_chapter(get_spells_chapter()))

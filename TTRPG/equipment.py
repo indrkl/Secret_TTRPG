@@ -20,10 +20,6 @@ equipment = {
                     'effect': '+ 1 damage',
                 },
                 {
-                    'cost': 'R1',
-                    'effect': 'Confuse 2',
-                },
-                {
                     'cost': 'R1.R1',
                     'effect': 'Disrupt 2',
                 },
@@ -68,10 +64,6 @@ equipment = {
                 {
                     'cost': 'R6.R6',
                     'effect': '+ 5 damage',
-                },
-                {
-                    'cost': 'R1',
-                    'effect': 'Confuse 1',
                 },
                 {
                     'cost': 'R1.R1',
@@ -136,10 +128,6 @@ equipment = {
                     'cost': 'R4.R4',
                     'effect': '+ 3 damage',
                 },
-                {
-                    'cost': 'R3.R3',
-                    'effect': 'Confuse 3',
-                },
             ]
         }
     },
@@ -156,10 +144,6 @@ equipment = {
                 {
                     'cost': 'R4.R4',
                     'effect': '+ 3 damage',
-                },
-                {
-                    'cost': 'R2',
-                    'effect': 'Confuse 1',
                 },
                 {
                     'cost': 'R2',
@@ -181,10 +165,6 @@ equipment = {
                 {
                     'cost': 'R5',
                     'effect': '+ 2 damage',
-                },
-                {
-                    'cost': 'R2.R2',
-                    'effect': 'Confuse 4',
                 },
                 {
                     'cost': 'R2',
@@ -209,25 +189,21 @@ equipment = {
                 },
                 {
                     'cost': 'R4.R4',
-                    'effect': 'Confuse 3',
-                },
-                {
-                    'cost': 'R4',
-                    'effect': 'Confuse 1',
+                    'effect': 'Apply a level of disoriented',
                 },
             ]
         }
     },
     '2 handed mace': {
+        'effect':
+            '''
+Strikes with 2 handed mace always bypass damage reduction
+''',
         'action': {
             'cost': 'R5.R5',
             'damage': 3,
             'range': 'melee',
             'difficulty_options': [
-                {
-                    'cost': 'R5',
-                    'effect': 'Bypass enemy damage reduction',
-                },
                 {
                     'cost': 'R5',
                     'effect': 'Reduce defenses by 3 before doing damage',
@@ -237,12 +213,12 @@ equipment = {
                     'effect': '+ 2 damage',
                 },
                 {
-                    'cost': 'R1.R1',
-                    'effect': 'Disrupt 2',
+                    'cost': 'R1',
+                    'effect': 'Disrupt 1',
                 },
                 {
-                    'cost': 'R1',
-                    'effect': 'Confuse 2',
+                    'cost': 'R1.R1',
+                    'effect': 'Disorient 1',
                 },
             ]
         }
@@ -262,41 +238,17 @@ equipment = {
                     'effect': '+ 2 damage',
                 },
                 {
-                    'cost': 'R2.R2.R2',
+                    'cost': 'R2.R2',
                     'effect': 'Apply 1 afraid',
                 },
                 {
-                    'cost': 'R2.R2',
+                    'cost': 'R2',
                     'effect': 'Apply 1 vulnerable',
                 },
             ]
         }
     },
-    'Burning two handed axe of the devils': {
-        'action': {
-            'cost': 'R6.R6',
-            'damage': 4,
-            'range': 'melee',
-            'difficulty_options': [
-                {
-                    'cost': 'R6',
-                    'effect': 'Remove guarded status effect',
-                },
-                {
-                    'cost': 'R6',
-                    'effect': 'Deal 1 fire damage and apply a stack of burning onto the enemy',
-                },
-                {
-                    'cost': 'R1.R1',
-                    'effect': 'Apply 1 afraid for every 3 stacks of burning on the enemy',
-                },
-                {
-                    'cost': 'R1.R1.R1',
-                    'effect': 'Apply 1 vulnerable for every stack of burning on the enemy',
-                },
-            ]
-        }
-    },
+
     'shield': {
         'effect':
             '''
@@ -320,15 +272,6 @@ defense by 2 and damage reduction by 1. Also recover 2 defense.
             '''
 Instead you have 2 additional normal spell slots and 1 signature spell slot. The spell used in the signature spell slot
 has advantage. Signature spell cannot be switched out mid combat.'''
-    },
-    'staff of freezing': {
-        'effect':
-            '''
-Instead you have 2 additional normal spell slots. In addition you have freezing spell as your signature spell, meaning
-casting it has advantage.
-
-Enables you to cast the freezing skill without elemental proficiency and knowing that spell. You may replace elemental
-proficiency for casting it using this staff with your highest proficiency in any school minus one.'''
     },
     'simple leather armor': {
         'effect': '''

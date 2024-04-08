@@ -61,10 +61,10 @@ more or less diversified in other areas.
 
 All players start with 6 d6 dice in their dice pool, for both combat and out of combat, 2 toughness (determines how much 
 damage you can take before you die), proficiency in light armor and access to some general actions (all detailed in
-general actions chapter).
+general actions chapter), and 1 medium creative character trait.
 
-In addition they get a innate feat for each path they have path points in, but the power of the feat depends on their 
-level in that path. This further defines their character progression possibilities. Innate feats are really powerful.
+In addition they get a foundation power for each path they have path points in, but the power of the feat depends on their 
+level in that path. This further defines their character progression possibilities. Foundations are really powerful.
 
 Finally each hero gets a play card for each path they have points in. Take the appropriate play card. So if you are
 talented mage, adept martial and acquinted in skilled, then take the playcards with these names.
@@ -79,10 +79,10 @@ for how it will actually affect you.
 
 Advancement rules
 
-The maximum proficiency is in general +4, but using some innate and progression feats it can be raised to up to +6.
+The maximum proficiency is in general +4, but using some foundations it can be raised to up to +5.
 In advancement options it is often stated "(max X prof)", that indicates the proficiency that can be attained with this
-option. Note that this max only takes into consideration the proficiency gained from advancement options and not innate
-feat or progression feat.
+option. Note that this max only takes into consideration the proficiency gained from advancement options and not 
+foundations.
 
 Proficiency allows you to shift the dice results by 1 in order to get the dice result requires to perform the action
 related with this proficiency. You can perform number of shifts equal to your profiency each round / scene.
@@ -179,8 +179,8 @@ def get_playcard_flowable(playcard):
 legendary_mage_card = {
     'name': 'Legendary Mage path',
     'big_perks': [
-        {'description': 'gain major mage feat or a mage progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain mage progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain major mage feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Gain an additional damageable die that can only be used for casting spells.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 12 maximum mana', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 3 spell school or will proficiency (max prof. 4)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
@@ -192,6 +192,8 @@ legendary_mage_card = {
         {'description': 'gain 1 spell school proficiency and learn a spell from that school (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 spell school proficiency (max prof. 3)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'learn 2 spells from any schools of magic', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'Grant an additional 2 mental slots that can be used for spells.', 'available1-4': 1, 'available 5-8': 0, 'available 9-12': 1},
+        {'description': 'Grant an additional 1 mental slots that can be used for spells.', 'available1-4': 2, 'available 5-8': 1, 'available 9-12': 2},
         {'description': 'gain 1 lore proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 4 mana', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 3 mana', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
@@ -203,8 +205,8 @@ talented_mage_card = {
     'name': 'Talented Mage path',
 
     'big_perks': [
-        {'description': 'gain major mage feat or a mage progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain mage progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain major mage feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Gain an additional damageable die that can only be used for casting spells.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 10 maximum mana', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 2 spell school or will proficiency (max prof. 4)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
@@ -217,6 +219,11 @@ talented_mage_card = {
          'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 spell school proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'learn 2 spells from any schools of magic', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'Grant an additional 2 mental slots that can be used for spells.', 'available1-4': 0,
+         'available 5-8': 1, 'available 9-12': 0},
+        {'description': 'Grant an additional 1 mental slots that can be used for spells.', 'available1-4': 2,
+         'available 5-8': 1, 'available 9-12': 2},
+
         {'description': 'gain 1 lore proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 4 mana', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 3 mana', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
@@ -228,7 +235,7 @@ adept_mage_card = {
     'name': 'Adept Mage path',
 
     'big_perks': [
-        {'description': 'gain mage progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Gain an additional die that can only be used for casting spells.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 medium mage feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 8 maximum mana', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 spell school or will proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
@@ -241,6 +248,8 @@ adept_mage_card = {
          'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 spell school proficiency (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'learn 2 spells from any schools of magic', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Grant an additional 1 mental slots that can be used for spells.', 'available1-4': 1,
+         'available 5-8': 1, 'available 9-12': 2},
         {'description': 'gain 1 lore proficiency (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 4 mana', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 3 mana', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
@@ -252,7 +261,7 @@ acquainted_mage_card = {
     'name': 'Acquainted Mage path',
 
     'big_perks': [
-        {'description': 'gain mage progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Gain an additional die that can only be used for casting spells.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 small mage feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 6 maximum mana', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 spell school or will proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
@@ -264,6 +273,8 @@ acquainted_mage_card = {
          'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 spell school proficiency (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'learn 2 spells from any schools of magic', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Grant an additional 1 mental slots that can be used for spells.', 'available1-4': 1,
+         'available 5-8': 0, 'available 9-12': 1},
         {'description': 'gain 1 lore proficiency (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 3 mana', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
     ],
@@ -273,17 +284,17 @@ acquainted_mage_card = {
 legendary_martial_card = {
     'name': 'Legendary Martial path',
     'big_perks': [
-        {'description': 'gain major martial feat or a martial progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain martial progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain major martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Gain an additional damageable die that can only be used in combat for general actions and attacks.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 8 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': '''advance 3 times with any weapon, shield, reflex, fortitude, toughness or physique skill. 
+        {'description': '''advance 3 times with any weapon, shield, reflex, fortitude or physique skill. 
         (max prof. 4)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
     ],
     'small_perks': [
         {'description': 'gain 1 medium martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 small martial feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
-        {'description': 'gain 1 toughness (max prof. 3)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+        {'description': 'gain 1 toughness', 'available1-4': 3, 'available 5-8': 1, 'available 9-12': 0},
         {'description': 'gain 1 reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 weapon proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 weapon proficiency with 2 different weapons (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
@@ -300,16 +311,19 @@ talented_martial_card = {
     'name': 'Talented Martial path',
 
     'big_perks': [
-        {'description': 'gain martial progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain major martial feat or a martial progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain major martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {
+            'description': 'Gain an additional damageable die that can only be used in combat for general actions and attacks.',
+            'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+
         {'description': 'gain 6 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': '''advance 2 times with any weapon, shield, reflex, fortitude, toughness or physique skill. 
+        {'description': '''advance 2 times with any weapon, shield, reflex, fortitude or physique skill. 
         (max prof. 4)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
     ],
     'small_perks': [
         {'description': 'gain 1 medium martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 small martial feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
-        {'description': 'gain 1 toughness (max prof. 3)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+        {'description': 'gain 1 toughness', 'available1-4': 2, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 weapon proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 weapon proficiency with 2 different weapons (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
@@ -326,15 +340,15 @@ adept_martial_card = {
     'name': 'Adept Martial path',
 
     'big_perks': [
-        {'description': 'gain martial progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Gain an additional die that can only be used in combat for general actions and attacks.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 medium martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 5 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': '''advance 1 times with any weapon, shield, reflex, fortitude, toughness or physique skill. 
+        {'description': '''advance 1 times with any weapon, shield, reflex, fortitude or physique skill. 
         (max prof. 3)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
     ],
     'small_perks': [
         {'description': 'gain 1 small martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 1 toughness (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 1 toughness (max prof. 2)', 'available1-4': 1, 'available 5-8': 2, 'available 9-12': 1},
         {'description': 'gain 1 reflex or fortitude proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 weapon proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 physique or survival proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
@@ -348,7 +362,7 @@ acquainted_martial_card = {
     'name': 'Acquainted Martial path',
 
     'big_perks': [
-        {'description': 'gain martial progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Gain an additional die that can only be used in combat for general actions and attacks.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 small martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 4 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': '''advance 1 times with any weapon, shield, reflex, fortitude, toughness or physique skill. 
@@ -368,8 +382,9 @@ acquainted_martial_card = {
 legendary_skilled_card = {
     'name': 'Legendary Skilled path',
     'big_perks': [
-        {'description': 'gain major skilled feat or a skilled progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain skilled progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain major skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'have major creative character trait', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Gain an additional damageable die that can only be used in out of combat.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 8 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': '''gain 3 any skill proficiencies (max prof. 4)''',
          'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
@@ -378,6 +393,11 @@ legendary_skilled_card = {
     'small_perks': [
         {'description': 'gain 1 medium skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 small skilled feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'have medium creative character trait', 'available1-4': 1, 'available 5-8': 1,
+         'available 9-12': 1},
+        {'description': 'have small creative character trait', 'available1-4': 2, 'available 5-8': 2,
+         'available 9-12': 2},
+
         {'description': 'gain 1 will, reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
@@ -393,8 +413,13 @@ talented_skilled_card = {
     'name': 'Talented Skilled path',
 
     'big_perks': [
-        {'description': 'gain skilled progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain major skilled feat or a skilled progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain major skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'have major creative character trait', 'available1-4': 1, 'available 5-8': 1,
+         'available 9-12': 1},
+
+        {'description': 'Gain an additional damageable die that can only be used in out of combat.', 'available1-4': 1,
+         'available 5-8': 1, 'available 9-12': 1},
+
         {'description': 'gain 6 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': '''advance 2 times with any skill (max prof. 4)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
@@ -402,6 +427,11 @@ talented_skilled_card = {
     'small_perks': [
         {'description': 'gain 1 medium skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 small skilled feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'have medium creative character trait', 'available1-4': 1, 'available 5-8': 1,
+         'available 9-12': 1},
+        {'description': 'have small creative character trait', 'available1-4': 2, 'available 5-8': 1,
+         'available 9-12': 2},
+
         {'description': 'gain 1 will, reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
@@ -418,14 +448,20 @@ adept_skilled_card = {
     'name': 'Adept Skilled path',
 
     'big_perks': [
-        {'description': 'gain skilled progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Gain an additional die that can only be used in out of combat.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 medium skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'have medium creative character trait', 'available1-4': 1, 'available 5-8': 1,
+         'available 9-12': 1},
+
         {'description': 'gain 4 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': '''advance 1 times with any skill (max prof. 3)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
     ],
     'small_perks': [
         {'description': 'gain 1 small skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'have small creative character trait', 'available1-4': 1, 'available 5-8': 1,
+         'available 9-12': 1},
+
         {'description': 'gain 1 will, reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 2 luck', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
@@ -438,8 +474,10 @@ acquainted_skilled_card = {
     'name': 'Acquainted Skilled path',
 
     'big_perks': [
-        {'description': 'gain skilled progression feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Gain an additional die that can only be used in out of combat.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 small skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'have small creative character trait', 'available1-4': 1, 'available 5-8': 1,
+         'available 9-12': 1},
         {'description': 'gain 3 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': '''advance 1 times with any skill (max prof. 3)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
