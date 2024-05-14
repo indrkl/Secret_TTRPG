@@ -61,7 +61,8 @@ more or less diversified in other areas.
 
 All players start with 6 d6 dice in their dice pool, for both combat and out of combat, 2 toughness (determines how much 
 damage you can take before you die), proficiency in light armor and access to some general actions (all detailed in
-general actions chapter), and 1 medium creative character trait.
+general actions chapter), an ability to remove 1 level of either poison, disoriented, afraid or burning at the end of
+their turn and 1 medium creative character trait.
 
 In addition they get a foundation power for each path they have path points in, but the power of the feat depends on their 
 level in that path. This further defines their character progression possibilities. Foundations are really powerful.

@@ -130,7 +130,7 @@ schools = {
                 'difficulty': 'R1.R1.R1',
                 'concentration': 'R1.R1.R1',
                 'scaling': [
-                    {'D': 'R1.R1', 'description': '''Target can change another die in their dice pool'''},
+                    {'D': 'R1.R1.R1', 'description': '''Target can change another die in their dice pool'''},
                 ],
             },
             {
@@ -202,12 +202,14 @@ schools = {
                 'range': '5 sq.',
                 'target': 'up to 3 allies',
                 'effect': '''
-                Target has an additional bless dice in their dice pool. One can have bless dice only from one source. 
+                Targets have advantage with will, reflex and fortitude challanges. 
         ''',
                 'difficulty': 'R2.R2.R2.R2',
-                'concentration': 'R2.R2',
+                'concentration': 'R2.R2.R2',
                 'scaling': [
-                    {'D': 'R2.R2', 'description': '''Provide one additional bless dice for targets'''},
+                    {'D': 'R2.R2', 'L': 2, 'description': '''Targets have 1 additional maximum defense'''},
+                    {'D': 'R2.R2.R2', 'description': '''Targets remove 1 negative status effect at the beginning of
+                     their turn for free'''},
                 ],
             },
             {
@@ -216,7 +218,7 @@ schools = {
                 'target': 'area',
                 'radius': '1 sq.',
                 'effect': '''
-All friendly allies in the targeted area recover their defenses
+All friendly allies in the targeted area recover their defenses to the maximum
         ''',
                 'difficulty': 'R2.R2.R2.R2',
                 'scaling': [
@@ -496,7 +498,7 @@ All friendly allies in the targeted area recover their defenses
                 'name': 'Enfeeble hex',
                 'range': '6 sq.',
                 'target': '1 creature',
-                'effect': '''Each time target enemy rolls, you may change the outcome of 1 dice. It has to be a
+                'effect': '''Now and each time target enemy rolls, you may change the outcome of 2 dice. It has to be a
                 different dice than was changed by lucky condition, if the enemy was lucky and is done after the lucky
                 dice is chosen.''',
                 'difficulty': 'R5.R5.R5',
@@ -552,11 +554,12 @@ All friendly allies in the targeted area recover their defenses
                 'range': '12 sq',
                 'target': '1 creature',
                 'effect': '''A extremely loud shriek hits, heard loudest by the target. It deals 2 psychic damage and
-                    the target has to give up concentration of 1 spell.
+                    the target has to give up concentration of 1 spell. This damage ignores defenses and damage 
+                    reduction.
                     ''',
                 'difficulty': 'R5.R5.R5.R5',
                 'scaling': [
-                    {'D': 'R5', 'description': 'deal additional 3 psychic damage'},
+                    {'D': 'R5', 'L': 3, 'description': 'deal additional 1 psychic damage'},
                 ],
             },
             {
@@ -565,7 +568,8 @@ All friendly allies in the targeted area recover their defenses
                 'target': '1 creature',
                 'duration': '2 rounds',
                 'effect': '''Buff an ally, so that when they take damage to their health, then whoever caused that
-                damage takes the same amount of psychic damage
+                damage takes the same amount of psychic damage. This psychic damage ignores damage reduction and 
+                defense.
                     ''',
                 'difficulty': 'R5.R5.R5.R5.R5',
                 'concentration': 'R5.R5.R5',

@@ -408,8 +408,8 @@ who have at least 2 levels of disoriented. When taking a move action, then one t
         {
             'cost': 'medium',
             'name': 'War shout',
-            'effect': '''You can spend 2 natural R5 or R4 to make a proper shout, that would apply 1 level of afraid
-            into all enemies within 4 sq. of you, or 2 natural R6 to make an even more powerful bone-shattering shout,
+            'effect': '''You can spend a pair of either R4 or R5 to make a proper shout, that would apply 1 level of afraid
+            into all enemies within 4 sq. of you, or a pair of R6 to make an even more powerful bone-shattering shout,
             that applies 1 level of afraid into all enemies within 2 sq. of you and 1 additional level of afraid into
             enemies within 5 sq. of you''',
         },
@@ -658,22 +658,27 @@ with someone, that someone is able to provide.''',
         {'cost': 'medium',
          'name': 'Master plan',
          'effect': '''
-         You gain the master plan action, which can be used during scene. This is a leadership action.
+         You gain the master plan ability, which can be used if your party wants to do several things during a campaign
+         turn (this cannot be used in combat), to increase the odds of them actually being successful. Those actions
+         formulate a plan which is then executed simultaneously.
          ''',
          'action': {
-             'cost': 'R3.R3.R3',
-             'target': '3 allies',
+             'cost': 'R3.R3.R3.R3',
+             'target': '-',
              'proficiency': 'leadership',
              'effect': '''
-Targeted allies roll 1 extra temporary dice into their dice pool for this scene. These dice can be traded between
-players on a 1 to 1 basis.
+When during a campaign turn your party wants to do several things, then you can do it following these steps: 
+
+1. Declare all the actions your party wants to do, there can be at most 1 action per player.
+
+2. GM chooses the target and difficulty of the actions as normally.
+
+3. Then for each action one of the players is assigned and they will do the action, their success depends on their dice
+pool and proficiency.
+
+4. After all actions are assigned a player, then players may choose to spend luck, role play for additional risk dice
+and roll them and so on and all the actions are resolved as if the plan is being executed simultaneously.
              ''',
-             'difficulty_options': [
-                 {
-                     'cost': 'R3.R3',
-                     'effect': '''They roll one additional dice''',
-                 },
-             ]
             }
         },
         {'cost': 'medium',
@@ -721,10 +726,6 @@ Also by doubling the gadget cost, you gain an advantage.
                  {
                      'cost': 'R6.R6',
                      'effect': '''They lose 3 level of Will related status effects''',
-                 },
-                 {
-                     'cost': 'R3',
-                     'effect': '''They gain 1 additional temporary dice that they can use until their next roll''',
                  },
                 ]
             }

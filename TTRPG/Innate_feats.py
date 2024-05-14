@@ -234,13 +234,14 @@ reduce damage dealt to you by 3.
 When your martial path is talented, When a dice would become scarred, roll it. On a 6, it stays normal.
 When your martial path is legendary, then it also doesn't become scarred on a 5.
 
-At the beginning of each round, if you have at least 3 damaged or scarred dice, you may choose one of the following:
+At the beginning of each round, for each die that was damaged for the first time this combat since your last turn choose 
+1 of these options:
 
-* Heal 1 damaged dice and recover 1 stamina.
+* Heal 1 damaged die and recover 3 stamina but .
 
-* Deal additional damage with one attack equal to the number of damaged dice.
+* Deal 3 additional damage with one of your attacks this turn.
 
-* Roar, all enemies within 5 sq. radius get 1 level of afraid per 2 damaged or scarred dice on you rounded down. 
+* Roar, all enemies within 4 sq. radius get 1 level of afraid.
             ''',
         },
         {

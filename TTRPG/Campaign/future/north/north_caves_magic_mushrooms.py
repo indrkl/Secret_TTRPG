@@ -102,6 +102,14 @@ rooms = [
        25 gold, and prepared mushrooms to restore mana worth of 100 gp.
         ''',
     },
+    {
+        'key': 'Iron and coal mines (10)',
+       'description': '''
+        From the camp site, there are now man made tunnels leading to the mines, in the mines there are multiple paths 
+        that have been dug left and right. All but the last 4 have been depleted. There is also a well like mechanism to
+        pull the iron out, that leads to the surface. 
+        ''',
+    },
 
 
 ]
@@ -128,7 +136,7 @@ combat_encounters = [
     {
         'name': 'devils',
         'knight': 'Small imp, 1 HP, 1 dodge per turn, disrupt 1',
-        'pawn': 'Throggar, 3 HP, 3 ATK, 4 MV',
+        'pawn': 'Throggar, 4 HP, 3 ATK, 4 MV',
         'bishop': 'Ice imp - casts freezing every other turn.',
         'rook': 'Troll, 10 HP, 6 ATK, 4 MV, occupies 2 x 2 squares, so create for blocking.',
         'queen1': '''Borg, A big fat brute wielding a two handed Axe. 6 dice, 4 toughness, 3 DEF. 2 physique, axe, fortitude.
