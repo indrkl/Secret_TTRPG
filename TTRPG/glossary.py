@@ -90,12 +90,7 @@ At all times the game is either in campaign mode or combat mode. In campaign mod
 and really a constant negotiation and feel good between the GM and players.
 
 In combat however, The order is more strict. The surprise round may vary, but afterwards each round works as follows:
-GM declares the threats and intentions of all the enemies. Players get to damage, move and disrupt the plans of the
-enemies, and finally the remaining undisrupted threats resolve, meaning players get dealt damage and negative status
-effects.
-
-If the opposing side has a villain (powerful enemy), then he may interrupt players turns, or do his things with the
-rest of the enemies. Either way he rolls XD6 as well and plays very closely to player characters.
+Players and Enemies take turns and do all the actions of one actor at a time, until everyone from one side has moved, then the remaining from the opposing side do their moves.
         '''
     },
     {
@@ -230,7 +225,7 @@ Each path has a specific resource associated with their path. Mages have mana, M
 luck. Each resource is used for different effects and have different rules for recovering it. Mana is recovered during
 long rest by consuming expensive spices and is used to cast spells. 
 Stamina is recovered each encounter and can be used during combat to increase use scarred dice 
-unconstrained and for some combat abilities, and luck tokens are recovered when a story arch finishes and are used to 
+unconstrained and for some combat abilities, and luck tokens are recovered when a party chooses to take time out and recover for an extended period.
 change the outcome of a single dice in a roll, or to gain advantage.
         """
     },

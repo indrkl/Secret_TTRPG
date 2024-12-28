@@ -279,7 +279,7 @@ acquainted_mage_card = {
         {'description': 'gain 1 lore proficiency (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 3 mana', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
     ],
-    'progression': '''Gain 1 minor option at levels 1, 3 and 4, and 1 major option at levels 2''',
+    'progression': '''Gain 1 minor option at levels 1, 2 and 4, and 1 major option at levels 3''',
 }
 
 legendary_martial_card = {
