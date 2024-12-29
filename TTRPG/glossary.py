@@ -587,13 +587,9 @@ Each character starts the game with 1 medium creative character trait.
     {
         'name': 'Combat',
         'description': '''
-Combat has usually 2 sides. The player characters and their allies, and the enemy. The combat turns are simple. First
-the players move in turn order decided by their leader (leader is chosen at each game session based on leadership 
-skill). Then all the mobs move by the following order: Bishops > Pawns > Rooks. Knights can be used in any of the other
-pieces turns. For each piece type enemy mobs move first, and then allied mobs move second.
-
-The combat is designed so that, you can easily add more than twice as many enemies against the heroes, and they would
-still be able to win the fight with some wounds, resulting in more epic, and brutal cinematic fights.
+Combat has usually 2 sides. The player characters and their allies, and the enemy. The combat turns are simple. 
+First one player character moves, then an opponent moves picked by the GM. Then another player moves and so on, until everyone from one side
+has moved. Then the remaining actors in the other side all take their turn.
         '''
     },
     {
@@ -613,7 +609,8 @@ the units. Their tactics involve attacking the weakest links, high aggro targets
 Bishops: Ranged supporters, either archers, support spell casters, cyclops throwing stones etc. They often have high ATK
 but are comparable to pawns with regards to HP and MV.
 
-Rooks: Tanks, high HP units with better ATK than pawns but not necessarily better movement.
+Rooks: Tanks, high HP units with better ATK than pawns but not necessarily better movement. Their abilities can involve controlling the battlefield,
+denying movement, disabling spells, or stunning opponents.
 
 In addition, when heroes apply status effects to Mobs, then they disrupt their turns, so that they don't do their move
 or attack action, but shrug of some of the negative status effects.

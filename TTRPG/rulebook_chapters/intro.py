@@ -81,7 +81,7 @@ want is, there are a certain amount of progress steps that GM decides needs to b
 want and to spice things up there can be fail conditions along the way etc.""",
 """Less skills, which are clearly defined and are player focused. Meaning diplomacy skill is used to get someone to do
 something that they would otherwise not be inclined to do without using force, it is both intimidation, persuasion etc.
-Lore skill is learning and knowing about the world, it is investigation and all the lore skills. It is for players who
+Lore skill is learning and knowing about the world, it is investigation and all the knowledge skills in DnD. It is for players who
 want to engage the plot. And so on. There are therefore much less skills in the game compared to most TTRPG-s.
 """
     ]},

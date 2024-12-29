@@ -213,7 +213,8 @@ during the rerolling of your dice pool.
             'description': '''
 Your body is your weapon. You have made a vow to give up using weapons, armor and magical items, instead you have
 focused in making your body a supreme weapon. Now and at levels 4, 8 and 12 you get to choose an additional major option
-from your martial playcard, but you cannot use weapons, shields, armors nor attune to any magical item.
+from your martial playcard (this option does not spend a check-box on the talent card), 
+but you cannot use weapons, shields, armors nor attune to any magical item. 
 
 In addition your unarmed strikes do 1 additional damage and you have 1 bonus maximum defense.
             ''',
@@ -237,7 +238,7 @@ When your martial path is legendary, then it also doesn't become scarred on a 5.
 At the beginning of each round, for each die that was damaged for the first time this combat since your last turn choose 
 1 of these options:
 
-* Heal 1 damaged die and recover 3 stamina but .
+* Heal 1 damaged die and recover 3 stamina. This healing does scar a die though.
 
 * Deal 3 additional damage with one of your attacks this turn.
 
@@ -272,7 +273,7 @@ Once per round, whenever you make an attack, you can use one and only one of tho
  
 * spend X blood token to deal X additional damage
  
-* spend 2 blood tokens to disrupt 1
+* spend 1 blood token to disrupt 1
             ''',
         },
         {
@@ -311,7 +312,7 @@ You can cast any spell not requiring concentration using 1 luck token, even if y
 know that spell. For spell schools which power dice is either 4, 5 or 6 the power dice 
 to use this ability becomes 6 and the utility dice becomes 5. For spell schools which power dice is 1, 2 or 
 3, the power dice to use this ability becomes 1 and the utility dice becomes 2. This ability uses wild magic
-proficiency, which you can advance using both mage and skilled path.
+proficiency, which you can advance instead of advancing in any school of magic or skill.
             
 Each spell can however only be used once using this ability until your next "Time out and recover".''',
         },
@@ -326,7 +327,7 @@ Each spell can however only be used once using this ability until your next "Tim
         },
         {
             'name': 'Lucky',
-            'description': '''When you spend a luck token, you can choose 2 of the options instead of only. 
+            'description': '''When you spend a luck token, you can choose 2 of the options instead of only 1. 
             If you are talented/legendary in skilled path increase your maximum number of luck tokens by 50 %.  
 ''',
         },

@@ -23,7 +23,7 @@ archetypes = [
     },
     {'name': 'large sized predators',
      'description': '''
-        3 Defense, 1 damage reduction, -1 reflex. 50 % more raw damage, -1 progression points per level. 
+        3 Defense, 1 damage reduction, -1 reflex. +2 damage for first attack each turn, -1 progression points per level. 
         Has 2 claws and bite attack
      '''
      },
@@ -111,7 +111,7 @@ feats = [
     #  },
     {'cost': 5,
      'requires': 'Web weaver',
-     'effect': 'Using the web requires web proficiency',
+     'effect': 'Using the web requires web proficiency and can be advanced instead of natural attack proficiency.',
      'name': 'Web',
      'action': {
          'cost': 'R6.R6.R6',
@@ -133,7 +133,7 @@ feats = [
      },
     {'cost': 3,
      'name': 'Web range',
-     'requires': 'Web feat',
+     'requires': 'Web weaver feat',
      'effect': '''Range of the web action increases to 5 sq.'''
      },
     {'cost': 3,
@@ -180,10 +180,97 @@ feats = [
      },
 ]
 
-advancement_options = [
-             'For feat cost: Adopt a beast related feat',
-             'For 1/2/3/4 points: Advance proficiency in claw, bite, physique, concealment, fortitude or reflex',
-             'For 1/2/3/4 points: Increase your toughness. Cost increases by 1 each time you choose this option. Maximum toughness is 6',
-             '''For 1 point: Increase your maximum stamina by 1''',
-             'For 1/2 points: Advance proficiency in will',
-         ]
+
+legendary_beast_card = {
+    'name': 'Legendary beast path',
+    'big_perks': [
+        {'description': 'gain major beast feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'Gain an additional damageable die that can only be used in combat for general actions and attacks.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 8 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': '''advance 3 times with any natural attack, reflex, fortitude or physique proficiency. 
+        (max prof. 4)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+
+    ],
+    'small_perks': [
+        {'description': 'gain 1 medium beast feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 small beast feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 1 toughness', 'available1-4': 3, 'available 5-8': 1, 'available 9-12': 0},
+        {'description': '''advance 1 times with natural attacks, reflex, fortitude, toughness, survival or 
+        physique skill. (max prof. 2)''', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+        {'description': '''advance 1 times with natural attacks, reflex, fortitude, toughness, survival or 
+        physique skill. (max prof. 3)''', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 3 stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 2 stamina', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 1 stamina', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+    ],
+    'progression': '''Mark 4 minor options at levels 1 and 3, and 1 minor and 1 major option at levels 2 and 4''',
+}
+
+talented_beast_card = {
+    'name': 'Talented beast path',
+
+    'big_perks': [
+        {'description': 'gain major beast feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {
+            'description': 'Gain an additional damageable die that can only be used in combat for general actions and attacks.',
+            'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+
+        {'description': 'gain 6 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': '''advance 2 times with any natural attack, reflex, fortitude or physique skill. 
+        (max prof. 4)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+    ],
+    'small_perks': [
+        {'description': 'gain 1 medium beast feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 small beast feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 1 toughness', 'available1-4': 2, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': '''advance 1 times with natural attacks, reflex, fortitude, toughness, survival or 
+        physique skill. (max prof. 2)''', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': '''advance 1 times with natural attacks, reflex, fortitude, toughness, survival or 
+        physique skill. (max prof. 3)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 3 stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 2 stamina', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 1 stamina', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+    ],
+    'progression': '''Gain 3 minor options at levels 1 and 3, and 1 major option at levels 2 and 4''',
+}
+
+adept_beast_card = {
+    'name': 'Adept beast path',
+
+    'big_perks': [
+        {'description': 'Gain an additional die that can only be used in combat for general actions and attacks.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 medium beast feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 5 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': '''advance 1 times with any natural attack, reflex, fortitude or physique skill. 
+        (max prof. 3)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+    ],
+    'small_perks': [
+        {'description': 'gain 1 small beast feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 toughness (max prof. 2)', 'available1-4': 1, 'available 5-8': 2, 'available 9-12': 1},
+        {'description': '''advance 1 times with natural attacks, reflex, fortitude, toughness, survival or 
+        physique skill. (max prof. 2)''', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+        {'description': 'gain 2 stamina', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 1 stamina', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+    ],
+    'progression': '''Gain 2 minor options at levels 1, 3 and 4, and 1 major option at levels 2''',
+}
+
+acquainted_beast_card = {
+    'name': 'Acquainted beast path',
+
+    'big_perks': [
+        {'description': 'Gain an additional die that can only be used in combat for general actions and attacks.', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 small beast feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 4 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': '''advance 1 times with any natural attack, reflex, fortitude, toughness or physique skill. 
+        (max prof. 3)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+    ],
+    'small_perks': [
+        {'description': 'gain 1 toughness (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': '''advance 1 times with natural attacks, reflex, fortitude, toughness, survival or 
+        physique skill. (max prof. 2)''', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 2 stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 stamina', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+    ],
+    'progression': '''Gain 1 minor option at levels 1, 3 and 4, and 1 major option at levels 2''',
+}
