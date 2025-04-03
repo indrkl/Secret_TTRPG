@@ -37,12 +37,20 @@ equipment = {
                     'effect': '+ 1 damage',
                 },
                 {
-                    'cost': 'R2.R2',
-                    'effect': 'Disorient 1',
+                    'cost': 'R6.R6',
+                    'effect': 'Disrupt 2',
+                },
+                {
+                    'cost': 'R6.R6.R6',
+                    'effect': 'Blind an enemy for 2 rounds',
                 },
                 {
                     'cost': 'R6.R6',
-                    'effect': 'Disrupt 2',
+                    'effect': 'Disarm opponent removing a one handed weapon or shield from them.',
+                },
+                {
+                    'cost': 'R6.R6.R6',
+                    'effect': 'Disarm opponent removing a two handed weapon from them.',
                 },
             ]
         }

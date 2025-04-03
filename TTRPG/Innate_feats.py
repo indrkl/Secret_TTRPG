@@ -99,27 +99,27 @@ simply someone who wants favor from your house etc.)
             You can apply 1 level of large or distant magic to a spell for free without increasing the dice cost or 
             metamagic limit.''',
         },
-        {
-            'requires': 'Adept',
-            'name': 'Shifter',
-            'description': '''You have a beastly form, that levels up as you do. In the beastly form, you cannot
-            speak, don't benefit from any of your normal form advancements in any path, but you can level up using the
-            beast path (used to make all the mighty beasts in the game). The level of your beastly path is equal to
-            your magic path. Beastly form has the ability to turn back into your regular form. To turn into your
-            beastly form you need to spend 1 mana per your character level and if you are in combat then also meet
-            R5.R5.R5 roll target using nature magic. Your equipment merges
-            into your body and loses it's magical effect until you return to your normal form. Scarred, damaged and
-            wounded dice carry over when transforming to and from the other form.''',
-        },
+        # {
+        #     'requires': 'Adept',
+        #     'name': 'Shifter',
+        #     'description': '''You have a beastly form, that levels up as you do. In the beastly form, you cannot
+        #     speak, don't benefit from any of your normal form advancements in any path, but you can level up using the
+        #     beast path (used to make all the mighty beasts in the game). The level of your beastly path is equal to
+        #     your magic path. Beastly form has the ability to turn back into your regular form. To turn into your
+        #     beastly form you need to spend 1 mana per your character level and if you are in combat then also meet
+        #     R5.R5.R5 roll target using nature magic. Your equipment merges
+        #     into your body and loses it's magical effect until you return to your normal form. Scarred, damaged and
+        #     wounded dice carry over when transforming to and from the other form.''',
+        # },
         {
             'name': 'Divine protector',
             'description': '''
-            You can advance toughness using both mage and martial path. You can transfer a scarred dice from an ally
-            to yourself (their scarred dice becomes normal, 1 of your normal dice become scarred) twice a day outside
-            of combat.
+            You can advance toughness instead of will using mage path. You can transfer a scarred dice 
+            from an ally to yourself (their scarred dice becomes normal, 1 of your normal dice become scarred) twice a 
+            day outside of combat.
             When your mage path is talented, When a dice would become scarred, roll it. On a 6, it stays normal.
-            When your mage path is legendary, then it also doesn't become scarred on a 5. This effects also the dice
-            you transfer from allies to yourself.
+            When your mage path is legendary, then it also doesn't become scarred on a 5 as well. 
+            This effects also the dice you transfer from allies to yourself.
             '''
         },
         {
@@ -216,7 +216,8 @@ focused in making your body a supreme weapon. Now and at levels 4, 8 and 12 you 
 from your martial playcard (this option does not spend a check-box on the talent card), 
 but you cannot use weapons, shields, armors nor attune to any magical item. 
 
-In addition your unarmed strikes do 1 additional damage and you have 1 bonus maximum defense.
+In addition your unarmed strikes do 1 additional damage and you have 1 bonus maximum defense. This bonus increases by
+1 in levels 4, 8 and 12.
             ''',
         },
         {
@@ -334,7 +335,7 @@ Each spell can however only be used once using this ability until your next "Tim
         {
             'name': 'Good fortune',
             'description': '''You can allow other party members to use your luck tokens. If you are talented/legendary
-            in skilled path increase your maximum number of luck tokens by 50 %.  
+            in skilled path increase your maximum number of luck tokens by 50 %.
 ''',
         },
         {
@@ -359,15 +360,15 @@ Each spell can however only be used once using this ability until your next "Tim
             , in hamlets it is 10 % chance.
             
             Just because you know someone doesn't mean that they provide that service for free. They may have a positive
-            disposition and maybe provide a small discount, but that is up to GM-s discretion. 
+            disposition and maybe provide a small discount, but that is up to GM-s discretion.
             ''',
         },
         {
-            'requires': 'Talented',
+            'requires': 'Adept',
             'name': 'Daredevil',
             'description': '''
-When rolling risk dice in a turn where you don't use luck and end up creating a complication, recover 1 luck. The luck
-is only recovered if the GM creates a complication however. 
+Whenever you succeed with complications, you recover 1 luck token. If you are talented or legendary, then you recover
+2 luck instead.
             ''',
         },
     ]

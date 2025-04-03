@@ -745,7 +745,7 @@ Also by doubling the gadget cost, you gain an advantage.
 
          ''',
          'action': {
-             'cost': 'R5',
+             'cost': 'R5.R5',
              'target': '1 ally',
              'proficiency': 'lore',
              'effect': '''

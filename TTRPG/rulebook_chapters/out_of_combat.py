@@ -259,5 +259,4 @@ unfavorable to you if the dice target is 1 or 6.
 When either the scope of the campaign turn ends, or players all have spent their resources, then we can start a new
 campaign world. Either way the world also progresses, and even if the scene in it's core is the same, this is the time
 for the GM to introduce new variable, maybe a new NPC, or to move the plot forward in some way.
-
 """

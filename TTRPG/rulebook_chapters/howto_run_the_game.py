@@ -21,6 +21,57 @@ Here both GM and the players can contribute how it plays out, in the sense, if t
 describe why that particular player decided to save the situation, when they failed, then how they failed, and what
 was going through the mind of the players.
 """,
+"""
+Having now played a lot more DnD, I have come to revise some thoughts from a more practical perspective.
+
+The first goal is to still get the players into a flow, of role playing. That requires them to understand where they 
+are, what is happening around them, and what is the time scale of things happening. These questions are not answered by
+the rules. But being specific or conscious about the time scale in the game, a GM can use that to set story beats.
+
+I still really like the idea, that the number of dice each player has limits the activities they can do within a beat.
+Meaning it allows everyone to do their thing.
+
+But the problem is that the success / failure resolution does not work in this system currently. It has to be simple,
+has to take into account proficiency, still needs to be able to invest luck / mana, try to figure out how to get an
+advantage etc.
+
+The problem with the current system it puts a real burden on the GM, to think of an appropriate challenge rating for
+each things. In some way the same problem arises in DnD, 10 is easy, 15 is medium, 20 is very hard, 25 is extremely 
+difficult and 30 is near impossible.
+
+In addition we have to think of task with relation to the time at hand. Something that is hard to do within an hour may
+actually be trivial to do within a day. It is all about how much time do people take for the task.
+
+Also, within an activity there may come another situation which comes up due and is in a much smaller time scope than
+the surrounding scope. Do we re-roll? What happens with the outer scope?
+
+I mean this is also a problem in DnD, and it is only a problem if some players are doing in stuff in a smaller time 
+scope than the other players, and therefore hogging time. For players it is important to be on the same page about
+where they want to focus, and when they choose to fast forward some of the stuff.
+
+It is possible that this system actually doesn't have any problems if GM runs the game correctly, but when doing the
+staple mistakes, people do when running DnD campaigns, the problems become more clearing. Is this a good thing or a bad
+thing? The positive is that this system doesn't really support doing many GM mistakes, this is at the same time a
+negative, because in DnD there is at least easy ways to push through, even if the mistakes are made, and just ignore
+them to some extent.
+
+So to summarize:
+
+Calling challanges, and investing dice into those challanges, can be done, but that would require for the group to be
+aware at all times the time scope of current activities, are we microing a trade interaction or is it just part of
+general down-time activities?
+
+Is something a challange? What is the success and failure? What is at stakes when rolling-dice. This should be
+constantly in the mind of GM.
+
+An easy challange is a target of 2 dice. Medium is 3-4 dice. Very Hard challange is 5-6 dice. 7+ is impossible, but 
+with sorcery, advantages etc. can be crossed.
+
+Group challanges are hard to balance around. You can only balance around a single player doing the challange with their
+6 dice. I think also extra dice should just be abolished. Especially out of combat. 
+
+
+""",
 ]
 
 Toolset_rolltargets = [
