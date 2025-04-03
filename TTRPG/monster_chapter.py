@@ -1,3 +1,4 @@
+from rulebook_chapters.character_creation import get_playcard_flowable
 from monsters import beasts, undead
 from Normal_feats import prep_feat_flowable
 
@@ -15,8 +16,13 @@ def get_monster_chapter(monsters, monster_name):
         elements.append({'type': 'minortitle', 'content': archetype['name']})
         elements.append({'type': 'paragraph', 'content': archetype['description']})
 
-    elements.append({'type': 'minortitle', 'content': 'Advancement options'})
-    elements.append({'type': 'list', 'content': monsters.advancement_options})
+    elements.append({'type': 'minortitle', 'content': 'Playcards'})
+    for playcard in ['acquainted', 'adept', 'talented', 'legendary']:
+        if hasattr(monsters, '%s_card'%(playcard)):
+            elements.append({'type': 'flowables', 'content': get_playcard_flowable(
+                getattr(monsters, '%s_card'%(playcard)))
+                             })
+    elements.append({'type': 'minortitle', 'content': 'Feats'})
 
     for feat in monsters.feats:
         elements.append({'type': 'flowables', 'content': prep_feat_flowable(feat)})

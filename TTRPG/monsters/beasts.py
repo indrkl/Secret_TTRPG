@@ -43,7 +43,7 @@ archetypes = [
 
 feats = [
     {
-        'cost': 3,
+        'cost': 'Medium',
         'name': 'Bite grappling',
         'effect': '''
         if you succeed in a bite attack, then in addition to the damage and other effects, target becomes grappled. 
@@ -54,24 +54,24 @@ feats = [
         ''',
     },
     {
-        'cost': 4,
+        'cost': 'Medium',
         'name': 'Legendary speed',
         'effect': '''During your move action you can spend 1 stamina to move additional squares equal to the number on 
         the dice used to move.'''
     },
     {
-        'cost': 2,
+        'cost': 'small',
         'name': 'Fast beast',
         'effect': 'Your move action allows you to move 2 additional squares'
     },
     {
-        'cost': 3,
+        'cost': 'Medium',
         'name': 'Leaper',
         'effect': '''During your move action you can spend 1 stamina to leap over all obstacles for 3 sqares. These 3
         squares must still be part of your move action'''
     },
     {
-        'cost': 5,
+        'cost': 'Major',
         'name': 'Venomous bite',
         'effect': '''When choosing this trait, choose an effect:
             at the beginning of round, deals 1 poison damage,
@@ -82,14 +82,14 @@ feats = [
             Adds a new option for bite: For 1 power dice to apply 1 level of poison.
             ''',
     },
-    {'cost': 3,
+    {'cost': 'Medium',
      'name': 'Rampage',
      'effect': '''
      You get a new option to spend 3 stamina to make the copy of an attack you did to one target, to attack another
      target who is adjacent to you.
      '''
      },
-    {'cost': 3,
+    {'cost': 'Medium',
      'name': 'Leaping attack',
      'effect': '''You are can do a melee attack to someone who is 2 squares away from you and there is a free space
      between you and the target. Leap to the free spot and make the attack. You do not trigger any attacks of
@@ -109,7 +109,7 @@ feats = [
     #      ''',
     #  }
     #  },
-    {'cost': 5,
+    {'cost': 'Major',
      'requires': 'Web weaver',
      'effect': 'Using the web requires web proficiency and can be advanced instead of natural attack proficiency.',
      'name': 'Web',
@@ -131,20 +131,20 @@ feats = [
          ]
      }
      },
-    {'cost': 3,
+    {'cost': 'Medium',
      'name': 'Web range',
      'requires': 'Web weaver feat',
      'effect': '''Range of the web action increases to 5 sq.'''
      },
-    {'cost': 3,
+    {'cost': 'Medium',
      'name': 'Fearless',
      'effect': '''Immune to afraid condition'''
      },
-    {'cost': 3,
+    {'cost': 'Medium',
      'name': 'Thick skin',
      'effect': '''Get 1 additional defense'''
      },
-    {'cost': 5,
+    {'cost': 'Major',
      'name': 'Rage',
      'effect': '''
     Gain rage action.
@@ -163,7 +163,7 @@ feats = [
         ''',
      }
      },
-    {'cost': 3,
+    {'cost': 'Medium',
      'name': 'Dodging',
      'effect': '''Whenever you would receive damage you can react with a R5 physique dice to negate that damage.
      This cost goes up by 1 X R5 every time you use this ability during encounter. You can take the recover
@@ -181,7 +181,7 @@ feats = [
 ]
 
 
-legendary_beast_card = {
+legendary_card = {
     'name': 'Legendary beast path',
     'big_perks': [
         {'description': 'gain major beast feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
@@ -206,7 +206,7 @@ legendary_beast_card = {
     'progression': '''Mark 4 minor options at levels 1 and 3, and 1 minor and 1 major option at levels 2 and 4''',
 }
 
-talented_beast_card = {
+talented_card = {
     'name': 'Talented beast path',
 
     'big_perks': [
@@ -234,7 +234,7 @@ talented_beast_card = {
     'progression': '''Gain 3 minor options at levels 1 and 3, and 1 major option at levels 2 and 4''',
 }
 
-adept_beast_card = {
+adept_card = {
     'name': 'Adept beast path',
 
     'big_perks': [
@@ -255,7 +255,7 @@ adept_beast_card = {
     'progression': '''Gain 2 minor options at levels 1, 3 and 4, and 1 major option at levels 2''',
 }
 
-acquainted_beast_card = {
+acquainted_card = {
     'name': 'Acquainted beast path',
 
     'big_perks': [
