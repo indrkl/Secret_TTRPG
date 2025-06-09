@@ -60,8 +60,9 @@ For example with a proficiency of 2 you can nudge the roll of two separate dice 
 You can only nudge the rolls of a dice used on the roll target that you actually use on the roll target.
         '''
     },
-    {'name': 'Advantage and disadvantage',
-     'description':'''
+    {
+        'name': 'Advantage and disadvantage',
+        'description': '''
 A character who has advantage against an enemy requires 1 less power dice for any attack against them. A character with
 disadvantage requires 1 more power dice to do an attack.
 
@@ -92,6 +93,36 @@ and really a constant negotiation and feel good between the GM and players.
 In combat however, The order is more strict. The surprise round may vary, but afterwards each round works as follows:
 Players and Enemies take turns and do all the actions of one actor at a time, until everyone from one side has moved, then the remaining from the opposing side do their moves.
         '''
+    },
+    {
+        'name': 'Time scales',
+        'description': '''
+The campaign is split into turns. Each turn players roll their entire dice pool and can use these dice to represent the
+focus and effort they put into various actions and activities. However to better help abstract the time, we divide turns
+into 3 different time scales.
+
+Strategic turns, long, represent like a weeks time passing, that's where GM can progress all campaign related NPC 
+agendas. Trigger events happening in the world, and introduce bigger changes. Strategic turns can be made when players
+want to travel long distances, do very laborous and extensive activities like prepare for siege, build up player 
+holding, craft armor and weapons, or to simply have a proper rest.
+
+Medium turns are around 6-10 hours of activity. Activities done in medium turns 
+can be like a thorough research of a topic in the library, if done
+as a group activity, track a beast in the wilderness (hunt), gather herbs in the wilderness, interrogate 20 witnesses,
+prepare for a feast, ball, party. Usually when players have taken back to back 5 -7 medium turns, it is ok to also
+advance 1 strategic turn for the whole world (if you are tracking NPC activity and event count downs for example).
+The abstraction here is that you cannot just do hyper productive work all the time, you slow down, need to rest etc.
+so this is roughly the time it would take for it to become a week. When medium turns end, GM should consider what NPC-s
+do in the local settlement, or in general in the vicinity when in nature.
+
+Quick turns are around 5-30 minutes. They are intense activity. Quick turns are used when doing infiltrations, intense
+negotiations that goes back and forth, or when we really want to go into very high detail of any particular activity.
+Again, 5 - 7 quick turns turn into a medium turn. For GM, during switching from one quick turn to another only the
+most local NPC activity should be considered, like when infiltrating the fort, then what the guards do?
+
+Combat turns are even quicker, but again, once around  5 - 7 combat turns have been done, consider advancing 1 quick turn,
+maybe that brings reinforcements? 
+                '''
     },
     {
         'name': 'Combat setup',
@@ -198,9 +229,11 @@ If there are no dice left to scar when you take damage, you die.
     'name': 'moral',
      'description': """
 All enemies and NPC allies have moral. That means their willingness to fight. GM can obviously determine the moral for
-enemies. But here are the general guidelines for how moral is lost:
+enemies. An average starting moral for mobs and NPCs is 10.
 
-1. Each dice lost from the dice pool loses 1 moral
+Here are the general guidelines for how moral is lost:
+
+1. Each dice lost from the dice pool reduces 1 moral
 2. Each ally lost reduces moral by 1
 3. Losing a stronger ally reduces moral by additional 2
 4. Dropping to 2 dice in your dice pool reduces moral by additional 3
@@ -231,13 +264,17 @@ change the outcome of a single dice in a roll, or to gain advantage.
     },
     {'name': 'Mana',
      'description': """
-When advancing in the mage path, characters can increase their maximum mana. When casting spells, character may choose
-to spend mana to reduce the number of dice required to cast that spell.
+When advancing in the mage path, characters can increase their maximum mana.
 
-For 1 mana reduce the spell cost by 1 dice, for 3 mana, by 2 dice, for 6 mana by 3 dice and for 10 mana by 4 dice. You
-cannot reduce the cost by more than your proficiency in the spell's school of magic. Note that this is for casting
-spells during combat. When using magic in a scene, the mana cost is tripled with regards to lowering the dice
-requirements to not trivialise most challanges.
+Mana is used to cast spells. Each dice they spend when casting spells costs 1 mana.
+
+In addition even more mana can be spent to get virtual dice to make the spell even more powerful. For 1 mana you get
+1 additional virtual dice (it still increases the cost of the spell, so you totally spend 2 mana. For 3 mana you get
+2 dice, for 6 mana 3 dice and finally for 10 mana you get 4 dice.
+
+You cannot receive more virtual dice than your proficiency in the spell's school of magic. Note that this is for casting
+spells during combat. When using magic in a scene, the mana cost for virtual dice is multipled depending on the type
+of the out of combat turn.
 
 Mana is recovered during rest by consuming quite pricy magical spices. You must spend enough resources to reach maximum
 man, that means the more you consumed your mana during an encounter, the more pricy it will be. 
@@ -301,7 +338,7 @@ Luck tokens are recovered when the party chooses to take time out and recover.
      'description': """
 When players are heavily scarred and run out of luck, they may find themselves needing to take time out and recover.
 This should not be done lightly however, since in-game this can be several weeks to months. This means that this gives
-time for adversaries to advance in their plans, for the situation to change, and for new challanges to be introduced.
+time for adversaries to advance in their plans, for the situation to change, and for new challenges to be introduced.
 
 In addition they need to find a proper lodging and this time out will cost them money, as they rest and don't earn any
 money in the meanwhile.
@@ -476,17 +513,7 @@ for increased attunement.
 # deeply someone, and all of sudden the scene target changes to 4 or 5, which obviously consequences to the story as well.
 #     '''
 #     },
-#     {'name': 'Is there such a thing in the game-world',
-#      'description': '''
-# During each of the encounters and story beats, each player may ask the GM if there is some thing in the game-
-# world, which the GM didn't describe beforehand but which might sound plausible. When making the request, it
-# is recommended to also ask for the functionality that they imagine they would want to get out of it. This
-# allows the GM to provide something that is more plausible but with similar functionality.
-# The GM sets the base DC (3, very likeyly, 7, plausible, 13, unlikely, 18, very unlikely, 20, nearly impossible)
-# and rolls a d20. If the result is higher than DC then GM describes a way this can exist, and how they can achieve what
-# they want using this knowledge.
-#      '''
-#      },
+
 #     {'name': 'Group focuses',
 #      'description': '''
 # At all times the group can have 1 group focus active, which let's them progress towards a goal that the players have
@@ -508,79 +535,166 @@ reward the player with advantage or more. The goal is to create cool story momen
 somewhat constrained by balance (RP in following context is power roll, this depends on your school of magic which the
 creative spell or ability belongs to).
 
-1 RP: 2 damage
-1 RP: 1 level of vulnerability or entangled, or 2 levels of unbalanced
+1 RP: 4 damage
+1 RP: 2 level of vulnerability or entangled, or 4 levels of unbalanced
 2 RP: 1 level of disoriented, afraid, prone, burning or disruption
 3 RP: blinded, 1 level of frozen
 2 RP: Aid an ally to give them advantage, or upgrade advantage to double advantage
-X RP: Meet a scene roll-target, X is number of dice required in the roll-target. The dice used for roll-target also
-override the spell's own power dice.
+X-1 RP: When presented with a challenge in the campaign turns, you can reduce the effort by 1 and use the creative's
+spell to resolve the challenge (if appropriate). In this case you use the school of magic's proficiency. When you
+spend additional mana to exert yourself, you gain virtual dice, with the value of 4.
 
 The default range for effecting someone is 6 sq.
      '''
 
     },
-    {'name': 'Creative character traits',
+#     {'name': 'Creative character traits',
+#      'description': '''
+# """
+# The struggle I had is to think of Skilled path feats and abilities. The problem there is that, they are supposed to
+# be strong in the most creative part of the game, out of combat roleplay. The thing is, that part really should not be
+# constrained by making a finite set of feats or moves or what not as the vastness of play in TTRPG is impossible to
+# support with this approach.
+#
+# The skills are already rather general, but now to think of it, just because someone has lore proficiency doesn't mean
+# they can read books, maybe they are simply good at acquiring knowledge from other people, or simply are very observant
+# and have a good memory.
+#
+# What I want to achieve is players to both unleash their creative potential when creating characters, while at the same
+# time willingly limit what their characters can do, constrains are fun, as long as you have enough tools to figure out
+# a way.
+#
+# So what I am leaning towards, is a creative way to say, that your character has a particular background, or a particular
+# set of skills, or knows how to do something very specific and unique.
+#
+# I guess they are sort of aspects from FATE core, or experience from Dagger-heart. They should be something which player
+# can invoke in a scene or out of combat, or maybe a bit even in combat to be able to do something. Like "I am a thief
+# and I know all the tools and tricks of that trade", to unlock locked doors and chests, sneak, pick-pocket a key from
+# a guard or know the ins and outs of prisons.
+#
+# It could be a skill-set, or a particular experience, or a strange quirk like being able to cheat with playing cards
+# using sleight of hand. Maybe they should simply be called creative character traits. And similarly to feats, there
+# can be small, medium and major ones, to allow for a wide range of possibilities while still balancing it.
+#
+# What are some limitations when picking such traits? They cannot be magical, nor provide you powers which are equilevant
+# to magical powers from the mage path. They don't make you have any super powers, it instead effects what you know,
+# what you can do with your hands or body with simple skill and practice alone, or it is something you have done in the
+# past, that creates connections or opportunities for you, that you wouldn't have otherwise. They also cannot compete with
+# the martial path. If you want to be a master swordsman, then you simply take the martial path.
+#
+# Major:
+#
+# 1. Difficult Professions or a master of simple ones, like thief, captain of the guard, investigator, accountant, lawyer,
+# philosopher.
+#
+# 2. Powerful feats like: Have read thousands of books over life time and has an excellent memory about it, Can perform
+# with musical instruments to really get the crowd going. Things that can have severe implications in the story, or the
+# set of actions that could be invoked with this ability is common.
+#
+# Medium:
+#
+# 1. Simpler professions, or having some experience in those professions. For example it could be that you were a guard,
+# but you didn't have extensive experience with it. Maybe you are Good to keep guard or notice wierd behaviour, but you
+# still can't do many of the other activities like halting someone with confidence, search caravans or interrogating
+# someone. Or you could attempt to do them, but with dis-advantage, or at least without advantage.
+#
+# 2. Useful skills, that can be used some times, but not too often. Like being able to play a musical instrument. Have
+# read about one particular subject, or when you persuade people, you always make them smile.
+#
+# Small:
+#
+# 1. Fun quirks, like being able to tell the distance of far objects, can do one card trick or sleight of hand movement
+#
+# 2. Some broader but shallower experience, like visiting a distant land and knowing a little bit about their culture,
+# had a friend who was a criminal, so you know something about it, maybe?
+#
+# Each character starts the game with 1 medium creative character trait.
+#
+# In order to do anything none basic one has to invoke one of these traits. You cannot know more than an average citizen
+# about a topic without invoking one of these traits. You cannot talk with the elite and nobles without knowing their
+# etiquette without such a trait (unless of course they search you out themselves). Basically, anything a commoner
+# wouldn't set out to do out of no-where, player too, can't just figure out on the spot. They are limited by their
+# knowledge, understanding, confidence, certainty etc. when trying to do something that is not related with any of their
+# character traits.
+# """
+#      '''
+    {'name': 'Creative skills',
      'description': '''
-"""
 The struggle I had is to think of Skilled path feats and abilities. The problem there is that, they are supposed to
 be strong in the most creative part of the game, out of combat roleplay. The thing is, that part really should not be
 constrained by making a finite set of feats or moves or what not as the vastness of play in TTRPG is impossible to
 support with this approach.
-
-The skills are already rather general, but now to think of it, just because someone has lore proficiency doesn't mean
-they can read books, maybe they are simply good at acquiring knowledge from other people, or simply are very observant
-and have a good memory.
 
 What I want to achieve is players to both unleash their creative potential when creating characters, while at the same
 time willingly limit what their characters can do, constrains are fun, as long as you have enough tools to figure out
 a way.
 
 So what I am leaning towards, is a creative way to say, that your character has a particular background, or a particular
-set of skills, or a knows how to do something very specific and unique.
+set of skills, or knows how to do something very specific and unique.
 
-I guess they are sort of aspects from FATE core, or experience from Daggerheart. They should be something which player
-can invoke in a scene or out of combat, or maybe a bit even in combat to be able to do something. Like "I am a thief
-and I know all the tools and tricks of that trade", to unlock locked doors and chests, sneak, pick-pocket a key from
-a guard or know the ins and outs of prisons.
+So, in addition to basic skills like physique and leadership, there are limitless number of creative skills, which
+players can gain proficiency in, and can also invoke in their adventures. But how to go about making these skills?
 
-It could be a skill-set, or a particular experience, or a strange quirk like being able to cheat with playing cards
-using slight of hand. Maybe they should simply be called creative character traits. And similarly to feats, there
-can be small, medium and major ones, to allow for a wide range of possibilities while still balancing it.
+How to make sure they are balanced, both in the sense that they are not too obscure that never come up, and also that
+it wouldn't cover pretty much every single situation?
 
-What are some limitations when picking such traits? They cannot be magical, nor provide you powers which are equilevant
-to magical powers from the mage path. They don't make you have any super powers, it instead effects what you know,
-what you can do with your hands or body with simple skill and practice alone, or it is something you have done in the
-past, that creates connections or opportunities or you, that you wouldn't have otherwise. They also cannot compete with
-the martial path. If you want to be a master swordsman, then you simply take the martial path.
+For that there are some guide lines for how big of a scope could a such a skill have:
 
-Major:
+1. It could be the core skill sets required for a profession, in this case, the skill set would be trading, blacksmith,
+city guard etc. In this case you could use the proficiency of this skill set to do activities that these jobs would do
+daily. You could try to invoke it with a dis-advantage for situations, which can come up during the line of work, but
+are not the main activity. For example if you are a trader, you negotiate a lot, but that doesn't mean you know how to
+negotiate with nobility, it also doesn't mean you could convince someone to aid you for no money. But you would be able
+to buy anyone's services who is interested in money, and use your proficiency to barter the best price. As a blacksmith
+you know how to forge weapons and armor, but couldn't craft leather, also you could negotiate and barter your raw
+resources and for the price of your own craft, but not other things. 
 
-1. Difficult Professions or a master of simple ones, like thief, captaing of the guard, investigator, accountant, lawyer, philosopher.
+2. It is limited to a terrain type or certain cut of society. Like for example, you could be expert in the wild, but
+you would be only expert in terrain familiar to you. For example, you could separate different major terrains as desert,
+steppes, forests, mountains and sea. It can also be differentiated by the social class with whom you interact with:
+nobles, religious, artisans, commoners, criminals. The exact relevant social classes may vary from culture to culture
+and depend on the setting, and same with terrain, talk it through with the GM.
 
-2. Powerful feats like: Have read thousands of books over life time and has an excellent memory about it, Can perform
-with musical instruments to really get the crowd going. Things that can have severe implications in the story, or the
-set of actions that could be invoked with this ability is common.
+3. It is tied to a certain culture. For example, you have read a lot of books, but only from a certain culture. So you
+can only know what that culture knows. You may know vaguely about heroes or happenings of other cultures, but even then 
+you would only know about them from the perspective of that culture.
 
-Medium:
+4. It is about specializing. For example, you are a sword blacksmith, you have studied all the swords from all around
+the world, and can therefore make the best swords. Or you have specialized in a topic, such as warfare logistics, and
+therefore you have read texts about it and know about from different cultures also from their persepctive. Or you could
+be a magical spice merchant, so you would know where this is grown, where there is high demand, can tell the quality,
+fakeness of the spice and so on and on. But by specializing you would limit yourself to not be able to do adjacent stuff
+or have a significant disadvantage doing so.
 
-1. Simpler professions, or having experience in the those professions. For example it could be that you were a guard,
-but you didn't have extensive experience with it. Maybe you are Good to keep guard or notice wierd behaviour, but you
-still can't do many of the other activities like halting someone with confidence, search caravans or interrogating
-someone. Or you could attempt to do them, but with dis-advantage, or at least without advantage.
+General rule of thumb is that, each trait should consist of a profession / background / general character wibe, that
+would allow it to be invoked in various situations, and at least 1 limitation, that would give it more character.
 
-2. Useful skills, that can be used some times, but not too often. Like being able to play a musical instrument. Have
-read about one particular subject, or when you persuade people, you always make them smile.
+The limitation may make some things that the trait could otherwise allow to make it impossible, or make it so, that you
+can attempt to do those things with disadvantage or severe disadvantage.
 
-Small:
+Examples of traits + limitation:
 
-1. Fun quirks, like being able to tell the distance of far objects, can do one card trick or sleight of hand movement
 
-2. Some broader but shallower experience, like visiting a distant land and knowing a little bit about their culture,
-had a friend who was a criminal, so you know something about it, maybe?
+1. Trader (profession), limitation examples: spice merchant, deals with stolen goods in the underworld, has been leading caravans
+over desert.
 
-Each character starts the game with 1 medium creative character trait.
-"""
+
+2. Grew up helping his father hunt (back ground), limitation examples: In forest, In mountains, Specialized in traps.
+
+
+3. Has read a lot of books and knows stuff, limitation examples: Books made by specific culture, Books about magic, Only 
+the most obscure and rare books.
+
+
+4. 
+
+
+Also, when it comes to learning new skills during the campaign, it is also limited by the fact weather or not you can do
+the activity. So you cannot all of a sudden become a trader while you do 0 trading during your journeys. You could
+however read a whole bunch of books and become an theoretical expert of Dragons.
+
+Each character starts the game with already 2 preexisting traits, one of which they have +2 proficiency and the other
+in which they have +1 proficiency.
      '''
 
     },
@@ -588,8 +702,8 @@ Each character starts the game with 1 medium creative character trait.
         'name': 'Combat',
         'description': '''
 Combat has usually 2 sides. The player characters and their allies, and the enemy. The combat turns are simple. 
-First one player character moves, then an opponent moves picked by the GM. Then another player moves and so on, until everyone from one side
-has moved. Then the remaining actors in the other side all take their turn.
+First one player character moves, then an opponent moves picked by the GM. Then another player moves and so on, until 
+everyone from one side has moved. Then the remaining actors in the other side all take their turn.
         '''
     },
     {
@@ -639,6 +753,5 @@ have much stronger defensive and offensive capabilities.
 Disadvantage for mobs halves their damage. And advantage gives them up to 2 extra damage but no more than 50 % of their
 original damage
         '''
-
     },
 ]

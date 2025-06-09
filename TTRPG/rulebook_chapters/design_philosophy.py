@@ -234,12 +234,12 @@ Player interactions with the skill difficulty
  apply. Proficiency is used before comparing but after the presented dice and challange dice are decided.
  * Players can invoke some elements in the world, or by explaining why they should have an advantage, or roleplay, to nudge
  the difficulty by 1. Hard difficulties can be nudged multiple times, until they are average. Average and easy
- difficulties can be nudged one once this way. For really hard difficulties, some roleplay aspect could nudge it more
+ difficulties can be nudged once this way. For really hard difficulties, some roleplay aspect could nudge it more
  than 1 dice, for example when difficulty is "6 / 20 hard", then it could reduce it to 6 / 18 or 6 / 17 immideately.
  * Players can push the challange by spending dice to reduce the difficulty by 1. That does reduce the number of dice
  available for them for this campaign turn
  * Players may assist other players by spending dice to reduce the difficulty by 1. When assisting however, the assisted
- dice has to at least be 4. Assisting player can use their proficiency however to achieve that condition.
+ dice has to at least a 4. Assisting player can use their proficiency however to achieve that condition.
  
 Terms:
  * Challange - an activity or action that players do in order to achieve a goal they set out.

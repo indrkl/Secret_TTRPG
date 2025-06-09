@@ -72,6 +72,46 @@ Legendary: Your claw proficiency is not shared between the two hands.
 You have four hands, meaning you can hold 4 one handed items, 2 two handed items or any combination in between.
             ''',
         },
+        {
+            'requires': 'Talented',
+            'name': 'Extreme temperature tolerance',
+            'description': '''
+Choose either fire or cold. If you choose fire, you are immunte to fire damage and burning condition. If you choose
+cold, you are immunte to cold damage and freezing condition.
+
+Legendary: Choose both of these options.
+            ''',
+        },
+        {
+            'requires': 'Adept',
+            'name': 'Strong mind',
+            'description': '''
+You have immunity to afraid condition.
+
+Talented: In addition you have immunity to disoriented condition
+
+Legendary: In addition you cannot be confused or disrupted. 
+            ''',
+        },
+        {
+            'requires': 'Talented',
+            'name': 'Poison secretion',
+            'description': '''
+You are immune to poison.
+            
+You naturally produce poison when stressed in battle. When picking this innate feat, choose the type of poison you make:
+ * 1 damage at the beginning of each turns per stack
+ * 1 levels of disoriented per stack
+ * 1 levels of afraid per stack.
+ When Legendary, you have one additional option:
+ * 1 level of freezing.
+ 
+To apply this poison to your next attack with weapon or bow, you need to spend a R4. 
+You can do that at most once per turn, and this applies only 1 stack. 
+
+If you are legendary you can instead spend R4.R4 to apply 2 stacks to the next attack with weapon or bow.
+            ''',
+        },
     ],
     'Background': [
         {
@@ -114,13 +154,16 @@ simply someone who wants favor from your house etc.)
         {
             'name': 'Divine protector',
             'description': '''
-            You can advance toughness instead of will using mage path. You can transfer a scarred dice 
-            from an ally to yourself (their scarred dice becomes normal, 1 of your normal dice become scarred) twice a 
-            day outside of combat.
+            You can advance toughness instead of will using mage path. 
+            
+            You can transfer a scarred dice 
+            from an ally to yourself (their scarred dice becomes normal, 1 of your normal dice become scarred) twice
+            during a strategic turn, while being outside of combat.
+            
             When your mage path is talented, When a dice would become scarred, roll it. On a 6, it stays normal.
             When your mage path is legendary, then it also doesn't become scarred on a 5 as well. 
             This effects also the dice you transfer from allies to yourself.
-            '''
+            ''' # This is effectively almost a 50 % larger health pool for legendary mage.
         },
         {
             'name': 'Raw caster',
@@ -146,17 +189,19 @@ share proficiency using during combat and scenes).
 The school with the lower power dice is called the lower school, and the other one the higher.
 
 You can use the power dice from both schools to cast either school spells as long as the balance wouldn't tip by more
-than 2 into either direction because of doing so. Outside of combat you can only use it once per scene.
+than 2 into either direction because of doing so. Outside of combat you can only use it once per turn.
 
 When you spend a lower school's power dice to cast higher school spells your balance tips towards calm, and if you spend 
 higher school's power dice to cast lower school spells your balance tips towards rage.
+
+While at maximum calm you cannot be disoriented, while at maximum rage, you are immune to afraid condition.
 '''
         },
 #         {
 #             'name': 'Ritualist',
 #             'requires': 'Adept',
 #             'description': '''
-# Downside is can only cas rituals and nothing else, implement later, when we have more rituals in the game,
+# Downside is can only cast rituals and nothing else, implement later, when we have more rituals in the game,
 # '''
 #         },
         {
@@ -175,14 +220,17 @@ that school.
             'requires': 'Legendary',
             'description': '''
 You are a mana based being, even though you still have the humanoid form. You don't have blood and you only need to
-consume mana infused foods. Each normal day of living uses 1 mana. You gain 50 % increased max mana. In addition you can
-store mana in your dice equal to toughness amounts of mana per die.             
+consume mana infused foods. Each normal day of living uses 1 mana (or 1 medium turn, a normal strategic turn would spend
+5 mana). In addition you can store mana in your dice equal to toughness amounts of mana per die.             
 
 You don't have life, instead whenever you take damage you lose mana. You can give up your dice for toughness amounts of
 mana and recover those dice for toughness amounts of mana. Meaning you can basically heal with the pace of recovering
 mana. Whenever you have no mana, you die.
 
-Since you have no blood, you are immune to poison. 
+You have no blood, you are immune to poison. You cannot be healed using heal spell or healing potions, since you don't
+lose dice, you simple release the mana stored in them as you need more mana, dice cannot become scarred.
+
+You start the game with having maximum mana, and all your normal dice are fully stored with mana.  
 '''
         },
     ],
@@ -195,7 +243,8 @@ Since you have no blood, you are immune to poison.
         {
             'requires': 'Legendary',
             'name': 'Warcaster',
-            'description': '''You can use stamina instead of mana for spellcasting.''',
+            'description': '''You can use stamina instead of mana for spellcasting. You cannot use stamina to cast
+            spells outside of combat or for rituals.''',
         },
         {
             'name': 'Enduring',
@@ -212,12 +261,12 @@ during the rerolling of your dice pool.
             'name': 'Mastery over body',
             'description': '''
 Your body is your weapon. You have made a vow to give up using weapons, armor and magical items, instead you have
-focused in making your body a supreme weapon. Now and at levels 4, 8 and 12 you get to choose an additional major option
+focused in making your body a supreme weapon. At levels 1, 4, 8 and 12 you get to choose an additional major option
 from your martial playcard (this option does not spend a check-box on the talent card), 
 but you cannot use weapons, shields, armors nor attune to any magical item. 
 
-In addition your unarmed strikes do 1 additional damage and you have 1 bonus maximum defense. This bonus increases by
-1 in levels 4, 8 and 12.
+In addition your unarmed strikes do 1 additional damage and you have 1 bonus maximum defense. Both  of those bonuses 
+increases by 1 at levels 3, 6, 9 and 12.
             ''',
         },
         {
@@ -323,7 +372,7 @@ Each spell can however only be used once using this ability until your next "Tim
             increase the max of acquiring proficiency with this skill using normal options and therefore allows
             the skill to reach +5 proficiency.
             
-            If you are talented or legendary, then that skill has +2 proficiency instead and maximum is +6.
+            If you are talented or legendary, you can choose two skills instead.
 ''',
         },
         {
@@ -340,8 +389,11 @@ Each spell can however only be used once using this ability until your next "Tim
         },
         {
             'name': '(Wo)Man of many talents',
-            'description': '''Start the game with 1 additional medium and 1 additional small creative character traits.
-            If you are talented/legendary in skilled path, also start with 1 additional major creative character trait. 
+            'description': '''
+            Start the game with one additional "creative trait", which has a proficiency of 1.
+            
+            If you are talented/legendary in skilled path, start with one additional "creative trait" with a proficiency
+            of 2.
 ''',
         },
         {
@@ -349,7 +401,7 @@ Each spell can however only be used once using this ability until your next "Tim
             'name': 'Prodigy',
             'description': '''From level 1 you can pick on major option from your skilled lvl 1-4 playcard and that does 
             not forbid you to take that option again. (meaning you could for example take 2 major skilled feats by level
-            2 as Taleneted or Legendary in Skilled path).
+            2 as Talented or Legendary in Skilled path).
             ''',
         },
         {
