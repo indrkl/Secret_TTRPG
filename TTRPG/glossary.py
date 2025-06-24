@@ -2,9 +2,9 @@ glossary = [
     {
         'name': 'Dice pool',
         'description': """
-All characters have a dice pool. For example by default heroes start with a dice pool of 6 dice. Level ups, feats, spell
-effects etc. can increase the size of the dice pool. However when a character takes damage they must set aside dice from
-the dice pool, until they have no more of them in the dice pool at which point they are left incapacitated
+All characters start with 6 dice, which forms their dice pool. However when a character takes damage they must set
+aside dice from the dice pool, until they have no more of them in the dice pool at which point they are left 
+incapacitated
         """
     },
     {
@@ -13,9 +13,9 @@ the dice pool, until they have no more of them in the dice pool at which point t
 During a dice roll, your entire dice pool is rolled at once. Afterwards you can pick and choose which dice to use on
 which action.
 
-Out of combat, dice rolls happens at the beginning of each scene.
+Out of combat, dice rolls happens at the beginning of each campaign turn.
 
-In combat, dice rolls happen at the end of each players round. The players can use dice from the dice pool for reactions
+In combat, dice rolls happen at the end of each players turn. The players can use dice from the dice pool for reactions
 in between their turns and for actions during their turn.
         """
     },
@@ -40,7 +40,7 @@ dice in the dice pool.
         'description': """
 All actions have some certain roll target. For example R6.R6.R6 means that you need 3 dice with the 6 result in order
 to perform this action. Also various outcomes in social encounters or campaign in general have roll targets, which have
-to be met in order to get the desirable results, these are also called as challanges.
+to be met in order to get the desirable results, these are also called as challenges.
         """
     },
     {
@@ -60,13 +60,14 @@ For example with a proficiency of 2 you can nudge the roll of two separate dice 
 You can only nudge the rolls of a dice used on the roll target that you actually use on the roll target.
         '''
     },
-    {'name': 'Advantage and disadvantage',
-     'description':'''
-A character who has advantage against an enemy requires 1 less power dice for any attack against them. A character with
-disadvantage requires 1 more power dice to do an attack.
+    {
+        'name': 'Advantage and disadvantage',
+        'description': '''
+When you get an advantage, then you get to do 1 additional nudge. With a disadvantage, however you get to do 1 less 
+nudge. If you get disadvantage to an action, which you have 0 proficiency, then you cannot do that action.
 
-Normal advantage and disadvanatage does not stack. However some effects can specifically provide double advantage or
-double disadvantage, in which case it is 2 power dice that is needed less or more.
+Normal advantage and disadvantage does not stack. However some effects can specifically provide double advantage or
+double disadvantage, which simply doubles the effect of advantage or disadvantage resepectively.
      '''
      },
 #     {'name': 'Critical success and failures',
@@ -90,8 +91,41 @@ At all times the game is either in campaign mode or combat mode. In campaign mod
 and really a constant negotiation and feel good between the GM and players.
 
 In combat however, The order is more strict. The surprise round may vary, but afterwards each round works as follows:
-Players and Enemies take turns and do all the actions of one actor at a time, until everyone from one side has moved, then the remaining from the opposing side do their moves.
+Players and Enemies take turns and do all the actions of one actor at a time, until everyone from one side has moved, 
+then the remaining from the opposing side do their moves.
+
+The player turn order is decided by party leader, who is decided at the beginning of each session.
         '''
+    },
+    {
+        'name': 'Time scales',
+        'description': '''
+The campaign is split into turns. Each turn players roll their entire dice pool and can use these dice to represent the
+focus and effort they put into various actions and activities. However to better help abstract the time, we divide turns
+into 3 different time scales.
+
+Strategic turns, long, represent like a weeks time passing, that's where GM can progress all campaign related NPC 
+agendas. Trigger events happening in the world, and introduce bigger changes. Strategic turns can be made when players
+want to travel long distances, do very laborous and extensive activities like prepare for siege, build up player 
+holding, craft armor and weapons, or to simply have a proper rest.
+
+Medium turns are around 6-10 hours of activity. Activities done in medium turns 
+can be like a thorough research of a topic in the library, if done
+as a group activity, track a beast in the wilderness (hunt), gather herbs in the wilderness, interrogate 20 witnesses,
+prepare for a feast, ball, party. Usually when players have taken back to back 5 -7 medium turns, it is ok to also
+advance 1 strategic turn for the whole world (if you are tracking NPC activity and event count downs for example).
+The abstraction here is that you cannot just do hyper productive work all the time, you slow down, need to rest etc.
+so this is roughly the time it would take for it to become a week. When medium turns end, GM should consider what NPC-s
+do in the local settlement, or in general in the vicinity when in nature.
+
+Quick turns are around 5-30 minutes. They are intense activity. Quick turns are used when doing infiltrations, intense
+negotiations that goes back and forth, or when we really want to go into very high detail of any particular activity.
+Again, 5 - 7 quick turns turn into a medium turn. For GM, during switching from one quick turn to another only the
+most local NPC activity should be considered, like when infiltrating the fort, then what the guards do?
+
+Combat turns are even quicker, but again, once around  5 - 7 combat turns have been done, consider advancing 1 quick turn,
+maybe that brings reinforcements? 
+                '''
     },
     {
         'name': 'Combat setup',
@@ -170,9 +204,6 @@ To turn scarred dice back to normal dice, players must take time out and recover
 
 During recovery, by spending various resources like herbs, good food etc. one can change scarred dice back to normal 
 dice.
-
-To change a single dice back it costs 15 gp worth of resources, to change 2 dice back it costs 50 gp and to change 3 
-dice back it costs 150 gp worth of resources. To recover all the dice, it coses 250 gp.
      """,
     },
     {
@@ -198,9 +229,11 @@ If there are no dice left to scar when you take damage, you die.
     'name': 'moral',
      'description': """
 All enemies and NPC allies have moral. That means their willingness to fight. GM can obviously determine the moral for
-enemies. But here are the general guidelines for how moral is lost:
+enemies. An average starting moral for mobs and NPCs is 10.
 
-1. Each dice lost from the dice pool loses 1 moral
+Here are the general guidelines for how moral is lost:
+
+1. Each dice lost from the dice pool reduces 1 moral
 2. Each ally lost reduces moral by 1
 3. Losing a stronger ally reduces moral by additional 2
 4. Dropping to 2 dice in your dice pool reduces moral by additional 3
@@ -231,26 +264,22 @@ change the outcome of a single dice in a roll, or to gain advantage.
     },
     {'name': 'Mana',
      'description': """
-When advancing in the mage path, characters can increase their maximum mana. When casting spells, character may choose
-to spend mana to reduce the number of dice required to cast that spell.
+When advancing in the mage path, characters can increase their maximum mana.
 
-For 1 mana reduce the spell cost by 1 dice, for 3 mana, by 2 dice, for 6 mana by 3 dice and for 10 mana by 4 dice. You
-cannot reduce the cost by more than your proficiency in the spell's school of magic. Note that this is for casting
-spells during combat. When using magic in a scene, the mana cost is tripled with regards to lowering the dice
-requirements to not trivialise most challanges.
+Mana is used to cast spells. Each dice they spend when casting spells costs 1 mana.
+
+In addition even more mana can be spent to get virtual dice to make the spell even more powerful. For 1 mana you get
+1 additional virtual dice (it still increases the cost of the spell, so you totally spend 2 mana. For 3 mana you get
+2 dice, for 6 mana 3 dice and finally for 10 mana you get 4 dice.
+
+You cannot receive more virtual dice than your proficiency in the spell's school of magic. Note that this is for casting
+spells during combat. When using magic in a scene, the mana cost for virtual dice is multipled depending on the type
+of the out of combat turn. (1 x for quick turns, 2 x for medium turns, and 3 x for strategic turns, casting rituals
+is unaffected).
 
 Mana is recovered during rest by consuming quite pricy magical spices. You must spend enough resources to reach maximum
-man, that means the more you consumed your mana during an encounter, the more pricy it will be. 
-
-For the first 1 - 10 mana, the cost of spices is 3 gp per mana.
-
-For the next 11 - 30 mana, the cost of spices is 5 gp per mana.
-
-For all mana after that, the cost of spices is 10 gp per mana.
-
-Suppose a spell caster with 100 maximum mana has spent 60 mana and now decides to rest. He can either not recover any
-mana for now, or can spend 30 (first 10 mana) + 75 (next 20 mana) + 300 (last 30 mana) for a total of 405 gp to recover
-their mana to full.
+man, that means the more you consumed your mana during an encounter, the more pricy it will be. To recover 1 mana costs
+5 gp.
      """,
      },
     {'name': 'Stamina',
@@ -258,7 +287,7 @@ their mana to full.
 When advancing in the martial path, characters can increase their maximum stamina. Stamina can be used for following
 effects:
 
-Recover all defenses with just one R2 dice: 1 stamina
+Do either "shield" or "defend" actions with just one R2 dice: 1 stamina
 
 Deal 1 additional damage with your attack: 1 stamina
 
@@ -266,9 +295,10 @@ Double the movement of a single move action: 2 stamina
 
 Only one of the previous options can be chosen per turn.
 
-Another option to spend stamina on is to use a scarred dice ignoring the normal scarred dice limitation.
+Another option to spend stamina during combat is to use a scarred dice ignoring the normal scarred dice limitation. That
+costs 1 stamina per scarred dice.
 
-In additional some abilities may require stamina or provide means to recover stamina.
+In addition some abilities may require stamina or provide means to recover stamina.
 
 Stamina recovers after every encounter.
      """,
@@ -284,11 +314,9 @@ When they do they can choose one effect from following:
 * Get 2 additional nudges (in addition to your proficiency and aiding)
 
 
-* When throwing risk dice, negative results do nothing.
+* re-roll up to 3 dice.
 
-
-* remove disadvantage for you for this turn.
-
+* remove disadvantages and double disadvantages for you for this turn.
 
 In addition some abilities may require Luck tokens to be used, these costs do not share the limit with it's default
 usage.
@@ -300,14 +328,11 @@ Luck tokens are recovered when the party chooses to take time out and recover.
     {'name': 'Time out and recover',
      'description': """
 When players are heavily scarred and run out of luck, they may find themselves needing to take time out and recover.
-This should not be done lightly however, since in-game this can be several weeks to months. This means that this gives
-time for adversaries to advance in their plans, for the situation to change, and for new challanges to be introduced.
+This should not be done lightly however, since in-game this takes an entire strategic turn. This means that this gives
+time for adversaries to advance in their plans, for the situation to change, and for new challenges to be introduced.
 
 In addition they need to find a proper lodging and this time out will cost them money, as they rest and don't earn any
 money in the meanwhile.
-
-Finally time out cannot be taken mid-session, as GM needs time to prepare and figure out how the world changes. It 
-should be decided always at the end of a game session.
 
 Note, there are costs associated with lodging, and recovering from scarred dice. Luck is recovered on it's own.
      """,
@@ -332,15 +357,9 @@ Note, there are costs associated with lodging, and recovering from scarred dice.
     {'name': 'status effect',
      'description': """
 Since whenever someone meets their roll target, then they always succeed, if anyone's actions grant other characters
-status effetcs they cannot be avoided unless there is a reflex save option. Other status effects have usually other ways
-to remove them usually using fortitude or will.
-
-When making reflex saves, you roll 2d6 and when you can make the save using those dice and your proficiency you succeed,
-otherwise you fail. Note that the number of times you can nudge during reflex saves resets only at the beginning of your
-round. So if you need to make more than 1 reflex save in between your turns they all share the total number of nudges
-you can do based on your proficiency.
-
-To use fortitude and will you need to spend your dice from the dice pool.
+status effects they cannot be avoided. Status effects have usually ways to remove them by spending dice or they simply
+dissapear over time. At the end of each player's turn, that player can remove a single level of either disoriented,
+afraid, poisoned or burning for free.
      """,
      },
     {'name': 'Concentration',
@@ -373,9 +392,9 @@ How does it work? There are a certain number of dice that need to be met to comp
 casters need to roll their entire dice pool multiple times. Each time the mana cost to roll the pool increases but using
 their proficiency they can progress in the ritual.
 
-First roll costs 4 mana, then each consequent roll costs 2 additional mana. Players who have disadvantage, can 
-contribute starting from the second dice that they meet for the target throughout the ritual, so when they roll the
-second time and they met one roll in the first time they effectively no longer have disadvantage. 
+First roll costs 2 mana, then each consequent roll costs 2 additional mana. Proficiency using resets each roll, but
+disadvantage for not knowing the ritual also applies each roll. Also if you don't have proficiency, then you cannot
+aid in the ritual.
 
 Rituals can be used to prepare for combat against the odds.
 
@@ -387,16 +406,9 @@ resource drain for the ritual caster.
      'description': """
 Throughout the game-world players may find potions with magical effects and mages with the potion maker feat can make
 them themselves. Potions however have limitations. The roll target for the first potion is RX, meaning any single dice will
-do. The roll target for the second potions is RX for drinking the potion and R3 fortitude check to stomach that potion.
-After that an additional R3 is added to the fortitude check each time.
+do. The roll target for the second potions is RX for drinking the potion and R3 toughness check to stomach that potion.
+After that an additional R3 is added to the toughness check each time.
      """
-     },
-    {'name': 'Stealth',
-     'description': '''
-There is no stealth skill in the game, instead either survival or concealment skill is used and depending on your 
-familarity with the environment you may get a bonus or penalty. Still there are some things that refer to it, in the 
-forms of penalties and bonuses etc.
-     '''
      },
     {'name': 'Different armors',
      'description': '''
@@ -476,17 +488,7 @@ for increased attunement.
 # deeply someone, and all of sudden the scene target changes to 4 or 5, which obviously consequences to the story as well.
 #     '''
 #     },
-#     {'name': 'Is there such a thing in the game-world',
-#      'description': '''
-# During each of the encounters and story beats, each player may ask the GM if there is some thing in the game-
-# world, which the GM didn't describe beforehand but which might sound plausible. When making the request, it
-# is recommended to also ask for the functionality that they imagine they would want to get out of it. This
-# allows the GM to provide something that is more plausible but with similar functionality.
-# The GM sets the base DC (3, very likeyly, 7, plausible, 13, unlikely, 18, very unlikely, 20, nearly impossible)
-# and rolls a d20. If the result is higher than DC then GM describes a way this can exist, and how they can achieve what
-# they want using this knowledge.
-#      '''
-#      },
+
 #     {'name': 'Group focuses',
 #      'description': '''
 # At all times the group can have 1 group focus active, which let's them progress towards a goal that the players have
@@ -508,79 +510,53 @@ reward the player with advantage or more. The goal is to create cool story momen
 somewhat constrained by balance (RP in following context is power roll, this depends on your school of magic which the
 creative spell or ability belongs to).
 
-1 RP: 2 damage
-1 RP: 1 level of vulnerability or entangled, or 2 levels of unbalanced
+1 RP: 4 damage
+1 RP: 2 level of vulnerability or entangled, or 4 levels of unbalanced
 2 RP: 1 level of disoriented, afraid, prone, burning or disruption
 3 RP: blinded, 1 level of frozen
 2 RP: Aid an ally to give them advantage, or upgrade advantage to double advantage
-X RP: Meet a scene roll-target, X is number of dice required in the roll-target. The dice used for roll-target also
-override the spell's own power dice.
+X-1 RP: When presented with a challenge in the campaign turns, you can reduce the effort by 1 and use the creative's
+spell to resolve the challenge (if appropriate). In this case you use the school of magic's proficiency. When you
+spend additional mana to exert yourself, you gain virtual dice, with the value of 4.
 
 The default range for effecting someone is 6 sq.
      '''
 
     },
-    {'name': 'Creative character traits',
+    {
+        'name': 'Abilities',
      'description': '''
-"""
-The struggle I had is to think of Skilled path feats and abilities. The problem there is that, they are supposed to
-be strong in the most creative part of the game, out of combat roleplay. The thing is, that part really should not be
-constrained by making a finite set of feats or moves or what not as the vastness of play in TTRPG is impossible to
-support with this approach.
+To describe your general proficiency in various simpler tasks in the world, players have 6 different abilities.
 
-The skills are already rather general, but now to think of it, just because someone has lore proficiency doesn't mean
-they can read books, maybe they are simply good at acquiring knowledge from other people, or simply are very observant
-and have a good memory.
+Physique - physical endurance, control over your various muscles, this includes strength, endurance and flexibility of
+joints. This is used to recover defenses, and used in many martial feats.
 
-What I want to achieve is players to both unleash their creative potential when creating characters, while at the same
-time willingly limit what their characters can do, constrains are fun, as long as you have enough tools to figure out
-a way.
+Precision - Precise physical activity that also requires accurate applying of senses, this is like lock picking,
+knitting, archery, throwing anything accurately, sleight of hand.
 
-So what I am leaning towards, is a creative way to say, that your character has a particular background, or a particular
-set of skills, or a knows how to do something very specific and unique.
+Toughness - This also increases your HP. But is also used to recover from poison, stomach potions, endure pain, and all 
+sorts of bodily harm.
 
-I guess they are sort of aspects from FATE core, or experience from Daggerheart. They should be something which player
-can invoke in a scene or out of combat, or maybe a bit even in combat to be able to do something. Like "I am a thief
-and I know all the tools and tricks of that trade", to unlock locked doors and chests, sneak, pick-pocket a key from
-a guard or know the ins and outs of prisons.
+Social - Mental ability to convince people, have presence in the room, but also to understand them, empathise and so on.
 
-It could be a skill-set, or a particular experience, or a strange quirk like being able to cheat with playing cards
-using slight of hand. Maybe they should simply be called creative character traits. And similarly to feats, there
-can be small, medium and major ones, to allow for a wide range of possibilities while still balancing it.
+Intelligence - Mental ability to memorise, know stuff, but also apply the knowledge to make logical conclusions,
+pattern matching and finding connections.
 
-What are some limitations when picking such traits? They cannot be magical, nor provide you powers which are equilevant
-to magical powers from the mage path. They don't make you have any super powers, it instead effects what you know,
-what you can do with your hands or body with simple skill and practice alone, or it is something you have done in the
-past, that creates connections or opportunities or you, that you wouldn't have otherwise. They also cannot compete with
-the martial path. If you want to be a master swordsman, then you simply take the martial path.
+Cunning - Mental ability to outsmart others, sense danger, notice important queues in the environment, have street
+smarts, survive in the wilds, see through web of intrigue.
 
-Major:
+Each weapon, school of magic or creative skill proficiency is relates to one ability. Your ability proficiency is determined by
+the best related proficiency.
 
-1. Difficult Professions or a master of simple ones, like thief, captaing of the guard, investigator, accountant, lawyer, philosopher.
-
-2. Powerful feats like: Have read thousands of books over life time and has an excellent memory about it, Can perform
-with musical instruments to really get the crowd going. Things that can have severe implications in the story, or the
-set of actions that could be invoked with this ability is common.
-
-Medium:
-
-1. Simpler professions, or having experience in the those professions. For example it could be that you were a guard,
-but you didn't have extensive experience with it. Maybe you are Good to keep guard or notice wierd behaviour, but you
-still can't do many of the other activities like halting someone with confidence, search caravans or interrogating
-someone. Or you could attempt to do them, but with dis-advantage, or at least without advantage.
-
-2. Useful skills, that can be used some times, but not too often. Like being able to play a musical instrument. Have
-read about one particular subject, or when you persuade people, you always make them smile.
-
-Small:
-
-1. Fun quirks, like being able to tell the distance of far objects, can do one card trick or sleight of hand movement
-
-2. Some broader but shallower experience, like visiting a distant land and knowing a little bit about their culture,
-had a friend who was a criminal, so you know something about it, maybe?
-
-Each character starts the game with 1 medium creative character trait.
-"""
+The only exception is toughness, which cannot be related to any other proficiency and has to be increased through the
+martial path.
+     '''
+    },
+    {'name': 'Creative skills',
+     'description': '''
+All player characters start with 2 creative skills, that describe something special they can do that a commoner couldn't
+do. It could be a back-ground, profession, or a unique skill. Each creative skill is related to a single ability. This
+connection further constraints the nature of the creative skill.
      '''
 
     },
@@ -588,8 +564,8 @@ Each character starts the game with 1 medium creative character trait.
         'name': 'Combat',
         'description': '''
 Combat has usually 2 sides. The player characters and their allies, and the enemy. The combat turns are simple. 
-First one player character moves, then an opponent moves picked by the GM. Then another player moves and so on, until everyone from one side
-has moved. Then the remaining actors in the other side all take their turn.
+First one player character moves, then an opponent moves picked by the GM. Then another player moves and so on, until 
+everyone from one side has moved. Then the remaining actors in the other side all take their turn.
         '''
     },
     {
@@ -639,6 +615,5 @@ have much stronger defensive and offensive capabilities.
 Disadvantage for mobs halves their damage. And advantage gives them up to 2 extra damage but no more than 50 % of their
 original damage
         '''
-
     },
 ]

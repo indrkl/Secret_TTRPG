@@ -1,0 +1,7 @@
+*cpython-38.pyc
+*Shirt ideas.txt
+TTRPG/*_character_sheet.pdf
+TTRPG/characters/*.pdf
+*.db
+*.pyc
+wedding_app/*

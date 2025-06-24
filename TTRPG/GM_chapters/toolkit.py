@@ -13,6 +13,6 @@ that we need a lot of tools:
 4. Give a price for the desired results, gold, having to fight a battle, do a favor (quest) for a NPC, give up something
 precious.
 
-5.  
+5. 
 
 """

@@ -1,6 +1,53 @@
+Questions = """
+
+1. Which of these gets you most excited: Fighting monsters, learning about lore, social interactions, being part of
+large battles, royal court drama and intrigue, messing with international politics.
+
+2. Which of these resonates with you? Being a mercenary, being scholars, being part of a secret order, being monster
+hunters, being part of a noble house.
+
+3. Which reward gets you going? A flaming magical sword, a book about ancient secrets, lot's of gold, a title of 
+baron and land that comes with it, A cool NPC joins your party, means to teleport between 2 places in the map.
+
+4. How do you think you would enjoy the campaign to be structured? For example, do you prefer a concrete main quest,
+with occasional side quests, or maybe you prefer more disjointed adventures that all advance some metric, like 
+knowledge, wealth, fame.
+"""
+
+
 
 intro_txt_pre_hooks = """
-Godherja is a broken world, 
+Aeras is a broken world, Godherja, the first event that broke it thousands of years ago, Frodbrokna, the second event
+that broke it 58 years ago. And to be fair, for the men walking on the surface of Aeras, it wasn't nice before either
+of the events either.
+
+Godherja, the god wars killed a whole other superior race of Aelfirs, immortals who had been God-kings to man-kind for
+as long as we had history records. All of them, wiped out, now only humen remain. But the true disaster came from a
+spell that also supposedly killed the creator of man, and Aelfir, both. He was named Aersanon. After Godherja, all
+civilization was lost, the world, nature and magic was twisted and made more hostile, but the few humen who remained,
+persevered, multiplied and rebuilt the world, forming many new cultures, religions, kingdoms, empires.
+
+Up until 58 years ago, the most powerful of such empires was Aversaria. It was in a civil war, being fought by 2
+extremely powerful mages. Similar power was not known in the recorded history, at least for humans. They raced to
+find a powerful spell that would end the other side, Aeschraes, managed to find it sooner, and sacrificed his family,
+hundreds of servants and several minor mages to cast it. But it destroyed much more than he had intended. Wiping out
+cities, regions, and releasing fog from the grave of Aersanon, the dead god. That fog would engulf more than half of the
+continent, making north and center completely unhinhabitable. The empire of Aversaria, half of it destroyed, but
+without a clear ruler, split into pieces. Sjalvolki tribes escaping the fog, united under Cenware the Witch-breaker,
+now marching to take over all the remaining lands of Aversaria. Aeschraes is the only powerful mage still left in the
+world, but he, considered as world-ender, is alone, and will soon face his demise as well. All other more powerful mages
+died during Frodbrokna, the releasing of the Blood-replicating spell by Aeschraes.
+
+In the north west, the Chevalie empire, guardians against the Lichdoms in the north is split by 3 brothers, none of them
+having enough might and legitimacy to unite it once again.
+
+In the east, there are less advanced lands, they too have no answer against the fog.
+
+In the redlands, the cultist have become more active, and present another dangerous, nihilistic potential for world
+ending.
+
+Is there anyone to stop the Fog? To forge a better world? Is Aeras doomed to just slowly wane away? Is there no hope
+for people without a god?
 """
 
 campaign_hooks = """
@@ -44,7 +91,7 @@ a violant war, that distracts the whole continent from all the supernatural stri
 indigeonous people fighting for their land against religious fanatics fighting to bring order and an civilization to
 these lands.
 
-And some dream of reforming the Auereus empire, is any of them worthy?
+And some dream of reforming the Aureus empire, is any of them worthy?
 
 Also, the world destroyer is still, roaming free, as the most powerful of mages.
 

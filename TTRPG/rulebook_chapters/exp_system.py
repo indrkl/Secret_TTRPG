@@ -20,7 +20,7 @@ Experience is applied when players go to downtime. That means
 
 2. Some scenes are big ones, and they provide experience, when the scene ends badly for players however, they get double
 the experience from the scene. Recommended to start from 5 exp, but no more than 25 exp for the grandest of scenes
-(so 50 % for double).
+(so 50 exp for double).
 
 3. In addition, each such scene provides a 5 % to 10 % bonus for the entirety of experience gathered since the previous
 downtime. That means that if players manage to push forward without going to downtime they earn experience much more
@@ -38,13 +38,29 @@ during the session. This doesn't benefit from the % bonus however.
 
 
 All exp earnt by a player only provides 10 % exp to the organization exp.
-All exp earnt by all players (scenes and scene failures) provides 50 % exp to the organization exp.
+All exp earnt by all players (scenes and scene failures) provides 100 % exp to the organization exp.
 
-The exp requirement to level up is 100 exp for lvl 1 and goes up by 20 exp each level. The exp gaining doesn't increase
+The exp requirement to level up is 100 exp for lvl 1 and goes up by 25 exp each level until level 6.
+Then it starts going up by 50 exp per level. The exp gaining doesn't increase
 much, since it is all tied to the difficulty of the encounter.
+But in general when the game enters heroic levels of activity, something like big city relevant events, or kingdom
+level missions, then double the exp, and when it enters the world level epicness, then triple it from baseline.
 
 New player characters start at organization exp level.
 
+lvl.    exp required to level up
+1       100 exp
+2       125 exp
+3       150 exp
+4       175 exp
+5       200 exp
+6       250 exp
+7       300 exp
+8       350 exp
+9       400 exp
+10      500 exp
+11      600 exp
+12      max level.
 
 
 """
