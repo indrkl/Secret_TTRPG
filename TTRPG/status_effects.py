@@ -12,7 +12,7 @@ for a roll.''',},
     your body is covered from sight of the ranger. Third level is reached when you have full cover. Then you cannot be
     attacked with ranged attack at all.''',},
     {'name': 'disoriented', 'description': '''
-(WILL) When a character gets a level of disoriented the roll a die and discard a die in their pool with a matching number.
+When a character gets a level of disoriented they roll a die and discard a die in their pool with a matching number.
 During each re-roll of the dice pool, this process is repeated for each level of disoriented. Disoriented can be removed
 using the Refocus general action.
 
@@ -23,8 +23,8 @@ Then he discards R2 and R5 from the pool and therefore cannot use those dice in 
 rolled 2 x R5 into the pool, he would have lost both of them.
     '''},
     {'name': 'afraid', 'description': '''
-(WILL) In order to make any offensive actions during your turn you need to meet a roll target of R5 for each level of 
-afraid. Afraid can be removed using the Refocus general action.
+While having any levels of afraid, all offensive actions require an additional power dice for every 3 levels of
+afraid (rounded down). Afraid can be removed using the refocus action.
 
 '''},
     # {'name': 'crazed', 'description': '''
@@ -37,26 +37,27 @@ afraid. Afraid can be removed using the Refocus general action.
     #     otherwise if you would need to attack the closest creature, you do not do the attack action,
     #     but instead waste 1 AP steaming with anger.'''},
     {'name': 'vulnerable', 'description': '''You take 1 additional damage per level in vulnerable, this counteracts
-    damage reduction. Vulnerable levels are lost at the beginning of your round.'''},
+    damage reduction. Vulnerable levels are discarded at the beginning of your turn.'''},
     {'name': 'unbalanced', 'description': '''
-        (REF R4) You can have up to 4 levels of unbalanced, you can spend R3.R4 (reflex) to remove all levels of unbalanced.
+        You can have up to 4 levels of unbalanced, you can use recover action to remove all levels of unbalanced.
         if you get to 4 levels of unbalanced, you fall over, getting prone status but losing all levels of unbalanced,
         if you are wearing heavy armor or are a large creature and would get a level of unbalanced, you have a 50 % 
         chance to not get it.'''},
-    {'name': 'entangled', 'description': '''Your position cannot change until you are entangled. You need to meet a R5
-    physique target to reduce the entangled by 1 level.'''},
+    {'name': 'entangled', 'description': '''Your position cannot change until you are entangled. You may spend a R5 
+    (physique) to reduce the entangled by 1 level.'''},
     {'name': 'prone', 'description': '''You have disadvantage. You need to spend dice worth of 10 points total to lose
     prone status effect.'''},
     {'name': 'poisoned', 'description': '''
-        (FORT) You have some specific poison on you. Each poison can stack, but only the highest stacked poison takes
+        You have some specific poison on you. Each poison can stack, but only the highest stacked poison takes
         effect. Poison can be removed using the recover general action.'''},
-    {'name': 'freezing', 'description': '''(FORT) Every level of freezing disable one dice from your dice pool.'''},
-    {'name': 'burning', 'description': '''(REF R3.R4) For each level of burning, one takes 1 damage at the start of 
+    {'name': 'freezing', 'description': '''Every level of freezing disable one dice from your dice pool.'''},
+    {'name': 'burning', 'description': '''For each level of burning, one takes 1 damage at the start of 
         their round. One can fall prone and spend the entire round (losing all concentration etc.) to lose all the 
         stacks of burning. Freezing and burning levels cancel each other.'''},
     {'name': 'blinded', 'description': '''Characters who are blinded, cannot see. Movement costs twice as much unless
-    you have blind-sight. Cannot target outside blind sight range. And you have disadvantage when making attacks, and
-    enemies have advantage when attacking you. Enemies who already have advantage upgrade it to double advantage.
+    you have blind-sight. Cannot target outside blind sight range. And you have double disadvantage when making melee 
+    attacks, and enemies have advantage when attacking you. Enemies who already have advantage upgrade it to double 
+    advantage.
     '''},
 ]
 

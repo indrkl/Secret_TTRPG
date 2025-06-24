@@ -61,8 +61,9 @@ more or less diversified in other areas.
 
 All players start with 6 d6 dice in their dice pool, for both combat and out of combat, 2 toughness (determines how much 
 damage you can take before you die), proficiency in light armor and access to some general actions (all detailed in
-general actions chapter), an ability to remove 1 level of either poison, disoriented, afraid or burning at the end of
-their turn and 1 medium creative character trait.
+general actions chapter), and 2 creative character traits. In addition they can start with +2 proficiency with one
+trait, weapon or school of magic, and +1 proficiency with 2 other trait, weapon or school of magic. Both of the
+character traits must start with at least +1 proficiency though.
 
 In addition they get a foundation power for each path they have path points in, but the power of the feat depends on their 
 level in that path. This further defines their character progression possibilities. Foundations are really powerful.
@@ -185,20 +186,20 @@ legendary_mage_card = {
     'name': 'Legendary Mage path',
     'big_perks': [
         {'description': 'gain major mage feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 24 maximum mana', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 3 spell school or will proficiency (max prof. 4)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 20 maximum mana', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 2 spell school proficiency (max prof. 4)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
     ],
     'small_perks': [
         {'description': 'gain 1 medium mage feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 small mage feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
-        {'description': 'gain 1 will proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
-        {'description': 'gain 1 spell school proficiency and learn a spell from that school (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+        {'description': 'gain 1 spell school proficiency and learn a spell from that school (max prof. 2)',
+            'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 spell school proficiency (max prof. 3)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'learn 2 spells from any schools of magic', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'Grant an additional 2 mental slots that can be used for spells.', 'available1-4': 1, 'available 5-8': 0, 'available 9-12': 1},
-        {'description': 'Grant an additional 1 mental slots that can be used for spells.', 'available1-4': 2, 'available 5-8': 1, 'available 9-12': 2},
-        {'description': 'gain 1 lore proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'Grant an additional 1 mental slots that can be used for spells.', 'available1-4': 1, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 1 intelligent trait proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 8 mana', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 6 mana', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
     ],
@@ -211,13 +212,11 @@ talented_mage_card = {
     'big_perks': [
         {'description': 'gain major mage feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 20 maximum mana', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 2 spell school or will proficiency (max prof. 4)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-
+        {'description': 'gain 2 spell school proficiency (max prof. 4)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
     ],
     'small_perks': [
         {'description': 'gain 1 medium mage feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 small mage feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
-        {'description': 'gain 1 will proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 spell school proficiency and learn a spell from that school (max prof. 2)',
          'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 spell school proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
@@ -227,7 +226,7 @@ talented_mage_card = {
         {'description': 'Grant an additional 1 mental slots that can be used for spells.', 'available1-4': 2,
          'available 5-8': 1, 'available 9-12': 2},
 
-        {'description': 'gain 1 lore proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 1 intelligent trait proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 8 mana', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 6 mana', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
     ],
@@ -240,19 +239,18 @@ adept_mage_card = {
     'big_perks': [
         {'description': 'gain 1 medium mage feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 16 maximum mana', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 1 spell school or will proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 spell school proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
     ],
     'small_perks': [
         {'description': 'gain 1 small mage feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 1 will proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 spell school proficiency and learn a spell from that school (max prof. 1)',
          'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 spell school proficiency (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'learn 2 spells from any schools of magic', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'Grant an additional 1 mental slots that can be used for spells.', 'available1-4': 1,
          'available 5-8': 1, 'available 9-12': 2},
-        {'description': 'gain 1 lore proficiency (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 intelligent trait proficiency (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 8 mana', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 6 mana', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
     ],
@@ -265,18 +263,17 @@ acquainted_mage_card = {
     'big_perks': [
         {'description': 'gain 1 small mage feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 12 maximum mana', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 1 spell school or will proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 spell school proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
     ],
     'small_perks': [
-        {'description': 'gain 1 will proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 spell school proficiency and learn a spell from that school (max prof. 1)',
          'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 spell school proficiency (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'learn 2 spells from any schools of magic', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'Grant an additional 1 mental slots that can be used for spells.', 'available1-4': 1,
          'available 5-8': 0, 'available 9-12': 1},
-        {'description': 'gain 1 lore proficiency (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 intelligent trait proficiency (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 6 mana', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
     ],
     'progression': '''Gain 1 minor option at levels 1, 2 and 4, and 1 major option at levels 3''',
@@ -287,21 +284,19 @@ legendary_martial_card = {
     'big_perks': [
         {'description': 'gain major martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 8 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': '''advance 3 times with any weapon, shield, reflex, fortitude or physique skill. 
+        {'description': '''advance 2 times in toughness or with any weapon or shield.
         (max prof. 4)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
     ],
     'small_perks': [
-        {'description': 'gain 1 medium martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 medium martial feat', 'available1-4': 2, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 small martial feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 toughness', 'available1-4': 3, 'available 5-8': 1, 'available 9-12': 0},
-        {'description': 'gain 1 reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
-        {'description': 'gain 1 weapon proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
-        {'description': 'gain 1 weapon proficiency with 2 different weapons (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 1 weapon proficiency (max prof. 3)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
-        {'description': 'gain 1 physique or survival proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
-        {'description': 'gain 3 stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 2 stamina', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 1 weapon or shield proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+        {'description': 'gain 1 weapon or shield proficiency with 2 different weapons (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 1 weapon or shield proficiency (max prof. 3)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 3 stamina', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 2 stamina', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 stamina', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
     ],
     'progression': '''Mark 4 minor options at levels 1 and 3, and 1 minor and 1 major option at levels 2 and 4''',
@@ -312,19 +307,17 @@ talented_martial_card = {
 
     'big_perks': [
         {'description': 'gain major martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 6 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': '''advance 2 times with any weapon, shield, reflex, fortitude or physique skill. 
+        {'description': 'gain 8 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': '''advance 2 times in toughness or with any weapon or shield. 
         (max prof. 4)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
     ],
     'small_perks': [
         {'description': 'gain 1 medium martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 small martial feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 toughness', 'available1-4': 2, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 1 reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
-        {'description': 'gain 1 weapon proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+        {'description': 'gain 1 weapon or shield proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 weapon proficiency with 2 different weapons (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 1 weapon proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 1 physique or survival proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+        {'description': 'gain 1 weapon or shield proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 3 stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 2 stamina', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 stamina', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
@@ -337,16 +330,14 @@ adept_martial_card = {
 
     'big_perks': [
         {'description': 'gain 1 medium martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 5 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': '''advance 1 times with any weapon, shield, reflex, fortitude or physique skill. 
+        {'description': 'gain 6 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': '''advance 1 times in toughness or with any weapon or shield. 
         (max prof. 3)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
     ],
     'small_perks': [
         {'description': 'gain 1 small martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 toughness (max prof. 2)', 'available1-4': 1, 'available 5-8': 2, 'available 9-12': 1},
-        {'description': 'gain 1 reflex or fortitude proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
-        {'description': 'gain 1 weapon proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
-        {'description': 'gain 1 physique or survival proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
+        {'description': 'gain 1 weapon or shield proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 2 stamina', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 stamina', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
     ],
@@ -359,14 +350,12 @@ acquainted_martial_card = {
     'big_perks': [
         {'description': 'gain 1 small martial feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 4 maximum stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': '''advance 1 times with any weapon, shield, reflex, fortitude, toughness or physique skill. 
+        {'description': '''advance 1 times in toughness or with any weapon or shield. 
         (max prof. 3)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
     ],
     'small_perks': [
         {'description': 'gain 1 toughness (max prof. 2)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 1 reflex or fortitude proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 weapon or shield proficiency (max prof. 1)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
-        {'description': 'gain 1 physique or survival proficiency (max prof. 2)', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 2 stamina', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 stamina', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
     ],
@@ -379,7 +368,7 @@ legendary_skilled_card = {
         {'description': 'gain major skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'Gain a new creative skill, which starts with 2 proficiency', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 8 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': '''gain 3 any skill proficiencies (max prof. 4)''',
+        {'description': '''gain 2 any skill proficiencies (max prof. 4)''',
          'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
     ],
@@ -388,7 +377,6 @@ legendary_skilled_card = {
         {'description': 'gain 1 small skilled feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'Gain a new creative skill',
          'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 1 will, reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 2 any skill proficiencies (max prof. 1)', 'available1-4': 2, 'available 5-8': 1, 'available 9-12': 0},
@@ -406,7 +394,7 @@ talented_skilled_card = {
         {'description': 'gain major skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'Gain a new creative skill, which starts with 2 proficiency', 'available1-4': 1, 'available 5-8': 1,
          'available 9-12': 1},
-        {'description': 'gain 6 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 8 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': '''advance 2 times with any skill (max prof. 4)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
     ],
@@ -415,7 +403,6 @@ talented_skilled_card = {
         {'description': 'gain 1 small skilled feat', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'Gain a new creative skill',
          'available1-4': 1, 'available 5-8': 0, 'available 9-12': 1},
-        {'description': 'gain 1 will, reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 3)', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 2 any skill proficiencies (max prof. 1)', 'available1-4': 1, 'available 5-8': 1,
@@ -434,13 +421,12 @@ adept_skilled_card = {
         {'description': 'gain 1 medium skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'Gain a new creative skill, which starts with 1 proficiency', 'available1-4': 1, 'available 5-8': 1,
          'available 9-12': 1},
-         {'description': 'gain 4 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+         {'description': 'gain 6 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': '''advance 1 times with any skill (max prof. 3)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
     ],
     'small_perks': [
         {'description': 'gain 1 small skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
-        {'description': 'gain 1 will, reflex or fortitude proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 1 skill proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 2 luck', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
         {'description': 'gain 1 luck', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
@@ -455,13 +441,12 @@ acquainted_skilled_card = {
         {'description': 'gain 1 small skilled feat', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'Gain a new creative skill, which starts with 0 proficiency', 'available1-4': 1, 'available 5-8': 1,
          'available 9-12': 1},
-        {'description': 'gain 3 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
+        {'description': 'gain 4 maximum luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': '''advance 1 times with any skill (max prof. 3)''', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
 
     ],
     'small_perks': [
-        {'description': 'gain 1 will, reflex or fortitude proficiency (max prof. 1)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
-        {'description': 'gain 1 skill proficiency (max prof. 1)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
+        {'description': 'gain 1 skill proficiency (max prof. 2)', 'available1-4': 3, 'available 5-8': 3, 'available 9-12': 3},
         {'description': 'gain 2 luck', 'available1-4': 1, 'available 5-8': 1, 'available 9-12': 1},
         {'description': 'gain 1 luck', 'available1-4': 2, 'available 5-8': 2, 'available 9-12': 2},
     ],

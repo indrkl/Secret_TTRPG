@@ -8,7 +8,156 @@
 # Divination - 3
 
 schools = {
-    'Force': {
+    'Arcanum (intelligence)': {
+        'spells': [
+            {
+                'name': 'Identify',
+                'effect': '''A ritual to identify the magical properties of magical items. While some magical items
+                might have obvious magical properties, like a flaming sword doing additional fire damage, others may
+                have hidden or more complex properties that would need to be either studied, mathced with historic
+                records, tested out blindly, or you could cast this ritual instead.          
+                
+                The final cost of the ritual depends on the complexity of the magical item.
+                
+                It costs 2xR1 to identify a simple but none obvious effect. It costs 4xR1 to identify more obscure 
+                hidden effects, including if the item has a simple curse, that the creator tried to hide.
+                
+                It costs 10xR1 to identify legendary items, their properties, hidden properties and curses.
+                
+                It may not be obvious which kind of magical item it is. However if you spend at least 2xR1 you will
+                know if it has as more obscure hidden effects. And if you spend at least 4xR1, then you you will know
+                if the item is of legendary quality.
+                
+                Even for some legendary items you could learn some properties with either 2 or 4 xR1, but this is up
+                to GM to decide.
+                
+                Also note that if a legendary item does not have this mid level effects, then one may not learn that
+                there is more to reveal by only spending 2xR1.
+        ''',
+            },
+            {
+                'name': 'Transfer magic',
+                'effect': '''A ritual to transfer magical properties from one item, to another item which could hold
+                that magical property. So from a one handed weapon to another one handed weapon, or for example from
+                one armor to another. You might want to do that if the weapon type of the origin weapon does not suit
+                you, or if the base quality of the armor or weapon is better for the newer item. Or if you want to
+                hide a magical effect by removing it from a recognised piece of jewelry to one no one knows about.
+                
+                Some magical effects could be weapon type or armor type specific, these in that case couldn't be moved
+                to other types but to only items these properties are intended for.
+                
+                Doing this is a ritual costs 6xR1 for simple effects, 14xR1 for obscure effects but for legendary items,
+                it costs 25xR1.
+        ''',
+            },
+            {
+                'name': 'Record memory',
+                'effect': '''
+                This is a magical technique where you can record what you think, feel, see, hear during the magical
+                effect and store this into a cleanly cut large emerald stone costing at least 100 gp. 
+                
+                This can later be used to have someone else or yourself to relive these memories. 
+                
+                This magic is often used to record act of crime, or parts of investigation to then in the future present 
+                this as evidence.
+                
+                The mana cost depends on the length of the campaign turn you want the recording to be done. 3 mana for
+                quick turns, 6 for medium and 9 for strategic turns.
+                
+                Those who know this spell can also attempt to tamper these memories, though the process can either break
+                the crystal, losing the memory entirely, or may be done in a way that it is clear that it has been 
+                tampered with.
+                
+                Tampering costs twice as much mana as creating those memories in the first place, and you must roll for
+                the quality of the tampering, whoever looks at those memories may attempt to roll against your quality
+                in order to understand that this has been tampered with. Un suspecting NPC-s usually wouldn't do that,
+                however judges or those who have reasons to not trust you will definitely do it.
+        ''',
+            },
+            {
+                'name': 'Detect magic',
+                'range': '8 sq.',
+                'effect': '''
+            You know if there are active magical effects within range of you.
+            
+            The scaling of this spell is a bit more complicated. You can spend an additional R1 to be able to tell
+            which school of magic the effects belong to. You can do it after you learn there are magical effects at all.
+            
+            You can spend an additional R1 to tell which exact spell this is.
+            
+            Finally you can spend another R1.R1 to learn exactly where the effect is, what it is attached to, how long
+            ago it was cast, and if it has an duration, how long does it last.
+            
+            If you have paid all the costs then you can also tell when someone starts casting a spell within range.
+            
+            The additional costs don't have to be spent in the same round as initial cast.            
+            ''',
+                'difficulty': 'R1',
+                'concentration': 'R1',
+                'duration': '7 rounds',
+                'scaling': [
+                ],
+            },
+            {
+                'name': 'Counterspell',
+                'requires': 'Detect magic',
+                'range': '8 sq.',
+                'effect': '''
+                In order to counter spells, you need to be detecting magic and having paid all the additional costs.
+                
+                When someone casts a spell, you can, as a reaction spend same amount of R1 as they spent on their spell
+                to negate the effect of the spell. Both of you still spend their mana.
+
+            ''',
+                'difficulty': '?',
+                'scaling': [
+                    {'D': 'R1', 'L': 2, 'description': '''You get the caster of the spell to spend 2 additional mana
+                    '''},
+                ],
+            },
+            {
+                'name': 'Dispel magic',
+                'requires': 'Detect magic',
+                'range': '8 sq.',
+                'effect': '''
+                In order to dispel spells, you need to be detecting magic and having paid all the additional costs.
+                
+                You can dispel magical effects, buffs and effects of rituals. The cost to dispel is equal to the
+                cost of initial spell or ritual to cast it but in R1-s.
+                
+                You can dispel concentration spells / buffs / curses normally, without performing a ritual. And for
+                rituals you need to perform a dispelling ritual. 
+            ''',
+                'difficulty': '?',
+                'scaling': [
+                    {'D': 'R1', 'L': 2, 'description': '''You get the caster of the spell to spend 2 additional mana
+                    '''},
+                ],
+            },
+            {
+                'name': 'Control magical object usage',
+                'target': 'one magical item',
+                'effect': '''
+                Add a zeal onto target magical item, that makes it completely unusable or permits it's use to one
+                particular individual. If that individual were to die, then the zeal would simply make it unusable by
+                anyone.
+                
+                To make the zeal, one has to perform a ritual and spend at least 3 x R1. However technically there is
+                no ceiling.
+                
+                To break the zeal someone who knows this spell, could also perform a counter ritual, that would need
+                to spend as many R1-s as was spent to make the original zeal.
+                
+                By initial inspection one could only tell if the number of R1 required is more or less than 10. Other
+                wise as you start making the ritual, you will feel when you hit 25 %, 50 % and 75 % on your way to
+                cracking the zeal. When you fail to crack the zeal and end the ritual, then 1 / 3 (rounded down) of
+                the spent R1s still lower the zeals strength for future.
+                
+            ''',
+            },
+        ]
+    },
+    'Force (intelligence)': {
         'spells': [
             {
                 'name': 'Telekinesis',
@@ -39,10 +188,8 @@ schools = {
                 'radius': '1 sq',
                 'difficulty': 'R4.R4',
                 'scaling': [
-                    {
-                        'D': 'R4', 'description': '''The force pushed them 2 additional sq.''',
-                        'D': 'R4', 'description': '''They get 1 additional level of unbalanced.''',
-                     },
+                    {'D': 'R4', 'description': '''The force pushed them 2 additional sq.''',},
+                    {'D': 'R4', 'description': '''They get 1 additional level of unbalanced.''',},
                 ],
             },
             {
@@ -84,7 +231,7 @@ schools = {
 
         ]
     },
-    'Nature': {
+    'Nature (cunning)': {
         'spells': [
             {
                 'name': '''Nature's gifts''',
@@ -187,7 +334,7 @@ schools = {
             # },
         ]
     },
-    'Harmony': {
+    'Harmony (social)': {
         'spells': [
             {
                 'name': 'Harmonious voice',
@@ -232,7 +379,7 @@ schools = {
                 'range': '5 sq.',
                 'target': 'up to 3 allies',
                 'effect': '''
-                Targets have advantage with will, reflex and fortitude challanges. 
+                Targets have advantage for refocus and recover actions. 
         ''',
                 'difficulty': 'R2.R2',
                 'concentration': 'R2.R2',
@@ -281,7 +428,7 @@ All friendly allies in the targeted area recover their defenses to the maximum
             },
         ]
     },
-    'Elemental': {
+    'Elemental (intelligence)': {
         'spells': [
             {
                 'name': 'Stone speach',
@@ -419,7 +566,7 @@ All friendly allies in the targeted area recover their defenses to the maximum
             # },
         ]
     },
-    'Dimension': {
+    'Dimension (precision)': {
         'special_rules': [
             """School of dimension deals with overcoming great distances and moving between planes. Most things
             however, like teleportation, long distance communication or moving to other planes is a complex matter and
@@ -518,7 +665,7 @@ All friendly allies in the targeted area recover their defenses to the maximum
             },
         ]
     },
-    'Discord': {
+    'Discord (cunning)': {
         'special_rules': [
             """Regarding hexes. Each creature can by default have only 1 hex placed on them. This can be overwritten
         by certain feats. Any creature with a hex on them can make a R2.R2 remove hex action using Will proficiency
@@ -680,7 +827,7 @@ Every time you pay the concentration cost, you can move the cloud of darkness by
             },
         ]
     },
-    'Illusion': {
+    'Illusion (cunning)': {
         'special_rules': [
             """
             """
@@ -827,7 +974,7 @@ Every time you pay the concentration cost, you can move the cloud of darkness by
             },
         ]
     },
-    'divination': {
+    'divination (intelligence)': {
         'spells': [
             {
                 'name': 'Diviners advantage',
@@ -882,30 +1029,74 @@ It doesn't reveal the distance or place of the target, only the direction.
                 ''',
             },
         ],
-    'dreams': [
+    'dreams (social)': [
         {
             'name': 'Sweet dreams',
             'effect': '''
-                Ritual to enhance sleep in order to gain benefits for a medium turn.
+                Ritual to enhance sleep of the target, making them rest real good, see good dreams, and awaken really
+                well rested and energetic.
+                
+                Target gets various benefits for a medium turn after waking up. For starter, they get advantage with a 
+                single ability of your choice.
             ''',
+            'difficulty': '8 X R1',
+                'scaling': [
+                    {'D': '4 X R1', 'description': 'Gain advantage with one other additional ability of your choice',},
+                    {'L': 3, 'D': '4 X R1', 'description': 'Have 2 additional stamine',},
+                    {'L': 2, 'D': '4 X R1', 'description': '+1 defense',},
+                ],
         },
         {
             'name': 'Sleep',
             'effect': '''
-                Put someone to sleep
+                Put someone to sleep for 8 h with a total remaining HP of at most 6, target is woken by taking further 
+                damage.
             ''',
+            'difficulty': 'R1.R1',
+            'scaling': [
+                {'D': 'R.1', 'description': 'Increase the HP limit by 4', },
+                {'D': 'R1.R1.R1', 'description': 'Nothing can wake the target for the duration'}
+            ],
         },
         {
             'name': 'Enter nightmare',
             'effect': '''
                 Ritual to learn a vulnerability of someone by making them see their worst fears and you also witnessing
-                it.
+                it. The ritual cost scales by the power of the individual. For a commoner it starts at 6 dice, for
+                stronger individuals like veteran soldiers, squad leaders, beginning mages, somewhat enduring 
+                individuals it increases to 10 dice. 
+                
+                Against expert mages, strong leaders, heroes, mighty beasts it increases to 20 dice.
+                
+                Against legendary creatures, mages or heroes, mightiest of emperors, dragons etc. it increases to 50 
+                dice.
+                
+                Against Gods and god-like mages it increases to 200 dice.
+                
+                Against mightier beings entering the nightmare can also pose risks and damage those part taking in the
+                ritual, or even killing them.
             ''',
+            'difficulty': '6 X R1',
         },
         {
             'name': 'Enter dream',
             'effect': '''
-                Ritual to learn a what target wants, desires, dreams about. 
+                Ritual to learn a what target wants, desires, dreams about.
+                
+                The ritual cost scales by the power of the individual. For a commoner it starts at 4 dice, for
+                stronger individuals like veteran soldiers, squad leaders, beginning mages, somewhat enduring 
+                individuals it increases to 8 dice. 
+                
+                Against expert mages, strong leaders, heroes, mighty beasts it increases to 17 dice.
+                
+                Against legendary creatures, mages or heroes, mightiest of emperors, dragons etc. it increases to 40 
+                dice.
+                
+                Against Gods and god-like mages it increases to 140 dice.
+                
+                Against mightier beings you run the risk of not comprehending what is going on, while the risk of
+                psychic damage is not severe usually, it may occur, confusion, disorientation, losing touch of reality
+                may however be common occurrence when part taking this ritual.
             ''',
         },
         {
@@ -916,16 +1107,29 @@ It doesn't reveal the distance or place of the target, only the direction.
                 you may not know, but can help you or guide you, and through that you learn something what you desire,
                 but there are risks, since those you commune with will also learn about you. The ritual difficulty
                 depends on what you want to learn.
+                
+                Something known to many commoners in the vicinity, even if not spoken publicly: 4 X R1
+                
+                Something known to few commoners in the vicinity, or a larger group of elite soldiers, mages, etc. 10 X R1
+                
+                Something known to only a few elite soldiers, mages, mighty lords: 20 X R1
+                
+                Something known to only 1 or 2 individuals in the world: 50 X R1.
+                
+                Be careful however, since if you enter a dream of a mightier being, a powerful mage, for example, they
+                could learn about you, attempt to hide what they know still, deceive you, or even harm you in the dream
+                world. Especially dangerous are other mages who understand the magic of dreams.
             ''',
         },
         {
             'name': 'Dream travel',
             'effect': '''
-                
                 Travel around the dream worlds of local inhabitants, it is all wierd and mushy, but if you do it
                 regularly, you do learn if there is a shift in the air, either, if there is more hope, more fear,
                 something specific impacting the psychy of the population, or if some silent sorcery is at play against
-                the population.            
+                the population.
+                
+                            
             ''',
         },
     ]

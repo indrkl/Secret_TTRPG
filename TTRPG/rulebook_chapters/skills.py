@@ -24,25 +24,87 @@ def get_skill_related_chapter():
 
     elements = [
         {'type': 'title', 'content': 'Skills'},
-
         {'type': 'paragraph',
          'content': """
-Skills
+The struggle I had is to think of Skilled path feats and abilities. The problem there is that, they are supposed to
+be strong in the most creative part of the game, out of combat roleplay. The thing is, that part really should not be
+constrained by making a finite set of feats or moves or what not as the vastness of play in TTRPG is impossible to
+support with this approach.
 
-While playing during campaign turns, players may come to various challanges, and for all of them, there is at least
-1 skill, which proficiency they can use to complete that challange, which is provided by the GM. Players
-of course may try to convince the GM why they could also use another skill, or perhaps a creative spell from the school
-of magic, or just one of the school of magic's proficiency instead, but at least one skill has to be first provided by 
-GM.
+What I want to achieve is players to both unleash their creative potential when creating characters, while at the same
+time willingly limit what their characters can do, constrains are fun, as long as you have enough tools to figure out
+a way.
 
-Skills in this game are much more broad than in DnD or many other TTRPG-s. They are derived from asking the question,
-what do players want to do, or what motivates them?
+So what I am leaning towards, is a creative way to say, that your character has a particular background, or a particular
+set of skills, or knows how to do something very specific and unique.
 
-They want to learn about the game world, uncover secrets, solve mysteries? This is lore. They want to influence other
-NPC-s to do something they wouldn't otherwise do? diplomacy, they want to survive or give themselves an edge to survive?
-Survival. Hide information, scheme, plot? concealment. Be the party leader or a beacon of hope in general? leadership.
+So, in addition to basic skills like physique and leadership, there are limitless number of creative skills, which
+players can gain proficiency in, and can also invoke in their adventures. But how to go about making these skills?
 
-Each skill represents motivation and drive.
+How to make sure they are balanced, both in the sense that they are not too obscure that never come up, and also that
+it wouldn't cover pretty much every single situation?
+
+For that there are some guide lines for how big of a scope could a such a skill have:
+
+1. Each skill is related to a specific ability (see glossary). This also constrains the nature of the skill. For example
+if your creative skill is working in a trading caravan. If the related ability is social, then you can use it to
+negotiate or barter intensely. If however the related ability is intelligence, then perhaps you know all the trade 
+routes and what kind of goods are moved around. If the related ability is cunning, then it could explain your ability
+to spot ambushes, or spot scams, understand when some piece of item is fake etc.
+
+2. It could be the core skill sets required for a profession, in this case, the skill set would be trading, blacksmith,
+city guard etc. In this case you could use the proficiency of this skill set to do activities that these jobs would do
+daily. You could try to invoke it with a dis-advantage for situations, which can come up during the line of work, but
+are not the main activity. For example if you are a trader, you negotiate a lot, but that doesn't mean you know how to
+negotiate with nobility, it also doesn't mean you could convince someone to aid you for no money. But you would be able
+to buy anyone's services who is interested in money, and use your proficiency to barter the best price. As a blacksmith
+you know how to forge weapons and armor, but couldn't craft leather, or you might be able to negotiate and barter your raw
+resources and for the price of your own craft, but not other things. 
+
+3. It is limited to a terrain type or certain cut of society. Like for example, you could be expert in the wild, but
+you would be only expert in terrain familiar to you. For example, you could separate different major terrains as desert,
+steppes, forests, mountains and sea. It can also be differentiated by the social class with whom you interact with:
+nobles, religious, artisans, commoners, criminals. The exact relevant social classes may vary from culture to culture
+and depend on the setting, and same with terrain, talk it through with the GM.
+
+4. It is tied to a certain culture. For example, you have read a lot of books, but only from a certain culture. So you
+can only know what that culture knows. You may know vaguely about heroes or happenings of other cultures, but even then 
+you would only know about them from the perspective of that culture.
+
+5. It is about specializing. For example, you are a sword blacksmith, you have studied all the swords from all around
+the world, and can therefore make the best swords. Or you have specialized in a topic, such as warfare logistics, and
+therefore you have read texts about it and know about from different cultures also from their persepctive. Or you could
+be a magical spice merchant, so you would know where this is grown, where there is high demand, can tell the quality,
+fakeness of the spice and so on and on. But by specializing you would limit yourself to not be able to do adjacent stuff
+or have a significant disadvantage doing so.
+
+General rule of thumb is that, each trait should consist of a profession / background / general character wibe, that
+would allow it to be invoked in various situations, and at least 1 limitation (in addition to being constrained by an
+ability), that would give it more character.
+
+The limitation may make some things that the trait could otherwise allow to make it impossible, or make it so, that you
+can attempt to do those things with disadvantage or severe disadvantage.
+
+Examples of traits + limitation:
+
+
+1. Trader (profession), limitation examples: spice merchant, deals with stolen goods in the underworld, has been leading 
+caravans over desert.
+
+
+2. Grew up helping his father hunt (back ground), limitation examples: In forest, In mountains, Specialized in traps.
+
+
+3. Has read a lot of books and knows stuff, limitation examples: Books made by specific culture, Books about magic, Only 
+the most obscure and rare books.
+
+
+Also, when it comes to learning new skills during the campaign, it is also limited by the fact weather or not you can do
+the activity. So you cannot all of a sudden become a trader while you do 0 trading during your journeys. You could
+however read a whole bunch of books and become an theoretical expert of Dragons.
+
+Each character starts the game with already 2 preexisting traits, And both of them have at least +1 proficiency, as
+stated in creating your character chapter.
 """,
 # 'commented': """
 #
@@ -88,7 +150,7 @@ Each skill represents motivation and drive.
     ]
 
 
-    for skill in skills_obj:
-        elements.append({'type': 'flowables', 'content': prep_skill_flowable(skill)})
+    # for skill in skills_obj:
+    #     elements.append({'type': 'flowables', 'content': prep_skill_flowable(skill)})
 
     return elements

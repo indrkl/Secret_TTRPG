@@ -13,9 +13,14 @@ Why develop my own TTRPG?
 then no-one is OP. However I do believe this feeling can be created by allowing characters to really shine in a few 
 things, so the feeling of OP-ness ends up being a rotational, as situations and circumstances change.
 
-3. I wanted a system which supports GM and makes his life easier.
+3. I wanted a system which supports GM and makes his life easier. The idea here is to bake the best practices already
+into the rules somehow, since the philosophy is that, simple rules often simply hide the complexity inside the execution
+of these rules. I want to move some of the cost of running the game into learning the rules.
 
-4. Just because, fun :)
+4. The goal of this particular setting is to facilitate a game, with limitations, time pressure, a campaign where the
+world is at some cross roads, and players are rewarded from squeezing the maximum out of every opportunity.  
+
+5. Just because, fun :)
 
 What is still the same?
 
@@ -28,17 +33,19 @@ So what is different?""",
 },
         {'type': 'list',
          'content': [
-"""Xd6 system, where players start with 6 d6 dice, but gain more as they progress. In this game players first roll the
-dice at the end of their turn (or beginning of combat or scene), and then see what they can do with these dice. 
-Each actions require a specific 
-combination of dice, and also to upcast spells or to add weapon abilities onto your attack, it requires you to get even
-more difficult combinations. But basically those Xd6 dice that you roll each scene or each round in combat, become your
+"""6 X d6 system, where players have 6 X d6 dice. In this game players first roll their dice, and then spend them
+during their combat turn to do actions, or during campaign turns to attempt to do actions. 
+
+During combat each action requires a specific combination of dice, 
+and also to upcast spells or to add weapon abilities onto your attack, it requires you to get even
+more difficult combinations. But basically those Xd6 dice that you roll each turn, become your
 action economy and success checks at the same time. Also when you take damage you start losing some of those dice making
 you increasingly weaker until you are healed. But same goes to the enemy. Because of that significantly damaged enemies
 are much more incentivised to flee or surrender than to continue fighting.""",
-"""No attributes. Your character is strictly defined simply by their proficiencies. What school of magic they know, 
-what weapons they are good at, what skills have they mastered. Attributes offered very few interesting choices, and
-usually were more of an hindrance to creative combinations.""",
+"""Very little stat stacking. Your character is mostly defined by their proficiencies. What school of magic they know, 
+what weapons they are good at, what skills have they mastered. You don't specifically put points into general abilities
+such as strength, instead if you are proficient with an axe, you also are equally strong and being good at axe basically
+helps you do simple tasks that would require strength.""",
 """No races in a mechanical point of view. You can choose your own race, and if that race is supposed to have some
 special ability like dark vision, or flying, then there is a trade-off system for these features, and that comes at
 the expense of your other level 1 powers. Again, that takes away the need to pick a race to get a few numbers advantage 
@@ -73,16 +80,14 @@ all spells can be augmented by taking one of the many metamagic feats providing 
 gain the ability to cast more difficult spells, you actually gain the ability to cast your existing spells with
 additional power. And yes, there is only a single heal spell in the game. It is called heal. One gets access to it at 
 level 1, and you can scale it, in very many ways.""",
-"""Group and personal focuses: Often players want to trick the GM to get rolls for things that are super powerful,
-super wild, or it may simply feel like getting too much for a single roll of dice. Instead of saying yes or no, you say
-OK, eventually. Group can choose a cool thing that they care about, and that becomes their focus, either getting an
-item, learning about a secret, getting discount with all the merchants etc. and depending on how wild the thing they
-want is, there are a certain amount of progress steps that GM decides needs to be achieved, before they get what they
-want and to spice things up there can be fail conditions along the way etc.""",
-"""Less skills, which are clearly defined and are player focused. Meaning diplomacy skill is used to get someone to do
-something that they would otherwise not be inclined to do without using force, it is both intimidation, persuasion etc.
-Lore skill is learning and knowing about the world, it is investigation and all the knowledge skills in DnD. It is for players who
-want to engage the plot. And so on. There are therefore much less skills in the game compared to most TTRPG-s.
-"""
+"""Time advancement is abstracted. Campaign is played in campaign turns, they can be quick turns, medium turns and
+strategic turns. This abstraction does away with considerations like how many minutes is a short rest, or what time it
+is. A good day of work consists of either 1 or 2 medium turns. So when players complete a medium turn that started
+in the morning, then it is now late afternoon. Each turn consists of rolling the 6 d6 once and spending them to do 
+things.""",
+"""We did away with skills, and instead players choose creative skill traits, that are associated with one of the 6
+general abilities. This creative skills have proficiencies, and players can get better at these skills. These 
+proficiencies are on the same level of abstraction as weapon proficiencies, and school of magic proficiencies.
+""",
     ]},
 ]

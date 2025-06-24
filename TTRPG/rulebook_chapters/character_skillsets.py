@@ -1,7 +1,7 @@
 """ V.3
 
 As an improvement from the V.1 and V.2 let's maybe reintroduce the general layer back a little bit, called the
-attributes. Suppose we had the following attributes:
+abilities. Suppose we had the following abilities:
 
 Physique - physical endurance, control over your various muscles, this includes strength, endurance and flexibility of
 joints. This is used to recover defenses, and used in many martial feats.
@@ -22,20 +22,41 @@ smarts, survive in the wilds, see through web of intrigue.
 
 
 Regarding the wisdom in DnD, then perception is part of cunning, insight is partly in social, partly in cunning,
-Survival is cunning, being wise however is actually player skill anyways, and no attribute can help in that regards...
+Survival is cunning, being wise however is actually player skill anyways, and no ability can help in that regards...
 
 Now, what I want to avoid is the obvious thing that if I want to be good at bow for example, well, then I need to get
 bow proficiency but I also need to max Precision, because that is the obvious choice. Now we already have skill-set
 proficiencies, weapon proficiencies, magic school proficiencies. What I would like is that each proficiency is tied
-to some particular general attribute. You still increase proficiency in your skills / weapons / schools of magics, but
-when you do, then also your basic attribute increases. Meaning each attribute has the value of your highest associated
+to some particular general ability. You still increase proficiency in your skills / weapons / schools of magics, but
+when you do, then also your basic ability increases. Meaning each ability has the value of your highest associated
 proficiency. When you need to make a skill check, that is general enough, that you wouldn't need expertise or
-proficiency to do it, then you can use one of the attributes to do it instead.
+proficiency to do it, then you can use one of the abilitys to do it instead.
 
-So at the beginning of the game, each player chooses 2 creative skills, associates them with some attribute, and then
+So at the beginning of the game, each player chooses 2 creative skills, associates them with some ability, and then
 can spread out one +2 proficiency and 2 +1 proficiencies between their skills, toughness, some martial weapon or school
 of magic. For school of magic they need to have mage path, and at both of the creative skills must receive at least one
 of these.
+
+You use abilities to do things that any commoner without special training could attempt to do. Your proficiency would
+then be based on the corresponding ability.
+
+In all other cases you would need to use one of your skills. If the activity perfectly matches your skill, then no
+problem, use it's proficiency.
+
+If it however is not directly connected, but you could still explain how this can be used
+to solve something, then you can use it's proficiency with a disadvantage, meaning you take a -1 to proficiency.
+Also called as level 1 penalty.
+
+If your explanation is really far fetched but still within the realm of possibility, then you take double disadvantage
+or a -2 to proficiency. Also called as level 2 penalty. Let's call it level 2 penalty.
+
+In all other cases, you cannot attempt the desired ability. For example, you couldn't construct a trebuchet with no
+prior experience of building anything, and no theoretical understanding about engineering. Let's call it level 3
+penalty.
+
+However. If you have multiple skills with the same ability, then they start synergizing. Meaning if you have another
+skill which is at least as good as the skill you want to use, and that shares the ability, reduce the level of penalty
+by 1. If you have 2  or more other skills with same or better proficiency, then reduce the level of penalty by 2.
 
 """
 

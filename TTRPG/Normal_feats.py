@@ -40,6 +40,22 @@ feats = {
          },
          },
         {'cost': 'medium',
+         'requires': '3 proficiency in arcanum',
+         'name': 'Zealed magic',
+         'metamagic_option': {
+             'difficulty': 'Rp.Rp',
+             'effect': '''This makes the spell you cast harder to be countered or dispelled. The cost to counter the
+             spell is doubled and when calculating the base cost include the 2 power dice spent on this meta-magic 
+             option.
+             
+             This metamagic option can also be used for rituals, but in this case the cost of the zealing goes up by 
+             1 Rp for every 4 initial cost of the ritual (rounded down).
+             So a ritual that costs 10 x Rp would require 4 (2 initial + 10 / 4 = 2) 
+             ''',
+             'L': 1,
+         },
+         },
+        {'cost': 'medium',
          'name': 'Hex master',
          'effect': '''You can apply max 2 hexes on a creature instead of only 1''',
          },
@@ -68,8 +84,17 @@ don't know the ritual.
             'cost': 'medium',
             'name': 'Spice specialist',
             'description': '''
-                You recover mana using spices twice as effectively. Meaning the first 20 mana cost 1.5 gp to recover,
-                the next 40 cost 2.5 gp to recover and the rest cost 5 gp to recover. This feat can only be taken once.
+                You recover mana using spices twice as effectively. Meaning you recover 2 mana for 5 gp worth of spices.
+            '''
+        },
+        {
+            'cost': 'medium',
+            'name': 'Mana siphoner',
+            'requires': '4 proficiency in arcanum',
+            'description': '''
+                When others cast spells near you, then if you are the only mana siphoner within 5 sq. of the caster,
+                then you can salvage 1/3 of the mana rounded down from that spell and recover your mana that way. You
+                can not however go over your maximum this way.
             '''
         },
         {'cost': 'major',
@@ -110,7 +135,7 @@ appropriate.
             'cost': 'major',
             'name': 'Battle mage',
             'effect': '''The mana cost for offensive spells scales better. It now costs 2 mana for 2 additional
-    power dice, 4 mana for 3 additional power dice and 7 mana for 4 additional power dice''',
+    power dice, 4 mana for 3 additional power dice and 6 mana for 4 additional power dice''',
         },
         {'cost': 'major',
          'name': 'Pyromancy',
@@ -128,11 +153,12 @@ You can spend flame tokens to fuel your spells and attacks:
 
 3 Flame tokens: Apply burning on one of the target's of the spell or attack
 
-5 Flame tokens: Remove a negative status effect from yourself and move it onto the target of the spell or attack.
+5 Flame tokens: Remove a negative status effect or curse from yourself and move it onto the target of the spell or 
+attack.
 
 7 flame tokens: At the end of your attack or spell remove all stacks of burning from the target dealing 3 damage per
 removed stack. If that kills the target, refresh your dice pool. The cost of this ability increases
-by 5 for the duration of this encounter.
+by 5 flames for the duration of this encounter.
             ''',
          },
         {'cost': 'major',
@@ -144,15 +170,15 @@ based on the total levels of these conditions that you have applied during this 
 At least 1 levels per remaining number of enemies: Enemies with afraid cannot attack you and have their 
 damage reduced by 1 for each level of afraid.
 
-At least 3 levels per remaining number of enemies: Enemies with afraid get disadvantage to will checks. 
+At least 3 levels per remaining number of enemies: Enemies with afraid get disadvantage to refocus action. 
 Mobs recover from afraid twice as slow.
 
 At least 5 levels per remaining number of enemies: Enemies with at least 2 levels of afraid 
 will stop fighting and just fall prone and give up. This may not effect enemy heroes, but in this case the enemy hero 
-gets disadvantage for all their spells and attacks. 
+gets double disadvantage for all their spells and attacks. 
 
-At least 7 levels per remaining number of enemies: All your allies gain advantage with all their offensive spells and 
-attacks.
+At least 7 levels per remaining number of enemies: All your allies gain double advantage with all their offensive spells 
+and attacks.
          ''',
          },
         {
@@ -163,20 +189,21 @@ attacks.
         {
             'cost': 'major',
             'name': 'Dimension mastery',
-            'requires': 'Expert dimension proficiency',
+            'requires': '3 or more dimension proficiency',
             'effect': '''
             When taking this feat you craft an object, a talisman of sorts, which, while you are attuned to it, you can
             cast spells from the point of that object.
             
-            If you are are legendary in dimension magic, you can craft one additional such object.
+            If you are are legendary in dimension magic, you can craft one additional such object. Crafting the second
+            one however costs 1000 gp.
             ''',
         },
         {
             'cost': 'major',
             'name': 'Enchanter',
             'effect': '''
-Enchantment spells cost 1 less power dice to cast. When the concentration cost is higher than 1 power dice, then that
-too costs 1 less power dice.
+Enchantment spells that buff weapons cost 1 less power dice to cast. When the concentration cost is higher than 1 power 
+dice, then that too costs 1 less power dice.
             ''',
         },
         {
@@ -189,7 +216,7 @@ Whenever attuned party member receives a negative status effect you can instead 
 
 For spells which the target is self, you can instead cast it targeting one of the attuned party members.
 
-The minimum range for these spells becomes 5 sq.
+The maximum range for these spells becomes 5 sq.
 
 Other spells targeting attuned party members have advantage
             ''',
@@ -199,7 +226,7 @@ Other spells targeting attuned party members have advantage
             'name': 'Ritual master',
             'effect': '''
 You are more skilled at including others in your rituals. All casters who join your ritual, their effective proficiency 
-for the ritual is at least is your proficiency minus one.
+for the ritual is at least your proficiency minus one.
             ''',
         },
 
@@ -207,15 +234,17 @@ for the ritual is at least is your proficiency minus one.
             'cost': 'major',
             'name': 'Blood magic',
             'effect': '''
+This feat can only be taken by those who have blood in them, so Mana born for example cannot use blood magic.
+
 You may spend your life points the same way you can spend your mana to get virtual additional dice, these dice however
 do not require the base mana to be used. By doing that you take damage directly to your life bypassing defense and 
 any damage reduction.
     
-For 1 damage reduce the spell cost by 1 dice, for 3 damage, by 2 dice, for 6 damage by 3 dice and for 10 damage by 4 
+For 1 damage reduce the spell cost by 1 dice, for 2 damage, by 2 dice, for 4 damage by 3 dice and for 6 damage by 4 
 dice. You can combine this with mana, and the maximum reduction using your life points is equal to your spell school
 proficiency. However the combined total reduction with reduction from mana is your proficiency + 2. So if your
-proficiency is 4, then you could spend 10 life points and 3 mana to reduce the cost by 6 dice, but you cannot spend
-10 life points and 6 mana to reduce it by 7 any more.
+proficiency is 4, then you could spend 6 life points and 3 mana to reduce the cost by 6 dice, but you cannot spend
+6 life points and 6 mana to reduce it by 7 any more.
             ''',
         },
     #     {
@@ -265,13 +294,13 @@ proficiency is 4, then you could spend 10 life points and 3 mana to reduce the c
 
         {'cost': 'small',
             'name': 'Kick',
-            'effect': '''Kick is a special unarmed move, which can be used as long as you have light or no armor. You
+            'effect': '''Kick is a special unarmed move. You
              may be wielding weapons. It does use a unarmed (mental) slot.''',
             'action': {
              'cost': 'R5.R5.R5',
              'proficiency': 'unarmed',
              'additional_costs': '1 stamina',
-             'effect': '''Push an enemy 2 squares, apply 2 unabalanced''',
+             'effect': '''Deal 2 damage, Push an enemy 2 squares and apply 2 unabalanced''',
              'difficulty_options': [
                  {
                      'cost': 'R5',
@@ -309,7 +338,7 @@ damage. This can be used once per turn.''',
         {'cost': 'small',
          'requires': 'Heavy armor proficiency',
          'name': 'Fortress',
-         'effect': '''You can use fortitude proficiency against afraid and disoriented conditions instead of will.
+         'effect': '''You can use toughness proficiency for refocus action.
 ''',
          },
         {'cost': 'small',
@@ -352,6 +381,14 @@ damage. This can be used once per turn.''',
                 end of your last turn.
             '''
         },
+        {
+            'cost': 'medium',
+            'name': 'Shielder',
+            'effect': '''
+                When an ally gets damaged, who stands next to you while you are guarded, you can use your defense to
+                mitigate that damage.
+            '''
+        },
         {'cost': 'medium',
          'name': 'Backstabber',
          'effect': '''When attacking someone with a one handed melee weapon from behind or while the opponent is unaware
@@ -371,7 +408,10 @@ who have at least 2 levels of disoriented. When taking a move action, then one t
             'effect': '''You can spend a pair of either R4 or R5 to make a proper shout, that would apply 1 level of afraid
             into all enemies within 4 sq. of you, or a pair of R6 to make an even more powerful bone-shattering shout,
             that applies 1 level of afraid into all enemies within 2 sq. of you and 1 additional level of afraid into
-            enemies within 5 sq. of you. Each pair (R4, R5 or R6) can only be used once per combat.''',
+            enemies within 5 sq. of you. Each pair (R4, R5 or R6) can only be used once per combat.
+            
+            There is no proficiency that can be used to achieve these pairs, they have to be rolled naturally.
+            ''',
         },
         {'cost': 'major',
              'name': 'Two weapon fighter',
@@ -379,8 +419,7 @@ who have at least 2 levels of disoriented. When taking a move action, then one t
                 Your maximum defense is increased by 1 while wielding two weapons.
                 
                 When wielding two melee weapons which sum of power dice is less than or equal to 6, then you can use R6
-                from your dice pool as a power dice for attacks with both weapon (and it only consumes a single action
-                limit).
+                from your dice pool as a power dice for attacks with both weapon.
                 ''',
         },
         {'cost': 'major',
@@ -465,7 +504,7 @@ First reaction attack with a polearm in between your turns has double advantage,
          ''',
          'action': {
              'cost': 'R6',
-             'proficiency': 'fortitude',
+             'proficiency': 'toughness',
              'target': 'self',
              'limit': 'once per encounter',
              'duration': '5 rounds',
@@ -474,7 +513,7 @@ First reaction attack with a polearm in between your turns has double advantage,
                 While raging you are immune to confusion and disruption.
                 
                 You lose all your defense and cannot recover any defense. However you still roll all the dice that were
-                set aside because of damage and scarred dice can be used for targets 4, 5 and 6 as well.
+                set aside because of damage and scarred dice work as regular dice.
                 ''',
             }
          },
@@ -501,7 +540,7 @@ per fury token used this way.
         {'cost': 'major',
          'name': 'Hex arrow',
          'effect': '''When taking this feat, choose a {hex spell}
-            Whenever you hit an enemy roll 2d6, if the sum is lower than the damage you dealt with this attack also
+            Whenever you hit an enemy roll 1d6+1, if the sum is lower than the damage you dealt with this attack also
             apply chosen hex or a hex spell you know onto that enemy. No concentration is required to maintain that hex.
             ''',
          },
@@ -518,7 +557,7 @@ per fury token used this way.
              'proficiency': 'leadership',
              'effect': '''
              Once an ally damages the targeted enemy all other allies gain advantage for all attacks and spells
-             targeting that enemy. This lasts until the end of turn.
+             targeting that enemy and that enemy gets 1 levels of vulnerability. This lasts until the end of turn.
              ''',
              'difficulty_options': [
                  {
@@ -633,10 +672,10 @@ When during a campaign turn your party wants to do several things, then you can 
 
 1. Declare all the actions your party wants to do, there can be at most 1 action per player.
 
-2. GM chooses the target and difficulty of the actions as normally.
+2. GM chooses the target and difficulty of the actions as normally. AND rolls the target dice first!
 
 3. Then for each action one of the players is assigned and they will do the action, their success depends on their dice
-pool and proficiency, but they do get an advantage and in addition, each player may give one die to be used by another
+pool and proficiency, and they get an advantage.
 player.
 
 4. After all actions are assigned a player, then players may choose to spend luck and then all the actions are 
@@ -668,7 +707,7 @@ resolved as if the plan is being executed simultaneously.
          'name': 'Inspiring',
          'effect': '''Grants you the ability to inspire others by spending luck tokens.
 
-         Inspire action uses leadership skill.
+         This action uses social general ability.
          ''',
          'action': {
              'cost': 'R3.R3',
@@ -690,7 +729,7 @@ resolved as if the plan is being executed simultaneously.
          },
         {
             'cost': 'medium',
-            'requires': '3 proficiency in leadership',
+            'requires': '3 proficiency in any social skill',
             'name': 'Expert of sacrifice',
             'effect': '''If any challenge would fail within the party, you can offer a dice to negotiate with GM
 something that you as a party will need to give up, in order to remove one challenge dice. It can be only used if 
@@ -745,7 +784,7 @@ removing one challenge dice could make it a success.
         {'cost': 'major',
          'name': 'Natural leader',
          'effect': '''
-         You gain the coordinate action, which can used both during combat and out of combat.
+         You gain the coordinate (social) action, which can used both during combat and out of combat.
          ''',
          'action': {
              'cost': 'R3.R3',
@@ -767,12 +806,11 @@ is returned after using it.
          'name': 'Agent of chaos',
          'effect': '''
          Causing chaos comes naturally to you. You can make ploys to disorient a group of enemies before the battle.
-         You can use diplomacy, survival or lore as the main skill to check for it's success. You must still describe
-         how you are going to do it and how using that skill makes sense. 
+         You must still describe how you are going to do it and how using that skill makes sense. 
          
-         A new roll target is added to combat initiation phase with R5.R5.R3.R3, that you may complete. If you succeed
-         then all enemies start the combat with 1 level of disoriented. For an additional +R5 they start the combat
-         with 2 levels of disoriented instead. Use the chosen skill to achieve this.
+         A new roll target is added to combat initiation phase with R5.R5.R5.R5 (cunning), that you may complete. If you 
+         succeed then all enemies start the combat with 1 level of disoriented. For an additional +R5 they start the 
+         combat with 2 levels of disoriented instead.
          ''',
         },
         {
@@ -799,7 +837,7 @@ is returned after using it.
          'action': {
              'cost': 'R2.R2',
              'target': '1 ally',
-             'proficiency': 'lore',
+             'proficiency': 'social',
              'effect': '''
              Targeted ally gains your level of proficiency in a skill of your choice for the duration of this turn /
              scene.
@@ -851,8 +889,8 @@ When casting spells or attacking you can spend opportunity stacks to:
         {'cost': 'major',
          'name': 'Spell blade (or bow)',
          'effect': '''
-         When you hit an enemy with a blade you can cast a single target spell that targets that enemy that costs no
-         more than the number of power dice you used for the attack. Spend 1 mana for each dice cost for that spell.
+         When you hit an enemy with a weapon you can cast a single target spell that targets that enemy that costs no
+         more than the number of power dice you used for the attack. Spend 2 mana for each dice cost for that spell.
          ''',
          },
         {'cost': 'major',

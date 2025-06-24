@@ -17,29 +17,30 @@ Recover your defense up to maximum defense
     },
     {
         'name': 'Refocus',
-        'profieciency': 'Will',
+        'profieciency': 'Intelligence',
         'description': '''
 Remove a level of disoriented or afraid from you.
         ''',
-        'difficulty': 'R4.R5',
+        'difficulty': 'R1',
         'scaling': [
-            {'D': 'R4.R5', 'description': '''Remove all levels of that type from you'''},
+            {'D': 'R1.R1', 'description': '''Remove all levels of that type from you'''},
         ],
     },
     {
         'name': 'Recover',
-        'profieciency': 'Fortitude',
+        'profieciency': 'Toughness',
         'description': '''
-            Remove a level of poison or freezing from you
+            Remove a level of poison or all levels of unbalanced
         ''',
-        'difficulty': 'R2.R3',
+        'difficulty': 'R6',
         'scaling': [
-            {'D': 'R2.R3', 'description': '''Remove all levels of that type from you'''},
+            {'D': 'R6.R6', 'description': '''Remove all levels of that type from you'''},
+            {'D': 'R6', 'description': '''You can remove freezing instead of poison'''}
         ],
     },
     {
         'name': 'Study opponent',
-        'profieciency': 'Lore',
+        'profieciency': 'Cunning',
         'description': '''
 Study one of the opponents and learn their HP / ATK / MV if they are mobs, or Toughness, Defense and one ability if it
 is enemy hero.
@@ -52,7 +53,7 @@ is enemy hero.
     },
     {
         'name': 'Taunt',
-        'profieciency': 'Diplomacy',
+        'profieciency': 'Social',
         'description': '''
 Taunt one opponent, they are more likely to attack you, but if they don't, they have disadvantage
         ''',
@@ -65,7 +66,7 @@ Taunt one opponent, they are more likely to attack you, but if they don't, they 
     },
     {
         'name': 'Mark enemy',
-        'profieciency': 'Leadership',
+        'profieciency': 'Social',
         'description': '''
 Mark an enemy, attacks and spells against him have advantage. 
         ''',

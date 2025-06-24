@@ -16,9 +16,11 @@ of it, without doing things you consider wrong, even though you clearly have a s
 wrong, and it is not too broad. Others breaking their and others' souls is one thing all with a true soul have in
 common, even if other moralities, even about killing, may differ.
 
-Liches are using the same magic given to the them by the ice queen, but the inherent difference is that their souls
-were broken when they used the magic, while Ice queen's soul has never been broken, so she can easily turn herself
-immortal using her magic.
+Liches draw their power from the same magical source granted by the Ice Queen. However, the key difference lies in the 
+condition of their souls. When the liches tapped into this magic, their souls were already fractured—damaged by trauma, 
+obsession, or dark choices—which caused the magic to twist and corrupt them, turning them into undead beings. In contrast, 
+the Ice Queen's soul has never been broken. Her inner wholeness allows her to wield the magic purely and intentionally, 
+enabling her to achieve true immortality without succumbing to undeath or corruption.
 
 Mechanical implementation:
 
@@ -57,7 +59,9 @@ of fog without losing themselves.
 
 Moving between levels of brokenness is a role play decision, overcoming past fears needs to be done through real 
 challenges. There has to be real dilemmas, it is also about explaining the spiritual process of solving them, that
-matters more than 
+matters more than simply ticking off milestones or achieving superficial progress. True healing in role play comes from 
+embodying the character’s struggle, making hard choices, and narrating the inner transformation that those choices 
+demand.
 
 Spiritual exhaustion. When gaining spiritual exhaustion, while you already had it from previous spell has a chance to
 trigger penalties:

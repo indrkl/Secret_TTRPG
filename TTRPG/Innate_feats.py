@@ -43,19 +43,19 @@ Talented: Your maximum defense from natural armor is 4.
 
 Legendary: Your maximum defense from natural armor is 5.
 
-Natural armor bonus increases by 1 at levels 7 and 14
+Natural armor bonus increases by 1 at levels 5 and 10
 
 Also when you are talented or legendary, then you get the option to take the heavy armor penalty (cannot take both this
-and no armor bonus) in order to get 1 damage reduction. This increases to 2 damage reduction at level 7 and to 3 damage
-reduction at level 14
+and no armor bonus) in order to get 1 damage reduction. This increases to 2 damage reduction at level 5 and to 3 damage
+reduction at level 10
             ''',
         },
         {
             'requires': 'Adept',
             'name': 'Claws',
             'description': '''
-You have claws. They can be used to attack. They use claw proficiency which can be upgraded using either Martial path
-or the path which foundation is replaced by this one.
+You have claws. They can be used to attack. They use claw proficiency (physique) which can be upgraded using either 
+Martial path or the path which foundation is replaced by this one.
 
 Adept: You have claws which enable you to do a simple claw attack when unarmed. They use claw proficiency
 and R2 as the power dice. Check the claw statistics under equipment.
@@ -139,18 +139,18 @@ simply someone who wants favor from your house etc.)
             You can apply 1 level of large or distant magic to a spell for free without increasing the dice cost or 
             metamagic limit.''',
         },
-        # {
-        #     'requires': 'Adept',
-        #     'name': 'Shifter',
-        #     'description': '''You have a beastly form, that levels up as you do. In the beastly form, you cannot
-        #     speak, don't benefit from any of your normal form advancements in any path, but you can level up using the
-        #     beast path (used to make all the mighty beasts in the game). The level of your beastly path is equal to
-        #     your magic path. Beastly form has the ability to turn back into your regular form. To turn into your
-        #     beastly form you need to spend 1 mana per your character level and if you are in combat then also meet
-        #     R5.R5.R5 roll target using nature magic. Your equipment merges
-        #     into your body and loses it's magical effect until you return to your normal form. Scarred, damaged and
-        #     wounded dice carry over when transforming to and from the other form.''',
-        # },
+        {
+            'requires': 'Adept',
+            'name': 'Shifter',
+            'description': '''You have a beastly form, that levels up as you do. In the beastly form, you cannot
+            speak, don't benefit from any of your normal form advancements in any path, but you can level up using the
+            beast path (used to make all the mighty beasts in the game). The level of your beastly path is equal to
+            your magic path. Beastly form has the ability to turn back into your regular form. To turn into your
+            beastly form you need to spend 1 mana per your character level and if you are in combat then also meet
+            R5.R5.R5 roll target using nature magic. Your equipment merges
+            into your body and loses it's magical effect until you return to your normal form. Scarred, damaged and
+            wounded dice carry over when transforming to and from the other form.''',
+        },
         {
             'name': 'Divine protector',
             'description': '''
@@ -173,7 +173,7 @@ simply someone who wants favor from your house etc.)
             initiate rituals nor spend your mana for rituals.            
             
             Reroll the dice that you used to cast the first spell during the combat and return them to the dice pool.
-            You do not reroll any virtual dice you gained by using mana, advantage or anything else.
+            You do not reroll any virtual dice you gained by using mana or through other means.
             
             Recover that ability at the third, sixth and tenth round of combat.
             '''
@@ -211,8 +211,8 @@ While at maximum calm you cannot be disoriented, while at maximum rage, you are 
 Choose 1 school of magic, you can only cast spells from that school of magic, and you can only gain proficiency with
 that school of magic. Proficiency advancement options all have (max prof. 4) when advancing this school of magic.
 
-If you are talented or legendary in the Mage path, then in addition you always have advantage when casting spells from
-that school. 
+If you are talented or legendary in the Mage path, then you always get a free virtual power dice when casting spells
+from that school.
 '''
         },
         {
@@ -234,17 +234,12 @@ You start the game with having maximum mana, and all your normal dice are fully 
 '''
         },
     ],
-
-
-
-
-
     'Martial': [
         {
             'requires': 'Legendary',
             'name': 'Warcaster',
-            'description': '''You can use stamina instead of mana for spellcasting. You cannot use stamina to cast
-            spells outside of combat or for rituals.''',
+            'description': '''You can use stamina instead of mana for spellcasting during combat. You cannot use stamina 
+            to cast spells outside of combat or for rituals.''',
         },
         {
             'name': 'Enduring',
@@ -273,7 +268,10 @@ increases by 1 at levels 3, 6, 9 and 12.
             'requires': 'Talented',
             'name': 'Bulwark',
             'description': '''
-Enemies within 3 sq. of you that attack your allies have disadvantage. If you are legendary in martial then
+Enemies within 3 sq. of you that attack your allies have disadvantage. If they already would have disadvantage, it
+becomes double disadvantage. 
+
+If you are legendary in martial then
 you can spend stamina and mana to reduce damage taken by 1 per stamina or mana spent to you and you can use luck to 
 reduce damage dealt to you by 3.
             ''',
@@ -306,20 +304,24 @@ At the beginning of each round, for each die that was damaged for the first time
             'requires': 'Talented',
             'name': 'Tough',
             'description': '''If you are talented, then every turn negate the first damage you receive. If you are
-            legendary, then negate the first 2 damage you receive.''',
+            legendary, then negate the first 2 damage you receive.
+            
+            This ability resets during the round if one of your dice loses all it's HP.
+            ''',
         },
         {
             'requires': 'Adept',
             'name': 'Natural killer',
             'description': '''
-When you first time damage each enemy with a weapon, gain a blood token that can be used during this encounter. 
+When you damage an enemy first time this combat with a weapon, gain a blood token that can be used during this encounter.
+Against enemy heroes, if they use defense action, then you can get blood token another time. 
 If you are talented or legendary, whenever you gain at least one blood token, gain one additional one.
 
 Once per round, whenever you make an attack, you can use one and only one of those options once to boost that attack:
 
-* spend 2 blood tokens to gain advantage or upgrade advantage to double advantage
+* spend 1 blood tokens to gain advantage or upgrade advantage to double advantage
  
-* Spend 5 blood tokens to gain double advantage
+* Spend 2 blood tokens to gain double advantage
  
 * spend X blood token to deal X additional damage
  
@@ -340,12 +342,12 @@ Once per round, whenever you make an attack, you can use one and only one of tho
         #         melee combat. Heal 1d6 instead, if your martial path is legendary.''',
         # },
 
-        {
-            'name': 'Harmonious body',
-            'description': '''Whenever you advance in REFLEX or FORTITUDE saving throws. Advance in the other one as 
-                well. If you are talented or legendary in martial, also advance in Will proficiency. You cannot advance
-                in will proficiency from mage path in this case.''',
-        },
+        # {
+        #     'name': 'Harmonious body',
+        #     'description': '''Whenever you advance in REFLEX or FORTITUDE saving throws. Advance in the other one as
+        #         well. If you are talented or legendary in martial, also advance in Will proficiency. You cannot advance
+        #         in will proficiency from mage path in this case.''',
+        # },
     #     {
     #         'name': 'Favored weapon',
     #         'description': '''Choose 1 weapon category. In that weapon your MAX level is as if your PATH
@@ -370,7 +372,7 @@ Each spell can however only be used once using this ability until your next "Tim
             'name': 'Specialist',
             'description': '''Choose 1 skill. You have an extra +1 for that skills proficiency. Note it does not 
             increase the max of acquiring proficiency with this skill using normal options and therefore allows
-            the skill to reach +5 proficiency.
+            the skill to potentially reach +5 proficiency.
             
             If you are talented or legendary, you can choose two skills instead.
 ''',
@@ -390,9 +392,9 @@ Each spell can however only be used once using this ability until your next "Tim
         {
             'name': '(Wo)Man of many talents',
             'description': '''
-            Start the game with one additional "creative trait", which has a proficiency of 1.
+            Start the game with one additional "creative skill", which has a proficiency of 1.
             
-            If you are talented/legendary in skilled path, start with one additional "creative trait" with a proficiency
+            If you are talented/legendary in skilled path, start with one additional "creative skill" with a proficiency
             of 2.
 ''',
         },
@@ -401,7 +403,7 @@ Each spell can however only be used once using this ability until your next "Tim
             'name': 'Prodigy',
             'description': '''From level 1 you can pick on major option from your skilled lvl 1-4 playcard and that does 
             not forbid you to take that option again. (meaning you could for example take 2 major skilled feats by level
-            2 as Talented or Legendary in Skilled path).
+            2 as Talented or Legendary in Skilled path). Repeat this at levels 5 and 9.
             ''',
         },
         {
