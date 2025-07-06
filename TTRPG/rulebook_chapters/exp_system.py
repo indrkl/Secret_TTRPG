@@ -16,50 +16,57 @@ Exp rewards for failure:
 
 Experience is applied when players go to downtime. That means
 
-1. Exp for each scarred or damaged dice players have when going to downtime. 3 exp for the whole party.
+1. Exp for each scarred or damaged dice players have when going to downtime. 5 exp for the injured player.
 
-2. Some scenes are big ones, and they provide experience, when the scene ends badly for players however, they get double
-the experience from the scene. Recommended to start from 5 exp, but no more than 25 exp for the grandest of scenes
-(so 50 exp for double).
+1.b. For every level of stress / mental exhaustion that someone enters downtime, they get 2 exp.
 
-3. In addition, each such scene provides a 5 % to 10 % bonus for the entirety of experience gathered since the previous
-downtime. That means that if players manage to push forward without going to downtime they earn experience much more
-efficiently.
+2. When failing an attempt at an action during role playing. 1 exp if it is low stakes, 4 exp if it is medium stakes,
+meaning failure will have material harm to the party or player, either lower reward for something they have already done
+ , losing something, or tarnishing of reputation with one individual. 10 exp if it is high stakes, meaning it has
+ significant material harm, or threatens to do substantial physical
+ or mental harm to at least one player, or some harm to everyone, or substantial tarnishing of reputation in a larger
+ region, and 25 exp if this is severe stakes, this means that
+ failure puts the whole party at risk of severe damage to even party wipe, or risks them being hunted as criminals in
+ a large region they are currently at.
+
+
+
+3. When completing a mission, or advancing in the plot, or completing a combat encounter, party gains a 10-25 % exp
+bonus for the next downtime.
 
 3.b Finally if players sacrifice significant amounts of wealth or assets to throw a party or do any other activity that
-fits their roles, they can get an additional 25 % bonus
+fits their roles, they can get an additional 25 % bonus. Significant starts from 20 % of parties current wealth.
 
 4. Each character can have a role-play objective. This is set at start of session. If they complete it, they earn 10 exp
 If they don't it's exp reward goes up by 5 for the next session. This doesn't benefit from the % bonus however.
 
-5. Group as a whole has objectives. Completing those grants experience to all players and the group organization. The
-objectives depend on the organization type. There can be 3 of them, each of them provides 10 exp if they are completed
-during the session. This doesn't benefit from the % bonus however.
+All exp earned by a player also provides 100 % exp to the whole party and organization, meaning that player will get that
+exp doubled basically.
 
-
-All exp earnt by a player only provides 10 % exp to the organization exp.
-All exp earnt by all players (scenes and scene failures) provides 100 % exp to the organization exp.
+Organization also levels up. When that happens the followers also get stronger, New characters start at the
+organizations exp.
 
 The exp requirement to level up is 100 exp for lvl 1 and goes up by 25 exp each level until level 6.
 Then it starts going up by 50 exp per level. The exp gaining doesn't increase
 much, since it is all tied to the difficulty of the encounter.
+
 But in general when the game enters heroic levels of activity, something like big city relevant events, or kingdom
 level missions, then double the exp, and when it enters the world level epicness, then triple it from baseline.
 
 New player characters start at organization exp level.
 
-lvl.    exp required to level up
+lvl.    exp required to level up / Accumulated
 1       100 exp
-2       125 exp
-3       150 exp
-4       175 exp
-5       200 exp
-6       250 exp
-7       300 exp
-8       350 exp
-9       400 exp
-10      500 exp
-11      600 exp
+2       125 exp / 225 exp
+3       150 exp / 375 exp
+4       175 exp / 550 exp
+5       200 exp / 750 exp
+6       250 exp / 1000 exp
+7       300 exp / 1300 exp
+8       350 exp / 1650 exp
+9       400 exp / 2050 exp
+10      500 exp / 2550 exp
+11      600 exp / 3150 exp
 12      max level.
 
 

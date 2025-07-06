@@ -3,7 +3,7 @@ feats = {
         {
             'name': 'Extraordinary senses',
             'description': '''
-Acquinted: You can see 6 sq. in the dark, and 12 sq. in low light
+Acquainted: You can see 6 sq. in the dark, and 12 sq. in low light
 
 Adept: You can see 25 sq. in the dark and 50 sq. in low light
 
@@ -15,7 +15,7 @@ Legendary: You can see in the dark as well as in the light. You have blind sight
         {
             'name': 'Wings',
             'description': '''
-Acquinted: You don't take any falling damage as long as you are wearing light armor.
+Acquainted: You don't take any falling damage as long as you are wearing light armor.
 
 Adept: You don't take any falling damage as long as you are wearing light armor and are not carrying more than
 1/5th of your carry weight, and when falling from great heights
@@ -35,7 +35,7 @@ You can only have the maximum defensive benefits from the armor you wear or this
 
 You can lower the bonus of the natural armor by 2 to receive the no armor bonus.
 
-Acquinted: Your maximum defense from natural armor is 2.
+Acquainted: Your maximum defense from natural armor is 2.
 
 Adept: Your maximum defense from natural armor is 3.
 
@@ -154,7 +154,7 @@ simply someone who wants favor from your house etc.)
         {
             'name': 'Divine protector',
             'description': '''
-            You can advance toughness instead of will using mage path. 
+            You can advance toughness instead of spell school proficiency using mage path. 
             
             You can transfer a scarred dice 
             from an ally to yourself (their scarred dice becomes normal, 1 of your normal dice become scarred) twice
@@ -206,13 +206,16 @@ While at maximum calm you cannot be disoriented, while at maximum rage, you are 
 #         },
         {
             'name': 'Savant',
-            'requires': 'Adept',
             'description': '''
 Choose 1 school of magic, you can only cast spells from that school of magic, and you can only gain proficiency with
-that school of magic. Proficiency advancement options all have (max prof. 4) when advancing this school of magic.
+that school of magic. Proficiency advancement options all have max prof. 3 when acquainted and 4 otherwise, 
+when advancing this school of magic.
 
-If you are talented or legendary in the Mage path, then you always get a free virtual power dice when casting spells
-from that school.
+If you are talented or legendary in the Mage path, then you get a free virtual power dice when casting spells with at
+least 2 power dice without the virtual dice from that school.
+
+When casting rituals from that school of magic, you get a free virtual power dice every round of ritual. 
+The free power dice does not cost mana.
 '''
         },
         {
@@ -244,11 +247,20 @@ You start the game with having maximum mana, and all your normal dice are fully 
         {
             'name': 'Enduring',
             'description': '''
-You start with 1/2/3/4 additional maximum stamina depending on the level in martial path.
+You start with 1/2/3/4 additional maximum stamina depending on the level in martial path. And in addition you can
+use your stamina once more per round.
 
 When you are at least talented you also recover 1 stamina every round during combat. When you are at
 least legendary, then you recover 1 additional stamina every second round during combat. Recovery happens
 during the rerolling of your dice pool.
+            ''',
+        },
+        {
+            'name': 'Defensive',
+            'description': '''
+You can choose to have disadvantage for your offensive actions this turn (attacks and offensive spells), in order to
+get advantage to recovering defense. When you recover defense this way, your maximum defense is increased by
+1 if your acquainted or adebt, or by 2 if you are talented or legendary.
             ''',
         },
         {
@@ -260,7 +272,7 @@ focused in making your body a supreme weapon. At levels 1, 4, 8 and 12 you get t
 from your martial playcard (this option does not spend a check-box on the talent card), 
 but you cannot use weapons, shields, armors nor attune to any magical item. 
 
-In addition your unarmed strikes do 1 additional damage and you have 1 bonus maximum defense. Both  of those bonuses 
+In addition your unarmed strikes do 1 additional damage and you have 2 bonus maximum defense. Both  of those bonuses 
 increases by 1 at levels 3, 6, 9 and 12.
             ''',
         },
@@ -298,7 +310,7 @@ At the beginning of each round, for each die that was damaged for the first time
             'name': 'Nimble',
             'description': '''After using dice to move, dodge or recover defense, you can reroll those dice back into
             your dice pool. Up to 2 dice can be reused this way per round (this resets when you reroll your entire dice
-            pool). This increases to 3 dice at level 6 and 4 dice at level 12.''',
+            pool). This increases to 3 dice at level 5 and 4 dice at level 10.''',
         },
         {
             'requires': 'Talented',
@@ -401,7 +413,8 @@ Each spell can however only be used once using this ability until your next "Tim
         {
             'requires': 'Adept',
             'name': 'Prodigy',
-            'description': '''From level 1 you can pick on major option from your skilled lvl 1-4 playcard and that does 
+            'description': '''
+            From level 1 you can pick one major option from your skilled lvl 1-4 playcard and that does 
             not forbid you to take that option again. (meaning you could for example take 2 major skilled feats by level
             2 as Talented or Legendary in Skilled path). Repeat this at levels 5 and 9.
             ''',

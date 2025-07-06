@@ -4,8 +4,11 @@ When a character gets disruption, then they lose a dice until the next re-roll c
 disruption.
     '''},
     {'name': 'inspiration', 'description': '''
-You can spend your inspiration to either become lucky for a round / scene or gain advantage or negate disadvantage
-for a roll.''',},
+You can spend your inspiration to attempt something that is barely connected to your skills as if your skill would
+allow you to do that. For example, if you have read a lot of books about nature magic, you could go to the library
+and spend your inspiration to search about magical items regarding mind control by making the wildest connections
+with what you already know, to give you such an edge that you would be researching the answers to your question as if
+you were expert in these matters.''',},
     {'name': 'cover', 'description': '''
     You can have up to 3 levels of cover against a ranged attacker. Each level makes them require 1 additional power
     dice to hit you. First level is achieved with 50 % of your body being covered. Second level when at least 80% of

@@ -293,7 +293,7 @@ Deal 1 additional damage with your attack: 1 stamina
 
 Double the movement of a single move action: 2 stamina
 
-Only one of the previous options can be chosen per turn.
+Only one of the previous options can be chosen per round.
 
 Another option to spend stamina during combat is to use a scarred dice ignoring the normal scarred dice limitation. That
 costs 1 stamina per scarred dice.

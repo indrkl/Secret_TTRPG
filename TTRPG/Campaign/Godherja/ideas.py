@@ -1,3 +1,13 @@
+Player_start  = """
+
+Flaming sword needs to be assembled
+
+Start around Thysian holy site in the northern coninent.
+
+Duke's spy network. 
+
+"""
+
 Questions = """
 
 1. Which of these gets you most excited: Fighting monsters, learning about lore, investigating a mystery, social interactions, being part of

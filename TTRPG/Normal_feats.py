@@ -605,13 +605,13 @@ you may choose up to 2 options:
     'Skilled': [
         {'cost': 'small',
          'name': 'Knowing when to shut up',
-         'effect': '''When failing a diplomacy challenge, there are no additional complications because of it (compared
+         'effect': '''When failing a social challenge, there are no additional complications because of it (compared
          to not doing the challenge at all).''',
          },
         {'cost': 'small',
          'name': 'Deep apology',
          'effect': '''
-         When your or your parties past deeds cause a diplomacy challenge to become harder, then once per NPC, you can
+         When you or your parties past deeds cause a social challenge to become harder, then once per NPC, you can
          offer a deep apology to reduce the penalty (exact reduction is still decided by GM).
          ''',
         },
@@ -636,14 +636,14 @@ you may choose up to 2 options:
                 having been bought (subtract the gold cost of the item from your balance).'''
          }
          },
-        {'name': 'Lore weaver',
-         'cost': 'medium',
-         'effect': '''
-You can spend a luck token, to recall and tell a common myth or story, about something that you encounter on your
-journey, these stories have a grain of truth in them, but may also have some parts as lies as well, depending on how
-elusive the topic is.         
-         '''
-         },
+#         {'name': 'Lore weaver',
+#          'cost': 'medium',
+#          'effect': '''
+# You can spend a luck token, to recall and tell a common myth or story, about something that you encounter on your
+# journey, these stories have a grain of truth in them, but may also have some parts as lies as well, depending on how
+# elusive the topic is.
+#          '''
+#          },
 #         {'cost': 'medium',
 #          'name': 'Lucky finder',
 #          'effect': '''
@@ -652,7 +652,8 @@ elusive the topic is.
         {'cost': 'medium',
          'name': 'Insightful',
          'effect': '''
-Whenever you spend at least 3 dice for lore related activities, you can ask a single yes / no / yes and no / uncertain question
+Whenever you succeed in an intelligence challange where you don't use any particular skill in order to acquire some
+ information, you can ask a single yes / no / yes and no / uncertain question
 , which the GM will answer based on the evidence which can be found in the scene or if you are having a conversation
 with someone, that someone is able to provide.''',
          },
@@ -664,7 +665,7 @@ with someone, that someone is able to provide.''',
          formulate a plan which is then executed simultaneously.
          ''',
          'action': {
-             'cost': 'R3.R3.R3.R3',
+             'cost': '4 dice',
              'target': '-',
              'proficiency': 'leadership',
              'effect': '''
@@ -672,14 +673,13 @@ When during a campaign turn your party wants to do several things, then you can 
 
 1. Declare all the actions your party wants to do, there can be at most 1 action per player.
 
-2. GM chooses the target and difficulty of the actions as normally. AND rolls the target dice first!
+2. GM states the difficulties of all actions (if they can be failed).
 
-3. Then for each action one of the players is assigned and they will do the action, their success depends on their dice
-pool and proficiency, and they get an advantage.
-player.
+3. Then for each action one of the players is assigned and they will do the action. Normal skill rules still apply.
+You can then give one player a +2 for the roll, and another +1. Then everyone.
 
-4. After all actions are assigned a player, then players may choose to spend luck and then all the actions are 
-resolved as if the plan is being executed simultaneously.
+4. After all actions are assigned a player and they have rolled 2d6 to see weather they were successful or not, players 
+may choose to spend luck and then all the actions are resolved as if the plan is being executed simultaneously.
              ''',
             }
         },
@@ -714,7 +714,7 @@ resolved as if the plan is being executed simultaneously.
              'range': '12 m.',
              'target': '1 creature',
              'additional_costs': '1 Luck token',
-             'effect': '''target gains inspiration''',
+             'effect': '''target gains ''',
              'difficulty_options': [
                  {
                      'cost': 'R6',
@@ -732,8 +732,8 @@ resolved as if the plan is being executed simultaneously.
             'requires': '3 proficiency in any social skill',
             'name': 'Expert of sacrifice',
             'effect': '''If any challenge would fail within the party, you can offer a dice to negotiate with GM
-something that you as a party will need to give up, in order to remove one challenge dice. It can be only used if 
-removing one challenge dice could make it a success.             
+something that you as a party will need to give up, in order to give a +2 to the roll. It can be only used if 
+that would then result in a success.
             ''',
         },
 #         {'name': 'Sir, know it all',
@@ -784,7 +784,7 @@ removing one challenge dice could make it a success.
         {'cost': 'major',
          'name': 'Natural leader',
          'effect': '''
-         You gain the coordinate (social) action, which can used both during combat and out of combat.
+         You gain the coordinate (social) action, which can be used during combat. 
          ''',
          'action': {
              'cost': 'R3.R3',
@@ -792,7 +792,8 @@ removing one challenge dice could make it a success.
              'target': '2 allies',
              'effect': '''
 Targeted allies may give up to 1 dice to the other ally to be used temporarily (that dice preserves it roll). The dice
-is returned after using it.
+is returned after using it. Targeted allies also get advantage when spending the dice they receive from the other 
+players.
              ''',
              'difficulty_options': [
                  {
@@ -806,11 +807,12 @@ is returned after using it.
          'name': 'Agent of chaos',
          'effect': '''
          Causing chaos comes naturally to you. You can make ploys to disorient a group of enemies before the battle.
-         You must still describe how you are going to do it and how using that skill makes sense. 
+         You must still describe how you are going to do it and how using that skill makes sense.
          
-         A new roll target is added to combat initiation phase with R5.R5.R5.R5 (cunning), that you may complete. If you 
-         succeed then all enemies start the combat with 1 level of disoriented. For an additional +R5 they start the 
-         combat with 2 levels of disoriented instead.
+         Before combat during preparation turn, you can spend 4 dice to attempt to disorient the enemies with a single
+         roll. If you succeed all enemies start the combat with 1 level of disoriented. If you succeed with +2, they
+         get 2 levels of disoriented instead. The DC is still decided by the GM.
+         
          ''',
         },
         {
@@ -835,7 +837,7 @@ is returned after using it.
             'cost': 'major',
             'name': 'Excellent instructor',
          'action': {
-             'cost': 'R2.R2',
+             'cost': '2 dice',
              'target': '1 ally',
              'proficiency': 'social',
              'effect': '''
@@ -844,7 +846,7 @@ is returned after using it.
              ''',
              'difficulty_options': [
                  {
-                     'cost': 'R2',
+                     'cost': '1 dice',
                      'effect': '''You can have another ally gain the same or different proficency for this scene / turn.
                      ''',
                  },
