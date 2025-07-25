@@ -1,3 +1,102 @@
+player_start = """
+You serve Countess of Ithis, Mary'sint of house Pouillard. More precisely, she has trusted her son Gudoric Pouillard to be her spy master, and his one master stroke
+so far has been to find you to do his job. At least it feels to you that you do all the hard work, while he? What does he do? You actually have no idea.
+
+Thanks to the revenues, that the holy site brings, Ithis has been developed quite a bit more than it's surrounding areas. It has a mighty Castle, with proper ditches
+and moats around it. It is agriculturally developed, and it has a proper furnace, making Mary'sint to field an army of 1000 well trained men, which is quite a lot for 
+a count. However, she has been dragged to some infighting within the Oudermarches. 
+
+Duke Routund, an infirm old bastard, who doesn't even live anywhere close to here, owns some land in the
+north east and is trying to get another county through some wild claim from Mary'sint's ally Princess Libelle, Duke of Eretrona. She also happens to be Mary'sint's aunt.
+
+Long story short, you have heard rumors that the coffers are running dry. You currently live under her court, and she covers all your living expenses, she has also
+paid for all the odd jobs you have done so far, but the air has definitely become more tense lately.
+
+Steward Nauly, and also wife of Gudoric - encourages "moving" some of the courtiers out, at least for now.
+
+Commander Rudoric, patient, content guy, has to suffer shit talking from Princess Libelle. 
+
+Duke Routund's Marshal, count Richieu, he has been approached and is willing to be in on the scheme to kidnap Duke Routund if that means ending the war quickly.
+
+
+"""
+
+plot_hooks = """
+
+Someone plants a cursed object that binds a wraith of an old Samirian captain, who hates Thysians because he died in the war fighting them. This scares away the pilgrims,
+harms a card with cold burn. A large host of pilgrims gather outside the cathedral, and discuss what to do, another guard races to the count, disrupting the meeting with
+the group. If they go and help then Duke Asha of house Eros offers to join the group as it is also his responsibility to protect the holy site. He has one knight with him
+Sha'im.
+
+The agent had to retrieve the artifact from southern continent. The trade routes for such things are very likely to go through the Duke Asha's city. The villain is Ravlag
+the Wolf, who is also the caravan master, and considers Thysians to be opressive secretely, but he is always calm and never shows it out. He will look for a perfect
+opportunity to strike, as he has been recruited by the Hyrrea's spy network. If he would manage to kill Asha, he will get 5000 ducats, an enormous amounts of money for one 
+man. Otherwise for planting the artifact in the holy site, he still gets 100 ducats. Point is, he is not the best fighter, but he is tactical, and very cunning.
+
+What kind of support has he been given to succeed in his plot? He has been given the cursed sword. He plants it very well in the mosque, making it hard to find. He plants
+it inside one of the new chairs, the delay to suppress the magic was set for a whole day, so a lot of fresh construction could be done during that time.
+
+Solutions to finding the item: arcane magic, divination magic, knowledge that the ghost spawns within 20 meters of the object. so in theory you could pinpoint the center by
+seeing how far it can chase someone? 
+
+In general, that war should be tidied up, Duke Routund is rumored to also be around here leading troops, talk to him to surrender since he is losing badly, or kidnap him.
+Either way Mary wants a 10000 ducat cut, to cover at least some of the expenses she has suffered over the course of this siege (she loses around 2000 ducat a week).
+Since Routund is close to bankruptcy as well, the only idea left is to extort his one magical item, goblet of sight, it is old and has also historic value, so hopefully
+we can find a buyer to it, that would cover some of the costs.
+
+The duke Routund is not well in his head, but it is not because of his age. A poisonous advisor, who appeared as court wizard 5 years ago, has been poisoning his mind
+with a Cloudmind fungus, which is known to help sleep, but long term usage also fogs the mind, and prevents from thinking clearly. There are clear indications of it's 
+usage by slower than normal pulse, pupils not reacting very fast, getting stuck in certain ideas, and slow to take in new information.
+
+The advisor, spy for Hyrrea's queen, named Richelieu.
+
+They want to kick you out from the castle, so the old estate, that has been abandoned for god knows how long, is now returned to your family. Trick is, it is rumored to be
+haunted.
+
+Estate: You feel drowsy.
+
+The dream elemental is inside the estate courtyard around an old tree, that's roots go down deep and connect to the magical way-lines. The elemental is feeding on it, sleep
+itself. It is instructed to help everyone who come to vicinity to sleep deeply, and to help resolve their deep emotional issues while they sleep. It was configured to
+apply really strong sleep, because the last owner of the estate, before Frodbrokna had set it so. It has been abandoned ever since, the owner, his mind got broken during
+the event, and he died trying to avenge Aeschereas, but died when trying to assassinate him.
+
+Dream elemental will recognise the one that shares it's former master's blood-line.
+
+They find the journal of their ancestor in the study. Last chapter states he was going to stop Aescheres from casting the blood-replicating spell. As you know, he failed.
+There is no chapter after that, and it appears he did not return after that.
+
+In the drawers you find amulet of clarity. You can activate it to not gain any more mental exhaustion for a combat encounter, and also not be affected by the existing mental
+exhaustion. After using this ability, this needs to recover for 3 strategic turns. This is a nice looking amulet with a big saphire stone forming a romb shape, like the
+diamond card suite.
+
+The none hidden floors consist of dozens of bed rooms, several kitchens, a reception hall, a sparring hall, cleaning rooms. From the hall-way next to the largest bedroom
+there is a hidden leverage, which leads to secret celler, where is the study, there used to be a lot of books that the book shelves have been burnt down. Only the table
+remains, at least one drawer survived the fire, there is the journal, and the amulet. There is also the portal room, which has connections to various other places, but
+all the portals lay dorment, There are runes next to all the doors. To activate the portals, a member has to touch the corresponding runes at both ends. In the journal,
+you learn of the discussion of the worse case considerations, if the spell loses controls, we can estimate a large scale loss of mages in the order, in this case the portals
+need to be closed in order to preserve as many of the strong-holds as possible. In the end it takes only a few weeks for 2 dimension mages to restore the connection, so if
+order is restored, it should be no problem.
+
+There are 2 skeletons in the study, 1 looks to have burned to death, other died of some kind of internal explosion, based on the broken ribs and bone pieces everywhere,
+only the lower body and head and hand bones more intact.
+
+"""
+
+Stat_blocks = {
+    'wraith': """
+    12 x d6. Each has 4 HP. When it drops to 4 x d6 it dissapears. It recovers 2 dice in a medium turn. To destroy it, you need to destroy the cursed object in great heat.
+
+    5 x R6: Cold strike, 3 cold damage, if it penetrates defense, it also applies 1 freeze.
+
+    5 x R2: It gets 3 defense and lays a trap, those who attack it in melee and lower it's defense gain 1 freeze.
+
+    3 x R4: Normal strike of 3 slashing damage.
+
+    It has 2 proficiency with each of his abilities.
+    """
+}
+
+
 thoughts = """
 The currently existing agents:
 
