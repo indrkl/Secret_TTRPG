@@ -216,7 +216,7 @@ schools = {
                 'effect': '''Increase your maximum defense to 2 (note, this does not stack with armor and is only
                 useful if you don't have maximum defense from armor or natural armor).
                 
-                You can use force proficiency to take the defend basic action.
+                You can use force proficiency and R4s to take the defend basic action.
                 ''',
                 'difficulty': 'R4',
                 'scaling': [

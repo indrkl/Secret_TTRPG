@@ -21,7 +21,19 @@ Duke Routund's Marshal, count Richieu, he has been approached and is willing to 
 
 """
 
-plot_hooks = """
+plot_hooks = [
+"""
+On the road they meet a man, with old, worn clothes, though relatively clean considering he is on the road. He greets the party, and stops, abruptly. Curious about
+the cursed item they are carrying, if they are carrying it as they planned. He is carrying a message to Asha, about the fact that fogeaters are already gathering behind
+the fog-line. So yes, he adventured there and survived, a feat very few are capable of doing. He carries no magical items, no weapons, and no armor.
+
+He does not like players carrying cursed magical items, and in his mind, since the party is not so strong, he sees it obvious he should stop you and convince them to
+heal the world by ending this torment of the old spirit. 
+
+
+He is a monk, whose body is shapen to be an ultimate weapon, but who can also do magic, easily, he can recover mana while being in the fog. 
+""",
+""" ### Completed
 
 Someone plants a cursed object that binds a wraith of an old Samirian captain, who hates Thysians because he died in the war fighting them. This scares away the pilgrims,
 harms a card with cold burn. A large host of pilgrims gather outside the cathedral, and discuss what to do, another guard races to the count, disrupting the meeting with
@@ -39,6 +51,8 @@ it inside one of the new chairs, the delay to suppress the magic was set for a w
 Solutions to finding the item: arcane magic, divination magic, knowledge that the ghost spawns within 20 meters of the object. so in theory you could pinpoint the center by
 seeing how far it can chase someone? 
 
+""",
+"""
 In general, that war should be tidied up, Duke Routund is rumored to also be around here leading troops, talk to him to surrender since he is losing badly, or kidnap him.
 Either way Mary wants a 10000 ducat cut, to cover at least some of the expenses she has suffered over the course of this siege (she loses around 2000 ducat a week).
 Since Routund is close to bankruptcy as well, the only idea left is to extort his one magical item, goblet of sight, it is old and has also historic value, so hopefully
@@ -49,6 +63,8 @@ with a Cloudmind fungus, which is known to help sleep, but long term usage also 
 usage by slower than normal pulse, pupils not reacting very fast, getting stuck in certain ideas, and slow to take in new information.
 
 The advisor, spy for Hyrrea's queen, named Richelieu.
+""",
+"""
 
 They want to kick you out from the castle, so the old estate, that has been abandoned for god knows how long, is now returned to your family. Trick is, it is rumored to be
 haunted.
@@ -80,7 +96,7 @@ order is restored, it should be no problem.
 There are 2 skeletons in the study, 1 looks to have burned to death, other died of some kind of internal explosion, based on the broken ribs and bone pieces everywhere,
 only the lower body and head and hand bones more intact.
 
-"""
+"""]
 
 Stat_blocks = {
     'wraith': """
