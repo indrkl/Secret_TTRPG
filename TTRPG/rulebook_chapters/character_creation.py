@@ -147,11 +147,11 @@ def get_playcard_flowable(playcard):
         checkboxes9_12 = []
 
         for i in range(big_perk['available1-4']):
-            checkboxes.append(InteractiveCheckBox('%s_%d'%(big_perk['description'], i), offset=i*16))
+            checkboxes.append(InteractiveCheckBox('%s_%d_1to4'%(big_perk['description'], i), offset=i*16))
         for i in range(big_perk['available 5-8']):
-            checkboxes5_8.append(InteractiveCheckBox('%s_%d'%(big_perk['description'], i), offset=i*16))
+            checkboxes5_8.append(InteractiveCheckBox('%s_%d_5to8'%(big_perk['description'], i), offset=i*16))
         for i in range(big_perk['available 9-12']):
-            checkboxes9_12.append(InteractiveCheckBox('%s_%d'%(big_perk['description'], i), offset=i*16))
+            checkboxes9_12.append(InteractiveCheckBox('%s_%d_9to12'%(big_perk['description'], i), offset=i*16))
         data.append([Paragraph(big_perk['description'], style=basic_paragraph_style), checkboxes, checkboxes5_8, checkboxes9_12])
 
     data.append([Paragraph(playcard['progression'], style=basic_paragraph_style)])
