@@ -14,11 +14,9 @@ paid for all the odd jobs you have done so far, but the air has definitely becom
 
 Steward Nauly, and also wife of Gudoric - encourages "moving" some of the courtiers out, at least for now.
 
-Commander Rudoric, patient, content guy, has to suffer shit talking from Princess Libelle. 
+Commander Rudoric, patient, content guy, has to suffer shit talking from Princess Libelle.
 
 Duke Routund's Marshal, count Richieu, he has been approached and is willing to be in on the scheme to kidnap Duke Routund if that means ending the war quickly.
-
-
 """
 
 plot_hooks = """

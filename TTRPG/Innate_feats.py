@@ -167,7 +167,6 @@ simply someone who wants favor from your house etc.)
         },
         {
             'name': 'Raw caster',
-            'requires': 'Talented',
             'description': '''
             You cannot cast concentration spells, or spells which cast time is greater than 1 round. You also cannot
             initiate rituals nor spend your mana for rituals.            
@@ -197,13 +196,16 @@ higher school's power dice to cast lower school spells your balance tips towards
 While at maximum calm you cannot be disoriented, while at maximum rage, you are immune to afraid condition.
 '''
         },
-#         {
-#             'name': 'Ritualist',
-#             'requires': 'Adept',
-#             'description': '''
-# Downside is can only cast rituals and nothing else, implement later, when we have more rituals in the game,
-# '''
-#         },
+        {
+            'name': 'Ritualist',
+            'description': '''
+        None ritual spells cost 1 additional mana per power dice involved.
+        
+        However you can make 1 additional nudge in each of the rounds during a ritual, and during each round 
+        every dice starting from 3rd is worth 2 dice for the ritual (but still only costs 1 mana). (so you have to get
+        at least 3 power dice to in a round to benefit from this effect).
+'''
+        },
         {
             'name': 'Savant',
             'description': '''
@@ -322,7 +324,6 @@ At the beginning of each round, for each die that was damaged for the first time
             ''',
         },
         {
-            'requires': 'Adept',
             'name': 'Natural killer',
             'description': '''
 When you damage an enemy first time this combat with a weapon, gain a blood token that can be used during this encounter.
@@ -331,11 +332,9 @@ If you are talented or legendary, whenever you gain at least one blood token, ga
 
 Once per round, whenever you make an attack, you can use one and only one of those options once to boost that attack:
 
-* spend 1 blood tokens to gain advantage or upgrade advantage to double advantage
+* spend 1 blood token to gain double advantage (2 more nudges)
  
-* Spend 2 blood tokens to gain double advantage
- 
-* spend X blood token to deal X additional damage
+* spend X blood tokens to deal X additional damage
  
 * spend 1 blood token to disrupt 1
             ''',
@@ -431,7 +430,6 @@ Each spell can however only be used once using this ability until your next "Tim
             ''',
         },
         {
-            'requires': 'Adept',
             'name': 'Daredevil',
             'description': '''
 Whenever you succeed with complications, you recover 1 luck token. If you are talented or legendary, then you recover

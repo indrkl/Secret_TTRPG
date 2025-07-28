@@ -396,6 +396,8 @@ First roll costs 2 mana, then each consequent roll costs 2 additional mana. Prof
 disadvantage for not knowing the ritual also applies each roll. Also if you don't have proficiency, then you cannot
 aid in the ritual.
 
+Each roll represents a quick turn in game-time. 
+
 Rituals can be used to prepare for combat against the odds.
 
 Some rituals can have semi permanent effects, but they often have some daily mana cost. Meaning it is a constant
@@ -446,6 +448,32 @@ In order for characters to make use of magical items they need to attune to them
 that require attunement. By default all players can attune to up to 3 items, but some feats in the mage path allow
 for increased attunement.
          '''
+    },
+    {
+        'name': 'Resolution',
+        'description': '''
+        While in-combat and with certain abilities the success is guaranteed as long as you can present the desired
+        dice values. However out of combat, we want a little bit more randomness.
+        
+        Each scene has a specific target value, with 5-6 being easy / relaxed, 7-8 being average, 9 being difficult,
+        10 very difficult, 11+ - almost impossible
+        
+        When player wants to do something, which has a fail state, then GM asks the player to roll 2d6, add relavant
+        proficiency to it, and compare against the specified target value. If equal or greater, the action succeeds,
+        otherwise fails.
+        
+        In addition out of combat GM also needs to decide:
+        
+        1. Does an action have a fail state
+        
+        2. Can this action even be attempted with the skills that players have or it doesn't make any sense.
+        
+        3. What is the possible success state with the skill that is being used.
+        
+        4. Is there a Yes, But... option, in this case present 2 target values. One for clean success, and other
+        for a success with a complication. This of course only makes sense, if you can come up with a reasonable
+        complication that makes the game better. There is no reason to force this in every situation.        
+        '''
     },
 #     {'name': 'Story beat / scene',
 #      'description': '''
@@ -515,9 +543,8 @@ creative spell or ability belongs to).
 2 RP: 1 level of disoriented, afraid, prone, burning or disruption
 3 RP: blinded, 1 level of frozen
 2 RP: Aid an ally to give them advantage, or upgrade advantage to double advantage
-X-1 RP: When presented with a challenge in the campaign turns, you can reduce the effort by 1 and use the creative's
-spell to resolve the challenge (if appropriate). In this case you use the school of magic's proficiency. When you
-spend additional mana to exert yourself, you gain virtual dice, with the value of 4.
+2d6: When presented with a challenge in the campaign turns, you can use the creative spell to resolve the challange.
+To see whether you succeed you can roll 2d6, add your proficiency+1 to the roll, and then see if you succeeded.
 
 The default range for effecting someone is 6 sq.
      '''
