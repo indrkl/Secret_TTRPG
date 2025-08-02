@@ -276,6 +276,11 @@ but you cannot use weapons, shields, armors nor attune to any magical item.
 
 In addition your unarmed strikes do 1 additional damage and you have 2 bonus maximum defense. Both  of those bonuses 
 increases by 1 at levels 3, 6, 9 and 12.
+
+In addition at levels 5 and 10 you also get 1 Damage reduction.
+
+This maximum defense gained from this feat competes with natural armor and other places that would overwrite armor bonus
+to defense.
             ''',
         },
         {
