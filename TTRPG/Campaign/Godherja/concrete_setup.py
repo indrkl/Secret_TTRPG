@@ -23,6 +23,7 @@ Duke Routund's Marshal, count Richieu, he has been approached and is willing to 
 
 plot_hooks = [
 """
+Brother Gurth
 On the road they meet a man, with old, worn clothes, though relatively clean considering he is on the road. He greets the party, and stops, abruptly. Curious about
 the cursed item they are carrying, if they are carrying it as they planned. He is carrying a message to Asha, about the fact that fogeaters are already gathering behind
 the fog-line. So yes, he adventured there and survived, a feat very few are capable of doing. He carries no magical items, no weapons, and no armor.
