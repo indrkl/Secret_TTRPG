@@ -100,7 +100,7 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
         ])
 
     i = 0
-    premade_list = ['Will', 'Fortitude', 'Reflex', 'Lore', 'Diplomacy', 'Physique', 'Survival', 'Leadership', 'concealment', 'crafting', 'harvesting']
+    premade_list = ['Physique', 'Precision', 'Social', 'Intelligence', 'Cunning']
 
     for x in range(header_block + 4, header_block + 22):
         data.append([Paragraph(premade_list[i], style = basic_paragraph_style) if len(premade_list) > i else box_5] + [''] * 4 + [box_1, box_6] + [''] * 5 + [box_9] + [''] * 8)
@@ -141,7 +141,7 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
     pdf_content = prep_elements_from_chapter([{'type': 'flowables', 'content': elements}], add_title_page_break=False)
 
     if name:
-        pdf_file = MyDocTemplate(f"{name}_character_sheet.pdf", pagesize=letter)
+        pdf_file = MyDocTemplate(f"character_sheet_templates/{name}_character_sheet.pdf", pagesize=letter)
     else:
         pdf_file = MyDocTemplate("character_sheet.pdf", pagesize=letter)
     pdf_file.multiBuild(pdf_content)
@@ -154,8 +154,8 @@ if __name__ == '__main__':
     # generate_character_sheet(0, 3, 3, spells=[],
     #                          name='Andrew Cannon', feats=['Shadow', 'Medium armor proficiency', 'Two weapon fighter',
     #                          'Tinkerer', 'Agent of chaos'], equipment=['dagger', 'sword'])
-    generate_character_sheet(0, 0, 0, spells=[],
-                             name='basic')
+    # generate_character_sheet(0, 0, 0, spells=[],
+    #                          name='basic')
     # generate_character_sheet(0, 4, 2, spells=[],
     #                          name='Margus', feats=['Natural armor', 'Defiant', 'Intimidating presence', 'Sir, know it all', 'War shout'], equipment=['dagger', 'axe', 'two handed axe'])
     # generate_character_sheet(0, 4, 2, spells=[],
@@ -168,8 +168,8 @@ if __name__ == '__main__':
     #                          name='Patrick', spells=['Telekinesis', 'Force field'], equipment=['unarmed'])
     # generate_character_sheet(0, 2, 4, spells=[],
     #                          name='Jungle_adventurer', feats=[], equipment=['dagger'])
-    # for mage in range(0, 5):
-    #     for martial in range(0, 5):
-    #         for skilled in range(0, 5):
-    #             if mage + martial + skilled == 6:
-    #                 generate_character_sheet(mage=mage, martial=martial, skilled=skilled, name=f"mage_{mage}_martial_{martial}_skilled_{skilled}")
+    for mage in range(0, 5):
+        for martial in range(0, 5):
+            for skilled in range(0, 5):
+                if mage + martial + skilled == 6:
+                    generate_character_sheet(mage=mage, martial=martial, skilled=skilled, name=f"mage_{mage}_martial_{martial}_skilled_{skilled}")

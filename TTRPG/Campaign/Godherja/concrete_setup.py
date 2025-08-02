@@ -14,11 +14,9 @@ paid for all the odd jobs you have done so far, but the air has definitely becom
 
 Steward Nauly, and also wife of Gudoric - encourages "moving" some of the courtiers out, at least for now.
 
-Commander Rudoric, patient, content guy, has to suffer shit talking from Princess Libelle. 
+Commander Rudoric, patient, content guy, has to suffer shit talking from Princess Libelle.
 
 Duke Routund's Marshal, count Richieu, he has been approached and is willing to be in on the scheme to kidnap Duke Routund if that means ending the war quickly.
-
-
 """
 
 plot_hooks = [
@@ -33,6 +31,30 @@ heal the world by ending this torment of the old spirit.
 
 
 He is a monk, whose body is shapen to be an ultimate weapon, but who can also do magic, easily, he can recover mana while being in the fog. 
+""",
+"""
+The siege camp has around 1500 men in it. They are struggling with sickness, occasional harassment, boredom. A small town nearby has set
+up an agreement, where they organize a proper brothel service with a good discount, and the soldiers generally behave civilized.
+
+While duke does not himself visit the establishment, women are taken from there to his personal tent. From the hookers, one could learn,
+that he gets regular treatment from a physician, and he seems generally more drowsy after receiving the treatment, when it comes to sex.
+
+In addition the physician himself is into some wierd sadistic stuff, and rumors are that one of the girls was even killed, so no-one
+really wants service him, it has come to it, that they are not even told that he will be their customer.
+
+The physician, Richelieu, buys Fogcloud mushrooms from that town as well, but he tries to be really discreet with it, so without proper
+description of him, or accidently asking the local apothecary directly, it will be impossible to figure that part out.
+
+The camp itself is heavily guarded, so walzing in is out of the question. Patrols and guards are manned by men from the same unit,
+and this is being rotated. The full rotations are given over from one commander to another. Town visits are done in orderly fashion,
+and the commanding officer and his second only know which entrance they are allowed to use to enter. If they ever enter the wrong entrance,
+then it is alarm time.
+
+Only exceptions who can walk more freely is the general himself, even Richelieu has to move with the groups.
+
+count Richieu visits the town to discuss matters with the mayor, the town militia has been disbanded by the orders of 
+Richieu, so he can walk with a relatively small squad of soldiers. This is a potential point of contact for the players.
+
 """,
 """ ### Completed
 

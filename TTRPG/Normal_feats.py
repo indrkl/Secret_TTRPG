@@ -460,17 +460,15 @@ Rp: Spend 2 savagery tokens to add 1 level of vulnerable to the enemy.
                 ''',
         },
         {'cost': 'major',
-             'name': 'Sword mastery',
+             'name': 'Counter-attack mastery',
+             'requires': 'lvl. 5, Master of defenses',
              'effect': '''
-You master the sword, using it to parry, create threats and protect yourself. You control it perfectly both when 
-assaulting and defending.
+You master the art of counter attacking, creating threats to protect yourself, and use defense to punish those who attack you.
 
 When you take damage into defense from a melee weapon attack, deal 1 damage for every 2 damage received to defense,
 rounded up.
 
 When you attack, recover 1 defense for every power dice spent in the attack.
-
-+1 maximum defense if wielding a two handed sword, sword and a shield or 2 swords.
                 ''',
         },
         {'cost': 'major',
