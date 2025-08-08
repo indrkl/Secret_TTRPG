@@ -1,3 +1,30 @@
+random_names_male = [
+    'Pierre',
+    'Jean',
+    'Luc',
+    'Marc',
+    'Paul',
+    'André',
+    'Louis',
+    'René',
+    'Claude',
+    'Henri'
+]
+
+random_names_female = [
+    'Marie',
+    'Claire',
+    'Anne',
+    'Sophie',
+    'Julie',
+    'Élise',
+    'Jeanne',
+    'Louise',
+    'Chloé',
+    'Colette'
+]
+
+
 player_start = """
 You serve Countess of Ithis, Mary'sint of house Pouillard. More precisely, she has trusted her son Gudoric Pouillard to be her spy master, and his one master stroke
 so far has been to find you to do his job. At least it feels to you that you do all the hard work, while he? What does he do? You actually have no idea.
@@ -33,6 +60,22 @@ heal the world by ending this torment of the old spirit.
 He is a monk, whose body is shapen to be an ultimate weapon, but who can also do magic, easily, he can recover mana while being in the fog. 
 """,
 """
+Stables that they were supposed to get the horses, the horses have been stolen by bandits. They are local fools, who are hungry and lost their homes
+through some savage raid by men dressed as the Princess Libelle's men, but actually were a sabotage group sent by Achrythea's court. So the few 
+survivors chose to retaliate to steal and sabotage in Princess Libelle's lands, one of them even has a vengence curse put on him, a twisted discord 
+and mind magic combination.
+""",
+"""
+The mastermind behind the sabotages in this region is Avrioxis, youngest son of Achrythea, he is also a blood mage, but unlike his mother, who has focused on brute force,
+summoning and millitaristic might, he is more focused on curses, mind control, stealthy manipulation, but does of course not shy away from a direct fight
+either. He is also a legendary mage, with combat magic, and skilled in intrigue and diplomacy. Through diplomacy he has created himself a very good cover
+image.
+
+The wedding of Avrioxis and Vissaias, both from house Mischas, but 3 generations apart. Both legendary mages. She however is a bit of a vulnerability, she is a drunkard,
+and while she does use her magic for making finances, she is not so good in combat magic. Though she has a unique curse, called Midas touch, which can begin to
+turn someone into fake gold, another way of saying, to petrify them, this is actually a combination of elemental and nature magic.
+""",
+"""
 The siege camp has around 1500 men in it. They are struggling with sickness, occasional harassment, boredom. A small town nearby has set
 up an agreement, where they organize a proper brothel service with a good discount, and the soldiers generally behave civilized.
 
@@ -40,7 +83,7 @@ While duke does not himself visit the establishment, women are taken from there 
 that he gets regular treatment from a physician, and he seems generally more drowsy after receiving the treatment, when it comes to sex.
 
 In addition the physician himself is into some wierd sadistic stuff, and rumors are that one of the girls was even killed, so no-one
-really wants service him, it has come to it, that they are not even told that he will be their customer.
+really wants to service him, it has come to it, that they are not even told that he will be their customer.
 
 The physician, Richelieu, buys Fogcloud mushrooms from that town as well, but he tries to be really discreet with it, so without proper
 description of him, or accidently asking the local apothecary directly, it will be impossible to figure that part out.
@@ -54,6 +97,12 @@ Only exceptions who can walk more freely is the general himself, even Richelieu 
 
 count Richieu visits the town to discuss matters with the mayor, the town militia has been disbanded by the orders of 
 Richieu, so he can walk with a relatively small squad of soldiers. This is a potential point of contact for the players.
+
+Luring the duke out is however going to be quite a challenge. However he does occasionally go out-side the camp to wash in a close by small lake. This is something even
+Richelieu can stop him from doing.
+
+In addition he likes a specific prostitute and he has her bring him good bakery from the town every time she visits. He has told her all the things he likes, and it is 
+known that he likes magical artifacts, items and trinkets, especially things that can create nice smells, calm the mind, or improve pleasure.
 
 """,
 """ ### Completed
