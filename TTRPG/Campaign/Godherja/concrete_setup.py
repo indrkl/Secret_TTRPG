@@ -122,7 +122,7 @@ What kind of support has he been given to succeed in his plot? He has been given
 it inside one of the new chairs, the delay to suppress the magic was set for a whole day, so a lot of fresh construction could be done during that time.
 
 Solutions to finding the item: arcane magic, divination magic, knowledge that the ghost spawns within 20 meters of the object. so in theory you could pinpoint the center by
-seeing how far it can chase someone? 
+seeing how far it can chase someone?
 
 """,
 """
