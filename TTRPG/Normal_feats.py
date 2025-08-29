@@ -83,7 +83,7 @@ don't know the ritual.
         {
             'cost': 'medium',
             'name': 'Spice specialist',
-            'description': '''
+            'effect': '''
                 You recover mana using spices twice as effectively. Meaning you recover 2 mana for 5 gp worth of spices.
             '''
         },
@@ -91,7 +91,7 @@ don't know the ritual.
             'cost': 'medium',
             'name': 'Mana siphoner',
             'requires': '4 proficiency in arcanum',
-            'description': '''
+            'effect': '''
                 When others cast spells near you, then if you are the only mana siphoner within 5 sq. of the caster,
                 then you can salvage 1/3 of the mana rounded down from that spell and recover your mana that way. You
                 can not however go over your maximum this way.
