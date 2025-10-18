@@ -334,7 +334,113 @@ schools = {
             # },
         ]
     },
+    'Mind (intelligence)': {
+        'special_rules': [
+            """
+Mind magic is one of the most difficult to pull off. It actually operates with the human mind directly unlike illusion magic.
+This magic fundamentally inserts, extracts or blocks thoughts of a particular target mind.
+
+This means this could aim to change the disposition, disorient someone without anyone else understanding what is going on,
+even control a person's actions. To fight against that, one can really only use reasoning and logic to differentiate between
+their own thoughts and those of the intruders. 
+            """],
+        'spells': [
+            {
+                'name': 'Guard mind',
+                'effect': '''
+Mind magicians have developed ways to guard their own minds against colleagues, but also against mundane effects,
+like fear and confusion that can happen in real life. Depending on their investment and training, they can effectively
+become immune against mental conditions or mind magic in general. You need to have at least 1 proficiency in mind magic
+to use this spell. 
+
+
+
+                
+''',
+            },
+            {
+                'name': 'Disorient',
+                'target': '1 target',
+                'range': '4 sq',
+                'radius': '1 sq.',
+                'effect': '''Target receives 3 stacks of disoriented 
+            ''',
+                'difficulty': 'R1.R1',
+                'scaling': [
+                    {'D': 'R1', 'L': 1, 'description': '''Target receives an additional 2 stacks of disoriented'''},
+                    {'D': 'R1.R1.R1', 'L': 1, 'description': '''Remove all defense from the target.'''},
+                    {'D': 'R1.R1', 'L': 1, 'description': '''
+                    After target loses 10 dice to disorientation, they surrender to you and start to view you as someone
+                    they cannot hope to defeat.
+                    '''},
+                ],
+            },
+            {
+                'name': 'Clarity',
+                'target': '1 creature',
+                'effect': '''Remove 1 lvl from all negative status effects related to WILL saving throws.
+            ''',
+                'difficulty': 'R2',
+                'scaling': [
+                    {'D': 'R2', 'description': '''Remove one additional level from those status effects'''},
+                ],
+            },
+            {
+                'name': 'Bless',
+                'range': '5 sq.',
+                'target': 'up to 3 allies',
+                'effect': '''
+                Targets have advantage for refocus and recover actions. 
+        ''',
+                'difficulty': 'R2.R2',
+                'concentration': 'R2.R2',
+                'scaling': [
+                    {'D': 'R2', 'L': 2, 'description': '''Targets have 1 additional maximum defense'''},
+                    {'D': 'R2.R2', 'description': '''Targets remove 1 negative status effect at the beginning of
+                     their turn for free'''},
+                ],
+            },
+            {
+                'name': 'Recover defenses',
+                'range': '5 sq.',
+                'target': 'area',
+                'radius': '1 sq.',
+                'effect': '''
+All friendly allies in the targeted area recover their defenses to the maximum
+        ''',
+                'difficulty': 'R2.R2',
+                'scaling': [
+                    {'D': 'R2', 'description': '''They gain 1 temporary defense pushing their defense over their
+                    maximum'''},
+                ],
+            },
+            {
+                'name': 'Control person',
+                'target': 'One restrained target',
+                'effect': '''
+This ritual aims to shape the mind of the target so that they start doing your bidding. The baseline cost is 20 R1.
+For this you can get the person to do things that are in general in their nature, just that they do these things for you,
+meaning you could make a corrupt banker "fix" the accounting for your favor, you could make an assassin kill for you, a 
+thief steal for you. However if the course of action is something that they don't have the ability to do, then that would
+double the difficulty, and if that would go against their morals, then it would double it again, and finally, if it would
+severely go against their interests meaning that could end their lives, then that will double it once again. Meaning the
+actual cost could be either 2 X, 4 X or 8 X the base cost.  
+        ''',
+                'difficulty': '15 X R1',
+                'duration': '1 day',
+                'concentration': 'X / 2 mana',
+            },
+        ]
+    },
+
     'Harmony (social)': {
+        'special_rules': [
+            """
+Harmony magic works by influencing the better parts of ourselves, bringing people together and making people feel in particular
+ways. Unlike mind magic it does not influence the mind or intellect, but instead creates feelings of trust, hope, union, being part
+of a higher purpose.
+        
+            """],
         'spells': [
             {
                 'name': 'Harmonious voice',
@@ -429,6 +535,13 @@ All friendly allies in the targeted area recover their defenses to the maximum
         ]
     },
     'Elemental (intelligence)': {
+        'special_rules': [
+            """School of elements deals with the basic elements of fire, water, ground and air.
+            While it is important to understand all the elements to proficiently wield any of them, usually mages
+            also specially down one or two of the elements.
+            
+            """
+        ],
         'spells': [
             {
                 'name': 'Stone speach',
@@ -436,6 +549,16 @@ All friendly allies in the targeted area recover their defenses to the maximum
                 You can talk to stone and dirt in the earth, and command them to shape, shift, crumble, collapse or
                 thicken. 
 
+                This is a creative spell.            
+''',
+            },
+            {
+                'name': 'Control water',
+                'effect': '''
+                You can control the open water around you such as rain, ponds, river, sea. You can direct their movement, you could clean
+                it to make drinkable, or shake it up to get the mud from the bottom to rise to the top and obscure the water. You can move
+                it to a limited extent, though moving large masses of water is very difficult.
+                
                 This is a creative spell.            
 ''',
             },
@@ -570,7 +693,10 @@ All friendly allies in the targeted area recover their defenses to the maximum
         'special_rules': [
             """School of dimension deals with overcoming great distances and moving between planes. Most things
             however, like teleportation, long distance communication or moving to other planes is a complex matter and
-            requires rituals to be made."""
+            requires rituals to be made.
+            
+            The general principle for the school of magic is that it opens small pockets between 2 points in space for
+            things, messages, or whatever to pass through."""
         ],
         'spells': [
             {
@@ -830,6 +956,12 @@ Every time you pay the concentration cost, you can move the cloud of darkness by
     'Illusion (cunning)': {
         'special_rules': [
             """
+        Illusion magic controls the visual and auditory senses by actually creating the light effect in the
+        reality, It is possible it is only seen from certain angles, or it could even be made to work in all angles for
+        more difficult spells. It does not however control the mind directly. This however does mean that people who
+        are blind, are immune to visual effects and illusion magic in general, nor can they do cast illusion magic
+        them selves, since to create a meaningful visual, you would have to know what things look like. Exception to the
+        latter is when someone has been made blind recently.
             """
         ],
         'spells': [
@@ -865,7 +997,8 @@ Every time you pay the concentration cost, you can move the cloud of darkness by
                 'speed': 'reaction',
                 'target': '1 creature',
                 'effect': '''When a hit would hit you, you may instead move 1 sq. to your chosen direction without
-                provoking any attacks of opportunities and the attack misses.
+                provoking any attacks of opportunities and the attack misses. This works by creating an illusion of
+                yourself to stay in your place that would take the impact of the attack.
                 ''',
                 'difficulty': 'R2.R2',
                 'scaling': [
