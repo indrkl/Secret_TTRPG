@@ -48,14 +48,30 @@ Duke Routund's Marshal, count Richieu, he has been approached and is willing to 
 
 plot_hooks = [
 """
+The town, around almost a thousand people, but currently hosting a lot more than that, the center 3 pubs and hostels have been turned into fun houses for the soldiers
+of the enemy force, the 3 city entrances are guarded by 2 men each, and 2 patrols go between these posts at all times. The posts and patrols stay up all the time, and
+are switched once the new group comes to have fun, some men from the next, third group are also part of the new group and they switch out with the previous guards and
+patrol who joins their company to have some fun. The army comprises of 10 companies, each doing a 8 hour rotation in town, every few days. Each company
+accompanied with their captain, or his second in some cases where the captain doesn't care for prostitutes and beer.
+
+6 captains are absolutely loyal, 1 is second to count Richieu, and another one is part of his army, only the second comes to visit the brothels though. Though he
+doesn't seem to be having much fun. 1 is fully corrupt captain of another count's troops. He could be bribed. 
+
+And the tenth one is actually plotting with Physician
+Richelieu as he is under his influence as well. He is being controlled with the help of a cursed ring, that puts the man under the control of whoever owns the
+counterpart of the ring. A wile micture of mind and discord magic. It has to be refreshed with blood rituals every few months and another ritual is approaching.
+
+There are many struggles, getting inside the town, but then access to the taverns as these are off limits to everyone who doesn't work there, or the millitary.
+
+""",
+"""
 Brother Gurth
 On the road they meet a man, with old, worn clothes, though relatively clean considering he is on the road. He greets the party, and stops, abruptly. Curious about
 the cursed item they are carrying, if they are carrying it as they planned. He is carrying a message to Asha, about the fact that fogeaters are already gathering behind
 the fog-line. So yes, he adventured there and survived, a feat very few are capable of doing. He carries no magical items, no weapons, and no armor.
 
 He does not like players carrying cursed magical items, and in his mind, since the party is not so strong, he sees it obvious he should stop you and convince them to
-heal the world by ending this torment of the old spirit. 
-
+heal the world by ending this torment of the old spirit.
 
 He is a monk, whose body is shapen to be an ultimate weapon, but who can also do magic, easily, he can recover mana while being in the fog. 
 """,
@@ -99,10 +115,12 @@ count Richieu visits the town to discuss matters with the mayor, the town militi
 Richieu, so he can walk with a relatively small squad of soldiers. This is a potential point of contact for the players.
 
 Luring the duke out is however going to be quite a challenge. However he does occasionally go out-side the camp to wash in a close by small lake. This is something even
-Richelieu can stop him from doing.
+Richelieu can't stop him from doing.
 
 In addition he likes a specific prostitute and he has her bring him good bakery from the town every time she visits. He has told her all the things he likes, and it is 
 known that he likes magical artifacts, items and trinkets, especially things that can create nice smells, calm the mind, or improve pleasure.
+
+Richelieu himself is preparing 
 
 """,
 """ ### Completed
@@ -275,9 +293,5 @@ Mechninations for players to fight against, resist?
 
 Aid in war one faction. help fight against Second Arch-lich invasion, Help against the Fog eater invasion. But also find and stop schemes of Arch lich cultists and agents,
 or red lander schemes. Stop the redlanders from assassinating world leaders, or stop them in their quest for the world ending spell.
-
-
-
-
 
 """
