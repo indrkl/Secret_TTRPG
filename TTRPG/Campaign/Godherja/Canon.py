@@ -44,5 +44,14 @@ Characters = {
     "Duke Routund": "The deranged duke who started the war in your area.",
     "Richelie, Routund's physician": "An ass hole who supposedly did something with Bella",
     "Nonnio": """Steward stuck in castle of Thespamis while this is under siege. She is a horny old woman, who is trustful, 
-        though a bit cynical."""
+        though a bit cynical.""",
+    "Arch Marque Remiet Poullierd of Oudemarches": """Ruler of Oudemarches, slightly poor ruler, knows some millitary, but a bit of slouch and wasteful.""",
+    "Princess Libelle, Duke of Eretrona":"",
+    "Hugoric":"Brother of Count Richie, Captain of the first division",
+    "Ludecy":"Sister of Count Richie",
+    "Aautokratia Achrythea of Hyrea from House Mischas":"",
+    "Princesa":"",
+    "Princesa":"",
+    "Princesa":"",
+
 }

@@ -48,6 +48,17 @@ Duke Routund's Marshal, count Richieu, he has been approached and is willing to 
 
 plot_hooks = [
 """
+Count Richie, who is also of house Pouillard has a brother Hugoric, who is the Captain of the first company under him. He is also a spymaster and will recognise Melly by face. He has already figured him being
+an underling under Gudoric Pouillard.
+
+They also have a sister, who is tormented by visions and divination magic. Secretly she has ties to Fog magic, since actually she is a bastard and a Svaljolki shaman is
+her real shaman.
+
+Richie and Hugoric do want the chalice of sight for their sister, since they realise that they might need it for the fight against the blood queen, since they will be
+in the front lines. However noone but them knows about her condition, and she is kept hidden, the rest of the Poullierd family has been told, that she is a bastard to
+not ask questions or seek to use her for marriage alliances. But her situation is something they intend to resolve.
+""",
+"""
 The town, around almost a thousand people, but currently hosting a lot more than that, the center 3 pubs and hostels have been turned into fun houses for the soldiers
 of the enemy force, the 3 city entrances are guarded by 2 men each, and 2 patrols go between these posts at all times. The posts and patrols stay up all the time, and
 are switched once the new group comes to have fun, some men from the next, third group are also part of the new group and they switch out with the previous guards and
