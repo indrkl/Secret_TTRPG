@@ -28,8 +28,14 @@ actions_that_have_been_done = [
     Party met the captain and lietanant from first company of Count Richie, and learnt that the fourth company of Duke Routund are a bunch of ass holes.
     """,
     """
-    
+    Lilith stole the chalice of sight from Duke Routund.
     """,
+    """
+    White peace was made
+    """,
+    """
+
+    """
 ]
 
 Characters = {
@@ -50,8 +56,8 @@ Characters = {
     "Hugoric":"Brother of Count Richie, Captain of the first division",
     "Ludecy":"Sister of Count Richie",
     "Aautokratia Achrythea of Hyrea from House Mischas":"",
-    "Princesa":"",
-    "Princesa":"",
-    "Princesa":"",
+    "Iana Thysia":"The original saint of Thysians",
+    "The forgotten one":"Teacher of the saints, rumored to be immortal",
+    "Julius Angelus":"",
 
 }

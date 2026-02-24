@@ -57,16 +57,16 @@ New player characters start at organization exp level.
 
 lvl.    exp required to level up / Accumulated
 1       100 exp
-2       125 exp / 225 exp
-3       150 exp / 375 exp
-4       175 exp / 550 exp
-5       200 exp / 750 exp
-6       250 exp / 1000 exp
-7       300 exp / 1300 exp
-8       350 exp / 1650 exp
-9       400 exp / 2050 exp
-10      500 exp / 2550 exp
-11      600 exp / 3150 exp
+2       150 exp / 250 exp
+3       200 exp / 450 exp
+4       250 exp / 700 exp
+5       300 exp / 1000 exp
+6       400 exp / 1400 exp
+7       500 exp / 1900 exp
+8       600 exp / 2500 exp
+9       800 exp / 3300 exp
+10      1000 exp / 4300 exp
+11      1200 exp / 5500 exp
 12      max level.
 
 

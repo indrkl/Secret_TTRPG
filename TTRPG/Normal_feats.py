@@ -146,8 +146,9 @@ appropriate.
         {'cost': 'major',
          'requires': 'Pyromancy',
          'name': 'Fire mastery',
-         'effect': '''Whenever a stack of burning is removed that was applied by you, gain a temporary flame token that
-         lasts until end of combat.
+         'effect': '''
+Whenever a stack of burning is removed that was applied by you, gain a temporary flame token that
+lasts until end of combat.
          
 You can spend flame tokens to fuel your spells and attacks:
 
@@ -180,7 +181,7 @@ gets double disadvantage for all their spells and attacks.
 At least 7 levels per remaining number of enemies: All your allies gain double advantage with all their offensive spells 
 and attacks.
          ''',
-         },
+        },
         {
             'cost': 'major',
             'name': 'Iron concentration',
@@ -245,6 +246,8 @@ dice. You can combine this with mana, and the maximum reduction using your life 
 proficiency. However the combined total reduction with reduction from mana is your proficiency + 2. So if your
 proficiency is 4, then you could spend 6 life points and 3 mana to reduce the cost by 6 dice, but you cannot spend
 6 life points and 6 mana to reduce it by 7 any more.
+
+In addition you pay no mana for the dice you gain using your blood.
             ''',
         },
     #     {
@@ -585,26 +588,28 @@ you may choose up to 2 options:
 * spend 1 mana to deal an additional 2 damage. (requires mage path)
          ''',
          },
-        # {'cost': 'major',
-        #  'requires': 'Blessed warrior',
-        #  'name': 'Blessed Champion',
-        #  'effect': '''At the start of combat you get an extra round where you can only cast buff spells on yourself.
-        #  Alternatively you could have a single base-line buff from "Guardian",
-        #  ''',
-        #  },
-#         {'cost': 8,
-#          'requires': 'Blessed Champion',
-#          'name': 'Blessed commander',
-#          'effect': '''The chosen buff also applies to all your allies within 20 m. of you.
-#          ''',
-#          },
+{'cost': 'major',
+ 'requires': 'Blessed warrior',
+ 'name': 'Blessed Champion',
+ 'effect': '''When picking this trait, choose a magical buff that could be applied to you with 3 power dice. You start each combat with this buff
+ on you for one iteration of the buff
+ ''',
+ },
+{'cost': 'major',
+    'requires': 'Blessed Champion',
+    'name': 'Blessed aura',
+    'effect': '''The chosen buff also applies to all your allies within 6 sq. of you.
+    ''',
+},
 
     ],
     'Skilled': [
         {'cost': 'small',
          'name': 'Knowing when to shut up',
          'effect': '''When failing a social challenge, there are no additional complications because of it (compared
-         to not doing the challenge at all).''',
+         to not doing the challenge at all).
+         
+         ''',
          },
         {'cost': 'small',
          'name': 'Deep apology',
@@ -613,17 +618,16 @@ you may choose up to 2 options:
          offer a deep apology to reduce the penalty (exact reduction is still decided by GM).
          ''',
         },
-#         {
-#             'cost': 'small',
-#             'name': 'Intimidating presence',
-#             'effect': '''
-# You can use twos in the dice pool for diplomacy roll targets regardless of the roll target. You cannot nudge dice to
-# become twos though, and when you do use this ability, the diplomacy action gets a intimidation aspect to it. You will
-# succeed, BUT!
-#
-# You must declare when using this ability.
-# ''',
-#         },
+        {
+            'cost': 'small',
+            'name': 'Intimidating presence',
+            'effect': '''
+When attempting a social challenge, you can choose to use add quite a bit of intimidation to the challenge, to get +1.
+
+This does make the success of this challenge easier, however using intimidation may have long term consequences based
+on who you intimidate.
+''',
+        },
         {'cost': 'small',
          'name': 'Foresight',
          'action': {
@@ -634,19 +638,6 @@ you may choose up to 2 options:
                 having been bought (subtract the gold cost of the item from your balance).'''
          }
          },
-#         {'name': 'Lore weaver',
-#          'cost': 'medium',
-#          'effect': '''
-# You can spend a luck token, to recall and tell a common myth or story, about something that you encounter on your
-# journey, these stories have a grain of truth in them, but may also have some parts as lies as well, depending on how
-# elusive the topic is.
-#          '''
-#          },
-#         {'cost': 'medium',
-#          'name': 'Lucky finder',
-#          'effect': '''
-# When rolling loot table, you can spend 2 luck token to be presented with 2 options, you still pick only 1.''',
-#          },
         {'cost': 'medium',
          'name': 'Insightful',
          'effect': '''
@@ -665,7 +656,7 @@ with someone, that someone is able to provide.''',
          'action': {
              'cost': '4 dice',
              'target': '-',
-             'proficiency': 'leadership',
+             'proficiency': 'social',
              'effect': '''
 When during a campaign turn your party wants to do several things, then you can do it following these steps: 
 
@@ -674,33 +665,13 @@ When during a campaign turn your party wants to do several things, then you can 
 2. GM states the difficulties of all actions (if they can be failed).
 
 3. Then for each action one of the players is assigned and they will do the action. Normal skill rules still apply.
-You can then give one player a +2 for the roll, and another +1. Then everyone.
+You can then give one player a +2 for the roll, and another +1. Then everyone roll to see if they succeed.
 
 4. After all actions are assigned a player and they have rolled 2d6 to see weather they were successful or not, players 
 may choose to spend luck and then all the actions are resolved as if the plan is being executed simultaneously.
              ''',
             }
         },
-#         {'cost': 'medium',
-#          'name': 'Tinkerer',
-#          'effect': '''
-# You have the ability to come up and craft all sorts of crazy gadgets. You carry materials with you, and during
-# campaign turns, if you can explain how a wild gadget could help you solve a challange, you can use the crafting
-# proficiency instead. the cost in materials depends on the challenge difficulty:
-#
-#
-# 3 dice: 15 gp
-#
-#
-# 4 dice: 30 gp
-#
-#
-# 5 dice: 50 gp
-#
-#
-# 6 dice: 80 gp
-#          ''',
-#         },
         {'cost': 'medium',
          'name': 'Inspiring',
          'effect': '''Grants you the ability to inspire others by spending luck tokens.
@@ -754,31 +725,40 @@ that would then result in a success.
 #              ]
 #          }
 #          },
-#         {'cost': 'major',
-#          'name': 'Offer them to surrender',
-#          'effect': '''
-#          You gain the offer enemy to surrender ability.
-#          ''',
-#          'action': {
-#              'cost': 'R5.R5',
-#              'range': '2 sq.',
-#              'target': 'single',
-#              'effect': '''
-# An enemy with 3 moral or less will surrender. If they have more than 3 but less than 6 moral remaining they will
-# get 2 confusion.
-#              ''',
-#              'difficulty_options': [
-#                  {
-#                      'cost': 'R5',
-#                      'effect': '''Increase the moral threshold for surrendering and confusion by 1''',
-#                  },
-#                  {
-#                      'cost': 'R3.R3',
-#                      'effect': '''Target one additional target with this ability''',
-#                  },
-#              ]
-#             }
-#         },
+        {'cost': 'medium',
+         'name': 'Offer them to surrender',
+         'effect': '''
+         You gain the offer enemy to surrender ability during combat.
+         ''',
+         'action': {
+             'cost': 'R5.R5',
+             'range': '2 sq.',
+             'target': 'single',
+             'proficiency': 'social',
+             'effect': '''
+An enemy with 5 moral or less will surrender. If they have more than 5 but less than 8 moral remaining they will
+get 2 confusion.
+             ''',
+             'difficulty_options': [
+                 {
+                     'cost': 'R5',
+                     'effect': '''Increase the moral threshold for surrendering and confusion by 1''',
+                 },
+                 {
+                     'cost': 'R3.R3',
+                     'effect': '''Target one additional target with this ability''',
+                 },
+             ]
+            }
+        },
+        {
+            'cost': 'medium',
+            'name': 'Fortune seeker',
+            'effect': '''
+When finding gold from treasure, or receiving rewards, you can spend a luck token in order to roll 2d6. On a 7+ you get 10 % more gold
+, on a 9+ you get 25 % more gold, on a 11 you get 50 % more gold, and on a 12 you receive twice the amount of gold from the instance.
+''',
+        },
         {'cost': 'major',
          'name': 'Natural leader',
          'effect': '''
@@ -821,16 +801,7 @@ players.
              people in your party (except for you) gain inspiration and other benefits of the inspire action.
             ''',
         },
-#         {
-#             'cost': 'major',
-#             'name': 'Fortunate',
-#             'effect': '''
-# When negotiating for rewards, finding treasure, selling something unique,
-# you can meet a roll target of R5.R5.R5 for values lower than 500 gp. or R5.R5.R5.R5
-# for values larger than that but lower than 5000 gp or R5.R5.R5.R5.R5 for even larger values to increase the gold gains
-# by 50 %. You can use diplomacy skill for these checks. This roll target needs to be met
-# during the same scene, so it still competes with all other negotiation challenges in that scene.''',
-#         },
+
         {
             'cost': 'major',
             'name': 'Excellent instructor',
@@ -986,16 +957,32 @@ work the same as having the same levels of the these status effects.
 Enchanted weapons cannot be coated with poison.
 '''
          },
+        {
+        'name': 'Perceptive combatant',
+         'cost': 'medium',
+         'effect': '''
+When using the Study opponent action, you can do that to up to 3 targets simultaniuously.
+
+Also, you have advantage when doing the study opponents general action.
+''' 
+        },
+        {
+        'name': 'Pride in wounds',
+         'cost': 'small',
+         'effect': '''
+While you have at least 2 scarred or wounded dice, you have +1 to your social skill checks.
+''' 
+        },
     ],
-#     'General': [
-#         {'cost': 'major',
-#          'name': 'Legendary magic item user',
-#          'effect': '''You can attune to one additional magical item. You can double one numerical effect of 1 magical
-# item you wear / wield. You can change the item/effect at the beginning of each of your rounds.
-# If you have the blade enchanter feat, you can use this ability on the enchanted weapon you wield.
-# '''
-#          },
-#     ]
+    'General': [
+        {'cost': 'major',
+         'name': 'Legendary magic item user',
+         'effect': '''You can attune to one additional magical item. You can double one numerical effect of 1 magical
+item you wear / wield. You can change the item/effect at the beginning of each of your rounds.
+If you have the blade enchanter feat, you can use this ability on the enchanted weapon you wield.
+'''
+         },
+    ]
 }
 
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, ListFlowable, ListItem, PageBreak

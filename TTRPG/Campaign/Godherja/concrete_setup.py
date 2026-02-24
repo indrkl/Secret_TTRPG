@@ -51,7 +51,7 @@ plot_hooks = [
 Count Richie, who is also of house Pouillard has a brother Hugoric, who is the Captain of the first company under him. He is also a spymaster and will recognise Melly by face. He has already figured him being
 an underling under Gudoric Pouillard.
 
-They also have a sister, who is tormented by visions and divination magic. Secretly she has ties to Fog magic, since actually she is a bastard and a Svaljolki shaman is
+They also have a sister Ludecy, who is tormented by visions and divination magic. Secretly she has ties to Fog magic, since actually she is a bastard and a Svaljolki shaman is
 her real shaman.
 
 Richie and Hugoric do want the chalice of sight for their sister, since they realise that they might need it for the fight against the blood queen, since they will be
@@ -189,7 +189,9 @@ diamond card suite.
 The none hidden floors consist of dozens of bed rooms, several kitchens, a reception hall, a sparring hall, cleaning rooms. From the hall-way next to the largest bedroom
 there is a hidden leverage, which leads to secret celler, where is the study, there used to be a lot of books that the book shelves have been burnt down. Only the table
 remains, at least one drawer survived the fire, there is the journal, and the amulet. There is also the portal room, which has connections to various other places, but
-all the portals lay dorment, There are runes next to all the doors. To activate the portals, a member has to touch the corresponding runes at both ends. In the journal,
+all the portals lay dorment, There are runes next to all the doors. To activate the portals, a member has to touch the corresponding runes at both ends. 
+
+In the journal,
 you learn of the discussion of the worse case considerations, if the spell loses controls, we can estimate a large scale loss of mages in the order, in this case the portals
 need to be closed in order to preserve as many of the strong-holds as possible. In the end it takes only a few weeks for 2 dimension mages to restore the connection, so if
 order is restored, it should be no problem.

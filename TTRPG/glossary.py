@@ -228,8 +228,9 @@ If there are no dice left to scar when you take damage, you die.
     {
     'name': 'moral',
      'description': """
-All enemies and NPC allies have moral. That means their willingness to fight. GM can obviously determine the moral for
-enemies. An average starting moral for mobs and NPCs is 10.
+All enemies and NPC allies have moral. That means their willingness to fight. 
+GM can obviously determine the moral for enemies. 
+But an average fighter starts the fight with 10 moral, when he thinks he has a fair chance to win.
 
 Here are the general guidelines for how moral is lost:
 
@@ -241,6 +242,8 @@ Here are the general guidelines for how moral is lost:
 6. Getting outnumbered reduces moral by 2
 7. Defeating an enemy increases moral by 2
 8. For mobs losing half of their HP+DEF they lose 3 moral
+9. Losing half of allies without taking down any of the enemies loses 5 morale. Half in this case can be weighted, so if there are 2 enemy heroes, and 2 mobs,
+and you take down the 2 mobs, it does not phase the enemy heroes, however if you take down one of the heroes and one of the mobs, that is another story.
      """,
     },
     {

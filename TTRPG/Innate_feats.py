@@ -175,6 +175,8 @@ simply someone who wants favor from your house etc.)
             You do not reroll any virtual dice you gained by using mana or through other means.
             
             Recover that ability at the third, sixth and tenth round of combat.
+
+            If you are talented or legendary, you have +2 proficiency when casting the spells using this ability.
             '''
         },
         {
@@ -238,6 +240,45 @@ lose dice, you simple release the mana stored in them as you need more mana, dic
 You start the game with having maximum mana, and all your normal dice are fully stored with mana.  
 '''
         },
+        {
+            'name': 'Rune bearer',
+            'description': '''
+You do not cast magic as normally. Instead you craft runes upon your body that prepare spells. Each rune on your body reserves
+your maximum mana equal to twice the mana cost of the spell behind the rune. Each rune takes space the size of your palm.
+Spells that target other than yourself can only be cast from your palms, meaning you can have only 2 targeting spells prepared
+at any time. In theory you can also use your feet to target if you have the kick feat from martial. Then you would need to combine
+the activation with the kick action.
+
+To activate a rune, you only need 2 dice of the school the spell belongs to.
+
+To recover the runes, you still need to restore mana equal to the reserved amount of mana. But the mana instead flows to the runes.
+
+Interaction with rituals is unaffected.
+
+Drawback: You can cast less spells per battle compared to your maximum mana. You are inflexible in the number and specifics of the spells you cast.
+
+Advantage: Casting them is easier. You simply need 2 dice of the same school and durations of spells which have them is doubled.
+'''
+        },
+        {
+            'name': 'Chaos born',
+            'description': '''
+You are tormented by chaos influence.
+
+You do not get proficiency in any school of magic, instead you develop proficiency in your primary, secondary and thirdiary chaos
+domains. 
+
+You do not learn spells, instead you gain number of different usable spells in any of the three domains.
+
+At the beginning of game, and then at each down-time, or when you character reaches extreme stress (this is a matter of roleplay
+and at GMs discretion), you reroll randomly, which schools of magics are mapped to you chaos domains, which you have
+any usable spells for. And then you roll randomly which of those spells you have available in those schools.
+
+As an upside, your primary domain always uses 5 as the power dice, your secondary uses 2 as the power dice, and the thirdiary uses 3 as the power dice.
+You always have advantage when casting spells, and 
+
+'''
+        },
     ],
     'Martial': [
         {
@@ -249,7 +290,7 @@ You start the game with having maximum mana, and all your normal dice are fully 
         {
             'name': 'Enduring',
             'description': '''
-You start with 1/2/3/4 additional maximum stamina depending on the level in martial path. And in addition you can
+You start with 2/3/3/4 additional maximum stamina depending on the level in martial path. And in addition you can
 use your stamina once more per round.
 
 When you are at least talented you also recover 1 stamina every round during combat. When you are at
@@ -296,7 +337,7 @@ reduce damage dealt to you by 3.
             ''',
         },
         {
-            'requires': 'Talented',
+            'requires': 'Adept',
             'name': 'Defiant',
             'description': '''
 When your martial path is talented, When a dice would become scarred, roll it. On a 6, it stays normal.
@@ -322,7 +363,7 @@ At the beginning of each round, for each die that was damaged for the first time
         {
             'requires': 'Talented',
             'name': 'Tough',
-            'description': '''If you are talented, then every turn negate the first damage you receive. If you are
+            'description': '''If you are talented, then every round negate the first damage you receive. If you are
             legendary, then negate the first 2 damage you receive.
             
             This ability resets during the round if one of your dice loses all it's HP.
@@ -351,25 +392,33 @@ Once per round, whenever you make an attack, you can use one and only one of tho
                 spells, nor can spells have any none-damaging effect on you. When you attack a spell caster, they lose 
                 1 mana for every 3 unmitigated damage (that damages their dice)''',
         },
-        # {
-        #     'requires': 'Talented',
-        #     'name': 'Life stealer',
-        #     'description': '''You cannot be healed using nature magic. Heal 1d6 -1 life for each damage dice you deal in
-        #         melee combat. Heal 1d6 instead, if your martial path is legendary.''',
-        # },
+        {
+            'name': 'Vengeful',
+            'description': '''
+            At the beginning of combat choose one enemy. You have advantage when attacking that enemy with weapons.
 
-        # {
-        #     'name': 'Harmonious body',
-        #     'description': '''Whenever you advance in REFLEX or FORTITUDE saving throws. Advance in the other one as
-        #         well. If you are talented or legendary in martial, also advance in Will proficiency. You cannot advance
-        #         in will proficiency from mage path in this case.''',
-        # },
-    #     {
-    #         'name': 'Favored weapon',
-    #         'description': '''Choose 1 weapon category. In that weapon your MAX level is as if your PATH
-    # level in Martial was 1 higher (cannot exceed Legendary).
-    #     ''',
-    #     },
+            If you are talented/legendary, you deal an additional 1/2 damage with weapons against that enemy.
+            '''
+        },
+        {
+            'name': 'The hunter',
+            'description': '''
+            You have immunity to the afraid condition. You have advantage against enemies with the afraid condition.
+
+            If you are at least talented, your attacks inflict the afraid condition if you deal at least 3 damage
+            that bypasses their defenses.
+
+            If you are legendary, you may gain one token for another ability when hitting an afraid enemy.
+            '''
+        },
+        {
+            'requires': 'Legendary',
+            'name': 'Pain visions',
+            'description': '''
+                Whenever a die loses all it's HP, you gain a rush of clarity, immideately recovering your defense to maximum and you can reroll any number
+                of remaining dice for a better next turn.
+            '''
+        },
     ],
     'Skilled': [
         {
