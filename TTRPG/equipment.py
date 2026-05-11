@@ -8,20 +8,8 @@ equipment = {
             'range': 'melee',
             'difficulty_options': [
                 {
-                    'cost': 'R1',
-                    'effect': 'bypass damage reduction',
-                },
-                {
-                    'cost': 'R2.R2',
-                    'effect': 'Double damage',
-                },
-                {
-                    'cost': 'R2',
-                    'effect': '+ 1 damage',
-                },
-                {
-                    'cost': 'R1.R1',
-                    'effect': 'Disrupt 2',
+                    'cost': 'R2.R2.R2',
+                    'effect': 'Deal +6 damage',
                 },
             ]
         }
@@ -34,11 +22,7 @@ equipment = {
             'difficulty_options': [
                 {
                     'cost': 'R2',
-                    'effect': '+ 1 damage',
-                },
-                {
-                    'cost': 'R6.R6',
-                    'effect': 'Disrupt 2',
+                    'effect': '+ 1 damage (can be used multiple times)',
                 },
                 {
                     'cost': 'R6.R6.R6',
@@ -66,16 +50,8 @@ equipment = {
                     'effect': 'bypass damage reduction',
                 },
                 {
-                    'cost': 'R6',
-                    'effect': '+ 2 damage',
-                },
-                {
                     'cost': 'R6.R6',
                     'effect': '+ 5 damage',
-                },
-                {
-                    'cost': 'R1.R1',
-                    'effect': 'Disrupt 1',
                 },
             ]
         }
@@ -108,10 +84,6 @@ equipment = {
                     'effect': 'Remove guarded status effect',
                 },
                 {
-                    'cost': 'R3',
-                    'effect': '+ 1 damage',
-                },
-                {
                     'cost': 'R3.R3',
                     'effect': '+ 3 damage',
                 },
@@ -129,12 +101,8 @@ equipment = {
                     'effect': 'Recover 1 defense',
                 },
                 {
-                    'cost': 'R4',
-                    'effect': '+ 1 damage',
-                },
-                {
                     'cost': 'R4.R4',
-                    'effect': '+ 3 damage',
+                    'effect': '+ 2 damage and disorient 1 on damage',
                 },
             ]
         }
@@ -146,12 +114,8 @@ equipment = {
             'range': 'melee',
             'difficulty_options': [
                 {
-                    'cost': 'R4',
-                    'effect': '+ 1 damage',
-                },
-                {
                     'cost': 'R4.R4',
-                    'effect': '+ 3 damage',
+                    'effect': '+ 2 damage and disorient 1 on damage',
                 },
                 {
                     'cost': 'R2',
@@ -171,8 +135,8 @@ equipment = {
                     'effect': 'Recover 2 defense',
                 },
                 {
-                    'cost': 'R5',
-                    'effect': '+ 2 damage',
+                    'cost': 'R5.R5',
+                    'effect': '+ 3 damage and disorient 1 on damage',
                 },
                 {
                     'cost': 'R2',
@@ -197,7 +161,7 @@ equipment = {
                 },
                 {
                     'cost': 'R4.R4',
-                    'effect': 'Apply a level of disoriented',
+                    'effect': 'Disorient 2 on damage',
                 },
             ]
         }
@@ -214,10 +178,6 @@ Strikes with 2 handed mace always bypass damage reduction
             'difficulty_options': [
                 {
                     'cost': 'R5',
-                    'effect': 'Reduce defenses by 3 before doing damage',
-                },
-                {
-                    'cost': 'R5',
                     'effect': '+ 2 damage',
                 },
                 {
@@ -225,8 +185,8 @@ Strikes with 2 handed mace always bypass damage reduction
                     'effect': 'Disrupt 1',
                 },
                 {
-                    'cost': 'R1.R1',
-                    'effect': 'Disorient 1',
+                    'cost': 'R5.R5',
+                    'effect': '+1 damage and Disorient 2 on damage',
                 },
             ]
         }
@@ -237,10 +197,6 @@ Strikes with 2 handed mace always bypass damage reduction
             'damage': 3,
             'range': 'melee',
             'difficulty_options': [
-                {
-                    'cost': 'R5',
-                    'effect': 'Remove guarded status effect',
-                },
                 {
                     'cost': 'R5',
                     'effect': '+ 2 damage',
@@ -271,6 +227,10 @@ defense by 2 and damage reduction by 1. Also recover 2 defense.
                 {
                     'cost': 'R2.R2',
                     'effect': 'Gain an additional damage reduction',
+                },
+                {
+                    'cost': 'R2',
+                    'effect': 'Recover all defense',
                 },
             ]
         }
@@ -362,12 +322,12 @@ This is not a weapon, but can be used by beasts
                 },
                 {
                     'cost': 'R3.R3',
-                    'effect': 'Apply 1 disoriented',
+                    'effect': 'Apply 2 disoriented on damage',
                 },
                 {
                     'cost': 'R3.R3',
-                    'effect': '''Also get a level of upper hand as if you had done the wrestle action without spending
-                    stamina.''',
+                    'effect': '''On damage, also get a level of upper hand as if you had done the wrestle action without 
+                    spending stamina.''',
                 },
             ]
         }

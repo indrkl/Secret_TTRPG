@@ -25,6 +25,12 @@ random_names_female = [
 ]
 
 
+scouting_failurs = """
+combat encounter, someone gets captured, identity gets revealed,
+the possibility of ruining 
+"""
+
+
 player_start = """
 You serve Countess of Ithis, Mary'sint of house Pouillard. More precisely, she has trusted her son Gudoric Pouillard to be her spy master, and his one master stroke
 so far has been to find you to do his job. At least it feels to you that you do all the hard work, while he? What does he do? You actually have no idea.
@@ -84,6 +90,7 @@ the fog-line. So yes, he adventured there and survived, a feat very few are capa
 He does not like players carrying cursed magical items, and in his mind, since the party is not so strong, he sees it obvious he should stop you and convince them to
 heal the world by ending this torment of the old spirit.
 
+
 He is a monk, whose body is shapen to be an ultimate weapon, but who can also do magic, easily, he can recover mana while being in the fog. 
 """,
 """
@@ -126,12 +133,10 @@ count Richieu visits the town to discuss matters with the mayor, the town militi
 Richieu, so he can walk with a relatively small squad of soldiers. This is a potential point of contact for the players.
 
 Luring the duke out is however going to be quite a challenge. However he does occasionally go out-side the camp to wash in a close by small lake. This is something even
-Richelieu can't stop him from doing.
+Richelieu can stop him from doing.
 
 In addition he likes a specific prostitute and he has her bring him good bakery from the town every time she visits. He has told her all the things he likes, and it is 
 known that he likes magical artifacts, items and trinkets, especially things that can create nice smells, calm the mind, or improve pleasure.
-
-Richelieu himself is preparing 
 
 """,
 """ ### Completed
@@ -306,5 +311,9 @@ Mechninations for players to fight against, resist?
 
 Aid in war one faction. help fight against Second Arch-lich invasion, Help against the Fog eater invasion. But also find and stop schemes of Arch lich cultists and agents,
 or red lander schemes. Stop the redlanders from assassinating world leaders, or stop them in their quest for the world ending spell.
+
+
+
+
 
 """

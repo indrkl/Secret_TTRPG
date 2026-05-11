@@ -1138,12 +1138,24 @@ Every time you pay the concentration cost, you can move the cloud of darkness by
             {
                 'name': 'Glimpse into future',
                 'effect': '''During campaign turn you can ask a question about the campaign turn to which GM answers 
-                honestly either yes / no / yes and no / yet uncertain''',
-                'difficulty': 'R3.R3',
+                honestly either yes / no / yes and no / yet uncertain
+                
+                This question costs 3 mana for very localized events regarding known individuals to the caster in the
+                short term, up to 1 day.
+                
+                To take into account individuals who are unknown to you, this costs X 2 mana.
+                
+                To increase the scope from local to county level, from county to duchy size, from duchy to kingdom, 
+                from kingdom to empire size, from empire size to the whole world, each costs an additional doubling of
+                mana. So a world level prophecy would cost 32 X more from the base cost.
+                
+                In addition to see further than 1 day, the cost is multiplied by the number of days.
+                
+                So to see 30 days in advance about what is happening in the duchy at large involving the characters you
+                are aware of costs 3 X 30 X 4 = 360 mana for example.
+                ''',
+                'difficulty': 'mana cost.',
                 'scaling': [
-                    {'D': 'R3', 'L': 1, 'description': '''
-                        Ask another follow-up question.
-                    '''},
                 ],
             },
             {

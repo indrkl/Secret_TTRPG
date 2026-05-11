@@ -22,16 +22,15 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
 
 
     name_text_box = IniteractiveTextBox(text='name', width=78)
-    background_text_box = IniteractiveTextBox(text='name', width=232)
-    description_text_box = IniteractiveTextBox(text='name', width=386)
-    path_type_box = IniteractiveTextBox(text='name', width=78)
-    box_3 = IniteractiveTextBox(text='name', width=56)
-    box_2 = IniteractiveTextBox(text='name', width=34)
-    box_1 = IniteractiveTextBox(text='name', width=12)
-    box_5 = IniteractiveTextBox(text='name', width=100)
-    box_6 = IniteractiveTextBox(text='name', width=122)
-    box_9 = IniteractiveTextBox(text='name', width=188)
-    box_21 = IniteractiveTextBox(text='name', width=22*21-10)
+    background_text_box = IniteractiveTextBox(text='background', width=232)
+    description_text_box = IniteractiveTextBox(text='description', width=386)
+    path_type_box = IniteractiveTextBox(text='path', width=78)
+    box_3 = IniteractiveTextBox(text='box3', width=56)
+    box_2 = IniteractiveTextBox(text='box2', width=34)
+    box_1 = IniteractiveTextBox(text='box1', width=12)
+    box_5 = IniteractiveTextBox(text='box5', width=100)
+    box_6 = IniteractiveTextBox(text='box6', width=122)
+    box_21 = IniteractiveTextBox(text='box21', width=22*21-10)
 
     checkbox = InteractiveCheckBox(text='tick')
     data = [
@@ -55,8 +54,8 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
             '', '', '', '', '', Paragraph('Stamina', style=basic_paragraph_style), '', '',
             Paragraph('Mana', style=basic_paragraph_style), '', Paragraph('Luck', style=basic_paragraph_style), '',
         ],
-        ['Damage'] + [''] * 2 + [box_1] * 6 + [''] + ['Maximum'] + [''] * 3 + [box_3, '', '', box_2, '', box_2, ''],
-        ['Scarred'] + [''] * 2 + [checkbox] * 6 + [''] + ['Current'] + [''] * 3 + [box_3, '', '', box_2, '', box_2, ''],
+        ['Damage'] + [''] * 2 + [box_1] * 6 + [''] + ['Maximum'] + [''] * 3 + [IniteractiveTextBox(text='box3_damage', width=56), '', '', box_2, '', box_2, ''],
+        ['Scarred'] + [''] * 2 + [checkbox] * 6 + [''] + ['Current'] + [''] * 3 + [IniteractiveTextBox(text='box3_scars', width=56), '', '', box_2, '', box_2, ''],
         ['Proficiencies'] + [''] * 5 + ['Inventory'] + [''] * 5 + ['Spells'] + [''] * 8
     ]
     header_block = 4
@@ -103,6 +102,7 @@ def generate_character_sheet(mage, martial, skilled, spells=[], feats=[], equipm
     premade_list = ['Physique', 'Precision', 'Social', 'Intelligence', 'Cunning']
 
     for x in range(header_block + 4, header_block + 22):
+        box_9 = IniteractiveTextBox(text='box9_' + x, width=188)
         data.append([Paragraph(premade_list[i], style = basic_paragraph_style) if len(premade_list) > i else box_5] + [''] * 4 + [box_1, box_6] + [''] * 5 + [box_9] + [''] * 8)
         i += 1
         style.extend([

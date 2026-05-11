@@ -1,7 +1,17 @@
+exp = {
+    'first long rest': "198 x 1.55 = 307 group EXP, group levelled up to level 3."
+}
+
+players = {
+    'Andreas': """Melly - Melvrik Richard Sebastian de Angeleu the second""",
+    'Tapashi': """Lilith Cassianor""",
+    'Taavi': """Vivien Valcroix""",
+}
+
 items_in_world = {
     "Amulet of health": "Currently in the posession of Asha. Heals scars.",
     "Cursed sword": "Haunted by Samarian warrior, it is hidden somwhere in the forest, away from peasants.",
-    ""
+    "Chalice of sight": "+2 to divination proficiency, but requires minimum of 3 divination proficiency to use."
 }
 
 actions_that_have_been_done = [
@@ -28,14 +38,9 @@ actions_that_have_been_done = [
     Party met the captain and lietanant from first company of Count Richie, and learnt that the fourth company of Duke Routund are a bunch of ass holes.
     """,
     """
-    Lilith stole the chalice of sight from Duke Routund.
+    Routond and Princess Libelle made white peace. Routound believes we stole the chalice so considers the reperations
+    paid. 
     """,
-    """
-    White peace was made
-    """,
-    """
-
-    """
 ]
 
 Characters = {
@@ -53,11 +58,11 @@ Characters = {
         though a bit cynical.""",
     "Arch Marque Remiet Poullierd of Oudemarches": """Ruler of Oudemarches, slightly poor ruler, knows some millitary, but a bit of slouch and wasteful.""",
     "Princess Libelle, Duke of Eretrona":"",
-    "Hugoric":"Brother of Count Richie, Captain of the first division",
-    "Ludecy":"Sister of Count Richie",
+    "Hugoric": "Brother of Count Richie, Captain of the first division",
+    "Ludecy": "Sister of Count Richie",
     "Aautokratia Achrythea of Hyrea from House Mischas":"",
-    "Iana Thysia":"The original saint of Thysians",
-    "The forgotten one":"Teacher of the saints, rumored to be immortal",
-    "Julius Angelus":"",
+    "Iana Thysia": "The original saint of Thysians",
+    "The forgotten one": "Teacher of the saints, rumored to be immortal",
+    "Melvrik Richard Sebastian de Angeleu (the first)": "",
 
 }
