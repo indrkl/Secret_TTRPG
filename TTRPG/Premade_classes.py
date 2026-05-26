@@ -3,8 +3,8 @@ premade_classes = [
     'name': 'Paladin',
     'MARTIAL': 4,
     'MAGE': 2,
-    'Innate_feat_martial': 'Bulwark',
-    'Innate_feat_mage': 'Divine protector',
+    'foundation_martial': 'Bulwark',
+    'foundation_mage': 'Divine protector',
     'Levels': [
         {
             'notes': ['''
@@ -101,8 +101,8 @@ premade_classes = [
         'name': 'Mercenary (2 weapon variant)',
         'MARTIAL': 3,
         'SKILLED': 3,
-        'Innate_feat_martial': 'Tough',
-        'Innate_feat_skilled': 'Well connected',
+        'foundation_martial': 'Tough',
+        'foundation_skilled': 'Well connected',
         'Levels': [
             {
                 'notes': ['''
@@ -197,8 +197,8 @@ already provides a wide dice coverage so adding more options doesn't make it mor
         'name': 'Genius',
         'MARTIAL': 2,
         'SKILLED': 4,
-        'Innate_feat_martial': 'Harmonious body',
-        'Innate_feat_skilled': 'Prodigy',
+        'foundation_martial': 'Harmonious body',
+        'foundation_skilled': 'Prodigy',
         'Levels': [
             {
                 'notes': ['''
@@ -299,8 +299,8 @@ some other skill instead of leadership to instruct the party on.
         'name': 'Pyromancer',
         'MAGE': 4,
         'SKILLED': 2,
-        'Innate_feat_mage': 'Metamagician',
-        'Innate_feat_skilled': 'Lucky',
+        'foundation_mage': 'Metamagician',
+        'foundation_skilled': 'Lucky',
         'Levels': [
             { # 1
                 'notes': ['''
@@ -391,7 +391,7 @@ from pdf_utils.styles import basic_paragraph_style, basic_list_style, minor_titl
 from reportlab.lib import colors
 
 
-from Characters import find_feat_object, find_general_action, find_spell_object, mana_multiplier, luck_multiplier
+from Characters import get_feat_and_flowable, find_general_action, find_spell_object, mana_multiplier, luck_multiplier
 
 def generate_class_flowable(premade_class):
     from Innate_feats import prep_feat_flowable as prep_innate_feat_flowable
@@ -408,7 +408,7 @@ def generate_class_flowable(premade_class):
     from equipment import weapon_classes, prep_equipment_flowable
     from equipment import equipment as all_equipment
 
-    innate_feats = [{'name': premade_class[key], 'path': key[12:]} for key in ['Innate_feat_skilled', 'Innate_feat_mage', 'Innate_feat_martial'] if key in premade_class]
+    innate_feats = [{'name': premade_class[key], 'path': key[12:]} for key in ['foundation_skilled', 'foundation_mage', 'foundation_martial'] if key in premade_class]
     feats = []
     progression_feats = []
     spells = []
@@ -432,10 +432,12 @@ def generate_class_flowable(premade_class):
 
     for feat in innate_feats:
         feat_name = re.search('(^[A-Za-z ]*)', feat.get('name'))[1]
-        feat_obj = find_feat_object(feat_name, all_innate_feats)
         path_power = premade_class.get(feat['path'].upper())
         name_addon = ' (%s)'%(path_mapping[path_power])
-        elements.extend(prep_innate_feat_flowable(feat_obj, name_addon=name_addon))
+
+        _, feat_flowable = get_feat_and_flowable(feat_name, name_addon=name_addon)
+
+        elements.extend(feat_flowable)
 
     for indx in range(len(premade_class['Levels'])):
         elements.append(Paragraph('Level %d' % (indx+1), style=minor_title))
@@ -491,14 +493,13 @@ def generate_class_flowable(premade_class):
 
 
     for feat in feats:
-        print(feat)
-        feat_obj = find_feat_object(feat, all_normal_feats)
-        elements.extend(prep_normal_feat_flowable(feat_obj))
+        _, feat_flowable = get_feat_and_flowable(feat)
+        elements.extend(feat_flowable)
 
 
     for feat in progression_feats:
-        feat_obj = find_feat_object(feat, all_progression_feats)
-        elements.extend(prep_progression_feat_floable(feat_obj))
+        _, feat_flowable = get_feat_and_flowable(feat)
+        elements.extend(feat_flowable)
 
     elements.append(Paragraph('Spells', style=minor_title))
 

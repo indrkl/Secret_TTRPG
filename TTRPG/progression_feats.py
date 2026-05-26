@@ -39,11 +39,12 @@ feats = {
     'Martial': [
         {
             'name': 'Enduring',
-            'description': '''Every second advancement in stamina provide + 1 maximum stamina''',
+            'description': '''Every advancement in stamina provide + 1 maximum stamina''',
         },
         {
             'name': 'Powerful',
-            'description': '''You have one additional dice during combat''',
+            'description': '''You have one additional dice during combat, which you can use for general actions, shield
+            and attacks''',
         },
         {
             'name': 'Defensive',
@@ -57,12 +58,12 @@ feats = {
     'Skilled': [
         {
             'name': 'Lucky',
-            'description': '''Every second advancement in luck provides 1 additional luck token.
+            'description': '''Every advancement in luck provides 1 additional luck token.
             ''',
         },
         {
             'name': 'Resourceful',
-            'description': '''You have one additional dice during scenes
+            'description': '''You have one additional dice during campaign turns
             ''',
         },
     ]

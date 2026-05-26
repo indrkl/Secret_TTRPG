@@ -1,7 +1,7 @@
 
 rooms = [
     {
-        'key': 'First hall',
+        'key': 'First hall (1)',
         'description': '''You arrive to the entrance of the cave, it is rather wide, 10 m x 4 m. It quickly goes
         narrower, allowing a single orc to walk through at a time, and then opens up again into a wide space inside the
         mountain. It is pitch dark though. 
@@ -23,26 +23,16 @@ rooms = [
         '''
     },
     {
-        'key': 'The hall of growth',
-        'description': '''Finally you arrive to an enourmous open area, where the moss gives off light, there are 
+        'key': 'The hall of growth(7)',
+        'description': '''
+        finally you arrive to an enourmous open area, where the moss gives off light, there are 
         mushrooms, hundreds of different types of mushrooms, there is a definite magical aura in the room, the size
         500 m to the end, starts going wider being 30 m wide at it's peak, and there are multiple layers or floors,
-        where the moss and mushroom grows in each of the layers.'''
+        where the moss and mushroom grows in each of the layers. You can also see a lake, and a waterfall that feeds
+        into it'''
     },
     {
-        'key': 'Waterfall',
-        'description': '''
-        
-        '''
-    },
-    {
-        'key': 'Devils bed area',
-       'description': '''
-
-        '''
-    },
-    {
-        'key': 'the area across the bridge - grove',
+        'key': 'the area across the bridge - grove (2)',
        'description': '''
         When you cross the "bridge", the path leads to a grove, where snow melts and the water turns into many streams
         that hide beneath the stone walls. In the center there are trees and flowers, the ceiling is open and you can
@@ -60,7 +50,7 @@ rooms = [
         ''',
     },
     {
-        'key': 'The pit path',
+        'key': 'The pit path (3)',
        'description': '''
         When you turn right from the crossing, then you come to a narrow path, which has chasms on the both sides, if
         you like down you see pit blackness. It is actually a dirt pit, which is pit dark that is only after falling 5
@@ -69,12 +59,55 @@ rooms = [
         ''',
     },
     {
-        'key': 'The frontal camp',
+        'key': 'The frontal camp (5)',
        'description': '''
         After the pit path, unless players have encountered the first group of devils already, then one of the groups
-        is staying en guard here. It is a place, where they campers have an advantage, they spot whoever comes earlier.
+        is staying en guard here. It is a place, where the campers have an advantage, they spot whoever comes earlier.
         They are camped in all the hidden corners, so there is an empty opening in the center. The path to their leads
         up for a moment, so it is really hard to spot if something is behind there. 
+        ''',
+    },
+    {
+        'key': 'The waterfall(6)',
+       'description': '''
+       The stream joins other streams, making the path downwards slowly into a sort of a small river. It turns right,
+       and ends as being a 50 m. tall waterfall. Down you see a in cave lake, you can only suppose that the water
+       steadily seaps away into the cracks of the cave, since you can also see shore and a vast dry area, being glown
+       up by the magical mushrooms and moss. It is all very green and brown mossy, and of all the colors of mushrooms,
+       a wonderful sight to see.
+        ''',
+    },
+    {
+        'key': 'The devil encampment(8)',
+       'description': '''
+       Near the lake there is the devil base, with huts, storage area, and a tall tower with a hut on top in the center.
+       Both the path from the frontal camp and the lake can lead to there.
+        ''',
+    },
+    {
+        'key': 'Borgs secret treasury (4)',
+       'description': '''
+       This is where Borg has been hiding away some of the extra loot in his expeditions, so he doesn't have to give
+       them to Thrag. That involves some nice fur, a large pipe, prepared powder, that supposedly can be smoked. It
+       gives you a good high. And a used to be fiesty druid, who is in a cage. Who has been there for 8 months already 
+       and is in the brink of breaking. She is however not from this village, so is not missing. But cannot be killed
+       either due to the pact. She insulted Borg, so Borg doesn't bother in ransoming her.
+        ''',
+    },
+    {
+        'key': 'Sham secret treasury (4)',
+       'description': '''
+       Through the underwater cave you arrive to Sham's secret stash, this is much more practical compared to Borg's.
+       It has 2 healing potions, 2 luck potions, an amulet of curse protection, with church of progress symbolics,
+       25 gold, and prepared mushrooms to restore mana worth of 100 gp.
+        ''',
+    },
+    {
+        'key': 'Iron and coal mines (10)',
+       'description': '''
+        From the camp site, there are now man made tunnels leading to the mines, in the mines there are multiple paths 
+        that have been dug left and right. All but the last 4 have been depleted. There is also a well like mechanism to
+        pull the iron out, that leads to the surface. 
         ''',
     },
 
@@ -97,24 +130,23 @@ cards = {
     against freezing. Every time you would gain a stack of freezing roll 1d6. On a 4, 5 or 6 you do not get it. It does
     require attuning.
     ''',
-
 }
 
 combat_encounters = [
     {
         'name': 'devils',
         'knight': 'Small imp, 1 HP, 1 dodge per turn, disrupt 1',
-        'pawn': 'Throggar, 3 HP, 3 ATK, 4 MV',
+        'pawn': 'Throggar, 4 HP, 3 ATK, 4 MV',
         'bishop': 'Ice imp - casts freezing every other turn.',
         'rook': 'Troll, 10 HP, 6 ATK, 4 MV, occupies 2 x 2 squares, so create for blocking.',
-        'queen1': '''A big fat brute wielding a two handed Axe. 6 dice, 4 toughness, 3 DEF. 2 physique, axe, fortitude.
+        'queen1': '''Borg, A big fat brute wielding a two handed Axe. 6 dice, 4 toughness, 3 DEF. 2 physique, axe, fortitude.
         Savage Axe feat and 3 stamina. 
         ''',
         'queen2': '''
-        A spell casting demon wielding a staff of freezing. 6 dice, 2 toughness, 2 DEF, 1 physique, will. 9 mana. 
+        Sham, A spell casting demon wielding a staff of freezing. 6 dice, 2 toughness, 2 DEF, 1 physique, will. 9 mana. 
         ''',
         'king': '''
-        A fat demon, who is quite weak, 10 HP, but can order 3 throggar every turn to focus on someone specific.
+        Thrag, A fat demon, who is quite weak, 10 HP, but can order 3 throggar every turn to focus on someone specific.
         '''
     },
 

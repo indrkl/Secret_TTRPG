@@ -103,7 +103,7 @@ def build_pdf_file():
     from progression_feats import get_progression_feat_chapter
     from Normal_feats import get_normal_feats_chapter
     from equipment import get_equipment_chapter
-    from Premade_classes import get_premade_class_chapter
+    # from Premade_classes import get_premade_class_chapter
     toc = TableOfContents()
     toc.levelStyles = [
         ParagraphStyle(fontName='Helvetica-Bold', fontSize=20, name='TOCHeading1', leftIndent=20, firstLineIndent=-20, spaceBefore=10,
@@ -118,14 +118,16 @@ def build_pdf_file():
     elements.extend(prep_elements_from_chapter(get_skill_related_chapter()))
     elements.extend(prep_elements_from_chapter(get_general_actions_chapter()))
     elements.extend(prep_elements_from_chapter(get_innate_feat_chapter()))
-    elements.extend(prep_elements_from_chapter(get_progression_feat_chapter()))
+    # elements.extend(prep_elements_from_chapter(get_progression_feat_chapter()))
     elements.extend(prep_elements_from_chapter(get_normal_feats_chapter()))
     elements.extend(prep_elements_from_chapter(get_equipment_chapter()))
     elements.extend(prep_elements_from_chapter(get_spells_chapter()))
-    elements.extend(prep_elements_from_chapter(get_premade_class_chapter()))
+    # elements.extend(prep_elements_from_chapter(get_premade_class_chapter()))
     elements.extend(prep_elements_from_chapter(get_monsters_chapters()))
     return elements
 
 
-pdf_file = MyDocTemplate("rulebook.pdf", pagesize=letter)
-pdf_file.multiBuild(build_pdf_file())
+
+if __name__ == '__main__':
+    pdf_file = MyDocTemplate("rulebook.pdf", pagesize=letter)
+    pdf_file.multiBuild(build_pdf_file())

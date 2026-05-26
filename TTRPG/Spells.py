@@ -1,22 +1,170 @@
-# Force - 3
-# Nature - 6
-# Harmony - 5
-# Elemental - 1
+# Force - 4
+# Nature - 1
+# Harmony - 2
+# Elemental - 6
 # Dimension - 3
-# Discord - 1
+# Discord - 5
 # Illusion - 2
-# Divination - 4
+# Divination - 3
 
 schools = {
-    'Force': {
+    'Arcanum (intelligence)': {
+        'spells': [
+            {
+                'name': 'Identify',
+                'effect': '''A ritual to identify the magical properties of magical items. While some magical items
+                might have obvious magical properties, like a flaming sword doing additional fire damage, others may
+                have hidden or more complex properties that would need to be either studied, mathced with historic
+                records, tested out blindly, or you could cast this ritual instead.          
+                
+                The final cost of the ritual depends on the complexity of the magical item.
+                
+                It costs 2xR1 to identify a simple but none obvious effect. It costs 4xR1 to identify more obscure 
+                hidden effects, including if the item has a simple curse, that the creator tried to hide.
+                
+                It costs 10xR1 to identify legendary items, their properties, hidden properties and curses.
+                
+                It may not be obvious which kind of magical item it is. However if you spend at least 2xR1 you will
+                know if it has as more obscure hidden effects. And if you spend at least 4xR1, then you you will know
+                if the item is of legendary quality.
+                
+                Even for some legendary items you could learn some properties with either 2 or 4 xR1, but this is up
+                to GM to decide.
+                
+                Also note that if a legendary item does not have this mid level effects, then one may not learn that
+                there is more to reveal by only spending 2xR1.
+        ''',
+            },
+            {
+                'name': 'Transfer magic',
+                'effect': '''A ritual to transfer magical properties from one item, to another item which could hold
+                that magical property. So from a one handed weapon to another one handed weapon, or for example from
+                one armor to another. You might want to do that if the weapon type of the origin weapon does not suit
+                you, or if the base quality of the armor or weapon is better for the newer item. Or if you want to
+                hide a magical effect by removing it from a recognised piece of jewelry to one no one knows about.
+                
+                Some magical effects could be weapon type or armor type specific, these in that case couldn't be moved
+                to other types but to only items these properties are intended for.
+                
+                Doing this is a ritual costs 6xR1 for simple effects, 14xR1 for obscure effects but for legendary items,
+                it costs 25xR1.
+        ''',
+            },
+            {
+                'name': 'Record memory',
+                'effect': '''
+                This is a magical technique where you can record what you think, feel, see, hear during the magical
+                effect and store this into a cleanly cut large emerald stone costing at least 100 gp. 
+                
+                This can later be used to have someone else or yourself to relive these memories. 
+                
+                This magic is often used to record act of crime, or parts of investigation to then in the future present 
+                this as evidence.
+                
+                The mana cost depends on the length of the campaign turn you want the recording to be done. 3 mana for
+                quick turns, 6 for medium and 9 for strategic turns.
+                
+                Those who know this spell can also attempt to tamper these memories, though the process can either break
+                the crystal, losing the memory entirely, or may be done in a way that it is clear that it has been 
+                tampered with.
+                
+                Tampering costs twice as much mana as creating those memories in the first place, and you must roll for
+                the quality of the tampering, whoever looks at those memories may attempt to roll against your quality
+                in order to understand that this has been tampered with. Un suspecting NPC-s usually wouldn't do that,
+                however judges or those who have reasons to not trust you will definitely do it.
+        ''',
+            },
+            {
+                'name': 'Detect magic',
+                'range': '8 sq.',
+                'effect': '''
+            You know if there are active magical effects within range of you.
+            
+            The scaling of this spell is a bit more complicated. You can spend an additional R1 to be able to tell
+            which school of magic the effects belong to. You can do it after you learn there are magical effects at all.
+            
+            You can spend an additional R1 to tell which exact spell this is.
+            
+            Finally you can spend another R1.R1 to learn exactly where the effect is, what it is attached to, how long
+            ago it was cast, and if it has an duration, how long does it last.
+            
+            If you have paid all the costs then you can also tell when someone starts casting a spell within range.
+            
+            The additional costs don't have to be spent in the same round as initial cast.            
+            ''',
+                'difficulty': 'R1',
+                'concentration': 'R1',
+                'duration': '7 rounds',
+                'scaling': [
+                ],
+            },
+            {
+                'name': 'Counterspell',
+                'requires': 'Detect magic',
+                'range': '8 sq.',
+                'effect': '''
+                In order to counter spells, you need to be detecting magic and having paid all the additional costs.
+                
+                When someone casts a spell, you can, as a reaction spend same amount of R1 as they spent on their spell
+                to negate the effect of the spell. Both of you still spend their mana.
+
+            ''',
+                'difficulty': '?',
+                'scaling': [
+                    {'D': 'R1', 'L': 2, 'description': '''You get the caster of the spell to spend 2 additional mana
+                    '''},
+                ],
+            },
+            {
+                'name': 'Dispel magic',
+                'requires': 'Detect magic',
+                'range': '8 sq.',
+                'effect': '''
+                In order to dispel spells, you need to be detecting magic and having paid all the additional costs.
+                
+                You can dispel magical effects, buffs and effects of rituals. The cost to dispel is equal to the
+                cost of initial spell or ritual to cast it but in R1-s.
+                
+                You can dispel concentration spells / buffs / curses normally, without performing a ritual. And for
+                rituals you need to perform a dispelling ritual. 
+            ''',
+                'difficulty': '?',
+                'scaling': [
+                    {'D': 'R1', 'L': 2, 'description': '''You get the caster of the spell to spend 2 additional mana
+                    '''},
+                ],
+            },
+            {
+                'name': 'Control magical object usage',
+                'target': 'one magical item',
+                'effect': '''
+                Add a zeal onto target magical item, that makes it completely unusable or permits it's use to one
+                particular individual. If that individual were to die, then the zeal would simply make it unusable by
+                anyone.
+                
+                To make the zeal, one has to perform a ritual and spend at least 3 x R1. However technically there is
+                no ceiling.
+                
+                To break the zeal someone who knows this spell, could also perform a counter ritual, that would need
+                to spend as many R1-s as was spent to make the original zeal.
+                
+                By initial inspection one could only tell if the number of R1 required is more or less than 10. Other
+                wise as you start making the ritual, you will feel when you hit 25 %, 50 % and 75 % on your way to
+                cracking the zeal. When you fail to crack the zeal and end the ritual, then 1 / 3 (rounded down) of
+                the spent R1s still lower the zeals strength for future.
+                
+            ''',
+            },
+        ]
+    },
+    'Force (intelligence)': {
         'spells': [
             {
                 'name': 'Telekinesis',
                 'effect': '''You can move objects with your mind for various effects. Move a bucket of hot water on top
-                of your enemies, a key from the guard to you for escape, etc.                
-                This is a creative spell so please refer to the creative spell section in the glossary                
+                of your enemies, a key from the guard to you for escape, etc.
+                This is a creative spell so please refer to the creative spell section in the glossary.                
 ''',
-                'difficulty': 'R4.??',
             },
             {
                 'name': 'Push/pull',
@@ -24,25 +172,24 @@ schools = {
                 'effect': '''Move target away from you or towards you for 2 sq. Halve the distance for large creatures
                 and those wearing heavy armor. Huge and larger creatures cannot be moved this way.''',
                 'target': 'single',
-                'difficulty': 'R4.R4.R4',
+                'difficulty': 'R4',
                 'scaling': [
-                    {'D': 'R4', 'description': '''increase the move distance by 2 sq. The target needs to make an 
-                    additional check for balance'''},
-                    {'D': 'R4', 'description': '''For the purposes of moving the target and balance checks the creature is 
+                    {'D': 'R4', 'description': '''increase the move distance by 2 sq. Target also gets 1 level of
+                    unbalanced'''},
+                    {'D': 'R4.R4', 'description': '''For the purposes of moving the target and balance checks the creature is 
                     considered to not be wearing heavy armor and also to be one size smaller'''},
                 ],
             },
             {
                 'name': 'Explosive force',
                 'range': '8 sq.',
-                'effect': '''A force pushes everyone around target point 2sq. away from the point and they must check
-                for balance 4 times''',
+                'effect': '''A force pushes everyone around target point 2sq. They also get 1 level of unbalanced''',
                 'target': 'point',
                 'radius': '1 sq',
-                'difficulty': 'R4.R4.R4.R4',
+                'difficulty': 'R4.R4',
                 'scaling': [
-                    {'D': 'R4', 'description': '''The force pushed them 2 additional sq. further away and they need to 
-                    check for balance twice more'''},
+                    {'D': 'R4', 'description': '''The force pushed them 2 additional sq.''',},
+                    {'D': 'R4', 'description': '''They get 1 additional level of unbalanced.''',},
                 ],
             },
             {
@@ -50,13 +197,13 @@ schools = {
                 'range': '12 sq.',
                 'effect': '''Create a 2 sq. long wall. arrows that would fly through this area, lose their speed and
                 fall on the ground. It takes 3 sq. worth of movement to go through the wall of force''',
-                'concenctration': 'R4',
-                'difficulty': 'R4.R4.R4',
+                'concenctration': 'R4.R4',
+                'difficulty': 'R4',
                 'scaling': [
-                    {'D': 'R2', 'description': '''increase the length by 4 m.'''},
+                    {'D': 'R4', 'description': '''increase the length by 2 sq.'''},
                     {'D': 'R2', 'description': '''At the beginning of each of your rounds you can move the position of the
                     wall'''},
-                    {'D': 'R4', 'description': '''It requires 2 additional sq. worth of movement to go through the wall
+                    {'D': 'R4', 'L': 3, 'description': '''It requires 2 additional sq. worth of movement to go through the wall
                     of force'''},
                 ],
             },
@@ -64,14 +211,14 @@ schools = {
                 'name': 'Force field',
                 'range': 'touch',
                 'target': 'self',
-                'duration': '5 rounds',
-                'concenctration': 'R4',
+                'duration': '3 rounds',
+                'concenctration': 'R4.R4.R4',
                 'effect': '''Increase your maximum defense to 2 (note, this does not stack with armor and is only
-                useful if you don't have maximum defense from other sources.
+                useful if you don't have maximum defense from armor or natural armor).
                 
-                You can use force proficiency to take the defend basic action.
+                You can use force proficiency and R4s to take the defend basic action.
                 ''',
-                'difficulty': 'R4.R4.R4',
+                'difficulty': 'R4',
                 'scaling': [
                     {'D': 'R4', 'description': '''
                         The maximum defense provided by this spell is increased by 1
@@ -84,25 +231,62 @@ schools = {
 
         ]
     },
-    'Nature': {
+    'Nature (cunning)': {
         'spells': [
             {
                 'name': '''Nature's gifts''',
                 'effect': '''After learning this spell, when trying to find food, or otherwise survive in the 
-                wilderness, you can use your nature proficiency instead of survival proficiency to make the checks.'''
+                wilderness, you can use your nature proficiency instead of survival proficiency to make the checks.
+                Doing so costs no mana, and you cannot amplify this ability with mana.
+                '''
             },
             {
-                'name': 'Heal',
-                'speed': '2A',
+                'name': '''Growth and Decay''',
+                'effect': '''This is a creative spell. It accelerates the growth of plants for a short duration, letting
+                them grow days or even weeks worth of growth within seconds. 
+                
+                However this comes at the expense of your health. You can restore your well being by having same or
+                other plants decay at similar pace. The bio mass of the plants and severity of decay must match the
+                bio mass and benefits of the growth part.'''
+            },
+            {
+                'name': '''Strength''',
+                'effect': '''This is a creative spell. You boost the strength of yourself or one of your allies. After
+                learning this spell you can replace physique proficiency with nature proficiency when doing physique
+                challenges requiring strength or endurance.'''
+            },
+            {
+                'name': '''Speak with animals''',
+                'effect': '''This is a creative spell. This allows you to commune with animals, and try to befriend,
+                convince them, or ask them questions. They are still animals and can't understand concepts that would
+                make no sense for animals, like religion, human factions, difference between human weapons etc.'''
+            },
+            {
+                'name': 'Remove poison',
                 'range': 'touch',
-                'effect': '''This is a heal. Target recovers 1 damaged dice or removes all damage from wounded dice, or
-                removes 1 level of burning, poison or freezing.''',
                 'target': 'single',
-                'difficulty': 'R1.R1.R1',
+                'difficulty': 'R1.R1',
+                'effect': '''Remove a single stack of poison from the target''',
                 'scaling': [
-                    {'D': 'R1', 'description': 'This heal recovers 1 additional damaged dice'},
                     {'D': 'R1', 'description': 'remove a level of poison'},
-                    {'D': 'R1', 'description': 'remove a level of burning'},
+                ],
+            },
+            {
+                'name': 'Healing ritual',
+                'range': 'touch',
+                'effect': '''                
+                This is a ritual. Target recovers 1 damaged die or removes all damage from wounded dice, or
+                removes 1 level of burning, poison or freezing.
+                
+                Each act of healing that recovers dice, scars one of the recovered dice. You can recover dice through
+                healing, if a none scarred dice is wounded. Scarred dice can still be recovered as the additional dice 
+                with this spell. 
+                ''',
+                'target': 'single',
+                'difficulty': '3X R1',
+                'scaling': [
+                    {'D': '5X R1', 'description': 'This heal recovers 1 additional damaged die'},
+                    {'D': '5X R1', 'description': 'The same healing ritual applies to 1 additional target'},
                     {'D': 'R1', 'description': 'remove a level of freezing'},
                 ],
             },
@@ -110,13 +294,13 @@ schools = {
                 'name': 'Grant luck',
                 'range': 'touch',
                 'target': 'single',
-                'effect': '''Target can change the result of one dice in the dice pool when you cast and each time
+                'effect': '''Target can change the result of one die in the dice pool when you cast and each time
                 you concentrate on it
                 ''',
-                'difficulty': 'R1.R1.R1',
+                'difficulty': 'R1',
                 'concentration': 'R1.R1.R1',
                 'scaling': [
-                    {'D': 'R1.R1', 'description': '''Target can change another dice in their dice pool'''},
+                    {'D': 'R1.R1.R1', 'description': '''Target can change another die in their dice pool'''},
                 ],
             },
             {
@@ -126,7 +310,7 @@ schools = {
                 'target': 'area',
                 'effect': '''Requires being in the wild. Roots grow from the ground and entangle anyone. 
                     Anyone starting their round or entering the area of effect gain 2 levels of entangled''',
-                'difficulty': 'R1.R1.R1.R1',
+                'difficulty': 'R1.R1',
                 'concentration': 'R1.R1',
                 'scaling': [
                     {'D': 'R1', 'description': '''Anyone starting their round or entering the area of effect gain 
@@ -136,14 +320,139 @@ schools = {
                         damage'''},
                 ],
             },
+            # {
+            #     'name': 'Primal roar',
+            #     'radius': '5 sq',
+            #     'effect': '''You channel primal nature magic, to roar like a giant beast, causing all enemies within
+            #     radius to gain 1 levels of afraid''',
+            #     'difficulty': 'R1.R1.R1.R1',
+            #     'scaling': [
+            #         {'D': 'R1.R1', 'description': '''They get another level of afraid'''},
+            #         {'D': 'R1.R1',
+            #          'description': '''Your allies get advantage with their next attack'''},
+            #     ],
+            # },
         ]
     },
-    'Harmony': {
+    'Mind (intelligence)': {
         'special_rules': [
-            """You can use harmony proficiency instead of diplomacy when
-                interacting with large crowds, or individuals who are neither evil, power hungry nor emotionless."""
-        ],
+            """
+Mind magic is one of the most difficult to pull off. It actually operates with the human mind directly unlike illusion magic.
+This magic fundamentally inserts, extracts or blocks thoughts of a particular target mind.
+
+This means this could aim to change the disposition, disorient someone without anyone else understanding what is going on,
+even control a person's actions. To fight against that, one can really only use reasoning and logic to differentiate between
+their own thoughts and those of the intruders. 
+            """],
         'spells': [
+            {
+                'name': 'Guard mind',
+                'effect': '''
+Mind magicians have developed ways to guard their own minds against colleagues, but also against mundane effects,
+like fear and confusion that can happen in real life. Depending on their investment and training, they can effectively
+become immune against mental conditions or mind magic in general. You need to have at least 1 proficiency in mind magic
+to use this spell. 
+
+
+
+                
+''',
+            },
+            {
+                'name': 'Disorient',
+                'target': '1 target',
+                'range': '4 sq',
+                'radius': '1 sq.',
+                'effect': '''Target receives 3 stacks of disoriented 
+            ''',
+                'difficulty': 'R1.R1',
+                'scaling': [
+                    {'D': 'R1', 'L': 1, 'description': '''Target receives an additional 2 stacks of disoriented'''},
+                    {'D': 'R1.R1.R1', 'L': 1, 'description': '''Remove all defense from the target.'''},
+                    {'D': 'R1.R1', 'L': 1, 'description': '''
+                    After target loses 10 dice to disorientation, they surrender to you and start to view you as someone
+                    they cannot hope to defeat.
+                    '''},
+                ],
+            },
+            {
+                'name': 'Clarity',
+                'target': '1 creature',
+                'effect': '''Remove 1 lvl from all negative status effects related to WILL saving throws.
+            ''',
+                'difficulty': 'R2',
+                'scaling': [
+                    {'D': 'R2', 'description': '''Remove one additional level from those status effects'''},
+                ],
+            },
+            {
+                'name': 'Bless',
+                'range': '5 sq.',
+                'target': 'up to 3 allies',
+                'effect': '''
+                Targets have advantage for refocus and recover actions. 
+        ''',
+                'difficulty': 'R2.R2',
+                'concentration': 'R2.R2',
+                'scaling': [
+                    {'D': 'R2', 'L': 2, 'description': '''Targets have 1 additional maximum defense'''},
+                    {'D': 'R2.R2', 'description': '''Targets remove 1 negative status effect at the beginning of
+                     their turn for free'''},
+                ],
+            },
+            {
+                'name': 'Recover defenses',
+                'range': '5 sq.',
+                'target': 'area',
+                'radius': '1 sq.',
+                'effect': '''
+All friendly allies in the targeted area recover their defenses to the maximum
+        ''',
+                'difficulty': 'R2.R2',
+                'scaling': [
+                    {'D': 'R2', 'description': '''They gain 1 temporary defense pushing their defense over their
+                    maximum'''},
+                ],
+            },
+            {
+                'name': 'Control person',
+                'target': 'One restrained target',
+                'effect': '''
+This ritual aims to shape the mind of the target so that they start doing your bidding. The baseline cost is 20 R1.
+For this you can get the person to do things that are in general in their nature, just that they do these things for you,
+meaning you could make a corrupt banker "fix" the accounting for your favor, you could make an assassin kill for you, a 
+thief steal for you. However if the course of action is something that they don't have the ability to do, then that would
+double the difficulty, and if that would go against their morals, then it would double it again, and finally, if it would
+severely go against their interests meaning that could end their lives, then that will double it once again. Meaning the
+actual cost could be either 2 X, 4 X or 8 X the base cost.  
+        ''',
+                'difficulty': '15 X R1',
+                'duration': '1 day',
+                'concentration': 'X / 2 mana',
+            },
+        ]
+    },
+
+    'Harmony (social)': {
+        'special_rules': [
+            """
+Harmony magic works by influencing the better parts of ourselves, bringing people together and making people feel in particular
+ways. Unlike mind magic it does not influence the mind or intellect, but instead creates feelings of trust, hope, union, being part
+of a higher purpose.
+        
+            """],
+        'spells': [
+            {
+                'name': 'Harmonious voice',
+                'effect': '''
+                You encompass the essence of harmony, making you able to speak in a extremely calming, compassionate
+                and convincing voice.
+                This can for example help you sway large crowds, or people who are who are neither evil, power hungry 
+                nor emotionless.
+                
+                This is a creative spell.            
+''',
+            },
             {
                 'name': 'Guardian',
                 'speed': '2 AP',
@@ -152,7 +461,7 @@ schools = {
                 'effect': '''When you have the guarded buff, then allies standing within radius. of the target also
                 have that buff.
             ''',
-                'difficulty': 'R2.R2.R2',
+                'difficulty': 'R2',
                 'concentration': 'R2',
                 'scaling': [
                     {'D': 'R4', 'L': 1, 'description': '''This spell can target others. Gaining the range of touch.'''},
@@ -166,7 +475,7 @@ schools = {
                 'target': '1 creature',
                 'effect': '''Remove 1 lvl from all negative status effects related to WILL saving throws.
             ''',
-                'difficulty': 'R2.R2.R2',
+                'difficulty': 'R2',
                 'scaling': [
                     {'D': 'R2', 'description': '''Remove one additional level from those status effects'''},
                 ],
@@ -176,12 +485,14 @@ schools = {
                 'range': '5 sq.',
                 'target': 'up to 3 allies',
                 'effect': '''
-                Target has an additional bless dice in their dice pool. One can have bless dice only from one source. 
+                Targets have advantage for refocus and recover actions. 
         ''',
-                'difficulty': 'R2.R2.R2.R2',
+                'difficulty': 'R2.R2',
                 'concentration': 'R2.R2',
                 'scaling': [
-                    {'D': 'R2.R2', 'description': '''Provide one additional bless dice for targets'''},
+                    {'D': 'R2', 'L': 2, 'description': '''Targets have 1 additional maximum defense'''},
+                    {'D': 'R2.R2', 'description': '''Targets remove 1 negative status effect at the beginning of
+                     their turn for free'''},
                 ],
             },
             {
@@ -190,11 +501,11 @@ schools = {
                 'target': 'area',
                 'radius': '1 sq.',
                 'effect': '''
-All friendly allies in the targeted area recover their defenses
+All friendly allies in the targeted area recover their defenses to the maximum
         ''',
-                'difficulty': 'R2.R2.R2.R2',
+                'difficulty': 'R2.R2',
                 'scaling': [
-                    {'D': 'R2.R2', 'description': '''They gain 1 temporary defense pushing their defense over their
+                    {'D': 'R2', 'description': '''They gain 1 temporary defense pushing their defense over their
                     maximum'''},
                 ],
             },
@@ -207,8 +518,9 @@ All friendly allies in the targeted area recover their defenses
                 they get glimpses and a sense of some of the thoughts especially if those thoughts make a lot of sense
                 to them or if they have similar thoughts themselves.
                 
-                This allows players to assist each other by using only 2 dice. Assist provides 1 dice for a roll target,
-                attack, spell, action etc.
+                This allows players to assist each other by spending 2 dice and one of those dice is added
+                to a roll target, attack, spell, action etc. If it is added to spell then the normal 1 additional mana
+                cost still applies.
         ''',
                 'difficulty': '10 X R2',
                 'duration': '1 day',
@@ -222,30 +534,50 @@ All friendly allies in the targeted area recover their defenses
             },
         ]
     },
-    'Elemental': {
+    'Elemental (intelligence)': {
         'special_rules': [
-            """Elements are fire, water, earth and air. In addition to the combat spells this school provides. One can
-            manipulate the elements out of combat, by describing what they want to achieve and GM then setting a roll
-            target for that, so that they get to use elemental proficiency when attempting to meet it. You need to
-            have some elemental proficiency to even have the option however. Roll targets still use R6"""
+            """School of elements deals with the basic elements of fire, water, ground and air.
+            While it is important to understand all the elements to proficiently wield any of them, usually mages
+            also specially down one or two of the elements.
+            
+            """
         ],
         'spells': [
             {
+                'name': 'Stone speach',
+                'effect': '''
+                You can talk to stone and dirt in the earth, and command them to shape, shift, crumble, collapse or
+                thicken. 
+
+                This is a creative spell.            
+''',
+            },
+            {
+                'name': 'Control water',
+                'effect': '''
+                You can control the open water around you such as rain, ponds, river, sea. You can direct their movement, you could clean
+                it to make drinkable, or shake it up to get the mud from the bottom to rise to the top and obscure the water. You can move
+                it to a limited extent, though moving large masses of water is very difficult.
+                
+                This is a creative spell.            
+''',
+            },
+            {
                 'name': 'Fireball',
-                'difficulty': 'R6.R6.R6.R6',
+                'difficulty': 'R6.R6',
                 'range': '8 sq.',
                 'effect': 'Deal 2 fire damage to everyone in the area.',
                 'save': 'REFLEX',
                 'target': 'area',
                 'radius': '1 sq.',
                 'scaling': [
-                    {'D': 'R6.R6', 'description': 'Deal additional 3 damage'},
+                    {'D': 'R6', 'description': 'Deal additional 2 damage'},
                     {'D': 'R6', 'description': '1 target enemy within radius gets a level of burning'},
                 ],
             },
             {
                 'name': 'Chain lightning',
-                'difficulty': 'R6.R6.R6.R6',
+                'difficulty': 'R6.R6',
                 'range': '8 sq.',
                 'effect': '''Deal 4 lightning damage to a target enemy, and then it jumps to another target enemy 
                 within radius of the first target dealing 2 less damage. This jumping continues until next jump would
@@ -255,19 +587,19 @@ All friendly allies in the targeted area recover their defenses
                 'target': 'single target',
                 'radius': '3 sq.',
                 'scaling': [
-                    {'D': 'R6.R6', 'description': 'Increase initial damage by 2'},
-                    {'D': 'R6.R6', 'description': 'Everyone hit by chain lightning get 1 level of disoriented'},
+                    {'D': 'R6', 'description': 'Increase initial damage by 2'},
+                    {'D': 'R6', 'description': 'Everyone hit by chain lightning get 1 level of disoriented'},
                 ],
             },
             {
                 'name': 'Tremor',
-                'difficulty': 'R6.R6',
+                'difficulty': 'R6',
                 'range': '6 sq.',
                 'effect': '''everyone in the target area  gain 2 levels of unbalanced. At the beginning of your round,
                 when you continue to concentrate on this spell, you may move the center of tremor up to 2 sq. When you 
                 are outside the range of the tremor you lose concentration.''',
                 'target': 'area',
-                'concentration': 'R6.R6',
+                'concentration': 'R6',
                 'radius': '2 sq.',
                 'scaling': [
                     {'D': 'R6', 'description': 'The gain an additional level of unbalanced'},
@@ -278,7 +610,7 @@ All friendly allies in the targeted area recover their defenses
                 'range': '8 sq.',
                 'effect': '''Target enemy gets one level of freezing''',
                 'target': 'single target',
-                'difficulty': 'R6.R6.R6.R6',
+                'difficulty': 'R6.R6',
                 'scaling': [
                     {'D': 'R6.R6', 'description': 'Target gets another level of freezing'},
                     {'D': 'R6', 'description': 'You get to choose which of the dice are frozen'},
@@ -287,7 +619,7 @@ All friendly allies in the targeted area recover their defenses
             {
                 'name': 'Rune trap ritual',
                 'range': '8 sq.',
-                'effect': '''Make a trap that when triggered casts either fire-ball, chain lightning or freezing
+                'effect': '''Make a trap that when triggered casts either fire-ball, chain lightning or frostbite
                 upon the target. The cost of this spell scales depending on the dice cost of the target spell. Let the
                 target spell cost be X*R6''',
                 'target': 'single target',
@@ -302,20 +634,20 @@ All friendly allies in the targeted area recover their defenses
                 1 extra damage of the chosen damage type with every attack made with this weapon.
                 ''',
                 'target': 'single weapon',
-                'difficulty': 'R6.R6.R6.R6',
+                'difficulty': 'R6.R6',
                 'duration': '3 rounds',
                 'concentration': 'R6.R6',
                 'scaling': [
                     {'D': 'R6.R6', 'description': 'target weapon deals an additional 1 damage of the chosen type'},
-                    {'D': 'R6.R6.R6', 'L': 1, 'description': '''You need to have chosen cold. Convert all physical 
+                    {'D': 'R6.R6', 'L': 1, 'description': '''You need to have chosen cold. Convert all physical 
                         damage target weapon does to cold damage. Each time that weapon hits an enemy the enemy gets
                         one level of freezing
                     '''},
                     {'D': 'R6', 'L': 1, 'description': '''You need to have chosen lightning. Convert all physical damage 
                         target weapon does to lightning damage. Each time that weapon hits an enemy, the enemy
-                        gets 2 confusion.
+                        gets 1 levels of disoriented.
                     '''},
-                    {'D': 'R6.R6', 'L': 1, 'description': '''You need to have chosen fire. Convert all physical damage 
+                    {'D': 'R6', 'L': 1, 'description': '''You need to have chosen fire. Convert all physical damage 
                         target weapon does to fire damage. Each time that weapon hits an enemy, the enemy gets one
                         level of burning.
                     '''},
@@ -357,11 +689,14 @@ All friendly allies in the targeted area recover their defenses
             # },
         ]
     },
-    'Dimension': {
+    'Dimension (precision)': {
         'special_rules': [
             """School of dimension deals with overcoming great distances and moving between planes. Most things
             however, like teleportation, long distance communication or moving to other planes is a complex matter and
-            requires rituals to be made."""
+            requires rituals to be made.
+            
+            The general principle for the school of magic is that it opens small pockets between 2 points in space for
+            things, messages, or whatever to pass through."""
         ],
         'spells': [
             {
@@ -370,7 +705,7 @@ All friendly allies in the targeted area recover their defenses
                 'target': '1 creature',
                 'effect': '''Teleport a tiny object weighing no more than 1 kg. onto the possession of another willing 
                 creature. You can place it on them wherever you would like.''',
-                'difficulty': 'R3.R3',
+                'difficulty': 'R3',
                 'scaling': [
                     {'D': 'R3', 'description': '''Increase the max object weight by 1 kg'''},
                     {'D': 'R3', 'L': 1, 'description': '''When passing a potion onto a willing subject, they can also 
@@ -400,7 +735,7 @@ All friendly allies in the targeted area recover their defenses
                 'target': 'empty space',
                 'effect': '''Instantly disappear from your current location without provoking any attacks of opportunity
                     and reappear in the target location''',
-                'difficulty': 'R3.R3.R3',
+                'difficulty': 'R3.R3',
                 'scaling': [
                     {'D': 'R3', 'description': 'Increase range by 8 sq.'},
                 ],
@@ -442,7 +777,7 @@ All friendly allies in the targeted area recover their defenses
                 'effect': '''You become corporeal becoming unaffected by all effects in the material plane.
                     By default you cannot attack, cast spells or concentrate on spells in a way that would affect anyone
                     in the material plane.''',
-                'difficulty': 'R3.R3.R3.R3',
+                'difficulty': 'R3.R3.R3',
                 'concentration': 'R3.R3',
                 'scaling': [
                     {'D': 'R3.R3', 'description': '''Target may cast spells that would affect the material plane'''},
@@ -450,13 +785,13 @@ All friendly allies in the targeted area recover their defenses
                         of touch.'''},
                     {'D': 'R3.R3', 'description': '''This spell can target any creature. This spell gains a range 
                         of touch.'''},
-                    {'D': 'R3.R3', 'description': '''Target may concentrate on spells that would affect the material 
+                    {'D': 'R3', 'description': '''Target may concentrate on spells that would affect the material 
                     plane'''},
                 ],
             },
         ]
     },
-    'Discord': {
+    'Discord (cunning)': {
         'special_rules': [
             """Regarding hexes. Each creature can by default have only 1 hex placed on them. This can be overwritten
         by certain feats. Any creature with a hex on them can make a R2.R2 remove hex action using Will proficiency
@@ -470,10 +805,10 @@ All friendly allies in the targeted area recover their defenses
                 'name': 'Enfeeble hex',
                 'range': '6 sq.',
                 'target': '1 creature',
-                'effect': '''Each time target enemy rolls, you may change the outcome of 1 dice. It has to be a
+                'effect': '''Now and each time target enemy rolls, you may change the outcome 1 dice. It has to be a
                 different dice than was changed by lucky condition, if the enemy was lucky and is done after the lucky
                 dice is chosen.''',
-                'difficulty': 'R5.R5.R5',
+                'difficulty': 'R5',
                 'concentration': 'R5',
                 'scaling': [
                     {'D': 'R5', 'description': 'Increase the strength of this curse up 1 level'},
@@ -487,8 +822,8 @@ All friendly allies in the targeted area recover their defenses
                 'target': '1 creature',
                 'effect': '''Whenever target is hit, they take 1 extra psychic damage. After that they may use a 
                 reaction to remove this curse if they have the required dice''',
-                'difficulty': 'R5.R5.R5',
-                'concentration': 'R5',
+                'difficulty': 'R5',
+                'concentration': 'R5.R5',
                 'scaling': [
                     {'D': 'R5', 'description': 'Increase the strength of this curse up 1 level'},
                     {'D': 'R5.R5', 'description': 'Target takes 1 additional psychic damage when hit'},
@@ -501,8 +836,8 @@ All friendly allies in the targeted area recover their defenses
                 'effect': '''At the beginning of their turn, the hexed creature gets 1 level of either disoriented or 
                     afraid.
                     ''',
-                'difficulty': 'R5.R5.R5.R5',
-                'concentration': 'R5',
+                'difficulty': 'R5.R5',
+                'concentration': 'R5.R5.R5',
                 'scaling': [
                     {'D': 'R5', 'description': 'Increase the strength of this curse up 1 level'},
                     {'D': 'R5.R5', 'description': 'Hexed creature also gets 1 level of the other status effect'},
@@ -514,8 +849,8 @@ All friendly allies in the targeted area recover their defenses
                 'target': '1 creature',
                 'effect': '''The mana cost for all spells is doubled
                     ''',
-                'difficulty': 'R5.R5.R5',
-                'concentration': 'R5',
+                'difficulty': 'R5.R5',
+                'concentration': 'R5.R5',
                 'scaling': [
                     {'D': 'R5', 'description': 'Increase the strength of this curse up 1 level'},
                 ],
@@ -526,48 +861,107 @@ All friendly allies in the targeted area recover their defenses
                 'range': '12 sq',
                 'target': '1 creature',
                 'effect': '''A extremely loud shriek hits, heard loudest by the target. It deals 2 psychic damage and
-                    the target has to give up concentration of 1 spell.
+                    the target has to give up concentration of 1 spell. This damage ignores defenses and damage 
+                    reduction.
                     ''',
-                'difficulty': 'R5.R5.R5.R5',
+                'difficulty': 'R5.R5',
                 'scaling': [
-                    {'D': 'R5', 'description': 'deal additional 3 psychic damage'},
+                    {'D': 'R5', 'L': 3, 'description': 'deal additional 2 psychic damage'},
+                    {'D': 'R5', 'L': 1, 'description': 'Target loses concentration of one additional spell'},
                 ],
             },
-            # {
-            #     'name': 'Paranoia',
-            #     'speed': '2 AP',
-            #     'target': '1 creature',
-            #     'duration': '1 minute',
-            #     'effect': '''Target must make your spell DC check. On failure their disposition to one random ally
-            #         changes to hostile. When target is still hostile to players, they may still choose to attack the
-            #         players instead, but if presented with a convenient opportunity they may attack that ally instead.
-            #         ''',
-            #     'difficulty': 7,
-            #     'scaling': [
-            #         {'D': 5, 'L': 1, 'description': '''The ally is no longer random, but chosen by you'''},
-            #     ],
-            # },
+            {
+                'name': 'Pain sharing',
+                'range': 'touch',
+                'target': '1 creature',
+                'duration': '2 rounds',
+                'effect': '''Buff an ally, so that when they take damage to their health, then whoever caused that
+                damage takes the same amount of psychic damage. This psychic damage ignores damage reduction and 
+                defense.
+                    ''',
+                'difficulty': 'R5.R5',
+                'concentration': 'R5.R5.R5',
+
+                'scaling': [
+                    {'D': 'R5.R5.R5', 'description': '''The one dealing the damage also gets 1 levels of disoriented for 
+                    every 2 damage dealt rounded up'''},
+                    {'D': 'R5.R5', 'description': '''For each damage dealt, you siphon 1 mana back to yourself.'''},
+                ],
+            },
             {
                 'name': 'Weapon of horrors',
                 'target': '1 weapon',
                 'duration': '3 rounds',
-                'effect': '''This weapon requires 1 less power dice to make an attack
+                'effect': '''Enchant a weapon, weapon cannot be magical or be otherwise enchanted with another effect.
+                    This weapon requires 1 less power dice to make an attack.
                     ''',
-                'difficulty': 'R5.R5.R5.R5',
+                'difficulty': 'R5.R5',
                 'concentration': 'R5.R5',
                 'scaling': [
                     {'D': 'R5.R5', 'L': 2, 'description': '''When that weapon deals at least 6 damage with an attack, 
                     target enemy gets 1 level of afraid
                     '''},
                     {'D': 'R5.R5', 'description': '''Target weapon deals 1 additional psychic damage per power dice 
-                    spent'''}
+                    spent'''},
+                    {'D': 'R5.R5', 'description': '''When the weapon kills a hexed enemy with this weapon, 
+                    immediately cast the hex on another target'''},
+                ],
+            },
+            {
+                'name': 'Dread',
+                'target': '1 enemy',
+                'duration': '2 rounds',
+                'effect': '''Target enemy gets 2 levels of afraid, when target is killed while under the effect of this
+                spell, Another target of your choice gets all the levels of afraid of the killed enemy and becomes the
+                new target of this spell.  
+                    ''',
+                'difficulty': 'R5.R5.R5',
+                'concentration': 'R5.R5.R5',
+                'distance': '6 sq.',
+                'scaling': [
+                    {'D': 'R5.R5', 'L': 2, 'description': '''When target is killed ,then 1 additional level of afraid
+                    is passed to the new target
+                    '''},
+                    {'D': 'R5', 'description': '''Target gets an additional level of afraid'''},
+                    {'D': 'R5', 'description': '''When you pay the concentration cost, also deal psychic damage to
+                     the target equal to the number of levels of afraid on him.'''},
+                ],
+            },
+            {
+                'name': 'Darkness',
+                'target': 'any square',
+                'duration': '2 rounds',
+                'range': '8 sq.',
+                'radius': '2 sq.',
+                'effect': '''
+Darkness sweeps from the target point and all natural light gets vanquished in the target area. Only those with dark
+vision can peer through. Those inside it are blinded unless they have dark vision or blind sight. In addition, while
+inside the darkness, characters cannot remove hexes or remove disoriented or afraid stacks.
+
+Every time you pay the concentration cost, you can move the cloud of darkness by up to 4 sq. from the original spot.
+                    ''',
+                'difficulty': 'R5.R5',
+                'concentration': 'R5.R5.R5',
+                'scaling': [
+                    {'D': 'R5.R5', 'L': 1, 'description': '''Even those with dark vision cannot see through this
+                    cloud of darkness and while being inside it, they are blinded. Only blind sight helps against this.
+                    '''},
+                    {'D': 'R5', 'L': 1, 'description': '''You can see hexed enemies inside the darkness and while being
+                    inside the darkness, you are not treated as being blind against hexed enemies.
+                    '''},
                 ],
             },
         ]
     },
-    'Illusion': {
+    'Illusion (cunning)': {
         'special_rules': [
             """
+        Illusion magic controls the visual and auditory senses by actually creating the light effect in the
+        reality, It is possible it is only seen from certain angles, or it could even be made to work in all angles for
+        more difficult spells. It does not however control the mind directly. This however does mean that people who
+        are blind, are immune to visual effects and illusion magic in general, nor can they do cast illusion magic
+        them selves, since to create a meaningful visual, you would have to know what things look like. Exception to the
+        latter is when someone has been made blind recently.
             """
         ],
         'spells': [
@@ -578,11 +972,24 @@ All friendly allies in the targeted area recover their defenses
                 'radius': '1 sq.',
                 'effect': '''Pose an illusionary threat to enemies in the area, they gain 2 levels of disoriented
             ''',
-                'difficulty': 'R2.R2.R2.R2',
+                'difficulty': 'R2.R2',
                 'scaling': [
-                    {'D': 'R2.R2', 'L': 3, 'description': '''Everyone get 1 additional level of disoriented'''},
+                    {'D': 'R2', 'L': 3, 'description': '''Everyone get 1 additional level of disoriented'''},
                     {'D': 'R2', 'L': 3, 'description': '''One target within radius gets 1 additional level of 
                     disoriented'''},
+                ],
+            },
+            {
+                'name': 'Block sight',
+                'target': 'creature',
+                'range': '6 sq.',
+                'duration': '1 round',
+                'effect': '''Block target's sight with an illusion making them effectively blind.
+            ''',
+                'difficulty': 'R2.R2',
+                'concentration': 'R2.R2',
+                'scaling': [
+                    # {'D': 'R2.R2', 'L': 3, 'description': '''Everyone get 1 additional level of disoriented'''},
                 ],
             },
             {
@@ -590,9 +997,10 @@ All friendly allies in the targeted area recover their defenses
                 'speed': 'reaction',
                 'target': '1 creature',
                 'effect': '''When a hit would hit you, you may instead move 1 sq. to your chosen direction without
-                provoking any attacks of opportunities and the attack misses.
-            ''',
-                'difficulty': 'R2.R2.R2',
+                provoking any attacks of opportunities and the attack misses. This works by creating an illusion of
+                yourself to stay in your place that would take the impact of the attack.
+                ''',
+                'difficulty': 'R2.R2',
                 'scaling': [
                     {'D': 'R2.R2', 'L': 2, 'description': '''Target gains 1 level of disoriented'''},
                 ],
@@ -601,6 +1009,16 @@ All friendly allies in the targeted area recover their defenses
                 'name': 'Create illusionary images',
                 'effect': '''You create illusionary images in the space around you, which can impress, surprise, deceive 
                 etc. This is a creative spell so please refer to the creative spell section in the glossary                
+            ''',
+                'difficulty': 'R2.??',
+            },
+            {
+                'name': 'Disguise self',
+                'effect': '''You use illusions to disguise yourself as someone else, in order to deceive other people
+                into believing you are that person. In order to do that convincingly, you would still need to know
+                what that person looks like, how they behave, what are their mannerism, how they talk and so on.
+                
+                This is a creative spell.         
             ''',
                 'difficulty': 'R2.??',
             },
@@ -627,7 +1045,7 @@ All friendly allies in the targeted area recover their defenses
                 'name': 'Invisibility',
                 'target': 'self',
                 'duration': '2 rounds',
-                'concentration': 'R2.R2',
+                'concentration': 'R2.R2.R2',
                 'effect': '''You appear invisible as long as you are standing still. When you move, cast spells, attack
     or otherwise perform a action with rapid movement, there are ripples that hint others that there is somewhere there
     where you are and also the nature of the movement. Attacks against enemies that rely on sight have advantage, and
@@ -635,16 +1053,16 @@ All friendly allies in the targeted area recover their defenses
     
     This can also be used as a creative spell during campaign turns.
             ''',
-                'difficulty': 'R2.R2.R2.R2',
+                'difficulty': 'R2.R2.R2',
                 'scaling': [
                     {'D': 'R2', 'L': 1, 'description': '''When you move at half speed, then no ripple is creating so you
-                    have perfect invisibility. This allows you to sneak in broad daylight with advantage'''},
+                    have perfect invisibility. This allows you to sneak in broad daylight'''},
                     {'D': 'R2.R2', 'L': 1, 'description': '''Casting spells no longer creates ripples.'''},
-                    {'D': 'R2.R2.R2.R2', 'L': 1, 'description': '''Attacking no longer creates ripples. This gives you
+                    {'D': 'R2.R2.R2', 'L': 1, 'description': '''Attacking no longer creates ripples. This gives you
                     double advantage for attacks'''},
-                    {'D': 'R2.R2', 'L': 1, 'description': '''You can select another ally as the target of this spell. This
-                    spell gains the range of touch. To maintain the illusion the target must remain within line of sight
-                    from you.'''},
+                    {'D': 'R2.R2', 'L': 1, 'description': '''You can select another ally as the target of this spell. 
+                    This spell gains the range of touch. To maintain the illusion the target must remain within line of 
+                    sight from you.'''},
 
                 ],
             },
@@ -653,15 +1071,19 @@ All friendly allies in the targeted area recover their defenses
                 'target': 'self',
                 'concentration': 'R2.R2.R2',
                 'duration': '3 rounds',
-                'effect': '''Your existance becomes questionable as you start to blur, and appear to be in multiple close places at once.
-        It becomes hard to see target you. Any offensive spell or attack targeting you has a 50 % chance to 
+                'effect': '''Your existance becomes questionable as you start to blur, and appear to be in multiple 
+                close places at once.
+        It becomes hard to target you. Any offensive spell or attack targeting you has a 50 % chance to 
         fail.
         ''',
-                'difficulty': 'R2.R2.R2.R2.R2',
+                'difficulty': 'R2.R2.R2',
                 'scaling': [
                     {'D': 'R2.R2', 'L': 1,
-                     'description': 'You can target another creature. This spell gains a range of '
-                                    '6 sq.'},
+                     'description': '''You can target another creature instead of yourself. This spell gains a range of
+                    6 sq.'''},
+                    {'D': 'R2.R2', 'L': 1,
+                     'description': '''When a spell or attack does hit you, you can give up dice with a total sum of 6
+                     to negate that after all.'''},
                 ],
             },
             {
@@ -685,42 +1107,177 @@ All friendly allies in the targeted area recover their defenses
             },
         ]
     },
-    'divination': {
+    'divination (intelligence)': {
         'spells': [
             {
                 'name': 'Diviners advantage',
                 'target': 'self',
-                'effect': '''Increase your maximum defenses by 2 and recover all maximum defenses (defense is not
+                'effect': '''Increase your maximum defenses by 2 and recover all defenses (defense is not
                 recovered every round, only those rounds when concentration cost is paid).''',
-                'difficulty': 'R3.R3.R3.R3',
+                'difficulty': 'R3.R3.R3',
                 'concentration': 'R3.R3.R3',
                 'duration': '2 rounds',
                 'scaling': [
-                    {'D': 'R3.R3', 'L': 3, 'description': '''Increase maximum defense by another 1''',
-                    'D': 'R3.R3.R3', 'L': 1, 'description': '''
+                    {'D': 'R3.R3', 'L': 3, 'description': '''Increase maximum defense by another 1''',},
+                    {'D': 'R3.R3.R3', 'L': 1, 'description': '''
                     Your attacks go through defense directly and cannot be dodged unless the enemy also has diviners
                     advantage.'''},
                 ],
             },
             {
-                'name': 'Glimpse into future',
-                'effect': '''During campaign turn you can ask a question about the campaign turn to which GM answers honestly either 
-yes / no / yes and no / yet uncertain''',
-                'difficulty': 'R3.R3.R3.R3',
+                'name': 'Divine sight',
+                'target': 'self',
+                'effect': '''Gain blind sight of 6 sq.''',
+                'difficulty': 'R3',
+                'concentration': 'R3',
+                'duration': '1 rounds',
+                'radius': '6 sq.',
                 'scaling': [
-                    {'D': 'R3.R3', 'L': 1, 'description': '''
-                        Ask another follow-up question.
-                    '''},
+                ],
+            },
+            {
+                'name': 'Glimpse into future',
+                'effect': '''During campaign turn you can ask a question about the campaign turn to which GM answers 
+                honestly either yes / no / yes and no / yet uncertain
+                
+                This question costs 3 mana for very localized events regarding known individuals to the caster in the
+                short term, up to 1 day.
+                
+                To take into account individuals who are unknown to you, this costs X 2 mana.
+                
+                To increase the scope from local to county level, from county to duchy size, from duchy to kingdom, 
+                from kingdom to empire size, from empire size to the whole world, each costs an additional doubling of
+                mana. So a world level prophecy would cost 32 X more from the base cost.
+                
+                In addition to see further than 1 day, the cost is multiplied by the number of days.
+                
+                So to see 30 days in advance about what is happening in the duchy at large involving the characters you
+                are aware of costs 3 X 30 X 4 = 360 mana for example.
+                ''',
+                'difficulty': 'mana cost.',
+                'scaling': [
                 ],
             },
             {
                 'name': 'See beyond the veil',
-                'difficulty': 'R3.R3',
+                'difficulty': 'R3',
                 'effect': '''
-                Reveal the strength of a hidden difficulaty aspect
+                Reveal the difficulty of some challenge in the future based on assumptions you have to list to GM.
                 ''',
             },
-        ]
+            {
+                'name': 'Divine guidance',
+                'difficulty': 'R3.R3',
+                'effect': '''
+Think of an object or person, and get a sense of which direction you should go to get closer to the person / object.
+It doesn't reveal the distance or place of the target, only the direction.
+                ''',
+            },
+        ],
+    'dreams (social)': [
+        {
+            'name': 'Sweet dreams',
+            'effect': '''
+                Ritual to enhance sleep of the target, making them rest real good, see good dreams, and awaken really
+                well rested and energetic.
+                
+                Target gets various benefits for a medium turn after waking up. For starter, they get advantage with a 
+                single ability of your choice.
+            ''',
+            'difficulty': '8 X R1',
+                'scaling': [
+                    {'D': '4 X R1', 'description': 'Gain advantage with one other additional ability of your choice',},
+                    {'L': 3, 'D': '4 X R1', 'description': 'Have 2 additional stamine',},
+                    {'L': 2, 'D': '4 X R1', 'description': '+1 defense',},
+                ],
+        },
+        {
+            'name': 'Sleep',
+            'effect': '''
+                Put someone to sleep for 8 h with a total remaining HP of at most 6, target is woken by taking further 
+                damage.
+            ''',
+            'difficulty': 'R1.R1',
+            'scaling': [
+                {'D': 'R.1', 'description': 'Increase the HP limit by 4', },
+                {'D': 'R1.R1.R1', 'description': 'Nothing can wake the target for the duration'}
+            ],
+        },
+        {
+            'name': 'Enter nightmare',
+            'effect': '''
+                Ritual to learn a vulnerability of someone by making them see their worst fears and you also witnessing
+                it. The ritual cost scales by the power of the individual. For a commoner it starts at 6 dice, for
+                stronger individuals like veteran soldiers, squad leaders, beginning mages, somewhat enduring 
+                individuals it increases to 10 dice. 
+                
+                Against expert mages, strong leaders, heroes, mighty beasts it increases to 20 dice.
+                
+                Against legendary creatures, mages or heroes, mightiest of emperors, dragons etc. it increases to 50 
+                dice.
+                
+                Against Gods and god-like mages it increases to 200 dice.
+                
+                Against mightier beings entering the nightmare can also pose risks and damage those part taking in the
+                ritual, or even killing them.
+            ''',
+            'difficulty': '6 X R1',
+        },
+        {
+            'name': 'Enter dream',
+            'effect': '''
+                Ritual to learn a what target wants, desires, dreams about.
+                
+                The ritual cost scales by the power of the individual. For a commoner it starts at 4 dice, for
+                stronger individuals like veteran soldiers, squad leaders, beginning mages, somewhat enduring 
+                individuals it increases to 8 dice. 
+                
+                Against expert mages, strong leaders, heroes, mighty beasts it increases to 17 dice.
+                
+                Against legendary creatures, mages or heroes, mightiest of emperors, dragons etc. it increases to 40 
+                dice.
+                
+                Against Gods and god-like mages it increases to 140 dice.
+                
+                Against mightier beings you run the risk of not comprehending what is going on, while the risk of
+                psychic damage is not severe usually, it may occur, confusion, disorientation, losing touch of reality
+                may however be common occurrence when part taking this ritual.
+            ''',
+        },
+        {
+            'name': 'Commune with the unknown',
+            'effect': '''
+                Ritual
+                You can state what you want to learn about, and then as you sleep, you enter a dream of someone
+                you may not know, but can help you or guide you, and through that you learn something what you desire,
+                but there are risks, since those you commune with will also learn about you. The ritual difficulty
+                depends on what you want to learn.
+                
+                Something known to many commoners in the vicinity, even if not spoken publicly: 4 X R1
+                
+                Something known to few commoners in the vicinity, or a larger group of elite soldiers, mages, etc. 10 X R1
+                
+                Something known to only a few elite soldiers, mages, mighty lords: 20 X R1
+                
+                Something known to only 1 or 2 individuals in the world: 50 X R1.
+                
+                Be careful however, since if you enter a dream of a mightier being, a powerful mage, for example, they
+                could learn about you, attempt to hide what they know still, deceive you, or even harm you in the dream
+                world. Especially dangerous are other mages who understand the magic of dreams.
+            ''',
+        },
+        {
+            'name': 'Dream travel',
+            'effect': '''
+                Travel around the dream worlds of local inhabitants, it is all wierd and mushy, but if you do it
+                regularly, you do learn if there is a shift in the air, either, if there is more hope, more fear,
+                something specific impacting the psychy of the population, or if some silent sorcery is at play against
+                the population.
+                
+                            
+            ''',
+        },
+    ]
     },
 }
 from reportlab.platypus import Table, TableStyle, Paragraph, Spacer, KeepTogether

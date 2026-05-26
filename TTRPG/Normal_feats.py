@@ -1,12 +1,104 @@
 feats = {
     'Mage': [
-        {'cost': 2,
-         'name': 'Commune with animals',
-         'effect': '''You are able to communicate with animals. To get desired communication, GM can provide you a dice
-         target for the scene, and you can use nature school of magic proficiency to meet the target'''
+        {'cost': 'small',
+         'name': 'Adept attuner',
+         'effect': '''You can attune to one additional magical item'''
          },
-        {'cost': 5,
-         'requires': 'Commune with animals',
+        {'cost': 'small',
+         'name': 'Enduring magic',
+         'metamagic_option': {
+             'difficulty': 'Rp.Rp',
+             'effect': '''Can only be applied to none ritual concentration spells. Increase their duration by 2 rounds 
+             or double it, whichever has greater effect.''',
+         },
+         },
+        {'cost': 'small',
+         'name': 'Large magic',
+         'metamagic_option': {
+             'difficulty': 'Rp',
+             'effect': '''Increase area of effect spell's radius by 1 sq.''',
+         },
+         },
+        {'cost': 'small',
+         'name': 'Distant magic',
+         'metamagic_option': {
+             'difficulty': 'Rp',
+             'effect': 'Increase spell distance by 6 sq. or double it, whichever has greater effect',
+         },
+         },
+        {'cost': 'medium',
+         'name': 'Talented attuner',
+         'effect': '''You can attune to one additional magical item'''
+         },
+        {'cost': 'medium',
+         'name': 'Twin magic',
+         'metamagic_option': {
+             'difficulty': 'Rp.Rp',
+             'effect': '''Cast the spell twice. You may choose new targets for second
+        cast. Concentration spells share concentration for both casts but increase concentration cost by Rp.''',
+             'L': 1,
+         },
+         },
+        {'cost': 'medium',
+         'requires': '3 proficiency in arcanum',
+         'name': 'Zealed magic',
+         'metamagic_option': {
+             'difficulty': 'Rp.Rp',
+             'effect': '''This makes the spell you cast harder to be countered or dispelled. The cost to counter the
+             spell is doubled and when calculating the base cost include the 2 power dice spent on this meta-magic 
+             option.
+             
+             This metamagic option can also be used for rituals, but in this case the cost of the zealing goes up by 
+             1 Rp for every 4 initial cost of the ritual (rounded down).
+             So a ritual that costs 10 x Rp would require 4 (2 initial + 10 / 4 = 2) 
+             ''',
+             'L': 1,
+         },
+         },
+        {'cost': 'medium',
+         'name': 'Hex master',
+         'effect': '''You can apply max 2 hexes on a creature instead of only 1''',
+         },
+        {'cost': 'medium',
+         'name': 'Terrifying flames',
+         'effect': '''Whenever you apply at least 3 levels of burning onto an enemy with a single spell, 
+        also apply 1 levels of afraid''',
+         },
+        {'cost': 'medium',
+         'name': 'Fire and ice',
+         'effect': '''When burning or freezing applied to enemies by you cancel out the previous freezing or burning
+         stacks, the enemy takes 5 damage for each stack cancelled out this way. This bypasses defense and damage 
+         reduction.
+            ''',
+         },
+        {
+            'cost': 'medium',
+            'requires': 'Ritual master',
+            'name': 'Improved Ritual master',
+            'effect': '''
+You are more skilled at including others in your rituals. Nobody who joins your ritual has disadvantage, even if they
+don't know the ritual.
+            ''',
+        },
+        {
+            'cost': 'medium',
+            'name': 'Spice specialist',
+            'effect': '''
+                You recover mana using spices twice as effectively. Meaning you recover 2 mana for 5 gp worth of spices.
+            '''
+        },
+        {
+            'cost': 'medium',
+            'name': 'Mana siphoner',
+            'requires': '4 proficiency in arcanum',
+            'effect': '''
+                When others cast spells near you, then if you are the only mana siphoner within 5 sq. of the caster,
+                then you can salvage 1/3 of the mana rounded down from that spell and recover your mana that way. You
+                can not however go over your maximum this way.
+            '''
+        },
+        {'cost': 'major',
+         'requires': 'Talk with animals spell',
          'name': 'An useful pet',
          'effect': '''
 You have a pet that is useful both in combat and outside of it. Choose a physical form, and then a out of combat 
@@ -39,138 +131,84 @@ Outside combat bonuses. Choose 1 for the pet:
 appropriate.
          '''
          },
-        {'cost': 2,
-         'name': 'Adept attuner',
-         'effect': '''You can attune to one additional magical item'''
-         },
-        {'cost': 4,
-         'name': 'Talented attuner',
-         'effect': '''You can attune to one additional magical item'''
-         },
-        {'cost': 2,
-         'name': 'Enduring magic',
-         'metamagic_option': {
-             'difficulty': 'Rp.Rp',
-             'effect': '''Can only be applied to concentration spells or spells with duration.
-             Concentration spells without duration gain a duration of 3 rounds. Spells with duration increase their
-             duration by 3 rounds or double it, whichever has greater effect''',
-            },
-         },
-        {'cost': 2,
-         'name': 'Large magic',
-         'metamagic_option': {
-             'difficulty': 'Rp',
-             'effect': 'Increase spell radius, which has radius by 1 sq.',
-            },
-         },
-        {'cost': 2,
-         'name': 'Distant magic',
-         'metamagic_option': {
-             'difficulty': 'Rp',
-             'effect': 'Increase spell distance by 6 sq. or double it, whichever has greater effect',
-            },
-         },
-        {'cost': 4,
-         'name': 'Twin magic',
-         'metamagic_option': {
-             'difficulty': 'Rp.Rp',
-             'effect': '''Cast the spell twice. You may choose new targets for second
-                cast. Concentration spells share concentration for both casts.''',
-             'L': 1,
-            },
-         },
-        # {'cost': 6,
-        #  'name': 'Hex master',
-        #  'effect': '''You can apply max 2 hexes on a creature instead of only 1. Also advance in max mana and learn
-        #  one discord spell''',
-        #  },
-        {'cost': 5,
+        {
+            'cost': 'major',
+            'name': 'Battle mage',
+            'effect': '''The mana cost for offensive spells scales better. It now costs 2 mana for 2 additional
+    power dice, 4 mana for 3 additional power dice and 6 mana for 4 additional power dice''',
+        },
+        {'cost': 'major',
          'name': 'Pyromancy',
          'effect': '''Whenever your spell applies at least 1 stack of burning onto an enemy, it applies one more stack
          of burning onto them.
             ''',
          },
-        {'cost': 6,
+        {'cost': 'major',
          'requires': 'Pyromancy',
          'name': 'Fire mastery',
-         'effect': '''Whenever a stack of burning is removed that was applied by you, gain a temporary flame token that
-         lasts until end of combat.
+         'effect': '''
+Whenever a stack of burning is removed that was applied by you, gain a temporary flame token that
+lasts until end of combat.
          
 You can spend flame tokens to fuel your spells and attacks:
 
 3 Flame tokens: Apply burning on one of the target's of the spell or attack
 
-5 Flame tokens: Remove a negative status effect from yourself and move it onto the target of the spell or attack.
+5 Flame tokens: Remove a negative status effect or curse from yourself and move it onto the target of the spell or 
+attack.
 
 7 flame tokens: At the end of your attack or spell remove all stacks of burning from the target dealing 3 damage per
 removed stack. If that kills the target, refresh your dice pool. The cost of this ability increases
-by 5 for the duration of this encounter.
-
+by 5 flames for the duration of this encounter.
             ''',
          },
-        {'cost': 3,
-         'name': 'Fire and ice',
-         'effect': '''When burning or freezing applied to enemies by you cancel out the previous freezing or burning
-         stacks, the enemy takes 3 damage for each stack cancelled out this way.
-            ''',
-         },
-       # {'cost': 2,
-       #   'name': 'Mind expertise',
-       #   'effect': '''When taking this trait, choose one of the WILL status effects. ONCE PER ROUND, when applying the
-       #   chosen status effect on an enemy, you can force them to check for that status effect once more. This trait can
-       #   be taken multiple times, but different status effect must be chosen each time.
-       #      ''',
-       #   },
-        {'cost': 3,
-         'name': 'Trickster',
-         'effect': '''
-         Whenever you apply a level of disoriented or afraid, you also disrupt 1.
-         ''',
-         },
-        {'cost': 6,
+        {'cost': 'major',
          'name': 'Will breaker',
          'effect': '''
-As you apply disoriented and afraid onto enemies, your ability to effect the battlefield becomes increasingly stronger
-based on the total levels of these conditions that are currently active.
+As you apply afraid onto enemies, your ability to effect the battlefield becomes increasingly stronger
+based on the total levels of these conditions that you have applied during this combat
 
-At least 5 levels: Enemies with disoriented or afraid cannot attack you and have their damage reduced by 1 for each
-level of disoriented and afraid.
+At least 1 levels per remaining number of enemies: Enemies with afraid cannot attack you and have their 
+damage reduced by 1 for each level of afraid.
 
-At least 10 levels: Enemies with disoriented or afraid get disadvantage to will checks.
+At least 3 levels per remaining number of enemies: Enemies with afraid get disadvantage to refocus action. 
+Mobs recover from afraid twice as slow.
 
-At least 15 levels: Enemies with at least 3 combined levels of disoriented and afraid will stop fighting and just fall
-prone and give up. This may not effect enemy heroes.
+At least 5 levels per remaining number of enemies: Enemies with at least 2 levels of afraid 
+will stop fighting and just fall prone and give up. This may not effect enemy heroes, but in this case the enemy hero 
+gets double disadvantage for all their spells and attacks. 
 
-At least 20 levels: You gain advantage for all your spells targeting enemies with at least one level of disoriented or
-afraid.
+At least 7 levels per remaining number of enemies: All your allies gain double advantage with all their offensive spells 
+and attacks.
          ''',
-         },
+        },
         {
-            'cost': 5,
+            'cost': 'major',
             'name': 'Iron concentration',
             'effect': '''You can spend any dice to maintain concentration''',
         },
         {
-            'cost': 5,
+            'cost': 'major',
             'name': 'Dimension mastery',
-            'requires': 'Expert dimension proficiency',
+            'requires': '3 or more dimension proficiency',
             'effect': '''
             When taking this feat you craft an object, a talisman of sorts, which, while you are attuned to it, you can
             cast spells from the point of that object.
             
-            If you are are legendary in dimension magic, you can craft one additional such object.
+            If you are are legendary in dimension magic, you can craft one additional such object. Crafting the second
+            one however costs 1000 gp.
             ''',
         },
         {
-            'cost': 5,
+            'cost': 'major',
             'name': 'Enchanter',
             'effect': '''
-Enchantment spells cost 1 less power dice to cast. When the concentration cost is higher than 1 power dice, then that
-too costs 1 less power dice.
+Enchantment spells that buff weapons cost 1 less power dice to cast. When the concentration cost is higher than 1 power 
+dice, then that too costs 1 less power dice.
             ''',
         },
         {
-            'cost': 5,
+            'cost': 'major',
             'name': 'Holy bonds',
             'effect': '''
 You can attune to any number of your party members instead of items.
@@ -179,46 +217,41 @@ Whenever attuned party member receives a negative status effect you can instead 
 
 For spells which the target is self, you can instead cast it targeting one of the attuned party members.
 
-The minimum range for these spells becomes 5 sq.
+The maximum range for these spells becomes 5 sq.
 
 Other spells targeting attuned party members have advantage
             ''',
         },
         {
-            'cost': 5,
+            'cost': 'major',
             'name': 'Ritual master',
             'effect': '''
-You are more skilled at including others in your rituals. All casters who join your ritual, their minimum proficiency
-is your proficiency - 1.
+You are more skilled at including others in your rituals. All casters who join your ritual, their effective proficiency 
+for the ritual is at least your proficiency minus one.
             ''',
         },
+
         {
-            'cost': 3,
-            'requires': 'Ritual master',
-            'name': 'Improved Ritual master',
-            'effect': '''
-You are more skilled at including others in your rituals. All casters who join your ritual, who don't know the ritual
-don't have disadvantage.
-            ''',
-        },
-        {
-            'cost': 6,
+            'cost': 'major',
             'name': 'Blood magic',
             'effect': '''
-You may spend your life points the same way you can spend your mana to make spells cheaper. By doing that you take
-damage directly to your life bypassing defense and damage reduction.
+This feat can only be taken by those who have blood in them, so Mana born for example cannot use blood magic.
+
+You may spend your life points the same way you can spend your mana to get virtual additional dice, these dice however
+do not require the base mana to be used. By doing that you take damage directly to your life bypassing defense and 
+any damage reduction.
     
-For 1 damage reduce the spell cost by 1 dice, for 3 damage, by 2 dice, for 6 damage by 3 dice and for 10 damage by 4 
+For 1 damage reduce the spell cost by 1 dice, for 2 damage, by 2 dice, for 4 damage by 3 dice and for 6 damage by 4 
 dice. You can combine this with mana, and the maximum reduction using your life points is equal to your spell school
 proficiency. However the combined total reduction with reduction from mana is your proficiency + 2. So if your
-proficiency is 4, then you could spend 10 life points and 3 mana to reduce the cost by 6 dice, but you cannot spend
-10 life points and 6 mana to reduce it by 7 any more.
+proficiency is 4, then you could spend 6 life points and 3 mana to reduce the cost by 6 dice, but you cannot spend
+6 life points and 6 mana to reduce it by 7 any more.
 
-Also, you cannot be healed by the heal spell (that includes healing potions which apply the spell on you).
+In addition you pay no mana for the dice you gain using your blood.
             ''',
         },
     #     {
-    #         'cost': 5,
+    #         'cost': 'major',
     #         'requires': 'Blood magic',
     #         'name': 'Blood magic expertise',
     #         'effect': '''
@@ -252,7 +285,7 @@ Also, you cannot be healed by the heal spell (that includes healing potions whic
     #         },
     #     },
     #     {
-    #         'cost': 3,
+    #         'cost': 'medium',
     #         'requires': 'Shackles of suffering',
     #         'name': 'Prolonged shackles',
     #         'effect': '''
@@ -261,30 +294,16 @@ Also, you cannot be healed by the heal spell (that includes healing potions whic
     #     },
     ],
     'Martial': [
-        {'cost': 3,
-             'name': 'Dodging',
-             'effect': '''Whenever you would receive damage you can react with a R5 physique dice to negate that damage.
-             This cost goes up by 1 X R5 every time you use this ability during encounter. You can take the recover
-             action to reset it to 1 dice again.
-             
-             Dodging requires no or light armor''',
-         'action': {
-             'cost': 'R5.R5.R5',
-             'proficiency': 'physique',
-             'additional_costs': '1 stamina',
-             'target': 'self',
-             'effect': '''reset the dodging reaction dice cost to 1 dice''',
-            },
-        },
-        {'cost': 2,
+
+        {'cost': 'small',
             'name': 'Kick',
-            'effect': '''Kick is a special unarmed move, which can be used as long as you have light or no armor. You
+            'effect': '''Kick is a special unarmed move. You
              may be wielding weapons. It does use a unarmed (mental) slot.''',
             'action': {
              'cost': 'R5.R5.R5',
              'proficiency': 'unarmed',
              'additional_costs': '1 stamina',
-             'effect': '''Push an enemy 2 squares, apply 2 unabalanced''',
+             'effect': '''Deal 2 damage, Push an enemy 2 squares and apply 2 unabalanced''',
              'difficulty_options': [
                  {
                      'cost': 'R5',
@@ -297,72 +316,116 @@ Also, you cannot be healed by the heal spell (that includes healing potions whic
              ]
             },
         },
-        {'cost': 2,
+        {'cost': 'small',
              'name': 'Medium armor proficiency',
              'effect': '''Remove the penalty of -1 physique proficiency when wearing medium armor''',
+        },
+        {'cost': 'small',
+         'name': 'Defensive stance',
+         'effect': '''If you have not attacked or cast an offensive spell since the beginning of your last turn
+         you have an additional +2 maximum defense while guarded.''',
          },
-        {'cost': 3,
+        {
+            'cost': 'small',
+            'name': 'Power strike',
+            'effect': '''When making an attack with 2 handed melee weapon you can spend 1 stamina to deal 2 additional
+damage. This can be used once per turn.''',
+        },
+        {'cost': 'small',
+         'requires': 'Rage',
+         'name': 'Prolonged rage',
+         'effect': '''
+        Your rage lasts 3 additional rounds, or 2 additional rounds if wearing heavy armor.
+        ''',
+         },
+        {'cost': 'small',
+         'requires': 'Heavy armor proficiency',
+         'name': 'Fortress',
+         'effect': '''You can use toughness proficiency for refocus action.
+''',
+         },
+        {'cost': 'small',
+         'name': 'Toxicologist',
+         'effect': '''When drinking potions, only every other potion adds an R3 to fortitude checks for drinking
+  potions instead of every potion. You have +1 to proficiency against poison, and +2 proficiency to fort saves 
+  against alcohol.''',
+         },
+        {'cost': 'medium',
              'name': 'Heavy armor proficiency',
              'effect': '''Wearing heavy armor only applies a -1 physique proficiency penalty instead of -2
                 ''',
          },
-        {'cost': 2,
-             'name': 'Defensive stance',
-             'effect': '''If you have not attacked or cast an offensive spell since the beginning of your last turn
-             you have an additional +2 maximum defense while guarded.''',
-         },
-#         {'cost': 2,
-#              'name': 'Accuracy',
-#              'effect': '''With ranged weapons, reduce enemy cover category by 1. If enemy has no cover, you have
-#              advantage.''',
-#          },
-#
+        {'cost': 'medium',
+         'name': 'Dodging',
+         'effect': '''Whenever you would receive damage you can react with a R5 physique dice to negate that damage.
+     This cost goes up by 1 X R5 every time you use this ability during encounter. You can take the recover
+     action to reset it to 1 dice again.
+
+     Dodging requires no or light armor''',
+         'action': {
+             'cost': 'R5.R5.R5',
+             'proficiency': 'physique',
+             'additional_costs': '1 stamina',
+             'target': 'self',
+             'effect': '''reset the dodging reaction dice cost to 1 dice''',
+            },
+        },
         {
-            'cost': 3,
+            'cost': 'medium',
             'name': 'Menace',
             'effect': '''When you damage an enemy with a melee attack, then until the start of your next turn, they have
             disadvantage when attacking your allies''',
         },
         {
-            'cost': 3,
-            'name': 'Power strike',
-            'effect': '''When making an attack with 2 handed melee weapon you can spend 1 stamina to deal 2 additional
-            damage''',
-        },
-        {
-            'cost': 3,
+            'cost': 'medium',
             'name': 'Opportunist',
             'effect': '''
-                You have advanatege with attacks against enemies that have damaged your allies but not you since the 
+                You have advantage with attacks against enemies that have damaged your allies but not you since the 
                 end of your last turn.
             '''
         },
-#         {
-#             'cost': 3,
-#             'name': 'Pinner',
-#             'action': {
-#                 'cost': '1A',
-#                 'range': 'melee/spear',
-#                 'target': 'single',
-#                 'base_cost': '1 STA',
-#                 'effect': '''Pin a single target. Your allies have advantage when attacking them. You can only pin one
-#                 enemy at a time. When you attack another enemy, or another enemy attacks you, the pin is broken. When
-#                 pinned target attempts to move away from you, you're reaction attack against him has advantage. If you
-#                 hit, the enemy must make a REF saving throw equal to half the damage rounded up. On a fail, they stop
-#                 their movement and remain within your range.''',
-#             }
-#         },
-        {'cost': 5,
+        {
+            'cost': 'medium',
+            'name': 'Shielder',
+            'effect': '''
+                When an ally gets damaged, who stands next to you while you are guarded, you can use your defense to
+                mitigate that damage.
+            '''
+        },
+        {'cost': 'medium',
+         'name': 'Backstabber',
+         'effect': '''When attacking someone with a one handed melee weapon from behind or while the opponent is unaware
+     of your presence, you have double advantage.''',
+         },
+        {
+            'cost': 'medium',
+            'name': 'Shadow',
+            'effect': '''You are able to take maximum advantage of disoriented foes. Foes who have at least 1 level
+of disorientation, have disadvantage for attacks against you. You have advantage with attacks against foes
+who have at least 2 levels of disoriented. When taking a move action, then one target creature with at least
+2 levels of disoriented loses track of you and become unaware of your presence.''',
+        },
+        {
+            'cost': 'medium',
+            'name': 'War shout',
+            'effect': '''You can spend a pair of either R4 or R5 to make a proper shout, that would apply 1 level of afraid
+            into all enemies within 4 sq. of you, or a pair of R6 to make an even more powerful bone-shattering shout,
+            that applies 1 level of afraid into all enemies within 2 sq. of you and 1 additional level of afraid into
+            enemies within 5 sq. of you. Each pair (R4, R5 or R6) can only be used once per combat.
+            
+            There is no proficiency that can be used to achieve these pairs, they have to be rolled naturally.
+            ''',
+        },
+        {'cost': 'major',
              'name': 'Two weapon fighter',
              'effect': '''
                 Your maximum defense is increased by 1 while wielding two weapons.
                 
                 When wielding two melee weapons which sum of power dice is less than or equal to 6, then you can use R6
-                from your dice pool as a power dice for attacks with both weapon (and it only consumes a single action
-                limit).
+                from your dice pool as a power dice for attacks with both weapon.
                 ''',
         },
-        {'cost': 5,
+        {'cost': 'major',
              'requires': 'Two weapon fighter',
              'name': 'Two weapon master',
              'effect': '''
@@ -377,34 +440,15 @@ You can use the flow tokens in following ways, flow tokens are reset to 0 at the
 * Spend 1 flow token to move yourself up to 2 sq. after finishing an attack action.
                 ''',
         },
-        {'cost': 7,
+        {'cost': 'major',
              'requires': 'lvl 5.',
              'name': 'Master of defenses',
              'effect': '''
 Defend action now requires only R2. You can also use Defend action as a reaction once between your turns after being
-attacked.
+attacked. +1 maximum defense
                 ''',
         },
-#         {'cost': 8,
-#              'name': 'Blade dancer',
-#              'effect': '''
-# Attacks with one handed swords do not increase stamina cost for further attacks. Advance 4 times with
-# one handed swords.
-#
-# You gain additional difficulty options for one handed swords:
-#
-# 2: When you critically hit, you recover a dodge token
-#
-# 4: As long as you don't critically miss, target gains 1 level of vulnerable against you only.
-#
-# 3: when an enemy attacks you, spend your reaction to first attack them. If you succeed, you stop their
-# attack
-#
-# 5: Your critical hits do double damage.
-#
-#                 ''',
-#         },
-        {'cost': 5,
+        {'cost': 'major',
              'name': 'Savage Axe',
              'effect': '''
              
@@ -418,7 +462,30 @@ Rp: Spend 2 savagery tokens to add a level of afraid to the enemy
 Rp: Spend 2 savagery tokens to add 1 level of vulnerable to the enemy. 
                 ''',
         },
-        {'cost': 5,
+        {'cost': 'major',
+             'name': 'Counter-attack mastery',
+             'requires': 'lvl. 5, Master of defenses',
+             'effect': '''
+You master the art of counter attacking, creating threats to protect yourself, and use defense to punish those who attack you.
+
+When you take damage into defense from a melee weapon attack, deal 1 damage for every 2 damage received to defense,
+rounded up.
+
+When you attack, recover 1 defense for every power dice spent in the attack.
+                ''',
+        },
+        {'cost': 'major',
+             'name': 'Deadly dagger',
+             'effect': '''
+You are able to maximize advantages gained, when attacking with a dagger.
+
+When you attack with a dagger while having advantage, ignore damage reduction and deal 1 additional damage.
+
+When having double advantage, ignore damage reduction, defense, and deal 1 additional damage per power dice used in
+your attack.
+                ''',
+        },
+        {'cost': 'major',
          'name': 'Sentinel',
          'effect': '''
 When wielding a polearm, you get a zone of control around you of 2 sq. Enemies that want to move through your ZoC or
@@ -431,39 +498,14 @@ Enemies entering your ZoC give you a attack reaction opportunity.
 First reaction attack with a polearm in between your turns has double advantage, the rest have simple advantage.
          ''',
          },
-#         {'cost': 2,
-#          'name': 'Cleave',
-#          'effect': '''
-#          You have a new difficulty options for melee weapons:
-#
-# 3: You attack all enemies around you, but the attack costs 3 additional STA and 1 additional AP.
-#          ''',
-#          },
-#          {'cost': 1,
-#          'name': 'Fierce',
-#          'effect': '''
-# You have a new difficulty options for melee weapons:
-#
-# 1: When you score a critical hit, target needs to check for afraid.
-#          ''',
-#          },
-#          {'cost': 2,
-#          'name': 'Double strike',
-#          'effect': '''
-# You have a new difficulty options for melee weapons:
-#
-# 4: The attack costs 3 additional STA, but you attack twice, making 3d6 check both times, and receiving all other hit
-# effects both times.
-#          ''',
-#          },
-        {'cost': 5,
+        {'cost': 'major',
          'name': 'Rage',
          'effect': '''
             Gain rage action.
          ''',
          'action': {
              'cost': 'R6',
-             'proficiency': 'fortitude',
+             'proficiency': 'toughness',
              'target': 'self',
              'limit': 'once per encounter',
              'duration': '5 rounds',
@@ -472,11 +514,11 @@ First reaction attack with a polearm in between your turns has double advantage,
                 While raging you are immune to confusion and disruption.
                 
                 You lose all your defense and cannot recover any defense. However you still roll all the dice that were
-                set aside because of damage and scarred dice can be used for targets 4, 5 and 6 as well.
+                set aside because of damage and scarred dice work as regular dice.
                 ''',
             }
          },
-        {'cost': 7,
+        {'cost': 'major',
          'requires': 'Rage',
          'name': 'Fury',
          'effect': '''
@@ -495,55 +537,15 @@ per fury token used this way.
          
          ''',
          },
-        {'cost': 2,
-         'requires': 'Rage',
-         'name': 'Prolonged rage',
-         'effect': '''
-         Your rage lasts 3 additional rounds, or 2 additional rounds if wearing heavy armor.
-         ''',
+
+        {'cost': 'major',
+         'name': 'Hex arrow',
+         'effect': '''When taking this feat, choose a {hex spell}
+            Whenever you hit an enemy roll 1d6+1, if the sum is lower than the damage you dealt with this attack also
+            apply chosen hex or a hex spell you know onto that enemy. No concentration is required to maintain that hex.
+            ''',
          },
-        # {'cost': 6,
-        #  'name': 'Hex arrow',
-        #  'effect': '''When taking this feat, also advance 3 times with bows. Also, choose a {hex spell} of difficulty 1.
-        #     Whenever you critically hit with this attack, apply that hex, or a hex you can cast yourself to the target.
-        #     If you choose to apply a hex you can cast yourself, you do have to spend your mana to do so.
-        #     No concentration costs are necessary to maintain that hex, normal hex limits apply.
-        #     When you reach level 5/10/15/20, the chosen hex is upcasted to difficulty 3/5/7/9.''',
-        #  'action': {
-        #      'cost': '1A',
-        #      'range': 'ranged',
-        #      'target': 'single',
-        #      'base_cost': '2 STA',
-        #      'effect': 'Reduce critical threshold by 1. On a critical strike apply the Hex on the target.',
-        #      'restrictions': 'Bows',
-        #     }
-        #  },
-        {'cost': 3,
-         'requires': 'Heavy armor proficiency',
-         'name': 'Fortress',
-         'effect': '''You can use fortitude proficiency against afraid and disoriented conditions instead of will.
-         ''',
-         },
-        {'cost': 4,
-         'name': 'Backstabber',
-         'effect': '''When attacking someone with a one handed melee weapon from behind or while the opponent is unaware
-         of your presence, you have double advantage.''',
-        },
-        {
-            'cost': 3,
-            'name': 'Shadow',
-            'effect': '''You are able to take maximum advantage of disoriented foes. Foes who have at least 1 level
-    of disorientation, have disadvantage for attacks against you. You have advantage with attacks against foes
-    who have at least 2 levels of disoriented. When taking a move action, then one target creature with at least
-    2 levels of disoriented loses track of you and become unaware of your presence.''',
-        },
-        {'cost': 2,
-         'name': 'Toxicologist',
-         'effect': '''When drinking potions, only every other potion adds an R3 to fortitude checks for drinking
-          potions instead of every potion. You have +1 to proficiency against poison, and +2 proficiency to fort saves 
-          against alcohol.''',
-         },
-        {'cost': 6,
+        {'cost': 'major',
          'name': 'Commander',
          'effect': '''Leadership becomes a martial skill.
 
@@ -556,7 +558,7 @@ per fury token used this way.
              'proficiency': 'leadership',
              'effect': '''
              Once an ally damages the targeted enemy all other allies gain advantage for all attacks and spells
-             targeting that enemy. This lasts until the end of turn.
+             targeting that enemy and that enemy gets 1 levels of vulnerability. This lasts until the end of turn.
              ''',
              'difficulty_options': [
                  {
@@ -567,17 +569,17 @@ per fury token used this way.
              ]
          }
          },
-        # {'cost': 3,
+        # {'cost': 'medium',
         #  'name': 'Improved coordination',
         #  'requires': 'Commander',
         #  'effect': '''Coordination action can target 1 additional ally.
         #  ''',
         #  },
-        {'cost': 5,
+        {'cost': 'major',
          'name': 'Blessed warrior',
          'effect': '''
 Increase your maximum defense by 1. Whenever you hit an enemy with an attack involving at least 4 power dice
-you may choose 1 option:
+you may choose up to 2 options:
 
 * remove one level of negative status effect from you or one of your allies.
 
@@ -586,26 +588,155 @@ you may choose 1 option:
 * spend 1 mana to deal an additional 2 damage. (requires mage path)
          ''',
          },
-#         {'cost': 8,
-#          'requires': 'Blessed Champion',
-#          'name': 'Blessed commander',
-#          'effect': '''The chosen buff also applies to all your allies within 20 m. of you.
-#          ''',
-#          },
+{'cost': 'major',
+ 'requires': 'Blessed warrior',
+ 'name': 'Blessed Champion',
+ 'effect': '''When picking this trait, choose a magical buff that could be applied to you with 3 power dice. You start each combat with this buff
+ on you for one iteration of the buff
+ ''',
+ },
+{'cost': 'major',
+    'requires': 'Blessed Champion',
+    'name': 'Blessed aura',
+    'effect': '''The chosen buff also applies to all your allies within 6 sq. of you.
+    ''',
+},
 
     ],
     'Skilled': [
-        {'cost': 5,
+        {'cost': 'small',
+         'name': 'Knowing when to shut up',
+         'effect': '''When failing a social challenge, there are no additional complications because of it (compared
+         to not doing the challenge at all).
+         
+         ''',
+         },
+        {'cost': 'small',
+         'name': 'Deep apology',
+         'effect': '''
+         When you or your parties past deeds cause a social challenge to become harder, then once per NPC, you can
+         offer a deep apology to reduce the penalty (exact reduction is still decided by GM).
+         ''',
+        },
+        {
+            'cost': 'small',
+            'name': 'Intimidating presence',
+            'effect': '''
+When attempting a social challenge, you can choose to use add quite a bit of intimidation to the challenge, to get +1.
+
+This does make the success of this challenge easier, however using intimidation may have long term consequences based
+on who you intimidate.
+''',
+        },
+        {'cost': 'small',
+         'name': 'Foresight',
+         'action': {
+             'cost': '-',
+             'additional_costs': '1 Luck token',
+             'effect': '''Once every time after visiting a settlement with shops, you can take out a common item
+                from your backpack, which you as a player actually had not bought from the settlement, but consider it
+                having been bought (subtract the gold cost of the item from your balance).'''
+         }
+         },
+        {'cost': 'medium',
+         'name': 'Insightful',
+         'effect': '''
+Whenever you succeed in an intelligence challange where you don't use any particular skill in order to acquire some
+ information, you can ask a single yes / no / yes and no / uncertain question
+, which the GM will answer based on the evidence which can be found in the scene or if you are having a conversation
+with someone, that someone is able to provide.''',
+         },
+        {'cost': 'medium',
+         'name': 'Master plan',
+         'effect': '''
+         You gain the master plan ability, which can be used if your party wants to do several things during a campaign
+         turn (this cannot be used in combat), to increase the odds of them actually being successful. Those actions
+         formulate a plan which is then executed simultaneously.
+         ''',
+         'action': {
+             'cost': '4 dice',
+             'target': '-',
+             'proficiency': 'social',
+             'effect': '''
+When during a campaign turn your party wants to do several things, then you can do it following these steps: 
+
+1. Declare all the actions your party wants to do, there can be at most 1 action per player.
+
+2. GM states the difficulties of all actions (if they can be failed).
+
+3. Then for each action one of the players is assigned and they will do the action. Normal skill rules still apply.
+You can then give one player a +2 for the roll, and another +1. Then everyone roll to see if they succeed.
+
+4. After all actions are assigned a player and they have rolled 2d6 to see weather they were successful or not, players 
+may choose to spend luck and then all the actions are resolved as if the plan is being executed simultaneously.
+             ''',
+            }
+        },
+        {'cost': 'medium',
+         'name': 'Inspiring',
+         'effect': '''Grants you the ability to inspire others by spending luck tokens.
+
+         This action uses social general ability.
+         ''',
+         'action': {
+             'cost': 'R3.R3',
+             'range': '12 m.',
+             'target': '1 creature',
+             'additional_costs': '1 Luck token',
+             'effect': '''target gains ''',
+             'difficulty_options': [
+                 {
+                     'cost': 'R6',
+                     'effect': '''They lose 1 level of Will related status effects''',
+                 },
+                 {
+                     'cost': 'R6.R6',
+                     'effect': '''They lose 3 level of Will related status effects''',
+                 },
+                ]
+            }
+         },
+        {
+            'cost': 'medium',
+            'requires': '3 proficiency in any social skill',
+            'name': 'Expert of sacrifice',
+            'effect': '''If any challenge would fail within the party, you can offer a dice to negotiate with GM
+something that you as a party will need to give up, in order to give a +2 to the roll. It can be only used if 
+that would then result in a success.
+            ''',
+        },
+#         {'name': 'Sir, know it all',
+#          'cost': 'medium',
+#          'effect': '''
+#
+#          ''',
+#          'action': {
+#              'cost': 'R5.R5',
+#              'target': '1 ally',
+#              'proficiency': 'lore',
+#              'effect': '''
+# Targeted ally is assisted by your knowledge and gets advantage in another skill check of your choosing.
+#     ''',
+#              'difficulty_options': [
+#                  {
+#                      'cost': 'R5.R5',
+#                      'effect': '''Also provide them double advantage''',
+#                  },
+#              ]
+#          }
+#          },
+        {'cost': 'medium',
          'name': 'Offer them to surrender',
          'effect': '''
-         You gain the offer enemy to surrender ability.
+         You gain the offer enemy to surrender ability during combat.
          ''',
          'action': {
              'cost': 'R5.R5',
-             'range': '3 sq.',
+             'range': '2 sq.',
              'target': 'single',
+             'proficiency': 'social',
              'effect': '''
-An enemy with 3 moral or less will surrender. If they have more than 3 but less than 6 moral remaining they will be
+An enemy with 5 moral or less will surrender. If they have more than 5 but less than 8 moral remaining they will
 get 2 confusion.
              ''',
              'difficulty_options': [
@@ -620,17 +751,18 @@ get 2 confusion.
              ]
             }
         },
-        {'cost': 2,
-         'name': 'Deep apology',
-         'effect': '''
-         When your or your parties past deeds cause a diplomacy challange to become harder, then once per NPC, you can
-         offer a deep apology to reduce the penalty by 1 dice. 
-         ''',
+        {
+            'cost': 'medium',
+            'name': 'Fortune seeker',
+            'effect': '''
+When finding gold from treasure, or receiving rewards, you can spend a luck token in order to roll 2d6. On a 7+ you get 10 % more gold
+, on a 9+ you get 25 % more gold, on a 11 you get 50 % more gold, and on a 12 you receive twice the amount of gold from the instance.
+''',
         },
-        {'cost': 5,
+        {'cost': 'major',
          'name': 'Natural leader',
          'effect': '''
-         You gain the coordinate action, which can used both during combat and out of combat.
+         You gain the coordinate (social) action, which can be used during combat. 
          ''',
          'action': {
              'cost': 'R3.R3',
@@ -638,7 +770,8 @@ get 2 confusion.
              'target': '2 allies',
              'effect': '''
 Targeted allies may give up to 1 dice to the other ally to be used temporarily (that dice preserves it roll). The dice
-is returned after using it.
+is returned after using it. Targeted allies also get advantage when spending the dice they receive from the other 
+players.
              ''',
              'difficulty_options': [
                  {
@@ -648,270 +781,113 @@ is returned after using it.
              ]
             }
         },
-        {'cost': 4,
-         'name': 'Master plan',
-         'effect': '''
-         You gain the master plan action, which can be used during scene. This is a leadership action.
-         ''',
-         'action': {
-             'cost': 'R3.R3.R3',
-             'target': '3 allies',
-             'proficiency': 'leadership',
-             'effect': '''
-Targeted allies roll 1 extra temporary dice into their dice pool for this scene. These dice can be traded between
-players on a 1 to 1 basis.
-             ''',
-             'difficulty_options': [
-                 {
-                     'cost': 'R3.R3',
-                     'effect': '''They roll one additional dice''',
-                 },
-             ]
-            }
-        },
-        {'cost': 5,
+        {'cost': 'major',
          'name': 'Agent of chaos',
          'effect': '''
          Causing chaos comes naturally to you. You can make ploys to disorient a group of enemies before the battle.
-         You can use diplomacy, survival or lore as the main skill to check for it's success. You must still describe
-         how you are going to do it and how using that skill makes sense. 
+         You must still describe how you are going to do it and how using that skill makes sense.
          
-         A new roll target is added to combat initiation phase with R5.R5.R3.R3, that you may complete. If you succeed
-         then all enemies start the combat with 1 level of disoriented. For an additional +R5 they start the combat
-         with 2 levels of disoriented instead. Use the chosen skill to achieve this.
+         Before combat during preparation turn, you can spend 4 dice to attempt to disorient the enemies with a single
+         roll. If you succeed all enemies start the combat with 1 level of disoriented. If you succeed with +2, they
+         get 2 levels of disoriented instead. The DC is still decided by the GM.
+         
          ''',
         },
-#         {
-#             'cost': 3,
-#             'name': 'Quick mind',
-#             'effect': '''
-#             You come up with vicious ploys on the spot. You still must come up with the ploy, but during combat, if you
-#             are able to act 3 rounds undisturbed, you can deploy a ploy to have an impact. They need to check 3 times
-#             against some condition that is fitting for the ploy against a skill check that makes sense and if they fail
-#             at least 2 times, then they in addition lose their next round in combat.
-#
-#             Depending on the role play quality of the ploy, GM can give advantage or dis-advantage to these checks.
-#             '''
-#         },
-        {'cost': 3,
-         'name': 'Lucky finder',
-         'effect': '''When rolling loot table, you can spend 2 luck token to be presented with 2 options
-            , you still pick only 1.''',
-         },
-        {'cost': 3,
-         'name': 'Planner',
-         'effect': '''Choose a {skill}. If your party doesn't have that skill related group focus, then you can start an
-                extra group focus related to that skill, it is not counted towards the 1 group focus limit.''',
-         },
-#         {'cost': 2,
-#          'name': 'Knowing when to shut up',
-#          'effect': '''When you use lore to try to aid your allies, critical failures do not cause dis-advantage''',
-#          },
-        {'cost': 5,
-         'name': 'Inspiring',
-         'effect': '''Grants you the ability to inspire others by spending luck tokens. Gain 2 max luck tokens.
-
-         Inspire action uses leadership skill.
-         ''',
-         'action': {
-             'cost': 'R3.R3',
-             'range': '12 m.',
-             'target': '1 creature',
-             'additional_costs': '1 Luck token',
-             'effect': '''target gains inspiration''',
-             'difficulty_options': [
-                 {
-                     'cost': 'R6',
-                     'effect': '''They lose 1 level of Will related status effects''',
-                 },
-                 {
-                     'cost': 'R6.R6',
-                     'effect': '''They lose 3 level of Will related status effects''',
-                 },
-                 {
-                     'cost': 'R3.R3',
-                     'effect': '''They gain 1 additional temporary dice that they can use until their next roll''',
-                 },
-                ]
-            }
-         },
         {
-            'cost': 7,
+            'cost': 'major',
             'name': 'Inspiring leader',
             'requires': 'Inspiring',
-            'effect': '''When using the inspire ability, you can spend 1 additional luck token so that all your party
-            members except fo your gain inspiration and other benefits of the inspire action. Gain 2 max luck tokens.
+            'effect': '''When using the inspire ability, you can spend 1 additional luck token so that up to 4 other
+             people in your party (except for you) gain inspiration and other benefits of the inspire action.
             ''',
         },
-#         {
-#             'cost': 7,
-#             'name': 'Luck bringer',
-#             'requires': 'Inspiring',
-#             'effect': '''When your ally uses inspiration provided by you, their roll is also lucky. Advance twice
-#             in luck.
-#             ''',
-#         },
-        {
-            'cost': 4,
-            'requires': '3 proficiency in leadership',
-            'name': 'Expert of sacrifice',
-            'effect': '''When assigning dice to scene roll target's, you can give one of those advantage at the cost
-            of another a disadvantage. The one that is given disadvantage must be one that would be passed if not
-            given disadvantage to (and the dice for passing must still be commited).''',
-        },
-        {
-            'cost': 5,
-            'name': 'Fortunate',
-            'effect': '''
-When negotiating for rewards, finding treasure, selling something unique, 
-you can meet a roll target of R5.R5.R5 for values lower than 500 gp. or R5.R5.R5.R5
-for values larger than that but lower than 5000 gp or R5.R5.R5.R5.R5 for even larger values to increase the gold gains
-by 50 %. You can either use treasure hunting skill for these checks. This roll target needs to be met
-during the same scene, so it still competes where the whole interaction happens.''',
-        },
-        {
-            'cost': 2,
-            'name': 'Intimidating presence',
-            'effect': '''
-You can use twos in the dice pool for diplomacy roll targets regardless of the roll target. You cannot nudge dice to
-become twos though, and when you do use this ability, the diplomacy action gets a intimidation aspect to it. You will
-succeed, BUT!
 
-You must declare when using this ability.
-''',
-        },
-        {'cost': 2,
-         'name': 'Foresight',
-         'action': {
-             'cost': '-',
-             'additional_costs': '1 Luck token',
-             'effect': '''Once every time after visiting a settlement with shops, you can take out a common item
-                from your backpack, which you as a player actually had not bought from the settlement, but consider it
-                having been bought (subtract the gold cost of the item from your balance).'''
-            }
-        },
-#         {'cost': 3,
-#          'name': 'Hunter',
-#          'effect': '''
-#          When you score a critical success while tracking someone, you learn a piece of information about them (feat,
-#          level, stamina level, spells that they know, GM-s discretion). Advance twice in survival skill.
-#          ''',
-#          'action': {
-#              'cost': '1 AP',
-#              'effect': '''Appraise a none magical opponent (beast, martial humanoid) and learn about their stamina, HP,
-#              AC and wielded weapon proficiency (or attack proficiency for beasts).'''
-#             }
-#          },
-#         {'name': 'Grenade maker',
-#          'cost': 6,
-#          'effect': '''
-# You can make grenades using gunpowder and various chemicals with differing effects.
-#
-# Grenades have by default 2m. effect radius. Each grenade also has a potency. Potency affects the effect amplitude.
-#
-# Possible effects and their base cost:
-#
-# 1d12 damage per potency: 15 gp
-#
-# Covers the area in smoke, blinding everyone in it for potency number of turns,
-# the area radius for this effect is tripled: 40 gp
-#
-# Affected check for disoriented for times equal to potency: 10 gp
-#
-# When attempting to craft a grenade, choose the target potency, potency cannot be larger than your effective crafting
-# level. The cost is base cost * potency. In addition at potencies of 5 and 10 increases the cost by 50 %.
-#
-# In addition you can adjust the radius by 2 m. Each adjustment increases the cost by 50%. You can do so twice.
-# (all increases are summed up before applied to the base cost).
-#
-# You and anyone at least adept in the martial path are able to throw these grenades accurately for up to 20 m.
-# Talented martials can throw them for 30 m and legendary martials for 40 m.
-# Others' can throw them for only 6 m.
-#
-# Grenades available in the shops in the game world are usually at least twice to three times more expensive compared to
-# those available through this feat.
-#          '''
-#          },
-        {'name': 'Lore weaver',
-         'cost': 5,
-         'effect': '''
-        By spending 1 luck token , you can use the "is there such a thing in the game-world" option one additional time
-        per scene. When taking this feat advance 4 times in luck.
-            '''
-        },
-        {'name': 'Sir, know it all',
-         'cost': 5,
-         'effect': '''
-         
-         ''',
-         'action': {
-             'cost': 'R5.R5.R5',
-             'target': '1 ally',
-             'proficiency': 'lore',
-             'effect': '''
-Targeted ally is assisted by your knowledge and gets advantage in another skill check of your choosing.
-    ''',
-             'difficulty_options': [
-                 {
-                     'cost': 'R5.R5',
-                     'effect': '''Also provide them double advantage''',
-                 },
-             ]
-         }
-        },
         {
-            'cost': 5,
+            'cost': 'major',
             'name': 'Excellent instructor',
          'action': {
-             'cost': 'R5.R5',
+             'cost': '2 dice',
              'target': '1 ally',
-             'proficiency': 'lore',
+             'proficiency': 'social',
              'effect': '''
              Targeted ally gains your level of proficiency in a skill of your choice for the duration of this turn /
              scene.
              ''',
              'difficulty_options': [
                  {
-                     'cost': 'R5',
-                     'effect': '''You can have another ally gain the same proficency for this scene / turn.''',
+                     'cost': '1 dice',
+                     'effect': '''You can have another ally gain the same or different proficency for this scene / turn.
+                     ''',
                  },
              ]
             }
         },
         {
-            'cost': 7,
+            'cost': 'major',
             'requires': 'Excellent instructor',
             'name': 'Master',
             'effect': '''For each party member you can choose one skill. Their effective proficiency bonus in that
-            skill is equal to yours. That skill can be changed once a month in game time.
+            skill is equal to yours. That skill can be changed when doing 'Time out and recover'
 ''',
         },
     ],
     'Mage/Martial': [
-    #     {'cost': 10,
-    #      'name': 'Blade enchanter',
-    #      'effect': '''Weapon enchantment spells that have only been applied to a weapon you wield do not require
-    # AP to be spent on concentration, they still cost mana as normal. The max
-    # difficulty for these enchantments is as if you were Legendary in Mage path. Advance once in encounter limit,
-    # once in one school of magic, learn a spell, advance in 1 weapon and once in maximum stamina and stamina recovery''',
-    #      },
-    #     {'cost': 10,
-    #      'name': 'Spell blade (or bow)',
-    #      'effect': '''
-    #      Whenever you critically hit an enemy you can also cast a spell that targets a single enemy (the one that got
-    #      hit), that does not require concentration with a difficulty, which are free to cast for you (costs 0 mana, and
-    #      not replaced by any other cost like with Blood magic).
-    #      ''',
-    #      },
+        {'cost': 'major',
+         'name': 'Trickster',
+         'effect': '''
+Whenever you apply prone or a level of burning, disoriented or afraid to a still resisting enemy, you gain 1 opportunity
+stack, which disappear at the end of battle (1 stack per level per resisting enemy) (if a enemy would stop resisting
+after 2 levels of disoriented, but you apply 4 levels, you get only 2 stacks).
+
+When casting spells or attacking you can spend opportunity stacks to:
+ * 3 stacks: to get a free additional power dice to the attack or spell (doesn't even cost mana).
+ 
+ * 3 stacks: add one additional level of burning, disoriented or afraid to anyone who receives any of these stacks
+ with the spell or attack already.
+ 
+ * 10 stacks: double any damage the spell or attack would do. 
+ 
+ When spending opportunity stacks, you do not gain new opportunity stacks during that spell or attack. You can however
+ choose however many options as you like and you can choose the same option up to 3 times.
+        ''',
+         },
+        {'cost': 'medium',
+         'name': 'Blade enchanter',
+         'effect': '''Weapon enchantment spells that are applied to the weapons you wield don't require concentration
+         as long as you hit something with that weapon every round after it has been applied.
+         ''',
+         },
+        {'cost': 'major',
+         'name': 'Spell blade (or bow)',
+         'effect': '''
+         When you hit an enemy with a weapon you can cast a single target spell that targets that enemy that costs no
+         more than the number of power dice you used for the attack. Spend 2 mana for each dice cost for that spell.
+         ''',
+         },
+        {'cost': 'major',
+         'name': 'Magical protection',
+         'effect': '''
+         Whenever you cast a buff spell on yourself that used at least 4 power dice, also do the Defend action for free.
+         
+         Gain +1 maximum defense.
+         ''',
+         },
+        {'cost': 'major',
+         'name': 'Torturer',
+         'effect': '''
+For each different type of negative status effect you have applied onto an enemy that they have not yet removed, they
+have 1 level of vulnerable, which is only removed by removing negative status effects that cause it.
+         ''',
+         },
     ],
     'Mage/Skilled': [
         {
-            'cost': 6,
+            'cost': 'major',
             'name': 'Potion maker',
             'effect': '''You can make magical potions, which have the effects of spells you know how to cast, and
 which difficulty requirements you meat. These potions have however certain constraints:
 
-1. They target is the person who drinks the potion. Spells with area of effect lose the area component.
+1. The target is the person who drinks the potion. Spells with area of effect lose the area component.
 
 2. Spell effects that have additional targets, like a location, cannot be made into a potion. The potion
 can only effect the creature drinking the potion.
@@ -920,16 +896,17 @@ can only effect the creature drinking the potion.
 is 3 rounds, but if a spell duration is otherwise 5 rounds, that is extended to 15 rounds instead and so on)
 
 In order to make these potions there is a baseline cost for ingredients that is based on difficulty. Difficulty is based
-on the number of dice that the spell, which effect is applied to the potion. Maximum number of dice is 6.
+on the number of dice that the spell, which effect is applied to the potion. Maximum number of dice is 8.
 Through role play, group focuses etc. these may be reduced.
 
 DX means that the underlying spell requires X dice.
 
-D2 and less - 20 gp
-D3 - 50 gp
-D4 - 150 gp
-D5 - 400 gp
-D6 - 1000 gp
+D3 and less - 20 gp
+D4 - 35 gp
+D5 - 60 gp
+D6 - 100 gp
+D7 - 200 gp
+D8 - 400 gp
 
 
 It is also possible to increase the duration of those potions to 5 iterations, which would double the cost.
@@ -944,15 +921,16 @@ higher.
     ],
     'Martial/Skilled': [
         {'name': 'Poison specialist',
-         'cost': 6,
+         'cost': 'major',
          'effect': '''
 You can prepare poison coatings and coat weapons with poison. In order to prepare poisons you
-need to gather poison glands or procure necessary raw materials from the marketplace. Both of them
-requires you to choose them as your personal focus. Depending on the situation it could require gathering,
-diplomacy, roguery and would also have a different difficulty, plus may require some extra cost such as gold.
+need to gather poison glands or procure necessary raw materials from the marketplace. 
+Depending on the situation it could require gathering, diplomacy, survival and would also have a different difficulty, 
+plus may require some extra cost such as gold.
 
-By default a coating of 3 stacks of following poisons on a melee weapon or 2 stack a single arrow costs that
-much money, this can be reduced with role-play,group focuses:
+By default a coating applies 3 stacks of poison on a melee weapon or 2 stack to a single arrow.
+
+The base line costs when procuring the materials from the market are the following:
 
 1 damage per stack at the beginning of target's turn: 20 gp
 
@@ -967,14 +945,11 @@ stack of freezing: 200 gp
 The price doubles if you want to apply 5 stacks on a melee weapon or 3 stacks on a single arrow. And doubles
 again when wanting to apply 7 stacks on a melee weapon or 4 stacks on a single arrow.
 
-By adding 100 gp to the base price, it takes one more dice to remove a stack of poison from oneself, and by adding an 
-additional 300 gp to the base price, it takes another dice to remove a stack of poison from oneself.
-
 A successful melee attack made with the weapon moves 1 stack of poison onto the hit target. A successful attack
 with an arrow moves all stacks of poison from the arrow onto the target.
 
-At the beginning of the turn and after the poison stacks have taken effect, poisoned target can meet a R5 fortitude
-check to remove a stack of poison from themselves. 
+At the beginning of the turn and after the poison stacks have taken effect, poison can be removed with the Recover
+general action.
 
 Stacks of disoriented, crazed, afraid, and freezing cannot be reduced normally even though their effects
 work the same as having the same levels of the these status effects.
@@ -982,11 +957,27 @@ work the same as having the same levels of the these status effects.
 Enchanted weapons cannot be coated with poison.
 '''
          },
+        {
+        'name': 'Perceptive combatant',
+         'cost': 'medium',
+         'effect': '''
+When using the Study opponent action, you can do that to up to 3 targets simultaniuously.
+
+Also, you have advantage when doing the study opponents general action.
+''' 
+        },
+        {
+        'name': 'Pride in wounds',
+         'cost': 'small',
+         'effect': '''
+While you have at least 2 scarred or wounded dice, you have +1 to your social skill checks.
+''' 
+        },
     ],
     'General': [
-        {'cost': 12,
+        {'cost': 'major',
          'name': 'Legendary magic item user',
-         'effect': '''You can attune to one additional magical item. You can double one numerical effect of 1 magical 
+         'effect': '''You can attune to one additional magical item. You can double one numerical effect of 1 magical
 item you wear / wield. You can change the item/effect at the beginning of each of your rounds.
 If you have the blade enchanter feat, you can use this ability on the enchanted weapon you wield.
 '''
@@ -1002,7 +993,7 @@ import re
 def prep_feat_flowable(feat):
     elements = []
     elements.append(Paragraph(feat['name'], style=minor_title))
-    elements.append(Paragraph(f"Advancement point cost: {feat['cost']}", style=minor_subtitle))
+    elements.append(Paragraph(f"Feat level: {feat['cost']}", style=minor_subtitle))
 
     if feat.get('requires'):
         elements.append(Paragraph('Requires: %s'%feat['requires'], style=minor_subtitle))
@@ -1059,10 +1050,18 @@ def prep_feat_flowable(feat):
 
     return elements
 
+def get_feat_order_string(feat):
+    cost_map = {'small': '1', 'medium': '2', 'major': 3}
+
+    return f"{cost_map[feat['cost']]}_{feat['name']}"
+
+def get_ordered_feats(feats):
+    feats.sort(key = lambda feat: get_feat_order_string(feat))
+    return feats
 
 def get_normal_feats_chapter():
     elements = [
-        {'type': 'title', 'content': 'Normal feats'},
+        {'type': 'title', 'content': 'Feats'},
         {'type': 'paragraph',
          'content': """
 Feats in this chapter are gained using your level up advancement points. Feats are spread out between the paths. For
@@ -1078,8 +1077,8 @@ advancement in any way you like.
             first = False
         elements.append({'type': 'subtitle', 'content': path_name})
 
-
-        for feat in path_feats:
+        ordered_feats = get_ordered_feats(path_feats)
+        for feat in ordered_feats:
             elements.append({'type': 'flowables', 'content': prep_feat_flowable(feat)})
 
     return elements

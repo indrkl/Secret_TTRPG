@@ -3,69 +3,132 @@ from math import floor, ceil
 def get_out_of_combat_chapter():
 
     return [
-        {'type': 'title', 'content': 'Running the game out of combat'},
+        {'type': 'title', 'content': 'Out of combat roleplaying / campaign pillars'},
         {'type': 'paragraph',
          'content': """
-The game out of combat is divided into campaign turns, the exact time frame of the campaign turn is agreed between the
-GM and players. Each campaign turn starts with all players rolling their dice pool. That becomes the main resource to do
-anything during that turn.
+1. There has to be a chance for things to go wrong? To get partial successes, complications, or trying and then actually
+failing and ending up in a dangerous situation because of it.
 
-During campaign turns players get to roleplay, GM gets to describe the scene and what is happening. 
-When players want to do something none-trivial, which either is time-consuming or even challenging then they need to use 
-dice from their dice pool. If the nature of the activity is none-challanging but still time consuming, they need to 
-spend any of the dice to do the activity in the sense that each dice represents a junk of time that they spend on the
-activity during the scene. If the success of the activity is however not certain, then a target number between 1 and 6
-is decided, and the player needs to muster that many dice with the given number. They can of course use their skill
-proficiency to nudge dice, they may get assisted by their allies, they may try to roleplay in order to get an advantage,
-and finally there is an option to use up to 3 of your dice to get risk dice, which can end up pushing you right past the
-success (more on them later).
+2. A simple way to abstract time passing. Time and pace are important for considering that the world around them also
+changes. An idea is to separate into 3 different time categories. Smallest one is considered equivalent to tens of 
+minutes. When in this time abstraction, GM only considers NPC actions in a very local
+level. In the second category, each instance is around 6-10 hours. GM can consider NPC actions throughout the settlement
+or in the wider vicinity in nature when it comes to whether or not they start interacting with the situation players are
+part in. The largest time scale is long actions considered to be taking like a week or 2. These can be sailing to
+some place far away, travelling some place far away on foot, smithing, really proper long rest, construction, building
+defenses for an upcoming siege etc. etc. In this time scale the activities of all actors in the campaign are considered,
+and they move forward in their strategic plans.
 
-How do risk dice work? In order to get 1 risk die, you need to spend any die from your pool. You first choose between
-how many risk dice you get (max 3), spend that many normal dice from your pool, then roll the risk dice. For each
-result that is +-1 from the target number you get 1 success. Results that are within 2 away from the target number do
-nothing and results that are 3 or more away from the target number do not harm the current task, but do create
-complications for the future.
+3. Interacting with the world, lore, and caring about the minute details of the world should be rewarded, role playing
+should be rewarded.
+"""},
+        {'type': 'title', 'content': 'Running the game'},
+        {'type': 'paragraph',
+         'content': """
+The general openness of role playing games apply here as well. Players can do anything in the game world, that makes
+sense for GM and other players. In a way role playing is collaborative sense making. GM describes the environment,
+how NPC-s react to PC-s, and answers various clarifying questions to the players. Players describe how their character
+behaves, what is their intent with considered actions, and whether or not they do those considered actions.
 
-How to determine the target number? Just roll a 1d6 and the result determines the target number.
+When operating within the game world, players need to spend time and effort. Also, some actions may not be guaranteed,
+in this case there needs to be a resolution mechanism. IN 6d6 we use again, our 6 d6s.
 
-With regards to choosing the number of dice (challange difficulty), that is required for some action, then this is done 
-solely by the GM and it follows the following logic:
+Resolution mechanism:
 
-1. The base-line is 3 dice unless specified otherwise.
 
-2. The challenge can have various aspects, which make this more difficult, such as when intimidating someone, they can
-be prideful, when crafting something, you are missing proper tools or a roof and it is windy. When negotiating with
-someone but you don't speak their language and so on. Each aspect can have a severity ranging from 1 to 3. It is 
-recommended to usually leave it to 1, but in some cases it can be increased higher. Each lvl of severity adds 1 dice
-to the challenge.
+1. First the general idea of what players want to achieve and the time scale they want to operate in is agreed.
+Everyone roll their 6 dice as usual.
 
-3. Some aspects can be allowed to be tackled separately. For example another action might be precisely with regards to
-removing an aspect from your ally. For example to shelter a friend, so that they can craft in peace not worrying about
-the elements.
+2. Things that GM needs to resolve are:
 
-4. Some challanges can be tackeled by more than one person, like constructing a shelter, setting up camp, cross a river,
-these are more difficult challanges, which may require 5, 6 or even more dice in total. In this case one of the players
-must take the lead in the activity, they get to use their dice with 100 % efficiency. In addition the one who takes the
-lead in these challanges can use their leadership proficiency instead of the challange's skill proficiency if that is
-better. Other players need to first pay 1 dice of the target number to start contributing, but all the dice afterwards
-contribute with 100 % efficiency. Players may choose to not participate in some particular group effort. All
-participants may use up to 3 dice to 
-         
-Players may aid each other. When aiding a player may provide 1 dice of the target number (can nudge using their
-proficiency) to provide an additional nudge for the player doing the action. A player cannot be aided more times this
-way than their own proficiency (so basically the number of nudges can in maximum double).
+ * Can an activity be done within the agreed upon time-scale.
+ 
+    * If an activity can be done within a smaller time-scale, do we play it through or just assume that it succeeds to
+    
+    a result, which suits both players and GM
+    
+ * How much time and effort does an action / activity take? This is measured between 1 to 6 dice.
+ 
+ * Is it possible to fail the action / activity. What would it look like? What would complications regarding the 
+ activity look like.
+ 
+    * If yes, then how difficult should the action /activity be.
+    
+    * Can there be complications?
+    
+    * Can there be boons as extra bonuses? Recommended to only consider these in special activities. Not all things
+    need boons.
+    
+    
+Skill check rules:
 
-When either the scope of the campaign turn ends, or players all have spent their resources, then we can start a new
-campaign turn. Either way the world also progresses, and even if the scene in it's core is the same, this is the time
-for the GM to introduce new variable, maybe a new NPC, or to move the plot forward in some way.
 
-One suggested way to really represent the world progressing or the the resources to matter, is for the GM to also
-draw cards from a stacked deck of normal cards at the beginning of each campaign turn, which they can use to boost 
-encounters, create complications etc. 
-In addition, the complications attained by the risk dice can also be represented by additional cards during the next
-turn. The exact usage of those cards should still be done in a role gamey wibe, but this is more to remind the GM, that
-now is fair to ramp up the difficulty and create some tension. You could stack the deck with 1 (ace), 2, 3 and 4-s mostly,
-with fewer 5 and maybe a single, 6, 7 or 8 for group challanges. 
+GM decides Effort E and how many dice he rolls to decide to determine the what result beats the challange. 
+
+ * Difficulty is average, then the number of dice rolled is equal to E and challange is represented as E / E
+ 
+ * Difficulty is above average then the number of dice rolled is larger than E, and the E largest results are chosen
+ to become the challenge target. Challenge is represented as "E / D hard" where D is the number of dice.
+ 
+ * Difficulty is below average, then the number of dice rolled is larger than E, but the lowest E results are chosen
+ to become the challenge target. Challenge is represented as "E / D easy"
+ 
+ 
+Example:
+
+GM says that the challange is "3 / 5 hard". That means the attempting player has to present 3 dice, then GM throws
+ 5 dice and chooses 3 largest values, then they are compared with the player's dice and if all player dice are larger
+ or equal to the challange dice, then it is a clean success. For each dice that the presented dice is only 1 lower than
+ challange dice, there can be either 1 complication per such dice, or a one suitable bigger complication for all such
+ dice, but otherwise the challange is still considered as success and players get what they want with a "BUT". In all
+ other cases challange fails, and complications are handed out as appropriate.
+
+Player interactions with the skill difficulty
+
+ * Players can use their proficiency to nudge the presented dice to be higher than they are. Normal proficiency rules
+ apply. Proficiency is used before comparing but after the presented dice and challange dice are decided.
+ 
+ * Players can invoke some elements in the world, or by explaining why they should have an advantage, or roleplay, to nudge
+ the difficulty by 1. Hard difficulties can be nudged multiple times, until they are average. Average and easy
+ difficulties can be nudged once this way. For really hard difficulties, some roleplay aspect could nudge it more
+ than 1 dice, for example when difficulty is "6 / 20 hard", then it could reduce it to 6 / 18 or 6 / 17 immideately.
+ 
+ * Players can push the challange by spending dice to reduce the difficulty by 1. That does reduce the number of dice
+ available for them for this campaign turn
+ 
+ * Players may assist other players by spending dice to reduce the difficulty by 1. When assisting however, the assisted
+ dice has to at least a 4. Assisting player can use their proficiency however to achieve that condition.
+ 
+Terms:
+
+ * Challange - an activity or action that players do in order to achieve a goal they set out.
+ 
+ * Effort - number of dice needed to be presented for a challange
+ 
+ * Difficulty - Represented either easy, average or hard and by the number of dice the GM throws.
+ 
+ * Easy difficulty - GM throws more dice than effort E, and chooses the smallest results for challange dice.
+ 
+ * Hard difficulty - GM throws more dice than effort E, and chooses the largest results for challange dice.
+ 
+ * Presented dice - Effort number of dice that player presents, which are then checked against the challange dice to
+ determine success, success with complications or failure.
+ 
+ * Challange dice - The final Effort number of dice that GM rolls based on the difficulty.
+ 
+ * Comparing - Each dice from presented dice is compared against the corresponding Challange dice. Highest dice from
+ both sides are compared first, then second, third and so on.
+ 
+ * Success - Each presented dice is equal to or higher to the compared challange dice.
+ 
+ * Success with complications - Each presented dice is equal or higher than the compared challange dice minus one, and
+ some of them are equal to challange dice minus one.
+ 
+ * Failure - Some dice is smaller than challange dice minus 1.
+ 
+ * Success with boon - Each presented dice is equal to or higher to the compared challange dice + 1, then it is
+ considered success with a boon. Not all challanges can have a boon. But for those that do, proficiency can be used
+ to increase the presented dice to 7 if necessary.
 """},
     ]
 
@@ -260,5 +323,4 @@ unfavorable to you if the dice target is 1 or 6.
 When either the scope of the campaign turn ends, or players all have spent their resources, then we can start a new
 campaign world. Either way the world also progresses, and even if the scene in it's core is the same, this is the time
 for the GM to introduce new variable, maybe a new NPC, or to move the plot forward in some way.
-
 """

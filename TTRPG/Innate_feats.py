@@ -3,11 +3,11 @@ feats = {
         {
             'name': 'Extraordinary senses',
             'description': '''
-Acquinted: You can see 6 sq. in the dark, and 12 sq. in low light
+Acquainted: You can see 6 sq. in the dark, and 12 sq. in low light
 
 Adept: You can see 25 sq. in the dark and 50 sq. in low light
 
-Talented: In addition to the adept feature, you have blind sight in 2 sq around you.
+Talented: In addition you have blind sight in 2 sq around you.
 
 Legendary: You can see in the dark as well as in the light. You have blind sight in 6 sq around you.
             ''',
@@ -15,7 +15,7 @@ Legendary: You can see in the dark as well as in the light. You have blind sight
         {
             'name': 'Wings',
             'description': '''
-Acquinted: You don't take any falling damage as long as you are wearing light armor.
+Acquainted: You don't take any falling damage as long as you are wearing light armor.
 
 Adept: You don't take any falling damage as long as you are wearing light armor and are not carrying more than
 1/5th of your carry weight, and when falling from great heights
@@ -31,11 +31,11 @@ Legendary: You don't take any falling damage. If you are wearing light or no arm
         {
             'name': 'Natural armor',
             'description': '''
-You can only have the maximum defensive benefits from the armor you wear or this feat, they do not stack.
+You can only have the maximum defensive benefits from the armor you wear or this foundation, they do not stack.
 
 You can lower the bonus of the natural armor by 2 to receive the no armor bonus.
 
-Acquinted: Your maximum defense from natural armor is 2.
+Acquainted: Your maximum defense from natural armor is 2.
 
 Adept: Your maximum defense from natural armor is 3.
 
@@ -43,19 +43,19 @@ Talented: Your maximum defense from natural armor is 4.
 
 Legendary: Your maximum defense from natural armor is 5.
 
-Natural armor bonus increases by 1 at levels 7 and 14
+Natural armor bonus increases by 1 at levels 5 and 10
 
 Also when you are talented or legendary, then you get the option to take the heavy armor penalty (cannot take both this
-and no armor bonus) in order to get 1 damage reduction. This increases to 2 damage reduction at level 7 and to 3 damage
-reduction at level 14
+and no armor bonus) in order to get 1 damage reduction. This increases to 2 damage reduction at level 5 and to 3 damage
+reduction at level 10
             ''',
         },
         {
             'requires': 'Adept',
             'name': 'Claws',
             'description': '''
-You have claws. They can be used to attack. They use claw proficiency which can be upgraded using either Martial path
-or the path which innate feat is replaced by this one.
+You have claws. They can be used to attack. They use claw proficiency (physique) which can be upgraded using either 
+Martial path or the path which foundation is replaced by this one.
 
 Adept: You have claws which enable you to do a simple claw attack when unarmed. They use claw proficiency
 and R2 as the power dice. Check the claw statistics under equipment.
@@ -70,6 +70,46 @@ Legendary: Your claw proficiency is not shared between the two hands.
             'name': 'Four hands',
             'description': '''
 You have four hands, meaning you can hold 4 one handed items, 2 two handed items or any combination in between.
+            ''',
+        },
+        {
+            'requires': 'Talented',
+            'name': 'Extreme temperature tolerance',
+            'description': '''
+Choose either fire or cold. If you choose fire, you are immunte to fire damage and burning condition. If you choose
+cold, you are immunte to cold damage and freezing condition.
+
+Legendary: Choose both of these options.
+            ''',
+        },
+        {
+            'requires': 'Adept',
+            'name': 'Strong mind',
+            'description': '''
+You have immunity to afraid condition.
+
+Talented: In addition you have immunity to disoriented condition
+
+Legendary: In addition you cannot be confused or disrupted. 
+            ''',
+        },
+        {
+            'requires': 'Talented',
+            'name': 'Poison secretion',
+            'description': '''
+You are immune to poison.
+            
+You naturally produce poison when stressed in battle. When picking this innate feat, choose the type of poison you make:
+ * 1 damage at the beginning of each turns per stack
+ * 1 levels of disoriented per stack
+ * 1 levels of afraid per stack.
+ When Legendary, you have one additional option:
+ * 1 level of freezing.
+ 
+To apply this poison to your next attack with weapon or bow, you need to spend a R4. 
+You can do that at most once per turn, and this applies only 1 stack. 
+
+If you are legendary you can instead spend R4.R4 to apply 2 stacks to the next attack with weapon or bow.
             ''',
         },
     ],
@@ -95,8 +135,9 @@ simply someone who wants favor from your house etc.)
         {
             'requires': 'Talented',
             'name': 'Metamagician',
-            'description': '''Metamagic feats cost 2 less to learn but no less than 1. You can apply 1 level of large or 
-            distant magic to a spell for free without increasing the difficulty, mana cost or metamagic limit.''',
+            'description': '''When learning a metamagic feat, learn a metamagic feat of same or lesser power. 
+            You can apply 1 level of large or distant magic to a spell for free without increasing the dice cost or 
+            metamagic limit.''',
         },
         {
             'requires': 'Adept',
@@ -108,30 +149,34 @@ simply someone who wants favor from your house etc.)
             beastly form you need to spend 1 mana per your character level and if you are in combat then also meet
             R5.R5.R5 roll target using nature magic. Your equipment merges
             into your body and loses it's magical effect until you return to your normal form. Scarred, damaged and
-            wounded dice carry over when transforming to the other form.''',
+            wounded dice carry over when transforming to and from the other form.''',
         },
         {
             'name': 'Divine protector',
             'description': '''
-            You can advance toughness using both mage and martial path. You can transfer a scarred dice from an ally
-            to yourself (their scarred dice becomes normal, 1 of your normal dice become scarred) twice a day outside
-            of combat.
+            You can advance toughness instead of spell school proficiency using mage path. 
+            
+            You can transfer a scarred dice 
+            from an ally to yourself (their scarred dice becomes normal, 1 of your normal dice become scarred) twice
+            during a strategic turn, while being outside of combat.
+            
             When your mage path is talented, When a dice would become scarred, roll it. On a 6, it stays normal.
-            When your mage path is legendary, then it also doesn't become scarred on a 5. This effects also the dice
-            you transfer from allies to yourself.
-            '''
+            When your mage path is legendary, then it also doesn't become scarred on a 5 as well. 
+            This effects also the dice you transfer from allies to yourself.
+            ''' # This is effectively almost a 50 % larger health pool for legendary mage.
         },
         {
             'name': 'Raw caster',
-            'requires': 'Talented',
             'description': '''
             You cannot cast concentration spells, or spells which cast time is greater than 1 round. You also cannot
             initiate rituals nor spend your mana for rituals.            
             
             Reroll the dice that you used to cast the first spell during the combat and return them to the dice pool.
-            You do not reroll any virtual dice you gained by using mana, advantage or anything else.
+            You do not reroll any virtual dice you gained by using mana or through other means.
             
             Recover that ability at the third, sixth and tenth round of combat.
+
+            If you are talented or legendary, you have +2 proficiency when casting the spells using this ability.
             '''
         },
         {
@@ -145,29 +190,93 @@ share proficiency using during combat and scenes).
 The school with the lower power dice is called the lower school, and the other one the higher.
 
 You can use the power dice from both schools to cast either school spells as long as the balance wouldn't tip by more
-than 2 into either direction because of doing so. Outside of combat you can only use it once per scene.
+than 2 into either direction because of doing so. Outside of combat you can only use it once per turn.
 
 When you spend a lower school's power dice to cast higher school spells your balance tips towards calm, and if you spend 
 higher school's power dice to cast lower school spells your balance tips towards rage.
+
+While at maximum calm you cannot be disoriented, while at maximum rage, you are immune to afraid condition.
 '''
         },
-#         {
-#             'name': 'Ritualist',
-#             'requires': 'Adept',
-#             'description': '''
-# Downside is can only cas rituals and nothing else, implement later, when we have more rituals in the game,
-# '''
-#         },
+        {
+            'name': 'Ritualist',
+            'description': '''
+        None ritual spells cost 1 additional mana per power dice involved.
+        
+        However you can make 1 additional nudge in each of the rounds during a ritual, and during each round 
+        every dice starting from 3rd is worth 2 dice for the ritual (but still only costs 1 mana). (so you have to get
+        at least 3 power dice to in a round to benefit from this effect).
+'''
+        },
         {
             'name': 'Savant',
-            'requires': 'Adept',
             'description': '''
 Choose 1 school of magic, you can only cast spells from that school of magic, and you can only gain proficiency with
-that school of magic. The proficiency upgrade cost are halved (rounded up) and you can go to 4 proficiency even as an
-adept mage.
+that school of magic. Proficiency advancement options all have max prof. 3 when acquainted and 4 otherwise, 
+when advancing this school of magic.
 
-If you are talented or legendary in the Mage path, then in addition you always have advantage when casting spells from
-that school. 
+If you are talented or legendary in the Mage path, then you get a free virtual power dice when casting spells with at
+least 2 power dice without the virtual dice from that school.
+
+When casting rituals from that school of magic, you get a free virtual power dice every round of ritual. 
+The free power dice does not cost mana.
+'''
+        },
+        {
+            'name': 'Mana born',
+            'requires': 'Legendary',
+            'description': '''
+You are a mana based being, even though you still have the humanoid form. You don't have blood and you only need to
+consume mana infused foods. Each normal day of living uses 1 mana (or 1 medium turn, a normal strategic turn would spend
+5 mana). In addition you can store mana in your dice equal to toughness amounts of mana per die.             
+
+You don't have life, instead whenever you take damage you lose mana. You can give up your dice for toughness amounts of
+mana and recover those dice for toughness amounts of mana. Meaning you can basically heal with the pace of recovering
+mana. Whenever you have no mana, you die.
+
+You have no blood, you are immune to poison. You cannot be healed using heal spell or healing potions, since you don't
+lose dice, you simple release the mana stored in them as you need more mana, dice cannot become scarred.
+
+You start the game with having maximum mana, and all your normal dice are fully stored with mana.  
+'''
+        },
+        {
+            'name': 'Rune bearer',
+            'description': '''
+You do not cast magic as normally. Instead you craft runes upon your body that prepare spells. Each rune on your body reserves
+your maximum mana equal to twice the mana cost of the spell behind the rune. Each rune takes space the size of your palm.
+Spells that target other than yourself can only be cast from your palms, meaning you can have only 2 targeting spells prepared
+at any time. In theory you can also use your feet to target if you have the kick feat from martial. Then you would need to combine
+the activation with the kick action.
+
+To activate a rune, you only need 2 dice of the school the spell belongs to.
+
+To recover the runes, you still need to restore mana equal to the reserved amount of mana. But the mana instead flows to the runes.
+
+Interaction with rituals is unaffected.
+
+Drawback: You can cast less spells per battle compared to your maximum mana. You are inflexible in the number and specifics of the spells you cast.
+
+Advantage: Casting them is easier. You simply need 2 dice of the same school and durations of spells which have them is doubled.
+'''
+        },
+        {
+            'name': 'Chaos born',
+            'description': '''
+You are tormented by chaos influence.
+
+You do not get proficiency in any school of magic, instead you develop proficiency in your primary, secondary and thirdiary chaos
+domains. 
+
+You do not learn spells, instead you gain number of different usable spells in any of the three domains.
+
+At the beginning of game, and then at each down-time, or when you character reaches extreme stress (this is a matter of roleplay
+and at GMs discretion), you reroll randomly, which schools of magics are mapped to you chaos domains, which you have
+any usable spells for. And then you roll randomly which of those spells you have available in those schools.
+
+As an upside, your primary domain always uses 5 as the power dice, your secondary uses 2 as the power dice, and the thirdiary uses 3 as the power dice.
+You always have advantage when casting spells, and 
+
 '''
         },
     ],
@@ -175,70 +284,105 @@ that school.
         {
             'requires': 'Legendary',
             'name': 'Warcaster',
-            'description': '''You can use stamina instead of mana for spellcasting.''',
+            'description': '''You can use stamina instead of mana for spellcasting during combat. You cannot use stamina 
+            to cast spells outside of combat or for rituals.''',
+        },
+        {
+            'name': 'Enduring',
+            'description': '''
+You start with 2/3/3/4 additional maximum stamina depending on the level in martial path. And in addition you can
+use your stamina once more per round.
+
+When you are at least talented you also recover 1 stamina every round during combat. When you are at
+least legendary, then you recover 1 additional stamina every second round during combat. Recovery happens
+during the rerolling of your dice pool.
+            ''',
+        },
+        {
+            'name': 'Defensive',
+            'description': '''
+You can choose to have disadvantage for your offensive actions this turn (attacks and offensive spells), in order to
+get advantage to recovering defense. When you recover defense this way, your maximum defense is increased by
+1 if your acquainted or adebt, or by 2 if you are talented or legendary.
+            ''',
         },
         {
             'requires': 'Legendary',
             'name': 'Mastery over body',
             'description': '''
 Your body is your weapon. You have made a vow to give up using weapons, armor and magical items, instead you have
-focused in making your body a supreme weapon. Now and during the level-ups you receive a progression feat, you can
-pick one additional martial progression feat, but you cannot use weapons, shields, armors nor attune to any magical 
-item.
+focused in making your body a supreme weapon. At levels 1, 4, 8 and 12 you get to choose an additional major option
+from your martial playcard (this option does not spend a check-box on the talent card), 
+but you cannot use weapons, shields, armors nor attune to any magical item. 
+
+In addition your unarmed strikes do 1 additional damage and you have 2 bonus maximum defense. Both  of those bonuses 
+increases by 1 at levels 3, 6, 9 and 12.
+
+In addition at levels 5 and 10 you also get 1 Damage reduction.
+
+This maximum defense gained from this feat competes with natural armor and other places that would overwrite armor bonus
+to defense.
             ''',
         },
         {
             'requires': 'Talented',
             'name': 'Bulwark',
             'description': '''
-Enemies within 3 sq. of you that attack your allies have disadvantage. If you are legendary in martial then
+Enemies within 3 sq. of you that attack your allies have disadvantage. If they already would have disadvantage, it
+becomes double disadvantage. 
+
+If you are legendary in martial then
 you can spend stamina and mana to reduce damage taken by 1 per stamina or mana spent to you and you can use luck to 
 reduce damage dealt to you by 3.
             ''',
         },
         {
-            'requires': 'Talented',
+            'requires': 'Adept',
             'name': 'Defiant',
             'description': '''
 When your martial path is talented, When a dice would become scarred, roll it. On a 6, it stays normal.
 When your martial path is legendary, then it also doesn't become scarred on a 5.
 
-At the beginning of each round, if you have at least 3 damaged dice, you may choose one of the following:
+At the beginning of each round, for each die that was damaged for the first time this combat since your last turn choose 
+1 of these options:
 
-* Heal 1 damaged dice and recover 1 stamina.
+* Heal 1 damaged die and recover 3 stamina. This healing does scar a die though.
 
-* Deal additional damage with one attack equal to the number of damaged dice.
+* Deal 3 additional damage with one of your attacks this turn.
 
-* Roar, all enemies within 5 sq. radius get 1 level of afraid per 3 damaged dice on you rounded down. 
+* Roar, all enemies within 4 sq. radius get 1 level of afraid.
             ''',
         },
-        # {
-        #     'requires': 'Legendary',
-        #     'name': 'Nimble',
-        #     'description': '''Your action limit increases by 1''',
-        # },
+        {
+            'requires': 'Legendary',
+            'name': 'Nimble',
+            'description': '''After using dice to move, dodge or recover defense, you can reroll those dice back into
+            your dice pool. Up to 2 dice can be reused this way per round (this resets when you reroll your entire dice
+            pool). This increases to 3 dice at level 5 and 4 dice at level 10.''',
+        },
         {
             'requires': 'Talented',
             'name': 'Tough',
-            'description': '''If you are talented, then every turn negate the first damage you receive. If you are
-            legendary, then negate the first 2 damage you receive.''',
+            'description': '''If you are talented, then every round negate the first damage you receive. If you are
+            legendary, then negate the first 2 damage you receive.
+            
+            This ability resets during the round if one of your dice loses all it's HP.
+            ''',
         },
         {
-            'requires': 'Adept',
             'name': 'Natural killer',
             'description': '''
-When you first time damage each enemy dice, gain a blood token that can be used during this encounter. If you are
-talented or legendary, whenever you gain at least one blood token, gain one additional one.
+When you damage an enemy first time this combat with a weapon, gain a blood token that can be used during this encounter.
+Against enemy heroes, if they use defense action, then you can get blood token another time. 
+If you are talented or legendary, whenever you gain at least one blood token, gain one additional one.
 
-Whenever you make an attack, you can use one and only one of those options once to boost that attack:
+Once per round, whenever you make an attack, you can use one and only one of those options once to boost that attack:
 
-* spend 2 blood tokens to gain advantage or upgrade advantage to double advantage
+* spend 1 blood token to gain double advantage (2 more nudges)
  
-* Spend 5 blood tokens to gain double advantage
+* spend X blood tokens to deal X additional damage
  
-* spend 1 blood token to deal 1 additional damage
- 
-* spend 2 blood tokens to disrupt 1 
+* spend 1 blood token to disrupt 1
             ''',
         },
         {
@@ -248,25 +392,33 @@ Whenever you make an attack, you can use one and only one of those options once 
                 spells, nor can spells have any none-damaging effect on you. When you attack a spell caster, they lose 
                 1 mana for every 3 unmitigated damage (that damages their dice)''',
         },
-        # {
-        #     'requires': 'Talented',
-        #     'name': 'Life stealer',
-        #     'description': '''You cannot be healed using nature magic. Heal 1d6 -1 life for each damage dice you deal in
-        #         melee combat. Heal 1d6 instead, if your martial path is legendary.''',
-        # },
-
         {
-            'name': 'Harmonious body',
-            'description': '''Whenever you advance in REFLEX or FORTITUDE saving throws. Advance in the other one as 
-                well. If you are talented or legendary in martial, also advance in Will proficiency. You cannot advance
-                in will proficiency from mage path in this case.''',
+            'name': 'Vengeful',
+            'description': '''
+            At the beginning of combat choose one enemy. You have advantage when attacking that enemy with weapons.
+
+            If you are talented/legendary, you deal an additional 1/2 damage with weapons against that enemy.
+            '''
         },
-    #     {
-    #         'name': 'Favored weapon',
-    #         'description': '''Choose 1 weapon category. In that weapon your MAX level is as if your PATH
-    # level in Martial was 1 higher (cannot exceed Legendary).
-    #     ''',
-    #     },
+        {
+            'name': 'The hunter',
+            'description': '''
+            You have immunity to the afraid condition. You have advantage against enemies with the afraid condition.
+
+            If you are at least talented, your attacks inflict the afraid condition if you deal at least 3 damage
+            that bypasses their defenses.
+
+            If you are legendary, you may gain one token for another ability when hitting an afraid enemy.
+            '''
+        },
+        {
+            'requires': 'Legendary',
+            'name': 'Pain visions',
+            'description': '''
+                Whenever a die loses all it's HP, you gain a rush of clarity, immideately recovering your defense to maximum and you can reroll any number
+                of remaining dice for a better next turn.
+            '''
+        },
     ],
     'Skilled': [
         {
@@ -277,34 +429,47 @@ You can cast any spell not requiring concentration using 1 luck token, even if y
 know that spell. For spell schools which power dice is either 4, 5 or 6 the power dice 
 to use this ability becomes 6 and the utility dice becomes 5. For spell schools which power dice is 1, 2 or 
 3, the power dice to use this ability becomes 1 and the utility dice becomes 2. This ability uses wild magic
-proficiency, which you can advance using both mage and skilled path.
+proficiency, which you can advance instead of advancing in any school of magic or skill.
             
-Each spell can however only be used once using this ability until your luck pool is recovered.''',
+Each spell can however only be used once using this ability until your next "Time out and recover".''',
         },
         {
             'name': 'Specialist',
             'description': '''Choose 1 skill. You have an extra +1 for that skills proficiency. Note it does not 
-            increase the cost of acquiring proficiency with this skill and also allows the skill to reach +5 proficiency
+            increase the max of acquiring proficiency with this skill using normal options and therefore allows
+            the skill to potentially reach +5 proficiency.
+            
+            If you are talented or legendary, you can choose two skills instead.
 ''',
         },
         {
             'name': 'Lucky',
-            'description': '''When you spend a luck token, you cannot have disadvantage until the start of your next
-            turn or until the scene ends. If you are talented/legendary in skilled path increase your maximum number of 
-            luck tokens by 50 %.  
+            'description': '''When you spend a luck token, you can choose 2 of the options instead of only 1. 
+            If you are talented/legendary in skilled path increase your maximum number of luck tokens by 50 %.  
 ''',
         },
         {
             'name': 'Good fortune',
             'description': '''You can allow other party members to use your luck tokens. If you are talented/legendary
-            in skilled path increase your maximum number of luck tokens by 50 %.  
+            in skilled path increase your maximum number of luck tokens by 50 %.
+''',
+        },
+        {
+            'name': '(Wo)Man of many talents',
+            'description': '''
+            Start the game with one additional "creative skill", which has a proficiency of 1.
+            
+            If you are talented/legendary in skilled path, start with one additional "creative skill" with a proficiency
+            of 2.
 ''',
         },
         {
             'requires': 'Adept',
             'name': 'Prodigy',
-            'description': '''At second level gain double the amount of advancements in skilled path (so at legendary
-            skilled you gain 16 advancement points).
+            'description': '''
+            From level 1 you can pick one major option from your skilled lvl 1-4 playcard and that does 
+            not forbid you to take that option again. (meaning you could for example take 2 major skilled feats by level
+            2 as Talented or Legendary in Skilled path). Repeat this at levels 5 and 9.
             ''',
         },
         {
@@ -315,7 +480,14 @@ Each spell can however only be used once using this ability until your luck pool
             , in hamlets it is 10 % chance.
             
             Just because you know someone doesn't mean that they provide that service for free. They may have a positive
-            disposition and maybe provide a small discount, but that is up to GM-s discretion. 
+            disposition and maybe provide a small discount, but that is up to GM-s discretion.
+            ''',
+        },
+        {
+            'name': 'Daredevil',
+            'description': '''
+Whenever you succeed with complications, you recover 1 luck token. If you are talented or legendary, then you recover
+2 luck instead.
             ''',
         },
     ]
@@ -346,18 +518,20 @@ def prep_feat_flowable(feat, name_addon=''):
 
 def get_innate_feat_chapter():
     elements = [
-        {'type': 'title', 'content': 'Innate feats'},
+        {'type': 'title', 'content': 'Foundations'},
         {'type': 'paragraph',
          'content': """
-Innate feats are something you get as you create your character, granting you unique powers not available later on.
-These are usually very unique or special effect. You get an innate feat for each path you have assigned a point into.
-However if you have put more points into the path, then the innate feat is that much stronger. In addition, if you
+Foundations are the second thing after choosing paths that players choose when creating a character. They grant unique
+often build defining powers, that significantly define the wibe and nature of your character. Foundation powers are not
+available later in the level ups.
+You get a foundation for each path you have assigned a point into.
+However if you have put more points into the path, then the foundation is that much stronger. In addition, if you
 are of some unique race, which would be able to for example have dark vision, or flying or something else, then refer
-to the races innate feats. When taking one or more races innate feats you must give up a feat in one of the paths.
-The power of the racial feat depends on the level of the path, which feat you gave up.
+to the races foundations. When taking one or more race foundations you must give up a foundation in one of the paths.
+The power of the racial foundation depends on the level of the path, which foundation you gave up.
 
-Finally I added one background feat, and may add more in the future. These can also be replaced by one of the path feats
-similarly to racial feats.
+Finally I added one background foundation, and may add more in the future. These can also be replaced by one of the path 
+foundations similarly to racial foundations.
         """},
     ]
 

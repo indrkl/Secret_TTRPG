@@ -4,13 +4,13 @@ from reportlab.lib.enums import TA_LEFT, TA_CENTER
 basic_paragraph_style = ParagraphStyle(
     name='Custom Style',
     fontName='Helvetica',
-    fontSize=11,
+    fontSize=9,
     leading=13,
-    spaceBefore=8,
-    spaceAfter=6,
+    spaceBefore=5,
+    spaceAfter=3,
     alignment=TA_LEFT,
     bulletFontName='Helvetica',
-    bulletFontSize=14,
+    bulletFontSize=10,
     bulletIndent=0,
     textColor='black',
     backColor=None,
@@ -34,7 +34,7 @@ spell_block_style = ParagraphStyle(
 basic_para_title_style = ParagraphStyle(
     name='Heading1',
     fontName='Helvetica-Bold',
-    fontSize=18,
+    fontSize=13,
     leading=24,
     spaceBefore=24,
     spaceAfter=12,
@@ -59,7 +59,7 @@ basic_para_title_style = ParagraphStyle(
 basic_para_sub_title_style = ParagraphStyle(
     name='Heading2',
     fontName='Helvetica-Bold',
-    fontSize=16,
+    fontSize=12,
     leading=24,
     spaceBefore=24,
     spaceAfter=12,
@@ -84,7 +84,7 @@ basic_para_sub_title_style = ParagraphStyle(
 basic_list_style = ParagraphStyle(
     name='Custom Style',
     fontName='Helvetica',
-    fontSize=10,
+    fontSize=9,
     leading=18,
     spaceBefore=0,
     spaceAfter=0,
@@ -110,7 +110,7 @@ basic_list_style = ParagraphStyle(
 minor_title = ParagraphStyle(
     name='Minor title Style',
     fontName='Helvetica-Bold',
-    fontSize=14,
+    fontSize=11,
     leading=24,
     spaceBefore=24,
     spaceAfter=12,
@@ -136,7 +136,7 @@ minor_subtitle = ParagraphStyle(
     name='Minor title Style',
     fontName='Helvetica',
     leftIndent=20,
-    fontSize=12,
+    fontSize=10,
     leading=16,
     spaceBefore=12,
     spaceAfter=5,
@@ -161,7 +161,7 @@ minor_subtitle = ParagraphStyle(
 option_style = ParagraphStyle(
     name='Custom Style',
     fontName='Helvetica',
-    fontSize=10,
+    fontSize=8,
     leading=12,
     leftIndent=0,
     spaceBefore=0,
@@ -184,14 +184,14 @@ option_style = ParagraphStyle(
     splitLongWords=1,
 )
 
-def add_dice_images(some_str):
+def add_dice_images(some_str, size=15):
     map = {
-        'R1': '<img src="images/one.png" width=15 height=15 />',
-        'R2': '<img src="images/two.png" width=15 height=15 />',
-        'R3': '<img src="images/three.png" width=15 height=15 />',
-        'R4': '<img src="images/four.png" width=15 height=15 />',
-        'R5': '<img src="images/five.png" width=15 height=15 />',
-        'R6': '<img src="images/six.png" width=15 height=15 />',
+        'R1': f'<img src="images/one.png" width={size} height={size} />',
+        'R2': f'<img src="images/two.png" width={size} height={size} />',
+        'R3': f'<img src="images/three.png" width={size} height={size} />',
+        'R4': f'<img src="images/four.png" width={size} height={size} />',
+        'R5': f'<img src="images/five.png" width={size} height={size} />',
+        'R6': f'<img src="images/six.png" width={size} height={size} />',
     }
 
     for key in map:
